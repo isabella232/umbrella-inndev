@@ -67,7 +67,6 @@ wp-content/debug.log
 /wp-content/index.php
 /wp-content/sunrise.php
 /wp-content/Icon
-/wp-content/themes/*
 /wp-content/plugins/*
 
 # large/disallowed file types
