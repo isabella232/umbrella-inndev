@@ -61,12 +61,17 @@ def branch(branch_name):
     env.branch = branch_name
 
 
+
+
 def deploy():
     """
     Deploy local copy of repository to target environment
     """
     require('settings', provided_by=["production", "staging", ])
     require('branch', provided_by=[master, stable, branch, ])
+
+    local('git checkout %s' % env.branch)
+    local('git submodule update --init --recursive')
 
     for f in find_file_paths('.'):
         put(local_path=f[0], remote_path='/%s' % f[0])
