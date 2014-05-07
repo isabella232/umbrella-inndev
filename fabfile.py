@@ -61,8 +61,6 @@ def branch(branch_name):
     env.branch = branch_name
 
 
-
-
 def deploy():
     """
     Deploy local copy of repository to target environment
