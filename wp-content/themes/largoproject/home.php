@@ -44,27 +44,27 @@
 					<div class="homepage-2col left">
 						<h3>Largo Setup</h3>
 						<ul>
-							<li><a href="http://www.largoproject.org/setup/pre-launch-checklist/">Pre-launch Checklist</a></li>
-							<li><a href="http://www.largoproject.org/setup/download-and-installation/">Download and Installation</a></li>
-							<li><a href="http://www.largoproject.org/setup/theme-options/">Theme Options</a></li>
-							<li><a href="http://www.largoproject.org/setup/menus/">Menus</a></li>
-							<li><a href="http://www.largoproject.org/setup/sidebars-and-widgets/">Sidebars and Widgets</a></li>
-							<li><a href="http://www.largoproject.org/setup/plugins/">Plugins</a></li>
-							<li><a href="http://www.largoproject.org/setup/for-developers/">For Developers</a></li>
+							<li><a href="/setup/pre-launch-checklist/">Pre-launch Checklist</a></li>
+							<li><a href="/setup/download-and-installation/">Download and Installation</a></li>
+							<li><a href="/setup/theme-options/">Theme Options</a></li>
+							<li><a href="/setup/menus/">Menus</a></li>
+							<li><a href="/setup/sidebars-and-widgets/">Sidebars and Widgets</a></li>
+							<li><a href="/setup/plugins/">Plugins</a></li>
+							<li><a href="/setup/for-developers/">For Developers</a></li>
 						</ul>
 					</div>
 
 					<div class="homepage-2col right">
 						<h3>Post Formatting</h3>
 						<ul>
-							<li><a href="http://www.largoproject.org/the-basics/">All The Basics</a></li>
-							<li><a href="http://www.largoproject.org/headings-and-paragraphs/">Headings and Paragraphs</a></li>
-							<li><a href="http://www.largoproject.org/photos-and-video/">Photos and Video</a></li>
-							<li><a href="http://www.largoproject.org/tabular-data/">Tabular Data</a></li>
-							<li><a href="http://www.largoproject.org/lists/">Lists</a></li>
-							<li><a href="http://www.largoproject.org/blockqoutes-and-pull-quotes/">Blockquotes and Pull Quotes</a></li>
-							<li><a href="http://www.largoproject.org/page-breaks/">Page Breaks</a></li>
-							<li><a href="http://www.largoproject.org/less-common-html-elements/">Less Common HTML Elements</a></li>
+							<li><a href="/the-basics/">All The Basics</a></li>
+							<li><a href="/headings-and-paragraphs/">Headings and Paragraphs</a></li>
+							<li><a href="/photos-and-video/">Photos and Video</a></li>
+							<li><a href="/tabular-data/">Tabular Data</a></li>
+							<li><a href="/lists/">Lists</a></li>
+							<li><a href="/blockqoutes-and-pull-quotes/">Blockquotes and Pull Quotes</a></li>
+							<li><a href="/page-breaks/">Page Breaks</a></li>
+							<li><a href="/less-common-html-elements/">Less Common HTML Elements</a></li>
 						</ul>
 					</div>
 				</div>
