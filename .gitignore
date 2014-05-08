@@ -4,6 +4,7 @@
 .cvs
 *.bak
 *.swp
+*.pyc
 Thumbs.db
 Capfile
 /config
