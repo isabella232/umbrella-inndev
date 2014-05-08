@@ -1,4 +1,5 @@
 import os
+import glob
 
 from fabric.api import *
 from fabric import colors
@@ -82,6 +83,8 @@ def deploy():
 
     # Never include files that haven't been added to the repo
     _ignore_untracked()
+    # Ignore any files that .gitignore file catches
+    _use_gitignore()
 
     ftp = _SFTP(env.host_string)
 
@@ -152,3 +155,17 @@ def _ignore_untracked():
     if result:
         for line in result.splitlines():
             env.ignore_files_containing.append(line)
+
+
+def _use_gitignore():
+    try:
+        ignore_file = open('.gitignore')
+        tests = [
+            line for line in ignore_file.read().splitlines()
+            if not line.startswith('#') and line is not '']
+        ignore_file.close()
+
+        for test in tests:
+            env.ignore_files_containing = env.ignore_files_containing + glob.glob(test)
+    except IOError:
+        return False
