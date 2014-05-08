@@ -9,6 +9,7 @@ from fabric.operations import put
 Base configuration
 """
 env.project_name = 'inndev'
+env.file_path = '.'
 env.ignore_files_containing = [
     '.py',
     '.pyc',
@@ -61,6 +62,10 @@ def branch(branch_name):
     env.branch = branch_name
 
 
+def theme(name):
+    env.file_path = 'wp-content/themes/%s/' % name
+
+
 def deploy():
     """
     Deploy local copy of repository to target environment
@@ -74,9 +79,11 @@ def deploy():
     # Never include files that haven't been added to the repo
     ignore_untracked()
 
-    for f in find_file_paths('.'):
-        put(local_path=f[0], remote_path='/%s' % f[0])
-
+    for f in find_file_paths(env.file_path):
+        if env.file_path == '.':
+            put(local_path=f[0], remote_path='/%s' % f[0])
+        else:
+            put(local_path=f[1], remote_path='/%s' % f[1])
 
 def find_file_paths(directory):
     """
