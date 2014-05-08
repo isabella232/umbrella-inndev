@@ -3,6 +3,7 @@ import os
 from fabric.api import *
 from fabric import colors
 from fabric.operations import put
+from fabric.sftp import SFTP as _SFTP
 
 
 """
@@ -63,6 +64,9 @@ def branch(branch_name):
 
 
 def theme(name):
+    """
+    Specify a theme directory to deploy
+    """
     env.file_path = 'wp-content/themes/%s/' % name
 
 
@@ -77,15 +81,35 @@ def deploy():
     local('git submodule update --init --recursive')
 
     # Never include files that haven't been added to the repo
-    ignore_untracked()
+    _ignore_untracked()
 
-    for f in find_file_paths(env.file_path):
-        if env.file_path == '.':
-            put(local_path=f[0], remote_path='/%s' % f[0])
-        else:
-            put(local_path=f[1], remote_path='/%s' % f[1])
+    ftp = _SFTP(env.host_string)
 
-def find_file_paths(directory):
+    with settings(warn_only=True):
+        for f in _find_file_paths(env.file_path):
+            result = _put_file(f)
+            if result.failed:
+                failed = result.failed[0]
+                new_dir = os.path.dirname(failed)
+
+                # Create parent dir for file that failed
+                print(colors.yellow("Failed to transfer: %s" % failed))
+                print(colors.green("Creating new directory: %s" % new_dir))
+                ftp.mkdir(new_dir, False)
+
+                # Retry the transfer
+                print(colors.green("Retrying transfer: %s" % failed))
+                _put_file(f)
+
+def _put_file(file_path_tuple):
+    if env.file_path == '.':
+        result = put(local_path=file_path_tuple[0], remote_path='/%s' % file_path_tuple[0])
+    else:
+        result = put(local_path=file_path_tuple[1], remote_path='/%s' % file_path_tuple[1])
+    return result
+
+
+def _find_file_paths(directory):
     """
     A generator function that recursively finds all files in the
     upload directory.
@@ -115,7 +139,7 @@ def find_file_paths(directory):
             yield(one, two)
 
 
-def ignore_untracked():
+def _ignore_untracked():
     """
     Grabs list of files that haven't been added to the git repo and
     adds them to `env.ignore_files_containing`.
