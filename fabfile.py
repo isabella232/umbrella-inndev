@@ -40,6 +40,7 @@ def staging():
     env.user = os.environ['INNDEV_STAGING_SFTP_USER']
     env.password = os.environ['INNDEV_STAGING_SFTP_PASSWORD']
 
+
 def stable():
     """
     Work on stable branch.
@@ -159,7 +160,8 @@ def _ignore_untracked():
 
 def _use_gitignore():
     """
-    Uses glob to find files that shouldn't be deployed based on your .gitignore file
+    Uses glob to find files that shouldn't be deployed based on your .gitignore file,
+    adds them to `env.ignore_files_containing`.
     """
     try:
         ignore_file = open('.gitignore')
