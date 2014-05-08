@@ -1,6 +1,7 @@
 import os
 import glob
 
+from datetime import datetime
 from fabric.api import *
 from fabric import colors
 from fabric.operations import put
@@ -87,23 +88,45 @@ def deploy():
     # Ignore any files that .gitignore file catches
     _use_gitignore()
 
-    ftp = _SFTP(env.host_string)
+    env.ftp = _SFTP(env.host_string)
 
     with settings(warn_only=True):
         for f in _find_file_paths(env.file_path):
-            result = _put_file(f)
-            if result.failed:
-                failed = result.failed[0]
-                new_dir = os.path.dirname(failed)
+            if _check_last_modified(f):
+                result = _put_file(f)
+                if result.failed:
+                    failed = result.failed[0]
+                    new_dir = os.path.dirname(failed)
 
-                # Create parent dir for file that failed
-                print(colors.yellow("Failed to transfer: %s" % failed))
-                print(colors.green("Creating new directory: %s" % new_dir))
-                ftp.mkdir(new_dir, False)
+                    # Create parent dir for file that failed
+                    print(colors.yellow("Failed to transfer: %s" % failed))
+                    print(colors.green("Creating new directory: %s" % new_dir))
+                    env.ftp.mkdir(new_dir, False)
 
-                # Retry the transfer
-                print(colors.green("Retrying transfer: %s" % failed))
-                _put_file(f)
+                    # Retry the transfer
+                    print(colors.green("Retrying transfer: %s" % failed))
+                    _put_file(f)
+
+
+def _check_last_modified(file_path_tuple):
+    transfer = True
+    try:
+        if env.file_path == '.':
+            remote_last_modified = datetime.fromtimestamp(
+                env.ftp.stat('/%s' % file_path_tuple[0]).st_mtime)
+            local_last_modified = datetime.fromtimestamp(
+                os.stat(file_path_tuple[0]).st_mtime)
+        else:
+            remote_last_modified = datetime.fromtimestamp(
+                env.ftp.stat('/%s' % file_path_tuple[1]).st_mtime)
+            local_last_modified = datetime.fromtimestamp(
+                os.stat(file_path_tuple[1]).st_mtime)
+
+        if local_last_modified <= remote_last_modified:
+            transfer = False
+    except IOError:
+        pass
+    return transfer
 
 
 def _put_file(file_path_tuple):
