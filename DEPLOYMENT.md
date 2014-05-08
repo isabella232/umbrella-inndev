@@ -26,11 +26,7 @@ Note: substitute `~/.zshrc` with the path to the rc file for your shell. Bash, f
 
 ## Settings
 
-The `fabfile.py` file contains sections for staging and production settings. You'll need to fill in `env.hosts`, `env.user` and `env.password` before any of the deployment commands will work.
-
-An example for the `env.hosts` definition:
-
-    env.hosts = ['inndev.wpengine.com', ]
+The `fabfile.py` file contains sections for staging and production settings which key off of environmental variables.
 
 
 ## Usage
@@ -49,4 +45,4 @@ And production:
 
 To switch to a different branch and deploy
 
-    $ fab staging newfeaturebranchname deploy
+    $ fab staging branch:newfeaturebranchname deploy
