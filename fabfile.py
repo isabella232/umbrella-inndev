@@ -83,6 +83,8 @@ def deploy():
     local('git checkout %s' % env.branch)
     local('git submodule update --init --recursive')
 
+    # Check for modified files and exit if the repo is not clean
+    _ensure_clean_repo()
     # Never include files that haven't been added to the repo
     _ignore_untracked()
     # Ignore any files that .gitignore file catches
@@ -106,6 +108,17 @@ def deploy():
                     # Retry the transfer
                     print(colors.green("Retrying transfer: %s" % failed))
                     _put_file(f)
+
+
+def _ensure_clean_repo():
+    """
+    Make sure there are no uncommitted changes being deployed.
+    """
+    modified = local('git ls-files --modified', capture=True)
+    if modified:
+        print(colors.red("Found uncommitted changes in the repository.\n"
+        "Please commit or stash your changes before deploying."))
+        exit(1)
 
 
 def _check_last_modified(file_path_tuple):
