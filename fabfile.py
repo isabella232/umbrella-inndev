@@ -158,6 +158,9 @@ def _ignore_untracked():
 
 
 def _use_gitignore():
+    """
+    Uses glob to find files that shouldn't be deployed based on your .gitignore file
+    """
     try:
         ignore_file = open('.gitignore')
         tests = [
