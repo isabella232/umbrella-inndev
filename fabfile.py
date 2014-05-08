@@ -71,6 +71,9 @@ def deploy():
     local('git checkout %s' % env.branch)
     local('git submodule update --init --recursive')
 
+    # Never include files that haven't been added to the repo
+    ignore_untracked()
+
     for f in find_file_paths('.'):
         put(local_path=f[0], remote_path='/%s' % f[0])
 
@@ -103,3 +106,14 @@ def find_file_paths(directory):
                 continue
 
             yield(one, two)
+
+
+def ignore_untracked():
+    """
+    Grabs list of files that haven't been added to the git repo and
+    adds them to `env.ignore_files_containing`.
+    """
+    result = local('git ls-files --others --exclude-standard', capture=True)
+    if result:
+        for line in result.splitlines():
+            env.ignore_files_containing.append(line)
