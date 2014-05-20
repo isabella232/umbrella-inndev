@@ -13,3 +13,37 @@ Version:        0.1.0
 	visibility: visible;
 	opacity: 1;
 }
+
+/* Roster Widget */
+ul#nerds-roster {
+  float: left;
+  clear: both;
+  margin: 20px 0 0 0;
+  list-style-type: none;
+}
+#nerds-roster li {
+  margin: 0;
+  display: block;
+  float: left;
+  clear: both;
+  margin: 0 0 16px 0;
+  width: 100%;
+}
+#nerds-roster li img {
+  float: left;
+  width: 65px;
+  height: auto;
+  margin: 0 14px 7px 0;
+  box-shadow: 0 1px 8px #666;
+  padding: 4px;
+}
+#nerds-roster .nerd-name {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 18px;
+}
+#nerds-roster p {
+  margin: 10px 0 0 0;
+  font-size: 14px;
+  line-height: 17px;
+  color: #565656;
+}
