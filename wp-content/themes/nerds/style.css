@@ -15,14 +15,14 @@ Version:        0.1.0
 }
 
 /* Roster Widget */
-ul#nerds-roster {
+ul#staff-roster {
   float: left;
   clear: both;
   margin: 20px 0 0 0;
   list-style-type: none;
   width: 100%;
 }
-#nerds-roster li {
+#staff-roster li {
   margin: 0;
   display: block;
   float: left;
@@ -30,7 +30,7 @@ ul#nerds-roster {
   margin: 0 0 16px 0;
   width: 100%;
 }
-#nerds-roster li img {
+#staff-roster li img {
   float: left;
   width: 65px;
   height: auto;
@@ -38,11 +38,11 @@ ul#nerds-roster {
   box-shadow: 0 1px 8px #666;
   padding: 4px;
 }
-#nerds-roster .nerd-name {
+#staff-roster .staff-name {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 18px;
 }
-#nerds-roster p {
+#staff-roster p {
   margin: 10px 0 0 0;
   font-size: 14px;
   line-height: 17px;

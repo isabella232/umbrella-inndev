@@ -1,12 +1,12 @@
 <?php
 
-class NerdsRosterWidget extends WP_Widget {
+class StaffRosterWidget extends WP_Widget {
 
 	function __construct() {
 		parent::__construct(
-			'nerds_roster_widget', // Base ID
-			'Nerds Roster Widget', // Name
-			array( 'description' => 'Display a list of INN Technology staff members with photos and bios.' ) // Args
+			'staff_widget', // Base ID
+			'Staff Roster Widget', // Name
+			array( 'description' => 'Display a list of staff members with photos and bios.' ) // Args
 		);
 	}
 
@@ -17,18 +17,25 @@ class NerdsRosterWidget extends WP_Widget {
 		if (!empty($title))
 			echo $args['before_title'] . $title . $args['after_title'];
 
-		$users = array();
-		foreach ($instance['roles'] as $key => $val) {
-			if ($val == 'on') {
-				$result = get_users(array(
-					'blog_id' => get_current_blog_id(),
-					'role' => $key
-				));
-				$users = array_merge($users, $result);
+		if (empty($instance['roles'])) {
+			$users = get_users(array(
+				'blog_id' => get_current_blog_id(),
+				'role' => 'author'
+			));
+		} else {
+			$users = array();
+			foreach ($instance['roles'] as $key => $val) {
+				if ($val == 'on') {
+					$result = get_users(array(
+						'blog_id' => get_current_blog_id(),
+						'role' => $key
+					));
+					$users = array_merge($users, $result);
+				}
 			}
 		}
 
-		$markup = '<ul id="nerds-roster">';
+		$markup = '<ul id="staff-roster">';
 		foreach ($users as $user) {
 			$avatar = get_avatar($user->ID, '65');
 			$author_url = get_author_posts_url($user->ID);
@@ -45,7 +52,7 @@ class NerdsRosterWidget extends WP_Widget {
 	<div>
 		<a href="$twitter">
 			$avatar
-			<span class="nerd-name">{$user->display_name}</span>
+			<span class="staff-name">{$user->display_name}</span>
 		</a>
 		<p>$job_title<p>
 		$user_posts_link
@@ -64,12 +71,17 @@ EOD;
 		if (isset($instance['title']))
 			$title = $instance['title'];
 		else
-			$title = 'INN News Nerds';
+			$title = 'Staff Members';
+
+		if (empty($instance['roles']))
+			$instance['roles']['author'] = 'on';
+
 		?>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
 		</p>
+
 		<p>
 			<label><?php _e( 'Include:' ); ?></label><br/>
 			<?php foreach ($roles as $key => $role) { ?>
@@ -79,6 +91,7 @@ EOD;
 					name="<?php echo $this->get_field_name($key); ?>"> <?php echo $role['name']; ?>s</label><br />
 			<?php } ?>
 		</p>
+
 		<?php
 	}
 
@@ -97,5 +110,5 @@ EOD;
 }
 
 add_action('widgets_init', function(){
-     register_widget('NerdsRosterWidget');
+     register_widget('StaffRosterWidget');
 });
