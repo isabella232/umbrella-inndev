@@ -17,7 +17,17 @@ class NerdsRosterWidget extends WP_Widget {
 		if (!empty($title))
 			echo $args['before_title'] . $title . $args['after_title'];
 
-		$users = get_users(array('blog_id' => get_current_blog_id()));
+		$users = array();
+		foreach ($instance['roles'] as $key => $val) {
+			if ($val == 'on') {
+				$result = get_users(array(
+					'blog_id' => get_current_blog_id(),
+					'role' => $key
+				));
+				$users = array_merge($users, $result);
+			}
+		}
+
 		$markup = '<ul id="nerds-roster">';
 		foreach ($users as $user) {
 			$avatar = get_avatar($user->ID, '65');
@@ -49,8 +59,10 @@ EOD;
 	}
 
 	public function form( $instance ) {
+		$roles = get_editable_roles();
+
 		if (isset($instance['title']))
-			$title = $instance[ 'title' ];
+			$title = $instance['title'];
 		else
 			$title = 'INN News Nerds';
 		?>
@@ -58,12 +70,26 @@ EOD;
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
 		</p>
+		<p>
+			<label><?php _e( 'Include:' ); ?></label><br/>
+			<?php foreach ($roles as $key => $role) { ?>
+			<label><input <?php checked($instance['roles'][$key], 'on', true); ?>
+					type="checkbox"
+					id="<?php echo $this->get_field_id($key); ?>"
+					name="<?php echo $this->get_field_name($key); ?>"> <?php echo $role['name']; ?>s</label><br />
+			<?php } ?>
+		</p>
 		<?php
 	}
 
 	public function update( $new_instance, $old_instance ) {
 		$instance = array();
 		$instance['title'] = (!empty($new_instance['title']))? strip_tags($new_instance['title']) : '';
+
+		$roles = get_editable_roles();
+		foreach ($roles as $key => $role)
+			$instance['roles'][$key] = (!empty($new_instance[$key]))? $new_instance[$key] : 'off';
+
 		return $instance;
 	}
 
