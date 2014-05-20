@@ -21,14 +21,15 @@ class NerdsRosterWidget extends WP_Widget {
 		$markup = '<ul id="nerds-roster">';
 		foreach ($users as $user) {
 			$avatar = get_avatar($user->ID, '65');
+			$author_url = get_author_posts_url($user->ID);
 			$twitter = get_user_meta($user->ID, 'twitter', true);
-			$author_url = ($twitter)? $twitter : get_author_posts_url($user->ID, $user->display_name);
+			$twitter = (!empty($twitter))? $twitter : $author_url;
 			$job_title = get_user_meta($user->ID, 'job_title', true);
 
 			$markup .= <<<EOD
 <li>
 	<div>
-		<a href="$author_url">
+		<a href="$twitter">
 			$avatar
 			<span class="nerd-name">{$user->display_name}</span>
 		</a>
