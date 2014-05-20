@@ -26,6 +26,10 @@ class NerdsRosterWidget extends WP_Widget {
 			$twitter = (!empty($twitter))? $twitter : $author_url;
 			$job_title = get_user_meta($user->ID, 'job_title', true);
 
+			$user_posts_link = '';
+			if (count_user_posts($user->ID) > 0)
+				$user_posts_link = "<p><a href=\"$author_url\">{$user->first_name}'s posts</a></p>";
+
 			$markup .= <<<EOD
 <li>
 	<div>
@@ -34,7 +38,7 @@ class NerdsRosterWidget extends WP_Widget {
 			<span class="nerd-name">{$user->display_name}</span>
 		</a>
 		<p>$job_title<p>
-		<p><a href="$author_url">{$user->first_name}'s posts</a></p>
+		$user_posts_link
 	</div>
 </li>
 EOD;
