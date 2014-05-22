@@ -72,3 +72,7 @@ ul#staff-roster {
 #supplementary ul.menu li:first-child {
   border-top: none;
 }
+
+@media all and (max-width: 767px) {
+  .sticky-footer-container .follow { display: none; }
+}
