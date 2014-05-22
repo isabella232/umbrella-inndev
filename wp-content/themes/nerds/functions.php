@@ -1,7 +1,22 @@
 <?php
+/**
+ * Largo APIs
+ */
+require_once( get_template_directory() . '/largo-apis.php' );
 
-include_once "inc/users.php";
-include_once "inc/widgets.php";
+/**
+ * Misc includes
+ */
+$includes = array(
+	'/inc/users.php',
+	'/inc/widgets.php',
+	'/inc/metaboxes.php'
+);
+
+// Perform load
+foreach ( $includes as $include ) {
+	require_once( get_stylesheet_directory() . $include );
+}
 
 function override_largo_core_js() {
 	wp_dequeue_script('largoCore');

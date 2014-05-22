@@ -31,13 +31,6 @@ jQuery(document).ready(function($) {
 		$('.header_img').attr('src', whichHeader());
 	});
 
-	//the homepage carousel, make sure we don't load this unless .carousel is defined
-	if($().carousel) {
-		$('.carousel').carousel({
-			interval: 6000
-		});
-	}
-
 	//homepage alert & hero CSS hacks
 	if ( $('.max-wide').length ) {
 		var $wrapper = $('.max-wide'), $container = $('#content');
@@ -337,4 +330,40 @@ jQuery(document).ready(function($) {
 			event.preventDefault();
 		});
 	} );
+
+	// Everything below is from WCIJ
+	var $body = $('body'),
+		$sb = $('#sidebar'),
+		$content = $('.entry-content'),
+		ratio = window.devicePixelRatio || 1;
+
+	// Things to do on single post pages
+	if ( $('.single-post').length ) {
+
+		//get the offset of the sidebar
+		var sb_bottom = $sb.offset().top + $sb.outerHeight();
+
+		// check big images and extend them
+		$('.wp-caption.center > img, img.aligncenter').each(function() {
+			if ( this.naturalWidth > ($content.width() * ratio) && $(this).offset().top > sb_bottom + 30 ) {
+				$(this).removeAttr('width').removeAttr('height');
+				if ( $(this).closest('.wp-caption', $content).length ) {
+					$(this).closest('.wp-caption').addClass('extra-wide').css('max-width','none');
+				} else {
+					$(this).addClass('extra-wide').css('max-width', '130%');
+				}
+			}
+		});
+
+		// check anything hanging left and move it back
+		$('.left, .alignleft, .align-left, .align-center.full.type-embed', $('.entry-content')).each( function() {
+			if ( $(this).offset().top < sb_bottom + 30 ) {	// 30px buffer just to keep things looking clean
+				$(this).addClass('no-bleed');
+			} else {
+				return false; //once we're passed the boundary, we can stop checking
+			}
+		});
+
+	}
+
 });
