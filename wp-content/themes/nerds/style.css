@@ -64,6 +64,27 @@ ul#staff-roster {
   line-height: 17px;
   color: #565656;
 }
+#friends-widget p,
+#friends-widget ul {
+  font-size: 15px;
+  padding-left: 0;
+}
+#friends-widget p {
+  margin-bottom: 8px;
+}
+#friends-widget ul strong a {
+  color: #565656;
+}
+#friends-widget ul strong {
+  font-size: 17px;
+  line-height: 21px;
+}
+#friends-widget ul {
+  margin-left: 0;
+}
+#friends-widget ul li {
+  list-style: none;
+}
 
 /* Tweaks that should probably move to Largo proper */
 #supplementary .widget ul.menu {
