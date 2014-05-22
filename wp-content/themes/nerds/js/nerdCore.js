@@ -122,6 +122,25 @@ jQuery(document).ready(function($) {
 		}
 	})();
 
+	// Sticky footer
+	(function(){
+		// Check if there is a sticky footer
+		var stickyFooterEl = $( '.sticky-footer-holder' );
+		if ( stickyFooterEl.length ) {
+			// Show the sticky footer by default
+			stickyFooterEl.addClass( 'show' );
+
+			$('#site-footer').waypoint( function( direction ) {
+				stickyFooterEl.toggleClass( 'show', direction == 'up' );
+			}, { offset: '100%' } );
+
+			$('.dismiss a').on( 'click', function() {
+				stickyFooterEl.remove();	//so it never comes back
+				return false;
+			});
+		}
+	})();
+
 	// Custom share buttons
 	(function() {
 		var sharer = {
