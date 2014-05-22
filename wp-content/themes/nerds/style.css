@@ -29,6 +29,12 @@ h1,h2,h3,h4,h5,
 .sticky-nav-holder .navbar .nav>li.home-link {
   margin-right: 10px;
 }
+.entry-content h3 {
+  font-weight: 700;
+}
+.entry-content h3 strong {
+  font-weight: 900;
+}
 
 /* Roster Widget */
 ul#staff-roster {
@@ -64,6 +70,28 @@ ul#staff-roster {
   line-height: 17px;
   color: #565656;
 }
+/* friends widget */
+#friends-widget p,
+#friends-widget ul {
+  font-size: 15px;
+  padding-left: 0;
+}
+#friends-widget p {
+  margin-bottom: 8px;
+}
+#friends-widget ul strong a {
+  color: #565656;
+}
+#friends-widget ul strong {
+  font-size: 17px;
+  line-height: 21px;
+}
+#friends-widget ul {
+  margin-left: 0;
+}
+#friends-widget ul li {
+  list-style: none;
+}
 
 /* Tweaks that should probably move to Largo proper */
 #supplementary .widget ul.menu {
@@ -71,6 +99,25 @@ ul#staff-roster {
 }
 #supplementary ul.menu li:first-child {
   border-top: none;
+}
+
+.widget {
+  padding: 18px 0;
+}
+.sticky-nav-holder .navbar .nav>li.active>a,
+.sticky-nav-holder .navbar .nav>li.active>a:hover {
+  color: #fff;
+}
+.single-post .author-box img {
+  margin-left: 0;
+}
+.widget p, .widget ul {
+  font-size: 14px;
+}
+.author-box ul li.email i.icon-mail,
+.author-box ul li.gplus,
+.author-box ul li.linkedin {
+  top: 1px;
 }
 
 @media all and (max-width: 767px) {
