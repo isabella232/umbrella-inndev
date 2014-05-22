@@ -64,6 +64,7 @@ ul#staff-roster {
   line-height: 17px;
   color: #565656;
 }
+/* friends widget */
 #friends-widget p,
 #friends-widget ul {
   font-size: 15px;
@@ -92,4 +93,7 @@ ul#staff-roster {
 }
 #supplementary ul.menu li:first-child {
   border-top: none;
+}
+.widget {
+  padding: 18px 0;
 }
