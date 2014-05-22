@@ -45,7 +45,7 @@ class StaffRosterWidget extends WP_Widget {
 
 			$user_posts_link = '';
 			if (count_user_posts($user->ID) > 0)
-				$user_posts_link = "<p><a href=\"$author_url\">{$user->first_name}'s posts</a></p>";
+				$user_posts_link = "<a href=\"$author_url\">{$user->first_name}'s posts</a>";
 
 			$markup .= <<<EOD
 <li>
