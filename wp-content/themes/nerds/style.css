@@ -8,6 +8,16 @@ Template:       largo
 Version:        0.1.0
 */
 
+body {
+  font-family: "proxima-nova",helvetica,arial,sans-serif;
+}
+h1,h2,h3,h4,h5 {
+  font-family: "museo-sans",helvetica,arial,sans-serif;
+  font-weight: 900;
+}
+.entry-title a {
+  color: #333;
+}
 .home .sticky-nav-wrapper { height: 25px; }
 .home .sticky-nav-holder.show {
 	visibility: visible;
@@ -47,4 +57,11 @@ ul#staff-roster {
   font-size: 14px;
   line-height: 17px;
   color: #565656;
+}
+
+#supplementary .widget ul.menu {
+  padding: 0;
+}
+#supplementary ul.menu li:first-child {
+  border-top: none;
 }
