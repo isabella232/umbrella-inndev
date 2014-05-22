@@ -208,3 +208,11 @@ h1.page-title {
 .single-post article.post > header {
   clear: both;
 }
+#sidebar .widget-area {
+  padding-left: 40px;
+}
+@media (max-width: 768px) {
+  #sidebar .widget-area {
+    padding-left: 0;
+  }
+}
