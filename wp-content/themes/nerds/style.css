@@ -8,17 +8,33 @@ Template:       largo
 Version:        0.1.0
 */
 
-.home .sticky-nav-wrapper { height: 25px; }
+body {
+  font-family: "proxima-nova",helvetica,arial,sans-serif;
+}
+h1,h2,h3,h4,h5,
+.widgettitle {
+  font-family: "museo-sans",helvetica,arial,sans-serif;
+  font-weight: 900;
+}
+.entry-title a {
+  color: #333;
+}
+.home .sticky-nav-wrapper {
+  height: 25px;
+}
 .home .sticky-nav-holder.show {
-	visibility: visible;
-	opacity: 1;
+  visibility: visible;
+  opacity: 1;
+}
+.sticky-nav-holder .navbar .nav>li.home-link {
+  margin-right: 10px;
 }
 
 /* Roster Widget */
 ul#staff-roster {
   float: left;
   clear: both;
-  margin: 20px 0 0 0;
+  margin: 12px 0 0 0;
   list-style-type: none;
   width: 100%;
 }
@@ -43,8 +59,16 @@ ul#staff-roster {
   font-size: 18px;
 }
 #staff-roster p {
-  margin: 10px 0 0 0;
+  margin: 5px 0 0 0;
   font-size: 14px;
   line-height: 17px;
   color: #565656;
+}
+
+/* Tweaks that should probably move to Largo proper */
+#supplementary .widget ul.menu {
+  padding: 0;
+}
+#supplementary ul.menu li:first-child {
+  border-top: none;
 }
