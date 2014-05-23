@@ -110,6 +110,7 @@ ul#staff-roster {
 #supplementary ul.menu li:first-child {
   border-top: none;
 }
+
 .widget {
   padding: 18px 0;
 }
@@ -130,7 +131,6 @@ ul#staff-roster {
 }
 
 /* from wcij */
-
 .entry-content p,
 .entry-content ul,
 .entry-content ol {
@@ -218,8 +218,11 @@ h1.page-title {
 #sidebar .widget-area {
   padding-left: 40px;
 }
-@media (max-width: 768px) {
+@media all and (max-width: 768px) {
   #sidebar .widget-area {
     padding-left: 0;
+  }
+  .sticky-footer-container .follow {
+    display: none;
   }
 }
