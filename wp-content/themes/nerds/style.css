@@ -32,6 +32,13 @@ h1,h2,h3,h4,h5,
 .sticky-nav-holder .navbar .nav>li.home-link {
   margin-right: 10px;
 }
+#topics-bar {
+  padding-top: 8px;
+}
+#topics-bar ul li.menu-label {
+  font-size: 15px;
+  color: #565656
+}
 .entry-content h3 {
   font-weight: 700;
 }
