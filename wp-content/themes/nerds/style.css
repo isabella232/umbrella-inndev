@@ -17,13 +17,14 @@ h1,h2,h3,h4,h5,
   font-weight: 900;
 }
 #main {
-  margin-top: 50px;
+  margin-top: 25px;
 }
 .entry-title a {
   color: #333;
 }
-.home .sticky-nav-wrapper {
-  height: 25px;
+.home .sticky-nav-wrapper,
+.sticky-nav-wrapper {
+  height: 50px;
 }
 .home .sticky-nav-holder.show {
   visibility: visible;
@@ -41,6 +42,8 @@ h1,h2,h3,h4,h5,
 .entry-content h3 strong {
   font-weight: 900;
 }
+
+#site-header { display: none; }
 
 /* Roster Widget */
 ul#staff-roster {
