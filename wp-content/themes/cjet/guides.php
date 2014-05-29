@@ -57,7 +57,7 @@ $top_page = FALSE;
 
 					<?php
 					// on interior guide pages, list resources attached to the parent guide page
-					if ( !$top_page && $attachments ) : ?>
+					if ( $attachments ) : ?>
 					<div class="resources">
 						<h4><?php _e('Resources', 'cjet'); ?></h4>
 						<ul class="guide-resources"><?php
