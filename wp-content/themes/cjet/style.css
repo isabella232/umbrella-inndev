@@ -7,3 +7,98 @@ Author URI:     http://investigativenewsnetwork.org
 Template:       largo
 Version:        0.1.0
 */
+.guide-page .author-posts-link {
+  display: none;
+}
+.guide-page .entry-content .widget {
+  padding: 15px 0;
+}
+.guide-page .pager {
+  background-color: #e6e6e6;
+}
+.guide-page .pager a {
+  width: 100%;
+  box-sizing: border-box;
+  height: 100%;
+}
+.guide-page .toggle-nav-bar {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .guide-page .guide-nav {
+    position: fixed;
+    top: 73px;
+    left: 0;
+    width: 100%;
+    background-color: #e6e6e6;
+  }
+  .guide-page .guide-nav .container {
+    margin: 5px 10px;
+  }
+  .guide-page .guide-nav .guide-tree,
+  .guide-page .guide-nav .resources {
+    display: none;
+  }
+  .guide-page .guide-nav .toggle-nav-bar {
+    display: block;
+    margin-top: 0;
+  }
+  .guide-page .guide-nav h4 {
+    font-size: 21px;
+    margin: 0.1em 0;
+    color: black;
+  }
+  .guide-page .guide-nav ul {
+    margin: 0 -10px 0 44px;
+  }
+  .guide-page .guide-nav li {
+    display: block;
+    float: none;
+  }
+  .guide-page .guide-nav li > a {
+    color: #2275BB;
+    padding: 6px 10px;
+  }
+  .guide-page .guide-nav .resources h4 {
+    margin-left: 46px;
+  }
+  .guide-page article.span9 {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 40px;
+  }
+}
+.guide-resources {
+  margin-left: 0;
+}
+.guide-resources li {
+  display: block;
+}
+.guide-resources a {
+  word-wrap: break-word;
+  word-break: break-word;
+}
+.guide-resources .attachment-meta {
+  white-space: nowrap;
+}
+.guide-resources i {
+  -webkit-font-smoothing: antialiased;
+}
+.guide-resources .icon-picture {
+  color: cadetblue;
+}
+.guide-resources .icon-play {
+  color: crimson;
+}
+.guide-resources .icon-table {
+  color: forestgreen;
+}
+.guide-resources .icon-doc-text {
+  color: mediumblue;
+}
+.guide-resources .icon-doc-text-inv {
+  color: firebrick;
+}
+.guide-resources .icon-download {
+  color: indigo;
+}
