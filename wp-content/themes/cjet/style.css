@@ -13,9 +13,6 @@ Version:        0.1.0
 .guide-page .entry-content .widget {
   padding: 15px 0;
 }
-.guide-page .pager {
-  background-color: #e6e6e6;
-}
 .guide-page .pager a {
   width: 100%;
   box-sizing: border-box;
