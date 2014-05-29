@@ -5,6 +5,7 @@
  *
  * Most of the brains live in Largo, of course
  */
+require_once( get_template_directory() . '/largo-apis.php' );
 
 
 /**
@@ -122,3 +123,30 @@ if( FALSE === get_option("large_crop")) {
 }
 
 add_theme_support( 'custom-header' );
+
+/**
+ * Meta field for hiding the author box
+ */
+	largo_add_meta_box(
+		'author_display',
+		__('Author Display', 'cjet'),
+		'cjet_author_display_control',
+		'page'
+	);
+
+
+function cjet_author_display_control() {
+
+	global $post;
+
+	//if this isn't a parent page, this setting is irrelevant
+	$ancestors = get_post_ancestors( $post->ID );
+	if ( count( $ancestors ) !== 1 ) {
+		echo "<em>" . __('This setting is only relevant in the context of guide/course landing pages', 'cjet'). "</em>";
+	} else {
+		$value = get_post_meta( $post->ID, 'cjet_hide_author', true );
+		?><input type="checkbox" name="cjet_hide_author" value="1" <?php checked( $value, 1); ?> /> Hide the author bio for this guide/course
+		<?php
+	}
+}
+largo_register_meta_input( 'cjet_hide_author' );

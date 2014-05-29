@@ -89,7 +89,7 @@ $top_page = FALSE;
 					<?php
 					// if we're on a guide "top" page, show author information and whatnot
 					// we can leverage Largo's author info widget here
-						if ( $top_page ) {
+						if ( $top_page && ( get_post_meta( $post->ID, 'cjet_hide_author', TRUE ) !== '1' ) ) {
 							the_widget(
 								'largo_author_widget',
 								array( 'title' => __('Guide Author', 'cjet') )
