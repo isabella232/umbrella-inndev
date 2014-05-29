@@ -106,3 +106,19 @@ function cjet_enqueue() {
 	wp_enqueue_script( 'cjet-javascript', get_stylesheet_directory_uri() . '/cjet.js' );
 }
 add_action( 'wp_enqueue_scripts', 'cjet_enqueue' );
+
+
+/**
+ *  Image size stuff for homepage, picturefill, etc
+ */
+if( !defined('PICTUREFILL_WP_VERSION') ) {
+  require_once(get_template_directory() . '/inc/picturefill/picturefill-wp.php');
+}
+
+if( FALSE === get_option("large_crop")) {
+	add_option("large_crop", "1");
+} else {
+	update_option("large_crop", "1");
+}
+
+add_theme_support( 'custom-header' );
