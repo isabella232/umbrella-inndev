@@ -13,6 +13,8 @@ $top_page = FALSE;
 			// get the ID of the main page for a given guide
 			$this_page_id = $post->ID;
 			$ancestors = get_post_ancestors( $this_page_id );
+			$page_type_id = end($ancestors); // the topmost parent is actually the "guides" page so let's back it up one
+			$guide_type = get_post( $page_type_id )->post_name;
 
 			if ( count($ancestors) === 1 ) {
 				// this is the main page of the guide so we can just list all of its children
@@ -21,10 +23,7 @@ $top_page = FALSE;
 			} else {
 				// it's not and we need to do get the full page tree
 				$guide_parent_id = prev($ancestors); // much better
-				$children = wp_list_pages("title_li=&child_of=" . $guide_parent_id . "&echo=0");
 			}
-			$page_type_id = end($ancestors); // the topmost parent is actually the "guides" page so let's back it up one
-			$guide_type = get_post( $page_type_id )->post_name;
 
 			// now get the complete tree of child pages for the guide's top page
 			$children = wp_list_pages('title_li=&child_of=' . $guide_parent_id . '&echo=0');
