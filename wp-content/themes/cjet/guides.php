@@ -20,10 +20,11 @@ $top_page = FALSE;
 				$guide_parent_id = $post->ID;
 			} else {
 				// it's not and we need to do get the full page tree
-				end($ancestors); // the topmost parent is actually the "guides" page so let's back it up one
 				$guide_parent_id = prev($ancestors); // much better
 				$children = wp_list_pages("title_li=&child_of=" . $guide_parent_id . "&echo=0");
 			}
+			$page_type_id = end($ancestors); // the topmost parent is actually the "guides" page so let's back it up one
+			$guide_type = get_post( $page_type_id )->post_name;
 
 			// now get the complete tree of child pages for the guide's top page
 			$children = wp_list_pages('title_li=&child_of=' . $guide_parent_id . '&echo=0');
@@ -47,7 +48,7 @@ $top_page = FALSE;
 		      </a>
 
 					<?php if ( $top_page ) { ?>
-						<h4><?php _e('In This Guide', 'cjet'); ?></h4>
+						<h4><?php _e('In This ' . ucfirst( rtrim($guide_type, 's') ), 'cjet'); ?></h4>
 					<?php } else { ?>
 						<h4 class="guide-top"><a href="<?php echo get_permalink($guide_parent_id); ?>"><?php echo get_the_title($guide_parent_id); ?></a></h4>
 					<?php } ?>
