@@ -99,3 +99,33 @@ Version:        0.1.0
 .guide-resources .icon-download {
   color: indigo;
 }
+/**
+ * Homepage styles
+ */
+.home #courses ul,
+.home #guides ul {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  overflow: hidden;
+}
+.home #courses li,
+.home #guides li {
+  display: block;
+  float: left;
+  margin-right: 1.7094017094017095%;
+}
+.home #courses li:last-child,
+.home #guides li:last-child {
+  margin-right: 0;
+}
+.home #courses span[data-picture],
+.home #guides span[data-picture] {
+  max-width: 100%;
+  height: auto;
+}
+.home #courses li {
+  width: 18.632478632478634%;
+}
+.home #guides li {
+  width: 23.717948717948715%;
+}

@@ -17,6 +17,9 @@ $guides = get_pages( array(
 	'sort_order' => 'DESC',
 	'parent' => $guides_parent->ID
 ));
+
+//standard loop
+while ( have_posts() ) : the_post();
 ?>
 
 <div id="logo">
@@ -24,10 +27,11 @@ $guides = get_pages( array(
 </div>
 
 <section id="courses">
+	<h1><?php _e('Online Courses', 'cjet'); ?></h1>
 	<ul>
 	<?php foreach ( $courses as $course ) :	?>
 		<li><article>
-			<?php echo get_the_post_thumbnail( $course->ID, 'large' ); ?>
+			<?php echo apply_filters('the_content', get_the_post_thumbnail( $course->ID, 'large' ) );	//filtered so picturefill steps in ?>
 			<h1><a href="<?php echo get_permalink( $course->ID ); ?>" title="Permalink to <?php echo esc_attr( $course->post_title ); ?>"><?php echo $course->post_title; ?></a></h1>
 			<p><?php echo $course->post_excerpt; ?></p>
 		</article></li>
@@ -42,10 +46,12 @@ $guides = get_pages( array(
 </section>
 
 <section id="guides">
+	<h1><?php _e('Guides', 'cjet'); ?></h1>
+	<div class="explainer"><?php the_content(); ?></div>
 	<ul>
 	<?php foreach ( $guides as $guide ) : ?>
 		<li><article>
-			<?php echo get_the_post_thumbnail( $guide->ID, 'large' ); ?>
+			<?php echo apply_filters('the_content', get_the_post_thumbnail( $guide->ID, 'large' ) ); ?>
 			<h1><a href="<?php echo get_permalink( $guide->ID ); ?>" title="Permalink to <?php echo esc_attr( $guide->post_title ); ?>"><?php echo $guide->post_title; ?></a></h1>
 			<p><?php echo $guide->post_excerpt; ?></p>
 		</article></li>
@@ -55,4 +61,6 @@ $guides = get_pages( array(
 	</ul>
 </section><!-- #guides -->
 
-<?php get_footer(); ?>
+<?php
+endwhile;
+get_footer(); ?>

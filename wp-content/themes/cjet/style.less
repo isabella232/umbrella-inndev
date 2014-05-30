@@ -108,3 +108,35 @@ Version:        0.1.0
 		color: indigo;
 	}
 }
+
+/**
+ * Homepage styles
+ */
+.home {
+	#courses,
+	#guides {
+		ul {
+			margin: 0 0 0 0;
+			padding: 0 0 0 0;
+			overflow: hidden; //clearfix
+		}
+		li {
+			display: block;
+			float: left;
+			margin-right: percentage( 20 / 1170 );
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+		span[data-picture] {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+	#courses li {
+		width: percentage( .2 * (1090/1170) );
+	}
+	#guides li {
+		width: percentage( .25 * (1110/1170) );
+	}
+}
