@@ -7,3 +7,28 @@ Author URI:     http://investigativenewsnetwork.org
 Template:       largo
 Version:        0.1.0
 */
+
+body,
+h1, h2, h3, h4, h5 {
+  font-family: "proxima-nova",helvetica,arial,sans-serif;
+}
+
+header#branding img {
+  margin: 0 auto 18px;
+  display: block;
+  max-width: 800px;
+  padding: 0 5%;
+  width: 90%;
+}
+header#branding h5 {
+  text-align: center;
+  color: #bbb;
+  font-weight: normal;
+  margin-bottom: 36px;
+}
+.home #content h3 {
+  text-align: center;
+  color: #e76756;
+  font-size: 18px;
+  text-transform: uppercase;
+}
