@@ -116,7 +116,7 @@ Version:        0.1.0
 .home #guides ul {
   margin: 0 0 0 0;
   padding: 0 0 0 0;
-  text-align: center;
+  text-align: left;
   overflow: hidden;
   font-size: 0;
 }
@@ -159,6 +159,12 @@ Version:        0.1.0
 /**
  * Responsive.
  */
+@media screen and (max-width: 894px) {
+  .home #courses ul,
+  .home #guides ul {
+    text-align: center;
+  }
+}
 @media screen and (max-width: 640px) {
   .home #extras aside {
     width: 100%;

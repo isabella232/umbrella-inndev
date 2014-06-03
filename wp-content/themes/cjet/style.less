@@ -123,7 +123,7 @@ Version:        0.1.0
 		ul {
 			margin: 0 0 0 0;
 			padding: 0 0 0 0;
-			text-align: center;
+			text-align: left;
 			overflow: hidden; //clearfix
 			font-size: 0;	// inline-block spacing hack
 		}
@@ -167,6 +167,15 @@ Version:        0.1.0
 /**
  * Responsive.
  */
+@media screen and (max-width: 894px) {
+	.home {
+		#courses ul,
+		#guides ul {
+			text-align: center;
+		}
+	}
+}
+
 @media screen and (max-width: 640px) {
 
 	.home {
