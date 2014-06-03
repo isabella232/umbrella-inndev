@@ -106,7 +106,7 @@ function cjet_enqueue() {
 	//Get our JS file
 	wp_enqueue_script( 'cjet-javascript', get_stylesheet_directory_uri() . '/cjet.js' );
 }
-add_action( 'wp_enqueue_scripts', 'cjet_enqueue' );
+add_action( 'wp_enqueue_scripts', 'cjet_enqueue', 11 );
 
 
 /**
@@ -116,10 +116,12 @@ if( !defined('PICTUREFILL_WP_VERSION') ) {
   require_once(get_template_directory() . '/inc/picturefill/picturefill-wp.php');
 }
 
-if( FALSE === get_option("large_crop")) {
+if( FALSE === get_option("large_crop") ) {
 	add_option("large_crop", "1");
+	add_option("medium_crop", "1");
 } else {
 	update_option("large_crop", "1");
+	update_option("medium_crop", "1");
 }
 
 add_theme_support( 'custom-header' );
@@ -150,3 +152,30 @@ function cjet_author_display_control() {
 	}
 }
 largo_register_meta_input( 'cjet_hide_author' );
+
+/**
+ * Adding excerpts to Pages
+ */
+function cjet_init() {
+	add_post_type_support( 'page', 'excerpt' );
+}
+add_action( 'init', 'cjet_init' );
+
+/**
+ * Adding extra theme options
+ */
+function cjet_theme_options( $options ) {
+
+	$options[] = array(
+		'name' 	=> __('CJET', 'cjet'),
+		'type' 	=> 'heading');
+
+	$options[] = array(
+		'desc' 	=> __('Enter a description of the guides to appear on the homepage.', 'cjet'),
+		'id' 	=> 'cjet_guides_intro',
+		'std' 	=> '',
+		'type' 	=> 'textarea');
+
+	return $options;
+}
+add_filter('largo_options', 'cjet_theme_options');

@@ -115,28 +115,78 @@ Version:        0.1.0
 .home {
 	#courses,
 	#guides {
+		clear: both;
+		> h1,
+		> .description {
+			text-align: center;
+		}
 		ul {
 			margin: 0 0 0 0;
 			padding: 0 0 0 0;
+			text-align: center;
 			overflow: hidden; //clearfix
+			font-size: 0;	// inline-block spacing hack
 		}
 		li {
-			display: block;
-			float: left;
-			margin-right: percentage( 20 / 1170 );
-			&:last-child {
-				margin-right: 0;
-			}
+			display: inline-block;
+			margin-right: percentage( 10 / 1170 );
+			margin-left: percentage( 10 / 1170 );
+			min-width: 200px;
+			vertical-align: top;
+			text-align: left;
 		}
 		span[data-picture] {
 			max-width: 100%;
 			height: auto;
 		}
+		br {
+			clear: left;
+		}
 	}
 	#courses li {
-		width: percentage( .2 * (1090/1170) );
+		width: percentage( .2 * (1070/1170) );
 	}
 	#guides li {
-		width: percentage( .25 * (1110/1170) );
+		width: percentage( .25 * (1090.0/1170) );
+	}
+
+	#extras {
+		background-color: @gray;
+		padding: 10px;
+		overflow: hidden;
+		> aside {
+			box-sizing: border-box;
+			padding: 10px;
+			width: 33.3333%;
+			float: left;
+			border-top: 0;
+		}
+	}
+}
+
+/**
+ * Responsive.
+ */
+@media screen and (max-width: 640px) {
+
+	.home {
+		#extras {
+			aside {
+				width: 100%;
+				float: none;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 440px) {
+
+	.home {
+		#courses li,
+		#guides li {
+			width: 100%;
+			margin-left: 0;
+			margin-right: 0;
+		}
 	}
 }

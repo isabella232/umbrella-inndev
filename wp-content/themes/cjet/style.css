@@ -102,30 +102,74 @@ Version:        0.1.0
 /**
  * Homepage styles
  */
+.home #courses,
+.home #guides {
+  clear: both;
+}
+.home #courses > h1,
+.home #guides > h1,
+.home #courses > .description,
+.home #guides > .description {
+  text-align: center;
+}
 .home #courses ul,
 .home #guides ul {
   margin: 0 0 0 0;
   padding: 0 0 0 0;
+  text-align: center;
   overflow: hidden;
+  font-size: 0;
 }
 .home #courses li,
 .home #guides li {
-  display: block;
-  float: left;
-  margin-right: 1.7094017094017095%;
-}
-.home #courses li:last-child,
-.home #guides li:last-child {
-  margin-right: 0;
+  display: inline-block;
+  margin-right: 0.8547008547008548%;
+  margin-left: 0.8547008547008548%;
+  min-width: 200px;
+  vertical-align: top;
+  text-align: left;
 }
 .home #courses span[data-picture],
 .home #guides span[data-picture] {
   max-width: 100%;
   height: auto;
 }
+.home #courses br,
+.home #guides br {
+  clear: left;
+}
 .home #courses li {
-  width: 18.632478632478634%;
+  width: 18.290598290598293%;
 }
 .home #guides li {
-  width: 23.717948717948715%;
+  width: 23.29059829059829%;
+}
+.home #extras {
+  background-color: #e6e6e6;
+  padding: 10px;
+  overflow: hidden;
+}
+.home #extras > aside {
+  box-sizing: border-box;
+  padding: 10px;
+  width: 33.3333%;
+  float: left;
+  border-top: 0;
+}
+/**
+ * Responsive.
+ */
+@media screen and (max-width: 640px) {
+  .home #extras aside {
+    width: 100%;
+    float: none;
+  }
+}
+@media screen and (max-width: 440px) {
+  .home #courses li,
+  .home #guides li {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
