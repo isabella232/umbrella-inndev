@@ -134,3 +134,7 @@
 <?php endif; ?>
 
 <div id="main" class="row-fluid clearfix">
+	<header id="branding">
+		<img src="<?php echo get_stylesheet_directory_uri() . '/img/impaq-logo.png' ?>" />
+		<h5 class="tagline">An innovative social fundraising tool for foundations and nonprofits</h5>
+	</header>
