@@ -11,8 +11,8 @@ $stylesheet_uri = get_stylesheet_directory_uri();
 			</div>
 		</div>
 		<div class="span4">
-			<h3>For Early Access To Impaq.me, Sign Up Here:</h3>
 			<div id="mc_embed_signup">
+				<h3>For Early Access To Impaq.me, Sign Up Here:</h3>
 				<form action="http://investigativenewsnetwork.us1.list-manage.com/subscribe/post?u=81670c9d1b5fbeba1c29f2865&amp;id=9076e3e80b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 					<div class="mc-field-group">
 						<!--<label for="mce-EMAIL">Email Address </label>-->
