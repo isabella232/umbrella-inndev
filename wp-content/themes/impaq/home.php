@@ -43,12 +43,12 @@ $stylesheet_uri = get_stylesheet_directory_uri();
 
 	<h3>Impaq.Me Participants</h3>
 	<section id="participants" class="row-fluid">
-		<div class="span2"><a href="#"><img src="<?php echo $stylesheet_uri . '/img/cir.png'; ?>" alt="Center for Investigative Reporting Logo" /></a></div>
-		<div class="span2"><a href="#"><img src="<?php echo $stylesheet_uri . '/img/minnpost.png'; ?>" alt="MinnPost Logo" /></a></div>
-		<div class="span2"><a href="#"><img src="<?php echo $stylesheet_uri . '/img/motherjones.png'; ?>" alt="Mother Jones Logo" /></a></div>
-		<div class="span2"><a href="#"><img src="<?php echo $stylesheet_uri . '/img/propublica.png'; ?>" alt="ProPublica Logo" /></a></div>
-		<div class="span2"><a href="#"><img src="<?php echo $stylesheet_uri . '/img/texastribune.png'; ?>" alt="Texas Tribune Logo" /></a></div>
-		<div class="span2"><a href="#"><img src="<?php echo $stylesheet_uri . '/img/thelens.png'; ?>" alt="The Lens Logo" /></a></div>
+		<div class="span2"><a href="http://cironline.org/"><img src="<?php echo $stylesheet_uri . '/img/cir.png'; ?>" alt="Center for Investigative Reporting Logo" /></a></div>
+		<div class="span2"><a href="http://www.minnpost.com/"><img src="<?php echo $stylesheet_uri . '/img/minnpost.png'; ?>" alt="MinnPost Logo" /></a></div>
+		<div class="span2"><a href="http://www.motherjones.com/"><img src="<?php echo $stylesheet_uri . '/img/motherjones.png'; ?>" alt="Mother Jones Logo" /></a></div>
+		<div class="span2"><a href="http://www.propublica.org/"><img src="<?php echo $stylesheet_uri . '/img/propublica.png'; ?>" alt="ProPublica Logo" /></a></div>
+		<div class="span2"><a href="http://voiceofsandiego.org/"><img src="<?php echo $stylesheet_uri . '/img/vosd.png'; ?>" alt="Voice of San Diego Logo" /></a></div>
+		<div class="span2"><a href="http://thelensnola.org/"><img src="<?php echo $stylesheet_uri . '/img/thelens.png'; ?>" alt="The Lens Logo" /></a></div>
 	</section>
 </div>
 
