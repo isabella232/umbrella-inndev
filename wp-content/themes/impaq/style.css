@@ -12,7 +12,15 @@ body,
 h1, h2, h3, h4, h5 {
   font-family: "proxima-nova",helvetica,arial,sans-serif;
 }
-
+a,
+a:hover,
+#site-footer a:hover {
+  color: #e76756;
+}
+a:hover,
+.btn-primary:hover {
+  opacity: 0.9;
+}
 header#branding img {
   margin: 0 auto 18px;
   display: block;
@@ -24,40 +32,120 @@ header#branding h5 {
   text-align: center;
   color: #bbb;
   font-weight: normal;
-  margin-bottom: 36px;
+  margin-bottom: 60px;
 }
-.home #content h3 {
+.home section {
+  margin-bottom: 100px;
+}
+.home section#participants {
+  margin-bottom: 0;
+}
+.home h3 {
   text-align: center;
   color: #e76756;
   font-size: 18px;
   text-transform: uppercase;
+  margin-bottom: 0;
 }
-.home #content #mc_embed_signup {
-  padding: 40px 20px 20px;
+.home .widgettitle {
+  text-align: left;
 }
-.home #hero {
-  background-color: #efefef;
-  margin-bottom: 24px;
+.home #sectors h3 {
+  text-align: left;
+  margin-bottom: 4px;
+}
+.home #sectors p {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+.home #sectors .story h4 {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+.home #sectors .story h4 a {
+  color: #454545;
+}
+.home #sectors .story p {
+  font-size: 15px;
+  line-height: 24px;
+}
+.home #sectors .story p.more {
+  font-size: 18px;
+  font-weight: bold;
+}
+#hero {
+  max-width: 1170px;
+  margin: 0 auto 100px;
 }
 .home #hero .embed-container {
   margin-bottom: 0;
 }
 .home #hero h3 {
   text-align: left;
+  margin-bottom: 12px;
+}
+.home #mc_embed_signup {
+  padding: 8px 20px 0;
+}
+.home #hero input {
+  width: 95%;
+}
+.home #hero .btn-primary {
+  margin-top: 18px;
+  background-color: #e76756;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 0;
+  font-family: "proxima-nova",helvetica,arial,sans-serif;
+  font-size: 18px;
+  width: 97.5%;
+}
+#site-footer .textwidget p {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+#site-footer .textwidget p strong {
+  font-size: 15px;
+}
+@media all and (max-width: 980px) {
+ .home #sectors .span4 {
+    width: 95%;
+    padding: 0;
+    margin: 0 2.5% 24px;
+  }
 }
 @media all and (max-width: 768px) {
+  header#branding h5 {
+    margin-bottom: 24px;
+    font-size: 21px;
+  }
+  .home #hero,
+  .home section {
+    margin-bottom: 24px;
+  }
   .home #hero .span8 {
     width: 100%;
   }
+  .home #mc_embed_signup {
+    padding: 0;
+  }
   .home #hero .span4 {
-    margin: 0 auto;
+    margin: 24px auto;
     width: 100%;
   }
   .home #hero label,
-  .home #hero h3 {
+  .home #hero h3,
+  .home #sectors h3,
+  .home #sectors h4,
+  .home #sectors p {
     text-align: center;
   }
   .home #hero input {
-    width: 95%;
+    margin: 0 1.25%;
+  }
+}
+@media all and (max-width: 480px) {
+  .home #participants .span2 {
+    width: 31%;
   }
 }

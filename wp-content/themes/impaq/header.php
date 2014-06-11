@@ -44,8 +44,6 @@
 
 <div id="page" class="hfeed clearfix">
 
-	<?php // if (function_exists('dynamic_sidebar')) { dynamic_sidebar("Header"); } ?>
-
 	<header id="site-header" class="clearfix" itemscope itemtype="http://schema.org/Organization">
 		<?php largo_header(); ?>
 	</header>
@@ -54,87 +52,8 @@
 		<p><strong><?php echo esc_html( get_bloginfo( 'name' ) ); ?></strong> (<?php echo esc_url( $current_url ); ?>)</p>
 	</header>
 
-	<div class="sticky-nav-wrapper">
-		<div class="sticky-nav-holder show" data-hide-at-top="<?php echo (is_front_page() || is_home()) ? 'true' : 'false'; ?>"><div class="sticky-nav-container">
-			<nav id="sticky-nav" class="sticky-navbar navbar clearfix">
-		    <div class="container">
-		    	<div class="nav-right">
-			      <?php if ( of_get_option( 'show_donate_button') )
-	      			largo_donate_button();
-	      		?>
-
-						<div id="header-search">
-							<form class="form-search" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-								<i class="icon-search toggle" title="<?php esc_attr_e('Search', 'largo'); ?>" role="button"></i>
-								<div class="input-append">
-									<span class="text-input-wrapper"><input type="text" placeholder="<?php esc_attr_e('Search', 'largo'); ?>" class="input-medium appendedInputButton search-query" value="" name="s" /></span><button type="submit" class="search-submit btn"><?php _e('GO', 'largo'); ?></button>
-								</div>
-							</form>
-						</div>
-					</div>
-
-		      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-		      <a class="btn btn-navbar toggle-nav-bar" title="<?php esc_attr_e('More', 'largo'); ?>">
-		        <div class="bars">
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-		        </div>
-		      </a>
-
-		      <ul class="nav">
-		        <li class="home-link"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php largo_home_icon( 'icon-white' ); ?></a></li>
-		        <li class="divider-vertical"></li>
-					</ul>
-
-		      <div class="nav-shelf">
-						<ul class="nav"><?php
-							$args = array(
-								'theme_location' => 'navbar-categories',
-								'depth'		 => 0,
-								'container'	 => false,
-								'items_wrap' => '%3$s',
-								'menu_class' => 'nav',
-								'walker'	 => new Bootstrap_Walker_Nav_Menu()
-							);
-							largo_cached_nav_menu($args);
-							?>
-							<li class="menu-item-has-childen dropdown">
-								<?php
-									$args = array(
-										'theme_location' => 'global-nav',
-										'depth'		 => 1,
-										'container'	 => false,
-										'menu_class' => 'dropdown-menu',
-									);
-									largo_cached_nav_menu($args);
-								?>
-							</li>
-						</ul>
-					</div>
-		    </div>
-			</nav>
-		</div></div>
-	</div>
-
-<?php if ( of_get_option( 'show_dont_miss_menu') ) : ?>
-<nav id="secondary-nav" class="clearfix">
-  	<div id="topics-bar" class="span12 hidden-phone">
-		<?php largo_cached_nav_menu( array( 'theme_location' => 'dont-miss', 'container' => false, 'depth' => 1 ) ); ?>
-	</div>
-</nav>
-<?php endif; ?>
-
-<?php if ( is_front_page() && is_active_sidebar( 'homepage-alert' ) ) :  // using is_front_page() instead of is_home() in case static page is used ?>
-<div class="alert-wrapper max-wide">
-	<div id="alert-container">
-		<?php dynamic_sidebar( 'homepage-alert' ); ?>
-	</div>
-</div>
-<?php endif; ?>
-
-<div id="main" class="row-fluid clearfix">
-	<header id="branding">
-		<img src="<?php echo get_stylesheet_directory_uri() . '/img/impaq-logo.png' ?>" />
-		<h5 class="tagline">An innovative social fundraising tool for foundations and nonprofits</h5>
-	</header>
+	<div id="main" class="row-fluid clearfix">
+		<header id="branding">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_stylesheet_directory_uri() . '/img/impaq-logo.png' ?>" /></a>
+			<h5 class="tagline">An innovative social fundraising tool for foundations and nonprofits</h5>
+		</header>
