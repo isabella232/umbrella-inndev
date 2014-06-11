@@ -45,7 +45,7 @@
 <div id="page" class="hfeed clearfix">
 
 	<header id="site-header" class="clearfix" itemscope itemtype="http://schema.org/Organization">
-		<?php // largo_header(); ?>
+		<?php largo_header(); ?>
 	</header>
 
 	<header class="print-header">
