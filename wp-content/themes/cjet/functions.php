@@ -104,10 +104,16 @@ function cjet_attachment_extras( $attachment_id ) {
  */
 function cjet_enqueue() {
 	//Get our JS file
-	wp_enqueue_script( 'cjet-javascript', get_stylesheet_directory_uri() . '/cjet.js' );
+	wp_enqueue_script( 'cjet-javascript', get_stylesheet_directory_uri() . 'js/cjet.js' );
 }
 add_action( 'wp_enqueue_scripts', 'cjet_enqueue', 11 );
 
+function inn_typekit() { ?>
+	<script type="text/javascript" src="//use.typekit.net/mmy6iwx.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<?php
+}
+add_action( 'wp_head', 'inn_typekit' );
 
 /**
  *  Image size stuff for homepage, picturefill, etc

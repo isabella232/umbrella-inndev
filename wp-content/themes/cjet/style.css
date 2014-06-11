@@ -7,6 +7,15 @@ Author URI:     http://investigativenewsnetwork.org
 Template:       largo
 Version:        0.1.0
 */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+.btn-primary {
+  font-family: "proxima-nova", helvetica, arial, sans-serif;
+}
 .guide-page .author-posts-link {
   display: none;
 }
@@ -27,7 +36,7 @@ Version:        0.1.0
     top: 73px;
     left: 0;
     width: 100%;
-    background-color: #e6e6e6;
+    background-color: #efefef;
   }
   .guide-page .guide-nav .container {
     margin: 5px 10px;
@@ -53,7 +62,7 @@ Version:        0.1.0
     float: none;
   }
   .guide-page .guide-nav li > a {
-    color: #2275BB;
+    color: #2275be;
     padding: 6px 10px;
   }
   .guide-page .guide-nav .resources h4 {
@@ -114,8 +123,8 @@ Version:        0.1.0
 }
 .home #courses ul,
 .home #guides ul {
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
+  margin: 0;
+  padding: 0;
   text-align: left;
   overflow: hidden;
   font-size: 0;
@@ -145,7 +154,7 @@ Version:        0.1.0
   width: 23.29059829059829%;
 }
 .home #extras {
-  background-color: #e6e6e6;
+  background-color: #efefef;
   padding: 10px;
   overflow: hidden;
 }
