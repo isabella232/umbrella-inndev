@@ -1,7 +1,4 @@
 <?php
-/**
- * CJET site front page, ultimate we'll want to port this into Largo's homepage template system I guess... but it's pretty significantly different.
- */
 get_header();
 
 $courses_parent = get_page_by_path('courses');
@@ -20,20 +17,22 @@ $guides = get_pages( array(
 ?>
 
 <div id="logo">
-	<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="<?php esc_attr( get_bloginfo('name') ); ?>" />
+	<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_stylesheet_directory_uri() . '/img/cjet-logo.png' ?>" /></a>
 </div>
 
 <section id="courses">
 	<h1><?php _e("Online Courses", 'cjet'); ?></h1>
 	<ul>
 	<?php
-	foreach ( $courses as $course ) :	?>
-		<li><article>
-			<?php echo apply_filters('the_content', get_the_post_thumbnail( $course->ID, 'medium' ) ); ?>
-			<h4><a href="<?php echo get_permalink( $course->ID ); ?>" title="Permalink to <?php echo esc_attr( $course->post_title ); ?>"><?php echo $course->post_title; ?></a></h4>
-			<p><?php echo $course->post_excerpt; ?></p>
-		</article></li>
-		<?php
+		foreach ( $courses as $course ) :	?>
+			<li>
+				<article>
+					<?php echo apply_filters('the_content', get_the_post_thumbnail( $course->ID, 'medium' ) ); ?>
+					<h4><a href="<?php echo get_permalink( $course->ID ); ?>" title="Permalink to <?php echo esc_attr( $course->post_title ); ?>"><?php echo $course->post_title; ?></a></h4>
+					<p><?php echo $course->post_excerpt; ?></p>
+				</article>
+			</li>
+			<?php
 		endforeach;
 	?>
 	</ul>
@@ -55,12 +54,14 @@ $guides = get_pages( array(
 	<ul>
 	<?php
 		foreach ( $guides as $guide ) : ?>
-		<li><article>
-			<?php echo apply_filters('the_content', get_the_post_thumbnail( $guide->ID, 'medium' ) ); ?>
-			<h4><a href="<?php echo get_permalink( $guide->ID ); ?>" title="Permalink to <?php echo esc_attr( $guide->post_title ); ?>"><?php echo $guide->post_title; ?></a></h4>
-			<p><?php echo $guide->post_excerpt; ?></p>
-		</article></li>
-		<?php
+			<li>
+				<article>
+					<?php echo apply_filters('the_content', get_the_post_thumbnail( $guide->ID, 'medium' ) ); ?>
+					<h4><a href="<?php echo get_permalink( $guide->ID ); ?>" title="Permalink to <?php echo esc_attr( $guide->post_title ); ?>"><?php echo $guide->post_title; ?></a></h4>
+					<p><?php echo $guide->post_excerpt; ?></p>
+				</article>
+			</li>
+			<?php
 		endforeach;
 	?>
 	</ul>
