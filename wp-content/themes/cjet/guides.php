@@ -6,7 +6,7 @@ get_header();
 $top_page = FALSE;
 ?>
 
-<div id="content" class="span12 guide-page" role="main">
+<div id="content" class="row-fluid guide-page" role="main">
 	<?php
 		while ( have_posts() ) : the_post();
 
@@ -89,10 +89,17 @@ $top_page = FALSE;
 					<?php
 					// if we're on a guide "top" page, show author information and whatnot
 					// we can leverage Largo's author info widget here
+
+						if ( $guide_type == 'courses' ) {
+							$author_label = 'Course Instructor';
+						} else {
+							$author_label = 'Guide Author';
+						}
+
 						if ( $top_page && ( get_post_meta( $post->ID, 'cjet_hide_author', TRUE ) !== '1' ) ) {
 							the_widget(
 								'largo_author_widget',
-								array( 'title' => __('Guide Author', 'cjet') )
+								array( 'title' => $author_label )
 							);
 						}
 					?>

@@ -17,6 +17,15 @@ h1, h2, h3, h4, h5,
 .btn-primary {
   font-family: "proxima-nova",helvetica,arial,sans-serif;
 }
+#site-header {
+  height: 0;
+}
+#main {
+  margin-top: 8px;
+}
+#breadcrumbs {
+  margin-bottom: 24px;
+}
 .guide-page {
   .author-posts-link {
     display: none;
@@ -34,13 +43,43 @@ h1, h2, h3, h4, h5,
   .toggle-nav-bar {
     display: none;
   }
+  .guide-nav {
+    padding: 20px;
+    background-color: @ltgray;
+    h4 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      a {
+	    color: #333;
+      }
+    }
+    li.current_page_item {
+	  font-weight: bold;
+    }
+  }
+  .largo-author {
+    .widgettitle {
+      font-size: 18px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      color: @inngray;
+    }
+    h5 {
+      margin-bottom: 8px;
+    }
+    ul {
+	  padding: 0;
+	  margin: 0;
+    }
+  }
   @media screen and (max-width:768px) {
     .guide-nav {
       position: fixed;
-      top: 73px;
+      top: 0;
       left: 0;
       width: 100%;
-      background-color: @ltgray;
+      padding: 0;
       .container {
         margin: 5px 10px;
       }
@@ -76,6 +115,11 @@ h1, h2, h3, h4, h5,
       width: 100%;
       margin-left: 0;
       margin-top: 40px;
+    }
+    .pager .next,
+    .pager .previous {
+	  width: 100%;
+	  margin-bottom: 8px;
     }
   }
 }
@@ -180,7 +224,11 @@ h1, h2, h3, h4, h5,
     }
   }
 }
-
+@media screen and (max-width: 768px) {
+  #breadcrumbs {
+    display: none;
+  }
+}
 @media screen and (max-width: 640px) {
   .home {
     #extras {
@@ -191,7 +239,6 @@ h1, h2, h3, h4, h5,
     }
   }
 }
-
 @media screen and (max-width: 440px) {
   .home {
     #courses li,

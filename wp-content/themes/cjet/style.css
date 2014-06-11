@@ -16,6 +16,15 @@ h5,
 .btn-primary {
   font-family: "proxima-nova", helvetica, arial, sans-serif;
 }
+#site-header {
+  height: 0;
+}
+#main {
+  margin-top: 8px;
+}
+#breadcrumbs {
+  margin-bottom: 24px;
+}
 .guide-page .author-posts-link {
   display: none;
 }
@@ -30,13 +39,41 @@ h5,
 .guide-page .toggle-nav-bar {
   display: none;
 }
+.guide-page .guide-nav {
+  padding: 20px;
+  background-color: #efefef;
+}
+.guide-page .guide-nav h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.guide-page .guide-nav h4 a {
+  color: #333;
+}
+.guide-page .guide-nav li.current_page_item {
+  font-weight: bold;
+}
+.guide-page .largo-author .widgettitle {
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  color: #666666;
+}
+.guide-page .largo-author h5 {
+  margin-bottom: 8px;
+}
+.guide-page .largo-author ul {
+  padding: 0;
+  margin: 0;
+}
 @media screen and (max-width: 768px) {
   .guide-page .guide-nav {
     position: fixed;
-    top: 73px;
+    top: 0;
     left: 0;
     width: 100%;
-    background-color: #efefef;
+    padding: 0;
   }
   .guide-page .guide-nav .container {
     margin: 5px 10px;
@@ -72,6 +109,11 @@ h5,
     width: 100%;
     margin-left: 0;
     margin-top: 40px;
+  }
+  .guide-page .pager .next,
+  .guide-page .pager .previous {
+    width: 100%;
+    margin-bottom: 8px;
   }
 }
 .guide-resources {
@@ -172,6 +214,11 @@ h5,
   .home #courses ul,
   .home #guides ul {
     text-align: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  #breadcrumbs {
+    display: none;
   }
 }
 @media screen and (max-width: 640px) {

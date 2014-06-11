@@ -54,7 +54,7 @@
 
 	<div id="main" class="row-fluid clearfix">
 
-	<div class="breadcrumbs">
+	<div id="breadcrumbs">
 	    <?php
 	    	if ( function_exists( 'bcn_display' ) && !is_home() ) {
 	        	bcn_display();
