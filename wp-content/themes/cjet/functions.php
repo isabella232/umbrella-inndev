@@ -104,7 +104,7 @@ function cjet_attachment_extras( $attachment_id ) {
  */
 function cjet_enqueue() {
 	//Get our JS file
-	wp_enqueue_script( 'cjet-javascript', get_stylesheet_directory_uri() . 'js/cjet.js' );
+	wp_enqueue_script( 'cjet-javascript', get_stylesheet_directory_uri() . '/js/cjet.js' );
 }
 add_action( 'wp_enqueue_scripts', 'cjet_enqueue', 11 );
 
