@@ -94,11 +94,13 @@ a:hover,
 #hero input {
   width: 95%;
 }
-#hero .btn-primary {
+#hero input.btn-primary {
   margin-top: 18px;
   background-color: #e76756;
   border: none;
   border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
   padding: 12px 0;
   font-size: 18px;
   width: 97.5%;
@@ -122,29 +124,33 @@ a:hover,
     margin-bottom: 24px;
     font-size: 21px;
   }
-  .home #hero,
   .home section {
     margin-bottom: 24px;
-  }
-  .home #hero .span8,
-  .home #hero .span4 {
-    width: 100%;
-  }
-  .home #hero .span4 {
-    margin: 24px auto;
   }
   .home #mc_embed_signup {
     padding: 0;
   }
-  .home #hero label,
-  .home #hero h3,
   .home #sectors h3,
   .home #sectors h4,
   .home #sectors p {
     text-align: center;
   }
-  .home #hero input {
+  #hero {
+    margin-bottom: 24px;
+  }
+  #hero .span8,
+  #hero .span4 {
+    width: 100%;
+  }
+  #hero .span4 {
+    margin: 24px auto;
+  }
+  #hero input {
     margin: 0 1.25%;
+  }
+  #hero label,
+  #hero h3 {
+    text-align: center;
   }
 }
 @media all and (max-width: 480px) {
