@@ -7,10 +7,14 @@ Author URI:     http://investigativenewsnetwork.org
 Template:       largo
 Version:        0.1.0
 */
-
 body,
-h1, h2, h3, h4, h5 {
-  font-family: "proxima-nova",helvetica,arial,sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+.btn-primary {
+  font-family: "proxima-nova", helvetica, arial, sans-serif;
 }
 a,
 a:hover,
@@ -21,16 +25,16 @@ a:hover,
 .btn-primary:hover {
   opacity: 0.9;
 }
-header#branding img {
+#branding img {
   margin: 0 auto 18px;
   display: block;
   max-width: 800px;
   padding: 0 5%;
   width: 90%;
 }
-header#branding h5 {
+#branding h5 {
   text-align: center;
-  color: #bbb;
+  color: #bbbbbb;
   font-weight: normal;
   margin-bottom: 60px;
 }
@@ -47,20 +51,20 @@ header#branding h5 {
   text-transform: uppercase;
   margin-bottom: 0;
 }
-.home .widgettitle {
-  text-align: left;
-}
+.home .widgettitle,
 .home #sectors h3 {
   text-align: left;
+}
+.home #sectors h3,
+.home #sectors p,
+.home #sectors .story h4 {
   margin-bottom: 4px;
 }
 .home #sectors p {
   font-size: 18px;
-  margin-bottom: 4px;
 }
 .home #sectors .story h4 {
   font-size: 20px;
-  margin-bottom: 4px;
 }
 .home #sectors .story h4 a {
   color: #454545;
@@ -77,26 +81,25 @@ header#branding h5 {
   max-width: 1170px;
   margin: 0 auto 100px;
 }
-.home #hero .embed-container {
+#hero .embed-container {
   margin-bottom: 0;
 }
-.home #hero h3 {
+#hero h3 {
   text-align: left;
   margin-bottom: 12px;
 }
-.home #mc_embed_signup {
+#hero #mc_embed_signup {
   padding: 8px 20px 0;
 }
-.home #hero input {
+#hero input {
   width: 95%;
 }
-.home #hero .btn-primary {
+#hero .btn-primary {
   margin-top: 18px;
   background-color: #e76756;
   border: none;
   border-radius: 5px;
   padding: 12px 0;
-  font-family: "proxima-nova",helvetica,arial,sans-serif;
   font-size: 18px;
   width: 97.5%;
 }
@@ -108,14 +111,14 @@ header#branding h5 {
   font-size: 15px;
 }
 @media all and (max-width: 980px) {
- .home #sectors .span4 {
+  .home #sectors .span4 {
     width: 95%;
     padding: 0;
     margin: 0 2.5% 24px;
   }
 }
 @media all and (max-width: 768px) {
-  header#branding h5 {
+  #branding h5 {
     margin-bottom: 24px;
     font-size: 21px;
   }
@@ -123,15 +126,15 @@ header#branding h5 {
   .home section {
     margin-bottom: 24px;
   }
-  .home #hero .span8 {
+  .home #hero .span8,
+  .home #hero .span4 {
     width: 100%;
-  }
-  .home #mc_embed_signup {
-    padding: 0;
   }
   .home #hero .span4 {
     margin: 24px auto;
-    width: 100%;
+  }
+  .home #mc_embed_signup {
+    padding: 0;
   }
   .home #hero label,
   .home #hero h3,
