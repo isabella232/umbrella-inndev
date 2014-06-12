@@ -50,7 +50,7 @@ $stylesheet_uri = get_stylesheet_directory_uri();
 		</div>
 		<div class="span4">
 			<h3>For Nonprofits</h3>
-			<p>Impaq.me combines social sharing with fundraising in a way that lets mission-driven nonprofits convert visitors into supporters.</p>
+			<p>Impaq.Me combines social sharing with fundraising in a way that lets mission-driven nonprofits convert visitors into supporters.</p>
 			<p><strong><a href="/nonprofits/">Here's how it works.</a></strong></p>
 		</div>
 		<div class="span4">
