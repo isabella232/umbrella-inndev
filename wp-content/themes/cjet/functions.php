@@ -7,6 +7,18 @@
  */
 require_once( get_template_directory() . '/largo-apis.php' );
 
+/**
+ * Misc includes
+ */
+$includes = array(
+	'/inc/metaboxes.php'
+);
+
+// Perform load
+foreach ( $includes as $include ) {
+	require_once( get_stylesheet_directory() . $include );
+}
+
 
 /**
  * Formats an attachment link for inclusion on Guide pages, with icon, filesize & type, etc.

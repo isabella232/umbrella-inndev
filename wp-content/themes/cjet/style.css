@@ -257,6 +257,10 @@ h5,
   #breadcrumbs {
     display: none;
   }
+  .home #courses,
+  .home #guides {
+    padding: 10px;
+  }
 }
 @media screen and (max-width: 640px) {
   .home #extras aside {
