@@ -211,6 +211,21 @@ h5,
 .home #guides p {
   font-size: 15px;
 }
+.home #extras {
+  margin-bottom: 24px;
+}
+.home #extras .widget p,
+.home #extras .widget ul,
+.home #extras .largo-recent-posts h5 {
+  padding: 0;
+}
+.home #extras .widget p {
+  font-size: 13.04px;
+  margin-bottom: 4px;
+}
+.home #extras .widget p.more-link {
+  font-weight: bold;
+}
 .home #courses li {
   width: 18.290598290598293%;
 }
