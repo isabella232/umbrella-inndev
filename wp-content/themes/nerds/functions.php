@@ -41,4 +41,4 @@ function single_post_top() {
 		echo '</h5>';
 	}
 }
-add_action('largo_before_post_header', 'single_post_top');
+add_action( 'largo_before_post_header', 'single_post_top' );

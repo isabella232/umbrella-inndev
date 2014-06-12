@@ -1,0 +1,251 @@
+/*
+Theme Name:     Community Journalism Executive Training (CJET)
+Theme URI:      http://largoproject.org
+Description:    A child theme for CJET, a program of the Investigative News Network
+Author:         Adam Schweigert/INN
+Author URI:     http://investigativenewsnetwork.org
+Template:       largo
+Version:        0.1.0
+*/
+@innblue: #2275be;
+@innltblue: #90bfe7;
+@inngray: #666;
+@ltgray: #efefef;
+
+body,
+h1, h2, h3, h4, h5,
+.btn-primary {
+  font-family: "proxima-nova",helvetica,arial,sans-serif;
+}
+#site-header {
+  height: 0;
+}
+#main {
+  margin-top: 8px;
+}
+#breadcrumbs {
+  margin-bottom: 24px;
+}
+.guide-page {
+  .author-posts-link {
+    display: none;
+  }
+  .entry-content .widget {
+    padding: 15px 0;
+  }
+  .pager {
+    a {
+      width: 100%;
+      box-sizing: border-box;
+      height: 100%;
+    }
+  }
+  .toggle-nav-bar {
+    display: none;
+  }
+  .guide-nav {
+    padding: 20px;
+    background-color: @ltgray;
+    h4 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      a {
+	    color: #333;
+      }
+    }
+    li.current_page_item {
+	  font-weight: bold;
+    }
+  }
+  .largo-author {
+    .widgettitle {
+      font-size: 18px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      color: @inngray;
+    }
+    h5 {
+      margin-bottom: 8px;
+    }
+    ul {
+	  padding: 0;
+	  margin: 0;
+    }
+  }
+  @media screen and (max-width:768px) {
+    .guide-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 0;
+      .container {
+        margin: 5px 10px;
+      }
+      .guide-tree,
+      .resources {
+        display: none;
+      }
+      .toggle-nav-bar {
+        display: block;
+        margin-top: 0
+      }
+      h4 {
+        font-size: 21px;
+        margin: 0.1em 0;
+        color: black;
+      }
+      ul {
+        margin: 0 -10px 0 44px
+      }
+      li {
+        display: block;
+        float: none;
+        > a {
+          color: @innblue;
+          padding: 6px 10px;
+        }
+      }
+      .resources h4 {
+        margin-left: 46px;
+      }
+    }
+    article.span9 {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 40px;
+    }
+    .pager .next,
+    .pager .previous {
+	  width: 100%;
+	  margin-bottom: 8px;
+    }
+  }
+}
+
+.guide-resources {
+  margin-left: 0;
+  li {
+    display: block;
+  }
+  a {
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+  .attachment-meta {
+    white-space: nowrap;
+  }
+  i {
+    -webkit-font-smoothing: antialiased;
+  }
+  .icon-picture {
+    color: cadetblue;
+  }
+  .icon-play {
+    color: crimson;
+  }
+  .icon-table {
+    color: forestgreen;
+  }
+  .icon-doc-text {
+    color: mediumblue;
+  }
+  .icon-doc-text-inv {
+	color: firebrick;
+  }
+  .icon-download {
+    color: indigo;
+  }
+}
+
+/**
+ * Homepage styles
+ */
+.home {
+  #courses,
+  #guides {
+    clear: both;
+    > h1,
+    > .description {
+      text-align: center;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      text-align: left;
+      overflow: hidden; //clearfix
+      font-size: 0;	// inline-block spacing hack
+    }
+    li {
+      display: inline-block;
+      margin-right: percentage( 10 / 1170 );
+      margin-left: percentage( 10 / 1170 );
+      min-width: 200px;
+      vertical-align: top;
+      text-align: left;
+    }
+    span[data-picture] {
+      max-width: 100%;
+      height: auto;
+    }
+    br {
+      clear: left;
+    }
+  }
+  #courses li {
+    width: percentage( .2 * (1070/1170) );
+  }
+  #guides li {
+    width: percentage( .25 * (1090.0/1170) );
+  }
+  #extras {
+    background-color: @ltgray;
+    padding: 10px;
+    overflow: hidden;
+    > aside {
+      box-sizing: border-box;
+      padding: 10px;
+      width: 33.3333%;
+      float: left;
+      border-top: 0;
+    }
+  }
+}
+
+/**
+ * Responsive.
+ */
+@media screen and (max-width: 894px) {
+  .home {
+    #courses ul,
+    #guides ul {
+      text-align: center;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  #breadcrumbs {
+    display: none;
+  }
+}
+@media screen and (max-width: 640px) {
+  .home {
+    #extras {
+      aside {
+        width: 100%;
+        float: none;
+      }
+    }
+  }
+}
+@media screen and (max-width: 440px) {
+  .home {
+    #courses li,
+    #guides li {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}

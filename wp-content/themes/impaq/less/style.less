@@ -1,0 +1,169 @@
+/*
+Theme Name:     Impaq.me
+Theme URI:      http://impaq.me
+Description:    A child theme for Impaq.me, a program of the Investigative News Network
+Author:         Adam Schweigert/INN
+Author URI:     http://investigativenewsnetwork.org
+Template:       largo
+Version:        0.1.0
+*/
+@red: #e76756;
+@inngray: #bbb;
+
+body,
+h1, h2, h3, h4, h5,
+.btn-primary {
+  font-family: "proxima-nova",helvetica,arial,sans-serif;
+}
+a,
+a:hover,
+#site-footer a:hover {
+  color: @red;
+}
+a:hover,
+.btn-primary:hover {
+  opacity: 0.9;
+}
+#branding {
+  img {
+    margin: 0 auto 18px;
+    display: block;
+    max-width: 800px;
+    padding: 0 5%;
+    width: 90%;
+  }
+  h5 {
+    text-align: center;
+    color: @inngray;
+    font-weight: normal;
+    margin-bottom: 60px;
+  }
+}
+.home {
+  section {
+    margin-bottom: 100px;
+	&#participants {
+      margin-bottom: 0;
+    }
+  }
+  h3 {
+    text-align: center;
+    color: @red;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+  .widgettitle,
+  #sectors h3 {
+    text-align: left;
+  }
+  #sectors {
+    h3, p,
+    .story h4 {
+      margin-bottom: 4px;
+    }
+    p {
+	  font-size: 18px;
+    }
+    .story {
+      h4 {
+        font-size: 20px;
+        a {
+	      color: #454545;
+        }
+      }
+      p {
+	    font-size: 15px;
+        line-height: 24px;
+        &.more {
+          font-size: 18px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+#hero {
+  max-width: 1170px;
+  margin: 0 auto 100px;
+  .embed-container {
+    margin-bottom: 0;
+  }
+  h3 {
+    text-align: left;
+    margin-bottom: 12px;
+  }
+  #mc_embed_signup {
+    padding: 8px 20px 0;
+  }
+  input {
+    width: 95%;
+    &.btn-primary {
+      margin-top: 18px;
+      background-color: @red;
+      border: none;
+      border-radius: 5px;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      padding: 12px 0;
+      font-size: 18px;
+      width: 97.5%;
+    }
+  }
+}
+#site-footer {
+  .textwidget p {
+    font-size: 14px;
+    margin-bottom: 6px;
+    strong {
+      font-size: 15px;
+    }
+  }
+}
+
+@media all and (max-width: 980px) {
+ .home #sectors .span4 {
+    width: 95%;
+    padding: 0;
+    margin: 0 2.5% 24px;
+  }
+}
+@media all and (max-width: 768px) {
+  #branding h5 {
+    margin-bottom: 24px;
+    font-size: 21px;
+  }
+  .home {
+    section {
+      margin-bottom: 24px;
+    }
+    #mc_embed_signup {
+      padding: 0;
+    }
+    #sectors {
+      h3, h4, p {
+	    text-align: center;
+	  }
+    }
+  }
+  #hero {
+  	margin-bottom: 24px;
+    .span8, .span4 {
+      width: 100%;
+    }
+    .span4 {
+	  margin: 24px auto;
+    }
+    input {
+      margin: 0 1.25%;
+    }
+    label, h3 {
+	  text-align: center;
+    }
+  }
+}
+@media all and (max-width: 480px) {
+  .home #participants .span2 {
+    width: 31%;
+  }
+}
