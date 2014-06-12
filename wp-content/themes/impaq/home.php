@@ -46,12 +46,12 @@ $stylesheet_uri = get_stylesheet_directory_uri();
 		<div class="span4">
 			<h3>For Foundations</h3>
 			<p>Impaq.Me allows foundations to make strategic investments in a nonprofit sector, reducing the friction involved in writing individual grants and increasing transparency and accountability.</p>
-			<p><strong><a href="">Here's how it works.</a></strong></p>
+			<p><strong><a href="/foundations/">Here's how it works.</a></strong></p>
 		</div>
 		<div class="span4">
 			<h3>For Nonprofits</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pellentesque eleifend lectus, nec vestibulum massa scelerisque at. Etiam id urna felis. Nunc eu nunc orci. In volutpat nunc vitae.</p>
-			<p><strong><a href="">Show me the money.</a></strong></p>
+			<p>Impaq.me combines social sharing with fundraising in a way that lets mission-driven nonprofits convert visitors into supporters.</p>
+			<p><strong><a href="/nonprofits/">Here's how it works.</a></strong></p>
 		</div>
 		<div class="span4">
 			<h3>Recent News</h3>
