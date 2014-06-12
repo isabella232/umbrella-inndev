@@ -28,13 +28,14 @@ a:hover,
 #branding img {
   margin: 0 auto 18px;
   display: block;
-  max-width: 800px;
+  max-width: 600px;
   padding: 0 5%;
   width: 90%;
 }
 #branding h5 {
   text-align: center;
   color: #bbbbbb;
+  font-size: 21px;
   font-weight: normal;
   margin-bottom: 60px;
 }
