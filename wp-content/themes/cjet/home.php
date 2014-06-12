@@ -16,9 +16,10 @@ $guides = get_pages( array(
 ));
 ?>
 
-<div id="logo">
+<header id="branding">
 	<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_stylesheet_directory_uri() . '/img/cjet-logo.png' ?>" /></a>
-</div>
+</header>
+
 
 <section id="courses">
 	<h1><?php _e("Online Courses", 'cjet'); ?></h1>
@@ -39,7 +40,7 @@ $guides = get_pages( array(
 </section><!-- #courses -->
 
 <section id="extras">
-	<?php dynamic_sidebar( 'homepage-bottom' ); ?>
+	<?php dynamic_sidebar( 'homepage-callout' ); ?>
 </section>
 
 <section id="guides">

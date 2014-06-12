@@ -25,6 +25,13 @@ h5,
 #breadcrumbs {
   margin-bottom: 24px;
 }
+#branding img {
+  margin: 24px auto 18px;
+  display: block;
+  max-width: 480px;
+  padding: 0 5%;
+  width: 90%;
+}
 .guide-page .author-posts-link {
   display: none;
 }
@@ -188,6 +195,21 @@ h5,
 .home #courses br,
 .home #guides br {
   clear: left;
+}
+.home #courses h1,
+.home #guides h1 {
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+.home #courses h4,
+.home #guides h4 {
+  font-size: 24px;
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+.home #courses p,
+.home #guides p {
+  font-size: 15px;
 }
 .home #courses li {
   width: 18.290598290598293%;

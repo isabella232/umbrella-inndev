@@ -54,10 +54,10 @@
 
 	<div id="main" class="row-fluid clearfix">
 
-	<div id="breadcrumbs">
-	    <?php
-	    	if ( function_exists( 'bcn_display' ) && !is_home() ) {
-	        	bcn_display();
-			}
-		?>
-	</div>
+	<?php
+	    if ( function_exists( 'bcn_display' ) && !is_home() ) {
+	    	echo '<div id="breadcrumbs">';
+	        bcn_display();
+	        echo '</div>';
+		}
+	?>
