@@ -1,0 +1,124 @@
+/*
+Theme Name:     Nerds
+Theme URI:      http://nerds.investigativenewsnetwork.org
+Description:    A child theme for nerds.investigativenewsnetwork.org, team blog for INN
+Author:         Adam Schweigert, Ryan Nagle
+Author URI:     http://investigativenewsnetwork.org
+Template:       largo
+Version:        0.1.0
+*/
+
+@innblue: #2275be;
+@innltblue: #90bfe7;
+@inngray: #666;
+@ltgray: #efefef;
+@dkgray: #333;
+
+body {
+  font-family: "proxima-nova",helvetica,arial,sans-serif;
+}
+h1,h2,h3,h4,h5,
+.widgettitle {
+  font-family: "museo-sans",helvetica,arial,sans-serif;
+  font-weight: 900;
+}
+#main {
+  margin-top: 25px;
+}
+#site-header {
+  display: none;
+}
+.home .sticky-nav-wrapper,
+.sticky-nav-wrapper {
+  height: 50px;
+}
+.home .sticky-nav-holder.show {
+  visibility: visible;
+  opacity: 1;
+}
+#topics-bar {
+  padding-top: 8px;
+  ul li.menu-label {
+    color: @inngray;
+  }
+}
+.entry-title a {
+  color: @dkgray;
+}
+.entry-content h3 {
+  font-weight: 700;
+  strong {
+    font-weight: 900;
+  }
+}
+
+/* Roster Widget */
+ul#staff-roster {
+  float: left;
+  clear: both;
+  margin: 12px 0 0 0;
+  list-style-type: none;
+  width: 100%;
+  li {
+    margin: 0;
+    display: block;
+    float: left;
+    clear: both;
+    margin: 0 0 16px 0;
+    width: 100%;
+    img {
+      float: left;
+      width: 65px;
+      height: auto;
+      margin: 0 14px 7px 0;
+      box-shadow: 0 1px 8px @inngray;
+      padding: 4px;
+    }
+  }
+  .staff-name {
+    font-family: "museo-sans",helvetica,arial,sans-serif;
+    font-size: 18px;
+  }
+  p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    line-height: 17px;
+    color: @inngray;
+  }
+}
+
+/* friends widget */
+#friends-widget {
+  p, ul {
+    font-size: 15px;
+    padding-left: 0;
+  }
+  p {
+    margin-bottom: 8px;
+  }
+  ul {
+    margin-left: 0;
+    li {
+      list-style: none;
+    }
+    strong {
+      font-size: 17px;
+      line-height: 21px;
+      a {
+        color: @inngray;
+      }
+    }
+  }
+}
+#sidebar .widget-area {
+  padding-left: 40px;
+}
+
+@media all and (max-width: 768px) {
+  #sidebar .widget-area {
+    padding-left: 0;
+  }
+  .sticky-footer-container .follow {
+    display: none;
+  }
+}

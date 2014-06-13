@@ -7,20 +7,23 @@ Author URI:     http://investigativenewsnetwork.org
 Template:       largo
 Version:        0.1.0
 */
-
 body {
-  font-family: "proxima-nova",helvetica,arial,sans-serif;
+  font-family: "proxima-nova", helvetica, arial, sans-serif;
 }
-h1,h2,h3,h4,h5,
+h1,
+h2,
+h3,
+h4,
+h5,
 .widgettitle {
-  font-family: "museo-sans",helvetica,arial,sans-serif;
+  font-family: "museo-sans", helvetica, arial, sans-serif;
   font-weight: 900;
 }
 #main {
   margin-top: 25px;
 }
-.entry-title a {
-  color: #333;
+#site-header {
+  display: none;
 }
 .home .sticky-nav-wrapper,
 .sticky-nav-wrapper {
@@ -34,7 +37,10 @@ h1,h2,h3,h4,h5,
   padding-top: 8px;
 }
 #topics-bar ul li.menu-label {
-  color: #565656;
+  color: #666666;
+}
+.entry-title a {
+  color: #333333;
 }
 .entry-content h3 {
   font-weight: 700;
@@ -42,9 +48,6 @@ h1,h2,h3,h4,h5,
 .entry-content h3 strong {
   font-weight: 900;
 }
-
-#site-header { display: none; }
-
 /* Roster Widget */
 ul#staff-roster {
   float: left;
@@ -53,7 +56,7 @@ ul#staff-roster {
   list-style-type: none;
   width: 100%;
 }
-#staff-roster li {
+ul#staff-roster li {
   margin: 0;
   display: block;
   float: left;
@@ -61,23 +64,23 @@ ul#staff-roster {
   margin: 0 0 16px 0;
   width: 100%;
 }
-#staff-roster li img {
+ul#staff-roster li img {
   float: left;
   width: 65px;
   height: auto;
   margin: 0 14px 7px 0;
-  box-shadow: 0 1px 8px #666;
+  box-shadow: 0 1px 8px #666666;
   padding: 4px;
 }
-#staff-roster .staff-name {
-  font-family: "museo-sans",helvetica,arial,sans-serif;
+ul#staff-roster .staff-name {
+  font-family: "museo-sans", helvetica, arial, sans-serif;
   font-size: 18px;
 }
-#staff-roster p {
-  margin: 5px 0 0 0;
+ul#staff-roster p {
+  margin: 5px 0 0;
   font-size: 14px;
   line-height: 17px;
-  color: #565656;
+  color: #666666;
 }
 /* friends widget */
 #friends-widget p,
@@ -88,23 +91,22 @@ ul#staff-roster {
 #friends-widget p {
   margin-bottom: 8px;
 }
-#friends-widget ul strong a {
-  color: #565656;
-}
-#friends-widget ul strong {
-  font-size: 17px;
-  line-height: 21px;
-}
 #friends-widget ul {
   margin-left: 0;
 }
 #friends-widget ul li {
   list-style: none;
 }
+#friends-widget ul strong {
+  font-size: 17px;
+  line-height: 21px;
+}
+#friends-widget ul strong a {
+  color: #666666;
+}
 #sidebar .widget-area {
   padding-left: 40px;
 }
-
 @media all and (max-width: 768px) {
   #sidebar .widget-area {
     padding-left: 0;
