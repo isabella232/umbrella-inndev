@@ -37,7 +37,7 @@ h5,
   padding-top: 8px;
 }
 #topics-bar ul li.menu-label {
-  color: #666666;
+  color: #bbbbbb;
 }
 .entry-title a {
   color: #333333;
@@ -68,7 +68,7 @@ ul#staff-roster li img {
   width: 65px;
   height: auto;
   margin: 0 14px 7px 0;
-  box-shadow: 0 1px 8px #666666;
+  box-shadow: 0 1px 8px #bbbbbb;
   padding: 4px;
 }
 ul#staff-roster .staff-name {
@@ -79,7 +79,7 @@ ul#staff-roster p {
   margin: 5px 0 0;
   font-size: 14px;
   line-height: 17px;
-  color: #666666;
+  color: #bbbbbb;
 }
 /* friends widget */
 #friends-widget p,
@@ -101,7 +101,7 @@ ul#staff-roster p {
   line-height: 21px;
 }
 #friends-widget ul strong a {
-  color: #666666;
+  color: #bbbbbb;
 }
 #sidebar .widget-area {
   padding-left: 40px;
