@@ -1,0 +1,123 @@
+/**
+ * Styles for the resources widget
+ */
+.inn-resources-widget
+	ul.resources
+		list-style: none
+		margin: 0 0 0 0
+		padding: 5px 0 0
+		li
+			display: block
+			margin-bottom: 0
+		a
+			display: block
+			font-family: $sans
+			padding: 6px
+			height: 20px
+			position: relative
+			font-size: 16px
+			&.current
+				background-color: $inngray
+				color: white
+				+border-left-radius(4px)
+				&:after
+					content: ""
+					width: 0
+					height: 0
+					border-style: solid
+					border-width: 16px 0 16px 20px
+					border-color: transparent transparent transparent $inngray
+					position: absolute
+					top: 0
+					right: -20px
+					-webkit-transform: rotate(360deg)
+	.view-all
+		clear: both
+		&:after
+			content: " >"
+
+#resource-items
+	padding-left: 20px
+	img.attachment-post-thumbnail
+		float: left
+		max-width: 30%
+		margin: 0 10px 20px 0
+	article
+		+clearfix
+		clear: both
+		> div
+			float: left
+			max-width: 68%
+
+	> div > article:first-child //featured
+		&:first-child
+			.byline
+				display: none
+
+	h5
+		color: $inngray
+		font-size: 12px
+	h2
+		font-size: 24px
+		margin-bottom: 0.2em
+
+	.more-resources
+		margin: 1em 0
+		+clearfix
+		article
+			width: 46%
+			float: left
+			margin-right: 3.9%
+			clear: none
+			.top-tag,
+			.entry-content
+				display: none
+		h2
+			font-size: 100%
+		img
+			max-width: 20%
+
+/**
+ * And the signle resource widget
+ */
+#content .inn-featured-resource-widget
+	margin-top: 2em
+	.attachment-post-thumbnail
+		float: left
+		margin: 0 20px 10px 0
+	.byline
+		display: none
+	article
+		border-bottom: 0
+		margin-bottom: 0
+	.entry-content
+		margin-bottom: 0
+	.links
+		font-family: $sans
+		text-align: right
+		a
+			padding-left: 2em
+			white-space: nowrap
+
+@media screen and (max-width: 767px)
+	.inn-resources-widget
+		ul.resources
+			width: 100%
+			float: none
+			border-bottom: 1px solid $inngray
+			padding-bottom: 0.5em
+			margin-bottom: 1em
+		a.current
+			+border-radius(4px)
+			&:after
+				display: none
+	#resource-items
+		padding-left: 0
+		width: 100%
+		float: none
+		article > div
+			max-width: 65%
+		.more-resources article
+			float: none
+			width: 100%
+			margin-right: 0
