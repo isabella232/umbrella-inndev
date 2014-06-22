@@ -62,8 +62,11 @@ h5,
 .guide-page .guide-nav h4 a {
   color: #333333;
 }
-.guide-page .guide-nav li.current_page_item {
+.guide-page .guide-nav .current_page_item {
   font-weight: bold;
+}
+.guide-page .guide-nav .current_page_item .children {
+  font-weight: normal;
 }
 .guide-page .largo-author .widgettitle {
   font-size: 18px;
