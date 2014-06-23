@@ -11,6 +11,17 @@
 	padding: 0;
 }
 
+/* Breadcrumbs */
+.network-header .breadcrumbs {
+	font-size: 13px;
+	line-height: 32px;
+	padding: 0 10px;
+	float: left;
+	width: 100%;
+	background: #eee;
+	border-top: 1px solid #dddddd;
+}
+
 /* Site list */
 .network-header ul.network-header-main-nav {
 	float: left;

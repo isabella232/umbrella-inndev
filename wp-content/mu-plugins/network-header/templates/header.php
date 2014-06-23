@@ -30,5 +30,9 @@
 			</div>
 		</form>
 	</div>
-</div>
 <?php restore_current_blog(); ?>
+
+<?php if(function_exists('bcn_display')) { ?>
+	<div class="breadcrumbs"><?php bcn_display(); ?></div>
+<?php } ?>
+</div>
