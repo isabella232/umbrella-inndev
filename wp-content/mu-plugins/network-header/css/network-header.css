@@ -47,7 +47,6 @@
 .network-header ul.network-header-main-nav > li a:hover {
 	text-decoration: none;
 	background-color: #dfdfdf;
-	color: #1a5a90;
 }
 
 .network-header ul.network-header-main-nav > li.network-home span { display: none; }
@@ -98,7 +97,6 @@
 .sub-nav-container ul li a:hover {
 	background: #dadada;
 	text-decoration: none;
-	color: #1a5a90;
 }
 
 /* Donate button */
