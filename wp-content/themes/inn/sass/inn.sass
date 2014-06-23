@@ -1,0 +1,458 @@
+@charset "UTF-8"
+@import compass
+@import helpers
+@import membership
+@import funders
+@import resources
+
+
+.global-nav,
+#page,
+#site-footer,
+#footer-logos
+	padding: 0 2.75%
+
+#site-footer
+	padding-top: 30px
+	width: auto
+
+#mobile-nav
+	display: none
+
+#logo,
+#footer-logo
+	+notext
+	display: block
+	width: image-width('inn-logo.png')
+	height: image-height('inn-logo.png')
+	background: $innblue image-url('inn-logo.png') no-repeat center center
+	background-size: cover //for responsive later
+	float: left
+	margin-bottom: 10px
+
+#footer-logo
+	float: none
+	margin: 0 auto
+	max-width: 100%
+	background: transparent image-url('inn-logo.png') no-repeat center top
+	background-size: contain
+	.no-backgroundsize &
+		background-image: image-url('inn-logo-small.png')
+
+#boilerplate
+	text-align: center
+
+.tagline
+	clear: both
+	color: $innblue
+	font-weight: bold
+	font-style: italic
+	border-bottom: 1px solid $innblue
+	padding: 8px 0 5px
+	+single-transition( all, $uxspeed, ease )
+	white-space: nowrap
+	text-overflow: ellipsis
+	overflow: hidden
+	&:before
+		content: " "
+		margin-right: 1em
+		height: 1em
+		float: left
+
+.global-hovered .tagline,
+.global-active .tagline
+	color: white
+
+#home-bottom
+	clear: both
+
+.breadcrumbs
+	font-size: 12px
+	color: $inngray
+	text-transform: uppercase
+	padding: 0.5em 0 0 1.2em
+	a
+		color: $inngray - #222
+
+.largo-sidebar-featured p,
+.largo-recent-posts p,
+.largo-INN-RSS p,
+.inn-resources-widget p.morelink,
+#homepage-featured .more
+	font-size: 13px
+
+//.byline .member
+//	font-style: italic
+
+#homepage-featured
+	> .widgettitle
+		margin: 12px 12px 6px
+		a
+			background-color: #f89406!important
+			float: right
+			+border-radius(2px)
+			font-size: 11px
+			text-transform: none
+			padding: 1px
+	.top-story
+		margin-left: 0
+		.member
+			display: none
+
+
+/**
+ * Series landings
+ */
+#series-header
+	padding: 1em 1em 0.3em
+	+border-radius(10px)
+	background-color: #f2f2f2
+	p
+		font-size: 91%
+
+
+/**
+ * Dropdown menus and hovers, oh my!
+ */
+.global-nav-inner
+	position: relative
+	ul.menu
+		font-size: 14px
+		margin-left: 8px
+		li
+			margin: 7px 0 0 0
+			ul.sub-menu
+				+opacity(0)
+				display: none
+				+single-transition( all, $uxspeed, ease )
+				position: absolute
+				top: 38px
+				left: 0
+				padding: 6px 10px
+				pointer-events: none
+				min-width: 100%
+				+box-sizing( border-box )
+				li
+					+inline-block
+					margin: 0 0 0 0
+					a
+						font-size: 14px
+						+single-transition(all, $uxspeed, ease)
+						color: $innblue
+						display: block
+						padding: 5px 7px
+						margin: 0 0
+						+border-radius(4px)
+						background-color: white
+						line-height: 1.1em
+						&:hover
+							color: white
+							background-color: $innblue
+				li.current-menu-item a
+					color: white
+					background-color: $innblue
+
+		> li
+			> a
+				font-weight: bold
+				text-transform: uppercase
+				+border-top-radius(4px)
+				margin-right: 4px
+				padding: 6px 8px 9px
+				+single-transition(all, $uxspeed, ease)
+				max-height: 16px
+				display: block
+				line-height: 1.3em
+			&:hover,
+			&.current-menu-item,
+			&.current-menu-parent
+				> a
+					background-color: $innblue
+					color: white
+				& > ul
+					+opacity(1)
+					display: block
+					pointer-events: auto
+	.nav-right
+		ul#header-social
+			margin-right: 0
+			li a
+				padding: 4px
+		.donate-btn
+			margin: 5px 6px
+
+/* Hide the "active-tree" sub-menu item on a hover  */
+.global-hovered.global-active .active-tree .sub-menu
+	+opacity(0)
+	display: none
+
+#top-nav
+	position: absolute
+	left: image-width('inn-logo.png')
+	right: 0
+	top: 0
+
+/* redoing search */
+#header-search
+	position: relative
+	overflow: hidden
+	&.open
+		overflow: visible
+		a.icon-search
+			+text-shadow(0 1 1px #333)
+			background-color: $innblue
+			text-decoration: none
+		form
+			+opacity(1)
+			pointer-events: auto
+
+	a.icon-search
+		display: block
+		color: white
+		font-size: 20px
+		+text-shadow(0 0 5px #999)
+		padding: 0 4px 4px 7px
+		+border-top-radius(4px)
+		+single-transition(all, $uxspeed, ease)
+		height: 30px
+		max-height: 30px
+		&:hover
+			+text-shadow(0 0 8px #fff)
+			text-decoration: none
+
+	form
+		+opacity(0)
+		+single-transition( all, $uxspeed, ease )
+		background-color: $innblue
+		pointer-events: none
+		padding: 5px 8px 8px
+		position: absolute
+		right: 0
+		top: 34px
+		+box-shadow(0 1px 3px rgba(#000, 0.3))
+	.input-append
+		white-space: nowrap
+
+/* footer menu */
+#site-footer .footer-menu > ul
+	font-family: $sans
+	a
+		color: white
+	li
+		border-bottom: 0
+		padding: 0 0 0 0
+		margin: 0 0 0 0
+		text-align: center
+	> li.menu-item
+		display: block
+		float: left
+		width: 23%
+		margin: 0 1px 1em
+		> a
+			font-weight: bold
+			text-transform: uppercase
+		li
+			font-size: 14px
+			padding: 1px 0
+	i
+		display: none
+
+#site-footer .widget
+	text-align: center
+	font-family: $sans
+	.widgettitle
+		border-bottom: 0
+		padding-bottom: 0
+		margin-bottom: 0
+	.textwidget
+		font-size: 14px
+
+/* menu toggle plusses */
+.menu-toggle
+	float: right
+	padding: 0 0 !important
+	height: auto !important
+
+// other  stuff
+#sidebar .textwidget
+	p
+		margin-bottom: 1em
+	h5
+		font-size: 16px
+		margin-bottom: 2px
+		padding: 0 3px
+	ul
+		list-style-type: square
+		margin: 5px 0 0 20px
+		font-size: 14px
+	li
+		margin-bottom: 0.2em
+
+
+
+/**
+ * Content driven breakpoints
+ */
+@media screen and (max-width: 1070px)
+	#header-social
+		.icon-youtube-parent,
+		.icon-gplus-parent,
+		.icon-linkedin-parent
+			display: none
+
+@media screen and (max-width: 768px)
+	#site-footer .footer-menu
+		width: 90%
+		> ul
+			i
+				display: block
+			li.menu-item
+				text-align: left
+				float: none
+				width: auto
+				&.menu-label
+					display: none
+				a
+					font-size: 22px
+				li
+					margin: 4px
+					a
+						font-size: 18px
+
+			.sub-menu
+				display: none
+
+	.breadcrumbs
+		display: none
+
+/**
+ * Tablet menus
+ */
+@media screen and (max-width: 860px)
+	#top-nav
+		position: static
+		float: right
+
+		.menu,
+		.tagline
+			display: none
+
+	#mobile-nav
+		position: relative
+		display: block
+		margin-left: image-width('inn-logo.png') + 10
+		color: white
+		margin-right: -900px
+		padding-top: 7px
+		float: left
+		i
+			display: block
+			color: white
+			font-size: 18px
+			+border-top-radius(4px)
+			padding: 0 8px 3px
+			height: 38px
+			cursor: pointer
+			.menu-mobile-open &
+				background-color: $innblue
+	.global-nav .menu-mobile
+		display: none
+		//pointer-events: none
+		position: absolute
+		background-color: $innblue
+		padding: 8px
+		left: 0
+		top: 35px
+		+border-bottom-radius(6px)
+		+border-top-right-radius(6px)
+		+box-shadow(0 2px 5px rgba(#000, 0.2))
+		.menu-mobile-open &
+			display: block
+		li
+			display: block
+			float: none
+			margin: 0 0 0 0
+			.sub-menu
+				display: none
+				li
+					margin-left: 0.7em
+				a
+					text-transform: none
+		a
+			color: white
+			font-size: 14px
+			font-weight: bold
+			color: white
+			+border-radius(4px)
+			display: block
+			padding: 0 4px
+			white-space: nowrap
+			text-transform: uppercase
+			margin-right: 22px
+			&:hover
+				background-color: black
+
+	#site-footer
+		.footer-logo-wrapper
+			display: none
+		.footer-menu-desktop
+			width: 72%
+
+	.breadcrumbs
+		clear: both
+
+/**
+ * Phone menu and Resources section
+ */
+@media screen and (max-width: 540px)
+	.donate-btn
+		max-height: 28px
+
+	#mobile-nav
+		margin-left: 0
+		margin-right: 0
+		padding-top: 0
+		i
+			padding: 0 6px 0 8px
+			+border-radius( 0 )
+			font-size: 0
+			margin-right: 1px
+			&:before
+				font-size: 26px
+	#logo
+		height: 38px
+		width: 69px
+		margin-bottom: 0
+	.menu-mobile
+		display: none
+		position: static
+		clear: both
+		background-color: $innblue
+		padding: 5px 0
+		list-style: none
+		margin: 0 2.75%
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+		li
+			float: none
+			display: block
+			margin: 0 0.2em 0 0
+			clear: both
+		a
+			display: block
+			font-size: 16px
+			text-transform: uppercase
+			font-weight: bold
+			padding: 5px 7px
+			line-height: 1.1em
+			color: white
+			&:hover
+				text-decoration: none
+		.sub-menu
+			display: none
+			li
+				margin-left: 0.6em
+			a
+				text-transform: none
+		i
+			height: auto
+			color: white

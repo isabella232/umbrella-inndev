@@ -8,13 +8,17 @@ Template:       largo
 Version:        0.1.0
 */
 body,
+.btn-primary {
+  font-family: "proxima-nova", helvetica, arial, sans-serif;
+}
 h1,
 h2,
 h3,
 h4,
 h5,
-.btn-primary {
-  font-family: "proxima-nova", helvetica, arial, sans-serif;
+.widgettitle {
+  font-family: "museo-sans", helvetica, arial, sans-serif;
+  font-weight: 900;
 }
 #site-header {
   height: 0;
@@ -24,6 +28,13 @@ h5,
 }
 #breadcrumbs {
   margin-bottom: 24px;
+}
+#branding img {
+  margin: 24px auto 18px;
+  display: block;
+  max-width: 480px;
+  padding: 0 5%;
+  width: 90%;
 }
 .guide-page .author-posts-link {
   display: none;
@@ -49,16 +60,19 @@ h5,
   text-transform: uppercase;
 }
 .guide-page .guide-nav h4 a {
-  color: #333;
+  color: #333333;
 }
-.guide-page .guide-nav li.current_page_item {
+.guide-page .guide-nav .current_page_item {
   font-weight: bold;
+}
+.guide-page .guide-nav .current_page_item .children {
+  font-weight: normal;
 }
 .guide-page .largo-author .widgettitle {
   font-size: 18px;
   text-transform: uppercase;
   margin-bottom: 8px;
-  color: #666666;
+  color: #bbbbbb;
 }
 .guide-page .largo-author h5 {
   margin-bottom: 8px;
@@ -189,6 +203,36 @@ h5,
 .home #guides br {
   clear: left;
 }
+.home #courses h1,
+.home #guides h1 {
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+.home #courses h4,
+.home #guides h4 {
+  font-size: 24px;
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+.home #courses p,
+.home #guides p {
+  font-size: 15px;
+}
+.home #extras {
+  margin-bottom: 24px;
+}
+.home #extras .widget p,
+.home #extras .widget ul,
+.home #extras .largo-recent-posts h5 {
+  padding: 0;
+}
+.home #extras .widget p {
+  font-size: 13.04px;
+  margin-bottom: 4px;
+}
+.home #extras .widget p.more-link {
+  font-weight: bold;
+}
 .home #courses li {
   width: 18.290598290598293%;
 }
@@ -219,6 +263,10 @@ h5,
 @media screen and (max-width: 768px) {
   #breadcrumbs {
     display: none;
+  }
+  .home #courses,
+  .home #guides {
+    padding: 10px;
   }
 }
 @media screen and (max-width: 640px) {

@@ -109,8 +109,9 @@ $top_page = FALSE;
 					<?php
 						$pagelist = get_pages('sort_column=menu_order&sort_order=asc&child_of=' . $guide_parent_id );
 						$pages = array();
+						$pages[] = $guide_parent_id;
 						$prev_id = $next_id = '';
-						foreach ($pagelist as $page) {
+						foreach ( $pagelist as $page ) {
 						   $pages[] += $page->ID;
 						}
 

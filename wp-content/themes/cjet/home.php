@@ -16,9 +16,10 @@ $guides = get_pages( array(
 ));
 ?>
 
-<div id="logo">
+<header id="branding">
 	<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_stylesheet_directory_uri() . '/img/cjet-logo.png' ?>" /></a>
-</div>
+</header>
+
 
 <section id="courses">
 	<h1><?php _e("Online Courses", 'cjet'); ?></h1>
@@ -27,7 +28,7 @@ $guides = get_pages( array(
 		foreach ( $courses as $course ) :	?>
 			<li>
 				<article>
-					<?php echo apply_filters('the_content', get_the_post_thumbnail( $course->ID, 'medium' ) ); ?>
+					<a href="<?php echo get_permalink( $course->ID ); ?>" title="Permalink to <?php echo esc_attr( $course->post_title ); ?>"><?php echo apply_filters('the_content', get_the_post_thumbnail( $course->ID, 'medium' ) ); ?></a>
 					<h4><a href="<?php echo get_permalink( $course->ID ); ?>" title="Permalink to <?php echo esc_attr( $course->post_title ); ?>"><?php echo $course->post_title; ?></a></h4>
 					<p><?php echo $course->post_excerpt; ?></p>
 				</article>
@@ -39,7 +40,7 @@ $guides = get_pages( array(
 </section><!-- #courses -->
 
 <section id="extras">
-	<?php dynamic_sidebar( 'homepage-bottom' ); ?>
+	<?php dynamic_sidebar( 'homepage-callout' ); ?>
 </section>
 
 <section id="guides">
@@ -56,7 +57,7 @@ $guides = get_pages( array(
 		foreach ( $guides as $guide ) : ?>
 			<li>
 				<article>
-					<?php echo apply_filters('the_content', get_the_post_thumbnail( $guide->ID, 'medium' ) ); ?>
+					<a href="<?php echo get_permalink( $guide->ID ); ?>" title="Permalink to <?php echo esc_attr( $guide->post_title ); ?>"><?php echo apply_filters('the_content', get_the_post_thumbnail( $guide->ID, 'medium' ) ); ?></a>
 					<h4><a href="<?php echo get_permalink( $guide->ID ); ?>" title="Permalink to <?php echo esc_attr( $guide->post_title ); ?>"><?php echo $guide->post_title; ?></a></h4>
 					<p><?php echo $guide->post_excerpt; ?></p>
 				</article>

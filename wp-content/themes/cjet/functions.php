@@ -7,6 +7,18 @@
  */
 require_once( get_template_directory() . '/largo-apis.php' );
 
+/**
+ * Misc includes
+ */
+$includes = array(
+	'/inc/metaboxes.php'
+);
+
+// Perform load
+foreach ( $includes as $include ) {
+	require_once( get_stylesheet_directory() . $include );
+}
+
 
 /**
  * Formats an attachment link for inclusion on Guide pages, with icon, filesize & type, etc.
@@ -135,12 +147,12 @@ add_theme_support( 'custom-header' );
 /**
  * Meta field for hiding the author box
  */
-	largo_add_meta_box(
-		'author_display',
-		__('Author Display', 'cjet'),
-		'cjet_author_display_control',
-		'page'
-	);
+largo_add_meta_box(
+	'author_display',
+	__('Author Display', 'cjet'),
+	'cjet_author_display_control',
+	'page'
+);
 
 
 function cjet_author_display_control() {
@@ -185,3 +197,16 @@ function cjet_theme_options( $options ) {
 	return $options;
 }
 add_filter('largo_options', 'cjet_theme_options');
+
+function cjet_register_sidebars() {
+	register_sidebar( array(
+		'name' 			=> __( 'Homepage Callout', 'cjet' ),
+		'id' 			=> 'homepage-callout',
+		'description' 	=> __( 'Homepage Callout Section', 'cjet' ),
+		'before_widget' => '<aside id="%1$s" class="%2$s clearfix">',
+		'after_widget' 	=> "</aside>",
+		'before_title' 	=> '<h3 class="widgettitle">',
+		'after_title' 	=> '</h3>',
+	) );
+}
+add_action( 'widgets_init', 'cjet_register_sidebars' );
