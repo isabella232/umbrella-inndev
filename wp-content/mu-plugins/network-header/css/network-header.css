@@ -1,0 +1,114 @@
+.network-header {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	line-height: 40px;
+	position: relative;
+	background-color: #f1f1f1;
+	border-bottom: 1px solid #dddddd;
+	overflow: hidden;
+}
+
+.network-header nav {
+	padding: 0;
+}
+
+/* Site list */
+.network-header ul.network-header-main-nav {
+	float: left;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.network-header ul.network-header-main-nav > li {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	float: left;
+	font-size: .9em;
+	border-right: 1px solid #dddddd;
+}
+.network-header ul.network-header-main-nav > li a {
+	display: block;
+	height: 40px;
+	padding: 0 10px;
+	line-height: 40px;
+}
+.network-header ul.network-header-main-nav > li a:hover {
+	text-decoration: none;
+	background-color: #dfdfdf;
+	color: #1a5a90;
+}
+
+.network-header ul.network-header-main-nav > li.network-home span { display: none; }
+.network-header ul.network-header-main-nav > li.network-home {
+	width: 80px;
+	height: 40px;
+	background-image: url(http://inn.wpengine.netdna-cdn.com/wp-content/themes/largo-child/img/inn-logo.png);
+	background-repeat: no-repeat;
+	background-size: auto 32px;
+	background-position: center 4px;
+}
+.network-header ul.network-header-main-nav > li.network-home:hover {
+	background-color: #dfdfdf;
+}
+.network-header ul.network-header-main-nav > li.network-home a:hover {
+	background: transparent;
+}
+
+/* Sub nav */
+.network-header .network-header-main-nav .network-header-sub-nav {
+	display: none;
+}
+.sub-nav-container {
+	display: none;
+	clear: both;
+}
+.sub-nav-container ul {
+	float: left;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background: #dfdfdf;
+}
+.sub-nav-container ul li {
+	list-style-type: none;
+	float: left;
+	margin: 0;
+	padding: 0;
+	font-size: 13px;
+	line-height: 32px;
+}
+.sub-nav-container ul li a {
+	list-style-type: none;
+	float: left;
+	margin: 0;
+	padding: 0 10px;
+}
+.sub-nav-container ul li a:hover {
+	background: #dadada;
+	text-decoration: none;
+	color: #1a5a90;
+}
+
+/* Donate button */
+.network-header .donate-btn {
+	position: absolute;
+	right: 10px;
+	top: 0;
+	margin: 5px 0 0 0;
+}
+
+/* Search */
+.network-header .search {
+	position: absolute;
+	right: 90px;
+	top: 0;
+	padding: 0 8px;
+	border-right: 1px solid #dddddd;
+	border-left: 1px solid #dddddd;
+	margin-right: 10px;
+}
+.network-header .search .input-append {
+	display: none;
+}
+
