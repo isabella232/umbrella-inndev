@@ -11,7 +11,8 @@ require_once( get_template_directory() . '/largo-apis.php' );
  * Misc includes
  */
 $includes = array(
-	'/inc/metaboxes.php'
+	'/inc/metaboxes.php',
+	'/lib/file-un-attach/file-unattach.php'
 );
 
 // Perform load
