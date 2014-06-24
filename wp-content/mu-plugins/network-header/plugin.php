@@ -12,6 +12,12 @@ if (!function_exists('largo_render_network_header_menus')) {
 	}
 }
 
+/* Register the network-header menu */
+add_action('init', function() {
+	$menus = array('network-header' => __( 'Network Header', 'largo' ));
+	register_nav_menus( $menus );
+});
+
 /* Include assets */
 function enqueue_network_header_assets() {
 	wp_register_style('network-header', WPMU_PLUGIN_URL . '/network-header/css/network-header.css', NULL, "0.1");

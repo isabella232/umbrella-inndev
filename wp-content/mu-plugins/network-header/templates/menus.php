@@ -6,7 +6,7 @@
 			</li>
 			<?php
 			$nav_args = array(
-				'theme_location' => 'navbar-categories',
+				'theme_location' => 'network-header',
 				'depth' => 2,
 				'container' => false,
 				'items_wrap' => '%3$s',
