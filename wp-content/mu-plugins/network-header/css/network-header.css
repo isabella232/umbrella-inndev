@@ -30,6 +30,7 @@
 	padding: 0 10px;
 	line-height: 40px;
 }
+.network-header ul.network-header-main-nav > li.active,
 .network-header ul.network-header-main-nav > li a:hover {
 	text-decoration: none;
 	background-color: #dfdfdf;

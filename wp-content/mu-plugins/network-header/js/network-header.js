@@ -36,6 +36,9 @@
 
   $(function() {
     var showMenu = function(e) {
+      $(this).siblings().removeClass('active');
+      $(this).addClass('active');
+
       if (subNavHideTimeout)
         clearTimeout(subNavHideTimeout);
 
