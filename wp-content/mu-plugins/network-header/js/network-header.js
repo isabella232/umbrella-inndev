@@ -1,6 +1,7 @@
 (function() {
 	var $ = jQuery,
-		subNavHideTimeout;
+		subNavHideTimeout,
+    intentTimeout;
 
 	var displaySubNav = function(subNav) {
 		var navSelector = '.network-header nav',
@@ -11,8 +12,11 @@
 			subNavContainer = $(navSelector).find('.sub-nav-container');
 		}
 
-		subNavContainer.html(subNav.html());
-		subNavContainer.slideDown(350);
+    if (subNav.length) {
+      subNavContainer.html(subNav.html());
+      subNavContainer.slideDown(350);
+    } else
+      subNavContainer.slideUp(250);
 	}
 
 	var hideSubNav = function() {
@@ -30,10 +34,11 @@
 			if (subNavHideTimeout)
 				clearTimeout(subNavHideTimeout);
 
-			var subNav = $(this).find('.network-header-sub-nav');
+      if (intentTimeout)
+        clearTimeout(intentTimeout);
 
-			if (subNav.length)
-				displaySubNav(subNav);
+			var subNav = $(this).find('.network-header-sub-nav');
+      intentTimeout = setTimeout(displaySubNav.bind(null, subNav), 250);
 
 			return false;
 		});
@@ -41,6 +46,9 @@
 		$('.network-header').on('mouseleave', function(e) {
 			if (subNavHideTimeout)
 				clearTimeout(subNavHideTimeout);
+
+      if (intentTimeout)
+        clearTimeout(intentTimeout);
 
 			subNavHideTimeout = setTimeout(hideSubNav, 500);
 

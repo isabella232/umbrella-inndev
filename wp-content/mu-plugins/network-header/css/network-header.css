@@ -1,25 +1,12 @@
 .network-header {
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-	line-height: 40px;
 	position: relative;
 	background-color: #f1f1f1;
 	border-bottom: 1px solid #dddddd;
 	overflow: hidden;
 }
-
 .network-header nav {
 	padding: 0;
-}
-
-/* Breadcrumbs */
-.network-header .breadcrumbs {
-	font-size: 13px;
-	line-height: 32px;
-	padding: 0 10px;
-	float: left;
-	width: 100%;
-	background: #eee;
-	border-top: 1px solid #dddddd;
 }
 
 /* Site list */
@@ -29,7 +16,6 @@
 	margin: 0;
 	padding: 0;
 }
-
 .network-header ul.network-header-main-nav > li {
 	list-style-type: none;
 	margin: 0;
@@ -48,7 +34,6 @@
 	text-decoration: none;
 	background-color: #dfdfdf;
 }
-
 .network-header ul.network-header-main-nav > li.network-home span { display: none; }
 .network-header ul.network-header-main-nav > li.network-home {
 	width: 80px;
@@ -119,5 +104,42 @@
 }
 .network-header .search .input-append {
 	display: none;
+}
+
+@media (max-width: 768px) {
+	/* Site list/main nav */
+	.network-header ul.network-header-main-nav > li a {
+		padding: 0 3px;
+		font-size: 13px;
+		height: 32px;
+		line-height: 32px;
+	}
+	.network-header ul.network-header-main-nav > li.network-home {
+		width: 48px;
+		height: 32px;
+		background-image: url(http://inn.wpengine.netdna-cdn.com/wp-content/themes/largo-child/img/inn-logo.png);
+		background-repeat: no-repeat;
+		background-size: auto 26px;
+		background-position: center center;
+	}
+
+	/* Sub nav */
+	.sub-nav-container ul li a,
+	.sub-nav-container ul li {
+		float: none;
+	}
+	.sub-nav-container ul li a {
+		display: block;
+		width: 100%;
+	}
+	.sub-nav-container ul li {
+		/*font-size: 12px;*/
+		line-height: 28px;
+	}
+
+	/* Donate button */
+	.network-header .donate-btn {
+		display: none;
+	}
 }
 
