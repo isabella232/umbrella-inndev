@@ -153,6 +153,11 @@
 @media (max-width: 420px) {
 	/* Site list/main nav */
 	.network-header ul.network-header-main-nav > li a {
-		padding: 0 4px;
+		padding: 0 3px;
+	}
+
+	/* Sub nav */
+	.sub-nav-container ul li {
+    font-size: 12px;
 	}
 }

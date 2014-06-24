@@ -1,11 +1,11 @@
 (function() {
   var $ = jQuery,
-  subNavHideTimeout,
-  intentTimeout;
+      subNavHideTimeout,
+      intentTimeout;
 
   var displaySubNav = function(subNav, name) {
     var navSelector = '.network-header nav',
-    subNavContainer = $(navSelector).find('.sub-nav-container');
+        subNavContainer = $(navSelector).find('.sub-nav-container');
 
     if (!subNavContainer.length) {
       $(navSelector).find('.network-header-main-nav').after('<div class="sub-nav-container" />');
@@ -22,7 +22,7 @@
 
   var hideSubNav = function() {
     var navSelector = '.network-header nav',
-    subNavContainer = $(navSelector).find('.sub-nav-container');
+        subNavContainer = $(navSelector).find('.sub-nav-container');
 
     if (!subNavContainer.length)
       return false;
@@ -47,9 +47,10 @@
       if (intentTimeout)
         clearTimeout(intentTimeout);
 
-      var menuName = $(this).find('> a').text();
-      if (!subNavIsVisible(menuName)) {
-        var subNav = $(this).find('.network-header-sub-nav');
+      var menuName = $(this).find('> a').text(),
+          subNav = $(this).find('.network-header-sub-nav');
+
+      if (!subNavIsVisible(menuName) && subNav.length) {
         intentTimeout = setTimeout(displaySubNav.bind(null, subNav, menuName), 250);
         return false;
       }
