@@ -109,7 +109,7 @@
 @media (max-width: 768px) {
 	/* Site list/main nav */
 	.network-header ul.network-header-main-nav > li a {
-		padding: 0 3px;
+		padding: 0 6px;
 		font-size: 13px;
 		height: 32px;
 		line-height: 32px;
@@ -143,3 +143,10 @@
 	}
 }
 
+
+@media (max-width: 420px) {
+	/* Site list/main nav */
+	.network-header ul.network-header-main-nav > li a {
+		padding: 0 4px;
+	}
+}
