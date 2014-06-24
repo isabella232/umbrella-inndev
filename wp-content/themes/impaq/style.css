@@ -42,9 +42,6 @@ a:hover,
 .home section {
   margin-bottom: 100px;
 }
-.home section#participants {
-  margin-bottom: 0;
-}
 .home h3 {
   text-align: center;
   color: #e76756;
@@ -78,8 +75,11 @@ a:hover,
   font-size: 18px;
   font-weight: bold;
 }
+.home #participants {
+  margin-bottom: 24px;
+}
 .home #participants h3 {
-  margin-bottom: 12px;
+  margin-bottom: 24px;
 }
 #hero {
   max-width: 1170px;
