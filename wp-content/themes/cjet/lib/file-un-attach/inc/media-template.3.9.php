@@ -145,7 +145,7 @@ function fun_print_media_templates() {
 					</div>
 				</div>
 			<# } else { #>
-				<img src="{{ data.icon }}" class="icon" draggable="false" />
+				<img src="{{ data.icon }}" class="icon" data-attach="{{data.id}}" draggable="false" />
 				<div class="filename">
 					<div>{{ data.filename }}</div>
 				</div>
@@ -223,7 +223,7 @@ function fun_print_media_templates() {
 						<a class="delete-attachment" href="#"><?php _e( 'Delete Permanently' ); ?></a>
 					<?php endif; ?>
 				<# } #>
-				
+
 				<# if ( data.can.save ) { funFindPosts.is_attached( data.id ) #>
 					<div class="fun-actions" style="margin:12px 0 0"></div>
 				<# } #>

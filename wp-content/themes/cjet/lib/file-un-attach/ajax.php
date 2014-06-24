@@ -21,7 +21,7 @@ define( 'DOING_AJAX', true );
 $_SERVER['PHP_SELF'] = "/wp-admin/fun-ajax.php";
 
 //load wp
-require_once '../../../wp-load.php';
+require_once '../../../../../wp-load.php';
 
 if ( empty( $_REQUEST['action'] ) )
 	die( );
@@ -40,10 +40,10 @@ function file_unattach_unattach_this( ) {
 
 	if( !$imageid )
 		return;
-	
+
 	if( $postid == $imageid )
 		$postid = 0;
-		
+
 	delete_post_meta( $imageid, '_fun-parent', $postid );
 	wp_update_post( array( 'ID' => $imageid, 'post_parent' => 0 ) );
 }
@@ -56,10 +56,10 @@ function file_unattach_unattach_this( ) {
  */
 function file_unattach_attach_this( ) {
 	check_ajax_referer( "funajax" );
-	
+
 	if( empty( $_POST['postid'] ) || empty( $_POST['imageid'] ) )
 		return false;
-	
+
 	$postid = ( int ) $_POST['postid'];
 	$imageid = ( int ) $_POST['imageid'];
 
@@ -76,12 +76,12 @@ function file_unattach_attach_this( ) {
 function file_unattach_find_posts( ) {
 
 	check_ajax_referer( "funajax" );
-	
+
 	if ( empty( $_POST['ps'] ) || empty( $_POST['type'] ) )
 		exit;
 
 	global $wpdb;
-		
+
 	$s = stripslashes( $_POST['ps'] );
 	$searchand = $search = '';
 	$args = array(
@@ -89,10 +89,10 @@ function file_unattach_find_posts( ) {
 		'posts_per_page' => 50,
 		'post_type' => $_POST['type'],
 	);
-	
+
 	if ( '' !== $s )
 		$args['s'] = $s;
-		
+
 	if( !empty( $_POST['exclude'] ))
 		$args['exclude'] = explode( ',', trim($_POST['exclude'], ',') );
 
@@ -127,20 +127,20 @@ function file_unattach_find_posts( ) {
 		}
 
 		$time = ( '0000-00-00 00:00:00' == $post->post_date )  ?  '' : mysql2date( __( 'Y/m/d' ), $post->post_date );
-		
+
 		$html .= '<tr class="found-posts">';
 		$html .= '<td class="found-radio"><input type="checkbox" id="fun-found-' . ( int ) $post->ID . '" name="found_post[' . ( int ) $post->ID . ']" value="' . esc_attr( $post->ID ) . '"></td>';
 		$html .= '<td><label for="found-' . ( int ) $post->ID . '"><a href="' . esc_url( get_edit_post_link( $post->ID ) ). '">' . esc_html( $post->post_title ) . '</a></label></td>';
-		
+
 		$html .= '<td>' . esc_html( $time ) . '</td><td>' . esc_html( $post->post_type ) . '</td><td>' . esc_html( $stat ) . '</td>';
 		$html .= '</tr>' . "\n\n";
 	}
-	
+
 	$html .= '</tbody></table>';
 	$html .= '<input name="fun-search" type="hidden" value="1" />';
 
 	$x = new WP_Ajax_Response( );
-	$x->add( array( 
+	$x->add( array(
 		'data' => $html,
 		'action' => NULL
 	 ) );
@@ -156,9 +156,9 @@ function file_unattach_find_posts( ) {
  * @since 0.5.0
  */
 function file_unattach_is_attached( ){
-	
+
 	check_ajax_referer( "funajax" );
-	
+
 	if ( empty( $_POST['img'] ) || empty( $_POST['postid'] ))
 		exit;
 
@@ -166,22 +166,22 @@ function file_unattach_is_attached( ){
 
 	$postid = ( int ) $_POST['postid'];
 	$imageid = ( int ) $_POST['img'];
-	
-	$posts = $wpdb->get_results( 
-		$wpdb->prepare( 
+
+	$posts = $wpdb->get_results(
+		$wpdb->prepare(
 			" SELECT ID FROM $wpdb->posts WHERE $wpdb->posts.ID IN (
-				SELECT post_parent FROM $wpdb->posts 
-				WHERE $wpdb->posts.post_type = 'attachment' 
+				SELECT post_parent FROM $wpdb->posts
+				WHERE $wpdb->posts.post_type = 'attachment'
 				AND $wpdb->posts.ID = %d
-			) OR $wpdb->posts.ID IN ( 
-				SELECT meta_value FROM $wpdb->postmeta 
-				WHERE $wpdb->postmeta.meta_key = '_fun-parent' 
+			) OR $wpdb->posts.ID IN (
+				SELECT meta_value FROM $wpdb->postmeta
+				WHERE $wpdb->postmeta.meta_key = '_fun-parent'
 				AND $wpdb->postmeta.post_id = $imageid
 				AND $wpdb->postmeta.meta_value = %d
 			) ORDER BY post_date_gmt DESC "
 		, $postid, $postid  )
 	);
-	 	 
+
 	if( !empty( $posts ) ){
 		echo '<a class="funattach" id="unattach-' . $imageid . '" href="#" style="display:block">' . esc_html( __( 'Detach', 'fun' ) ). '</a>';
 		echo '<span class="fun-message hidden fun-mess-' . $imageid . '">' . esc_html( __( " Detach this file?", 'fun' ) ) . '&nbsp;';
@@ -194,7 +194,7 @@ function file_unattach_is_attached( ){
 }
 
 /**
- * Find posts to which the 
+ * Find posts to which the
  * image is attached,
  *
  * @return void
@@ -203,7 +203,7 @@ function file_unattach_is_attached( ){
 function file_unattach_find_attached( ) {
 
 	check_ajax_referer( "funajax" );
-	
+
 	if ( empty( $_POST['img'] ) )
 		exit;
 
@@ -211,23 +211,23 @@ function file_unattach_find_attached( ) {
 
 	$postid = ( int ) $_POST['img'];
 	$post_types = get_post_types( array( 'public' => true ), 'objects' );
-	
+
 	unset( $post_types['ims_image'] );
 	unset( $post_types['attachment'] );
-	
+
 	$posts = $wpdb->get_results(
-		$wpdb->prepare( 
+		$wpdb->prepare(
 			"SELECT ID, post_title, post_type, post_status, post_date
-			 FROM $wpdb->posts WHERE $wpdb->posts.ID IN ( 
-			 	SELECT post_parent FROM $wpdb->posts 
-				WHERE $wpdb->posts.post_type = 'attachment' 
+			 FROM $wpdb->posts WHERE $wpdb->posts.ID IN (
+			 	SELECT post_parent FROM $wpdb->posts
+				WHERE $wpdb->posts.post_type = 'attachment'
 				AND $wpdb->posts.ID = %d
 			 ) OR $wpdb->posts.ID IN (
-			 	SELECT meta_value FROM $wpdb->postmeta 
-				WHERE $wpdb->postmeta.meta_key = '_fun-parent' 
+			 	SELECT meta_value FROM $wpdb->postmeta
+				WHERE $wpdb->postmeta.meta_key = '_fun-parent'
 				AND $wpdb->postmeta.post_id = %d
 			) ORDER BY post_date_gmt DESC LIMIT 50 "
-		, $postid, $postid ) 
+		, $postid, $postid )
 	 );
 
 	$html = '<table class="widefat fun-search-results" cellspacing="0"><thead>
@@ -265,7 +265,7 @@ function file_unattach_find_attached( ) {
 		$html .= '<tr class="found-posts">';
 		$html .= '<td class="found-radio"><input type="checkbox" checked="checked" id="fun-found-' . ( int ) $post->ID . '" name="found_post[' . ( int ) $post->ID . ']" value="' . esc_attr( $post->ID ) . '"></td>';
 		$html .= '<td><label for="found-' . ( int ) $post->ID . '"><a href="' . esc_url( get_edit_post_link( $post->ID ) ). '">' . esc_html( $post->post_title ) . '</a></label></td>';
-		
+
 		$html .= '<td>' . esc_html( $time ) . '</td><td>' . esc_html( $post->post_type ) . '</td><td>' . esc_html( $stat ) . '</td>';
 		$html .= '</tr>' . "\n\n";
 	}
@@ -273,7 +273,7 @@ function file_unattach_find_attached( ) {
 	$html .= '<input name="fun-current-attached" type="hidden" value="' . esc_attr( implode( ',', get_post_meta( $postid, "_fun-parent" ) ) ) . '" />';
 
 	$x = new WP_Ajax_Response( );
-	$x->add( array( 
+	$x->add( array(
 		'data' => $html,
 		'action' => NULL
 	 ) );
@@ -284,20 +284,26 @@ function file_unattach_find_attached( ) {
 
 
 function file_unattach_attach_multiple(){
-	
+
+	echo "starting ";
 	check_ajax_referer( "funajax" );
-	
+	echo "still here ";
+
 	if ( empty( $_POST['images'] ) ||  empty( $_POST['postid'] ) || empty( $_POST['directive'] ) )
 		exit;
-	
+
 	$postid = ( int ) $_POST['postid'];
 	$images = ( array ) $_POST['images'];
-	
+
 	foreach( $images as $imageid ){
-		if( $_POST['directive']  == 'attach' )
+		if( $_POST['directive']  == 'attach' ) {
 			add_post_meta( $imageid, '_fun-parent', $postid );
-		else if( $_POST['directive']  == 'detach' )
+			echo "added";
+		} else if( $_POST['directive']  == 'detach' ) {
 			delete_post_meta( $imageid, '_fun-parent', $postid );
+			wp_update_post( array( 'ID' => $imageid, 'post_parent' => 0 ) );
+			echo "deleted $imageid ";
+		}
 	}
 }
 
