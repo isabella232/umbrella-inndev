@@ -122,6 +122,9 @@ a:hover,
     padding: 0;
     margin: 0 2.5% 24px;
   }
+  #participants .span1 {
+    width: 20%;
+  }
 }
 @media all and (max-width: 768px) {
   #branding h5 {
@@ -158,7 +161,7 @@ a:hover,
   }
 }
 @media all and (max-width: 480px) {
-  .home #participants .span2 {
+  .home #participants .span1 {
     width: 31%;
   }
 }
