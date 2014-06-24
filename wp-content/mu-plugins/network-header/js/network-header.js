@@ -1,12 +1,11 @@
 (function() {
   var $ = jQuery,
       subNavHideTimeout,
-      intentTimeout;
+      intentTimeout,
+      navSelector = '.network-header nav',
+      subNavContainer = $(navSelector).find('.sub-nav-container');
 
   var displaySubNav = function(subNav, name) {
-    var navSelector = '.network-header nav',
-        subNavContainer = $(navSelector).find('.sub-nav-container');
-
     if (!subNavContainer.length) {
       $(navSelector).find('.network-header-main-nav').after('<div class="sub-nav-container" />');
       subNavContainer = $(navSelector).find('.sub-nav-container');
@@ -54,6 +53,9 @@
         intentTimeout = setTimeout(displaySubNav.bind(null, subNav, menuName), 250);
         return false;
       }
+
+      if (!subNav.length)
+        subNavContainer.slideUp(250);
     };
     $('ul.network-header-main-nav > li').on('mouseover', showMenu);
     $('ul.network-header-main-nav > li').on('touchstart', showMenu);
