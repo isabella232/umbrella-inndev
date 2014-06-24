@@ -42,9 +42,9 @@
 }
 .network-header ul.network-header-main-nav > li.network-home span { display: none; }
 .network-header ul.network-header-main-nav > li.network-home {
-	width: 69px;
+	width: 80px;
 	height: 40px;
-	background-image: url(http://inn.wpengine.netdna-cdn.com/wp-content/themes/largo-child/img/inn-logo.png);
+	background-image: url(/wp-content/mu-plugins/network-header/img/INN_logo_80x40.jpeg);
 	background-repeat: no-repeat;
 	background-size: auto 40px;
 	background-position: center center;
@@ -121,9 +121,9 @@
 		line-height: 32px;
 	}
 	.network-header ul.network-header-main-nav > li.network-home {
-		width: 55px;
+		width: 64px;
 		height: 32px;
-		background-image: url(http://inn.wpengine.netdna-cdn.com/wp-content/themes/largo-child/img/inn-logo.png);
+		background-image: url(/wp-content/mu-plugins/network-header/img/INN_logo_80x40.jpeg);
 		background-repeat: no-repeat;
 		background-size: auto 32px;
 		background-position: center center;
