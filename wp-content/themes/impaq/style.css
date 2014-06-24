@@ -78,6 +78,9 @@ a:hover,
   font-size: 18px;
   font-weight: bold;
 }
+.home #participants h3 {
+  margin-bottom: 12px;
+}
 #hero {
   max-width: 1170px;
   margin: 0 auto 100px;
@@ -119,6 +122,9 @@ a:hover,
     padding: 0;
     margin: 0 2.5% 24px;
   }
+  #participants .span1 {
+    width: 20%;
+  }
 }
 @media all and (max-width: 768px) {
   #branding h5 {
@@ -155,7 +161,7 @@ a:hover,
   }
 }
 @media all and (max-width: 480px) {
-  .home #participants .span2 {
+  .home #participants .span1 {
     width: 31%;
   }
 }

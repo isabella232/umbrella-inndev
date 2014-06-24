@@ -36,6 +36,9 @@ h5,
   padding: 0 5%;
   width: 90%;
 }
+.page #content.guide-page {
+  margin-left: 0;
+}
 .guide-page .author-posts-link {
   display: none;
 }
