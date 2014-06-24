@@ -27,7 +27,9 @@
     if (!subNavContainer.length)
       return false;
 
-    subNavContainer.slideUp(250);
+    subNavContainer.slideUp(250, function() {
+      $('ul.network-header-main-nav > li').removeClass('active');
+    });
   };
 
   var subNavIsVisible = function(name) {
