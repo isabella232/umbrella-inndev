@@ -46,9 +46,6 @@ a:hover,
 .home {
   section {
     margin-bottom: 100px;
-	&#participants {
-      margin-bottom: 0;
-    }
   }
   h3 {
     text-align: center;
@@ -87,7 +84,10 @@ a:hover,
     }
   }
   #participants {
-    h3 { margin-bottom: 12px; }
+    margin-bottom: 24px;
+    h3 {
+      margin-bottom: 24px;
+    }
   }
 }
 #hero {
@@ -134,8 +134,12 @@ a:hover,
     padding: 0;
     margin: 0 2.5% 24px;
   }
-  #participants .span1 {
-    width: 20%;
+  #participants {
+    margin-bottom: 24px;
+    .span1 {
+      width: 14.5%;
+      margin: 1%;
+    }
   }
 }
 @media all and (max-width: 768px) {
