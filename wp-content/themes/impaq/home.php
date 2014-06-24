@@ -8,7 +8,7 @@ $stylesheet_uri = get_stylesheet_directory_uri();
 	<section id="hero" class="row-fluid">
 		<div class="span8">
 			<div class="embed-container">
-				<iframe width="560" height="315" src="//www.youtube.com/embed/xVGUWZzQUY0" frameborder="0" allowfullscreen></iframe>
+				<iframe width="560" height="315" src="//www.youtube.com/embed/WyNGkqUVtTs" frameborder="0" allowfullscreen></iframe>
 			</div>
 		</div>
 		<div class="span4">
