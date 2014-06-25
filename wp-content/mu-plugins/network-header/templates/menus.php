@@ -2,7 +2,7 @@
 	<nav>
 		<ul class="network-header-main-nav">
 			<li class="network-home">
-				<a href="<?php echo network_site_url(); ?>"><span><?php echo get_site_option('name'); ?></span></a>
+				<a href="http://investigativenewsnetwork.org"><span><?php echo get_site_option('name'); ?></span></a>
 			</li>
 			<?php
 			$nav_args = array(
