@@ -90,17 +90,14 @@ $top_page = FALSE;
 					// if we're on a guide "top" page, show author information and whatnot
 					// we can leverage Largo's author info widget here
 
-						if ( $guide_type == 'courses' ) {
-							$author_label = 'Course Instructor';
-						} else {
-							$author_label = 'Guide Author';
+						if ( $top_page && $guide_type == 'courses' ) {
+							echo '<h3 class="widgettitle guide-author">' . __( 'Course Instructor', 'cjet' ) . '</h3>';
+						} elseif ( $top_page ) {
+							$author_label = '<h3 class="widgettitle guide-author">' . __( 'Guide Author', 'cjet' ) . '</h3>';
 						}
 
 						if ( $top_page && ( get_post_meta( $post->ID, 'cjet_hide_author', TRUE ) !== '1' ) ) {
-							the_widget(
-								'largo_author_widget',
-								array( 'title' => $author_label )
-							);
+							the_widget( 'largo_author_widget' );
 						}
 					?>
 
@@ -124,9 +121,14 @@ $top_page = FALSE;
 						}
 
 						if ( $top_page ) {
-							printf( '<div class="next"><a href="%1$s"><h5>Start Reading &rarr;</h5></a></div>',
+							if ( $guide_type == 'courses' ) {
+								$link_text = __('Get Started', 'cjet');
+							} else {
+								$link_text = __('Start Reading', 'cjet');
+							}
+							printf( '<div class="next"><a href="%1$s"><h5 class="top-page">%2$s &rarr;</h5></a></div>',
 								get_permalink( $next_id ),
-								get_the_title( $next_id )
+								$link_text
 							);
 						} else {
 							if (!empty($prev_id)) {
