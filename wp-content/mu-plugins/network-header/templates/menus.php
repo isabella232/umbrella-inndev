@@ -2,7 +2,7 @@
 	<nav>
 		<ul class="network-header-main-nav">
 			<li class="network-home">
-				<a href="<?php echo network_site_url(); ?>"><span><?php echo get_site_option('name'); ?></span></a>
+				<a href="http://investigativenewsnetwork.org/"><span>Investigative News Network</span></a>
 			</li>
 			<?php
 			$nav_args = array(
@@ -15,6 +15,11 @@
 			largo_cached_nav_menu($nav_args);
 			?>
 		</ul>
+		<button class="mobile-toggle">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
 	</nav>
 
 
