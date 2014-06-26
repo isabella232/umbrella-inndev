@@ -42,6 +42,8 @@
 <body <?php body_class(); ?>>
 <div id="top"></div>
 
+<?php largo_render_network_header(); ?>
+
 <div id="page" class="hfeed clearfix">
 
 	<header id="site-header" class="clearfix" itemscope itemtype="http://schema.org/Organization">
