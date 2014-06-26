@@ -91,21 +91,21 @@
       return false;
     }
 
-    window.location.href = $(this).attr('href');
-    return true;
+	window.location.href = $(this).attr('href');
+    return false;
   };
 
   var mobileSubNavClick = function() {
     window.location.href = $(this).attr('href');
-    return true;
+    return false;
   };
 
   var bindMobileEvents = function() {
     $('.network-header ul.network-header-main-nav > li.menu-item > a').on('touchstart', mobileShowMenu);
-    $('.network-header ul.network-header-main-nav > li.menu-item > a').on('click', mobileShowMenu);
+	$('.network-header ul.network-header-main-nav > li.menu-item > a').on('click', mobileShowMenu);
 
     $('.network-header ul.network-header-main-nav > li.menu-item li a').on('touchstart', mobileSubNavClick);
-    $('.network-header ul.network-header-main-nav > li.menu-item li a').on('click', mobileSubNavClick);
+	$('.network-header ul.network-header-main-nav > li.menu-item li a').on('click', mobileSubNavClick);
   };
 
   var unbindMobileEvents = function() {
@@ -124,19 +124,21 @@
       bindEvents();
 
     var resizeTimeout;
-    $(window).on('resize', function() {
-      if (resizeTimeout)
-        clearTimeout(resizeTimeout);
+	if (!Modernizr.touch) {
+		$(window).on('resize', function() {
+		  if (resizeTimeout)
+			clearTimeout(resizeTimeout);
 
-      resizeTimeout = setTimeout(function() {
-        if ($(window).width() <= phoneBreakPoint) {
-          unbindEvents();
-          bindMobileEvents();
-        } else {
-          unbindMobileEvents();
-          bindEvents();
-        }
-      }, 500);
-    });
+		  resizeTimeout = setTimeout(function() {
+			if ($(window).width() <= phoneBreakPoint) {
+			  unbindEvents();
+			  bindMobileEvents();
+			} else {
+			  unbindMobileEvents();
+			  bindEvents();
+			}
+		  }, 500);
+		});
+	}
   });
 })();
