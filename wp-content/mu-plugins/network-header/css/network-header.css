@@ -1,8 +1,8 @@
 .network-header {
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	position: relative;
-	background-color: #f1f1f1;
-	border-bottom: 1px solid #dddddd;
+	background-color: #343434;
+	border-bottom: 1px solid #111111;
 	overflow: hidden;
 }
 .network-header nav {
@@ -22,19 +22,21 @@
 	padding: 0;
 	float: left;
 	font-size: .9em;
-	border-right: 1px solid #dddddd;
+	border-right: 1px solid #111111;
 }
 .network-header ul.network-header-main-nav > li a {
-  color: #2275bb;
+  color: #CFE9FF;
 	display: block;
 	height: 40px;
-	padding: 0 10px;
-	line-height: 40px;
+  padding: 0 6px;
+  font-size: 13px;
+  height: 32px;
+  line-height: 32px;
 }
 .network-header ul.network-header-main-nav > li.active,
 .network-header ul.network-header-main-nav > li a:hover {
 	text-decoration: none;
-	background-color: #dfdfdf;
+	background-color: #444444;
   -webkit-transition: background-color 350ms ease;
   -moz-transition: background-color 350ms ease;
   -o-transition: background-color 350ms ease;
@@ -43,12 +45,12 @@
 }
 .network-header ul.network-header-main-nav > li.network-home span { display: none; }
 .network-header ul.network-header-main-nav > li.network-home {
-	width: 80px;
-	height: 40px;
-	background-image: url(/wp-content/mu-plugins/network-header/img/INN_logo_80x40.jpeg);
-	background-repeat: no-repeat;
-	background-size: auto 40px;
-	background-position: center center;
+  width: 64px;
+  height: 32px;
+  background-image: url(/wp-content/mu-plugins/network-header/img/INN_logo_80x40.jpeg);
+  background-repeat: no-repeat;
+  background-size: auto 32px;
+  background-position: center center;
 }
 .network-header ul.network-header-main-nav > li.network-home:hover {
 	background-color: #dfdfdf;
@@ -70,25 +72,25 @@
 	width: 100%;
 	margin: 0;
 	padding: 0;
-	background: #dfdfdf;
+	background: #444444;
 }
 .sub-nav-container ul li {
 	list-style-type: none;
-	float: left;
 	margin: 0;
 	padding: 0;
 	font-size: 13px;
-	line-height: 32px;
+	line-height: 28px;
+  float: left;
 }
 .sub-nav-container ul li a {
-  color: #2275bb;
+  color: #CFE9FF;
 	list-style-type: none;
-	float: left;
 	margin: 0;
 	padding: 0 10px;
+  float: left;
 }
 .sub-nav-container ul li a:hover {
-	background: #dadada;
+	background: #555555;
 	text-decoration: none;
 }
 
@@ -97,7 +99,8 @@
 	position: absolute;
 	right: 10px;
 	top: 0;
-	margin: 5px 0 0 0;
+	margin: 4px 0 0 0;
+  line-height: 1.75;
 }
 
 /* Search */
@@ -114,45 +117,12 @@
 	display: none;
 }
 
-@media (max-width: 768px) {
-	/* Site list/main nav */
-	.network-header ul.network-header-main-nav > li a {
-		padding: 0 6px;
-		font-size: 13px;
-		height: 32px;
-		line-height: 32px;
-	}
-	.network-header ul.network-header-main-nav > li.network-home {
-		width: 64px;
-		height: 32px;
-		background-image: url(/wp-content/mu-plugins/network-header/img/INN_logo_80x40.jpeg);
-		background-repeat: no-repeat;
-		background-size: auto 32px;
-		background-position: center center;
-	}
-
-	/* Sub nav */
-	.sub-nav-container ul li a,
-	.sub-nav-container ul li {
-		float: none;
-	}
-	.sub-nav-container ul li a {
-		display: block;
-		width: 100%;
-	}
-	.sub-nav-container ul li {
-		line-height: 28px;
-	}
-
-	/* Donate button */
-	.network-header .donate-btn {
-		display: none;
-	}
-}
-
 .mobile-toggle { display: none; }
 
 @media (max-width: 420px) {
+  /* Donate button */
+  .network-header .donate-btn { display: none; }
+
   /* Mobile nav toggle button */
   .mobile-toggle  {
     display: block;
