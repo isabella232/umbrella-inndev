@@ -91,7 +91,7 @@
       return false;
     }
 
-	window.location.href = $(this).attr('href');
+    window.location.href = $(this).attr('href');
     return false;
   };
 
