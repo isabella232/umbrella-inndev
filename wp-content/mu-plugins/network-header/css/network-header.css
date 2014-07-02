@@ -25,6 +25,7 @@
 	border-right: 1px solid #dddddd;
 }
 .network-header ul.network-header-main-nav > li a {
+  color: #2275bb;
 	display: block;
 	height: 40px;
 	padding: 0 10px;
@@ -80,6 +81,7 @@
 	line-height: 32px;
 }
 .sub-nav-container ul li a {
+  color: #2275bb;
 	list-style-type: none;
 	float: left;
 	margin: 0;
