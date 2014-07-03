@@ -21,7 +21,7 @@ h5,
   font-weight: 900;
 }
 #site-header {
-  height: 0;
+  min-height: 0;
 }
 #main {
   margin-top: 8px;
@@ -32,7 +32,7 @@ h5,
 #branding img {
   margin: 24px auto 18px;
   display: block;
-  max-width: 480px;
+  max-width: 400px;
   padding: 0 5%;
   width: 90%;
 }
