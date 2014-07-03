@@ -7,6 +7,7 @@
       navSelector = '.network-header nav',
       subNavContainer = $(navSelector).find('.sub-nav-container');
 
+  // Desktop related
   var displaySubNav = function(subNav, name) {
     if (!subNavContainer.length) {
       $(navSelector).find('.network-header-main-nav').after('<div class="sub-nav-container" />');
@@ -37,7 +38,6 @@
     return $('.sub-nav-container').is(':visible') && $('.sub-nav-container').data('menu-name') == name;
   };
 
-  // Desktop
   var showMenu = function(e) {
     $(this).siblings().removeClass('active');
     $(this).addClass('active');
@@ -83,7 +83,7 @@
     $('.network-header').off();
   };
 
-  // Mobile
+  // Mobile related
   var mobileShowMenu = function() {
     $(this).addClass('open');
     mobileNavContainer.find('ul').html(
