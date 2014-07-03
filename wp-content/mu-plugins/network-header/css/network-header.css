@@ -150,7 +150,7 @@ body.noscroll {
   bottom: 0;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 420px) {
   .network-header ul.network-header-main-nav > li.network-home {
     position: relative;
     left: 28px;
@@ -236,4 +236,5 @@ body.noscroll {
     float: none;
     clear: both;
   }
+  .network-header .sub-nav-container { display: none !important; }
 }
