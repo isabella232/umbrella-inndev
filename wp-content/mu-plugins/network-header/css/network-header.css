@@ -119,7 +119,71 @@
 
 .mobile-toggle { display: none; }
 
-@media (max-width: 420px) {
+.mobile-nav-container {
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+
+  opacity: 0;
+  position: fixed;
+  width: 92%;
+  top: 33px;
+  bottom: 0;
+  left: -100%;
+  background: #343434;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mobile-nav-container ul {
+  margin: 0;
+  padding: 10px 0 0 0;
+}
+.mobile-nav-container li {
+  margin: 0;
+  padding: 0;
+}
+.mobile-nav-container ul > li {
+  font-weight: bold;
+  border-bottom: 1px solid #454545;
+}
+.mobile-nav-container div.network-header-sub-nav ul > li {
+  font-weight: normal;
+  border: none;
+  font-size: .9em;
+}
+.mobile-nav-container div.network-header-sub-nav ul {
+  padding: 0;
+}
+
+.mobile-nav-container a {
+  color: #e1e1e1;
+  display: block;
+  padding: 6px 6px;
+}
+.mobile-nav-container a:hover,
+.mobile-nav-container a:active {
+  text-decoration: none;
+  color: #fff;
+  background: #454545;
+}
+
+@media (max-width: 600px) {
+  .mobile-nav-container.show {
+    border-right: 1px solid #000;
+    opacity: 1;
+    z-index: 999999;
+    left: 0;
+    box-shadow: 2px 8px 20px 2px #111;
+  }
+
+  .network-header ul.network-header-main-nav > li.network-home {
+    position: relative;
+    left: 28px;
+  }
+
   /* Donate button */
   .network-header .donate-btn { display: none; }
 
@@ -130,19 +194,27 @@
     line-height: 32px;
     margin: 0;
     position: absolute;
-    right: 8px;
+    left: 0px;
     top: 3px;
-    background: #ddd;
+    background: none;
     border-radius: 2px;
-    border: 1px solid #ccc;
-    padding: 2px 6px;
+    border: 1px solid #343434;
+    padding: 0;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
   }
   .mobile-toggle .icon-bar {
-    height: 2px;
-    background: #343434;
-    width: 14px;
+    height: 3px;
+    background: #999;
+    width: 18px;
     margin: 2px 0;
     display: block;
+  }
+  .mobile-toggle.open {
+    left: -8px;
   }
 
 	/* Site list/main nav */
