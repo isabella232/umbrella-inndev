@@ -3,6 +3,7 @@
       phoneBreakPoint = 420,
       subNavHideTimeout,
       intentTimeout,
+      mobileNavContainer,
       navSelector = '.network-header nav',
       subNavContainer = $(navSelector).find('.sub-nav-container');
 
@@ -84,61 +85,36 @@
 
   // Mobile
   var mobileShowMenu = function() {
-    var subNav = $(this).parent().find('.network-header-sub-nav');
-    if (subNav.length && !subNav.is(':visible')) {
-      $(this).parent().siblings().find('.network-header-sub-nav').removeClass('visible');
-      $(this).parent().find('.network-header-sub-nav').addClass('visible');
-      return false;
-    }
-
-    window.location.href = $(this).attr('href');
-    return false;
+    $(this).addClass('open');
+    mobileNavContainer.find('ul').html(
+      $(navSelector).find('.network-header-main-nav').html());
+    mobileNavContainer.addClass('show');
+    $('body').addClass('noscroll');
   };
 
-  var mobileSubNavClick = function() {
-    window.location.href = $(this).attr('href');
-    return false;
+  var mobileHideMenu = function() {
+    $(this).removeClass('open');
+    mobileNavContainer.removeClass('show');
+    $('body').removeClass('noscroll');
   };
 
-  var bindMobileEvents = function() {
-    $('.network-header ul.network-header-main-nav > li.menu-item > a').on('touchstart', mobileShowMenu);
-	$('.network-header ul.network-header-main-nav > li.menu-item > a').on('click', mobileShowMenu);
-
-    $('.network-header ul.network-header-main-nav > li.menu-item li a').on('touchstart', mobileSubNavClick);
-	$('.network-header ul.network-header-main-nav > li.menu-item li a').on('click', mobileSubNavClick);
-  };
-
-  var unbindMobileEvents = function() {
-    $('.network-header ul.network-header-main-nav > li.menu-item > a').off();
-    $('.network-header ul.network-header-main-nav > li.menu-item li a').off();
+  var setupMobile = function() {
+    $('body').append('<div class="mobile-nav-container"><div class="mobile-nav-container-inner"><ul></ul></div></div>');
+    mobileNavContainer = $('.mobile-nav-container');
+    $('.mobile-toggle').toggle(mobileShowMenu, mobileHideMenu);
+    $('.mobile-nav-container-inner').on('touchmove', function(e) {
+      if ($(this).height() >= $(this)[0].scrollHeight) {
+        e.stopPropagation();
+        return false;
+      }
+    });
   };
 
   $(function() {
-    $('.mobile-toggle').click(function() {
-      $('.network-header ul.network-header-main-nav > li.menu-item').toggleClass('visible');
-    });
+    // Mobile stuff
+    setupMobile();
 
-    if ($(window).width() <= phoneBreakPoint)
-      bindMobileEvents();
-    else
-      bindEvents();
-
-    var resizeTimeout;
-	if (!Modernizr.touch) {
-		$(window).on('resize', function() {
-		  if (resizeTimeout)
-			clearTimeout(resizeTimeout);
-
-		  resizeTimeout = setTimeout(function() {
-			if ($(window).width() <= phoneBreakPoint) {
-			  unbindEvents();
-			  bindMobileEvents();
-			} else {
-			  unbindMobileEvents();
-			  bindEvents();
-			}
-		  }, 500);
-		});
-	}
+    // Desktop
+    bindEvents();
   });
 })();
