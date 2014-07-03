@@ -89,19 +89,20 @@
     mobileNavContainer.find('ul').html(
       $(navSelector).find('.network-header-main-nav').html());
     mobileNavContainer.addClass('show');
+    $('body').addClass('noscroll');
   };
 
   var mobileHideMenu = function() {
     $(this).removeClass('open');
     mobileNavContainer.removeClass('show');
-    $(document).off('touchstart');
+    $('body').removeClass('noscroll');
   };
 
   var setupMobile = function() {
-    $('body').append('<div class="mobile-nav-container"><ul></ul></div>');
+    $('body').append('<div class="mobile-nav-container"><div class="mobile-nav-container-inner"><ul></ul></div></div>');
     mobileNavContainer = $('.mobile-nav-container');
     $('.mobile-toggle').toggle(mobileShowMenu, mobileHideMenu);
-    $('.mobile-nav-container').on('touchmove', function(e) {
+    $('.mobile-nav-container-inner').on('touchmove', function(e) {
       if ($(this).height() >= $(this)[0].scrollHeight) {
         e.stopPropagation();
         return false;
