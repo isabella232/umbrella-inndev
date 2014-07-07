@@ -55,7 +55,9 @@
 	</header>
 
 	<div class="sticky-nav-wrapper">
-		<div class="sticky-nav-holder show" data-hide-at-top="<?php echo (is_front_page() || is_home()) ? 'true' : 'false'; ?>"><div class="sticky-nav-container">
+		<div class="sticky-nav-holder show" data-hide-at-top="<?php echo (is_front_page() || is_home()) ? 'true' : 'false'; ?>">
+			<?php largo_render_network_header(); ?>
+			<div class="sticky-nav-container">
 			<nav id="sticky-nav" class="sticky-navbar navbar clearfix">
 		    <div class="container">
 		    	<div class="nav-right">

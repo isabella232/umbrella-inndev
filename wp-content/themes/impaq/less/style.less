@@ -46,9 +46,6 @@ a:hover,
 .home {
   section {
     margin-bottom: 100px;
-	&#participants {
-      margin-bottom: 0;
-    }
   }
   h3 {
     text-align: center;
@@ -84,6 +81,12 @@ a:hover,
           font-weight: bold;
         }
       }
+    }
+  }
+  #participants {
+    margin-bottom: 24px;
+    h3 {
+      margin-bottom: 24px;
     }
   }
 }
@@ -131,6 +134,13 @@ a:hover,
     padding: 0;
     margin: 0 2.5% 24px;
   }
+  #participants {
+    margin-bottom: 24px;
+    .span1 {
+      width: 14.5%;
+      margin: 1%;
+    }
+  }
 }
 @media all and (max-width: 768px) {
   #branding h5 {
@@ -167,7 +177,7 @@ a:hover,
   }
 }
 @media all and (max-width: 480px) {
-  .home #participants .span2 {
+  .home #participants .span1 {
     width: 31%;
   }
 }

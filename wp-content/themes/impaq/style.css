@@ -42,9 +42,6 @@ a:hover,
 .home section {
   margin-bottom: 100px;
 }
-.home section#participants {
-  margin-bottom: 0;
-}
 .home h3 {
   text-align: center;
   color: #e76756;
@@ -77,6 +74,12 @@ a:hover,
 .home #sectors .story p.more {
   font-size: 18px;
   font-weight: bold;
+}
+.home #participants {
+  margin-bottom: 24px;
+}
+.home #participants h3 {
+  margin-bottom: 24px;
 }
 #hero {
   max-width: 1170px;
@@ -119,6 +122,13 @@ a:hover,
     padding: 0;
     margin: 0 2.5% 24px;
   }
+  #participants {
+    margin-bottom: 24px;
+  }
+  #participants .span1 {
+    width: 14.5%;
+    margin: 1%;
+  }
 }
 @media all and (max-width: 768px) {
   #branding h5 {
@@ -155,7 +165,7 @@ a:hover,
   }
 }
 @media all and (max-width: 480px) {
-  .home #participants .span2 {
+  .home #participants .span1 {
     width: 31%;
   }
 }

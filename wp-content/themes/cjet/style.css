@@ -20,8 +20,9 @@ h5,
   font-family: "museo-sans", helvetica, arial, sans-serif;
   font-weight: 900;
 }
-#site-header {
-  height: 0;
+#site-header,
+.home #site-header {
+  min-height: 0;
 }
 #main {
   margin-top: 8px;
@@ -32,7 +33,7 @@ h5,
 #branding img {
   margin: 24px auto 18px;
   display: block;
-  max-width: 480px;
+  max-width: 400px;
   padding: 0 5%;
   width: 90%;
 }
@@ -49,6 +50,10 @@ h5,
   width: 100%;
   box-sizing: border-box;
   height: 100%;
+}
+.guide-page .pager h5.top-page {
+  margin-bottom: 0;
+  font-size: 21px;
 }
 .guide-page .toggle-nav-bar {
   display: none;
@@ -71,6 +76,10 @@ h5,
 .guide-page .guide-nav .current_page_item .children {
   font-weight: normal;
 }
+.guide-page h3.guide-author {
+  font-size: 18px;
+  margin-bottom: 0;
+}
 .guide-page .largo-author .widgettitle {
   font-size: 18px;
   text-transform: uppercase;
@@ -83,6 +92,9 @@ h5,
 .guide-page .largo-author ul {
   padding: 0;
   margin: 0;
+}
+.guide-page .largo-author .author-posts-link {
+  display: none;
 }
 @media screen and (max-width: 768px) {
   .guide-page .guide-nav {

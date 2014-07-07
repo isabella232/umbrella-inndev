@@ -23,8 +23,9 @@ h1,h2,h3,h4,h5,
   font-family: "museo-sans",helvetica,arial,sans-serif;
   font-weight: 900;
 }
-#site-header {
-  height: 0;
+#site-header,
+.home #site-header {
+  min-height: 0;
 }
 #main {
   margin-top: 8px;
@@ -35,7 +36,7 @@ h1,h2,h3,h4,h5,
 #branding img {
   margin: 24px auto 18px;
   display: block;
-  max-width: 480px;
+  max-width: 400px;
   padding: 0 5%;
   width: 90%;
 }
@@ -54,6 +55,10 @@ h1,h2,h3,h4,h5,
       width: 100%;
       box-sizing: border-box;
       height: 100%;
+    }
+    h5.top-page {
+	  margin-bottom: 0;
+	  font-size: 21px;
     }
   }
   .toggle-nav-bar {
@@ -77,6 +82,10 @@ h1,h2,h3,h4,h5,
 	  }
     }
   }
+  h3.guide-author {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
   .largo-author {
     .widgettitle {
       font-size: 18px;
@@ -90,6 +99,9 @@ h1,h2,h3,h4,h5,
     ul {
 	  padding: 0;
 	  margin: 0;
+    }
+    .author-posts-link {
+      display: none;
     }
   }
   @media screen and (max-width:768px) {

@@ -8,7 +8,7 @@ $stylesheet_uri = get_stylesheet_directory_uri();
 	<section id="hero" class="row-fluid">
 		<div class="span8">
 			<div class="embed-container">
-				<iframe width="560" height="315" src="//www.youtube.com/embed/xVGUWZzQUY0" frameborder="0" allowfullscreen></iframe>
+				<iframe width="560" height="315" src="//www.youtube.com/embed/WyNGkqUVtTs" frameborder="0" allowfullscreen></iframe>
 			</div>
 		</div>
 		<div class="span4">
@@ -79,12 +79,18 @@ $stylesheet_uri = get_stylesheet_directory_uri();
 	<section id="participants">
 		<h3>Impaq.Me Participants</h3>
 		<div class="row-fluid">
-			<div class="span2"><a href="http://cironline.org/"><img src="<?php echo $stylesheet_uri . '/img/cir.png'; ?>" alt="Center for Investigative Reporting Logo" /></a></div>
-			<div class="span2"><a href="http://www.minnpost.com/"><img src="<?php echo $stylesheet_uri . '/img/minnpost.png'; ?>" alt="MinnPost Logo" /></a></div>
-			<div class="span2"><a href="http://www.motherjones.com/"><img src="<?php echo $stylesheet_uri . '/img/motherjones.png'; ?>" alt="Mother Jones Logo" /></a></div>
-			<div class="span2"><a href="http://www.propublica.org/"><img src="<?php echo $stylesheet_uri . '/img/propublica.png'; ?>" alt="ProPublica Logo" /></a></div>
-			<div class="span2"><a href="http://voiceofsandiego.org/"><img src="<?php echo $stylesheet_uri . '/img/vosd.png'; ?>" alt="Voice of San Diego Logo" /></a></div>
-			<div class="span2"><a href="http://thelensnola.org/"><img src="<?php echo $stylesheet_uri . '/img/thelens.png'; ?>" alt="The Lens Logo" /></a></div>
+			<div class="span1"><a href="http://www.minnpost.com/"><img src="<?php echo $stylesheet_uri . '/img/minnpost.jpg'; ?>" alt="MinnPost Logo" /></a></div>
+			<div class="span1"><a href="http://www.motherjones.com/"><img src="<?php echo $stylesheet_uri . '/img/motherjones.jpg'; ?>" alt="Mother Jones Logo" /></a></div>
+			<div class="span1"><a href="http://oklahomawatch.org/"><img src="<?php echo $stylesheet_uri . '/img/oklahoma-watch.jpg'; ?>" alt="Oklahoma Watch Logo" /></a></div>
+			<div class="span1"><a href="http://www.propublica.org/"><img src="<?php echo $stylesheet_uri . '/img/propublica.jpg'; ?>" alt="ProPublica Logo" /></a></div>
+			<div class="span1"><a href="http://voiceofsandiego.org/"><img src="<?php echo $stylesheet_uri . '/img/vosd.jpg'; ?>" alt="Voice of San Diego Logo" /></a></div>
+			<div class="span1"><a href="http://thelensnola.org/"><img src="<?php echo $stylesheet_uri . '/img/thelens.jpg'; ?>" alt="The Lens Logo" /></a></div>
+			<div class="span1"><a href="http://aspenjournalism.org/"><img src="<?php echo $stylesheet_uri . '/img/aspen.jpg'; ?>" alt="Aspen Journalism Logo" /></a></div>
+			<div class="span1"><a href="http://cironline.org/"><img src="<?php echo $stylesheet_uri . '/img/cir.jpg'; ?>" alt="Center for Investigative Reporting Logo" /></a></div>
+			<div class="span1"><a href="http://publicintegrity.org/"><img src="<?php echo $stylesheet_uri . '/img/cpi.jpeg'; ?>" alt="Center for Public Integrity Logo" /></a></div>
+			<div class="span1"><a href="http://investigatemidwest.org/"><img src="<?php echo $stylesheet_uri . '/img/investigate-midwest.jpeg'; ?>" alt="Investigate Midwest Logo" /></a></div>
+			<div class="span1"><a href="http://iowawatch.org/"><img src="<?php echo $stylesheet_uri . '/img/iowawatch.jpg'; ?>" alt="Iowa Watch Logo" /></a></div>
+			<div class="span1"><a href="http://pinetreewatchdog.org/"><img src="<?php echo $stylesheet_uri . '/img/maine.jpg'; ?>" alt="Maine Center Logo" /></a></div>
 		</div>
 	</section>
 
