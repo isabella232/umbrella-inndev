@@ -89,6 +89,9 @@ function grantees_metabox_display() {
 	}
 	?>
 	<div id="posttype-grantees" class="posttypediv">
+		<?php
+		posts_by_grantee(140555);
+		?>
 		<div class="tabs-panel">
 			<ul id="posttype-grantees">
 			<?php
@@ -129,3 +132,33 @@ function save_grantees($post_ID = 0) {
   return $post_ID;
 }
 add_action('save_post', 'save_grantees');
+
+/**
+ * Convenience method for getting posts by grantee id
+ */
+function posts_by_grantee( $grantee_id = NULL, $paged = 0 ) {
+	if ( !$grantee_id ) {
+		if ( get_post_type() == 'grantee' ) {
+			$grantee_id = get_the_ID();
+		} else {
+			return false;
+		}
+	}
+
+	// query to grab posts
+	$args = array(
+		'post_type' => 'post',
+		'post_status' => 'publish',
+		'paged' => $paged,
+		'meta_query' => array(
+			array(
+				'key' => 'post-grantees',
+				'value' => $grantee_id,
+				'compare' => 'LIKE'
+			)
+		)
+	);
+
+	$gposts = new WP_Query( $args );
+	return $gposts;
+}
