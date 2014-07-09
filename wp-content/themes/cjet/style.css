@@ -269,19 +269,18 @@ h5,
 /**
  * Responsive.
  */
-@media screen and (max-width: 894px) {
-  .home #courses ul,
-  .home #guides ul {
-    text-align: center;
-  }
-}
 @media screen and (max-width: 768px) {
   #breadcrumbs {
     display: none;
   }
   .home #courses,
   .home #guides {
-    padding: 10px;
+    width: 48%;
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+  .home #extras > aside {
+    width: 100%;
   }
 }
 @media screen and (max-width: 640px) {
@@ -290,7 +289,7 @@ h5,
     float: none;
   }
 }
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 480px) {
   .home #courses li,
   .home #guides li {
     width: 100%;
