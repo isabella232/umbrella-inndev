@@ -27,14 +27,11 @@ h5,
 }
 .home .sticky-nav-wrapper,
 .sticky-nav-wrapper {
-  height: 92px;
+  height: 50px;
 }
 .home .sticky-nav-holder.show {
   visibility: visible;
   opacity: 1;
-}
-#topics-bar {
-  padding-top: 8px;
 }
 #topics-bar ul li.menu-label {
   color: #bbbbbb;
