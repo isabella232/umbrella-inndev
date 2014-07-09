@@ -194,7 +194,7 @@ largo_add_meta_box(
 	'grantee_details_display',
 	'grantee',
 	'normal',
-	'core'
+	'high'
 );
 
 function grantee_details_display() {
