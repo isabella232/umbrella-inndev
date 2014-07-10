@@ -170,7 +170,7 @@ add_action('save_post', 'save_post_grantees');
 /**
  * Loads the image management javascript
  */
-function grantee_image_enqueue() {
+function journobiz_admin_enqueue() {
 	global $typenow;
 	if( $typenow == 'grantee' ) {
 	    wp_enqueue_media();
@@ -186,7 +186,18 @@ function grantee_image_enqueue() {
 	    wp_enqueue_script( 'meta-box-file' );
 	}
 }
-add_action( 'admin_enqueue_scripts', 'grantee_image_enqueue' );
+add_action( 'admin_enqueue_scripts', 'journobiz_admin_enqueue' );
+
+function journobiz_enqueue() {
+	wp_enqueue_script(
+		'journobiz',
+		get_stylesheet_directory_uri() . "/js/journobiz.js",
+		array( 'jquery' ),
+		false,
+		true
+	);
+}
+add_action( 'wp_enqueue_scripts', 'journobiz_enqueue' );
 
 largo_add_meta_box(
 	'grantee-details',
@@ -302,6 +313,13 @@ function posts_by_grantee( $grantee_id = NULL, $paged = 0 ) {
 		)
 	);
 
-	$gposts = new WP_Query( $args );
-	return $gposts;
+	return new WP_Query( $args );
+}
+
+/**
+ * Allow pagination parameters on single grantee URLs
+ */
+add_filter('redirect_canonical','journobiz_disable_redirect');
+function journobiz_diable_redirect($redirect_url) {
+	if ( is_singular('grantee') ) return false;
 }
