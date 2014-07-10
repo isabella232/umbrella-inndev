@@ -30,8 +30,8 @@ $details = get_post_meta( get_the_ID(), 'grantee_details', true );
 				}
 	 		?>
 	 		<nav class="prev-next">
-	 			<?php next_post_link( '%link', '▶' ); ?>
-	 			<?php previous_post_link( '%link', '◀' ); ?>
+	 			<?php next_post_link( '%link', '<span>Next Project&nbsp;</span>▶' ); ?>
+	 			<?php previous_post_link( '%link', '◀<span>Previous Project</span>' ); ?>
 	 		</nav>
 		</header><!-- / entry header -->
 
@@ -55,6 +55,10 @@ $details = get_post_meta( get_the_ID(), 'grantee_details', true );
 			while( $grantee_posts->have_posts() ) : $grantee_posts->the_post();
 				get_template_part('content');
 			endwhile;
+
+			if ($grantee_posts->post_count == 0) {
+				echo "<p class='none-found'>" . __("No updates posted yet.", "journobiz") . "</p>";
+			}
 
 			//pagination
 			if ( $grantee_posts->max_num_pages > 1 ) {

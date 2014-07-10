@@ -226,12 +226,9 @@ Version:        0.1.0
   background-color: #eee;
   min-height: 400px;
 }
-.single-grantee .grantee > header:hover .prev-next a {
-  opacity: 0.6;
-}
 .single-grantee .info {
   position: absolute;
-  right: 30px;
+  right: 55px;
   top: 18%;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.5);
@@ -242,21 +239,39 @@ Version:        0.1.0
 }
 .single-grantee .prev-next a {
   position: absolute;
-  font-size: 36px;
+  font-size: 34px;
   color: white;
-  opacity: 0;
+  opacity: 0.7;
   top: 48%;
-  transition: all 0.3s ease;
+  transition: all 0.1s ease;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 15px;
+  padding: 2px 10px;
 }
 .single-grantee .prev-next a[rel='prev'] {
   left: 0;
 }
 .single-grantee .prev-next a[rel='next'] {
   right: 0;
+  text-align: right;
 }
 .single-grantee .prev-next a:hover {
   text-decoration: none;
   opacity: 1 !important;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.single-grantee .prev-next a:hover span {
+  width: 140px;
+}
+.single-grantee .prev-next a span {
+  transition: all 0.1s ease;
+  font-size: 18px;
+  vertical-align: middle;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  width: 0;
+  padding-bottom: 7px;
 }
 .single-grantee .grantee-links {
   margin: 0 -1px;
@@ -307,6 +322,17 @@ Version:        0.1.0
 .single-grantee .grantee-posts {
   margin: 1em auto;
   float: none;
+}
+.single-grantee .grantee-posts article {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 1em;
+}
+.single-grantee .grantee-posts h2 {
+  font-size: 30px;
+  line-height: 1em;
+}
+.single-grantee .grantee-posts p {
+  font-size: 100%;
 }
 .single-grantee .grantee-posts a[rel="next"] {
   float: right;
