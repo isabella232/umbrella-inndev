@@ -252,7 +252,7 @@ h1,h2,h3,h4,h5,
     }
   }
   #courses li {
-    width: percentage( .2 * (1070/1170) );
+    width: 31.62393162393162%;
   }
   #guides li {
     width: percentage( .25 * (1090.0/1170) );
@@ -274,36 +274,24 @@ h1,h2,h3,h4,h5,
 /**
  * Responsive.
  */
-@media screen and (max-width: 894px) {
-  .home {
-    #courses ul,
-    #guides ul {
-      text-align: center;
-    }
-  }
-}
 @media screen and (max-width: 768px) {
   #breadcrumbs {
     display: none;
   }
   .home {
-    #courses,
-    #guides {
-	  padding: 10px;
+    #courses li,
+    #guides li {
+	  width: 48%;
+      margin-left: 1%;
+      margin-right:1%;
+    }
+    #extras aside {
+	  width: 100%;
+	  float: none;
     }
   }
 }
-@media screen and (max-width: 640px) {
-  .home {
-    #extras {
-      aside {
-        width: 100%;
-        float: none;
-      }
-    }
-  }
-}
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 480px) {
   .home {
     #courses li,
     #guides li {

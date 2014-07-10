@@ -249,7 +249,7 @@ h5,
   font-weight: bold;
 }
 .home #courses li {
-  width: 18.290598290598293%;
+  width: 31.62393162393162%;
 }
 .home #guides li {
   width: 23.29059829059829%;
@@ -269,28 +269,22 @@ h5,
 /**
  * Responsive.
  */
-@media screen and (max-width: 894px) {
-  .home #courses ul,
-  .home #guides ul {
-    text-align: center;
-  }
-}
 @media screen and (max-width: 768px) {
   #breadcrumbs {
     display: none;
   }
-  .home #courses,
-  .home #guides {
-    padding: 10px;
+  .home #courses li,
+  .home #guides li {
+    width: 48%;
+    margin-left: 1%;
+    margin-right: 1%;
   }
-}
-@media screen and (max-width: 640px) {
   .home #extras aside {
     width: 100%;
     float: none;
   }
 }
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 480px) {
   .home #courses li,
   .home #guides li {
     width: 100%;

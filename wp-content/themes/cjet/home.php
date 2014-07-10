@@ -28,7 +28,7 @@ $guides = get_pages( array(
 		foreach ( $courses as $course ) :	?>
 			<li>
 				<article>
-					<a href="<?php echo get_permalink( $course->ID ); ?>" title="Permalink to <?php echo esc_attr( $course->post_title ); ?>"><?php echo apply_filters('the_content', get_the_post_thumbnail( $course->ID, 'medium' ) ); ?></a>
+					<a href="<?php echo get_permalink( $course->ID ); ?>" title="Permalink to <?php echo esc_attr( $course->post_title ); ?>"><?php echo apply_filters('the_content', get_the_post_thumbnail( $course->ID, 'large' ) ); ?></a>
 					<h4><a href="<?php echo get_permalink( $course->ID ); ?>" title="Permalink to <?php echo esc_attr( $course->post_title ); ?>"><?php echo $course->post_title; ?></a></h4>
 					<p><?php echo $course->post_excerpt; ?></p>
 				</article>
