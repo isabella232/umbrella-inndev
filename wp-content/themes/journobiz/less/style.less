@@ -77,10 +77,12 @@ Version:        0.1.0
 .icon-dollar:before { content: '\e80d'; } /* '' */
 
 /**
- * Grantee page
+ * Grantee page & Innovation Fun landing
  */
-.single-grantee {
-	.grantee > header {
+.single-grantee,
+.page-template-page-innovationfund-php {
+	.grantee > header,
+	.page > header {
 		position: relative;
 		background-color: #eee;
 		min-height: 400px;
@@ -97,7 +99,9 @@ Version:        0.1.0
 			margin-bottom: 0;
 		}
 	}
+}
 
+.single-grantee {
 	.prev-next {
 		a {
 			position: absolute;
@@ -216,7 +220,77 @@ Version:        0.1.0
 				content: "« ";
 			}
 		}
-
 	}
+}
 
+/**
+ * INNovation fund page template
+ */
+.page-template-page-innovationfund-php {
+	.funding-rounds {
+		display: block;
+		margin: 1px 0;
+		padding: 0 0 0 0;
+		li.round {
+			display: block;
+			clear: both;
+			position: relative;
+			border-left: 50px solid #eee;
+			min-height: 50px;
+			margin-bottom: 1px;
+		}
+		header {
+			position: absolute;
+			top: 0;
+			left: -50px;
+			width: 50px;
+			bottom: 0;
+			text-align: center;
+			h1 {
+				font-size: 18px;
+				padding: 10px 0;
+				margin-bottom: 0;
+			}
+		}
+		.active header > h1 {
+	    -ms-transform: rotate(-90deg); /* IE 9 */
+	    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+	    transform: rotate(-90deg);
+	    -webkit-transform-origin:left center;
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    white-space: nowrap;
+		}
+		.intro {
+			padding: 10px;
+			p {
+				margin-bottom: 0;
+			}
+		}
+		article {
+			border-bottom: 0;
+			margin-bottom: 0;
+		}
+		.grantee-list {
+			overflow: hidden;
+			margin: 0 0 0 0;
+			padding: 0 0 0 0;
+			li {
+				display: block;
+				float: left;
+				padding: 0 0 0 0;
+				margin: 0 0 0 0;
+				width: 33%;
+				h1 {
+					font-size: 24px;
+					margin-bottom: 0;
+				}
+				img {
+					float: left;
+					margin-right: 10px;
+				}
+			}
+		}
+	}
 }

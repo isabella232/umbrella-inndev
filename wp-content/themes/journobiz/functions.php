@@ -74,7 +74,7 @@ function jb_grantees() {
 		'show_in_nav_menus'          => false,
 		'show_tagcloud'              => false,
 	);
-	register_taxonomy( 'round', array( 'grantee' ), $args );
+	register_taxonomy( 'round', array( 'grantee','page' ), $args );
 
 }
 
