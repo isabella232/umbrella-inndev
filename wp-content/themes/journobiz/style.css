@@ -227,7 +227,6 @@ Version:        0.1.0
 .page-template-page-innovationfund-php .page > header {
   position: relative;
   background-color: #eee;
-  min-height: 400px;
 }
 .single-grantee .info,
 .page-template-page-innovationfund-php .info {
@@ -236,11 +235,41 @@ Version:        0.1.0
   top: 18%;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.5);
+  margin-left: 0;
 }
 .single-grantee .info p,
 .page-template-page-innovationfund-php .info p {
   font-size: 100%;
   margin-bottom: 0;
+}
+@media screen and (max-width: 980px) {
+  .single-grantee .info,
+  .page-template-page-innovationfund-php .info {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .single-grantee .info,
+  .page-template-page-innovationfund-php .info {
+    width: auto;
+    left: 20px;
+    right: 20px;
+    top: 20px;
+  }
+  .single-grantee .info p,
+  .page-template-page-innovationfund-php .info p {
+    font-size: 88%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .single-grantee .info,
+  .page-template-page-innovationfund-php .info {
+    position: static;
+    clear: both;
+    width: 100%;
+    padding: 10px;
+    float: none;
+  }
 }
 .single-grantee .prev-next a {
   position: absolute;
@@ -252,6 +281,18 @@ Version:        0.1.0
   background-color: rgba(0, 0, 0, 0);
   border-radius: 15px;
   padding: 2px 10px;
+}
+@media screen and (max-width: 768px) {
+  .single-grantee .prev-next a {
+    top: 45%;
+    font-size: 28px;
+    padding: 2px 7px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .single-grantee .prev-next a {
+    top: 2%;
+  }
 }
 .single-grantee .prev-next a[rel='prev'] {
   left: 0;
@@ -295,8 +336,11 @@ Version:        0.1.0
   background-color: #eee;
   transition: all 0.3s ease;
   border: 1px solid white;
-  padding: 10px;
+  padding: 8px;
   text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .single-grantee .grantee-links a i {
   font-size: 200%;
@@ -306,6 +350,19 @@ Version:        0.1.0
 .single-grantee .grantee-links a:hover {
   background-color: #ddd;
   text-decoration: none;
+}
+@media screen and (max-width: 768px) {
+  .single-grantee .grantee-links a {
+    font-size: 80%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .single-grantee .grantee-links a {
+    font-size: 0;
+  }
+  .single-grantee .grantee-links a i {
+    font-size: 18px;
+  }
 }
 .single-grantee .timeline {
   display: none;
@@ -327,6 +384,11 @@ Version:        0.1.0
 .single-grantee .grantee-posts {
   margin: 1em auto;
   float: none;
+}
+@media screen and (max-width: 480px) {
+  .single-grantee .grantee-posts {
+    width: 90%;
+  }
 }
 .single-grantee .grantee-posts article {
   border-bottom: 1px solid #eee;
@@ -358,6 +420,10 @@ Version:        0.1.0
   display: block;
   margin: 1px 0;
   padding: 0 0 0 0;
+}
+.page-template-page-innovationfund-php .funding-rounds p {
+  font-size: 100%;
+  margin-bottom: 0;
 }
 .page-template-page-innovationfund-php .funding-rounds li.round {
   display: block;
@@ -397,9 +463,6 @@ Version:        0.1.0
 .page-template-page-innovationfund-php .funding-rounds .intro {
   padding: 10px;
 }
-.page-template-page-innovationfund-php .funding-rounds .intro p {
-  margin-bottom: 0;
-}
 .page-template-page-innovationfund-php .funding-rounds article {
   border-bottom: 0;
   margin-bottom: 0;
@@ -413,13 +476,40 @@ Version:        0.1.0
   display: block;
   float: left;
   padding: 0 0 0 0;
-  margin: 0 0 0 0;
+  margin: 0 0 1em 0;
   width: 33%;
-}
-.page-template-page-innovationfund-php .funding-rounds .grantee-list li h1 {
-  font-size: 24px;
 }
 .page-template-page-innovationfund-php .funding-rounds .grantee-list li img {
   float: left;
-  margin-right: 10px;
+  margin-right: -100px;
+  width: 100px;
+}
+.page-template-page-innovationfund-php .funding-rounds .grantee-list li > div {
+  margin-left: 110px;
+  margin-right: 15px;
+}
+.page-template-page-innovationfund-php .funding-rounds .grantee-list li h3 {
+  font-size: 22px;
+  margin-bottom: 0;
+  line-height: 1.1em;
+}
+@media screen and (max-width: 980px) {
+  .page-template-page-innovationfund-php .funding-rounds .grantee-list li {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .page-template-page-innovationfund-php .funding-rounds .grantee-list li img {
+    width: 75px;
+    margin-right: -75px;
+  }
+  .page-template-page-innovationfund-php .funding-rounds .grantee-list li > div {
+    margin-left: 85px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .page-template-page-innovationfund-php .funding-rounds .grantee-list li {
+    width: 100%;
+    float: none;
+  }
 }

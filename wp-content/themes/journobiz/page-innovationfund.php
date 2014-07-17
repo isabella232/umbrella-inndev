@@ -34,7 +34,7 @@ get_header();
 			$children = new WP_Query( array(
 				'post_type' => 'page',
 				'post_parent' => get_the_ID(),
-				'post_status' => array('publish','future','draft'),
+				'post_status' => array('publish','future'),
 				'orderby' => 'menu_order'
 			) );
 
@@ -44,6 +44,8 @@ get_header();
 
 				while ( $children->have_posts() ) :
 					$children->the_post();
+					global $more;
+					$more = 0;
 					$round_live = ( get_post_status() == 'publish' ) ? true : false ;
 					if ( $round_live ) : ?>
 					<li class="round active">
@@ -52,12 +54,11 @@ get_header();
 								<h1><?php the_title(); ?></h1>
 							</header>
 							<div class="intro">
-								<?php largo_excerpt( $post, 3, true, __('Read More', 'journobiz'), true, false, false ); ?>
+								<?php // largo_excerpt( $post, 3, true, __('Read More', 'journobiz'), true, false, false ); ?>
+								<?php the_content( __('Read More', 'journobiz') ); ?>
 							</div>
-							<div class="grantee-list">
-								<ul><?php
+								<?php
 									// get grantees belonging to the round(s) this child page is assigned to
-									$round_post = $post;
 
 									$rounds = wp_get_post_terms( get_the_ID(), 'round', array('fields' => 'ids') );
 									$grantees = new WP_Query( array(
@@ -73,19 +74,26 @@ get_header();
 										)
 									) );
 
+									if ( $grantees->have_posts() ) :
+										$round_post = $post; ?>
+										<div class="grantee-list"><ul>
+									<?php
 									while ( $grantees->have_posts() ) : $grantees->the_post();
 										$details = get_post_meta( get_the_ID(), 'grantee_details', true );
 									?>
 										<li>
 											<?php the_post_thumbnail( 'thumbnail' ); ?>
-											<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-											<h5><?php echo $details['org-name']; ?></h5>
-											<h5 class="top-tag"><?php echo __('Award Amount: ', 'journobiz') . $details['award-amount']; ?></h5>
+											<div>
+												<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+												<p><?php echo $details['org-name']; ?></p>
+												<p><?php echo __('Award Amount: ', 'journobiz') . $details['award-amount']; ?></p>
+											</div>
 										</li>
 									<?php
 									endwhile;
 									setup_postdata( $round_post );
 									$post = $round_post;
+									endif;
 								?></ul>
 							</div>
 						</article>
@@ -96,7 +104,8 @@ get_header();
 							<h1><?php echo str_replace("Round ", "", get_the_title() ); ?></h1>
 						</header>
 						<div class="intro">
-							<?php largo_excerpt( get_the_ID(), 1, false ); ?>
+							<?php //largo_excerpt( get_the_ID(), 1, false ); ?>
+							<?php the_content( __('Read More', 'journobiz') ); ?>
 						</div>
 					</li>
 			<?php

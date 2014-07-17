@@ -3,7 +3,14 @@
  * The Template for displaying all single posts.
  */
 get_header();
+$details_defaults = array(
+	'award-amount' => "Unknown",
+	'proposal-id' => "",
+	'budget-id' => "",
+	'timeline' => ""
+);
 $details = get_post_meta( get_the_ID(), 'grantee_details', true );
+$details = array_merge( $details_defaults, $details );
 ?>
 <div>
 <div id="content" class="span12" role="main">
@@ -37,13 +44,25 @@ $details = get_post_meta( get_the_ID(), 'grantee_details', true );
 
 		<div class="grantee-links">
 			<ul>
-				<li><a href="<?php echo wp_get_attachment_url( $details['proposal-id'] ); ?>"><i class="icon-doc-text"></i><?php _e('Read the Proposal (PDF)', 'journobiz'); ?></a></li>
-				<li><a href="<?php echo wp_get_attachment_url( $details['budget-id'] ); ?>"><i class="icon-dollar"></i><?php _e('Project Budget (PDF)', 'journobiz'); ?></a></li>
+				<li><?php if ( !empty($details['proposal-id']) ) : ?>
+					<a href="<?php echo wp_get_attachment_url( $details['proposal-id'] ); ?>"><i class="icon-doc-text"></i><?php _e('Read the Proposal (PDF)', 'journobiz'); ?></a>
+					<?php else : ?>
+					<a href="javascript:void(0);"><i class="icon-doc-text"></i><?php _e('Proposal Coming Soon', 'journobiz'); ?></a><?php endif; ?>
+				</li>
+				<li><?php if ( !empty($details['budget-id']) ) : ?>
+					<a href="<?php echo wp_get_attachment_url( $details['budget-id'] ); ?>"><i class="icon-dollar"></i><?php _e('Project Budget (PDF)', 'journobiz'); ?></a
+					<?php else : ?>
+					<a href="javascript:void(0);"><i class="icon-doc-text"></i><?php _e('Budget Coming Soon', 'journobiz'); ?></a><?php endif; ?>
+				</li>
 				<li><a href="javascript:void(0);" class="timeline-control"><i class="icon-clock"></i><?php _e('Project Timeline', 'journobiz'); ?></a></li>
 			</ul>
 		</div>
 		<div class="timeline">
+			<?php if ( !empty($details['timeline-src']) ) : ?>
 			<iframe src="<?php echo preg_replace('/&height=(\d{2,4})/', '', $details['timeline-src']) . "&height=500"; ?>" width="100%" height="500" frameborder="0"></iframe>
+			<?php else : ?>
+			<h3>No timeline available</h3>
+			<?php endif; ?>
 			<a href="javascript:void(0);" class="close">Close <i class="icon-cancel"></i></a>
 		</div>
 
