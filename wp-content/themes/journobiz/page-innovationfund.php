@@ -92,10 +92,11 @@ get_header();
 									<?php
 									endwhile;
 									setup_postdata( $round_post );
-									$post = $round_post;
-									endif;
-								?></ul>
+									$post = $round_post; ?></ul>
 							</div>
+							<?php
+								endif;
+							?>
 						</article>
 					</li>
 					<?php else : ?>
