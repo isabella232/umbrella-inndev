@@ -27,7 +27,7 @@ jQuery(document).ready(function($){
       title: meta_file.title,
       multiple: false,
       button: { text:  meta_file.button },
-      library: { subtype: 'pdf', type: 'application' }
+      library: { type: 'application' }
     });
 
     // Runs when an image is selected.
