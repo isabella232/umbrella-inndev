@@ -103,6 +103,7 @@ largo_add_meta_box(
 function grantees_metabox_display() {
 	global $post;
 	$selected = get_post_meta( $post->ID, 'post-grantees', TRUE );
+	$orig_post = $post;
 
 	//some of the below is inspired by wp_nav_menu_item_post_type_meta_box()
 	$args = array(
@@ -138,6 +139,7 @@ function grantees_metabox_display() {
 			<?php
 			endwhile;
 			wp_reset_postdata();
+			$post = $orig_post;
 			?>
 			</ul>
 		</div>
