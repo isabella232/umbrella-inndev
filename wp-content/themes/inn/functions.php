@@ -1,9 +1,10 @@
 <?php
 
 //USEFUL CONSTANTS
-define( 'INN_FUNDER_PAGE_ID', 2747 );
+define( 'INN_FUNDER_PAGE_ID', 143094 );
 define( 'INN_ABOUT_PAGE_SLUG', 'about' );
 define( 'INN_GUIDE_PARENT_ID', 2500 );
+define( 'INN_MEMBER_TAXONOMY', 'ppu_focus_areas' );
 
 
 /**
@@ -149,56 +150,57 @@ function inn_homepage_tag( $echo = false ) {
 	}
 
 	//network content
-	$mem_id = get_post_meta( $post->ID, 'from_member_id', TRUE );
-	$mem = get_membername_from_post( $post->ID );
+	$mem_id = $post->author;
+	$mem = get_userdata( $mem_id );
 	if ( !$mem ) {
 		return false;
 	} else {
-		return ( $echo ) ? printf('<a href="%s" title="Member page for %s">%s</a>', get_permalink($mem_id), esc_attr($mem), $mem) : true ;
+		return ( $echo ) ? printf('<a href="%s" title="Member page for %s">%s</a>', get_author_posts_url($mem_id), esc_attr($mem->display_name), $mem->display_name) : true ;
 	}
 }
 
 /**
- * Override largo_byline to handle network_content
+ * Track things
  */
-function largo_byline( $echo = true ) {
-	global $post;
-	$values = get_post_custom( $post->ID );
-	$authors = ( function_exists( 'coauthors_posts_links' ) && !isset( $values['largo_byline_text'] ) ) ? coauthors_posts_links( null, null, null, null, false ) : largo_author_link( false );
+function largo_google_analytics() {
+		if ( !is_user_logged_in() ) : // don't track logged in users ?>
+			<script>
+			    var _gaq = _gaq || [];
+			    var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+				_gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+			<?php if ( of_get_option( 'ga_id', true ) ) : // make sure the ga_id setting is defined ?>
+				_gaq.push(['_setAccount', '<?php echo of_get_option( "ga_id" ) ?>']);
+				_gaq.push(['_trackPageview']);
+			<?php endif; ?>
+			    _gaq.push(
+					["largo._setAccount", "UA-17578670-4"],
+					["largo._setCustomVar", 1, "SiteName", "<?php bloginfo('name') ?>"],
+					["largo._setDomainName", "<?php echo str_replace( 'http://' , '' , home_url()) ?>"],
+					["largo._setAllowLinker", true],
+					["largo._trackPageview"]
+				);
 
-	if ( strlen($authors) ) {
-		if ( $post->post_type == 'network_content' ) {
-			$output_format = '<span class="by-author"><span class="by">By:</span> <span class="author vcard">%1$s</span> <span class="member">(%4$s)</span></span><span class="sep"> | </span><time class="entry-date updated dtstamp pubdate" datetime="%2$s">%3$s</time>';
-		} else {
-			$output_format = '<span class="by-author"><span class="by">By:</span> <span class="author vcard">%1$s</span></span><span class="sep"> | </span><time class="entry-date updated dtstamp pubdate" datetime="%2$s">%3$s</time>';
-		}
-	} else {
-		$output_format = '<span class="by-author"><span class="author vcard">%4$s</span></span><span class="sep"> | </span><time class="entry-date updated dtstamp pubdate" datetime="%2$s">%3$s</time>';
-	}
-
-	$output = sprintf( $output_format,
-		$authors,
-		esc_attr( get_the_date( 'c' ) ),
-		largo_time( false ),
-		get_membername_from_post()
-	);
-
-	if ( current_user_can( 'edit_post', $post->ID ) )
-		$output .=  sprintf( ' | <span class="edit-link"><a href="%1$s">Edit This Post</a></span>', get_edit_post_link() );
-
- 	if ( is_single() && of_get_option( 'clean_read' ) === 'byline' )
- 		$output .=	__('<a href="#" class="clean-read">View as "Clean Read"</a>', 'largo');
-
-	if ( $echo )
-		echo $output;
-	return $output;
+			    (function() {
+				    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+				})();
+			</script>
+	<?php endif;
 }
 
 /**
- * Set a custom post type for RSS multi posts
+ * Add custom RSS feeds for member stories
+ * Template used is feed-member-stories.php
  */
-function inn_rss_post( $post ) {
-	$post['post_type'] = 'network_content';
-	return $post;
+function add_query_vars_filter( $vars ){
+  $vars[] = 'top_stories';
+  return $vars;
 }
-add_filter('inn_rss_pre_import', 'inn_rss_post');
+add_filter( 'query_vars', 'add_query_vars_filter' );
+
+function inn_member_stories_rss() {
+	add_filter('pre_option_rss_use_excerpt', '__return_zero');
+	load_template( get_stylesheet_directory() . '/feed-member-stories.php' );
+}
+add_feed('member_stories', 'inn_member_stories_rss');

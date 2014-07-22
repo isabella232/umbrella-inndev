@@ -117,4 +117,25 @@ jQuery(document).ready( function($) {
 	$('#header-social i').each( function() {
 		$(this).closest('li').addClass( $(this).attr('class') + '-parent' );
 	});
+
+	// Visibility toggling, mostly for member contact forms
+	$('.toggle').on('click', function() {
+		target = $(this).data('toggler');
+		$( target ).slideToggle('fast');
+	});
+
+	//hide the member contact form, this is a hack to get around weird paupress sizing
+	$('.toggle').trigger('click');
+
+	// Submitting links for membership directory states
+	$('.member-state-nav button').on('click', function() {
+		whichState =  $('.member-state-nav select').val();
+		if (whichState == "all") {
+			window.location.search = "";
+		} else {
+			window.location.search = "?state=" + $('.member-state-nav select').val();
+		}
+	});
+
+
 });

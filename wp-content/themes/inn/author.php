@@ -9,7 +9,7 @@ $author = get_queried_object();
 $meta = get_user_meta( $author->ID );
 
 //some sort of test to see if this is a member
-if ( $meta['user_type'] !== 'member' ) {
+if ( $author->roles[0] !== 'member' ) {
 	get_template_part('archive');
 }
 
@@ -21,12 +21,18 @@ get_header();
 	<?php
 		$social = array('rss', 'twitter', 'facebook', 'googleplus', 'youtube');
 	?>
-	<article id="post-<?php $author->ID; ?>" <?php post_class('clearfix'); ?>>
-		<?php echo get_avatar( $author->ID, 120); // should use thumbnail size, but can we? ?>
+	<article id="author-<?php echo $author->ID; ?>" class="inn_member clearfix">
+		<?php echo get_image_tag(
+			$meta['paupress_pp_avatar'][0],
+			esc_attr($user->data->display_name),
+			esc_attr($user->data->display_name),
+			'left',
+			'thumbnail'
+		); ?>
 		<div>
 		<header>
 	 		<h2 class="entry-title">
-		 			<?php $author->display_name; ?>
+		 			<?php echo $author->data->display_name; ?>
 	 		</h2>
 	 		<h5 class="history byline">
 	 			<?php if ( !empty($meta['inn_founded'][0]) ) echo "Founded " . $meta['inn_founded'][0] . ";"; ?>
@@ -37,9 +43,31 @@ get_header();
 			<?php echo apply_filters('the_content', $author->user_description); ?>
 		</div><!-- .entry-content -->
 		<footer>
-			<?php if ( !empty($meta['inn_site_url'][0])) : ?>
-				<h6><strong>Website:</strong> <a href="<?php echo safe_url($meta['inn_site_url'][0]); ?>"><?php echo $meta['inn_site_url'][0]; ?></a></h6>
+			<?php if ( !empty($author->data->user_url) ) : ?>
+				<h6><strong>Website:</strong> <a href="<?php echo safe_url($author->data->user_url); ?>"><?php echo $author->data->user_url; ?></a></h6>
 			<?php endif; ?>
+
+			<?php if ( !empty($meta[INN_MEMBER_TAXONOMY][0]) ) : ?>
+				<?php
+					$term_list = array();
+					$foci = maybe_unserialize($meta[INN_MEMBER_TAXONOMY][0]);
+					foreach ($foci as $term_id) {
+						$term = get_term_by( 'id', $term_id, INN_MEMBER_TAXONOMY );
+						if ( $term ) {
+							$term_list[] = $term->name;
+						}
+					}
+
+			?><h6><strong>Focus Areas:</strong> <span><?php echo implode(", ", $term_list); ?></span></h6>
+			<?php endif; ?>
+
+			<div class="contact">
+				<h6><strong>Got a News Tip? <a href="#" class="toggle" data-toggler="#contact-form">Contact <?php echo $author->data->display_name; ?></a></strong></h6>
+				<div id="contact-form">
+					<?php echo pau_inn_forms( '_pp_form_8b64e924248b055cfc4a6b009d62406a', $author->ID ); ?>
+				</div>
+			</div>
+
 			<ul class="social"><?php
 				foreach ($social as $network) {
 					if ( !empty($meta['inn_'.$network][0])) {
@@ -64,46 +92,43 @@ get_header();
 
 	<?php
 
-		$rss_url = $meta['rss_url'];
-
 		//load up recent stories
-		if ($rss_url) :
-			$oldpost = $post;
-			//get our posts
-			$wp_query->query( array(
-				'post_type' => 'network_content',
-				'posts_per_page' => 5,
-				'paged' => (get_query_var('paged')) ? get_query_var('paged') : 1,
-				'suppress_filters' => false,
-				'author' => $author->ID
-				)
-			);
+		$oldpost = $post;
+		//get our posts
+		$wp_query->query( array(
+			'post_type' => 'network_content',
+			'posts_per_page' => 5,
+			'paged' => (get_query_var('paged')) ? get_query_var('paged') : 1,
+			'suppress_filters' => false,
+			'author' => $author->ID
+			)
+		);
 
-			if ( have_posts() ) : ?>
-				<div class="recent-posts-wrapper stories">
-					<h3 class="recent-posts clearfix">
-					<?php
-						printf(__('Recent %s<a class="rss-link" href="%s"><i class="icon-rss"></i></a>', 'largo'),
-							of_get_option('posts_term_plural', 'stories'),
-							$rss_url
-						);
-					?>
-				</h3>
+		if ( have_posts() ) : ?>
+			<div class="recent-posts-wrapper stories">
+				<h3 class="recent-posts clearfix">
 				<?php
+					printf(__('Recent %s<a class="rss-link" href="%s"><i class="icon-rss"></i></a>', 'largo'),
+						of_get_option('posts_term_plural', 'stories'),
+						$rss_url
+					);
+				?>
+			</h3>
+			<?php
 
-				while ( have_posts() ) : the_post();
-					get_template_part( 'content', 'archive' );
-				endwhile;
+			while ( have_posts() ) : the_post();
+				get_template_part( 'content', 'archive' );
+			endwhile;
 
-				largo_content_nav( 'nav-below' );
-				echo '</div>';
-			endif;	//have_posts
+			largo_content_nav( 'nav-below' );
+			echo '</div>';
+		endif;	//have_posts
 
-			//put everything back
-			$post = $oldpost;
-			setup_postdata( $post );
-		endif; //rss_url ?>
+		//put everything back
+		$post = $oldpost;
+		setup_postdata( $post );
 
+	?>
 </div><!--#content-->
 
 <?php get_sidebar(); ?>

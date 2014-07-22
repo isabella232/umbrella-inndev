@@ -126,6 +126,12 @@ function inn_meta_boxes() {
         'desc'   => "The URL of this member’s website, including http(s)://"
       ),
       array(
+        'name'  => 'Donation Page',
+        'id'    => $prefix . 'donate',
+        'type'  => 'text',
+        'desc'   => "The URL of this member’s donation page, including http(s)://"
+      ),
+      array(
         'name'  => 'RSS',
         'id'    => $prefix . 'rss',
         'type'  => 'text',
@@ -155,7 +161,12 @@ function inn_meta_boxes() {
         'type'  => 'text',
         'desc'   => "The URL of this member’s YouTube account/channel, including http(s)://"
       ),
-
+	  array(
+        'name'  => 'Github URL',
+        'id'    => $prefix . 'github',
+        'type'  => 'text',
+        'desc'   => "The URL of this member’s github account, including http(s)://"
+      ),
     )
   );
   new RW_Meta_Box( $meta_box ); //URLs
@@ -281,18 +292,18 @@ class members_widget extends WP_Widget {
 	    <ul class="members">
 	    <?php
 	      $counter = 1;
-	      $member_list = get_members();
+	      $member_list = inn_get_members( true );
 	      foreach ($member_list as $member) :
-	      	if ( !$member->logo_id ) continue;	//skip members without logos
+	      	if ( !$member->data->paupress_pp_avatar['value'] ) continue;	//skip members without logos
 	      ?>
-	        <li id="member-list-<?php echo $member->ID;?>" class="<?php echo $member->logo_id; ?>">
-	        	<a href="<?php echo get_permalink($member->ID) ?>" class="member-thumb" title="<?php esc_attr_e($member->post_title) ?>">
+	        <li id="member-list-<?php echo $member->ID;?>" class="<?php echo $member->data->paupress_pp_avatar['value']; ?>">
+	        	<a href="<?php echo get_author_posts_url($member->ID) ?>" class="member-thumb" title="<?php esc_attr_e($member->display_name) ?>">
 	        		<?php echo wp_get_attachment_image(
-	        			$member->logo_id,
+	        			$member->data->paupress_pp_avatar['value'],
 	        			'member-thumbnail',
 	        			0,
 	        			array(
-	        				'alt' => $member->post_title
+	        				'alt' => $member->data->display_name
 	        			)
 	        		); ?>
 	        	</a>
@@ -330,7 +341,7 @@ class members_widget extends WP_Widget {
  */
 function inn_member_map() {
 
-	$members = get_members();
+	$members = inn_get_members( true );
 	$api_key = "AIzaSyD82h0mNBtvoOmhC3N4YZwqJ_xLkS8yTuw";
 	?>
 	<div id="map-container">
@@ -379,16 +390,16 @@ function inn_member_map() {
 		<?php
 		 foreach ( $members as $member ) :
 		 	//skip members without coordinates
-		 	if ( !isset($member->inn_coords) || empty($member->inn_coords)) continue;
+		 	if ( !isset($member->data->paupress_address_latitude_1['value']) || empty($member->data->paupress_address_latitude_1['value'])) continue;
 		 	$info = sprintf('<div class="map-popup"><a href="%s" class="map-name">%s</a><br/><a href="%s" target="_blank">%s</a></div>',
-		 		get_permalink($member->ID),
-		 		htmlspecialchars($member->post_title, ENT_QUOTES),
-		 		$member->inn_site_url,
-		 		$member->inn_site_url
+		 		get_author_posts_url($member->ID),
+		 		htmlspecialchars($member->display_name, ENT_QUOTES),
+		 		$member->data->user_url,
+		 		$member->data->user_url
 		 	);
 			 ?>{
-title: "X<?php echo htmlspecialchars($member->post_title, ENT_QUOTES); ?>",
-latLng: new gm.LatLng(<?php echo $member->inn_coords ?>),
+title: "X<?php echo htmlspecialchars($member->display_name, ENT_QUOTES); ?>",
+latLng: new gm.LatLng(<?php echo $member->data->paupress_address_latitude_1['value'] . "," . $member->data->paupress_address_longitude_1['value'] ?>),
 d: '<?php echo $info; ?>'
 },<?php
 		 endforeach;
@@ -408,7 +419,6 @@ d: '<?php echo $info; ?>'
 	<?php
 }
 
-
 /**
  * Alphabetical links
  */
@@ -421,10 +431,11 @@ function inn_member_alpha_links() {
 	$links = array_merge( array("num"), range('A','Z'), array("All") );
 
 	//populate an array of all the letters that have entries
-	$members = get_members();
+	$members = inn_get_members( true );
 	$member_firsts = array('All');
+
 	foreach ($members as $mem) {
-		$first = strtoupper($mem->post_title[0]);
+		$first = strtoupper($mem->data->display_name[0]);
 		if ( is_numeric($first) ) $first = "num";
 		if ( !in_array($first, $member_firsts) ) $member_firsts[] = $first;
 	}
@@ -432,7 +443,7 @@ function inn_member_alpha_links() {
 	//Loop thru and display links as appropriate
 	print '<div class="member-nav"><ul>';
 	foreach( $links as $link ) {
-		$class = ( $link == $_GET['letter'] ) ? 'class="current-letter"' : "" ;
+		$class = ( isset($_GET['letter']) && $link == $_GET['letter'] ) ? 'class="current-letter"' : "" ;
 		print "<li $class>";
 		if ( in_array($link, $member_firsts) ) {
 			$url = $core_url;
@@ -447,50 +458,71 @@ function inn_member_alpha_links() {
 }
 
 
-/**
- * Make WP_Query support title_starts_with
+/*
+ * Make WP_User_Query support user_starts_with
  */
-add_filter( 'posts_where', 'inn_title_starts_with', 10, 2 );
-function inn_title_starts_with( $where, &$wp_query ) {
-  global $wpdb;
+add_filter( 'pre_user_query', 'inn_user_starts_with' );
+function inn_user_starts_with( $clauses ) {
+	global $wpdb;
   //needs to handle digits, ugh
-  if ( $title_starts_with = $wp_query->get( 'title_starts_with' ) ) {
+  if ( isset($clauses->query_vars['user_starts_with']) && $title_starts_with = $clauses->query_vars['user_starts_with'] ) {
   	if ( 'num' == $title_starts_with ) {
-	  	$where .= ' AND ' . $wpdb->posts . '.post_title NOT REGEXP \'^[[:alpha:]]\'';
+	  	$clauses->query_where .= ' AND ' . $wpdb->users . '.display_name NOT REGEXP \'^[[:alpha:]]\'';
   	} else {
-  		$where .= ' AND UPPER(' . $wpdb->posts . '.post_title) LIKE \'' . esc_sql( like_escape( $title_starts_with ) ) . '%\'';
+  		$clauses->query_where .= ' AND UPPER(' . $wpdb->users . '.display_name) LIKE \'' . esc_sql( like_escape( $title_starts_with ) ) . '%\'';
 		}
   }
-  return $where;
+  return $clauses;
 }
-
 
 /**
- * Modify queries to pass querystrings for member letters
+ * Converts a taxonomy term slug into a serialized string of its ID for use in searching usermeta
  */
-function inn_members_by_letter( $query ) {
-
-  //get members by letter
-  if ( $query->is_post_type_archive('inn_member') && $query->is_main_query() && isset($_GET['letter']) ) {
-  	$query->set( 'title_starts_with', $_GET['letter'] );
-  	$query->set( 'posts_per_page', -1 );
-  }
-
-	//order members by name
-  if ( $query->is_post_type_archive('inn_member') && $query->is_main_query()  ) {
-	  $query->set( 'orderby', 'title' );
-	  $query->set( 'order', 'ASC' );
-  }
-
-  //include network content on homepage-featured archive
-  if( is_tax( 'prominence', 'homepage-featured' ) && empty( $query->query_vars['suppress_filters'] ) ) {
-    $query->set( 'post_type', array(
-     'post', 'network_content'
-		));
-	  return $query;
-	}
+function inn_prep_user_term( $slug, $taxonomy ) {
+	$term_object = get_term_by( 'slug', $slug, $taxonomy );
+	// strip first character off, because... why?
+	//$locate = substr( $term_object->term_id, 1, -1 );
+	$locate = $term_object->term_id;
+	return 's:' . strlen($locate) . ':"' . $locate . '"';
 }
-add_action( 'pre_get_posts', 'inn_members_by_letter' );
+
+/**
+ * Outputs a list of categories to filter users/members by
+ */
+function inn_member_categories_list() {
+
+	global $wp;
+	$core_url = "/" . preg_replace( '/page\/(\d+)/', '', $wp->request );
+
+	print '<div class="member-nav member-focus-nav"><ul>';
+	$terms = get_terms( INN_MEMBER_TAXONOMY, array( 'hide_empty' => FALSE ) );
+	if ( !empty( $terms ) && !is_wp_error( $terms ) ) {
+		$terms[] = (object)array( 'slug'=>'all', 'name' => 'All' );
+		foreach ($terms as $term) {
+			$link = ($term->slug == 'all') ? "" : "?focus=" . $term->slug;
+			$class = ( isset($_GET['focus']) && $link == $_GET['focus'] ) ? 'class="current-letter"' : "" ;
+			print "<li $class>";
+			printf('<a href="%s">%s</a>', $core_url . $link, $term->name );
+			print "</li>";
+		}
+	}
+	print "</ul></div>";
+}
+
+/**
+ * Outputs a list of states to filter users/members by
+ */
+function inn_member_states_list() {
+	$selected = (isset($_GET['state']) ) ? $_GET['state'] : "all" ;
+	echo '<div class="member-nav member-state-nav"><select name="member-state">';
+	echo '<option value="all">All</option>';
+	$states = paupress_get_helper_states();
+	$states['US']['intl'] = __('International', 'inn');
+	foreach ( $states['US'] as $abbrev => $name ) { ?>
+		<option value="<?php echo $abbrev; ?>" <?php selected( $abbrev, $selected ); ?>><?php echo $name; ?></option>
+	<? }
+	print "</select><button>GO</button></div>";
+}
 
 
 /**
