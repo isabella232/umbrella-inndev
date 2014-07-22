@@ -183,11 +183,17 @@
 		text-decoration: none;
 	}
 }
-.post-type-archive-inn_member {
+.page-template-page-members-php {
+	#content {
+		margin-left: 0;
+	}
 	.page-title {
 		text-transform: uppercase;
 		float: left;
 		line-height: 1.1em;
+	}
+	.archive-background {
+		margin-bottom: 0;
 	}
 	.archive-description {
 		float: right;
@@ -276,25 +282,21 @@ article.inn_member {
 }
 .member-nav {
 	vertical-align: middle;
-	padding: 0.3em;
+	padding: 0.8em;
 	background-color: #f4f4f4;
 	margin: 1em 0;
 	text-align: center;
 	clear: both;
-	ul {
-		.inline-block;
-		margin: 0 0 0 0;
-		padding: 0 0 0 0;
-	}
-	ul:before {
-		content: "Browse: ";
+	label {
 		font-weight: bold;
+		display: inline-block;
+		margin: 0 0.3em;
 	}
-	li {
-				.inline-block;
-		list-style: none;
-		padding: 0 3px;
-		margin: 0 3px;
+	select {
+		display: inline-block;
+		margin: 0 0.25em;
+		width: 22%;
+		max-width: 240px;
 	}
 }
 .single-inn_member .stories {
@@ -1158,6 +1160,14 @@ h5.top-tag {
 		i {
 			height: auto;
 			color: white;
+		}
+	}
+	.member-nav {
+		label,
+		select {
+			display: block;
+			margin: 0.3em auto;
+			width: 100%;
 		}
 	}
 }

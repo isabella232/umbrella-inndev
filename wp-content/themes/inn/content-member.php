@@ -7,7 +7,7 @@
   $meta = get_user_meta( $user->ID );;
 	$social = array('rss', 'twitter', 'facebook', 'googleplus', 'youtube');
 ?>
-	<article id="post-<?php $user->ID; ?>" <?php post_class('clearfix'); ?>>
+	<article id="post-<?php $user->ID; ?>" class="inn_member clearfix">
 		<a href="<?php echo get_author_posts_url( $user->ID ); ?>"><?php echo get_image_tag(
 			$meta['paupress_pp_avatar'][0],
 			esc_attr($user->data->display_name),

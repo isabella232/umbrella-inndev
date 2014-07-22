@@ -30,12 +30,18 @@ get_header();
 	<?php
 		//map, abstracted in inn_members.php
 		inn_member_map();
+	?>
 
-		//alphabet, abstracted in inn_members.php
-		inn_member_alpha_links();
-		inn_member_categories_list();
-		inn_member_states_list();
-
+	<div class="member-nav">
+		<label><?php _e('Filter List By: ', 'inn'); ?></label>
+		<?php
+			//all these are abstracted in inn_members.php
+			inn_member_alpha_links();
+			inn_member_categories_list();
+			inn_member_states_list();
+		?>
+	</div>
+	<?php
 		//custom query to pull members by alpha and/or page here...
 		//pagination inactive for now
 		$user_query = array(

@@ -215,13 +215,14 @@ function inn_member_alpha_links() {
 
 	global $wp;
 	$core_url = "/" . preg_replace( '/page\/(\d+)/', '', $wp->request );
+	if ( !isset($_GET['letter']) ) $_GET['letter'] = null;
 
 	//populate an array of potentially linked letters
-	$links = array_merge( array("num"), range('A','Z'), array("All") );
+	$links = array_merge( array("- All -"), array("num"), range('A','Z') );
 
 	//populate an array of all the letters that have entries
 	$members = inn_get_members( true );
-	$member_firsts = array('All');
+	$member_firsts = array('- All -');
 
 	foreach ($members as $mem) {
 		$first = strtoupper($mem->data->display_name[0]);
@@ -230,20 +231,21 @@ function inn_member_alpha_links() {
 	}
 
 	//Loop thru and display links as appropriate
-	print '<div class="member-nav"><ul>';
+	echo '<select name="member-letter">';
+	echo '<option value="" disabled selected>' . __('First Letter', 'inn') . '</option>';
 	foreach( $links as $link ) {
-		$class = ( $link == $_GET['letter'] ) ? 'class="current-letter"' : "" ;
-		print "<li $class>";
+		echo '<option ';
 		if ( in_array($link, $member_firsts) ) {
 			$url = $core_url;
-			if ( $link != "All" )	$url .= "?letter=" . $link;
+			if ( $link != "- All -" )	$url .= "?letter=" . $link;
 			if ( $link == "num" ) $link = "0-9";
-			printf('<a href="%s">%s</a>', $url, $link);
+			echo 'value="' . $url . '" ' . selected( $_GET['letter'], $link, false )  . '>' . $link;
 		} else {
-			print $link;
+			echo 'value="' . $url . '" disabled>' . $link;
 		}
+		echo "</option>";
 	}
-	print "</ul></div>";
+	print "</select>";
 }
 
 
@@ -282,35 +284,42 @@ function inn_member_categories_list() {
 
 	global $wp;
 	$core_url = "/" . preg_replace( '/page\/(\d+)/', '', $wp->request );
+	if ( !isset($_GET['focus']) ) $_GET['focus'] = NULL;
 
-	print '<div class="member-nav member-focus-nav"><ul>';
+	echo '<select name="member-category">';
+	echo '<option value="" disabled selected>' . __('Focus Area', 'inn') . '</option>';
 	$terms = get_terms( INN_MEMBER_TAXONOMY, array( 'hide_empty' => FALSE ) );
 	if ( !empty( $terms ) && !is_wp_error( $terms ) ) {
-		$terms[] = (object)array( 'slug'=>'all', 'name' => 'All' );
+		array_unshift( $terms, (object)array( 'slug'=>'all', 'name' => '- All -' ) );
 		foreach ($terms as $term) {
-			$link = ($term->slug == 'all') ? "" : "?focus=" . $term->slug;
-			$class = ( $link == $_GET['focus'] ) ? 'class="current-letter"' : "" ;
-			print "<li $class>";
-			printf('<a href="%s">%s</a>', $core_url . $link, $term->name );
-			print "</li>";
+			$link = ($term->slug == 'all') ? "?" : "?focus=" . $term->slug;
+			echo "<option ";
+			echo 'value="' . $core_url . $link . '" ' . selected( $_GET['focus'], $term->slug, false )  . '>' . $term->name;
+			echo "</option>";
 		}
 	}
-	print "</ul></div>";
+	print "</select>";
 }
 
 /**
  * Outputs a list of states to filter users/members by
  */
 function inn_member_states_list() {
+
+	global $wp;
+	$core_url = "/" . preg_replace( '/page\/(\d+)/', '', $wp->request );
+
 	$selected = (isset($_GET['state']) ) ? $_GET['state'] : "all" ;
-	echo '<div class="member-nav member-state-nav"><select name="member-state">';
-	echo '<option value="all">All</option>';
+
+	echo '<select name="member-state">';
+	echo '<option value="" disabled selected>' . __('State', 'inn') . '</option>';
+	echo '<option value="', $core_url, '">- All -</option>';
 	$states = paupress_get_helper_states();
 	$states['US']['intl'] = __('International', 'inn');
 	foreach ( $states['US'] as $abbrev => $name ) { ?>
-		<option value="<?php echo $abbrev; ?>" <?php selected( $abbrev, $selected ); ?>><?php echo $name; ?></option>
+		<option value="<?php echo $core_url . "?state=" . $abbrev; ?>" <?php selected( $abbrev, $selected ); ?>><?php echo $name; ?></option>
 	<?php }
-	print "</select><button>GO</button></div>";
+	print "</select>";
 }
 
 

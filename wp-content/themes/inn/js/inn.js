@@ -128,13 +128,8 @@ jQuery(document).ready( function($) {
 	$('.toggle').trigger('click');
 
 	// Submitting links for membership directory states
-	$('.member-state-nav button').on('click', function() {
-		whichState =  $('.member-state-nav select').val();
-		if (whichState == "all") {
-			window.location.search = "";
-		} else {
-			window.location.search = "?state=" + $('.member-state-nav select').val();
-		}
+	$('.member-nav select').on('change', function() {
+		window.location = $(this).val();
 	});
 
 
