@@ -6,6 +6,7 @@
 
 /**
  * Define the custom post type
+ * Needed for featured images still
  */
 function inn_init_members() {
 
@@ -51,217 +52,6 @@ add_action( 'init', 'inn_init_members', 11 );
 
 
 /**
- * Re-define paths to load meta-box plugin for member fields
- */
-define( 'RWMB_URL', trailingslashit( get_stylesheet_directory_uri() . '/meta-box' ) );
-define( 'RWMB_DIR', trailingslashit( get_stylesheet_directory() . '/meta-box' ) );
-// Include the meta box script
-require_once RWMB_DIR . 'meta-box.php';
-
-
-/**
- * Build the meta-boxes for Member PT
- */
-function inn_meta_boxes() {
-  // Check if plugin is activated or included in theme
-  if ( !class_exists( 'RW_Meta_Box' ) ) return;
-  $prefix = 'inn_';
-
-  //YEARS
-  $meta_box = array(
-    'id'       => 'details',
-    'title'    => 'Details',
-    'pages'    => array( 'inn_member' ),
-    'context'  => 'normal',
-    'priority' => 'high',
-    'fields' => array(
-      array(
-        'name'  => 'Contact Email',
-        'id'    => $prefix . 'email',
-        'type'  => 'text',
-      ),
-      array(
-        'name'  => 'Contact Phone',
-        'id'    => $prefix . 'phone',
-        'type'  => 'text',
-      ),
-      array(
-        'name'  => 'Mailing Address',
-        'id'    => $prefix . 'address',
-        'type'  => 'textarea',
-        'rows'	=> 5,
-        'desc'   => "Location of member, used in members map."
-      ),
-      array(
-        'name'  => 'Year Founded',
-        'id'    => $prefix . 'founded',
-        'type'  => 'text',
-        'size'	=> 5,
-        'desc'   => "The full year of founding, if known."
-      ),
-      array(
-        'name'  => 'Member Since',
-        'id'    => $prefix . 'since',
-        'type'  => 'text',
-        'size'	=> 5,
-        'desc'   => "The year this group joined INN, if known."
-      ),
-
-    )
-  );
-  new RW_Meta_Box( $meta_box ); //Details
-
-  //YEARS
-  $meta_box = array(
-    'id'       => 'links',
-    'title'    => 'URLs',
-    'pages'    => array( 'inn_member' ),
-    'context'  => 'normal',
-    'priority' => 'high',
-    'fields' => array(
-      array(
-        'name'  => 'Website',
-        'id'    => $prefix . 'site_url',
-        'type'  => 'text',
-        'desc'   => "The URL of this member’s website, including http(s)://"
-      ),
-      array(
-        'name'  => 'Donation Page',
-        'id'    => $prefix . 'donate',
-        'type'  => 'text',
-        'desc'   => "The URL of this member’s donation page, including http(s)://"
-      ),
-      array(
-        'name'  => 'RSS',
-        'id'    => $prefix . 'rss',
-        'type'  => 'text',
-        'desc'   => "The URL of this member’s main RSS feed, including http(s)://"
-      ),
-      array(
-        'name'  => 'Twitter handle',
-        'id'    => $prefix . 'twitter',
-        'type'  => 'text',
-        'desc'   => "The Twitter username for this member. Exclude @ sign."
-      ),
-      array(
-        'name'  => 'Facebook path',
-        'id'    => $prefix . 'facebook',
-        'type'  => 'text',
-        'desc'   => "The path of this member’s FB account (the part that comes <em>after</em> http://facebook.com/)"
-      ),
-      array(
-        'name'  => 'Google+ URL',
-        'id'    => $prefix . 'googleplus',
-        'type'  => 'text',
-        'desc'   => "The URL of this member’s Google+ account, including http(s)://"
-      ),
-      array(
-        'name'  => 'YouTube URL',
-        'id'    => $prefix . 'youtube',
-        'type'  => 'text',
-        'desc'   => "The URL of this member’s YouTube account/channel, including http(s)://"
-      ),
-	  array(
-        'name'  => 'Github URL',
-        'id'    => $prefix . 'github',
-        'type'  => 'text',
-        'desc'   => "The URL of this member’s github account, including http(s)://"
-      ),
-    )
-  );
-  new RW_Meta_Box( $meta_box ); //URLs
-}
-add_action( 'admin_init', 'inn_meta_boxes' );
-
-
-/**
- * Geocode the coordinates for members when edited
- */
-function inn_geocode_member( $post_id ) {
-	// Don't do anything if we're not supposed to
-	// Might use $post->post_type instead of $_POST?
-	if ( 'inn_member' != get_post_type( $post_id ) || !current_user_can( 'edit_post', $post_id ) || !strlen(trim( $_POST['inn_address'] )) ) return;
-	if ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE ) return;
-
-	// Get & format the entered address
-	$post_address = urlencode( $_POST['inn_address'] );
-
-	// Try to geocode it
-	$ch = curl_init();
-	$curl_url = "http://maps.googleapis.com/maps/api/geocode/json?address=" . $post_address . "&sensor=false";
-	curl_setopt($ch, CURLOPT_HEADER, 0);
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-	curl_setopt($ch, CURLOPT_URL, $curl_url);
-	$output = curl_exec($ch);
-	curl_close($ch);
-	$result = json_decode($output);
-
-	if ( $result->status == 'OK' ) {
-		$coords = $result->results[0]->geometry->location->lat . "," . $result->results[0]->geometry->location->lng;
-		update_post_meta( $post_id, 'inn_coords', $coords );
-	} else {
-		update_post_meta( $post_id, 'inn_coords', '' );
-		//TO DO: display error message on geocode fail
-		add_filter( 'redirect_post_location', 'inn_geocode_error' );
-	}
-}
-add_action( 'save_post', 'inn_geocode_member' );
-
-
-/**
- * Adds a query parameter to flag when an error message should display for failed geocode
- */
-function inn_geocode_error( $loc ) {
-	return add_query_arg( 'geocode', 'fail', $loc );
-}
-
-
-/**
- * If query parameter is present, display an admin notice
- */
-function inn_display_errors() {
-	if ( array_key_exists('geocode', $_GET) && $_GET['geocode'] == 'fail' ) : ?>
-	<div class="error fade">
-		<p><?php _e( 'Note: Could not geocode provided address.', 'inn' ); ?></p>
-	</div>
-	<?php endif;
-}
-add_action( 'admin_notices', 'inn_display_errors', 20 );
-
-
-/**
- * Helper function for getting members list
- */
-function get_members( $get_meta = TRUE ) {
-
-  $mem = new WP_Query( array(
-    'post_type' => 'inn_member',
-    'orderby' => 'title',
-    'order' => 'ASC',
-    'posts_per_page'=> -1
-  ));
-
-  $members = array();
-
-  while( $mem->have_posts()) {
-    $mem->next_post();
-    $id = $mem->post->ID;
-    if ( $get_meta ) {
-	    $meta = get_post_custom( $id );
-	    foreach ( $meta as $key => $value_arr ) {
-		  	$mem->post->$key = $value_arr[0];
-	    }
-    }
-    $mem->post->logo_id = get_post_thumbnail_id( $id );
-    $members[ ] = $mem->post;
-  }
-
-  //give it up
-  return $members;
-}
-
-
-/**
  * Widget listing members
  */
 class members_widget extends WP_Widget {
@@ -285,8 +75,7 @@ class members_widget extends WP_Widget {
 			'echo' => 0)
 		);
 
-    ?>
-    <?php if (!empty($instance['title'])) echo $before_title . '<span>' . $instance['title'] . '</span>' . $menu . $after_title; ?>
+    if (!empty($instance['title'])) echo $before_title . '<span>' . $instance['title'] . '</span>' . $menu . $after_title; ?>
 
     <div class="member-wrapper widget-content hidden-phone">
 	    <ul class="members">
@@ -398,7 +187,7 @@ function inn_member_map() {
 		 		$member->data->user_url
 		 	);
 			 ?>{
-title: "X<?php echo htmlspecialchars($member->display_name, ENT_QUOTES); ?>",
+title: "<?php echo htmlspecialchars($member->display_name, ENT_QUOTES); ?>",
 latLng: new gm.LatLng(<?php echo $member->data->paupress_address_latitude_1['value'] . "," . $member->data->paupress_address_longitude_1['value'] ?>),
 d: '<?php echo $info; ?>'
 },<?php
@@ -443,7 +232,7 @@ function inn_member_alpha_links() {
 	//Loop thru and display links as appropriate
 	print '<div class="member-nav"><ul>';
 	foreach( $links as $link ) {
-		$class = ( isset($_GET['letter']) && $link == $_GET['letter'] ) ? 'class="current-letter"' : "" ;
+		$class = ( $link == $_GET['letter'] ) ? 'class="current-letter"' : "" ;
 		print "<li $class>";
 		if ( in_array($link, $member_firsts) ) {
 			$url = $core_url;
@@ -465,7 +254,7 @@ add_filter( 'pre_user_query', 'inn_user_starts_with' );
 function inn_user_starts_with( $clauses ) {
 	global $wpdb;
   //needs to handle digits, ugh
-  if ( isset($clauses->query_vars['user_starts_with']) && $title_starts_with = $clauses->query_vars['user_starts_with'] ) {
+  if ( $title_starts_with = $clauses->query_vars['user_starts_with'] ) {
   	if ( 'num' == $title_starts_with ) {
 	  	$clauses->query_where .= ' AND ' . $wpdb->users . '.display_name NOT REGEXP \'^[[:alpha:]]\'';
   	} else {
@@ -500,7 +289,7 @@ function inn_member_categories_list() {
 		$terms[] = (object)array( 'slug'=>'all', 'name' => 'All' );
 		foreach ($terms as $term) {
 			$link = ($term->slug == 'all') ? "" : "?focus=" . $term->slug;
-			$class = ( isset($_GET['focus']) && $link == $_GET['focus'] ) ? 'class="current-letter"' : "" ;
+			$class = ( $link == $_GET['focus'] ) ? 'class="current-letter"' : "" ;
 			print "<li $class>";
 			printf('<a href="%s">%s</a>', $core_url . $link, $term->name );
 			print "</li>";
@@ -520,7 +309,7 @@ function inn_member_states_list() {
 	$states['US']['intl'] = __('International', 'inn');
 	foreach ( $states['US'] as $abbrev => $name ) { ?>
 		<option value="<?php echo $abbrev; ?>" <?php selected( $abbrev, $selected ); ?>><?php echo $name; ?></option>
-	<? }
+	<?php }
 	print "</select><button>GO</button></div>";
 }
 
