@@ -41,29 +41,71 @@
 
 <body <?php body_class(); ?>>
 <div id="top"></div>
+<?php if ( is_front_page() || is_home() ): ?>
+	<div class="global-nav-bg">
+		<div class="global-nav">
+			<nav id="top-nav" class="span12">
+	        	<span class="visuallyhidden">
+	        		<a href="#main" title="<?php esc_attr_e( 'Skip to content', 'largo' ); ?>"><?php _e( 'Skip to content', 'largo' ); ?></a>
+	        	</span>
+	        	<?php
+							$top_args = array(
+								'theme_location' => 'global-nav',
+								'depth'		 => 1,
+								'container'	 => false,
+							);
+							largo_cached_nav_menu($top_args);
+						?>
+	        	<div class="nav-right">
+
+	        		<?php if ( of_get_option( 'show_header_social') ) { ?>
+		        		<ul id="header-social" class="social-icons visible-desktop">
+							<?php largo_social_links(); ?>
+						</ul>
+					<?php } ?>
+
+	        		<?php if ( of_get_option( 'show_donate_button') )
+	        			largo_donate_button();
+	        		?>
+
+					<div id="header-search">
+						<form class="form-search" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+							<div class="input-append">
+								<input type="text" placeholder="<?php _e('Search', 'largo'); ?>" class="input-medium appendedInputButton search-query" value="" name="s" /><button type="submit" class="search-submit btn"><?php _e('GO', 'largo'); ?></button>
+							</div>
+						</form>
+					</div>
+
+
+					<?php if ( INN_MEMBER === TRUE ) { ?>
+					<div class="org-logo">
+	        			<a href="http://investigativenewsnetwork.org/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/inn-logo-80-55.jpg" height="55" alt="INN logo" /></a>
+					</div>
+					<?php } ?>
+
+	        	</div>
+	        </nav>
+	    </div> <!-- /.global-nav -->
+	</div> <!-- /.global-nav-bg -->
+<?php endif; ?>
 
 <div id="page" class="hfeed clearfix">
 
-	<?php // if (function_exists('dynamic_sidebar')) { dynamic_sidebar("Header"); } ?>
-
-	<header id="site-header" class="clearfix" itemscope itemtype="http://schema.org/Organization">
-		<?php largo_header(); ?>
-	</header>
-
-	<header class="print-header">
-		<p><strong><?php echo esc_html( get_bloginfo( 'name' ) ); ?></strong> (<?php echo esc_url( $current_url ); ?>)</p>
-	</header>
-
 	<div class="sticky-nav-wrapper">
-		<div class="sticky-nav-holder show" data-hide-at-top="<?php echo (is_front_page() || is_home()) ? 'true' : 'false'; ?>">
-			<?php largo_render_network_header(); ?>
-			<div class="sticky-nav-container">
+		<div class="sticky-nav-holder <?php if (!is_front_page() || !is_home()) { ?>show<?php } ?>" data-hide-at-top="<?php echo (is_front_page() || is_home()) ? 'true' : 'false'; ?>"><div class="sticky-nav-container">
 			<nav id="sticky-nav" class="sticky-navbar navbar clearfix">
 		    <div class="container">
-		    	<div class="nav-right">
-			      <?php if ( of_get_option( 'show_donate_button') )
-	      			largo_donate_button();
-	      		?>
+				<div class="nav-right">
+
+					<?php if ( of_get_option( 'show_header_social') ) { ?>
+						<ul id="header-social" class="social-icons visible-desktop">
+							<?php largo_social_links(); ?>
+						</ul>
+					<?php } ?>
+
+					<?php if ( of_get_option( 'show_donate_button') )
+						largo_donate_button();
+					?>
 
 						<div id="header-search">
 							<form class="form-search" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
@@ -84,12 +126,14 @@
 		        </div>
 		      </a>
 
-		      <ul class="nav">
-		        <li class="home-link"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php largo_home_icon( 'icon-white' ); ?></a></li>
-		        <li class="divider-vertical"></li>
-					</ul>
+			<ul class="nav">
+				<li class="home-link"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php largo_home_icon( 'icon-white' ); ?></a></li>
+				<li class="divider-vertical"></li>
+			</ul>
+
 
 		      <div class="nav-shelf">
+						<span class="site-name"><a href="/"><?php echo get_bloginfo('name'); ?></a></span>
 						<ul class="nav"><?php
 							$args = array(
 								'theme_location' => 'navbar-categories',
@@ -102,6 +146,13 @@
 							largo_cached_nav_menu($args);
 							?>
 							<li class="menu-item-has-childen dropdown">
+								<a href="javascript:void(0);" class="dropdown-toggle"><?php
+										//try to get the menu name from global-nav
+										$menus = get_nav_menu_locations();
+										$menu_title = wp_get_nav_menu_object($menus['global-nav'])->name;
+										echo ( $menu_title ) ? $menu_title : __('About', 'largo');
+									?> <b class="caret"></b>
+								</a>
 								<?php
 									$args = array(
 										'theme_location' => 'global-nav',
@@ -118,6 +169,92 @@
 			</nav>
 		</div></div>
 	</div>
+
+	<?php if (is_front_page() || is_home()) : ?>
+	<header id="site-header" class="clearfix" itemscope itemtype="http://schema.org/Organization">
+	<h1 class="visuallyhidden"><a itemprop="url" href="<?php echo get_site_url(); ?>"><span itemprop="name">Journo.biz</span></a></h1>
+		<a itemprop="url" href="<?php echo get_site_url(); ?>">
+			<img itemprop="logo" class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/journobiz.png">
+		</a>
+
+		<div class="newsletter-signup">
+				<form action="//investigativenewsnetwork.us1.list-manage.com/subscribe/post?u=81670c9d1b5fbeba1c29f2865&amp;id=e3e0b6be7f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+				<label>Subscribe to our free newsletter</label>
+				<fieldset>
+					<input required type="email" value="" name="EMAIL" class="required email_address" id="mce-EMAIL" placeholder="Email address">
+					<input required type="text" value="" name="FNAME" class="first_name" id="mce-FNAME" placeholder="First name">
+					<input required type="text" value="" name="LNAME" class="last_name" id="mce-LNAME" placeholder="Last name">
+					<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn submit">
+					<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+					<div style="position: absolute; left: -5000px;"><input type="text" name="b_81670c9d1b5fbeba1c29f2865_e3e0b6be7f" tabindex="-1" value=""></div>
+					<div class="error"></div>
+				</fieldset>
+			</form>
+		</div>
+	</header>
+	<?php else: ?>
+	<header id="site-header" class="clearfix" itemscope itemtype="http://schema.org/Organization">
+		<?php largo_header(); ?>
+	</header>
+	<?php endif; ?>
+
+	<header class="print-header">
+		<p><strong><?php echo esc_html( get_bloginfo( 'name' ) ); ?></strong> (<?php echo esc_url( $current_url ); ?>)</p>
+	</header>
+
+	<?php if ( is_front_page() || is_home() ): ?>
+	<nav id="main-nav" class="navbar clearfix">
+	  <div class="navbar-inner">
+	    <div class="container">
+
+	      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+	      <a class="btn btn-navbar toggle-nav-bar"  title="<?php esc_attr_e('More', 'largo'); ?>">
+	        <div class="bars">
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+	        </div>
+	      </a>
+
+	      <div class="nav-shelf">
+	      	<ul class="nav">
+			    <?php
+						$args = array(
+							'theme_location' => 'navbar-categories',
+							'depth'		 => 0,
+							'container'	 => false,
+							'items_wrap' => '%3$s',
+							'menu_class' => 'nav',
+							'walker'	 => new Bootstrap_Walker_Nav_Menu()
+						);
+						largo_cached_nav_menu($args);
+					?>
+					</ul>
+					<ul class="nav visible-phone">
+						<li class="menu-item-has-childen dropdown">
+							<a href="javascript:void(0);" class="dropdown-toggle"><?php
+									//try to get the menu name from global-nav
+									$menus = get_nav_menu_locations();
+									$menu_title = wp_get_nav_menu_object($menus['global-nav'])->name;
+									echo ( $menu_title ) ? $menu_title : __('About', 'largo');
+								?> <b class="caret"></b>
+							</a>
+							<?php
+								$args = array(
+									'theme_location' => 'global-nav',
+									'depth'		 => 1,
+									'container'	 => false,
+									'menu_class' => 'dropdown-menu',
+								);
+								largo_cached_nav_menu($args);
+							?>
+						</li>
+					</ul>
+				</div>
+	    </div>
+	  </div>
+	</nav>
+	<?php endif; ?>
 
 <?php if ( of_get_option( 'show_dont_miss_menu') ) : ?>
 <nav id="secondary-nav" class="clearfix">

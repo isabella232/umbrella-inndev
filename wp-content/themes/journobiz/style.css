@@ -19,20 +19,6 @@ h5,
   font-family: "museo-sans", helvetica, arial, sans-serif;
   font-weight: 900;
 }
-#main {
-  margin-top: 25px;
-}
-#site-header {
-  display: none;
-}
-.home .sticky-nav-wrapper,
-.sticky-nav-wrapper {
-  height: 85px;
-}
-.home .sticky-nav-holder.show {
-  visibility: visible;
-  opacity: 1;
-}
 #topics-bar {
   padding-top: 0;
 }
@@ -50,6 +36,69 @@ h5,
 }
 #sidebar .widget-area {
   padding-left: 40px;
+}
+.home #site-header {
+  position: relative;
+}
+.home #site-header img.logo {
+  max-width: 520px;
+  width: 100%;
+  height: auto;
+  float: left;
+  margin: 0 0 5px;
+}
+.home #site-header .newsletter-signup {
+  width: 262px;
+  color: #666;
+  position: absolute;
+  top: 25px;
+  right: 0;
+  margin-left: 20px;
+  z-index: 999;
+}
+.home #site-header .newsletter-signup form {
+  clear: both;
+  background: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+.home #site-header .newsletter-signup form button,
+.home #site-header .newsletter-signup form input {
+  margin: 0 0 8px 0;
+}
+.home #site-header .newsletter-signup form input[type="text"],
+.home #site-header .newsletter-signup form input[type="email"] {
+  width: 226px;
+}
+.home #site-header .newsletter-signup form label {
+  color: #666;
+  font-size: 16px;
+}
+.home #site-header .newsletter-signup .first_name,
+.home #site-header .newsletter-signup .last_name,
+.home #site-header .newsletter-signup .submit {
+  display: none;
+}
+.home #site-header .newsletter-signup .error {
+  color: #666;
+  font-size: 12px;
+  display: none;
+}
+.home #site-header .newsletter-signup .home .sticky-nav-holder.show {
+  visibility: visible;
+  opacity: 1;
+}
+#sticky-nav .nav-shelf .site-name {
+  display: block;
+  float: left;
+  color: #343434;
+  line-height: 50px;
+  font-size: 16px;
+  margin-right: 8px;
+}
+#sticky-nav .nav-shelf .site-name a {
+  color: #343434;
 }
 @media all and (max-width: 768px) {
   #sidebar .widget-area {
