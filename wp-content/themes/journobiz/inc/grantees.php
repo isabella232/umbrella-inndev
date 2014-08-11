@@ -176,17 +176,6 @@ function journobiz_admin_enqueue() {
 }
 add_action( 'admin_enqueue_scripts', 'journobiz_admin_enqueue' );
 
-function journobiz_enqueue() {
-	wp_enqueue_script(
-		'journobiz',
-		get_stylesheet_directory_uri() . "/js/journobiz.js",
-		array( 'jquery' ),
-		false,
-		true
-	);
-}
-add_action( 'wp_enqueue_scripts', 'journobiz_enqueue' );
-
 largo_add_meta_box(
 	'grantee-details',
 	'Grantee Details',

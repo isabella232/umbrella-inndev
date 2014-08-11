@@ -15,6 +15,56 @@ Version:        0.1.0
 @dkgray: #333;
 @purple: #694b6a;
 
+body {
+  font-family: "proxima-nova",helvetica,arial,sans-serif;
+}
+h1,h2,h3,h4,h5,
+.widgettitle {
+  font-family: "museo-sans",helvetica,arial,sans-serif;
+  font-weight: 900;
+}
+#main {
+  margin-top: 25px;
+}
+#site-header {
+  display: none;
+}
+.home .sticky-nav-wrapper,
+.sticky-nav-wrapper {
+  height: 85px;
+}
+.home .sticky-nav-holder.show {
+  visibility: visible;
+  opacity: 1;
+}
+#topics-bar {
+  padding-top: 0;
+  ul li.menu-label {
+    color: @inngray;
+  }
+}
+.entry-title a {
+  color: @dkgray;
+}
+.entry-content h3 {
+  font-weight: 700;
+  strong {
+    font-weight: 900;
+  }
+}
+#sidebar .widget-area {
+  padding-left: 40px;
+}
+@media all and (max-width: 768px) {
+  #sidebar .widget-area {
+    padding-left: 0;
+  }
+  .sticky-footer-container .follow {
+    display: none;
+  }
+}
+
+
 // Override Largo fontello with journobiz's extended edition
 @font-face {
   font-family: 'fontello';
