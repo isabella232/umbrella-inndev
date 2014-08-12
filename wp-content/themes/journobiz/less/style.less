@@ -55,7 +55,7 @@ h1,h2,h3,h4,h5,
   width: 262px;
   color: #666;
   position: absolute;
-  top: 25px;
+  top: 30px;
   right: 0;
   margin-left: 20px;
   z-index: 999;
@@ -105,7 +105,15 @@ h1,h2,h3,h4,h5,
     color: #343434;
   }
 }
+.navbar-inner {
+  background-color: @purple;
+}
 
+@media only screen and (max-width: 940px) {
+  #sticky-nav .nav-shelf .site-name {
+    display: none;
+  }
+}
 @media all and (max-width: 768px) {
   #sidebar .widget-area {
     padding-left: 0;

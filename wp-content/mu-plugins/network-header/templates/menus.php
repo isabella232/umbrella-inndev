@@ -22,22 +22,22 @@
 		</button>
 	</nav>
 
-
 	<?php if ( of_get_option( 'show_donate_button') ) { largo_donate_button(); } ?>
 
-	<?php /*
-	<div class="search">
-		<form class="form-search" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-			<i class="icon-search toggle" title="<?php esc_attr_e('Search', 'largo'); ?>" role="button"></i>
-			<div class="input-append">
-				<span class="text-input-wrapper">
-					<input type="text"
-							placeholder="<?php esc_attr_e('Search', 'largo'); ?>"
-							class="input-medium appendedInputButton search-query"
-							value="" name="s" />
-				</span><button type="submit" class="search-submit btn"><?php _e('GO', 'largo'); ?></button>
-			</div>
-		</form>
-	</div> */?>
+	<div class="gcs_container search">
+		<script>
+			(function() {
+				var cx = '<?php echo of_get_option('gcs_id'); ?>';
+				var gcse = document.createElement('script');
+				gcse.type = 'text/javascript';
+				gcse.async = true;
+				gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+					'//www.google.com/cse/cse.js?cx=' + cx;
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(gcse, s);
+			})();
+		</script>
+		<gcse:search></gcse:search>
+	</div>
 
 <?php restore_current_blog(); ?>

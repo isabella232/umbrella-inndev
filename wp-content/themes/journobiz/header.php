@@ -192,10 +192,6 @@
 			</form>
 		</div>
 	</header>
-	<?php else: ?>
-	<header id="site-header" class="clearfix" itemscope itemtype="http://schema.org/Organization">
-		<?php largo_header(); ?>
-	</header>
 	<?php endif; ?>
 
 	<header class="print-header">
