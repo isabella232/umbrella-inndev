@@ -60,20 +60,6 @@
 			<div class="sticky-nav-container">
 			<nav id="sticky-nav" class="sticky-navbar navbar clearfix">
 		    <div class="container">
-		    	<div class="nav-right">
-			      <?php if ( of_get_option( 'show_donate_button') )
-	      			largo_donate_button();
-	      		?>
-
-						<div id="header-search">
-							<form class="form-search" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-								<i class="icon-search toggle" title="<?php esc_attr_e('Search', 'largo'); ?>" role="button"></i>
-								<div class="input-append">
-									<span class="text-input-wrapper"><input type="text" placeholder="<?php esc_attr_e('Search', 'largo'); ?>" class="input-medium appendedInputButton search-query" value="" name="s" /></span><button type="submit" class="search-submit btn"><?php _e('GO', 'largo'); ?></button>
-								</div>
-							</form>
-						</div>
-					</div>
 
 		      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
 		      <a class="btn btn-navbar toggle-nav-bar" title="<?php esc_attr_e('More', 'largo'); ?>">
