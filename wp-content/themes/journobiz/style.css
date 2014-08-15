@@ -85,7 +85,8 @@ h5,
   font-size: 12px;
   display: none;
 }
-.home #site-header .newsletter-signup .home .sticky-nav-holder.show {
+.home #site-header .newsletter-signup,
+.home .sticky-nav-holder.show {
   visibility: visible;
   opacity: 1;
 }
@@ -343,7 +344,7 @@ h5,
   right: 55px;
   top: 18%;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.9);
   margin-left: 0;
 }
 .single-grantee .info p,
