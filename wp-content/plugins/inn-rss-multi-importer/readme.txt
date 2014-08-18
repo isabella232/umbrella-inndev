@@ -1,3 +1,15 @@
+=== INN customizations ===
+
+This plugin is a customized version of WP RSS Multi Importer ( https://wordpress.org/plugins/wp-rss-multi-importer/ ) v2.67.63. Customizations were doen to get it to import into a custom post type, called "", rather than into the main Posts type.
+
+Code differences are as follows:
+
+* inc/db_functions.php: lines 76 and 113: removed explicit post_type from SQL query
+* inc/import_posts.php: lots of general formatting cleanup, plus: lines 880-912, which attempt to find an INN member (PauPress) and set the post_author and from_member_id meta values if the feed is found in a member's record, and set the post_type = 'network_content" rather than the default 'post'
+
+In addition, see inn_register_feeds() in themes/inn/inn_members_rss.php to see how INN members' inn_rss meta value is auto-registered for import with this plugin.
+
+
 === WP RSS Multi Importer ===
 Contributors: allenweiss
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=M6GC7V8BARAJL
@@ -11,7 +23,7 @@ Aggregate RSS feeds. Auto post or use shortcode, excerpts w/ images, 9 templates
 
 All-In-One solution for importing, merging and displaying RSS and Atom feeds on your Wordpress site. Highly rated (in Top 30 of Wordpress plugins) and popular (Top 100). Using this plugin you can do 4 things (separately or at the same time):
 
-* Display the aggregated feed items on a page in one of __9 different templates that you can customize__ 
+* Display the aggregated feed items on a page in one of __9 different templates that you can customize__
 * __Create blog posts (autoblog)__ from the feed items so readers can comment on them
 * Display the aggregated feed items in a __theme widget__, in one of 3 different displays
 * Display the aggregated feed items in __your own RSS feed__
@@ -39,7 +51,7 @@ Feed to Post has options to make the image into a Featured Image and auto-remove
 * Pagination or Load More options - select number of posts per page or click on load more
 * Select number of posts per feed you want to show
 * Separate out Today from Earlier posts
-* Sort by date if you want (ascending or descending) 
+* Sort by date if you want (ascending or descending)
 * Output feed name as (Source, Sponsor, Via, Club or name your own)
 * Show an excerpt (and select the number of words to show)
 * Select how you would like the links to open (in a Lightbox, a new window, or the current window)
@@ -53,11 +65,11 @@ Feed to Post has options to make the image into a Featured Image and auto-remove
 
 These features are all available in the admin panel.
 
-= Translation = 
+= Translation =
 
 * Turkish - thanks to Hakaner
 
-= Credit = 
+= Credit =
 
 [__Allen Weiss__](http://www.wprssimporter.com/)
 
@@ -84,7 +96,7 @@ assign the feed to a category, then use this shortcode on your page or post:
 Assign multiple categories using a comma delimited list:
 [wp_rss_multi_importer category="#,#,#"]
 
-Use the Feed to Post option and turn the feed articles into blog posts. 
+Use the Feed to Post option and turn the feed articles into blog posts.
 
 
 Use the widget.  If your theme allows for widgets, you'll find the RSS Multi Importer Widget there.
@@ -92,7 +104,7 @@ Configure your feeds in the administration panel, then choose the categories, nu
 
 If you want to put this in the code on your theme, you can do it like this:
 
-echo do_shortcode('[wp_rss_multi_importer]'); 
+echo do_shortcode('[wp_rss_multi_importer]');
 
 = Can I have the feeds go directly into blog posts? =
 
@@ -152,9 +164,9 @@ Go here to find [__all FAQs__](http://www.wprssimporter.com/faqs/)
 * Fixed: Fixed problem with a template that caused some users to have the feeds disappear.
 
 = Version 2.66.9 (2013-9-17) =
-* NEW: Option to Load More instead of pagination.  
+* NEW: Option to Load More instead of pagination.
 * Changed: Made pagination css full width to avoid layout problems.
-* Changed: Upgraded colorbox to most recent version (v1.4.29)  
+* Changed: Upgraded colorbox to most recent version (v1.4.29)
 * Fixed: Fixed problem with target window and various other bugs.
 
 = Version 2.66.8 =
@@ -200,7 +212,7 @@ Go here to find [__all FAQs__](http://www.wprssimporter.com/faqs/)
 = Version 2.53 =
 * Added default category image option, set post format for Feed to Post option and other options added, preserves more tags in Feed to Post option, added more shortcode parameters and fixed several bugs.
 = Version 2.52 =
-* Added more options for Feed to Post users including ability to specify user_id and suppress the source. Clearer admin interface. Image recognition improved. Class added to stylize image in Feed to Post. Small bug fixes. 
+* Added more options for Feed to Post users including ability to specify user_id and suppress the source. Clearer admin interface. Image recognition improved. Class added to stylize image in Feed to Post. Small bug fixes.
 = Version 2.51 =
 * Images are now hyperlinked in excerpts. Images that are on secure servers now work. Feed or item author now available for use in templates and Feed to Post (if the feed has the author).
 = Version 2.50 =
