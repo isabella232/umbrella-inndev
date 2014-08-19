@@ -23,6 +23,13 @@ $guides = get_pages( array(
 
 <section id="courses">
 	<h1><?php _e("Online Courses", 'cjet'); ?></h1>
+	<p class="description"><?php
+		if ( of_get_option('cjet_courses_intro') ) {
+			echo of_get_option('cjet_courses_intro');
+		} else {
+			_e('Edit this description under Appearance > Theme Options.', 'cjet');
+		}
+	?></p>
 	<ul>
 	<?php
 		foreach ( $courses as $course ) :	?>
@@ -49,7 +56,7 @@ $guides = get_pages( array(
 		if ( of_get_option('cjet_guides_intro') ) {
 			echo of_get_option('cjet_guides_intro');
 		} else {
-			_e('Edit this description in the Theme Options for CJET', 'cjet');
+			_e('Edit this description under Appearance > Theme Options.', 'cjet');
 		}
 	?></p>
 	<ul>
