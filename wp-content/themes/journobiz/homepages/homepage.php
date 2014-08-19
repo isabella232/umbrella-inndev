@@ -14,9 +14,9 @@ class JournoHomepageLayout extends Homepage {
     $defaults = array(
       'template' => get_stylesheet_directory() . '/homepages/templates/journo.php',
       'assets' => array(
-			array('homepage-single', get_template_directory_uri() . '/homepages/assets/css/single.css', array()),
-			array('homepage-single', get_template_directory_uri() . '/homepages/assets/js/single.js', array('jquery'))
-		)
+	  		array('journo', get_stylesheet_directory_uri() . '/homepages/assets/css/journo.css', array()),
+	  		array('journo', get_stylesheet_directory_uri() . '/homepages/assets/js/journo.js', array('jquery'))
+	  	)
     );
     $options = array_merge($defaults, $options);
     $this->load($options);
@@ -32,7 +32,21 @@ class JournoHomepageLayout extends Homepage {
 
 }
 
-function inn_custom_homepage_layout() {
-    register_homepage_layout('JournoHomepageLayout');
+function inn_custom_homepage_layouts() {
+
+    $unregister = array(
+		'HomepageBlog',
+		'HomepageSingle',
+		'HomepageSingleWithFeatured',
+		'HomepageSingleWithSeriesStories',
+		'TopStories',
+		'Slider'
+	);
+
+	foreach ($unregister as $layout)
+		unregister_homepage_layout($layout);
+
+	register_homepage_layout('JournoHomepageLayout');
+
 }
-add_action('init', 'inn_custom_homepage_layout', 0);
+add_action('init', 'inn_custom_homepage_layouts', 0);
