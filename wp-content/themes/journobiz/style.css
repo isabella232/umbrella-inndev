@@ -101,8 +101,21 @@ h5,
 #sticky-nav .nav-shelf .site-name a {
   color: #343434;
 }
-.navbar-inner {
+#sticky-nav a {
+  color: #694b6a;
+}
+.navbar-inner,
+#sticky-nav .nav-shelf a:hover,
+#sticky-nav .nav-shelf .active > a {
   background-color: #694b6a;
+}
+#sticky-nav .nav-shelf a:hover,
+#sticky-nav .nav-shelf .active > a,
+#sticky-nav .nav-shelf .active > a:hover {
+  color: #fff;
+}
+#sticky-nav .nav-shelf .active > a:hover {
+  background-color: #876088;
 }
 @media only screen and (max-width: 940px) {
   #sticky-nav .nav-shelf .site-name {
@@ -344,7 +357,7 @@ h5,
   right: 55px;
   top: 18%;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.5);
   margin-left: 0;
 }
 .single-grantee .info p,
