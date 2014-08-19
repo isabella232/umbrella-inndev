@@ -511,7 +511,7 @@ function inn_member_archive( $template ) {
 	$author = get_queried_object();
 	$meta = get_user_meta( $author->ID );
 
-	if ( $author->roles[0] !== 'member'  ) {
+	if ( $author->roles[0] == 'member'  ) {
 		return dirname(__FILE__) . '/templates/member-archive.php';
 	}
 

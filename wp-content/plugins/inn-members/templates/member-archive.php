@@ -4,6 +4,9 @@
  * This is for INN Members only, and overrides author.php (or archive.php) in the theme
  */
 get_header();
+
+$author = $user = get_queried_object();
+$meta = get_user_meta( $author->ID );
 ?>
 
 <div id="content" class="span8" role="main">
@@ -51,12 +54,14 @@ get_header();
 			?><h6><strong>Focus Areas:</strong> <span><?php echo implode(", ", $term_list); ?></span></h6>
 			<?php endif; ?>
 
+			<?php if ( function_exists('pau_inn_forms')) : ?>
 			<div class="contact">
 				<h6><strong>Got a News Tip? <a href="#" class="toggle" data-toggler="#contact-form">Contact <?php echo $author->data->display_name; ?></a></strong></h6>
 				<div id="contact-form">
 					<?php echo pau_inn_forms( '_pp_form_8b64e924248b055cfc4a6b009d62406a', $author->ID ); ?>
 				</div>
 			</div>
+			<?php endif; ?>
 
 			<ul class="social"><?php
 				foreach ($social as $network) {
