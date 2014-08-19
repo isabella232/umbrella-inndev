@@ -4,51 +4,148 @@
  *  ==============  Membership Directory stuff  ==============
  */
 
-/**
- * Define the custom post type
- * Needed for featured images still
- */
-function inn_init_members() {
 
-	//Members
-  register_post_type( 'inn_member',
-    array(
-      'labels' => array(
-        'name' => _x('Members', 'post type general name'),
-        'singular_name' => _x('Member', 'post type singular name'),
-        'add_new' => _x('Add New Member', 'new inn member'),
-        'add_new_item' => __('Add New Member'),
-        'edit_item' => __('Edit Member'),
-        'new_item' => __('New Member'),
-        'all_items' => __('All Members'),
-        'view_item' => __('View Member'),
-        'search_items' => __('Search Members'),
-        'not_found' =>  __('No members found'),
-        'not_found_in_trash' => __('No members found in Trash'),
-        'parent_item_colon' => '',
-        'menu_name' => __('INN Members')
-      ),
-    'menu_position' => 21,
-    'show_ui' => true,
-    'description' => 'INN Member publications/groups',
-    'exclude_from_search' => false,
-    'publicly_queryable' => true,
-    'public' => true,
-    'has_archive' => true,
-    'rewrite' => array('slug' => 'member'),
-    'hierarchical' => false,
-    'supports' => array('title','editor','thumbnail'), //see add_post_type_support()  - leave editor blank for no Case Study
-    )
-  );
+function inn_member_functions() {
 
-	//set an image size for the member widget
-	add_image_size( 'member-thumbnail', 60, 60, true );
+	//necessary for using is_plugin_active();
 
-	//build a menu for the widget and listing header
-	register_nav_menu( 'membership', 'Members Menu' );
+	include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+	/**
+	 * Defined typically in paupress/utilities/paupress-fields.php
+	 */
+	 if ( ! function_exists('paupress_get_option') ) {
 
+		 function paupress_get_option( $key, $ret_key = false ) {
+			// DIFFERENTIATE WORDPRESS AND THIRD-PARTY DEFAULTS
+			if ( '_pp_field' != substr( $key, 0, 9 ) ) {
+				$option_key = '_pp_field_'.$key;
+			} else {
+				$option_key = $key;
+			}
+
+			// IF $ret_key IS TRUE, JUST RETURN THE KEY
+			if ( false != $ret_key )
+				return $option_key;
+
+			// ELSE, RETURN THE OPTIONS CONTENTS
+			return get_option( $option_key );
+
+		}
+	}
+
+	/**
+	 * Formerly (and possibly still) defined in PauINN
+	 */
+	if ( ! function_exists('inn_get_members') ) {
+		function inn_get_members( $meta = false, $echo = false ) {
+
+			// THE QUERY
+			$users = new WP_User_Query(  array( 'role' => 'Member', 'fields' => 'all_with_meta' ) );
+			$members = array();
+
+			// THE LOOP
+			if ( ! empty( $users->results ) ) {
+				foreach ( $users->results as $user ) {
+					if ( false != $meta ) {
+						$meta = get_user_meta( $user->data->ID );
+						foreach ( $meta as $k => $v ) {
+							$value = maybe_unserialize( $v );
+							$field = paupress_get_option( $k );
+						 	$user->data->$k = array( 'value' => $value[0], 'name' => $field['name'] );
+						}
+					}
+					$members[$user->data->ID] = $user;
+					if ( false != $echo ) {
+						echo '<p>' . print_r( $user, true ) . '</p>';
+					}
+				}
+			}
+
+			if ( false != $echo ) {
+				return false;
+			} else {
+				return $members;
+			}
+
+		}
+	}
 }
-add_action( 'init', 'inn_init_members', 11 );
+/**
+ * We use wp_head instead of something more reasonable like 'init' because when a plugin is first activated it's
+ * loaded a bit differently (read: later than init) and we get function definition collisions.
+ */
+add_action( 'wp_head', 'inn_member_functions', 99 );
+
+/**
+ * For getting a list of states that members are in
+ */
+function inn_member_states() {
+	$states = array(
+		'AL' => __('Alabama', 'inn'),
+		'AK' => __('Alaska', 'inn'),
+		'AZ' => __('Arizona', 'inn'),
+		'AR' => __('Arkansas', 'inn'),
+		'CA' => __('California', 'inn'),
+		'CO' => __('Colorado', 'inn'),
+		'CT' => __('Connecticut', 'inn'),
+		'DE' => __('Delaware', 'inn'),
+		'DC' => __('District Of Columbia', 'inn'),
+		'FL' => __('Florida', 'inn'),
+		'GA' => __('Georgia', 'inn'),
+		'HI' => __('Hawaii', 'inn'),
+		'ID' => __('Idaho', 'inn'),
+		'IL' => __('Illinois', 'inn'),
+		'IN' => __('Indiana', 'inn'),
+		'IA' => __('Iowa', 'inn'),
+		'KS' => __('Kansas', 'inn'),
+		'KY' => __('Kentucky', 'inn'),
+		'LA' => __('Louisiana', 'inn'),
+		'ME' => __('Maine', 'inn'),
+		'MD' => __('Maryland', 'inn'),
+		'MA' => __('Massachusetts', 'inn'),
+		'MI' => __('Michigan', 'inn'),
+		'MN' => __('Minnesota', 'inn'),
+		'MS' => __('Mississippi', 'inn'),
+		'MO' => __('Missouri', 'inn'),
+		'MT' => __('Montana', 'inn'),
+		'NE' => __('Nebraska', 'inn'),
+		'NV' => __('Nevada', 'inn'),
+		'NH' => __('New Hampshire', 'inn'),
+		'NJ' => __('New Jersey', 'inn'),
+		'NM' => __('New Mexico', 'inn'),
+		'NY' => __('New York', 'inn'),
+		'NC' => __('North Carolina', 'inn'),
+		'ND' => __('North Dakota', 'inn'),
+		'OH' => __('Ohio', 'inn'),
+		'OK' => __('Oklahoma', 'inn'),
+		'OR' => __('Oregon', 'inn'),
+		'PA' => __('Pennsylvania', 'inn'),
+		'RI' => __('Rhode Island', 'inn'),
+		'SC' => __('South Carolina', 'inn'),
+		'SD' => __('South Dakota', 'inn'),
+		'TN' => __('Tennessee', 'inn'),
+		'TX' => __('Texas', 'inn'),
+		'UT' => __('Utah', 'inn'),
+		'VT' => __('Vermont', 'inn'),
+		'VA' => __('Virginia', 'inn'),
+		'WA' => __('Washington', 'inn'),
+		'WV' => __('West Virginia', 'inn'),
+		'WI' => __('Wisconsin', 'inn'),
+		'WY' => __('Wyoming', 'inn'),
+		'AA' => __('Armed Forces Americas', 'inn'),
+		'AE' => __('Armed Forces Europe', 'inn'),
+		'AP' => __('Armed Forces Pacific', 'inn'),
+		'AS' => __('American Samoa', 'inn'),
+		'FM' => __('Micronesia', 'inn'),
+		'GU' => __('Guam', 'inn'),
+		'MH' => __('Marshall Islands', 'inn'),
+		'PR' => __('Puerto Rico', 'inn'),
+		'VI' => __('U.S. Virgin Islands', 'inn'),
+		'intl' => __('International', 'inn'),
+	);
+	return $states;
+}
+
 
 
 /**
@@ -314,9 +411,8 @@ function inn_member_states_list() {
 	echo '<select name="member-state">';
 	echo '<option value="" disabled selected>' . __('State', 'inn') . '</option>';
 	echo '<option value="', $core_url, '">- All -</option>';
-	$states = paupress_get_helper_states();
-	$states['US']['intl'] = __('International', 'inn');
-	foreach ( $states['US'] as $abbrev => $name ) { ?>
+	$states = inn_member_states();
+	foreach ( $states as $abbrev => $name ) { ?>
 		<option value="<?php echo $core_url . "?state=" . $abbrev; ?>" <?php selected( $abbrev, $selected ); ?>><?php echo $name; ?></option>
 	<?php }
 	print "</select>";
