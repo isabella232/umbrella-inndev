@@ -2,7 +2,7 @@
 /*
 Plugin Name: INN Members
 Plugin URI: http://investigativenewsnetwork.org
-Description: Generates a widget, page layout and author archive override for displaying INN member organizations.
+Description: Generates a widget, page layout and author archive override for displaying INN member organizations. Adds the following shortcodes: <code>[inn-member-map] [inn-member-filters] [inn-member-list]</code>
 Version: 0.1
 Author: Cornershop Creative
 Author URI: https://cornershopcreative.com
