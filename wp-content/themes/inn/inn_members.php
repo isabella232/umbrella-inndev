@@ -256,7 +256,7 @@ add_filter( 'pre_user_query', 'inn_user_starts_with' );
 function inn_user_starts_with( $clauses ) {
 	global $wpdb;
   //needs to handle digits, ugh
-  if ( $title_starts_with = $clauses->query_vars['user_starts_with'] ) {
+  if ( isset($clauses->query_vars['user_starts_with']) && $title_starts_with = $clauses->query_vars['user_starts_with'] ) {
   	if ( 'num' == $title_starts_with ) {
 	  	$clauses->query_where .= ' AND ' . $wpdb->users . '.display_name NOT REGEXP \'^[[:alpha:]]\'';
   	} else {
