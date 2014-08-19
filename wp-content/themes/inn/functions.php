@@ -27,45 +27,6 @@ add_action( 'wp_enqueue_scripts', 'inn_enqueue' );
 
 
 /**
- * Custom Widgets
- */
-add_action('widgets_init', 'inn_widgets', 11);
-
-function inn_widgets() {
-  register_widget('resources_widget'); //for homepage
-  register_widget('resource_widget'); //for category archives
-
-	register_sidebar( array(
-		'name' 			=> __( 'INN Homepage Bottom', 'inn' ),
-		'description' 	=> __( 'A widget area at the bottom of the INN homepage', 'inn' ),
-		'id' 			=> 'inn-home-bottom',
-		'before_widget' => '<div id="%1$s" class="%2$s">',
-		'after_widget' 	=> '</div>',
-		'before_title' 	=> '<h3 class="widgettitle">',
-		'after_title' 	=> '</h3>',
-		'class' => 'span12'
-	) );
-
-	register_sidebar( array(
-		'name' 			=> __( 'Category Header', 'inn' ),
-		'description' 	=> __( 'A widget area sandwiched between the title and list of items in a category archive', 'inn' ),
-		'id' 			=> 'category-topper',
-		'before_widget' => '<div id="%1$s" class="%2$s">',
-		'after_widget' 	=> '</div>',
-		'before_title' 	=> '<h3 class="widgettitle">',
-		'after_title' 	=> '</h3>'
-	) );
-
-	// get rid of the unused widget areas
-	unregister_sidebar( 'homepage-bottom' );
-	unregister_sidebar( 'header-ads' );
-	unregister_sidebar( 'footer-2' );
-	unregister_sidebar( 'footer-3' );
-
-}
-
-
-/**
  * Track things
  */
 function largo_google_analytics() {
