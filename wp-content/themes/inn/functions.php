@@ -29,12 +29,7 @@ function inn_enqueue() {
 add_action( 'wp_enqueue_scripts', 'inn_enqueue' );
 
 /**
- * Membership stuff
- */
-require_once( 'inn_members.php' );
-
-/**
- * Membership stuff
+ * Resources stuff
  */
 require_once( 'inn_resources.php' );
 
@@ -45,7 +40,6 @@ require_once( 'inn_resources.php' );
 add_action('widgets_init', 'inn_widgets', 11);
 
 function inn_widgets() {
-  register_widget('members_widget');
   register_widget('resources_widget'); //for homepage
   register_widget('resource_widget'); //for category archives
 
