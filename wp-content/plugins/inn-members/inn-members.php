@@ -1,55 +1,180 @@
 <?php
+/*
+Plugin Name: INN Members
+Plugin URI: http://investigativenewsnetwork.org
+Description: Generates a widget, page layout and author archive override for displaying INN member organizations. Adds the following shortcodes: <code>[inn-member-map] [inn-member-filters] [inn-member-list]</code>
+Version: 0.1
+Author: Cornershop Creative
+Author URI: https://cornershopcreative.com
+*/
+
 
 /**
- *  ==============  Membership Directory stuff  ==============
+ * Security: Shut it down if the plugin is called directly
+ *
+ * @since 0.1
  */
-
-/**
- * Define the custom post type
- * Needed for featured images still
- */
-function inn_init_members() {
-
-	//Members
-  register_post_type( 'inn_member',
-    array(
-      'labels' => array(
-        'name' => _x('Members', 'post type general name'),
-        'singular_name' => _x('Member', 'post type singular name'),
-        'add_new' => _x('Add New Member', 'new inn member'),
-        'add_new_item' => __('Add New Member'),
-        'edit_item' => __('Edit Member'),
-        'new_item' => __('New Member'),
-        'all_items' => __('All Members'),
-        'view_item' => __('View Member'),
-        'search_items' => __('Search Members'),
-        'not_found' =>  __('No members found'),
-        'not_found_in_trash' => __('No members found in Trash'),
-        'parent_item_colon' => '',
-        'menu_name' => __('INN Members')
-      ),
-    'menu_position' => 21,
-    'show_ui' => true,
-    'description' => 'INN Member publications/groups',
-    'exclude_from_search' => false,
-    'publicly_queryable' => true,
-    'public' => true,
-    'has_archive' => true,
-    'rewrite' => array('slug' => 'member'),
-    'hierarchical' => false,
-    'supports' => array('title','editor','thumbnail'), //see add_post_type_support()  - leave editor blank for no Case Study
-    )
-  );
-
-	//set an image size for the member widget
-	add_image_size( 'member-thumbnail', 60, 60, true );
-
-	//build a menu for the widget and listing header
-	register_nav_menu( 'membership', 'Members Menu' );
-
+if ( !function_exists( 'add_action' ) ) {
+	echo "DIRECT ACCESS DENIED";
+	exit;
 }
-add_action( 'init', 'inn_init_members', 11 );
 
+/**
+ * enqueue
+ */
+function inn_member_enqueue() {
+	wp_enqueue_style(
+		'inn-members',
+		plugins_url( 'css/inn-members.css', __FILE__ ),
+		array(),
+		'0.1',
+		'all'
+	);
+}
+add_action( 'wp_enqueue_scripts', 'inn_member_enqueue' );
+
+/**
+ * Helper functions that are defined in PauPress but might not be available if PauPress isn't on need to be declared
+ */
+function inn_member_functions() {
+
+	//necessary for using is_plugin_active();
+
+	include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+	/**
+	 * Defined typically in paupress/utilities/paupress-fields.php
+	 */
+	 if ( ! function_exists('paupress_get_option') ) {
+
+		 function paupress_get_option( $key, $ret_key = false ) {
+			// DIFFERENTIATE WORDPRESS AND THIRD-PARTY DEFAULTS
+			if ( '_pp_field' != substr( $key, 0, 9 ) ) {
+				$option_key = '_pp_field_'.$key;
+			} else {
+				$option_key = $key;
+			}
+
+			// IF $ret_key IS TRUE, JUST RETURN THE KEY
+			if ( false != $ret_key )
+				return $option_key;
+
+			// ELSE, RETURN THE OPTIONS CONTENTS
+			return get_option( $option_key );
+
+		}
+	}
+
+	/**
+	 * Formerly (and possibly still) defined in PauINN
+	 */
+	if ( ! function_exists('inn_get_members') ) {
+		function inn_get_members( $meta = false, $echo = false ) {
+
+			// THE QUERY
+			$users = new WP_User_Query(  array( 'role' => 'Member', 'fields' => 'all_with_meta' ) );
+			$members = array();
+
+			// THE LOOP
+			if ( ! empty( $users->results ) ) {
+				foreach ( $users->results as $user ) {
+					if ( false != $meta ) {
+						$meta = get_user_meta( $user->data->ID );
+						foreach ( $meta as $k => $v ) {
+							$value = maybe_unserialize( $v );
+							$field = paupress_get_option( $k );
+						 	$user->data->$k = array( 'value' => $value[0], 'name' => $field['name'] );
+						}
+					}
+					$members[$user->data->ID] = $user;
+					if ( false != $echo ) {
+						echo '<p>' . print_r( $user, true ) . '</p>';
+					}
+				}
+			}
+
+			if ( false != $echo ) {
+				return false;
+			} else {
+				return $members;
+			}
+
+		}
+	}
+}
+/**
+ * We use wp_head instead of something more reasonable like 'init' because when a plugin is first activated it's
+ * loaded a bit differently (read: later than init) and we get function definition collisions.
+ */
+add_action( 'wp_head', 'inn_member_functions', 99 );
+
+
+/**
+ * For getting a list of states that members are in
+ */
+function inn_member_states() {
+	$states = array(
+		'AL' => __('Alabama', 'inn'),
+		'AK' => __('Alaska', 'inn'),
+		'AZ' => __('Arizona', 'inn'),
+		'AR' => __('Arkansas', 'inn'),
+		'CA' => __('California', 'inn'),
+		'CO' => __('Colorado', 'inn'),
+		'CT' => __('Connecticut', 'inn'),
+		'DE' => __('Delaware', 'inn'),
+		'DC' => __('District Of Columbia', 'inn'),
+		'FL' => __('Florida', 'inn'),
+		'GA' => __('Georgia', 'inn'),
+		'HI' => __('Hawaii', 'inn'),
+		'ID' => __('Idaho', 'inn'),
+		'IL' => __('Illinois', 'inn'),
+		'IN' => __('Indiana', 'inn'),
+		'IA' => __('Iowa', 'inn'),
+		'KS' => __('Kansas', 'inn'),
+		'KY' => __('Kentucky', 'inn'),
+		'LA' => __('Louisiana', 'inn'),
+		'ME' => __('Maine', 'inn'),
+		'MD' => __('Maryland', 'inn'),
+		'MA' => __('Massachusetts', 'inn'),
+		'MI' => __('Michigan', 'inn'),
+		'MN' => __('Minnesota', 'inn'),
+		'MS' => __('Mississippi', 'inn'),
+		'MO' => __('Missouri', 'inn'),
+		'MT' => __('Montana', 'inn'),
+		'NE' => __('Nebraska', 'inn'),
+		'NV' => __('Nevada', 'inn'),
+		'NH' => __('New Hampshire', 'inn'),
+		'NJ' => __('New Jersey', 'inn'),
+		'NM' => __('New Mexico', 'inn'),
+		'NY' => __('New York', 'inn'),
+		'NC' => __('North Carolina', 'inn'),
+		'ND' => __('North Dakota', 'inn'),
+		'OH' => __('Ohio', 'inn'),
+		'OK' => __('Oklahoma', 'inn'),
+		'OR' => __('Oregon', 'inn'),
+		'PA' => __('Pennsylvania', 'inn'),
+		'RI' => __('Rhode Island', 'inn'),
+		'SC' => __('South Carolina', 'inn'),
+		'SD' => __('South Dakota', 'inn'),
+		'TN' => __('Tennessee', 'inn'),
+		'TX' => __('Texas', 'inn'),
+		'UT' => __('Utah', 'inn'),
+		'VT' => __('Vermont', 'inn'),
+		'VA' => __('Virginia', 'inn'),
+		'WA' => __('Washington', 'inn'),
+		'WV' => __('West Virginia', 'inn'),
+		'WI' => __('Wisconsin', 'inn'),
+		'WY' => __('Wyoming', 'inn'),
+		'AS' => __('American Samoa', 'inn'),
+		'FM' => __('Micronesia', 'inn'),
+		'GU' => __('Guam', 'inn'),
+		'MH' => __('Marshall Islands', 'inn'),
+		'PR' => __('Puerto Rico', 'inn'),
+		'VI' => __('U.S. Virgin Islands', 'inn'),
+		'intl' => __('International', 'inn'),
+	);
+
+	return $states;
+}
 
 /**
  * Widget listing members
@@ -123,15 +248,21 @@ class members_widget extends WP_Widget {
   <?php
   }
 }
+add_action('widgets_init', 'inn_member_widget', 11);
+function inn_member_widget() {
+  register_widget('members_widget');
+}
+
 
 
 /**
  * Map on archive page
  */
-function inn_member_map() {
+function inn_member_map( $atts ) {
 
 	$members = inn_get_members( true );
 	$api_key = "AIzaSyD82h0mNBtvoOmhC3N4YZwqJ_xLkS8yTuw";
+	ob_start();
 	?>
 	<div id="map-container">
 	</div>
@@ -206,6 +337,7 @@ d: '<?php echo $info; ?>'
 
 	</script>
 	<?php
+	return ob_get_clean();
 }
 
 /**
@@ -256,7 +388,7 @@ add_filter( 'pre_user_query', 'inn_user_starts_with' );
 function inn_user_starts_with( $clauses ) {
 	global $wpdb;
   //needs to handle digits, ugh
-  if ( $title_starts_with = $clauses->query_vars['user_starts_with'] ) {
+  if ( isset($clauses->query_vars['user_starts_with']) && $title_starts_with = $clauses->query_vars['user_starts_with'] ) {
   	if ( 'num' == $title_starts_with ) {
 	  	$clauses->query_where .= ' AND ' . $wpdb->users . '.display_name NOT REGEXP \'^[[:alpha:]]\'';
   	} else {
@@ -306,7 +438,7 @@ function inn_member_categories_list() {
  */
 function inn_member_states_list() {
 
-	global $wp;
+	global $wp, $wpdb;
 	$core_url = "/" . preg_replace( '/page\/(\d+)/', '', $wp->request );
 
 	$selected = (isset($_GET['state']) ) ? $_GET['state'] : "all" ;
@@ -314,27 +446,74 @@ function inn_member_states_list() {
 	echo '<select name="member-state">';
 	echo '<option value="" disabled selected>' . __('State', 'inn') . '</option>';
 	echo '<option value="', $core_url, '">- All -</option>';
-	$states = paupress_get_helper_states();
-	$states['US']['intl'] = __('International', 'inn');
-	foreach ( $states['US'] as $abbrev => $name ) { ?>
-		<option value="<?php echo $core_url . "?state=" . $abbrev; ?>" <?php selected( $abbrev, $selected ); ?>><?php echo $name; ?></option>
+	$all_states = inn_member_states();
+	// get a list of the active states, filtered by users set as members
+	$active_states = $wpdb->get_col("SELECT DISTINCT um1.meta_value FROM $wpdb->usermeta um1
+		RIGHT JOIN $wpdb->usermeta um2 ON um1.user_id = um2.user_id AND um2.meta_key = 'wp_capabilities'
+		WHERE um1.meta_key = 'paupress_address_state_1' AND um2.meta_value LIKE '%member%'
+	");
+	foreach ( $all_states as $abbrev => $name ) {
+		$disabled = ( in_array($abbrev, $active_states) || $abbrev == 'intl' ) ? "" : 'disabled="disabled"' ;
+	?>
+		<option value="<?php echo $core_url . "?state=" . $abbrev; ?>" <?php selected( $abbrev, $selected ); ?> <?php echo $disabled; ?>><?php echo $name; ?></option>
 	<?php }
 	print "</select>";
 }
 
 
 /**
- * Kill redirect so pagination works for single members that have RSS items
- * See http://petetasker.wordpress.com/2012/05/18/wordpress-pagination-on-custom-posts/
+ * Shortcode call for outputting filters
  */
-function inn_disable_member_redirect( $redirect_url ) {
-	if (is_singular('inn_member')) $redirect_url = false;
-	return $redirect_url;
+function inn_member_list_filters() {
+	ob_start();
+	?>
+		<div class="member-nav">
+		<label><?php _e('Filter List By: ', 'inn'); ?></label>
+		<?php
+			//all these are abstracted in inn_members.php
+			inn_member_alpha_links();
+			inn_member_categories_list();
+			inn_member_states_list();
+		?>
+	</div>
+	<?php
+	return ob_get_clean();
 }
-add_filter('redirect_canonical', 'inn_disable_member_redirect');
-
 
 /**
  * Load up the RSS handling
  */
-require_once('inn_members_rss.php');
+require_once('inn-members-rss.php');
+
+
+/**
+ * Shortcodes to spit out the directory, map, and navigation
+ * No options or anything yet.
+ */
+function inn_member_list( $atts ) {
+	ob_start();
+	include dirname(__FILE__) . "/templates/list.php";
+	return ob_get_clean();
+}
+add_shortcode( 'inn-member-list', 'inn_member_list' );
+add_shortcode( 'inn-member-map', 'inn_member_map' );
+add_shortcode( 'inn-member-filters', 'inn_member_list_filters' );
+
+/**
+ * Template redirect for INN member archives
+ */
+add_filter( 'template_include', 'inn_member_archive', 99 );
+function inn_member_archive( $template ) {
+
+	//get the author information, see if they're a member
+	if ( !is_author() ) return $template;
+
+	$author = get_queried_object();
+	$meta = get_user_meta( $author->ID );
+
+	if ( $author->roles[0] !== 'member'  ) {
+		return dirname(__FILE__) . '/templates/member-archive.php';
+	}
+
+	return $template;
+}

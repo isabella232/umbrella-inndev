@@ -1,46 +1,3 @@
-<?php
-/**
- * Template Name: Member list
- * Template for membership archive
- */
-get_header();
-?>
-
-<div id="content" class="stories span12" role="main">
-	<header class="archive-background clearfix">
-	<?php
-		while ( have_posts() ) : the_post(); ?>
-			<h1 class="page-title"><?php the_title(); ?></h1>
-			<div class="archive-description">
-				<?php the_content(); ?>
-				<?php
-
-		endwhile;
-
-				wp_nav_menu( array(
-					'theme_location' => 'membership',
-					'container' => false,
-					'menu_class' => 'members-menu',
-					'depth' => 1)
-				);
-			?>
-		</div>
-	</header>
-
-	<?php
-		//map, abstracted in inn_members.php
-		inn_member_map();
-	?>
-
-	<div class="member-nav">
-		<label><?php _e('Filter List By: ', 'inn'); ?></label>
-		<?php
-			//all these are abstracted in inn_members.php
-			inn_member_alpha_links();
-			inn_member_categories_list();
-			inn_member_states_list();
-		?>
-	</div>
 	<?php
 		//custom query to pull members by alpha and/or page here...
 		//pagination inactive for now
@@ -101,7 +58,7 @@ get_header();
 		if ( !empty( $users->results ) ) {
 
 			foreach ( $users->results as $user ) {
-				include(locate_template('content-member.php'));
+				include('member.php');
 			}
 
 			/* pagination inactive for now
@@ -117,6 +74,3 @@ get_header();
 		}
 
 	?>
-
-</div><!--#content-->
-<?php get_footer(); ?>

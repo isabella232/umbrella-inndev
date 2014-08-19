@@ -1,18 +1,8 @@
 <?php
 /**
- * The Template for displaying authors
- * This is for INN Members only, if the given author isn't an INN member, we'll fall back to archive.php
+ * The Template for displaying INN members
+ * This is for INN Members only, and overrides author.php (or archive.php) in the theme
  */
-
-//get the author information, see if they're a member
-$author = get_queried_object();
-$meta = get_user_meta( $author->ID );
-
-//some sort of test to see if this is a member
-if ( $author->roles[0] !== 'member' ) {
-	get_template_part('archive');
-}
-
 get_header();
 ?>
 
