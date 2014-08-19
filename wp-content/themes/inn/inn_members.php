@@ -132,9 +132,6 @@ function inn_member_states() {
 		'WV' => __('West Virginia', 'inn'),
 		'WI' => __('Wisconsin', 'inn'),
 		'WY' => __('Wyoming', 'inn'),
-		'AA' => __('Armed Forces Americas', 'inn'),
-		'AE' => __('Armed Forces Europe', 'inn'),
-		'AP' => __('Armed Forces Pacific', 'inn'),
 		'AS' => __('American Samoa', 'inn'),
 		'FM' => __('Micronesia', 'inn'),
 		'GU' => __('Guam', 'inn'),
@@ -143,6 +140,7 @@ function inn_member_states() {
 		'VI' => __('U.S. Virgin Islands', 'inn'),
 		'intl' => __('International', 'inn'),
 	);
+
 	return $states;
 }
 
@@ -403,7 +401,7 @@ function inn_member_categories_list() {
  */
 function inn_member_states_list() {
 
-	global $wp;
+	global $wp, $wpdb;
 	$core_url = "/" . preg_replace( '/page\/(\d+)/', '', $wp->request );
 
 	$selected = (isset($_GET['state']) ) ? $_GET['state'] : "all" ;
@@ -411,9 +409,16 @@ function inn_member_states_list() {
 	echo '<select name="member-state">';
 	echo '<option value="" disabled selected>' . __('State', 'inn') . '</option>';
 	echo '<option value="', $core_url, '">- All -</option>';
-	$states = inn_member_states();
-	foreach ( $states as $abbrev => $name ) { ?>
-		<option value="<?php echo $core_url . "?state=" . $abbrev; ?>" <?php selected( $abbrev, $selected ); ?>><?php echo $name; ?></option>
+	$all_states = inn_member_states();
+	// get a list of the active states, filtered by users set as members
+	$active_states = $wpdb->get_col("SELECT DISTINCT um1.meta_value FROM $wpdb->usermeta um1
+		RIGHT JOIN $wpdb->usermeta um2 ON um1.user_id = um2.user_id AND um2.meta_key = 'wp_capabilities'
+		WHERE um1.meta_key = 'paupress_address_state_1' AND um2.meta_value LIKE '%member%'
+	");
+	foreach ( $all_states as $abbrev => $name ) {
+		$disabled = ( in_array($abbrev, $active_states) || $abbrev == 'intl' ) ? "" : 'disabled="disabled"' ;
+	?>
+		<option value="<?php echo $core_url . "?state=" . $abbrev; ?>" <?php selected( $abbrev, $selected ); ?> <?php echo $disabled; ?>><?php echo $name; ?></option>
 	<?php }
 	print "</select>";
 }
