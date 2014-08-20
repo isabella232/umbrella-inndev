@@ -95,19 +95,29 @@ h5,
   float: left;
   color: #343434;
   line-height: 50px;
-  font-size: 16px;
+  font-size: 18px;
   margin-right: 8px;
+  font-family: "museo-sans", helvetica, arial, sans-serif;
+  font-weight: 900;
 }
 #sticky-nav .nav-shelf .site-name a {
   color: #343434;
 }
-#sticky-nav a {
+.sticky-nav-holder {
+  border-bottom: 1px solid #694b6a;
+}
+#sticky-nav .nav-shelf a {
   color: #694b6a;
 }
 .navbar-inner,
 #sticky-nav .nav-shelf a:hover,
 #sticky-nav .nav-shelf .active > a {
   background-color: #694b6a;
+}
+#sticky-nav .nav-shelf .site-name a:hover {
+  background-color: #fff;
+  color: #666;
+  text-decoration: none;
 }
 #sticky-nav .nav-shelf a:hover,
 #sticky-nav .nav-shelf .active > a,
@@ -116,6 +126,15 @@ h5,
 }
 #sticky-nav .nav-shelf .active > a:hover {
   background-color: #876088;
+}
+#sticky-nav li > a {
+  line-height: 21px;
+}
+#sticky-nav #header-social i {
+  padding: 4px;
+}
+.sticky-nav-holder .navbar li .caret:before {
+  border-top-color: #694b6a;
 }
 @media only screen and (max-width: 940px) {
   #sticky-nav .nav-shelf .site-name {
@@ -542,7 +561,7 @@ h5,
 .page-template-page-innovationfund-php .funding-rounds {
   display: block;
   margin: 1px 0;
-  padding: 0 0 0 0;
+  padding: 0;
 }
 .page-template-page-innovationfund-php .funding-rounds p {
   font-size: 100%;
@@ -592,14 +611,14 @@ h5,
 }
 .page-template-page-innovationfund-php .funding-rounds .grantee-list {
   overflow: hidden;
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
+  margin: 0;
+  padding: 0;
 }
 .page-template-page-innovationfund-php .funding-rounds .grantee-list li {
   display: block;
   float: left;
-  padding: 0 0 0 0;
-  margin: 0 0 1em 0;
+  padding: 0;
+  margin: 0 0 1em;
   width: 33%;
 }
 .page-template-page-innovationfund-php .funding-rounds .grantee-list li img {
