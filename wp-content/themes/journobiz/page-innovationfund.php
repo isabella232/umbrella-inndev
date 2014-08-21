@@ -73,26 +73,30 @@ get_header();
 											)
 										)
 									) );
-
+									$count = 1;
 									if ( $grantees->have_posts() ) :
 										$round_post = $post; ?>
-										<div class="grantee-list"><ul>
+										<div class="grantee-list">
+
 									<?php
 									while ( $grantees->have_posts() ) : $grantees->the_post();
 										$details = get_post_meta( get_the_ID(), 'grantee_details', true );
+										//if ( $count === 1 || $count % 3 === 1 ) echo '<div class="row-fluid">';
 									?>
-										<li>
+										<div class="grantee <?php echo 'item-' . $count; ?>">
 											<?php the_post_thumbnail( 'thumbnail' ); ?>
 											<div>
 												<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-												<p><?php echo $details['org-name']; ?></p>
-												<p><?php echo __('Award Amount: ', 'journobiz') . $details['award-amount']; ?></p>
+												<p class="org-name"><?php echo $details['org-name']; ?></p>
+												<p class="award-amt"><?php echo __('Award Amount: ', 'journobiz') . $details['award-amount']; ?></p>
 											</div>
-										</li>
+										</div>
 									<?php
+									//if ( $count % 3 === 0) echo '</div>';
+									$count++;
 									endwhile;
 									setup_postdata( $round_post );
-									$post = $round_post; ?></ul>
+									$post = $round_post; ?>
 							</div>
 							<?php
 								endif;
