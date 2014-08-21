@@ -65,7 +65,7 @@ h5,
 }
 .home #site-header .newsletter-signup form button,
 .home #site-header .newsletter-signup form input {
-  margin: 0 0 8px 0;
+  margin: 0 0 8px;
 }
 .home #site-header .newsletter-signup form input[type="text"],
 .home #site-header .newsletter-signup form input[type="email"] {
@@ -90,6 +90,31 @@ h5,
   visibility: visible;
   opacity: 1;
 }
+.navbar-inner {
+  padding-left: 0;
+  background-color: #694b6a;
+}
+#main-nav li > a:hover {
+  background-color: #876088;
+}
+#sticky-nav .nav-shelf li > a {
+  line-height: 21px;
+}
+#sticky-nav .nav-shelf a {
+  color: #694b6a;
+}
+#sticky-nav .nav-shelf a:hover,
+#sticky-nav .nav-shelf .active > a {
+  background-color: #694b6a;
+}
+#sticky-nav .nav-shelf a:hover,
+#sticky-nav .nav-shelf .active > a,
+#sticky-nav .nav-shelf .active > a:hover {
+  color: #fff;
+}
+#sticky-nav .nav-shelf .active > a:hover {
+  background-color: #876088;
+}
 #sticky-nav .nav-shelf .site-name {
   display: block;
   float: left;
@@ -103,43 +128,24 @@ h5,
 #sticky-nav .nav-shelf .site-name a {
   color: #343434;
 }
-.sticky-nav-holder {
-  border-bottom: 1px solid #694b6a;
-}
-#sticky-nav .nav-shelf a {
-  color: #694b6a;
-}
-.navbar-inner,
-#sticky-nav .nav-shelf a:hover,
-#sticky-nav .nav-shelf .active > a {
-  background-color: #694b6a;
-}
 #sticky-nav .nav-shelf .site-name a:hover {
   background-color: #fff;
   color: #666;
   text-decoration: none;
 }
-#sticky-nav .nav-shelf a:hover,
-#sticky-nav .nav-shelf .active > a,
-#sticky-nav .nav-shelf .active > a:hover {
-  color: #fff;
-}
-#sticky-nav .nav-shelf .active > a:hover {
-  background-color: #876088;
-}
-#sticky-nav li > a {
-  line-height: 21px;
-}
-#sticky-nav #header-social i {
-  padding: 4px;
-}
-.sticky-nav-holder .navbar li .caret:before {
-  border-top-color: #694b6a;
-}
 @media only screen and (max-width: 940px) {
   #sticky-nav .nav-shelf .site-name {
     display: none;
   }
+}
+#sticky-nav #header-social i {
+  padding: 4px;
+}
+.sticky-nav-holder {
+  border-bottom: 1px solid #694b6a;
+}
+.sticky-nav-holder .navbar li .caret:before {
+  border-top-color: #694b6a;
 }
 @media all and (max-width: 768px) {
   #sidebar .widget-area {
