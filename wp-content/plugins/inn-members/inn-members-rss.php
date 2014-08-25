@@ -127,7 +127,7 @@ function inn_register_feeds() {
 	$feed_id = 0;
 
 	if ( count($current_feeds) ) {
-		list( $x, $y, $feed_id ) = explode('_', end($current_feeds) );
+		@list( $x, $y, $feed_id ) = explode('_', end($current_feeds) );
 		$feed_id++;
 		reset( $current_feeds );
 	} else {

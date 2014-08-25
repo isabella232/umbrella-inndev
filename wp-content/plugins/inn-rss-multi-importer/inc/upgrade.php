@@ -3,15 +3,15 @@
 add_action('admin_init','upgrade_db');  // Used starting in version 2.22...afterwards, version is being stored in db
 
 function upgrade_db() {
-	
 
 
-	$myoptions = get_option( 'rss_import_items' ); 
+
+	$myoptions = get_option( 'rss_import_items' );
 	$newoptions = get_option('rss_import_options');
 	if(isset($newoptions['plugin_version'])) $plugin_version=$newoptions['plugin_version'];
 	$categoryoptions=get_option('rss_import_categories_images');
 
-	
+
 	if ( !empty($myoptions) && empty($newoptions)) {  // this transfers data to new table if upgrading
 	//	$plugin_version=$newoptions['plugin_version'];  // might be useful in future updates
 		//	if ($plugin_version<2.22){
@@ -19,73 +19,75 @@ function upgrade_db() {
 			//	}
 	}
 		$option_settings = get_option('rss_import_options');
-		
+
 		if(!empty($option_settings)){  //only if not a new install
-		
+
 	if (!isset($option_settings['template'])|| $option_settings['template']==='') {
-		
+
 		foreach ( $option_settings as $key => $value) {
 			$template_settings[ $key ] = $value;
 		}
-		$template_settings['template'] = 'default.php';	
+		$template_settings['template'] = 'default.php';
 			update_option( 'rss_import_options', $template_settings );
 	}
 
-	
+
 	}
-	
+
 	$post_options = get_option('rss_post_options');
 	if (empty($post_options)){
-	
+
 	$post_settings = array(
 		'active'=> 0,
 		'post_status' => 'draft',
 		'maxperfetch' => 5,
 		'maxfeed' => 5,
 		'maximgwidth' =>150,
-		'category' => 0			
+		'category' => 0
 	);
-	
+
 		update_option( 'rss_post_options', $post_settings );
 	}
-	
+
 	//this is for adding multiple categories to the feed to post feature (version 2.47)
-	
+
 		$post_options = get_option('rss_post_options');
-		
-		
+
+
 	if (!isset($post_options['categoryid']['plugcatid'])|| $post_options['categoryid']['plugcatid']==='') {
-	
-		
+
+
 		foreach ( $post_options as $key => $value) {
 			$post_settings[ $key ] = $value;
 		}
-	
-		$post_settings['categoryid']['plugcatid'][1]=$post_options['category'];
+
+		if ( isset($post_options['category'])) {
+			$post_settings['categoryid']['plugcatid'][1]=$post_options['category'];
+		}
 		if (isset($post_options['wpcategory'])) $post_settings['categoryid']['wpcatid'][1]=$post_options['wpcategory'];
 			update_option( 'rss_post_options', $post_settings );
 	}
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
 
 		$post_options = get_option('rss_post_options');
-		$catOptions= get_option( 'rss_import_categories' ); 
-		
+		$catOptions= get_option( 'rss_import_categories' );
+
 		if (!(isset(
-		        //$post_options['categoryid'], 
-		        //$post_options['categoryid']['wpcatid'], 
+		        //$post_options['categoryid'],
+		        //$post_options['categoryid']['wpcatid'],
 		        $post_options['categoryid']['wpcatid'][1]
-		       ) && 
+		       ) &&
 		    is_array($post_options['categoryid']['wpcatid'][1])
 		)) {
 
-		
+
 	//	if (!is_array($post_options['categoryid']['wpcatid'][1])) {  // define
-		
+
 
 
 		foreach ( $post_options as $key => $value) {
@@ -93,7 +95,7 @@ function upgrade_db() {
 			$post_settings[ $key ] = $value;
 			}
 		}
-		
+
 		$catsize = count($catOptions);
 		$postoptionsize= $catsize/2;
 
@@ -108,41 +110,41 @@ function upgrade_db() {
 
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	if (!empty($categoryoptions) && !is_array($categoryoptions[1]) ){
-	
+
 		foreach ( $categoryoptions as $key => $value) {
 			$cat_settings[$key]['imageURL']=$value;
 			$cat_settings[$key]['tags']='';
 		}
 	update_option( 'rss_import_categories_images', $cat_settings );
 
-	
+
 }
-	
+
 	//for resetting the admin message
 	if (isset($plugin_version) && $plugin_version<2.40){
 	$wprssmi_admin_options = get_option( 'rss_admin_options' );
 	$wprssmi_admin_options['dismiss_slug'] ='false';
 	//update_option( 'wprssmi_admin_options', $post_settings );
 	}
-	
+
 	//var_dump($option_settings);
-	
+
 	if (empty($option_settings)){
 
 		$option_default_settings = array(
@@ -162,9 +164,9 @@ function upgrade_db() {
 	update_option( 'rss_import_options', $option_default_settings );
 
 	}
-	
-	
-	
+
+
+
 }
 
 
