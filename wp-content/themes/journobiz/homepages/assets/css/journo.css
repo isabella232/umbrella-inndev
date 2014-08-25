@@ -2,58 +2,11 @@
 .home-top {
   position: relative;
 }
+#homepage-featured {
+  margin-bottom: 24px;
+}
 .home-top {
   float: left;
-}
-#view-format {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  color: white;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
-  z-index: 1;
-}
-#view-format * {
-  margin-bottom: 0;
-}
-#view-format h1 {
-  display: inline-block;
-  font-size: 12px;
-  text-transform: uppercase;
-}
-#view-format h1:after {
-  content: ":";
-}
-#view-format ul {
-  display: inline-block;
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
-  font-size: 12px;
-}
-#view-format li {
-  display: inline-block;
-  border-right: 1px solid white;
-  padding: 0 6px;
-}
-#view-format li:last-child {
-  border-right: 0;
-}
-#view-format a {
-  color: white;
-  font-family: sans-serif;
-}
-#view-format .active {
-  font-weight: bold;
-}
-.view-list #view-format {
-  color: #666666;
-  text-shadow: none;
-}
-.view-list #view-format a {
-  color: inherit;
-}
-.home .full-hero {
-  min-height: 400px;
 }
 .home .full-hero img {
   max-width: 1170px;
@@ -62,113 +15,58 @@
   display: block;
   float: left;
 }
-.home .full-hero.one-third-width img {
-  width: 34.1%;
-}
-.home .full-hero.two-third-width img {
-  width: 68.2%;
-}
 #dark-top {
-  margin-top: -28px;
   color: white;
   background-color: black;
   font-family: sans-serif;
 }
 #dark-top .span12 {
-  background-color: rgba(0, 0, 0, 0.85);
-  margin: 0 8.510638302%;
-  padding: 25px 30px;
+  background-color: rgba(0, 0, 0, 1);
+  margin: 0;
+  padding: 20px;
+}
+#homepage-featured .span3 .story {
+  margin-bottom: 12px;
+}
+#homepage-featured .span3 h3 {
+  background-color: rgba(0, 0, 0, 1);
+  margin: 0;
+  padding: 10px;
+  font-size: 18px;
+}
+#homepage-featured .span3 h3 a {
+  color: #fff;
 }
 #dark-top article {
   margin-bottom: 0;
   border-bottom: none;
 }
 #dark-top p {
-  font-size: 93%;
-  line-height: 1.4em;
+  font-size: 18px;
+  line-height: 1.3;
   margin-bottom: 0;
 }
 #dark-top h2 {
-  font-size: 38px;
+  font-size: 44px;
   line-height: 1.1em;
-  margin-bottom: 0.3em;
+  margin-bottom: 4px;
 }
 #dark-top h2 a {
   color: white;
 }
-#dark-top h5 {
-  font-size: 100%;
-}
 #dark-top h5 a {
   color: #6cb9e1;
 }
-#dark-top .byline,
-#dark-top .byline a,
 #dark-top section {
-  color: #dddddd;
+  color: #ddd;
 }
 #dark-top .byline {
-  font-weight: bold;
-  font-size: 110%;
-}
-#dark-top .byline a {
-  text-transform: uppercase;
-}
-#dark-top.overlay {
-  background-color: transparent;
-  margin-top: 0;
-  position: absolute;
-  bottom: 50px;
-}
-#home-secondary {
-  position: relative;
-}
-#home-secondary > div {
-  background-color: white;
-  padding: 20px;
-  padding-bottom: 0;
-}
-#home-secondary .row-fluid > [class*='span'] .widget {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  border: none;
-}
-#home-secondary .row-fluid > [class*='span']:last-child .widget {
-  border-right: none;
-}
-#home-river {
   display: none;
 }
-#home-river header {
-  *zoom: 1;
+#homepage-bottom .byline {
+  font-size: 13px;
 }
-#home-river header:before,
-#home-river header:after {
-  display: table;
-  content: "";
-}
-#home-river header:after {
-  clear: both;
-}
-#home-river .hero {
-  text-align: center;
-  background-color: #eee;
-}
-#home-river .span10 {
-  margin: 0 auto;
-  float: none;
-  position: relative;
-}
-#home-river .span10:before {
-  height: 25px;
-  background-color: white;
-  position: absolute;
-  top: -25px;
-  left: -4%;
-  right: -4%;
-  content: " ";
-}
+
 @media screen and (max-width: 980px) {
   #dark-top.overlay {
     bottom: 15px;
@@ -199,11 +97,6 @@
   #dark-top.overlay {
     background-color: black;
   }
-  #home-secondary .row-fluid > [class*='span'] {
-    float: none;
-    width: 100%;
-    margin-left: 0;
-  }
 }
 @media screen and (max-width: 480px) {
   .home .full-hero {
@@ -214,18 +107,5 @@
   }
   #dark-top .span10 {
     padding: 15px 18px !important;
-  }
-  #home-river {
-    margin-top: 24px;
-  }
-  #home-river h1 {
-    font-size: 36px;
-    line-height: 1.1;
-  }
-  #view-format {
-    width: 100%;
-    right: 0;
-    left: 0;
-    text-align: center;
   }
 }

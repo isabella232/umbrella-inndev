@@ -6,10 +6,6 @@ class JournoHomepageLayout extends Homepage {
   var $name = 'Journo.biz Custom Homepage Layout';
   var $description = 'Custom homepage layout for journo.biz.';
 
-  var $sidebars = array(
-	'Home Bottom Left', 'Home Bottom Center', 'Home Bottom Right'
-  );
-
   function __construct($options=array()) {
     $defaults = array(
       'template' => get_stylesheet_directory() . '/homepages/templates/journo.php',

@@ -23,8 +23,8 @@ $details = array_merge( $details_defaults, $details );
 			<div class="img-container"><?php the_post_thumbnail('full'); ?></div>
 			<div class="info span5">
 	 			<h1 class="entry-title" itemprop="headline"><?php the_title(); ?></h1>
-	 			<h5 class="top-tag"><?php echo $details['org-name']; ?></h5>
-	 			<h5 class="top-tag"><?php echo __('Award Amount: ', 'journobiz') . $details['award-amount']; ?></h5>
+	 			<h5 class="top-tag org-name"><?php echo $details['org-name']; ?></h5>
+	 			<h5 class="top-tag award-amt"><?php echo __('Award Amount: ', 'journobiz') . $details['award-amount']; ?></h5>
 	 			<?php largo_excerpt( $post, 3, false ); ?>
 			</div>
 	 		<meta itemprop="description" content="<?php echo strip_tags(largo_excerpt( $post, 5, false, '', false ) ); ?>" />

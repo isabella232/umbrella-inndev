@@ -521,7 +521,7 @@ h5,
   position: absolute;
   top: 5px;
   right: 5px;
-  font-size: 80%;
+  font-size: 14px;
 }
 .single-grantee .timeline .close:hover {
   text-decoration: none;
@@ -545,9 +545,10 @@ h5,
 .single-grantee .grantee-posts h2 {
   font-size: 30px;
   line-height: 1em;
+  margin-bottom: 12px;
 }
 .single-grantee .grantee-posts p {
-  font-size: 100%;
+  font-size: 16px;
 }
 .single-grantee .grantee-posts a[rel="next"] {
   float: right;
@@ -570,7 +571,7 @@ h5,
   padding: 0;
 }
 .page-template-page-innovationfund-php .funding-rounds p {
-  margin-bottom: 0.25em;
+  margin-bottom: 0;
 }
 .page-template-page-innovationfund-php .funding-rounds li.round {
   display: block;
@@ -580,6 +581,7 @@ h5,
   min-height: 50px;
   margin-bottom: 1px;
   border-bottom: 1px solid #eee;
+  line-height: 1;
 }
 .page-template-page-innovationfund-php .funding-rounds header {
   position: absolute;
@@ -613,6 +615,9 @@ h5,
 }
 .page-template-page-innovationfund-php .funding-rounds .intro p {
   font-size: 18px;
+}
+.page-template-page-innovationfund-php .funding-rounds .future .intro {
+  padding: 12px 24px;
 }
 .page-template-page-innovationfund-php .funding-rounds article {
   border-bottom: 0;
