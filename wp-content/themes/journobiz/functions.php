@@ -45,3 +45,16 @@ function single_post_top() {
 	}
 }
 add_action( 'largo_before_post_header', 'single_post_top' );
+
+function journobiz_register_sidebars() {
+	register_sidebar( array(
+		'name' => 'Sidebar Home',
+		'id' => 'sidebar-home',
+		'description' => 'The sidebar on the homepage',
+		'before_widget' => '<aside id="%1$s" class="%2$s clearfix">',
+		'after_widget' 	=> "</aside>",
+		'before_title' 	=> '<h3 class="widgettitle">',
+		'after_title' 	=> '</h3>',
+	) );
+}
+add_action( 'widgets_init', 'journobiz_register_sidebars' );
