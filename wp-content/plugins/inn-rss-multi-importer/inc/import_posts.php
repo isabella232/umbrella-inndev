@@ -781,15 +781,15 @@ function wp_rss_multi_importer_post( $feedID = NULL, $catID = NULL ) {
 			}
 
 			//this gets all the wp categories indicated when All is chosen in the first position
-			if ( $post_options['categoryid']['plugcatid'][1] == '0' ) {
-					$allblogcatid=$post_options['categoryid']['wpcatid'][1];
-					if ( is_array( $blogcatid ) ) {
-						$blogcatid = array_merge ( $blogcatid, $allblogcatid );
-						$blogcatid = array_unique( $blogcatid );
-					} else {
-						$blogcatid = $allblogcatid;
-					}
+			if ( isset( $post_options['categoryid'] ) && $post_options['categoryid']['plugcatid'][1] == '0' ) {
+				$allblogcatid=$post_options['categoryid']['wpcatid'][1];
+				if ( is_array( $blogcatid ) ) {
+					$blogcatid = array_merge ( $blogcatid, $allblogcatid );
+					$blogcatid = array_unique( $blogcatid );
+				} else {
+					$blogcatid = $allblogcatid;
 				}
+			}
 
 			$post['post_category'] =$blogcatid;
 			if ( is_null( $bloguserid ) || empty( $bloguserid ) ) {
@@ -819,7 +819,7 @@ function wp_rss_multi_importer_post( $feedID = NULL, $catID = NULL ) {
 		 		'meta_query' => array(
 		 			array(
 		 				'key' => 'inn_rss',
-		 				'value' => $feeditem["FeedURL"],
+		 				'value' => $items["feedURL"],
 		 				'compare' => '='
 		 			)
 		 		)
@@ -830,7 +830,9 @@ function wp_rss_multi_importer_post( $feedID = NULL, $catID = NULL ) {
 			}
 			if ( $member ) {
 				$post['post_author'] = $member->ID;
-				error_log( 'Found post author, ID = ' . $member->ID );
+				// error_log( 'Found post author, ID = ' . $member->ID . " for feed " . $items['feedURL'] );
+			} else {
+				// error_log( "No member found for feed " . $items['FeedURL'] );
 			}
 
 			// set post type
@@ -840,8 +842,8 @@ function wp_rss_multi_importer_post( $feedID = NULL, $catID = NULL ) {
 		 	$post_id = wp_insert_post($post);
 
 		 	// if we have an author, try to add that into 'largo_byline_text'
-		 	error_log( "Value is " . $items["myAuthor"] );
-		 	if ( $items["myAuthor"] ) {
+		 	// error_log( "Value is " . $items["myAuthor"] );
+		 	if ( !empty( $items["myAuthor"] ) ) {
 		 		add_post_meta( $post_id, 'largo_byline_text', $items["myAuthor"] );
 		 	}
 
