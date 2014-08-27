@@ -711,3 +711,17 @@ h5,
   font-size: 13.04px;
   margin-bottom: 12px;
 }
+.newsletter-signup {
+  margin-bottom: 24px;
+  text-align: center;
+}
+.newsletter-signup .widgettitle {
+  font-size: 21px;
+}
+.newsletter-signup p {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.newsletter-signup .email_address {
+  margin-top: 8px;
+}
