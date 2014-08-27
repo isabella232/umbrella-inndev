@@ -832,7 +832,7 @@ function wp_rss_multi_importer_post( $feedID = NULL, $catID = NULL ) {
 				$post['post_author'] = $member->ID;
 				// error_log( 'Found post author, ID = ' . $member->ID . " for feed " . $items['feedURL'] );
 			} else {
-				// error_log( "No member found for feed " . $items['FeedURL'] );
+				error_log( "*** INN RSS error: No member user found with 'inn_rss' value of " . $items['FeedURL'] . " ***");
 			}
 
 			// set post type
