@@ -37,7 +37,7 @@ $meta = get_user_meta( $author->ID );
 		</div><!-- .entry-content -->
 		<footer>
 			<?php if ( !empty($author->data->user_url) ) : ?>
-				<h6><strong>Website:</strong> <a href="<?php echo safe_url($author->data->user_url); ?>"><?php echo $author->data->user_url; ?></a></h6>
+				<h6><strong>Website:</strong> <a href="<?php echo maybe_http($author->data->user_url); ?>"><?php echo $author->data->user_url; ?></a></h6>
 			<?php endif; ?>
 
 			<?php if ( !empty($meta[INN_MEMBER_TAXONOMY][0]) ) : ?>
@@ -71,7 +71,7 @@ $meta = get_user_meta( $author->ID );
 						} else if ( 'twitter' == $network ) {
 							$url = "https://twitter.com/" . $meta['inn_twitter'][0];
 						} else {
-							$url = safe_url( $meta['inn_'.$network][0] );
+							$url = maybe_http( $meta['inn_'.$network][0] );
 						}
 						if ( 'googleplus' == $network ) $network = 'gplus';
 						?>

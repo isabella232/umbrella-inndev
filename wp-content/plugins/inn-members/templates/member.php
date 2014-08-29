@@ -30,7 +30,7 @@
 		</div><!-- .entry-content -->
 		<footer>
 			<?php if ( !empty($user->data->user_url)) : ?>
-				<h6><strong>Website:</strong> <a href="<?php echo safe_url($user->data->user_url); ?>"><?php echo $user->data->user_url; ?></a></h6>
+				<h6><strong>Website:</strong> <a href="<?php echo maybe_http($user->data->user_url); ?>"><?php echo $user->data->user_url; ?></a></h6>
 			<?php endif; ?>
 			<ul class="social"><?php
 				foreach ($social as $network) {
@@ -41,7 +41,7 @@
 						} else if ( 'twitter' == $network ) {
 							$url = "https://twitter.com/" . $meta[$network_field][0];
 						} else {
-							$url = safe_url( $meta[$network_field][0] );
+							$url = maybe_http( $meta[$network_field][0] );
 						}
 						if ( 'googleplus' == $network ) $network = 'gplus';
 						?>
@@ -49,7 +49,7 @@
 					}
 				}
 				if ( !empty($meta['inn_donate'][0])) { ?>
-					<li class="donate-btn"><a href="<?php echo safe_url( $meta['inn_donate'][0] ); ?>" target="_blank"><i class="icon-heart"></i>Donate Now</a></li>
+					<li class="donate-btn"><a href="<?php echo maybe_http( $meta['inn_donate'][0] ); ?>" target="_blank"><i class="icon-heart"></i>Donate Now</a></li>
 				<?php } ?>
 			</ul>
 		</footer>

@@ -517,3 +517,12 @@ function inn_member_archive( $template ) {
 
 	return $template;
 }
+
+if ( !function_exists( 'maybe_http' ) ) {
+	//make sure links always start with HTTP, users often forget this
+	function maybe_http( $url ) {
+		$url = trim( $url );
+		if ( strpos( $url, "http://" ) === 0 || strpos( $url, "https://" ) === 0 ) return $url;
+		return "http://" . $url;
+	}
+}
