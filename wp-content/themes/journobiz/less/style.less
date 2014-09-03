@@ -87,6 +87,9 @@ h1,h2,h3,h4,h5,
       font-size: 12px;
       display: none;
     }
+    @media only screen and (max-width: 850px) {
+      display: none;
+    }
   }
 }
 .home #site-header .newsletter-signup,
@@ -98,9 +101,24 @@ h1,h2,h3,h4,h5,
   padding-left: 0;
   background-color: @purple;
 }
-#main-nav li > a:hover {
+#main-nav li > a:hover,
+.navbar .btn-navbar:hover {
   background-color: lighten(@purple, 10%);
 }
+.navbar .btn-navbar,
+.sticky-nav-holder .navbar .nav li.dropdown.open > .dropdown-toggle {
+  background-color: @purple;
+}
+@media only screen and (max-width: 768px) {
+  .navbar .nav-shelf li .caret {
+    background-color: lighten(@purple, 10%);
+  }
+}
+
+#sticky-nav .nav-shelf li.dropdown.open a.dropdown-toggle {
+  color: #fff;
+}
+
 #sticky-nav {
   .nav-shelf {
     li > a {
@@ -121,26 +139,26 @@ h1,h2,h3,h4,h5,
     .active > a:hover {
       background-color: lighten(@purple, 10%);
     }
-    .site-name {
-      display: block;
-      float: left;
+  }
+  .site-name {
+    display: block;
+    float: left;
+    color: #343434;
+    line-height: 50px;
+    font-size: 18px;
+    margin-right: 8px;
+    font-family: "museo-sans",helvetica,arial,sans-serif;
+    font-weight: 900;
+    a {
       color: #343434;
-      line-height: 50px;
-      font-size: 18px;
-      margin-right: 8px;
-      font-family: "museo-sans",helvetica,arial,sans-serif;
-      font-weight: 900;
-      a {
-        color: #343434;
-        &:hover {
-	      background-color: #fff;
-          color: #666;
-          text-decoration: none;
-        }
+      &:hover {
+	    background-color: #fff;
+        color: #666;
+        text-decoration: none;
       }
-      @media only screen and (max-width: 940px) {
-        display: none;
-      }
+    }
+    @media only screen and (max-width: 480px) {
+      display: none;
     }
   }
   #header-social i {

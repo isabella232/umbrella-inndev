@@ -85,6 +85,11 @@ h5,
   font-size: 12px;
   display: none;
 }
+@media only screen and (max-width: 850px) {
+  .home #site-header .newsletter-signup {
+    display: none;
+  }
+}
 .home #site-header .newsletter-signup,
 .home .sticky-nav-holder.show {
   visibility: visible;
@@ -94,8 +99,21 @@ h5,
   padding-left: 0;
   background-color: #694b6a;
 }
-#main-nav li > a:hover {
+#main-nav li > a:hover,
+.navbar .btn-navbar:hover {
   background-color: #876088;
+}
+.navbar .btn-navbar,
+.sticky-nav-holder .navbar .nav li.dropdown.open > .dropdown-toggle {
+  background-color: #694b6a;
+}
+@media only screen and (max-width: 768px) {
+  .navbar .nav-shelf li .caret {
+    background-color: #876088;
+  }
+}
+#sticky-nav .nav-shelf li.dropdown.open a.dropdown-toggle {
+  color: #fff;
 }
 #sticky-nav .nav-shelf li > a {
   line-height: 21px;
@@ -115,7 +133,7 @@ h5,
 #sticky-nav .nav-shelf .active > a:hover {
   background-color: #876088;
 }
-#sticky-nav .nav-shelf .site-name {
+#sticky-nav .site-name {
   display: block;
   float: left;
   color: #343434;
@@ -125,16 +143,16 @@ h5,
   font-family: "museo-sans", helvetica, arial, sans-serif;
   font-weight: 900;
 }
-#sticky-nav .nav-shelf .site-name a {
+#sticky-nav .site-name a {
   color: #343434;
 }
-#sticky-nav .nav-shelf .site-name a:hover {
+#sticky-nav .site-name a:hover {
   background-color: #fff;
   color: #666;
   text-decoration: none;
 }
-@media only screen and (max-width: 940px) {
-  #sticky-nav .nav-shelf .site-name {
+@media only screen and (max-width: 480px) {
+  #sticky-nav .site-name {
     display: none;
   }
 }
