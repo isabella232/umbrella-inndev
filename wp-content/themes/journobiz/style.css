@@ -147,6 +147,12 @@ h5,
 .sticky-nav-holder .navbar li .caret:before {
   border-top-color: #694b6a;
 }
+.sticky-footer-holder {
+  border-top: 1px solid #694b6a;
+}
+.sticky-footer-holder h4 {
+  color: #694b6a;
+}
 @media all and (max-width: 768px) {
   #sidebar .widget-area {
     padding-left: 0;
