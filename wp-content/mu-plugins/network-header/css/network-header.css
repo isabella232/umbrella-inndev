@@ -74,6 +74,7 @@
   top: 3px;
   margin-right: 10px;
   max-width: 240px;
+  width: 240px;
 }
 .network-header .search .input-append {
   display: none;
@@ -85,8 +86,14 @@
 .network-header .gscb_a {
   font: 21px/10px arial, sans-serif !important;
 }
-.network-header table td.gsib_a {
-  line-height: 1;
+.network-header input.gsc-input {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1.2;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.network-header .gsib_a input {
+  padding-top: 3px;
 }
 /* Sub nav */
 .sub-nav-container {
