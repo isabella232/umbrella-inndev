@@ -16,6 +16,7 @@ class JournoHomepageLayout extends Homepage {
     );
     $options = array_merge($defaults, $options);
     $this->load($options);
+    $this->init();
   }
 
   public function bigStory() {
