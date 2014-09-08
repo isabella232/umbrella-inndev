@@ -14,7 +14,8 @@ class JournoHomepageLayout extends Homepage {
 	  		array('journo', get_stylesheet_directory_uri() . '/homepages/assets/js/journo.js', array('jquery'))
 	  	)
     );
-    $options = array_merge($defaults, $options);
+	$options = array_merge($defaults, $options);
+	$this->init();
     $this->load($options);
     $this->init();
   }
@@ -40,8 +41,7 @@ class JournoHomepageLayout extends Homepage {
 }
 
 function inn_custom_homepage_layouts() {
-
-    $unregister = array(
+	$unregister = array(
 		'HomepageBlog',
 		'HomepageSingle',
 		'HomepageSingleWithFeatured',
@@ -56,4 +56,4 @@ function inn_custom_homepage_layouts() {
 	register_homepage_layout('JournoHomepageLayout');
 
 }
-add_action('init', 'inn_custom_homepage_layouts', 0);
+add_action('init', 'inn_custom_homepage_layouts', 10);
