@@ -65,7 +65,7 @@ $stylesheet_uri = get_stylesheet_directory_uri();
 				if ( $query->have_posts() ) {
 					while ( $query->have_posts() ) : $query->the_post();
 						echo '<div class="story">';
-						get_template_part( 'content', 'tiny' );
+						get_template_part( 'partials/content', 'tiny' );
 						echo '<p class="more"><a href="' . get_permalink() . '"/>Read More</a></p>';
 						echo '</div>';
 					endwhile;
