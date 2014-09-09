@@ -15,9 +15,8 @@ class JournoHomepageLayout extends Homepage {
 	  	)
     );
 	$options = array_merge($defaults, $options);
-	$this->init();
-    $this->load($options);
     $this->init();
+    $this->load($options);
   }
 
   public function bigStory() {
@@ -27,14 +26,14 @@ class JournoHomepageLayout extends Homepage {
   public function init($options=array()) {
 	$this->prominenceTerms = array(
 		array(
-			'name' => __('Top Story', 'largo'),
+			'name' 			=> __('Top Story', 'largo'),
 			'description' 	=> __('If you are using the Newspaper or Carousel optional homepage layout, add this label to a post to make it the top story on the homepage', 'largo'),
 		    'slug' 			=> 'top-story'
 		),
 		array(
-			'name' => __('Homepage Featured', 'largo'),
-			'description' => __('If you are using the Newspaper or Carousel optional homepage layout, add this label to posts to display them in the featured area on the homepage.', 'largo'),
-			'slug' => 'homepage-featured'
+			'name' 			=> __('Homepage Featured', 'largo'),
+			'description' 	=> __('If you are using the Newspaper or Carousel optional homepage layout, add this label to posts to display them in the featured area on the homepage.', 'largo'),
+			'slug' 			=> 'homepage-featured'
 		)
 	);
   }
