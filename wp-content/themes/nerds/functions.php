@@ -1,29 +1,38 @@
 <?php
-/**
- * Largo APIs
- */
+
+// Largo metabox API
 require_once( get_template_directory() . '/largo-apis.php' );
 
-/**
- * Misc includes
- */
+
+// Constants
+define( 'SHOW_GLOBAL_NAV', FALSE );
+define( 'SHOW_MAIN_NAV', FALSE );
+
+
+// Includes
 $includes = array(
 	'/inc/users.php',
 	'/inc/widgets.php',
 	'/inc/metaboxes.php'
 );
-
-// Perform load
 foreach ( $includes as $include ) {
 	require_once( get_stylesheet_directory() . $include );
 }
 
+
+// Add network header
+add_action( 'largo_before_sticky_nav_container', 'largo_render_network_header' );
+
+
+// replace the default js with a theme specific one
 function override_largo_core_js() {
 	wp_dequeue_script('largoCore');
 	wp_enqueue_script('nerdCore', get_stylesheet_directory_uri() . '/js/nerdCore.js', array( 'jquery' ), '1.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'override_largo_core_js', 20 );
 
+
+// Typekit
 function inn_typekit() { ?>
 	<script type="text/javascript" src="//use.typekit.net/mmy6iwx.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -31,9 +40,8 @@ function inn_typekit() { ?>
 }
 add_action( 'wp_head', 'inn_typekit' );
 
-/**
- * Add top term to single post template
- */
+
+// Add top term to single post template
 function single_post_top() {
 	if ( largo_has_categories_or_tags() ) {
 		echo '<h5 class="top-tag">';
