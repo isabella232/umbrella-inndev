@@ -1,16 +1,11 @@
 <?php
 
-// TypeKit
-function inn_typekit() { ?>
-	<script type="text/javascript" src="//use.typekit.net/mmy6iwx.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-<?php
-}
-add_action( 'wp_head', 'inn_typekit' );
-
-
-// Largo metaboxen
+// Largo metabox API
 require_once( get_template_directory() . "/inc/metabox-api.php");
+
+
+// Constants
+define( 'SHOW_GLOBAL_NAV', FALSE );
 
 
 // Includes
@@ -19,12 +14,16 @@ $includes = array(
 	'/inc/metaboxes.php',
 	'/homepages/homepage.php'
 );
-
-// Perform load
 foreach ( $includes as $include ) {
 	require_once( get_stylesheet_directory() . $include );
 }
 
+
+// Add network header
+add_action( 'largo_before_sticky_nav_container', 'largo_render_network_header' );
+
+
+// Enqueue custom js
 function journobiz_enqueue() {
 	wp_enqueue_script(
 		'journobiz',
@@ -36,6 +35,16 @@ function journobiz_enqueue() {
 }
 add_action( 'wp_enqueue_scripts', 'journobiz_enqueue', 20 );
 
+
+// TypeKit
+function inn_typekit() { ?>
+	<script type="text/javascript" src="//use.typekit.net/mmy6iwx.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<?php
+}
+add_action( 'wp_head', 'inn_typekit' );
+
+
 // Add top term to single post template
 function single_post_top() {
 	if ( largo_has_categories_or_tags() ) {
@@ -46,6 +55,8 @@ function single_post_top() {
 }
 add_action( 'largo_before_post_header', 'single_post_top' );
 
+
+// Register an additional sidebar region for the homepage
 function journobiz_register_sidebars() {
 	register_sidebar( array(
 		'name' => 'Sidebar Home',
