@@ -1,5 +1,4 @@
 <?php
-get_header();
 
 $courses_parent = get_page_by_path('courses');
 $guides_parent = get_page_by_path('guides');
@@ -74,5 +73,3 @@ $guides = get_pages( array(
 	?>
 	</ul>
 </section><!-- #guides -->
-
-<?php get_footer(); ?>

@@ -158,7 +158,6 @@ body.normal.page #content.guide-page {
     }
   }
 }
-
 .guide-resources {
   margin-left: 0;
   li {
@@ -193,118 +192,8 @@ body.normal.page #content.guide-page {
     color: indigo;
   }
 }
-
-/**
- * Homepage styles
- */
-.home {
-  #courses,
-  #guides {
-    clear: both;
-    > h1,
-    > .description {
-      text-align: center;
-    }
-    ul {
-      margin: 0;
-      padding: 0;
-      text-align: left;
-      overflow: hidden; //clearfix
-      font-size: 0;	// inline-block spacing hack
-    }
-    li {
-      display: inline-block;
-      margin-right: percentage( 10 / 1170 );
-      margin-left: percentage( 10 / 1170 );
-      min-width: 200px;
-      vertical-align: top;
-      text-align: left;
-    }
-    span[data-picture] {
-      max-width: 100%;
-      height: auto;
-    }
-    br {
-      clear: left;
-    }
-    h1 {
-	  font-size: 40px;
-	  margin-bottom: 12px;
-    }
-    h4 {
-	  font-size: 24px;
-	  margin-bottom: 4px;
-	  line-height: 1.2;
-    }
-    p {
-	  font-size: 15px;
-    }
-  }
-  #extras {
-    margin-bottom: 24px;
-    .widget p,
-    .widget ul,
-    .largo-recent-posts h5 {
-	  padding: 0;
-    }
-    .widget p {
-	  font-size: 13.04px;
-	  margin-bottom: 4px;
-	  &.more-link {
-	    font-weight: bold;
-	  }
-    }
-  }
-  #courses li {
-    width: 31.62393162393162%;
-  }
-  #guides li {
-    width: percentage( .25 * (1090.0/1170) );
-  }
-  #extras {
-    background-color: @ltgray;
-    padding: 10px;
-    overflow: hidden;
-    > aside {
-      box-sizing: border-box;
-      padding: 10px;
-      width: 33.3333%;
-      float: left;
-      border-top: 0;
-    }
-  }
-}
-
-/**
- * Responsive.
- */
 @media screen and (max-width: 768px) {
   #breadcrumbs {
     display: none;
-  }
-  .home {
-    #courses li,
-    #guides li {
-	  width: 48%;
-      margin-left: 1%;
-      margin-right:1%;
-    }
-    #extras aside {
-	  width: 100%;
-	  float: none;
-    }
-  }
-}
-@media screen and (max-width: 480px) {
-  .home {
-    #courses li,
-    #guides li {
-      width: 100%;
-      margin-left: 0;
-      margin-right: 0;
-    }
-    #main {
-      margin-top: 0;
-    }
   }
 }

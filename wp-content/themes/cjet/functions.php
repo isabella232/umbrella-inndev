@@ -15,7 +15,8 @@ $includes = array(
 	'/inc/metaboxes.php',
 	'/inc/attachments.php',
 	'/inc/sidebars.php',
-	'/lib/file-un-attach/file-unattach.php'
+	'/lib/file-un-attach/file-unattach.php',
+	'/homepages/homepage.php'
 );
 foreach ( $includes as $include ) {
 	require_once( get_stylesheet_directory() . $include );
