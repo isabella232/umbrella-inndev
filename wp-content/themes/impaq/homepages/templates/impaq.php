@@ -1,5 +1,4 @@
 <?php
-get_header();
 $stylesheet_uri = get_stylesheet_directory_uri();
 ?>
 
@@ -95,5 +94,3 @@ $stylesheet_uri = get_stylesheet_directory_uri();
 	</section>
 
 </div><!-- #content -->
-
-<?php get_footer(); ?>
