@@ -40,26 +40,31 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="top"></div>
 
-<?php largo_render_network_header(); ?>
+	<div id="top"></div>
 
-<div id="page" class="hfeed clearfix">
+	<?php largo_render_network_header(); ?>
 
-	<header id="site-header" class="clearfix" itemscope itemtype="http://schema.org/Organization">
-		<?php largo_header(); ?>
-	</header>
+	<div id="page" class="hfeed clearfix">
 
-	<header class="print-header">
-		<p><strong><?php echo esc_html( get_bloginfo( 'name' ) ); ?></strong> (<?php echo esc_url( $current_url ); ?>)</p>
-	</header>
+		<!-- no sticky nav on this site -->
 
-	<div id="main" class="row-fluid clearfix">
+		<header id="site-header" class="clearfix" itemscope itemtype="http://schema.org/Organization">
+			<?php largo_header(); ?>
+		</header>
+		<header class="print-header">
+			<p><strong><?php echo esc_html( get_bloginfo( 'name' ) ); ?></strong> (<?php echo esc_url( $current_url ); ?>)</p>
+		</header>
 
-	<?php
-	    if ( function_exists( 'bcn_display' ) && !is_home() ) {
-	    	echo '<div id="breadcrumbs">';
-	        bcn_display();
-	        echo '</div>';
-		}
-	?>
+		<!-- no main nav on this site -->
+		<?php get_template_part('partials/nav', 'secondary'); ?>
+
+		<div id="main" class="row-fluid clearfix">
+
+		<?php
+		    if ( function_exists( 'bcn_display' ) && !is_home() ) {
+		    	echo '<div id="breadcrumbs">';
+		        bcn_display();
+		        echo '</div>';
+			}
+		?>

@@ -37,7 +37,7 @@ h5,
   padding: 0 5%;
   width: 90%;
 }
-.page #content.guide-page {
+body.normal.page #content.guide-page {
   margin-left: 0;
 }
 .guide-page .author-posts-link {
@@ -96,11 +96,8 @@ h5,
 .guide-page .largo-author .author-posts-link {
   display: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 782px) {
   .guide-page .guide-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     padding: 0;
   }
@@ -137,7 +134,14 @@ h5,
   .guide-page article.span9 {
     width: 100%;
     margin-left: 0;
-    margin-top: 40px;
+    margin-top: 10px;
+  }
+  .guide-page article.span9 .entry-content h3 {
+    font-size: 21px;
+    margin-bottom: 12px;
+  }
+  .guide-page article.span9 .entry-content h3.guide-author {
+    margin-bottom: 0;
   }
   .guide-page .pager .next,
   .guide-page .pager .previous {
