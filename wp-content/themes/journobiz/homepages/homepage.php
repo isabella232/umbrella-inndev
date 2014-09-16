@@ -10,8 +10,7 @@ class JournoHomepageLayout extends Homepage {
     $defaults = array(
       'template' => get_stylesheet_directory() . '/homepages/templates/journo.php',
       'assets' => array(
-	  		array('journo', get_stylesheet_directory_uri() . '/homepages/assets/css/journo.css', array()),
-	  		array('journo', get_stylesheet_directory_uri() . '/homepages/assets/js/journo.js', array('jquery'))
+	  		array('journo', get_stylesheet_directory_uri() . '/homepages/assets/css/journo.css', array())
 	  	)
     );
 	$options = array_merge($defaults, $options);
