@@ -112,11 +112,11 @@ h5,
     background-color: #876088;
   }
 }
-#sticky-nav .nav-shelf li.dropdown.open a.dropdown-toggle {
-  color: #fff;
-}
 #sticky-nav .nav-shelf li > a {
   line-height: 21px;
+}
+#sticky-nav .nav-shelf li.dropdown.open a.dropdown-toggle {
+  color: #fff;
 }
 #sticky-nav .nav-shelf a {
   color: #694b6a;
