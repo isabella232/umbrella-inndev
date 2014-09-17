@@ -1,7 +1,7 @@
 .network-header {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   position: relative;
-  background-color: #343434;
+  background-color: #333333;
   border-bottom: 1px solid #111;
   overflow: hidden;
 }
@@ -23,7 +23,7 @@
   border-right: 1px solid #111;
 }
 .network-header ul.network-header-main-nav > li a {
-  color: #CFE9FF;
+  color: #90bfe7;
   display: block;
   height: 40px;
   padding: 0 6px;
@@ -44,7 +44,7 @@
 .network-header ul.network-header-main-nav > li.network-home {
   width: 64px;
   height: 32px;
-  background-image: url(/wp-content/mu-plugins/network-header/img/INN_logo_80x40.jpeg);
+  background-image: url(/wp-content/mu-plugins/network-components/img/INN_logo_80x40.jpeg);
   background-repeat: no-repeat;
   background-size: auto 32px;
   background-position: center center;
@@ -116,7 +116,7 @@
   float: left;
 }
 .sub-nav-container ul li a {
-  color: #CFE9FF;
+  color: #90bfe7;
   list-style-type: none;
   margin: 0;
   padding: 0 10px;
@@ -145,7 +145,7 @@ body.noscroll {
   top: 33px;
   bottom: 0;
   left: -100%;
-  background: #343434;
+  background: #333333;
   overflow: hidden;
 }
 .mobile-nav-container-inner {

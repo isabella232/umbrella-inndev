@@ -1,4 +1,4 @@
-<?php switch_to_blog(BLOG_ID_CURRENT_SITE); ?>
+<?php switch_to_blog( BLOG_ID_CURRENT_SITE ); ?>
 	<nav>
 		<ul class="network-header-main-nav">
 			<li class="network-home">
@@ -12,7 +12,7 @@
 				'items_wrap' => '%3$s',
 				'walker' => new Global_Nav_Walker()
 			);
-			largo_cached_nav_menu($nav_args);
+			largo_cached_nav_menu( $nav_args );
 			?>
 		</ul>
 		<button class="mobile-toggle">
@@ -22,7 +22,7 @@
 		</button>
 	</nav>
 
-	<?php if ( of_get_option( 'show_donate_button') ) { largo_donate_button(); } ?>
+	<?php if ( of_get_option( 'show_donate_button' ) ) { largo_donate_button(); } ?>
 
 	<div class="gcs_container search">
 		<script>
