@@ -20,10 +20,7 @@ foreach ( $includes as $include ) {
 
 
 // Add network header
-add_action( 'largo_before_sticky_nav_container', function() {
-	if (!is_home() && !is_front_page())
-		largo_render_network_header();
-});
+add_action( 'largo_before_sticky_nav_container', 'largo_render_network_header' );
 add_action( 'largo_top', function() {
 	if (is_home() || is_front_page())
 		largo_render_network_header();
