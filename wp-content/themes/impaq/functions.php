@@ -29,11 +29,7 @@ add_action( 'largo_top', 'largo_render_network_header' );
 
 
 // Add impaq branding
-function impaq_header() { ?>
-	<header id="branding">
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_stylesheet_directory_uri() . '/img/impaq-logo.png' ?>" /></a>
-		<h5 class="tagline">An innovative social fundraising tool for foundations and nonprofits</h5>
-	</header>
-<?
+function impaq_header() {
+	get_template_part( 'partials/impaq-header' );
 }
 add_action( 'largo_main_top', 'impaq_header' );
