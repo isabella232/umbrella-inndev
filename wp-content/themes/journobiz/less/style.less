@@ -140,28 +140,22 @@ h1,h2,h3,h4,h5,
     }
   }
   .site-name {
-    display: block;
-    float: left;
-    color: #343434;
-    line-height: 50px;
-    font-size: 18px;
-    margin-right: 8px;
     font-family: "museo-sans",helvetica,arial,sans-serif;
-    font-weight: 900;
     a {
       color: #343434;
       &:hover {
 	    background-color: #fff;
         color: #666;
-        text-decoration: none;
       }
-    }
-    @media only screen and (max-width: 480px) {
-      display: none;
     }
   }
   #header-social i {
-    padding: 4px;
+      padding: 4px;
+  }
+  @media only screen and (max-width: 1120px) {
+    .nav-right {
+      display: none;
+    }
   }
 }
 .sticky-nav-holder {
