@@ -68,6 +68,6 @@
 
 	echo '</ul>';
 
-	restore_current_blog();
+	switch_to_blog( $this_blog_id );
 	?>
 </div>
