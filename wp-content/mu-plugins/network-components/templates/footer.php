@@ -13,6 +13,11 @@
 		 */
 		 $sites = array(
 		 	array(
+		 		'id' 	=> 1,
+		 		'class' => 'inn',
+		 		'url'   => 'http://investigativenewsnetwork.org'
+		 	),
+		 	array(
 		 		'id' 	=> 2,
 		 		'class' => 'largo',
 		 		'url'   => 'http://largoproject.org'
@@ -35,7 +40,7 @@
 		 	)
 		 );
 
-	echo '<h3>More sites from the <a href="http://investigativenewsnetwork.org">Investigative News Network</a></h3>';
+	echo '<h3>More sites from the Investigative News Network</h3>';
 	echo '<ul class="sites-list">';
 
 	foreach ( $sites as $site ) {
