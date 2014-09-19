@@ -246,3 +246,51 @@ body.noscroll {
     background: #454545;
   }
 }
+#network-footer {
+  padding: 20px 0;
+  text-align: center;
+}
+#network-footer h3 {
+  font-size: 24px;
+  margin-bottom: 18px;
+}
+#network-footer ul li {
+  font-size: 21px;
+}
+#network-footer ul li.largo a {
+  color: #f48030;
+}
+#network-footer ul li.journo a {
+  color: #694b6a;
+}
+#network-footer ul li.newstraining a {
+  color: #90bfe7;
+}
+#network-footer ul li.impaq a {
+  color: #e76756;
+}
+#network-footer ul li.nerds a {
+  color: #bbbbbb;
+}
+#network-footer ul li span {
+  font-size: 16px;
+  font-weight: 200;
+}
+@media (max-width: 800px) {
+  #network-footer ul li {
+    font-size: 24px;
+  }
+  #network-footer ul li span.dash {
+    display: none;
+  }
+  #network-footer ul li span.tagline {
+    display: block;
+    clear: both;
+    font-size: 14px;
+  }
+}
+@media (max-width: 420px) {
+  #network-footer ul li span.tagline {
+    display: none;
+  }
+}

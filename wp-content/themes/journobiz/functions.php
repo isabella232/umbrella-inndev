@@ -19,12 +19,14 @@ foreach ( $includes as $include ) {
 }
 
 
-// Add network header
+// Add network header and footer
 add_action( 'largo_before_sticky_nav_container', 'largo_render_network_header' );
 add_action( 'largo_top', function() {
 	if (is_home() || is_front_page())
 		largo_render_network_header();
 });
+add_action( 'largo_before_footer_boilerplate', 'largo_render_network_footer' );
+
 
 // Enqueue custom js
 function journobiz_enqueue() {
