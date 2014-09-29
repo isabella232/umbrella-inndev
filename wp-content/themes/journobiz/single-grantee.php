@@ -72,7 +72,7 @@ $details = array_merge( $details_defaults, $details );
 			$current_url = get_permalink();
 			$grantee_posts = posts_by_grantee( get_the_ID(), get_query_var('paged') );
 			while( $grantee_posts->have_posts() ) : $grantee_posts->the_post();
-				get_template_part('content');
+				get_template_part('partials/content');
 			endwhile;
 
 			if ($grantee_posts->post_count == 0) {
