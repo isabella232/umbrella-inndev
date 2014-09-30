@@ -703,29 +703,8 @@ h5,
 #homepage-bottom .hero img {
   max-width: 100%;
 }
-.archive .stories .entry-content.with-hero,
-.home .stories .entry-content.with-hero,
-.single-grantee .entry-content.with-hero {
-  margin: -22px 7% 10px;
-  padding: 22px 18px;
-  width: 86%;
-  background: #fff;
-}
-@media screen and (max-width: 768px) {
-  .archive .stories .entry-content.with-hero,
-  .home .stories .entry-content.with-hero,
-  .single-grantee .entry-content.with-hero {
-    margin: 8px 0 0;
-    padding: 0;
-    width: 100%;
-  }
-}
 .single-grantee .entry-content.with-hero .tag-list {
   display: none;
-}
-.single-grantee .entry-content.with-hero h5.byline {
-  font-size: 13.04px;
-  margin-bottom: 12px;
 }
 .newsletter-signup {
   margin-bottom: 24px;
