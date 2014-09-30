@@ -40,14 +40,3 @@ function inn_typekit() { ?>
 <?php
 }
 add_action( 'wp_head', 'inn_typekit' );
-
-
-// Add top term to single post template
-function single_post_top() {
-	if ( largo_has_categories_or_tags() ) {
-		echo '<h5 class="top-tag">';
-		largo_top_term();
-		echo '</h5>';
-	}
-}
-add_action( 'largo_before_post_header', 'single_post_top' );

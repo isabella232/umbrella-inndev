@@ -50,17 +50,6 @@ function inn_typekit() { ?>
 add_action( 'wp_head', 'inn_typekit' );
 
 
-// Add top term to single post template
-function single_post_top() {
-	if ( largo_has_categories_or_tags() ) {
-		echo '<h5 class="top-tag">';
-		largo_top_term();
-		echo '</h5>';
-	}
-}
-add_action( 'largo_before_post_header', 'single_post_top' );
-
-
 // Register an additional sidebar region for the homepage
 function journobiz_register_sidebars() {
 	register_sidebar( array(
