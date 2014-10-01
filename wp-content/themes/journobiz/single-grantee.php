@@ -66,7 +66,7 @@ $details = array_merge( $details_defaults, $details );
 			<a href="javascript:void(0);" class="close">Close <i class="icon-cancel"></i></a>
 		</div>
 
-		<div class="span8 grantee-posts">
+		<div class="span8 grantee-posts archive stories">
 		<h3><?php _e('Project Updates', 'journobiz'); ?></h3>
 		<?php
 			$current_url = get_permalink();

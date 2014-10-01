@@ -100,8 +100,9 @@
   font-weight: normal;
   font-size: 13px;
 }
-#homepage-bottom .byline {
-  font-size: 13px;
+#homepage-bottom h5.byline {
+  font-size: 13.04px;
+  margin-bottom: 12px;
 }
 @media screen and (max-width: 980px) {
   #homepage-featured .span9,

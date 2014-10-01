@@ -383,7 +383,7 @@ h5,
 }
 /* '' */
 /**
- * Grantee page & Innovation Fun landing
+ * Grantee page & Innovation Fund landing
  */
 .single-grantee .grantee > header,
 .page-template-page-innovationfund-php .grantee > header,
@@ -553,17 +553,6 @@ h5,
   .single-grantee .grantee-posts {
     width: 90%;
   }
-}
-.single-grantee .grantee-posts article {
-  border-bottom: 1px solid #eee;
-  margin-bottom: 1em;
-}
-.single-grantee .grantee-posts h2 {
-  font-size: 30px;
-  line-height: 1em;
-}
-.single-grantee .grantee-posts p {
-  font-size: 100%;
 }
 .single-grantee .grantee-posts a[rel="next"] {
   float: right;
