@@ -2,15 +2,15 @@
 
 include_once get_template_directory() . '/homepages/homepage-class.php';
 
-class ImpaqHomepageLayout extends Homepage {
-  var $name = 'Impaq.Me Homepage Layout';
-  var $description = 'Custom homepage layout for impaqme.org.';
+class EditorialHomepageLayout extends Homepage {
+  var $name = 'INN Editorial Site Homepage Layout';
+  var $description = 'Custom homepage layout for the INN editorial projects site.';
 
   function __construct($options=array()) {
     $defaults = array(
-      'template' => get_stylesheet_directory() . '/homepages/templates/impaq.php',
+      'template' => get_stylesheet_directory() . '/homepages/templates/editorial.php',
       'assets' => array(
-	  		array('impaq', get_stylesheet_directory_uri() . '/homepages/assets/css/impaq.css', array()),
+	  		array('editorial', get_stylesheet_directory_uri() . '/homepages/assets/css/editorial.css', array()),
 	  	)
     );
 	$options = array_merge($defaults, $options);
@@ -32,7 +32,7 @@ function inn_custom_homepage_layouts() {
 	foreach ($unregister as $layout)
 		unregister_homepage_layout($layout);
 
-	register_homepage_layout('ImpaqHomepageLayout');
+	register_homepage_layout('EditorialHomepageLayout');
 
 }
 add_action('init', 'inn_custom_homepage_layouts', 10);
