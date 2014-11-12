@@ -37,11 +37,26 @@ class StaffRosterWidget extends WP_Widget {
 
 		$markup = '<ul id="staff-roster">';
 		foreach ($users as $user) {
+			if (get_user_meta($user->ID, 'hide', true))
+				continue;
+
 			$avatar = get_avatar($user->ID, '65');
 			$author_url = get_author_posts_url($user->ID);
 			$twitter = get_user_meta($user->ID, 'twitter', true);
+			$emeritus = get_user_meta($user->ID, 'emeritus', true);
+			$honorary = get_user_meta($user->ID, 'honorary', true);
 			$twitter = (!empty($twitter))? $twitter : $author_url;
 			$job_title = get_user_meta($user->ID, 'job_title', true);
+
+			if (!empty($honorary) && !empty($emeritus)) {
+				$job_title = $job_title . ' (Honorary, emeritus)';
+			} else {
+				if (!empty($honorary))
+					$job_title = $job_title . ' (Honorary)';
+
+				if (!empty($emeritus))
+					$job_title = $job_title . ' (Emeritus)';
+			}
 
 			$user_posts_link = '';
 			if (count_user_posts($user->ID) > 0)
