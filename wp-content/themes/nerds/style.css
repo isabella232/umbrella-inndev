@@ -118,6 +118,20 @@ ul#staff-roster p {
 .largo-interactive-quiz p {
   font-size: 18px;
 }
+.mailchimp-signup-widget {
+  margin-bottom: 24px;
+  text-align: center;
+}
+.mailchimp-signup-widget .widgettitle {
+  font-size: 21px;
+}
+.mailchimp-signup-widget p {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.mailchimp-signup-widget .email_address {
+  margin-top: 8px;
+}
 @media all and (max-width: 768px) {
   #sidebar .widget-area {
     padding-left: 0;

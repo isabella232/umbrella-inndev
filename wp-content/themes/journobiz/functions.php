@@ -12,6 +12,7 @@ define( 'SHOW_GLOBAL_NAV', FALSE );
 $includes = array(
 	'/inc/grantees.php',
 	'/inc/metaboxes.php',
+	'/inc/widgets.php',
 	'/homepages/homepage.php'
 );
 foreach ( $includes as $include ) {

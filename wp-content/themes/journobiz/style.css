@@ -695,17 +695,17 @@ h5,
 .single-grantee .entry-content.with-hero .tag-list {
   display: none;
 }
-.newsletter-signup {
+.mailchimp-signup-widget {
   margin-bottom: 24px;
   text-align: center;
 }
-.newsletter-signup .widgettitle {
+.mailchimp-signup-widget .widgettitle {
   font-size: 21px;
 }
-.newsletter-signup p {
+.mailchimp-signup-widget p {
   font-size: 16px;
   margin-bottom: 8px;
 }
-.newsletter-signup .email_address {
+.mailchimp-signup-widget .email_address {
   margin-top: 8px;
 }
