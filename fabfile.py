@@ -13,6 +13,7 @@ env.hipchat_room_id = os.environ['HIPCHAT_DEPLOYMENT_NOTIFICATION_ROOM_ID']
 
 
 # Environments
+@task
 def production():
     """
     Work on production environment
@@ -23,6 +24,7 @@ def production():
     env.password = os.environ['INNDEV_PRODUCTION_SFTP_PASSWORD']
 
 
+@task
 def staging():
     """
     Work on staging environment
