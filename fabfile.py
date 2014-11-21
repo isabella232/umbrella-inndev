@@ -1,5 +1,7 @@
 from tools.fablib import *
 
+from fabric.api import task
+
 """
 Base configuration
 """
