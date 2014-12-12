@@ -11,7 +11,6 @@ define( 'SHOW_MAIN_NAV', FALSE );
 
 // Includes
 $includes = array(
-	'/inc/users.php',
 	'/inc/widgets.php',
 	'/inc/metaboxes.php'
 );
