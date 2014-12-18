@@ -33,6 +33,14 @@ h5,
   visibility: visible;
   opacity: 1;
 }
+.sticky-nav-holder .navbar li.home-link > a {
+  padding: 0;
+}
+.sticky-nav-holder .navbar .nav > li.home-link a img {
+  width: 44px;
+  height: 44px;
+}
+
 #topics-bar {
   padding-top: 0;
 }
