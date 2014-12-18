@@ -113,7 +113,7 @@ h5,
   }
 }
 #sticky-nav .nav-shelf li > a {
-  line-height: 21px;
+  /*line-height: 21px;*/
 }
 #sticky-nav .nav-shelf li.dropdown.open a.dropdown-toggle {
   color: #fff;
@@ -144,7 +144,7 @@ h5,
   color: #666;
 }
 #sticky-nav #header-social i {
-  padding: 4px;
+  /*padding: 4px;*/
 }
 @media only screen and (max-width: 1120px) {
   #sticky-nav .nav-right {
