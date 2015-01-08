@@ -19,9 +19,6 @@ h5,
   font-family: "museo-sans", helvetica, arial, sans-serif;
   font-weight: 900;
 }
-#topics-bar {
-  padding-top: 0;
-}
 #topics-bar ul li.menu-label {
   color: #bbbbbb;
 }
@@ -112,9 +109,6 @@ h5,
     background-color: #876088;
   }
 }
-#sticky-nav .nav-shelf li > a {
-  line-height: 21px;
-}
 #sticky-nav .nav-shelf li.dropdown.open a.dropdown-toggle {
   color: #fff;
 }
@@ -135,6 +129,7 @@ h5,
 }
 #sticky-nav .site-name {
   font-family: "museo-sans", helvetica, arial, sans-serif;
+  font-size: 17px;
 }
 #sticky-nav .site-name a {
   color: #343434;
@@ -145,6 +140,9 @@ h5,
 }
 #sticky-nav #header-social i {
   padding: 4px;
+}
+#sticky-nav .donate-link {
+  display: none;
 }
 @media only screen and (max-width: 1120px) {
   #sticky-nav .nav-right {

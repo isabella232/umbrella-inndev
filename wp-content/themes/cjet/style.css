@@ -86,6 +86,9 @@ body.normal.page #content.guide-page {
   margin-bottom: 8px;
   color: #bbbbbb;
 }
+.guide-page .largo-author .widgettitle a {
+  color: #bbbbbb;
+}
 .guide-page .largo-author h5 {
   margin-bottom: 8px;
 }

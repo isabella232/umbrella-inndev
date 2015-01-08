@@ -23,11 +23,8 @@ h1,h2,h3,h4,h5,
   font-family: "museo-sans",helvetica,arial,sans-serif;
   font-weight: 900;
 }
-#topics-bar {
-  padding-top: 0;
-  ul li.menu-label {
+#topics-bar ul li.menu-label {
     color: @inngray;
-  }
 }
 .entry-title a {
   color: @dkgray;
@@ -117,9 +114,6 @@ h1,h2,h3,h4,h5,
 
 #sticky-nav {
   .nav-shelf {
-    li > a {
-      line-height: 21px;
-    }
     li.dropdown.open a.dropdown-toggle {
 	  color: #fff;
     }
@@ -141,6 +135,7 @@ h1,h2,h3,h4,h5,
   }
   .site-name {
     font-family: "museo-sans",helvetica,arial,sans-serif;
+    font-size: 17px;
     a {
       color: #343434;
       &:hover {
@@ -151,6 +146,9 @@ h1,h2,h3,h4,h5,
   }
   #header-social i {
       padding: 4px;
+  }
+  .donate-link {
+    display: none;
   }
   @media only screen and (max-width: 1120px) {
     .nav-right {
