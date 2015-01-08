@@ -107,29 +107,13 @@ h5,
 .sticky-nav-holder .navbar .nav li.dropdown.open > .dropdown-toggle {
   background-color: #694b6a;
 }
-
-.sticky-nav-holder .navbar li.site-name > a {
-  font-weight: 900;
-  font-size: 18px;
-  padding: 8px 0;
-  margin: 0 8px;
-  line-height: 28px;
-}
-.sticky-nav-holder .navbar li.home-link > a {
-  padding: 0;
-}
-.sticky-nav-holder .navbar .nav > li.home-link a img {
-  width: 44px;
-  height: 44px;
-}
-
 @media only screen and (max-width: 768px) {
   .navbar .nav-shelf li .caret {
     background-color: #876088;
   }
 }
 #sticky-nav .nav-shelf li > a {
-  /*line-height: 21px;*/
+  line-height: 21px;
 }
 #sticky-nav .nav-shelf li.dropdown.open a.dropdown-toggle {
   color: #fff;
@@ -160,21 +144,15 @@ h5,
   color: #666;
 }
 #sticky-nav #header-social i {
-  /*padding: 4px;*/
+  padding: 4px;
 }
 @media only screen and (max-width: 1120px) {
   #sticky-nav .nav-right {
     display: none;
   }
 }
-.sticky-nav-holder {
-  border-bottom: 1px solid #694b6a;
-}
 .sticky-nav-holder .navbar li .caret:before {
   border-top-color: #694b6a;
-}
-.sticky-footer-holder {
-  border-top: 1px solid #694b6a;
 }
 .sticky-footer-holder h4 {
   color: #694b6a;
