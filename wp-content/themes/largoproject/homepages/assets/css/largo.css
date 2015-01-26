@@ -1,0 +1,13 @@
+.homepage-content .row-fluid {
+  margin-bottom: 24px;
+}
+.homepage-content .span4 {
+  background-color: #f48030;
+  height: 100px;
+}
+.homepage-content h2 {
+  text-align: center;
+  color: #666;
+  font-size: 18px;
+  text-transform: uppercase;
+}

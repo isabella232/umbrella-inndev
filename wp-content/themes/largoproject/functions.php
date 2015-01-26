@@ -27,3 +27,8 @@ add_action( 'wp_head', 'inn_typekit' );
 // Add network header and footer
 // add_action( 'largo_top', 'largo_render_network_header' );
 add_action( 'largo_before_footer_boilerplate', 'largo_render_network_footer' );
+
+function largo_load_hero() {
+	get_template_part( 'partials/largo', 'hero' );
+}
+add_action( 'largo_top', 'largo_load_hero'  );
