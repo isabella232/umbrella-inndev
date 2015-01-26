@@ -1,5 +1,11 @@
 <?php
 
+// Constants
+define( 'SHOW_GLOBAL_NAV', FALSE );
+// define( 'SHOW_STICKY_NAV', FALSE );
+define( 'SHOW_MAIN_NAV', FALSE );
+
+
 // Includes
 $includes = array(
 	'/homepages/homepage.php'
@@ -19,5 +25,5 @@ add_action( 'wp_head', 'inn_typekit' );
 
 
 // Add network header and footer
-add_action( 'largo_top', 'largo_render_network_header' );
+// add_action( 'largo_top', 'largo_render_network_header' );
 add_action( 'largo_before_footer_boilerplate', 'largo_render_network_footer' );
