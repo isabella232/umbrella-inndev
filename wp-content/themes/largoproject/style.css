@@ -22,7 +22,23 @@ h5,
 }
 .site-hero {
   width: 100%;
-  background-color: #f48030;
-  height: 100px;
+  background-color: #fefefe;
   margin-bottom: 24px;
+  text-align: center;
+}
+.site-hero img {
+  margin: 24px auto 12px;
+  display: block;
+  width: 300px;
+}
+.site-hero .tagline {
+  color: #666;
+  font-size: 18px;
+}
+.site-hero a.btn {
+  font-size: 21px;
+  margin-bottom: 4px;
+}
+.site-hero p {
+  font-size: 12px;
 }
