@@ -10,6 +10,7 @@ Version:        0.2.0
 
 @innblue: #2275be;
 @innltblue: #90bfe7;
+@aqua: #28C1DB;
 @inngray: #bbb;
 @ltgray: #efefef;
 @dkgray: #333;
@@ -27,17 +28,9 @@ h1,h2,h3,h4,h5,
 }
 .site-hero {
   width: 100%;
-  background-color: @largoorange;
-  height: 100px;
-  margin-bottom: 24px;
-}
-.site-hero {
-  width: 100%;
-  background-color: #fefefe;
-  margin-bottom: 24px;
   text-align: center;
   img {
-    margin: 24px auto 12px;
+    margin: 2em auto 1em;
     display: block;
     width: 300px;
   }
@@ -45,11 +38,17 @@ h1,h2,h3,h4,h5,
     color: #666;
     font-size: 18px;
   }
-  .btn {
+  a.btn {
     font-size: 21px;
-    margin-bottom: 4px;
+    font-weight: 800;
+    margin-bottom: 0.25em;
+    border: none;
+    text-transform: uppercase;
+    text-shadow: none;
+    background-color: @aqua;
+    padding: 20px 40px 20px;
   }
   p {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
