@@ -45,7 +45,8 @@ function inn_custom_homepage_layouts() {
 		'HomepageSingleWithFeatured',
 		'HomepageSingleWithSeriesStories',
 		'TopStories',
-		'Slider'
+		'Slider',
+		'LegacyThreeColumn'
 	);
 
 	foreach ($unregister as $layout)
