@@ -4,17 +4,23 @@
   text-align: center;
 }
 .homepage-content section {
-  background-color: #ff9c51;
+  background-color: #efefef;
   padding-top: 2em;
 }
 .homepage-content h2,
 .homepage-content .interstitial h3  {
   text-align: center;
-  color: #f48030;
+  color: #333;
   font-size: 28px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  margin-bottom: 8px;
+  margin-bottom: 0.75em;
+}
+.homepage-content h2 {
+  margin-bottom: 0;
+}
+.homepage-content .interstitial h3 {
+  color: #f48030;
 }
 .homepage-content h4 {
   text-align: center;
