@@ -12,33 +12,34 @@
 <div class="footer-bg clearfix">
 	<footer id="site-footer">
 
-	<div class="github-star-fork">
-		<iframe src="https://ghbtns.com/github-btn.html?user=INN&repo=Largo&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
-		<iframe src="https://ghbtns.com/github-btn.html?user=INN&repo=Largo&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>
-	</div>
+		<div class="github-star-fork">
+			<iframe src="https://ghbtns.com/github-btn.html?user=INN&repo=Largo&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+			<iframe src="https://ghbtns.com/github-btn.html?user=INN&repo=Largo&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>
+		</div>
 
-<div class="credit-and-license">
-	<p>Built and maintained by the <a href="https://twitter.com/INNnerds">INN Nerds</a>.</p>
-	<p>Code licensed under GNU General Public License.</p>
-	<p>Currently v0.4</p>
-	<p>
-	  <ul class="largo-links">
-		<li><a href="https://github.com/INN/Largo/releases">Download</a></li>
-		<li>·</li>
-		<li><a href="http://largo.readthedocs.org/">Documentation</a></li>
-		<li>·</li>
-		<li><a href="http://confluence.investigativenewsnetwork.org/display/LKB/Largo+Knowledge+Base">Knowledgebase</a></li>
-		<li>·</li>
-		<li><a href="http://jira.investigativenewsnetwork.org/servicedesk/customer/portal/4">Help Desk</a></li>
-		<li>·</li>
-		<li><a href="http://investigativenewsnetwork.org">INN</a></li>
-		<li>·</li>
-		<li><a href="http://nerds.investigativenewsnetwork.org/">INN Nerds Blog</a></li>
-		<li>·</li>
-		<li><a href="http://investigativenewsnetwork.us1.list-manage1.com/subscribe?u=81670c9d1b5fbeba1c29f2865&id=913028b23c">Largo Project Newsletter</a></li>
-	  </ul>
-	</p>
-</div>
+		<div class="credit-and-license">
+			<p>Built and maintained by the <a href="https://twitter.com/INNnerds">INN Nerds</a>.</p>
+			<p>Code licensed under GNU General Public License.</p>
+			<p>Currently v0.4</p>
+			<p>Icons created by Laurent Canivet, Sofía Moya, misirlou, SuperAtic LABS, and Nadya Brätt for the Noun Project.</p>
+			<p>
+			  <ul class="largo-links">
+				<li><a href="https://github.com/INN/Largo/releases">Download</a></li>
+				<li>·</li>
+				<li><a href="http://largo.readthedocs.org/">Documentation</a></li>
+				<li>·</li>
+				<li><a href="http://confluence.investigativenewsnetwork.org/display/LKB/Largo+Knowledge+Base">Knowledgebase</a></li>
+				<li>·</li>
+				<li><a href="http://jira.investigativenewsnetwork.org/servicedesk/customer/portal/4">Help Desk</a></li>
+				<li>·</li>
+				<li><a href="http://investigativenewsnetwork.org">INN</a></li>
+				<li>·</li>
+				<li><a href="http://nerds.investigativenewsnetwork.org/">INN Nerds Blog</a></li>
+				<li>·</li>
+				<li><a href="http://investigativenewsnetwork.us1.list-manage1.com/subscribe?u=81670c9d1b5fbeba1c29f2865&id=913028b23c">Largo Project Newsletter</a></li>
+			  </ul>
+			</p>
+		</div>
 
 	</footer>
 </div>
