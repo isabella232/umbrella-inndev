@@ -10,9 +10,9 @@
 				<p>Clean, modern and mobile first. Largo is designed to look great on any device.</p>
 			</div>
 			<div class="span4">
-				<img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/devfriendly.svg" />
+				<img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/workflow.svg" />
 				<h5>Powerful Publishing Tools</h5>
-				<p>A real news theme for WordPress. Beyond design, Largo is built with the needs of news organizations in mind.</p>
+				<p>Unlike other WordPress "news" themes, Largo is built by <a href="http://nerds.investigativenewsnetwork.org/">real news nerds</a>. We obsess about workflow, too.</p>
 			</div>
 			<div class="span4">
 				<img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/devfriendly.svg" />
@@ -34,19 +34,19 @@
 		<h4>Need assistance getting started with Largo? We're here to help.</h4>
 		<div class="row-fluid">
 			<div class="span4">
-				<img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/docs.svg" />
-				<h5>Documentation</h5>
-				<p>Comprehensive documentation helps you get up and running with Largo and explains many of our more advanced features.</p>
+				<a href="http://largo.readthedocs.org/"><img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/docs.svg" /></a>
+				<h5><a href="http://largo.readthedocs.org/">Documentation</a></h5>
+				<p>Get up and running with Largo and explore many of our more advanced features.</p>
 			</div>
 			<div class="span4">
-				<img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/faq.svg" />
-				<h5>Knowledgebase</h5>
+				<a href="http://confluence.investigativenewsnetwork.org/display/LKB/Largo+Knowledge+Base"><img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/faq.svg" /></a>
+				<h5><a href="http://confluence.investigativenewsnetwork.org/display/LKB/Largo+Knowledge+Base">Knowledge Base</a></h5>
 				<p>Answers to our most frequently asked questions.</p>
 			</div>
 			<div class="span4">
-				<img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/helpdesk.svg" />
-				<h5>Help Desk</h5>
-				<p>Need more help? Submit a support request.</p>
+				<a href="http://jira.investigativenewsnetwork.org/servicedesk/customer/portal/4"><img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/helpdesk.svg" /></a>
+				<h5><a href="http://jira.investigativenewsnetwork.org/servicedesk/customer/portal/4">Help Desk</a></h5>
+				<p>Need more help? <a href="http://jira.investigativenewsnetwork.org/servicedesk/customer/portal/4">Submit a support request</a>.</p>
 			</div>
 		</div>
 	</section>
@@ -54,7 +54,24 @@
 	<div class="row-fluid interstitial">
 		<h3>Latest News</h3>
 		<?php
-			//latest post tagged "largo project" from the nerd blog
+			switch_to_blog( 7 );
+
+			$args = array (
+				'showposts' => 1,
+				'post_status' => 'publish',
+				'cat' => 130 // Largo
+			);
+
+			$query = new WP_Query( $args );
+
+          	if ( $query->have_posts() ) {
+          		while ( $query->have_posts() ) : $query->the_post();
+          			echo '<h5><a href="' . get_permalink() . '">' . get_the_title() . '</a></h5>';
+          			largo_excerpt();
+          		endwhile;
+          	}
+
+			restore_current_blog();
 		?>
 	</div>
 

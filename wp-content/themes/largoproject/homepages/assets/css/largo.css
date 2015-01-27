@@ -10,11 +10,17 @@
 .homepage-content h2,
 .homepage-content .interstitial h3  {
   text-align: center;
-  color: #f48030;
+  color: #333;
   font-size: 28px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  margin-bottom: 8px;
+  margin-bottom: 0.75em;
+}
+.homepage-content h2 {
+  margin-bottom: 0;
+}
+.homepage-content .interstitial h3 {
+  color: #f48030;
 }
 .homepage-content h4 {
   text-align: center;
@@ -34,14 +40,24 @@
 .homepage-content .span4 h5 {
   margin-bottom: 0.25em;
 }
+.homepage-content .span4 h5 a {
+  color: #333;
+}
 .homepage-content .span4 p {
   font-size: 17px;
 }
-.homepage-content .interstitial h3 {
+.homepage-content .interstitial h3,
+.homepage-content .interstitial h5  {
   margin-bottom: 0.25em;
+  max-width: 70%;
+  margin: 0 auto;
+}
+.homepage-content .interstitial h5 a {
+  color: #333;
 }
 .homepage-content .interstitial p {
-  margin-bottom: 0.75em;
+  max-width: 70%;
+  margin: 0 auto;
 }
 .homepage-content .interstitial a.btn {
   font-size: 21px;
@@ -49,6 +65,7 @@
   border: none;
   text-transform: uppercase;
   background-color: #bd261d;
+  margin-top: 0.5em;
   padding: 10px 40px 10px;
   color: #fff;
   text-shadow: none;
