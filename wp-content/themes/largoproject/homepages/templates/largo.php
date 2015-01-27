@@ -75,13 +75,41 @@
 		?>
 	</div>
 
-	<section>
+	<section id="showcase">
 		<h2>Showcase</h2>
 		<h4>Over 100 sites are using Largo. Here are a few:</h4>
 		<div class="row-fluid">
-			<div class="span4"></div>
-			<div class="span4"></div>
-			<div class="span4"></div>
+			<div class="span4">
+				<a href="http://wisconsinwatch.org"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/wcij.png" /></a>
+			</div>
+			<div class="span4">
+				<a href="http://ctmirror.org"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/ctmirror.png" /></a>
+			</div>
+			<div class="span4">
+				<a href="http://kycir.org"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/kycir.png" /></a>
+			</div>
+		</div>
+		<div class="row-fluid">
+			<div class="span4">
+				<a href="http://periodismoinvestigativo.com/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/cpipr.png" /></a>
+			</div>
+			<div class="span4">
+				<a href="http://www.yellowstonegate.com/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/yellowstone.png" /></a>
+			</div>
+			<div class="span4">
+				<a href="http://dohanews.co/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/doha.png" /></a>
+			</div>
+		</div>
+		<div class="row-fluid">
+			<div class="span4">
+				<a href="http://journo.biz/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/journobiz.png" /></a>
+			</div>
+			<div class="span4">
+				<a href="http://nicaraguadispatch.com/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/nicaragua.png" /></a>
+			</div>
+			<div class="span4">
+				<a href="http://gijn.org"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/gijn.png" /></a>
+			</div>
 		</div>
 	</section>
 
