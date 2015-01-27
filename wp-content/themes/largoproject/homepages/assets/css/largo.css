@@ -33,7 +33,7 @@
 .homepage-content .span4 {
   padding: 1em;
 }
-.homepage-content .span4 img {
+.homepage-content .span4 img.icon {
   height: 3em;
   margin-bottom: 0.75em;
 }
@@ -69,4 +69,7 @@
   padding: 10px 40px 10px;
   color: #fff;
   text-shadow: none;
+}
+.homepage-content #showcase .row-fluid {
+  margin-bottom: 1em;
 }

@@ -75,7 +75,7 @@
 		?>
 	</div>
 
-	<section>
+	<section id="showcase">
 		<h2>Showcase</h2>
 		<h4>Over 100 sites are using Largo. Here are a few:</h4>
 		<div class="row-fluid">
