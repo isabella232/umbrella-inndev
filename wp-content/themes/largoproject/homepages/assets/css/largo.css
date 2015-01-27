@@ -70,6 +70,12 @@
   color: #fff;
   text-shadow: none;
 }
+.homepage-content .interstitial a.btn:hover {
+  background-color: #CA514A;
+}
 .homepage-content #showcase .row-fluid {
   margin-bottom: 1em;
+}
+.homepage-content #showcase .row-fluid img:hover {
+  opacity: 0.85;
 }
