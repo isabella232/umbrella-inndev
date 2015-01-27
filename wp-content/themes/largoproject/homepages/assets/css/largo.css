@@ -2,7 +2,10 @@
   padding-bottom: 1em;
   margin-bottom: 3em;
   text-align: center;
-  border-bottom: 1px solid #efefef;
+}
+.homepage-content section {
+  background-color: #efefef;
+  padding-top: 2em;
 }
 .homepage-content h2,
 .homepage-content .interstitial h3  {
@@ -43,8 +46,7 @@
 .homepage-content .interstitial a.btn {
   font-size: 21px;
   font-weight: 800;
-  margin-bottom: 2em;
-  border-none;
+  border: none;
   text-transform: uppercase;
   background-color: #bd261d;
   padding: 10px 40px 10px;
