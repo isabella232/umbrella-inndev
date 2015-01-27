@@ -10,7 +10,7 @@
 				<p>Clean, modern and mobile first. Largo is designed to look great on any device.</p>
 			</div>
 			<div class="span4">
-				<img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/devfriendly.svg" />
+				<img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/workflow.svg" />
 				<h5>Powerful Publishing Tools</h5>
 				<p>Unlike other WordPress "news" themes, Largo is built by <a href="http://nerds.investigativenewsnetwork.org/">real news nerds</a>. We obsess about workflow, too.</p>
 			</div>
