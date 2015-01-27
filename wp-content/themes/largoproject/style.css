@@ -17,16 +17,15 @@ h3,
 h4,
 h5,
 .widgettitle {
-  font-family: "museo-sans", helvetica, arial, sans-serif;
+  font-family: "proxima-nova", helvetica, arial, sans-serif;
   font-weight: 900;
 }
 .site-hero {
   width: 100%;
-  background-color: #fefefe;
   text-align: center;
 }
 .site-hero img {
-  margin: 24px auto 12px;
+  margin: 2em auto 1em;
   display: block;
   width: 300px;
 }
@@ -38,12 +37,37 @@ h5,
   font-size: 21px;
   font-weight: 800;
   margin-bottom: 0.25em;
-  border-none;
+  border: none;
   text-transform: uppercase;
   text-shadow: none;
-  background-color: #28C1DB;
+  background-color: #28c1db;
   padding: 20px 40px 20px;
 }
 .site-hero p {
   font-size: 14px;
+}
+.footer-bg {
+  background: transparent;
+}
+.footer-bg #site-footer {
+  padding-top: 3em;
+  border-top: 1px solid #ddd;
+  color: #111;
+  text-align: center;
+}
+.footer-bg #site-footer p {
+  font-size: 16px;
+  margin: 0;
+}
+.footer-bg #site-footer .github-star-fork {
+  margin-bottom: 2em;
+}
+.footer-bg #site-footer ul.largo-links {
+  margin: 2em 0;
+}
+.footer-bg #site-footer ul.largo-links li {
+  font-size: 16px;
+  list-style-type: none;
+  margin-right: 12px;
+  display: inline;
 }
