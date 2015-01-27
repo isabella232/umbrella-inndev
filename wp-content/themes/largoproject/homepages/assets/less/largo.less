@@ -25,6 +25,9 @@
     }
     h5 {
       margin-bottom: 0.25em;
+      a {
+	    color: #333;
+      }
     }
     p {
       font-size: 17px;
@@ -48,11 +51,17 @@
     margin-bottom: 2em;
   }
   .interstitial {
-    h3 {
+    h3, h5 {
       margin-bottom: 0.25em;
+      max-width: 70%;
+      margin: 0 auto;
+    }
+    h5 a {
+	  color: #333;
     }
     p {
-      margin-bottom: 0.75em;
+      max-width: 70%;
+      margin: 0 auto;
     }
     a.btn {
       font-size: 21px;
@@ -61,6 +70,7 @@
       border: none;
       text-transform: uppercase;
       background-color: @aqua;
+      margin-top: 0.5em;
       padding: 10px 40px 10px;
       color: #fff;
       text-shadow: none;
