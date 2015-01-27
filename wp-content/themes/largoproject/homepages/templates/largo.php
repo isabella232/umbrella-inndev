@@ -68,7 +68,7 @@
           		while ( $query->have_posts() ) : $query->the_post();
           			echo '<h5><a href="' . get_permalink() . '">' . get_the_title() . '</a></h5>';
           			largo_excerpt();
-          			echo '<p class="more"><a href="http://nerds.investigativenewsnetwork.org/category/largo/">More Largo News</a></p>'
+          			echo '<p class="more"><a href="http://nerds.investigativenewsnetwork.org/category/largo/">More Largo News</a></p>';
           		endwhile;
           	}
 
