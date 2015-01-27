@@ -79,3 +79,17 @@
 .homepage-content #showcase .row-fluid img:hover {
   opacity: 0.85;
 }
+@media (max-width: 780px) {
+  .homepage-content .row-fluid .span4 {
+	clear: both;
+	width: 95%;
+	margin: 0 2.5%;
+  }
+  .homepage-content .news p {
+    font-size: 15px;
+  }
+  .homepage-content #showcase h4 {
+    max-width: 90%;
+    margin: 0 auto 1em;
+  }
+}

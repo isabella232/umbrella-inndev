@@ -51,7 +51,7 @@
 		</div>
 	</section>
 
-	<div class="row-fluid interstitial">
+	<div class="row-fluid interstitial news">
 		<h3>Latest News</h3>
 		<?php
 			switch_to_blog( 7 );
