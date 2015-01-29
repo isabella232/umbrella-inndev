@@ -8,13 +8,6 @@
 			<nav id="sticky-nav" class="sticky-navbar navbar clearfix">
 				<div class="container">
 					<div class="nav-right">
-					<?php /* TODO: Remove social icons from sticky nav */ ?>
-					<?php if ( of_get_option( 'show_header_social') ) { ?>
-						<ul id="header-social" class="social-icons visible-desktop">
-							<?php largo_social_links(); ?>
-						</ul>
-					<?php } ?>
-
 						<ul id="header-extras"><?php
 							if ( of_get_option( 'show_donate_button') ) {
 								if ($donate_link = of_get_option('donate_link')) { ?>
@@ -41,6 +34,12 @@
 							</li>
 						</ul>
 
+					<?php if ( of_get_option( 'show_header_social') ) { ?>
+						<ul id="header-social" class="social-icons visible-desktop">
+							<?php largo_social_links(); ?>
+						</ul>
+					<?php } ?>
+
 					</div>
 
 					<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
@@ -59,45 +58,24 @@
 						?>
 					</div>
 					<div class="nav-shelf">
-					<ul class="nav">
-						<li class="home-link"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php largo_home_icon( 'icon-white' ); ?></a></li>
-						<?php
-							if ( of_get_option( 'show_sitename_in_sticky_nav', 1 ) )
-								echo '<li class="site-name"><a href="/">' . get_bloginfo('name') . '</a></li>';
+						<ul class="nav">
+							<li class="home-link"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php largo_home_icon( 'icon-white' ); ?></a></li>
+						</ul>
+						<ul class="nav items">
+							<?php
+								if ( of_get_option( 'show_sitename_in_sticky_nav', 1 ) )
+									echo '<li class="site-name"><a href="/">' . get_bloginfo('name') . '</a></li>';
 
-							$args = array(
-							'theme_location' => 'main-nav',
-							'depth'		 => 0,
-							'container'	 => false,
-							'items_wrap' => '%3$s',
-							'menu_class' => 'nav',
-							'walker'	 => new Bootstrap_Walker_Nav_Menu()
-							);
-							largo_nav_menu($args);
-
-							if (has_nav_menu('global-nav')) {
 								$args = array(
-									'theme_location' => 'global-nav',
-									'depth'		 => 1,
-									'container'	 => false,
-									'menu_class' => 'dropdown-menu',
-									'echo' => false
+								'theme_location' => 'main-nav',
+								'depth'		 => 0,
+								'container'	 => false,
+								'items_wrap' => '%3$s',
+								'menu_class' => 'nav',
+								'walker'	 => new Bootstrap_Walker_Nav_Menu()
 								);
-								$global_nav = largo_nav_menu($args);
-
-								if (!empty($global_nav)) { ?>
-									<li class="menu-item-has-childen dropdown">
-										<a href="javascript:void(0);" class="dropdown-toggle"><?php
-											//try to get the menu name from global-nav
-											$menus = get_nav_menu_locations();
-											$menu_title = wp_get_nav_menu_object($menus['global-nav'])->name;
-											echo ( $menu_title ) ? $menu_title : __('About', 'largo');
-											?> <b class="caret"></b>
-										</a>
-										<?php echo $global_nav; ?>
-									</li>
-								<?php } ?>
-							<?php } ?>
+								largo_nav_menu($args);
+							?>
 						</ul>
 					</div>
 				</div>
