@@ -2,8 +2,7 @@
 
 //USEFUL CONSTANTS
 define( 'INN_MEMBER_TAXONOMY', 'ppu_focus_areas' );
-define( 'SHOW_GLOBAL_NAV', FALSE );
-define( 'SHOW_MAIN_NAV', FALSE );
+
 
 // Includes
 $includes = array(
