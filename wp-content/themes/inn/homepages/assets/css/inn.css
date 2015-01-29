@@ -1,0 +1,34 @@
+.home #page {
+  max-width: 100%;
+  padding: 0;
+}
+.home #hero,
+.home section.interstitial {
+  max-width: 100%;
+  background-color: #efefef;
+  height: 100px;
+}
+.home section,
+.home .interstitial .content {
+  margin: 0 auto 3em;
+  max-width: 1170px;
+  height: 100px;
+}
+.home #hero {
+  height: auto;
+  padding: 1em;
+}
+.home #hero .content {
+  margin: 4em auto;
+  max-width: 800px;
+  text-align: center;
+}
+.home #hero .content h1 {
+  text-transform: uppercase;
+  font-size: 4em;
+}
+.home #hero .content h3 {
+  color: #666666;
+  font-size: 2em;
+  font-weight: 500;
+}

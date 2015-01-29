@@ -13,24 +13,52 @@ Version:        0.2.0
 @inngray: #bbb;
 @ltgray: #efefef;
 @dkgray: #333;
+@medgray: #666;
 @uxspeed: 0.2s;
 
 body,
-.btn-primary {
-  font-family: "proxima-nova",helvetica,arial,sans-serif;
+.btn-primary,
+.navbar,
+h1,h2,h3,h4,h5,
+.widgettitle  {
+  font-family: "effra",helvetica,arial,sans-serif;
 }
 h1,h2,h3,h4,h5,
 .widgettitle {
-  font-family: "museo-sans",helvetica,arial,sans-serif;
-  font-weight: 900;
+  font-weight: 700;
 }
 .nav.items {
   float: right;
   font-size: 0.85em;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.03em;
   li > a {
-    padding: 12px 5px;
+    padding: 12px 10px;
+    color: @medgray;
+    &:hover {
+	  background: none;
+	  color: @dkgray;
+    }
   }
 }
 #main {
   margin-top: 3em;
+}
+.sticky-nav-container {
+  max-width: 100%;
+}
+.sticky-nav-holder {
+  box-shadow: none;
+  height: 4em;
+  padding: 1em 0;
+  .nav-right #header-extras a span {
+    background-color: #E96F6F;
+    padding: 8px 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-size: 0.85em;
+    font-weight: 900;
+    text-shadow: none;
+  }
 }
