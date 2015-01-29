@@ -47,7 +47,7 @@
 
 	<div id="page" class="hfeed clearfix">
 
-		<?php get_template_part( 'partials/nav', 'sticky' ); ?>
+		<?php get_template_part( 'partials/nav', 'main' ); ?>
 
 		<?php do_action( 'largo_after_nav' ); ?>
 
