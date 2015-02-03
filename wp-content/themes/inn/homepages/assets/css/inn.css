@@ -160,4 +160,13 @@
     float: none;
     margin: 0 auto 0.5em;
   }
+  .home #supporters .span4 {
+    padding: 0 1em;
+  }
+  .home #supporters ul {
+    margin-bottom: 0;
+  }
+  .home #supporters ul li {
+    text-align: center;
+  }
 }
