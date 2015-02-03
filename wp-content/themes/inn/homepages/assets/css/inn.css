@@ -6,13 +6,11 @@
 .home section.interstitial {
   max-width: 100%;
   background-color: #efefef;
-  height: 100px;
 }
 .home section,
 .home .interstitial .content {
   margin: 0 auto 3em;
   max-width: 1170px;
-  height: 100px;
 }
 .home #hero {
   height: auto;
@@ -56,14 +54,21 @@
 .home .normal .row-fluid p {
   font-weight: 300;
 }
-.home #email {
-  width: 100%;
+.home #email,
+.home #testimonial {
+  max-width: 65%;
   padding: 3em;
+  margin: 0 auto 3em;
   border: 20px solid #333333;
 }
-.home #email img {
+.home #email img,
+.home #testimonial img {
   float: left;
   margin: 1em 3em 1em 1em;
+}
+.home #email .content {
+  display: block;
+  overflow: auto;
 }
 .home #email h3 {
   font-weight: 400;
@@ -71,4 +76,42 @@
   font-size: 2em;
   margin-bottom: 0.25em;
   text-align: left;
+}
+.home #email input {
+  float: left;
+  margin-right: 6px;
+}
+.home #email .btn {
+  display: block;
+  float: left;
+  clear: none;
+  background-color: #E96F6F;
+  color: #fff;
+  text-shadow: none;
+  text-transform: uppercase;
+  border: none;
+  font-weight: bold;
+  padding: 0.325em 2em;
+}
+.home #testimonial p.credit {
+  text-align: right;
+}
+.home #testimonial .btn {
+  display: block;
+  max-width: 50%;
+  margin: 0 auto;
+}
+.home #members {
+  height: auto;
+  background: none;
+}
+.home #members h3 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+.home #supporters li {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 1em;
 }

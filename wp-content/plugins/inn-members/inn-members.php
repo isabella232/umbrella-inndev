@@ -208,7 +208,7 @@ class members_widget extends WP_Widget {
 	      $counter = 1;
 	      $member_list = inn_get_members( true );
 	      foreach ($member_list as $member) :
-	      	if ( !$member->data->paupress_pp_avatar['value'] ) continue;	//skip members without logos
+	      	if ( !isset($member->data->paupress_pp_avatar['value']) ) continue;	//skip members without logos
 	      ?>
 	        <li id="member-list-<?php echo $member->ID;?>" class="<?php echo $member->data->paupress_pp_avatar['value']; ?>">
 	        	<a href="<?php echo get_author_posts_url($member->ID) ?>" class="member-thumb" title="<?php esc_attr_e($member->display_name) ?>">
