@@ -27,38 +27,74 @@ h5,
 .widgettitle {
   font-weight: 700;
 }
-.nav.items {
-  float: right;
-  font-size: 0.85em;
-  text-transform: uppercase;
-  font-weight: 900;
-  letter-spacing: 0.03em;
-}
-.nav.items li > a {
-  padding: 12px 10px;
-  color: #666666;
-}
-.nav.items li > a:hover {
-  background: none;
-  color: #333333;
-}
-#main {
-  margin-top: 3em;
-}
 .sticky-nav-container {
   max-width: 100%;
 }
 .sticky-nav-holder {
   box-shadow: none;
   height: 4em;
-  padding: 1em 0;
+  padding: 1.25em 0 0.75em;
+}
+.sticky-nav-holder .navbar li > a {
+  padding: 12px 10px;
+  color: #666666;
+}
+.sticky-nav-holder .navbar li.active a {
+  background: none;
+  color: #666666;
+}
+.sticky-nav-holder .navbar li.active a:hover {
+  color: #333333;
+}
+.sticky-nav-holder .navbar .nav.items {
+  float: right;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.03em;
+}
+.sticky-nav-holder .navbar .nav.items li > a:hover {
+  background: none;
+  color: #333333;
+}
+.sticky-nav-holder #sticky-nav-search a:hover,
+.sticky-nav-holder .nav .home-link a:hover {
+  background: none;
+  color: #333333;
 }
 .sticky-nav-holder .nav-right #header-extras a span {
-  background-color: #E96F6F;
+  position: relative;
+  top: -2px;
   padding: 8px 12px;
+  background-color: #E96F6F;
   text-transform: uppercase;
   letter-spacing: 0.03em;
   font-size: 0.85em;
   font-weight: 900;
   text-shadow: none;
+}
+.navbar .btn-navbar {
+  background-color: #333333;
+}
+.navbar .btn-navbar:hover {
+  background-color: #666666;
+}
+#main {
+  margin-top: 3em;
+}
+@media (max-width: 800px) {
+  
+}
+@media (max-width: 480px) {
+  .sticky-nav-holder {
+    height: 2.5em;
+    padding: 1em 0 0.25em;
+  }
+  .sticky-nav-holder .navbar .nav.items {
+    padding: 20px 10px 5px 25px;
+    float: left;
+  }
+  .sticky-nav-holder .navbar .nav.items li a {
+    padding: 0 0 20px;
+  }
 }

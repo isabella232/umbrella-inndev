@@ -115,3 +115,49 @@
   text-align: left;
   margin-bottom: 1em;
 }
+@media (max-width: 800px) {
+  
+}
+@media (max-width: 480px) {
+  .normal .row-fluid .span4,
+  .normal .row-fluid .span3 {
+    width: 95%;
+    margin: 0 2.5%;
+  }
+  .home #hero .content {
+    margin: 2.5em auto 2em;
+  }
+  .home #hero .content h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+  .home #hero .content h3 {
+    font-size: 1.25em;
+  }
+  .home .normal h3 {
+    font-size: 2em;
+  }
+  .home #email,
+  .home #testimonial {
+    padding: 1.5em;
+  }
+  .home #email img,
+  .home #testimonial img {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+  .home #email h3,
+  .home #testimonial h3 {
+    text-align: center;
+  }
+  .home #email p {
+    text-align: center;
+  }
+  .home #email input,
+  .home #email .btn {
+    display: block;
+    float: none;
+    margin: 0 auto 0.5em;
+  }
+}
