@@ -39,11 +39,11 @@ h5,
   padding: 12px 10px;
   color: #666666;
 }
-.sticky-nav-holder .navbar li.active a {
+.sticky-nav-holder .navbar .nav li.active a {
   background: none;
   color: #666666;
 }
-.sticky-nav-holder .navbar li.active a:hover {
+.sticky-nav-holder .navbar .nav li.active a:hover {
   color: #333333;
 }
 .sticky-nav-holder .navbar .nav.items {
