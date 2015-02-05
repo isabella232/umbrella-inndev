@@ -58,23 +58,37 @@ $term_id = $term->term_id;
 		<div class="span4">
 			<h3>Participating Members</h3>
 			<?php
-				// this doesn't work yet
-				$args = array(
-					'fields' => 'all_with_meta',
-					'role' => 'Member',
-					'meta_key' => 'pauinn_project_tax',
-					'meta_value' => $term_id,
+				$search = array();
+				$search['mod_results'] = false;
+				$search['search'][] = array(
+					'type' 			=> 'user',
+					'field' 		=> 'pauinn_project_tax',
+					'operator' 		=> 'is',
+					'sub_operator' 	=> 'any',
+					'query' 		=> $term_id
 				);
-				$user_query = new WP_User_Query( $args );
 
-				// User Loop
-				if ( ! empty( $user_query->results ) ) {
-					foreach ( $user_query->results as $user ) {
-						//var_dump($user);
-						echo '<p>' . $user->display_name . '</p>';
+				$query = paupress_filter_process( $search );
+
+				if ( ! empty( $query['member_search'] ) ) {
+					foreach ( $query['member_search'] as $user_id ) {
+
+						$member = get_userdata( $user_id );
+						$member_profile_link = get_author_posts_url( $user_id );
+
+						$avatar_img = get_image_tag(
+							get_user_meta( $user_id, 'paupress_pp_avatar', true),
+							esc_attr($member->data->display_name),
+							esc_attr($member->data->display_name),
+							'left',
+							'thumbnail'
+						);
+
+						echo '<a href="' . $member_profile_link . '">' . $avatar_img . '</a>';
+
 					}
 				} else {
-					echo 'No users found.';
+					echo 'No members participating in this program yet.';
 				}
 			?>
 		</div>
