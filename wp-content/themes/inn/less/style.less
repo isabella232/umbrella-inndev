@@ -14,6 +14,7 @@ Version:        0.2.0
 @ltgray: #efefef;
 @dkgray: #333;
 @medgray: #666;
+@btnbg: #E96F6F;
 @uxspeed: 0.2s;
 
 body,
@@ -68,7 +69,7 @@ h1,h2,h3,h4,h5,
     position: relative;
     top: -2px;
     padding: 8px 12px;
-    background-color: #E96F6F;
+    background-color: @btnbg;
     text-transform: uppercase;
     letter-spacing: 0.03em;
     font-size: 0.85em;
@@ -80,6 +81,23 @@ h1,h2,h3,h4,h5,
   background-color: @dkgray;
   &:hover {
     background-color: @medgray;
+  }
+}
+#header-social {
+  i.icon-rss,
+  i.icon-twitter,
+  i.icon-facebook,
+  i.icon-youtube,
+  i.icon-gplus,
+  i.icon-linkedin,
+  i.icon-github {
+    background-color: @medgray !important;
+    padding: 6px;
+    border-radius: 30px;
+    font-size: 11px;
+  }
+  li > a {
+    padding: 10px 5px;
   }
 }
 #main {

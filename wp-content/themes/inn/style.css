@@ -66,7 +66,7 @@ h5,
   position: relative;
   top: -2px;
   padding: 8px 12px;
-  background-color: #E96F6F;
+  background-color: #e96f6f;
   text-transform: uppercase;
   letter-spacing: 0.03em;
   font-size: 0.85em;
@@ -78,6 +78,21 @@ h5,
 }
 .navbar .btn-navbar:hover {
   background-color: #666666;
+}
+#header-social i.icon-rss,
+#header-social i.icon-twitter,
+#header-social i.icon-facebook,
+#header-social i.icon-youtube,
+#header-social i.icon-gplus,
+#header-social i.icon-linkedin,
+#header-social i.icon-github {
+  background-color: #666666 !important;
+  padding: 6px;
+  border-radius: 30px;
+  font-size: 11px;
+}
+#header-social li > a {
+  padding: 10px 5px;
 }
 #main {
   margin-top: 3em;
