@@ -2,6 +2,9 @@
   max-width: 100%;
   padding: 0;
 }
+.home #main {
+  margin-top: 3.5em;
+}
 .home #hero,
 .home section.interstitial {
   max-width: 100%;
