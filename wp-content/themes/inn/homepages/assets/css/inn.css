@@ -69,11 +69,14 @@
   margin: 1em 3em 1em 1em;
 }
 .home #email {
-  max-width: 50%;
+  max-width: 40%;
 }
 .home #email .content {
   display: block;
   overflow: auto;
+  width: intrinsic;
+  margin: 0 auto;
+  max-width: 80%;
 }
 .home #email h3 {
   font-weight: 400;
@@ -123,8 +126,10 @@
   text-align: left;
   margin-bottom: 1em;
 }
-@media (max-width: 800px) {
-  
+@media (max-width: 1600px) {
+  .home #email {
+    max-width: 70%;
+  }
 }
 @media (max-width: 480px) {
   .normal .row-fluid .span4,
