@@ -50,8 +50,8 @@
 <section id="email" class="normal">
 	<div class="content">
 		<img class="mail-icon" src="<? echo $img_path . 'icons/mail.svg'; ?>" />
-		<h3>Getcha some email</h3>
-		<p>in your inbox, duh. <strong>Catch it!</strong></p>
+		<h3>Stay Up To Date</h3>
+		<p>News from INN and our members. <strong>Delivered weekly.</strong></p>
 
 		<form action="//investigativenewsnetwork.us1.list-manage.com/subscribe/post?u=81670c9d1b5fbeba1c29f2865&amp;id=e3e0b6be7f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 		    <div id="mc_embed_signup_scroll">
