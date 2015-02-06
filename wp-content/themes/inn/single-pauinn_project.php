@@ -7,7 +7,7 @@ $queried_object = get_queried_object();
 $term = get_term_by( 'slug', $queried_object->post_name, 'pauinn_project_tax' );
 $term_id = $term->term_id;
 ?>
-<div class="project-nav span2">
+<div class="internal-subnav span2">
 	<h3>Programs</h3>
 	<?php
 		$terms = get_terms( 'pauinn_project_tax', array( 'hide_empty' => false ) );

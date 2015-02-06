@@ -99,6 +99,43 @@ h5,
 #main {
   margin-top: 3em;
 }
+.internal-subnav {
+  border-right: 1px #efefef solid;
+}
+.internal-subnav h3 {
+  font-size: 18px;
+  margin-bottom: 0.5em;
+}
+.internal-subnav ul {
+  margin: 0;
+}
+.internal-subnav ul li {
+  list-style: none;
+  font-size: 14px;
+}
+.single-pauinn_project .bottom {
+  padding-top: 2em;
+}
+.single-pauinn_project .bottom h3 {
+  font-size: 21px;
+  margin-bottom: 0.5em;
+}
+.single-pauinn_project .bottom ul {
+  margin: 0;
+}
+.single-pauinn_project .bottom ul li {
+  list-style: none;
+}
+.single-pauinn_project .bottom .span4 a {
+  display: block;
+  float: left;
+}
+.single-pauinn_project .bottom .span4 img {
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  margin: 0 8px 1em 0;
+}
 @media (max-width: 800px) {
   
 }
