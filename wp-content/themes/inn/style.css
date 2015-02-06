@@ -81,15 +81,17 @@ h5,
 }
 #header-social i.icon-rss,
 #header-social i.icon-twitter,
-#header-social i.icon-facebook,
-#header-social i.icon-youtube,
-#header-social i.icon-gplus,
-#header-social i.icon-linkedin,
-#header-social i.icon-github {
+#header-social i.icon-facebook {
   background-color: #666666 !important;
   padding: 6px;
   border-radius: 30px;
   font-size: 11px;
+}
+#header-social .icon-youtube-parent,
+#header-social .icon-gplus-parent,
+#header-social .icon-linkedin-parent,
+#header-social .icon-github-parent {
+  display: none;
 }
 #header-social li > a {
   padding: 10px 3px;
