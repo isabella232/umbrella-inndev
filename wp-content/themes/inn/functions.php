@@ -22,6 +22,13 @@ function inn_typekit() { ?>
 add_action( 'wp_head', 'inn_typekit' );
 
 
+// Enable excerpts for pages
+function inn_init() {
+	add_post_type_support( 'page', 'excerpt' );
+}
+add_action('init', 'inn_init');
+
+
 /**
  * Load custom JS
  */
