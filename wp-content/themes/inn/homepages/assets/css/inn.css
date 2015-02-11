@@ -71,12 +71,18 @@
 .home #email {
   max-width: 40%;
 }
+.home #email img {
+  margin: 1em 0 0;
+  display: block;
+  width: 20%;
+}
+.home #email .content-inner {
+  float: right;
+  width: 75%;
+}
 .home #email .content {
   display: block;
   overflow: auto;
-  width: intrinsic;
-  margin: 0 auto;
-  max-width: 80%;
 }
 .home #email h3 {
   font-weight: 400;
@@ -84,6 +90,11 @@
   font-size: 2em;
   margin-bottom: 0.25em;
   text-align: left;
+}
+.home #email form {
+  display: block;
+  float: none;
+  margin: 0 auto;
 }
 .home #email input {
   float: left;
@@ -126,9 +137,42 @@
   text-align: left;
   margin-bottom: 1em;
 }
-@media (max-width: 1600px) {
+@media (max-width: 1170px) {
   .home #email {
     max-width: 70%;
+  }
+}
+@media (max-width: 800px) {
+  .home #email,
+  .home #testimonial {
+    padding: 1.5em;
+  }
+  .home #email img,
+  .home #testimonial img {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+  .home #email h3,
+  .home #testimonial h3 {
+    text-align: center;
+  }
+  .home #email img {
+    width: auto;
+  }
+  .home #email .content-inner {
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .home #email p {
+    text-align: center;
+  }
+  .home #email input,
+  .home #email .btn {
+    display: block;
+    float: none;
+    margin: 0 auto 0.5em;
   }
 }
 @media (max-width: 480px) {
@@ -149,29 +193,6 @@
   }
   .home .normal h3 {
     font-size: 2em;
-  }
-  .home #email,
-  .home #testimonial {
-    padding: 1.5em;
-  }
-  .home #email img,
-  .home #testimonial img {
-    float: none;
-    display: block;
-    margin: 0 auto;
-  }
-  .home #email h3,
-  .home #testimonial h3 {
-    text-align: center;
-  }
-  .home #email p {
-    text-align: center;
-  }
-  .home #email input,
-  .home #email .btn {
-    display: block;
-    float: none;
-    margin: 0 auto 0.5em;
   }
   .home #supporters .span4 {
     padding: 0 1em;

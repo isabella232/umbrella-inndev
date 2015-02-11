@@ -76,13 +76,19 @@
     }
   }
   #email {
-	max-width: 40%;
+    max-width: 40%;
+    img {
+	  margin: 1em 0 0;
+	  display: block;
+	  width: 20%;
+    }
+    .content-inner {
+	  float: right;
+	  width: 75%;
+    }
     .content {
 	  display: block;
 	  overflow: auto;
-	  width: intrinsic;
-	  margin: 0 auto;
-	  max-width: 80%;
     }
     h3 {
 	  font-weight: 400;
@@ -90,6 +96,11 @@
       font-size: 2em;
       margin-bottom: 0.25em;
       text-align: left;
+    }
+    form {
+	  display: block;
+	  float: none;
+	  margin: 0 auto;
     }
     input {
 	  float: left;
@@ -138,12 +149,47 @@
 }
 
 
-@media (max-width: 1600px) {
+@media (max-width: 1170px) {
   .home #email {
 	max-width: 70%;
   }
 }
 
+@media (max-width: 800px) {
+  .home {
+    #email,
+    #testimonial {
+	  padding: 1.5em;
+	  img {
+		float: none;
+		display: block;
+	    margin: 0 auto;
+	  }
+	  h3 {
+	    text-align: center;
+	  }
+    }
+    #email {
+	  img {
+	    width: auto;
+	  }
+      .content-inner {
+	    float: none;
+	    margin: 0 auto;
+	    width: 100%;
+      }
+	  p {
+        text-align: center;
+	  }
+	  input,
+	  .btn {
+	    display: block;
+	    float: none;
+	    margin: 0 auto 0.5em;
+	  }
+    }
+  }
+}
 @media (max-width: 480px) {
   .normal .row-fluid .span4,
   .normal .row-fluid .span3 {
@@ -164,29 +210,6 @@
     .normal {
 	  h3 {
         font-size: 2em;
-	  }
-    }
-    #email,
-    #testimonial {
-	  padding: 1.5em;
-	  img {
-		float: none;
-		display: block;
-	    margin: 0 auto;
-	  }
-	  h3 {
-	    text-align: center;
-	  }
-    }
-    #email {
-	  p {
-        text-align: center;
-	  }
-	  input,
-	  .btn {
-	    display: block;
-	    float: none;
-	    margin: 0 auto 0.5em;
 	  }
     }
     #supporters {

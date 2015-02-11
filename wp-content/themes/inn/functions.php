@@ -26,7 +26,7 @@ add_action( 'wp_head', 'inn_typekit' );
 function inn_init() {
 	add_post_type_support( 'page', 'excerpt' );
 }
-add_action('init', 'inn_init');
+add_action( 'init', 'inn_init' );
 
 
 /**
