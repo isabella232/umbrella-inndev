@@ -23,6 +23,7 @@ h5,
 .entry-content ul,
 .entry-content ol {
   font-family: "leitura-news", georgia, serif;
+  font-weight: 300;
 }
 h1,
 h2,
