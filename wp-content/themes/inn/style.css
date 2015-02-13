@@ -17,7 +17,12 @@ h3,
 h4,
 h5,
 .widgettitle {
-  font-family: "effra", helvetica, arial, sans-serif;
+  font-family: "effra", helvetica, sans-serif;
+}
+.entry-content p,
+.entry-content ul,
+.entry-content ol {
+  font-family: "leitura-news", georgia, serif;
 }
 h1,
 h2,

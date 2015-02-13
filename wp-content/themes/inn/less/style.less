@@ -8,14 +8,15 @@ Template:       largo
 Version:        0.2.0
 */
 
-@innblue: #2275be;
-@innltblue: #90bfe7;
-@inngray: #bbb;
 @ltgray: #efefef;
-@dkgray: #333;
 @medgray: #666;
+@dkgray: #333;
 @btnbg: #E96F6F;
+
 @uxspeed: 0.2s;
+
+@serif: "leitura-news",georgia,serif; // 300,700
+@sans: "effra",helvetica,sans-serif; // 300,400,700,900
 
 body,
 .btn-primary,
@@ -23,7 +24,12 @@ body,
 .navbar,
 h1,h2,h3,h4,h5,
 .widgettitle  {
-  font-family: "effra",helvetica,arial,sans-serif;
+  font-family: @sans;
+}
+.entry-content p,
+.entry-content ul,
+.entry-content ol {
+  font-family: @serif;
 }
 h1,h2,h3,h4,h5,
 .widgettitle {
