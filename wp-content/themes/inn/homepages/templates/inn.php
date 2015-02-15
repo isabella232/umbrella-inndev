@@ -12,36 +12,36 @@
 		<h3>About INN</h3>
 		<div class="row-fluid">
 			<div class="span4">
-				<img class="icon" src="<? echo $img_path . 'icons/missionglobe.svg'; ?>" />
-				<h5>Mission</h5>
-				<p>What we do and all of that stuff</p>
+				<a href="/about/"><img src="<? echo $img_path . 'icons/missionglobe.svg'; ?>" /></a>
+				<h5><a href="/about/">Mission</a></h5>
+				<p>How we started, what we do and why</p>
 			</div>
 			<div class="span4">
-				<img class="icon" src="<? echo $img_path . 'icons/people.svg'; ?>" />
-				<h5>People</h5>
-				<p>What we do and all of that stuff</p>
+				<a href="/people/"><img src="<? echo $img_path . 'icons/people.svg'; ?>" /></a>
+				<h5><a href="/people/">People</a></h5>
+				<p>Our staff and board</p>
 			</div>
 			<div class="span4">
-				<img class="icon" src="<? echo $img_path . 'icons/news.svg'; ?>" />
-				<h5>News</h5>
-				<p>What we do and all of that stuff</p>
+				<a href="/news/"><img src="<? echo $img_path . 'icons/news.svg'; ?>" /></a>
+				<h5><a href="/news/">News</a></h5>
+				<p>The latest news about our programs</p>
 			</div>
 		</div>
 		<div class="row-fluid">
 			<div class="span4">
-				<img class="icon" src="<? echo $img_path . 'icons/financial.svg'; ?>" />
-				<h5>Financial</h5>
-				<p>What we do and all of that stuff</p>
+				<a href="/financials/"><img src="<? echo $img_path . 'icons/financial.svg'; ?>" /></a>
+				<h5><a href="/financials/">Financial</a></h5>
+				<p>How we're funded, tax forms and our major donors</p>
 			</div>
 			<div class="span4">
-				<img class="icon" src="<? echo $img_path . 'icons/legal.svg'; ?>" />
-				<h5>Legal</h5>
-				<p>What we do and all of that stuff</p>
+				<a href="/legal/"><img src="<? echo $img_path . 'icons/legal.svg'; ?>" /></a>
+				<h5><a href="/legal/">Legal</a></h5>
+				<p>The fine print, bylaws, policies and more</p>
 			</div>
 			<div class="span4">
-				<img class="icon" src="<? echo $img_path . 'icons/contact.svg'; ?>" />
-				<h5>Contact</h5>
-				<p>What we do and all of that stuff</p>
+				<a href="/contact/"><img src="<? echo $img_path . 'icons/contact.svg'; ?>" /></a>
+				<h5><a href="/contact/">Contact</a></h5>
+				<p>We'd love to hear from you</p>
 			</div>
 		</div>
 	</div>
@@ -112,60 +112,8 @@
 	</div>
 </section>
 
-<!--
-<section id="programs" class="normal">
-	<div class="content">
-		<h3>Programs</h3>
-		<div class="row-fluid">
-			<div class="span3">
-				<img class="icon" src="<? echo $img_path . 'icons/missionglobe.svg'; ?>" />
-				<h5>Mission</h5>
-				<p>What we do and all of that stuff</p>
-			</div>
-			<div class="span3">
-				<img class="icon" src="<? echo $img_path . 'icons/people.svg'; ?>" />
-				<h5>People</h5>
-				<p>What we do and all of that stuff</p>
-			</div>
-			<div class="span3">
-				<img class="icon" src="<? echo $img_path . 'icons/news.svg'; ?>" />
-				<h5>News</h5>
-				<p>What we do and all of that stuff</p>
-			</div>
-			<div class="span3">
-				<img class="icon" src="<? echo $img_path . 'icons/news.svg'; ?>" />
-				<h5>News</h5>
-				<p>What we do and all of that stuff</p>
-			</div>
-		</div>
-		<div class="row-fluid">
-			<div class="span3">
-				<img class="icon" src="<? echo $img_path . 'icons/missionglobe.svg'; ?>" />
-				<h5>Mission</h5>
-				<p>What we do and all of that stuff</p>
-			</div>
-			<div class="span3">
-				<img class="icon" src="<? echo $img_path . 'icons/people.svg'; ?>" />
-				<h5>People</h5>
-				<p>What we do and all of that stuff</p>
-			</div>
-			<div class="span3">
-				<img class="icon" src="<? echo $img_path . 'icons/news.svg'; ?>" />
-				<h5>News</h5>
-				<p>What we do and all of that stuff</p>
-			</div>
-			<div class="span3">
-				<img class="icon" src="<? echo $img_path . 'icons/news.svg'; ?>" />
-				<h5>News</h5>
-				<p>What we do and all of that stuff</p>
-			</div>
-		</div>
-	</div>
-</section>
--->
-
 <section id="members" class="interstitial">
-	<h3>Our Members</h3>
+	<h3><a href="/members/">Our Members</a></h3>
 	<?php the_widget ( 'members_widget' ); ?>
 </section>
 
@@ -174,23 +122,23 @@
 		<h3>Membership Info</h3>
 		<div class="row-fluid">
 			<div class="span3">
-				<img class="icon" src="<? echo $img_path . 'icons/missionglobe.svg'; ?>" />
-				<h5>Member Benefits</h5>
+				<a href="/for-members/member-benefits/"><img class="icon" src="<? echo $img_path . 'icons/missionglobe.svg'; ?>" /></a>
+				<h5><a href="/for-members/member-benefits/">Member Benefits</a></h5>
 				<p>Exclusive access to discounts and programs</p>
 			</div>
 			<div class="span3">
-				<img class="icon" src="<? echo $img_path . 'icons/people.svg'; ?>" />
-				<h5>Membership Standards</h5>
+				<a href="/for-members/membership-standards/"><img class="icon" src="<? echo $img_path . 'icons/people.svg'; ?>" /></a>
+				<h5><a href="/for-members/membership-standards/">Membership Standards</a></h5>
 				<p>Eligibility requirements</p>
 			</div>
 			<div class="span3">
-				<img class="icon" src="<? echo $img_path . 'icons/news.svg'; ?>" />
-				<h5>How To Join</h5>
+				<a href="/for-members/become-a-member/"><img class="icon" src="<? echo $img_path . 'icons/news.svg'; ?>" /></a>
+				<h5><a href="/for-members/become-a-member/">How To Join</a></h5>
 				<p>Fill out an application</p>
 			</div>
 			<div class="span3">
-				<img class="icon" src="<? echo $img_path . 'icons/news.svg'; ?>" />
-				<h5>FAQs</h5>
+				<a href="/for-members/membership-faqs/"><img class="icon" src="<? echo $img_path . 'icons/news.svg'; ?>" /></a>
+				<h5><a href="/for-members/membership-faqs/">FAQs</a></h5>
 				<p>Answers to all your questions</p>
 			</div>
 		</div>
