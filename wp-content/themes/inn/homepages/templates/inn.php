@@ -73,6 +73,48 @@
 
 <section id="programs" class="normal">
 	<div class="content">
+		<h3>What We Offer</h3>
+		<?php
+			$terms = get_terms( 'pauinn_project_tax', array( 'hide_empty' => false ) );
+
+			if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
+
+				echo '<div class="row-fluid">';
+
+				$count = 1;
+
+				foreach ( $terms as $term ) {
+
+					$post = get_posts(array(
+						'name' => $term->slug,
+						'posts_per_page' => 1,
+						'post_type' => 'pauinn_project',
+						'post_status' => 'publish'
+					));
+					?>
+
+					<div class="span3">
+						<?php echo '<a href="' . get_permalink( $post[0]->ID ) . '">' . get_the_post_thumbnail( $post[0]->ID ) . '</a>'; ?>
+						<?php echo '<h5><a href="' . get_permalink( $post[0]->ID ) . '">' .  get_the_title( $post[0]->ID ) . '</a></h5>'; ?>
+						<?php echo '<p>' . $post[0]->post_excerpt . '</p>'; ?>
+					</div>
+
+					<?php
+					if ( $count % 4 == 0 ) {
+						echo '</div><div class="row-fluid">';
+					}
+					$count++;
+				}
+
+				echo '</div>';
+			}
+		?>
+	</div>
+</section>
+
+<!--
+<section id="programs" class="normal">
+	<div class="content">
 		<h3>Programs</h3>
 		<div class="row-fluid">
 			<div class="span3">
@@ -120,6 +162,7 @@
 		</div>
 	</div>
 </section>
+-->
 
 <section id="members" class="interstitial">
 	<h3>Our Members</h3>
@@ -133,22 +176,22 @@
 			<div class="span3">
 				<img class="icon" src="<? echo $img_path . 'icons/missionglobe.svg'; ?>" />
 				<h5>Member Benefits</h5>
-				<p>What we do and all of that stuff</p>
+				<p>Exclusive access to discounts and programs</p>
 			</div>
 			<div class="span3">
 				<img class="icon" src="<? echo $img_path . 'icons/people.svg'; ?>" />
 				<h5>Membership Standards</h5>
-				<p>What we do and all of that stuff</p>
+				<p>Eligibility requirements</p>
 			</div>
 			<div class="span3">
 				<img class="icon" src="<? echo $img_path . 'icons/news.svg'; ?>" />
 				<h5>How To Join</h5>
-				<p>What we do and all of that stuff</p>
+				<p>Fill out an application</p>
 			</div>
 			<div class="span3">
 				<img class="icon" src="<? echo $img_path . 'icons/news.svg'; ?>" />
-				<h5>FAQ</h5>
-				<p>What we do and all of that stuff</p>
+				<h5>FAQs</h5>
+				<p>Answers to all your questions</p>
 			</div>
 		</div>
 	</div>

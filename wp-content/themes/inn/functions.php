@@ -85,3 +85,12 @@ function inn_member_stories_rss() {
 	load_template( get_stylesheet_directory() . '/feed-member-stories.php' );
 }
 add_feed('member_stories', 'inn_member_stories_rss');
+
+/**
+ * Allow SVGs as featured images
+ */
+function cc_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');
