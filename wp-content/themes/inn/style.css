@@ -105,6 +105,45 @@ h5,
 #main {
   margin-top: 1em;
 }
+.footer-bg {
+  background-color: #efefef;
+}
+#site-footer .widgettitle,
+#site-footer li.menu-label,
+#menu-footer-navigation li,
+#supplementary ul.menu li {
+  border-bottom: none;
+}
+#supplementary div:nth-child(3) {
+  margin-top: 1.4em;
+}
+#site-footer .widget.widget_sp_image {
+  margin-top: 1em;
+}
+#site-footer .widgettitle,
+#site-footer li.menu-label {
+  color: #333333;
+}
+#ft-social li i {
+  color: #666666;
+}
+#supplementary {
+  border-bottom: 1px solid #ddd;
+  padding-top: 3em;
+  margin-bottom: 0.75em;
+}
+#boilerplate {
+  text-align: center;
+  border-top: none;
+}
+#boilerplate p.footer-credit {
+  float: none;
+}
+#boilerplate .copyright,
+#boilerplate .menu,
+#boilerplate .footer-bottom {
+  margin-bottom: 0.5em;
+}
 .internal-subnav {
   border-right: 1px #efefef solid;
 }
