@@ -1,130 +1,86 @@
 <?php
 /**
- * The Template for displaying INN members
+ * Template for displaying an INN member profile
  * This is for INN Members only, and overrides author.php (or archive.php) in the theme
  */
 get_header();
 
-$author = $user = get_queried_object();
-$meta = get_user_meta( $author->ID );
+$member = get_queried_object();
+$meta = get_user_meta( $member->ID );
+$social = array('rss', 'twitter', 'facebook', 'googleplus', 'youtube');
 ?>
 
-<div id="content" class="span8" role="main">
+<div id="content" class="row-fluid" role="main">
+	<article id="author-<?php echo $member->ID; ?>" class="inn_member clearfix">
+		<div class="span3">
+			<?php
+				echo get_image_tag(
+					$meta['paupress_pp_avatar'][0],
+					esc_attr( $member->data->display_name ),
+					esc_attr( $member->data->display_name ),
+					'left',
+					'medium'
+				);
 
-	<?php
-		$social = array('rss', 'twitter', 'facebook', 'googleplus', 'youtube');
-	?>
-	<article id="author-<?php echo $author->ID; ?>" class="inn_member clearfix">
-		<?php echo get_image_tag(
-			$meta['paupress_pp_avatar'][0],
-			esc_attr($user->data->display_name),
-			esc_attr($user->data->display_name),
-			'left',
-			'thumbnail'
-		); ?>
-		<div>
-		<header>
-	 		<h2 class="entry-title">
-		 			<?php echo $author->data->display_name; ?>
-	 		</h2>
-	 		<h5 class="history byline">
-	 			<?php if ( !empty($meta['inn_founded'][0]) ) echo "Founded " . $meta['inn_founded'][0] . ";"; ?>
-	 			<?php if ( !empty($meta['inn_since'][0]) ) echo "Member of INN since " . $meta['inn_since'][0]; ?>
-	 		</h5>
-		</header>
-		<div class="entry-content">
-			<?php echo apply_filters('the_content', $author->user_description); ?>
-		</div><!-- .entry-content -->
-		<footer>
-			<?php if ( !empty($author->data->user_url) ) : ?>
-				<h6><strong>Website:</strong> <a href="<?php echo maybe_http($author->data->user_url); ?>"><?php echo $author->data->user_url; ?></a></h6>
-			<?php endif; ?>
+				if ( !empty( $meta['inn_founded'][0] ) ) {
+					echo '<p class="founded">Founded ' . $meta["inn_founded"][0] . '</p>';
+				}
+				if ( !empty( $meta['inn_since'][0] ) ) {
+					echo '<p class="member-since">INN member since ' . $meta["inn_since"][0] . '</p>';
+				}
 
-			<?php if ( !empty($meta[INN_MEMBER_TAXONOMY][0]) ) : ?>
-				<?php
-					$term_list = array();
-					$foci = maybe_unserialize($meta[INN_MEMBER_TAXONOMY][0]);
-					foreach ($foci as $term_id) {
-						$term = get_term_by( 'id', $term_id, INN_MEMBER_TAXONOMY );
-						if ( $term ) {
-							$term_list[] = $term->name;
-						}
-					}
-
-			?><h6><strong>Focus Areas:</strong> <span><?php echo implode(", ", $term_list); ?></span></h6>
-			<?php endif; ?>
-
-			<?php if ( function_exists('pau_inn_forms')) : ?>
-			<div class="contact">
-				<h6><strong>Got a News Tip? <a href="#" class="toggle" data-toggler="#contact-form">Contact <?php echo $author->data->display_name; ?></a></strong></h6>
-				<div id="contact-form">
-					<?php echo pau_inn_forms( '_pp_form_8b64e924248b055cfc4a6b009d62406a', $author->ID ); ?>
-				</div>
-			</div>
-			<?php endif; ?>
-
-			<ul class="social"><?php
-				foreach ($social as $network) {
-					if ( !empty($meta['inn_'.$network][0])) {
-						if ( 'facebook' == $network ) {
-							$url = "https://fb.com/" . $meta['inn_facebook'][0];
-						} else if ( 'twitter' == $network ) {
-							$url = "https://twitter.com/" . $meta['inn_twitter'][0];
-						} else {
-							$url = maybe_http( $meta['inn_'.$network][0] );
-						}
-						if ( 'googleplus' == $network ) $network = 'gplus';
-						?>
-						<li><a href="<?php echo $url; ?>" target="_blank"><i class="icon-<?php echo $network; ?>"></i></a></li>
-						<?php
-					}
+				if ( !empty( $member->data->user_url ) ) {
+					echo '<p class="website"><a href="' . maybe_http( $member->data->user_url ) . '">' . $member->data->user_url . '</a></p>';
 				}
 			?>
-			</ul>
-		</footer>
-		</div>
-	</article><!-- #post-<?php the_ID(); ?> -->
 
-	<?php
-
-		//load up recent stories
-		$oldpost = $post;
-		//get our posts
-		$wp_query->query( array(
-			'post_type' => 'network_content',
-			'posts_per_page' => 5,
-			'paged' => (get_query_var('paged')) ? get_query_var('paged') : 1,
-			'suppress_filters' => false,
-			'author' => $author->ID
-			)
-		);
-
-		if ( have_posts() ) : ?>
-			<div class="recent-posts-wrapper stories">
-				<h3 class="recent-posts clearfix">
+			<ul class="social">
 				<?php
-					printf(__('Recent %s<a class="rss-link" href="%s"><i class="icon-rss"></i></a>', 'largo'),
-						of_get_option('posts_term_plural', 'stories'),
-						$rss_url
-					);
+					foreach ( $social as $network ) {
+						if ( !empty( $meta['inn_'.$network][0] ) ) {
+							if ( 'facebook' == $network ) {
+								$url = "https://fb.com/" . $meta['inn_facebook'][0];
+							} else if ( 'twitter' == $network ) {
+								$url = "https://twitter.com/" . $meta['inn_twitter'][0];
+							} else {
+								$url = maybe_http( $meta['inn_'.$network][0] );
+							}
+							if ( 'googleplus' == $network ) $network = 'gplus';
+
+							echo '<li><a href="' . $url . '" target="_blank"><i class="icon-' . $network . '"></i></a></li>';
+						}
+					}
 				?>
-			</h3>
-			<?php
+			</ul>
+		</div>
+		<div class="span9">
+			<h1 class="entry-title"><?php echo $member->data->display_name; ?></h1>
+			<div class="entry-content">
+				<?php
+					echo apply_filters( 'the_content', $member->user_description );
 
-			while ( have_posts() ) : the_post();
-				get_template_part( 'content', 'archive' );
-			endwhile;
+					if ( !empty( $meta[INN_MEMBER_TAXONOMY][0] ) ) {
+						$term_list = array();
+						$foci = maybe_unserialize( $meta[INN_MEMBER_TAXONOMY][0] );
+						foreach ( $foci as $term_id ) {
+							$term = get_term_by( 'id', $term_id, INN_MEMBER_TAXONOMY );
+							if ( $term ) {
+								$term_list[] = $term->name;
+							}
+						}
+						echo '<p><strong>Focus Areas:</strong> <span>' . implode( ", ", $term_list ) . '</span></p>';
+					}
 
-			largo_content_nav( 'nav-below' );
-			echo '</div>';
-		endif;	//have_posts
+					if ( !empty ( $meta['inn_donate'][0] ) ) {
+						echo '<a class="btn donate" href="' . $meta['inn_donate'][0] . '">Donate Now</a>';
+					}
+					if ( !empty ( $member->user_email ) ) {
+						echo '<a class="btn email" href="mailto:' . $member->user_email  . '">Contact This Member</a>';
+					}
+				?>
+			</div>
+		</div>
+	</article>
+</div>
 
-		//put everything back
-		$post = $oldpost;
-		setup_postdata( $post );
-
-	?>
-</div><!--#content-->
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
