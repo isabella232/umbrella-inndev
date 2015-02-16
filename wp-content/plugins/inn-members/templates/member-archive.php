@@ -72,7 +72,7 @@ $social = array('rss', 'twitter', 'facebook', 'googleplus', 'youtube');
 					}
 
 					if ( !empty( $member->data->user_url ) ) {
-						echo '<p class="btn website"><a href="' . maybe_http( $member->data->user_url ) . '">Visit Website</a></p>';
+						echo '<a class="btn website" href="' . maybe_http( $member->data->user_url ) . '">Visit Website</a>';
 					}
 
 					if ( !empty ( $member->user_email ) ) {
