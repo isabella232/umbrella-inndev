@@ -14,7 +14,6 @@ $social = array('rss', 'twitter', 'facebook', 'googleplus', 'youtube');
 	<article id="author-<?php echo $member->ID; ?>" class="inn_member clearfix">
 		<div class="span3">
 			<?php
-				echo '<a href="' . $member->data->user_url . '">';
 				echo get_image_tag(
 					$meta['paupress_pp_avatar'][0],
 					esc_attr( $member->data->display_name ),
@@ -22,17 +21,12 @@ $social = array('rss', 'twitter', 'facebook', 'googleplus', 'youtube');
 					'left',
 					'medium'
 				);
-				echo '</a>';
 
 				if ( !empty( $meta['inn_founded'][0] ) ) {
 					echo '<p class="founded">Founded ' . $meta["inn_founded"][0] . '</p>';
 				}
 				if ( !empty( $meta['inn_since'][0] ) ) {
 					echo '<p class="member-since">INN member since ' . $meta["inn_since"][0] . '</p>';
-				}
-
-				if ( !empty( $member->data->user_url ) ) {
-					echo '<p class="website"><a href="' . maybe_http( $member->data->user_url ) . '">' . $member->data->user_url . '</a></p>';
 				}
 			?>
 
@@ -56,7 +50,7 @@ $social = array('rss', 'twitter', 'facebook', 'googleplus', 'youtube');
 			</ul>
 		</div>
 		<div class="span9">
-			<h1 class="entry-title"><?php echo '<a href="' . $member->data->user_url . '">' . $member->data->display_name . '</a>'; ?></h1>
+			<h1 class="entry-title"><?php echo $member->data->display_name; ?></h1>
 			<div class="entry-content">
 				<?php
 					echo apply_filters( 'the_content', $member->user_description );
@@ -76,9 +70,16 @@ $social = array('rss', 'twitter', 'facebook', 'googleplus', 'youtube');
 					if ( !empty ( $meta['inn_donate'][0] ) ) {
 						echo '<a class="btn donate" href="' . $meta['inn_donate'][0] . '">Donate Now</a>';
 					}
+
+					if ( !empty( $member->data->user_url ) ) {
+						echo '<p class="btn website"><a href="' . maybe_http( $member->data->user_url ) . '">Visit Website</a></p>';
+					}
+
 					if ( !empty ( $member->user_email ) ) {
 						echo '<a class="btn email" href="mailto:' . $member->user_email  . '">Contact This Member</a>';
 					}
+
+
 				?>
 			</div>
 		</div>
