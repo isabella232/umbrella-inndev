@@ -67,6 +67,25 @@ $social = array('rss', 'twitter', 'facebook', 'googleplus', 'youtube');
 						echo '<p><strong>Focus Areas:</strong> <span>' . implode( ", ", $term_list ) . '</span></p>';
 					}
 
+					if ( !empty( $meta[pauinn_project_tax][0] ) ) {
+						$term_list = array();
+						$foci = maybe_unserialize( $meta[pauinn_project_tax][0] );
+						foreach ( $foci as $term_id ) {
+							$term = get_term_by( 'id', $term_id, pauinn_project_tax );
+							if ( $term ) {
+								$post = get_posts(array(
+									'name' => $term->slug,
+									'posts_per_page' => 1,
+									'post_type' => 'pauinn_project',
+									'post_status' => 'publish'
+								));
+
+								$term_list[] = '<a href="' . get_permalink( $post[0]->ID ) . '">' .  get_the_title( $post[0]->ID ) . '</a>';
+							}
+						}
+						echo '<p><strong>INN Projects:</strong> <span>' . implode( ", ", $term_list ) . '</span></p>';
+					}
+
 					if ( !empty ( $meta['inn_donate'][0] ) ) {
 						echo '<a class="btn donate" href="' . $meta['inn_donate'][0] . '">Donate Now</a>';
 					}
