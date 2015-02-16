@@ -177,6 +177,7 @@
   margin-bottom: 1.75em;
 }
 .inn_member .span3 p {
+  clear: both;
   margin-bottom: 0.35em;
   font-size: 1em;
 }
