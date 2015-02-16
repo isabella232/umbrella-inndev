@@ -1,36 +1,5 @@
-/**
- * Helpers
- */
 @import "../../../themes/inn/less/variables.less";
-
-.notext {
-  text-align: left;
-  text-indent: 110%;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.inline-block {
-	display: -moz-inline-stack;
-	display: inline-block;
-	vertical-align: middle;
-	*vertical-align: auto;
-	zoom: 1;
-	*display: inline;
-}
-
-.transition ( @args ) {
-	-webkit-transition: @args;
-	-moz-transition: @args;
-	-o-transition: @args;
-	transition: @args;
-}
-
-.box-shadow ( @args ) {
-	-webkit-box-shadow: @args;
-	-moz-box-shadow: @args;
-	box-shadow: @args;
-}
+@import "../../../themes/largo/less/inc/mixins.less";
 
 .transform ( @args ) {
 	-webkit-transform: @args;
@@ -40,22 +9,14 @@
 	transform: @args;
 }
 
-.border-radius( @args ) {
-	-webkit-border-radius: @args;
-	-moz-border-radius: @args;
-	-ms-border-radius: @args;
-	-o-border-radius: @args;
-	border-radius: @args;
-}
-
 /**
  * Member-related stuff
  */
 .inn-members-widget {
 	ul {
 		list-style: none;
-		margin: 0 0 0 0;
-		padding: 0 0 0 0;
+		margin: 0;
+		padding: 0;
 		*zoom: 1;
 	}
 	ul:after {
@@ -85,10 +46,10 @@
 	.member-wrapper {
 		position: relative;
 		li {
-						.inline-block;
+			display: inline;
 			float: left;
 			padding: 5px;
-			margin: 0 0 0 0;
+			margin: 0;
 			img {
 				width: 50px;
 				height: 50px;
@@ -211,40 +172,43 @@
 	}
 }
 .inn_member {
-
+  margin-bottom: 3em;
+  .span3 {
+    img {
+	  margin-bottom: 1.75em;
+    }
+    p {
+	  margin-bottom: 0.35em;
+	  font-size: 1em;
+	  &.website {
+	    margin-bottom: 1.5em;
+	  }
+    }
+  }
+  h1.entry-title {
+    margin-bottom: 0.5em;
+  }
+  .btn {
+    margin-right: 24px;
+    text-shadow: none;
+    border: none;
+    padding: 12px 24px;
+    &.donate {
+      background-color: @btnbg;
+      color: #fff;
+    }
+  }
 }
 .social {
 	list-style: none;
-	margin: 0 0 0 0;
+	margin: 0;
 	li {
-		.inline-block;
-		margin: 0 0.1em;
+		display: inline;
 	}
 	i {
-		.border-radius( 4px );
-		color: white;
-		padding: 3px 3px 0;
-		text-align: center;
-		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-		-webkit-font-smoothing: antialiased;
-	}
-	i.icon-rss {
-		background-color: #f89406;
-	}
-	i.icon-facebook {
-		background-color: #4454a0;
-	}
-	i.icon-twitter {
-		background-color: #0094c5;
-	}
-	i.icon-youtube {
-		background-color: #c42f23;
-	}
-	i.icon-gplus {
-		background-color: #ed202b;
-	}
-	i.icon-github {
-		background-color: #333;
+		color: @medgray;
+		margin-right: 8px;
+		font-size: 20px;
 	}
 }
 .member-nav {
@@ -267,9 +231,9 @@
 	}
 }
 .single-inn_member .stories {
-		margin-top: 2em;
+	margin-top: 2em;
 	.byline .member {
-			display: none;
+		display: none;
 	}
 }
 
