@@ -174,15 +174,15 @@
   margin-bottom: 3em;
 }
 .inn_member .span3 img {
-  margin-bottom: 1.75em;
+  margin-bottom: 1.5em;
 }
 .inn_member .span3 p {
   clear: both;
   margin-bottom: 0.35em;
   font-size: 1em;
 }
-.inn_member .span3 p.website {
-  margin-bottom: 1.5em;
+.inn_member .span3 ul {
+  margin-top: 1em;
 }
 .inn_member h1.entry-title {
   margin-bottom: 0.5em;
