@@ -69,8 +69,8 @@ $social = array('rss', 'twitter', 'facebook', 'googleplus', 'youtube');
 
 					if ( !empty( $meta[pauinn_project_tax][0] ) ) {
 						$term_list = array();
-						$foci = maybe_unserialize( $meta[pauinn_project_tax][0] );
-						foreach ( $foci as $term_id ) {
+						$projects = maybe_unserialize( $meta[pauinn_project_tax][0] );
+						foreach ( $projects as $term_id ) {
 							$term = get_term_by( 'id', $term_id, pauinn_project_tax );
 							if ( $term ) {
 								$post = get_posts(array(

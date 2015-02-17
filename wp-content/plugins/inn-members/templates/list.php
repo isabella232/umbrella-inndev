@@ -24,7 +24,7 @@
 			);
 		}
 
-		if ( isset( $_GET['state']) ) {
+		if ( isset( $_GET['state'] ) ) {
 			if ( $_GET['state'] == 'intl' ) {
 
 				$user_query['meta_query'] = array(
@@ -35,10 +35,7 @@
 						'value' => 'US'
 					)
 				);
-
-
 			} else {
-
 				$user_query['meta_query'] = array(
 					'relation' => 'AND',
 					array(
@@ -47,30 +44,26 @@
 						'value' => $_GET['state']
 					)
 				);
-
-
 			}
-
 		}
 
 		$users = new WP_User_Query( $user_query );
 
 		if ( !empty( $users->results ) ) {
-
+			$count = 0;
 			foreach ( $users->results as $user ) {
+
+				if ( $count % 4 == 0 ) {
+					echo '<article id="post-' . $user->ID . '" class="inn_member directory clearfix">';
+				} else {
+					echo '<article id="post-' . $user->ID . '" class="inn_member directory">';
+				}
 				include('member.php');
+
+				echo '</article>';
+
+				$count++;
 			}
-
-			/* pagination inactive for now
-			?>
-			<nav id="nav-below" class="pager post-nav">
-				<div class="next"><?php next_posts_link( __( 'Next Page &rarr;', 'largo' ) ); ?></div>
-				<div class="previous"><?php previous_posts_link( __( '&larr; Previous Page', 'largo' ) ); ?></div>
-
-			</nav><!-- .post-nav -->
-
-			<?php
-			*/
 		}
 
 	?>
