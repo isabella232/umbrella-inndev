@@ -109,6 +109,9 @@ body.page #content {
   position: relative;
   margin-left: 17.021276594%;
 }
+body.page.page-template-full-page #content {
+  margin-left: 0;
+}
 .argolinks {
   margin-bottom: 2em;
 }
