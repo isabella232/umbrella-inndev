@@ -16,7 +16,7 @@ get_header();
 
 		// argo links
 		$query_args = array (
-			'posts_per_page'	=> 10,
+			'posts_per_page'	=> -1,
 			'post_type' 		=> 'argolinks',
 			'post_status'		=> 'publish'
 		);
@@ -29,8 +29,6 @@ get_header();
 			while ( $my_query->have_posts() ) : $my_query->the_post();
 				get_template_part( 'partials/content', 'argolinks' );
 			endwhile;
-
-			largo_content_nav( 'nav-below' );
 
 		}
 
