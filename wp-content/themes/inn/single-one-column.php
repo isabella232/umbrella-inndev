@@ -18,25 +18,35 @@ $main_span = 'span8';
 //is this a page or a post in the projects post type
 if ( is_page() || is_singular( 'pauinn_project' ) ) {
 
-	//if this is the about page or a child, get that page tree
-	if ( is_page( $about_pg_id ) || $about_pg_id == $post->post_parent ) {
+	// should we show a menu?
+	$show_menu = '';
+	if ( is_page( $about_pg_id ) || $about_pg_id == $post->post_parent )
+		$show_menu = 'about';
+	if ( is_page( $members_pg_id ) || $members_pg_id == $post->post_parent )
+		$show_menu = 'members';
+	if ( is_singular( 'pauinn_project' )
+		$show_menu = 'projects';
+	if ( is_singular( 'post' )
+		$show_menu( 'cats' );
+
+	// yep, we should show a menu, modify the layout appropriately
+	if ( $show_menu != '' ) {
 		$main_span = 'span10';
 		echo '<div class="internal-subnav span2">';
+	}
+
+	// if this is the about page or a child, get that page tree
+	if ( $show_menu == 'about' ) {
 		echo 'about';
-		echo '</div>';
 
-	//else if this is the for members page or a child
-	} else if ( is_page( $members_pg_id ) || $members_pg_id == $post->post_parent ) {
-		$main_span = 'span10';
-		echo '<div class="internal-subnav span2">';
+	// else if this is the for members page or a child, get THAT page tree
+	} else if ( $show_menu == 'members' ) {
 		echo 'member';
-		echo '</div>';
 
-	//or a project page
-	} else if ( is_singular( 'pauinn_project' ) ) {
-		$main_span = 'span10';
-		echo '<div class="internal-subnav span2">';
-		echo '<h3>Programs</h3>';
+	// project pages show a list of projects
+	} else if ( $show_menu == 'projects' ) ) {
+
+		echo '<h3>Projects</h3>';
 		$terms = get_terms( 'pauinn_project_tax', array( 'hide_empty' => false ) );
 
 		if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
@@ -47,6 +57,15 @@ if ( is_page() || is_singular( 'pauinn_project' ) ) {
 		    }
 		    echo '</ul>';
 		}
+		echo '</div>';
+
+	// single posts show a list of categories
+	} else if ( $show_menu == 'cats' ) ) {
+		echo 'categories';
+	}
+
+	// close the menu div
+	if ( $show_menu != '' ) {
 		echo '</div>';
 	}
 }
