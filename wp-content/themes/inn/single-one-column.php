@@ -24,11 +24,11 @@ if ( is_page() || is_singular( 'pauinn_project' ) ) {
 
 	// bascially all child pages of the about or members pages + all the posts in the projects post type get the side menu
 	if ( is_page( $about_pg_id ) || in_array( $about_pg_id , $ancestors) )
-		$show_menu = 'about';
+		$show_menu = 'About';
 	if ( is_page( $members_pg_id ) || in_array( $members_pg_id , $ancestors) )
-		$show_menu = 'members';
+		$show_menu = 'Membership';
 	if ( is_singular( 'pauinn_project' ) )
-		$show_menu = 'projects';
+		$show_menu = 'Projects';
 
 	// yep, we should show a menu, modify the layout appropriately
 	if ( $show_menu != '' ) {
@@ -36,22 +36,16 @@ if ( is_page() || is_singular( 'pauinn_project' ) ) {
 		echo '<div class="internal-subnav span2">';
 	}
 
-	// if this is the about page or a child, get that page tree
-	if ( $show_menu == 'about' ) {
-		echo '<h3><a href="' . get_permalink( $about_pg_id ) . '">About</a></h3>';
+	// about and member pages and children get their respective page trees
+	if ( $show_menu == 'About' || $show_menu == 'Membership' ) {
+		$pg_id = ( $show_menu == 'About' ) ? $about_pg_id : $members_pg_id;
+		echo '<h3><a href="' . get_permalink( $pg_id ) . '">' . $show_menu . '</a></h3>';
 		echo '<ul>';
-		wp_list_pages('title_li=&child_of=' . $about_pg_id . '&echo=1');
-		echo '</ul>';
-
-	// else if this is the for members page or a child, get THAT page tree
-	} else if ( $show_menu == 'members' ) {
-		echo '<h3><a href="' . get_permalink( $members_pg_id ) . '">For Members</a></h3>';
-		echo '<ul>';
-		wp_list_pages('title_li=&child_of=' . $members_pg_id . '&echo=1');
+			wp_list_pages('title_li=&child_of=' . $pg_id . '&echo=1');
 		echo '</ul>';
 
 	// project pages show a list of projects, add the current_page_item class if necessary for consistency
-	} else if ( $show_menu == 'projects' ) {
+	} else if ( $show_menu == 'Projects' ) {
 		echo '<h3>Projects</h3>';
 		$terms = get_terms( 'pauinn_project_tax', array( 'hide_empty' => false ) );
 

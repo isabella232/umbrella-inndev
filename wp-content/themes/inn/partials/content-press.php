@@ -6,8 +6,7 @@
 	$query_args = array (
 		'posts_per_page'	=> 10,
 		'post_type' 		=> 'argolinks',
-		'post_status'		=> 'publish',
-		//'paged'				=> $paged
+		'post_status'		=> 'publish'
 	);
 	$wp_query = new WP_Query( $query_args );
 
