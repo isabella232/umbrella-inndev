@@ -112,18 +112,18 @@ body.page #content {
 body.page.page-template-full-page #content {
   margin-left: 0;
 }
-.argolinks {
+.type-argolinks {
   margin-bottom: 2em;
 }
-.argolinks h3 {
+.type-argolinks h3 {
   font-size: 18px;
   margin-bottom: 0.5em;
 }
-.argolinks p {
+.type-argolinks p {
   font-size: 15px;
   margin-bottom: 0.5em;
 }
-.argolinks p.source span {
+.type-argolinks p.source span {
   font-style: italic;
   padding-left: 10px;
   color: #666666;
