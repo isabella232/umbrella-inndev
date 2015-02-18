@@ -192,6 +192,9 @@ body.normal.page #content.has-menu {
   margin-left: 0;
   padding-left: 20px;
 }
+body.normal.page .stories .top-tag {
+  float: none;
+}
 .single-pauinn_project .bottom {
   padding-top: 2em;
 }
