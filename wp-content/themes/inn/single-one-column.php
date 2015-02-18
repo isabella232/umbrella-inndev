@@ -74,7 +74,10 @@ if ( is_page() || is_singular( 'pauinn_project' ) ) {
 		echo '</div>';
 	}
 }
+
+if ( is_page( 'press' ) || is_page( 'news' ) ) $content_class .= ' stories';
 ?>
+
 
 <div id="content" class="<?php echo $content_class; ?>" role="main">
 	<?php
@@ -110,7 +113,15 @@ if ( is_page() || is_singular( 'pauinn_project' ) ) {
 
 				do_action( 'largo_after_comments' );
 
-			} else {
+			} else if ( is_page( 'press' ) ) {
+
+				get_template_part( 'partials/content', 'press' );
+
+			} else if ( is_page ( 'news' ) ) {
+
+				get_template_part( 'partials/content', 'news' );
+
+			} else  {
 
 				get_template_part( 'partials/content', $partial );
 
