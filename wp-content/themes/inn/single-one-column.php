@@ -13,39 +13,45 @@ get_header();
 
 $about_pg_id = 2212;
 $members_pg_id = 234260;
-$main_span = 'span8';
+$content_class = 'span8';
 
 //is this a page or a post in the projects post type
 if ( is_page() || is_singular( 'pauinn_project' ) ) {
 
-	// should we show a menu?
+	// should we show a menu? let's find out.
 	$show_menu = '';
-	if ( is_page( $about_pg_id ) || $about_pg_id == $post->post_parent )
+	$ancestors = get_post_ancestors( $post );
+
+	// bascially all child pages of the about or members pages + all the posts in the projects post type get the side menu
+	if ( is_page( $about_pg_id ) || in_array( $about_pg_id , $ancestors) )
 		$show_menu = 'about';
-	if ( is_page( $members_pg_id ) || $members_pg_id == $post->post_parent )
+	if ( is_page( $members_pg_id ) || in_array( $members_pg_id , $ancestors) )
 		$show_menu = 'members';
-	if ( is_singular( 'pauinn_project' )
+	if ( is_singular( 'pauinn_project' ) )
 		$show_menu = 'projects';
-	if ( is_singular( 'post' )
-		$show_menu( 'cats' );
 
 	// yep, we should show a menu, modify the layout appropriately
 	if ( $show_menu != '' ) {
-		$main_span = 'span10';
+		$content_class = 'span10 has-menu';
 		echo '<div class="internal-subnav span2">';
 	}
 
 	// if this is the about page or a child, get that page tree
 	if ( $show_menu == 'about' ) {
-		echo 'about';
+		echo '<h3><a href="' . get_permalink( $about_pg_id ) . '">About</a></h3>';
+		echo '<ul>';
+		wp_list_pages('title_li=&child_of=' . $about_pg_id . '&echo=1');
+		echo '</ul>';
 
 	// else if this is the for members page or a child, get THAT page tree
 	} else if ( $show_menu == 'members' ) {
-		echo 'member';
+		echo '<h3><a href="' . get_permalink( $members_pg_id ) . '">For Members</a></h3>';
+		echo '<ul>';
+		wp_list_pages('title_li=&child_of=' . $members_pg_id . '&echo=1');
+		echo '</ul>';
 
-	// project pages show a list of projects
-	} else if ( $show_menu == 'projects' ) ) {
-
+	// project pages show a list of projects, add the current_page_item class if necessary for consistency
+	} else if ( $show_menu == 'projects' ) {
 		echo '<h3>Projects</h3>';
 		$terms = get_terms( 'pauinn_project_tax', array( 'hide_empty' => false ) );
 
@@ -53,15 +59,14 @@ if ( is_page() || is_singular( 'pauinn_project' ) ) {
 		    echo '<ul>';
 		    foreach ( $terms as $term ) {
 			    $term_link = '/project/' . $term->slug;
-		    	echo '<li><a href="' . $term_link . '">' . $term->name . '</a></li>';
+			    if ( is_single( $term->name ) ) {
+					echo '<li class="current_page_item"><a href="' . $term_link . '">' . $term->name . '</a></li>';
+				} else {
+		    		echo '<li><a href="' . $term_link . '">' . $term->name . '</a></li>';
+		    	}
 		    }
 		    echo '</ul>';
 		}
-		echo '</div>';
-
-	// single posts show a list of categories
-	} else if ( $show_menu == 'cats' ) ) {
-		echo 'categories';
 	}
 
 	// close the menu div
@@ -71,7 +76,7 @@ if ( is_page() || is_singular( 'pauinn_project' ) ) {
 }
 ?>
 
-<div id="content" class="<?php echo $main_span; ?>" role="main">
+<div id="content" class="<?php echo $content_class; ?>" role="main">
 	<?php
 		while ( have_posts() ) : the_post();
 
