@@ -55,6 +55,7 @@ if ( is_page() || is_singular( 'pauinn_project' ) ) {
 <div id="content" class="<?php echo $main_span; ?>" role="main">
 	<?php
 		while ( have_posts() ) : the_post();
+
 			$partial = ( is_page() ) ? 'page' : 'single';
 
 			if ( is_singular( 'pauinn_project' ) ) {
