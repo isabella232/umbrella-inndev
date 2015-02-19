@@ -18,6 +18,7 @@ h4,
 h5,
 .widgettitle {
   font-family: "effra", helvetica, sans-serif;
+  color: #555;
 }
 .entry-content p,
 .entry-content ul,
@@ -33,6 +34,12 @@ h5,
 .widgettitle {
   font-weight: 700;
 }
+a {
+  color: #08b3cd;
+}
+a:hover {
+  color: #12d8f6;
+}
 .sticky-nav-container {
   max-width: 100%;
 }
@@ -40,6 +47,7 @@ h5,
   box-shadow: none;
   height: 4em;
   padding: 1.25em 0 0.75em;
+  border-bottom: #efefef 3px solid;
 }
 .sticky-nav-holder .navbar li > a {
   padding: 12px 10px;
@@ -103,7 +111,7 @@ h5,
   padding: 10px 3px;
 }
 #main {
-  margin-top: 1em;
+  margin-top: 6em;
 }
 body.page #content {
   position: relative;
@@ -111,6 +119,10 @@ body.page #content {
 }
 body.page.page-template-full-page #content {
   margin-left: 0;
+}
+h1.entry-title {
+  text-align: center;
+  margin-bottom: 1em;
 }
 .type-argolinks {
   margin-bottom: 2em;
@@ -167,30 +179,40 @@ body.page.page-template-full-page #content {
 #boilerplate .footer-bottom {
   margin-bottom: 0.5em;
 }
-.internal-subnav {
-  border-right: 1px #efefef solid;
-}
 .internal-subnav h3 {
-  font-size: 18px;
-  margin-bottom: 0.5em;
+  font-size: 24px;
+  margin-bottom: 1.25em;
+  text-transform: uppercase;
+  color: #08b3cd;
 }
 .internal-subnav ul {
-  margin: 0;
+  margin-left: 0;
+  padding-bottom: 2em;
+  border-right: 10px #08b3cd solid;
 }
 .internal-subnav ul li {
   list-style: none;
-  font-size: 14px;
+  font-size: 15px;
 }
 .internal-subnav ul li.current_page_item {
   font-weight: bold;
 }
-.internal-subnav ul.children {
-  margin: 12px 0 0 12px;
-  font-weight: normal;
+.internal-subnav ul li a {
+  color: #666666;
 }
-body.normal.page #content.has-menu {
+.internal-subnav ul li a:hover {
+  color: #12d8f6;
+}
+.internal-subnav ul.children {
+  margin: 12px 0 0 20px;
+  font-weight: normal;
+  border-right: none;
+  padding-bottom: 0;
+}
+body.normal.page #content.has-menu,
+body.normal.single #content.has-menu {
   margin-left: 0;
-  padding-left: 20px;
+  padding-left: 80px;
 }
 body.normal.page .stories .top-tag {
   float: none;
@@ -208,11 +230,17 @@ body.normal.page .stories .top-tag {
 .single-pauinn_project .bottom ul li {
   list-style: none;
 }
-.single-pauinn_project .bottom .span4 a {
+.single-pauinn_project .bottom .span7 {
+  padding-right: 20px;
+}
+.single-pauinn_project .bottom .span7 li {
+  margin-bottom: 1em;
+}
+.single-pauinn_project .bottom .span5 a {
   display: block;
   float: left;
 }
-.single-pauinn_project .bottom .span4 img {
+.single-pauinn_project .bottom .span5 img {
   width: 32px;
   height: 32px;
   border-radius: 5px;

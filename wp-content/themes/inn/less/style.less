@@ -17,6 +17,7 @@ body,
 h1,h2,h3,h4,h5,
 .widgettitle  {
   font-family: @sans;
+  color: #555;
 }
 .entry-content p,
 .entry-content ul,
@@ -28,6 +29,12 @@ h1,h2,h3,h4,h5,
 .widgettitle {
   font-weight: 700;
 }
+a {
+  color: @linkcolor;
+  &:hover {
+    color: @linkhover;
+  }
+}
 .sticky-nav-container {
   max-width: 100%;
 }
@@ -35,6 +42,7 @@ h1,h2,h3,h4,h5,
   box-shadow: none;
   height: 4em;
   padding: 1.25em 0 0.75em;
+  border-bottom: @ltgray 3px solid;
   .navbar {
 	li > a {
 	  padding: 12px 10px;
@@ -102,7 +110,7 @@ h1,h2,h3,h4,h5,
   }
 }
 #main {
-  margin-top: 1em;
+  margin-top: 6em;
 }
 body.page #content {
   position: relative;
@@ -112,8 +120,11 @@ body.page.page-template-full-page #content {
   margin-left: 0;
 }
 
+h1.entry-title {
+  text-align: center;
+  margin-bottom: 1em;
+}
 // press page
-
 .type-argolinks {
   margin-bottom: 2em;
   h3 {
@@ -176,29 +187,41 @@ body.page.page-template-full-page #content {
 
 // skinny left nav on interior pages
 .internal-subnav {
-  border-right: 1px @ltgray solid;
   h3 {
-    font-size: 18px;
-    margin-bottom: 0.5em;
+    font-size: 24px;
+    margin-bottom: 1.25em;
+    text-transform: uppercase;
+    color: @linkcolor;
   }
   ul {
-	margin: 0;
+    margin-left: 0;
+    padding-bottom: 2em;
+    border-right: 10px @linkcolor solid;
 	li {
       list-style: none;
-      font-size: 14px;
+      font-size: 15px;
       &.current_page_item {
 	    font-weight: bold;
       }
+      a {
+	    color: @medgray;
+	    &:hover {
+		  color: @linkhover;
+	    }
+      }
     }
     &.children {
-	  margin: 12px 0 0 12px;
+	  margin: 12px 0 0 20px;
 	  font-weight: normal;
+	  border-right: none;
+	  padding-bottom: 0;
     }
   }
 }
-body.normal.page #content.has-menu {
+body.normal.page #content.has-menu,
+body.normal.single #content.has-menu {
   margin-left: 0;
-  padding-left: 20px;
+  padding-left: 80px;
 }
 body.normal.page .stories .top-tag {
   float: none;
@@ -217,7 +240,13 @@ body.normal.page .stories .top-tag {
 	    list-style: none;
 	  }
     }
-    .span4 {
+    .span7 {
+	  padding-right: 20px;
+	  li {
+	    margin-bottom: 1em;
+	  }
+    }
+    .span5 {
       a {
 	    display: block;
 	    float: left;

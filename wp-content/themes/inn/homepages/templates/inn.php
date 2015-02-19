@@ -9,7 +9,7 @@
 
 <section id="about" class="normal">
 	<div class="content">
-		<h3>About INN</h3>
+		<h3><span>About INN</span></h3>
 		<div class="row-fluid">
 			<div class="span4">
 				<a href="/about/"><img src="<? echo $img_path . 'icons/missionglobe.svg'; ?>" /></a>
@@ -73,7 +73,7 @@
 
 <section id="programs" class="normal">
 	<div class="content">
-		<h3>What We Offer</h3>
+		<h3><span>What We Offer</span></h3>
 		<?php
 			$terms = get_terms( 'pauinn_project_tax', array( 'hide_empty' => false ) );
 
@@ -113,13 +113,13 @@
 </section>
 
 <section id="members" class="interstitial">
-	<h3><a href="/members/">Our Members</a></h3>
+	<h3><a href="/members/"><span>Our Members</span></a></h3>
 	<?php the_widget ( 'members_widget' ); ?>
 </section>
 
 <section id="member-info" class="normal">
 	<div class="content">
-		<h3>Membership Info</h3>
+		<h3><span>Membership Info</span></h3>
 		<div class="row-fluid">
 			<div class="span3">
 				<a href="/for-members/member-benefits/"><img class="icon" src="<? echo $img_path . 'icons/missionglobe.svg'; ?>" /></a>
@@ -156,7 +156,7 @@
 
 <section id="supporters" class="normal">
 	<div class="content">
-		<h3>INN Thanks Our Supporters</h3>
+		<h3><span>INN Thanks Our Supporters</span></h3>
 		<div class="row-fluid">
 			<ul class="span4">
 				<li><a href="http://www.atlanticphilanthropies.org/">Atlantic Philanthropies</a></li>
