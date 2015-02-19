@@ -32,7 +32,7 @@ if ( is_page() || is_singular( 'pauinn_project' ) ) {
 
 	// yep, we should show a menu, modify the layout appropriately
 	if ( $show_menu != '' ) {
-		$content_class = 'span8 has-menu';
+		$content_class = 'span9 has-menu';
 		echo '<div class="internal-subnav span3">';
 	}
 

@@ -129,6 +129,7 @@
 .inn_member {
   margin-bottom: 3em;
   .span3 {
+	padding-right: 40px;
     img {
 	  margin-bottom: 1.5em;
     }
@@ -143,12 +144,17 @@
   }
   h1.entry-title {
     margin-bottom: 0.5em;
+    text-align: left;
+  }
+  p.foci,
+  p.projects {
+    font-family: @sans;
   }
   .btn {
     margin-right: 24px;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 880px) {
   .row-fluid .inn_member {
     .span3,
     .span9 {
@@ -160,6 +166,7 @@
   }
   .inn_member {
     .span3 {
+	  padding: 0;
 	  img {
 	    float: none;
 	    margin: 0 auto 2em;
@@ -181,7 +188,7 @@
     }
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .inn_member {
 	margin-bottom: 0;
     .span9 {
@@ -207,11 +214,14 @@
   margin: 0;
   li {
     display: inline;
+    &:last-child i {
+	  margin-right: 0;
+	}
   }
   i {
     color: @medgray;
-	margin-right: 8px;
-	font-size: 20px;
+	margin-right: 10px;
+	font-size: 18px;
   }
 }
 .inn_member.directory {
@@ -219,7 +229,7 @@
   width: 20%;
   padding: 2.5%;
   float: left;
-  &.clearfix {
+  &.count-4 {
     clear: both;
   }
   text-align: center;
@@ -233,13 +243,31 @@
     clear: both;
 	font-size: 21px;
 	margin-bottom: 0.5em;
+	a {
+      color: @medgray;
+      &:hover {
+	    color: @blue;
+      }
+	}
   }
   p {
+	font-family: @sans;
     font-size: 16px;
     margin-bottom: 0.5em;
   }
   .social {
     margin-bottom: 0.5em;
+  }
+  @media ( max-width: 850px ) {
+	width: 40%;
+	padding: 5%;
+	&.count-2 {
+	  clear: both;
+	}
+  }
+  @media ( max-width: 400px ) {
+    clear: both;
+    width: 90%;
   }
 }
 
@@ -335,12 +363,12 @@
  * Phone menu and Resources section
  */
 @media screen and (max-width: 540px) {
-	.member-nav {
-		label,
-		select {
-			display: block;
-			margin: 0.3em auto;
-			width: 100%;
-		}
-	}
+  .member-nav {
+    label,
+    select {
+      display: block;
+      margin: 1em auto;
+      width: 100%;
+    }
+  }
 }

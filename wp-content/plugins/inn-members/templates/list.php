@@ -50,20 +50,24 @@
 		$users = new WP_User_Query( $user_query );
 
 		if ( !empty( $users->results ) ) {
+
 			$count = 0;
+
 			foreach ( $users->results as $user ) {
 
-				if ( $count % 4 == 0 ) {
-					echo '<article id="post-' . $user->ID . '" class="inn_member directory clearfix">';
-				} else {
-					echo '<article id="post-' . $user->ID . '" class="inn_member directory">';
-				}
+				$class = "inn_member directory";
+				if ( $count % 2 == 0 ) $class .= " count-2";
+				if ( $count % 4 == 0 ) $class .= " count-4";
+
+				echo '<article id="post-' . $user->ID . '" class="' . $class . '">';
+
 				include('member.php');
 
 				echo '</article>';
 
 				$count++;
 			}
+
 		}
 
 	?>

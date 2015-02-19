@@ -121,6 +121,10 @@ a:hover {
   font-weight: 500;
   text-shadow: none;
 }
+.sticky-nav-holder .nav-right #header-extras a span:hover {
+  background-color: #fff;
+  color: #555555;
+}
 .navbar .btn-navbar {
   background-color: #555555;
 }
@@ -145,7 +149,7 @@ a:hover {
   padding: 10px 3px;
 }
 #main {
-  margin-top: 6em;
+  margin: 6em 0 4em;
 }
 body.page #content {
   position: relative;
@@ -302,7 +306,7 @@ body.normal.page .stories .top-tag {
 }
 .single-pauinn_project .bottom h3 {
   font-size: 21px;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.75em;
 }
 .single-pauinn_project .bottom ul {
   margin: 0;
@@ -310,17 +314,21 @@ body.normal.page .stories .top-tag {
 .single-pauinn_project .bottom ul li {
   list-style: none;
 }
-.single-pauinn_project .bottom .span7 {
-  padding-right: 20px;
+.single-pauinn_project .bottom .span6 li {
+  padding-right: 40px;
+  margin-bottom: 1.5em;
 }
-.single-pauinn_project .bottom .span7 li {
-  margin-bottom: 1em;
+.single-pauinn_project .bottom .span6 li a {
+  color: #777777;
 }
-.single-pauinn_project .bottom .span5 a {
+.single-pauinn_project .bottom .span6 li a:hover {
+  color: #22c2f3;
+}
+.single-pauinn_project .bottom .span6.members a {
   display: block;
   float: left;
 }
-.single-pauinn_project .bottom .span5 img {
+.single-pauinn_project .bottom .span6.members img {
   width: 32px;
   height: 32px;
   border-radius: 5px;

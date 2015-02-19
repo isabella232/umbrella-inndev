@@ -129,6 +129,9 @@
 .inn_member {
   margin-bottom: 3em;
 }
+.inn_member .span3 {
+  padding-right: 40px;
+}
 .inn_member .span3 img {
   margin-bottom: 1.5em;
 }
@@ -142,17 +145,25 @@
 }
 .inn_member h1.entry-title {
   margin-bottom: 0.5em;
+  text-align: left;
+}
+.inn_member p.foci,
+.inn_member p.projects {
+  font-family: "effra", helvetica, sans-serif;
 }
 .inn_member .btn {
   margin-right: 24px;
 }
-@media (max-width: 800px) {
+@media (max-width: 880px) {
   .row-fluid .inn_member .span3,
   .row-fluid .inn_member .span9 {
     width: 100%;
     float: none;
     clear: both;
     margin-left: 0;
+  }
+  .inn_member .span3 {
+    padding: 0;
   }
   .inn_member .span3 img {
     float: none;
@@ -174,7 +185,7 @@
     width: intrinsic;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .inn_member {
     margin-bottom: 0;
   }
@@ -199,10 +210,13 @@
 .social li {
   display: inline;
 }
+.social li:last-child i {
+  margin-right: 0;
+}
 .social i {
   color: #777777;
-  margin-right: 8px;
-  font-size: 20px;
+  margin-right: 10px;
+  font-size: 18px;
 }
 .inn_member.directory {
   margin-bottom: 1em;
@@ -211,7 +225,7 @@
   float: left;
   text-align: center;
 }
-.inn_member.directory.clearfix {
+.inn_member.directory.count-4 {
   clear: both;
 }
 .inn_member.directory img {
@@ -225,12 +239,34 @@
   font-size: 21px;
   margin-bottom: 0.5em;
 }
+.inn_member.directory h3 a {
+  color: #777777;
+}
+.inn_member.directory h3 a:hover {
+  color: #22c2f3;
+}
 .inn_member.directory p {
+  font-family: "effra", helvetica, sans-serif;
   font-size: 16px;
   margin-bottom: 0.5em;
 }
 .inn_member.directory .social {
   margin-bottom: 0.5em;
+}
+@media (max-width: 850px) {
+  .inn_member.directory {
+    width: 40%;
+    padding: 5%;
+  }
+  .inn_member.directory.count-2 {
+    clear: both;
+  }
+}
+@media (max-width: 400px) {
+  .inn_member.directory {
+    clear: both;
+    width: 90%;
+  }
 }
 /* Member Directory Page */
 .member-nav {
@@ -317,7 +353,7 @@
   .member-nav label,
   .member-nav select {
     display: block;
-    margin: 0.3em auto;
+    margin: 1em auto;
     width: 100%;
   }
 }

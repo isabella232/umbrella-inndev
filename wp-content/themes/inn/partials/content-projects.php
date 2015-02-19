@@ -6,7 +6,7 @@ $term_id = $term->term_id;
 ?>
 
 <div class="bottom row-fluid">
-	<div class="span7">
+	<div class="span6">
 		<h3>Latest News</h3>
 		<?php
 			$args = array(
@@ -30,7 +30,7 @@ $term_id = $term->term_id;
 			}
 		?>
 	</div>
-	<div class="span5">
+	<div class="span6 members">
 		<h3>Participating Members</h3>
 		<?php
 			$search = array();

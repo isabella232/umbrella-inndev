@@ -64,7 +64,7 @@ $social = array('rss', 'twitter', 'facebook', 'googleplus', 'youtube');
 								$term_list[] = $term->name;
 							}
 						}
-						echo '<p><strong>Focus Areas:</strong> <span>' . implode( ", ", $term_list ) . '</span></p>';
+						echo '<p class="foci"><strong>Focus Areas:</strong> <span>' . implode( ", ", $term_list ) . '</span></p>';
 					}
 
 					if ( !empty( $meta[pauinn_project_tax][0] ) ) {
@@ -83,7 +83,7 @@ $social = array('rss', 'twitter', 'facebook', 'googleplus', 'youtube');
 								$term_list[] = '<a href="' . get_permalink( $post[0]->ID ) . '">' .  get_the_title( $post[0]->ID ) . '</a>';
 							}
 						}
-						echo '<p><strong>INN Projects:</strong> <span>' . implode( ", ", $term_list ) . '</span></p>';
+						echo '<p class="projects"><strong>INN Projects:</strong> <span>' . implode( ", ", $term_list ) . '</span></p>';
 					}
 
 					echo '<div class="buttons">';

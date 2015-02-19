@@ -114,6 +114,10 @@ a {
     font-size: 0.85em;
     font-weight: 500;
     text-shadow: none;
+    &:hover {
+	  background-color: #fff;
+	  color: @dkgray;
+    }
   }
 }
 .navbar .btn-navbar {
@@ -142,7 +146,7 @@ a {
   }
 }
 #main {
-  margin-top: 6em;
+  margin: 6em 0 4em;
 }
 body.page #content {
   position: relative;
@@ -311,7 +315,7 @@ body.normal.page .stories .top-tag {
     padding-top: 2em;
     h3 {
 	  font-size: 21px;
-	  margin-bottom: 0.5em;
+	  margin-bottom: 0.75em;
     }
     ul {
       margin: 0;
@@ -319,22 +323,28 @@ body.normal.page .stories .top-tag {
 	    list-style: none;
 	  }
     }
-    .span7 {
-	  padding-right: 20px;
+    .span6 {
 	  li {
-	    margin-bottom: 1em;
+	    padding-right: 40px;
+	    margin-bottom: 1.5em;
+	    a {
+		  color: @medgray;
+		  &:hover {
+		    color: @blue;
+		  }
+	    }
 	  }
-    }
-    .span5 {
-      a {
-	    display: block;
-	    float: left;
-      }
-      img {
-	    width: 32px;
-	    height: 32px;
-	    border-radius: 5px;
-	    margin: 0 8px 1em 0;
+      &.members {
+        a {
+	      display: block;
+	      float: left;
+        }
+        img {
+	      width: 32px;
+	      height: 32px;
+	      border-radius: 5px;
+	      margin: 0 8px 1em 0;
+	    }
 	  }
     }
   }
