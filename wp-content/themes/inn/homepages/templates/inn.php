@@ -93,7 +93,7 @@
 					));
 					?>
 
-					<div class="span3">
+					<div class="span4">
 						<?php echo '<a href="' . get_permalink( $post[0]->ID ) . '">' . get_the_post_thumbnail( $post[0]->ID ) . '</a>'; ?>
 						<?php echo '<h5><a href="' . get_permalink( $post[0]->ID ) . '">' .  get_the_title( $post[0]->ID ) . '</a></h5>'; ?>
 						<?php echo '<p>' . $post[0]->post_excerpt . '</p>'; ?>
@@ -121,22 +121,17 @@
 	<div class="content">
 		<h3><span>Membership Info</span></h3>
 		<div class="row-fluid">
-			<div class="span3">
+			<div class="span4">
 				<a href="/for-members/member-benefits/"><img class="icon" src="<? echo $img_path . 'icons/missionglobe.svg'; ?>" /></a>
 				<h5><a href="/for-members/member-benefits/">Member Benefits</a></h5>
 				<p>Exclusive access to discounts and programs</p>
 			</div>
-			<div class="span3">
-				<a href="/for-members/membership-standards/"><img class="icon" src="<? echo $img_path . 'icons/people.svg'; ?>" /></a>
-				<h5><a href="/for-members/membership-standards/">Membership Standards</a></h5>
-				<p>Eligibility requirements</p>
-			</div>
-			<div class="span3">
+			<div class="span4">
 				<a href="/for-members/become-a-member/"><img class="icon" src="<? echo $img_path . 'icons/news.svg'; ?>" /></a>
-				<h5><a href="/for-members/become-a-member/">How To Join</a></h5>
+				<h5><a href="/for-members/become-a-member/">Become a Member</a></h5>
 				<p>Fill out an application</p>
 			</div>
-			<div class="span3">
+			<div class="span4">
 				<a href="/for-members/membership-faqs/"><img class="icon" src="<? echo $img_path . 'icons/news.svg'; ?>" /></a>
 				<h5><a href="/for-members/membership-faqs/">FAQs</a></h5>
 				<p>Answers to all your questions</p>

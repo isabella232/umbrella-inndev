@@ -27,7 +27,7 @@ h1,h2,h3,h4,h5,
 }
 h1,h2,h3,h4,h5,
 .widgettitle {
-  font-weight: 700;
+  font-weight: 500;
 }
 a {
   color: @linkcolor;
@@ -42,13 +42,13 @@ a {
   text-transform: uppercase;
   font-weight: bold;
   padding: 12px 24px;
-  background-color: @ltgray;
+  background-color: @btnbg;
   color: #454545;
   &.btn-primary {
     color: #fff;
-    background-color: @btnbg;
+    background-color: @btnprimarybg;
     &:hover {
-	  background-color: darken(@btnbg, 10%);
+	  background-color: darken(@btnprimarybg, 10%);
     }
   }
 }
@@ -76,8 +76,8 @@ a {
 	.nav.items {
 	  float: right;
 	  font-size: 0.85em;
-	  text-transform: uppercase;
-	  font-weight: 900;
+	  text-transform: lowercase;
+	  font-weight: 500;
 	  letter-spacing: 0.03em;
 	  li > a:hover {
 	    background: none;
@@ -93,12 +93,12 @@ a {
   .nav-right #header-extras a span {
     position: relative;
     top: -2px;
-    padding: 8px 12px;
-    background-color: @btnbg;
-    text-transform: uppercase;
+    color: @orange;
+    text-transform: lowercase;
+    background-color: #fff;
     letter-spacing: 0.03em;
     font-size: 0.85em;
-    font-weight: 900;
+    font-weight: 500;
     text-shadow: none;
   }
 }
@@ -112,7 +112,7 @@ a {
   i.icon-rss,
   i.icon-twitter,
   i.icon-facebook {
-    background-color: @medgray !important;
+    background-color: @ltgray !important;
     padding: 6px;
     border-radius: 30px;
     font-size: 11px;
@@ -254,7 +254,7 @@ h1.entry-title {
   ul {
     margin-left: 0;
     padding-bottom: 2em;
-    border-right: 10px @linkcolor solid;
+    border-right: 10px @blue solid;
 	li {
       list-style: none;
       font-size: 15px;

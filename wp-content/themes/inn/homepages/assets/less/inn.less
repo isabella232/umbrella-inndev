@@ -41,10 +41,10 @@
   .normal {
 	height: auto;
 	h3 {
+	  display: block;
 	  text-align: center;
       text-transform: uppercase;
       width: 70%;
-      display: block;
       background-color: @linkcolor;
       color: @linkcolor;
       line-height: 10px;
@@ -56,20 +56,26 @@
 	}
     .row-fluid {
 	  text-align: center;
-	  .span4,
-	  .span3 {
-	    padding: 1em 2em;
+	  .span4 {
+	    padding: 2em 5em;
 	  }
 	  img {
-	    width: 80px;
-	    height: 80px;
+	    width: 50px;
+	    height: 50px;
 	    margin-bottom: 1em;
 	  }
 	  h5 {
 	    font-weight: 400;
 	    margin-bottom: 0.25em;
+	    a {
+		  color: @medgray;
+		  &:hover {
+		    color: @blue;
+		  }
+	    }
 	  }
 	  p {
+	    font-size: 16px;
 	    font-weight: 300;
 	  }
     }

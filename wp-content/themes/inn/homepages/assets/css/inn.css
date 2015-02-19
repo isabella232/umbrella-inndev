@@ -8,7 +8,7 @@
 .home #hero,
 .home section.interstitial {
   max-width: 100%;
-  background-color: #efefef;
+  background-color: #aaaaaa;
 }
 .home section,
 .home .interstitial .content {
@@ -30,7 +30,7 @@
   font-size: 4em;
 }
 .home #hero .content h3 {
-  color: #666666;
+  color: #777777;
   font-size: 2em;
   font-weight: 500;
 }
@@ -38,12 +38,12 @@
   height: auto;
 }
 .home .normal h3 {
+  display: block;
   text-align: center;
   text-transform: uppercase;
   width: 70%;
-  display: block;
-  background-color: #08b3cd;
-  color: #08b3cd;
+  background-color: #22c2f3;
+  color: #22c2f3;
   line-height: 10px;
   margin: 2em auto;
 }
@@ -54,27 +54,33 @@
 .home .normal .row-fluid {
   text-align: center;
 }
-.home .normal .row-fluid .span4,
-.home .normal .row-fluid .span3 {
-  padding: 1em 2em;
+.home .normal .row-fluid .span4 {
+  padding: 2em 5em;
 }
 .home .normal .row-fluid img {
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   margin-bottom: 1em;
 }
 .home .normal .row-fluid h5 {
   font-weight: 400;
   margin-bottom: 0.25em;
 }
+.home .normal .row-fluid h5 a {
+  color: #777777;
+}
+.home .normal .row-fluid h5 a:hover {
+  color: #22c2f3;
+}
 .home .normal .row-fluid p {
+  font-size: 16px;
   font-weight: 300;
 }
 .home #email,
 .home #testimonial {
   padding: 3em;
   margin: 0 auto 7em;
-  border: 20px solid #333333;
+  border: 20px solid #555555;
 }
 .home #email img,
 .home #testimonial img {

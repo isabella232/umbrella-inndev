@@ -32,13 +32,13 @@ h3,
 h4,
 h5,
 .widgettitle {
-  font-weight: 700;
+  font-weight: 500;
 }
 a {
-  color: #08b3cd;
+  color: #22c2f3;
 }
 a:hover {
-  color: #12d8f6;
+  color: #52cff6;
 }
 .btn {
   margin-right: 24px;
@@ -47,15 +47,15 @@ a:hover {
   text-transform: uppercase;
   font-weight: bold;
   padding: 12px 24px;
-  background-color: #efefef;
+  background-color: #22c2f3;
   color: #454545;
 }
 .btn.btn-primary {
   color: #fff;
-  background-color: #e96f6f;
+  background-color: #ff9657;
 }
 .btn.btn-primary:hover {
-  background-color: #e24343;
+  background-color: #ff7624;
 }
 .sticky-nav-container {
   max-width: 100%;
@@ -64,56 +64,56 @@ a:hover {
   box-shadow: none;
   height: 4em;
   padding: 1.25em 0 0.75em;
-  border-bottom: #efefef 3px solid;
+  border-bottom: #aaaaaa 3px solid;
 }
 .sticky-nav-holder .navbar li > a {
   padding: 12px 10px;
-  color: #666666;
+  color: #777777;
 }
 .sticky-nav-holder .navbar .nav li.active a {
   background: none;
-  color: #666666;
+  color: #777777;
 }
 .sticky-nav-holder .navbar .nav li.active a:hover {
-  color: #333333;
+  color: #555555;
 }
 .sticky-nav-holder .navbar .nav.items {
   float: right;
   font-size: 0.85em;
-  text-transform: uppercase;
-  font-weight: 900;
+  text-transform: lowercase;
+  font-weight: 500;
   letter-spacing: 0.03em;
 }
 .sticky-nav-holder .navbar .nav.items li > a:hover {
   background: none;
-  color: #333333;
+  color: #555555;
 }
 .sticky-nav-holder #sticky-nav-search a:hover,
 .sticky-nav-holder .nav .home-link a:hover {
   background: none;
-  color: #333333;
+  color: #555555;
 }
 .sticky-nav-holder .nav-right #header-extras a span {
   position: relative;
   top: -2px;
-  padding: 8px 12px;
-  background-color: #e96f6f;
-  text-transform: uppercase;
+  color: #ff9657;
+  text-transform: lowercase;
+  background-color: #fff;
   letter-spacing: 0.03em;
   font-size: 0.85em;
-  font-weight: 900;
+  font-weight: 500;
   text-shadow: none;
 }
 .navbar .btn-navbar {
-  background-color: #333333;
+  background-color: #555555;
 }
 .navbar .btn-navbar:hover {
-  background-color: #666666;
+  background-color: #777777;
 }
 #header-social i.icon-rss,
 #header-social i.icon-twitter,
 #header-social i.icon-facebook {
-  background-color: #666666 !important;
+  background-color: #aaaaaa !important;
   padding: 6px;
   border-radius: 30px;
   font-size: 11px;
@@ -155,10 +155,10 @@ h1.entry-title {
 .type-argolinks p.source span {
   font-style: italic;
   padding-left: 10px;
-  color: #666666;
+  color: #777777;
 }
 .footer-bg {
-  background-color: #efefef;
+  background-color: #aaaaaa;
 }
 #site-footer .widgettitle,
 #site-footer li.menu-label,
@@ -174,10 +174,10 @@ h1.entry-title {
 }
 #site-footer .widgettitle,
 #site-footer li.menu-label {
-  color: #333333;
+  color: #555555;
 }
 #ft-social li i {
-  color: #666666;
+  color: #777777;
 }
 #supplementary {
   border-bottom: 1px solid #ddd;
@@ -239,12 +239,12 @@ h1.entry-title {
   font-size: 24px;
   margin-bottom: 1.25em;
   text-transform: uppercase;
-  color: #08b3cd;
+  color: #22c2f3;
 }
 .internal-subnav ul {
   margin-left: 0;
   padding-bottom: 2em;
-  border-right: 10px #08b3cd solid;
+  border-right: 10px #22c2f3 solid;
 }
 .internal-subnav ul li {
   list-style: none;
@@ -254,10 +254,10 @@ h1.entry-title {
   font-weight: bold;
 }
 .internal-subnav ul li a {
-  color: #666666;
+  color: #777777;
 }
 .internal-subnav ul li a:hover {
-  color: #12d8f6;
+  color: #52cff6;
 }
 .internal-subnav ul.children {
   margin: 12px 0 0 20px;
