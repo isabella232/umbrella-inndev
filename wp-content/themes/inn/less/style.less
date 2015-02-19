@@ -15,9 +15,18 @@ body,
 .btn,
 .navbar,
 h1,h2,h3,h4,h5,
-.widgettitle  {
+.widgettitle,
+input, button, select, textarea  {
   font-family: @sans;
-  color: #555;
+  color: @medgray;
+}
+textarea,
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="url"],
+input[type="search"] {
+  border-radius: 0;
 }
 .entry-content p,
 .entry-content ul,
@@ -43,12 +52,17 @@ a {
   font-weight: bold;
   padding: 12px 24px;
   background-color: @btnbg;
-  color: #454545;
+  color: #fff;
+  border-radius: 0;
+  &:hover {
+    background-color: darken(@btnbg, 6.3%);
+    color: #fff;
+  }
   &.btn-primary {
     color: #fff;
     background-color: @btnprimarybg;
     &:hover {
-	  background-color: darken(@btnprimarybg, 10%);
+	  background-color: darken(@btnprimarybg, 6.3%);
     }
   }
 }
@@ -162,7 +176,7 @@ h1.entry-title {
 
 // footer adjustments
 .footer-bg {
-  background-color: @ltgray;
+  background-color: @dkgray;
 }
 #site-footer .widgettitle,
 #site-footer li.menu-label,
@@ -180,7 +194,14 @@ h1.entry-title {
 #site-footer {
   .widgettitle,
   li.menu-label {
-    color: @dkgray;
+    color: #111;
+    font-weight: 500;
+  }
+  a {
+    color: @ltgray;
+    &:hover {
+	  color: @blue;
+    }
   }
 }
 #ft-social li i {

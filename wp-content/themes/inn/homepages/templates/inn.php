@@ -2,8 +2,7 @@
 
 <section id="hero">
 	<div class="content">
-		<h1>Institute for Nonprofit News</h1>
-		<h3>Supporting mission-driven journalism.</h3>
+		<h2>Supporting mission-driven journalism.</h2>
 	</div>
 </section>
 
@@ -47,9 +46,9 @@
 	</div>
 </section>
 
-<section id="email">
+<section id="email" class="interstitial">
 	<div class="content">
-		<img class="mail-icon" src="<? echo $img_path . 'icons/mail.svg'; ?>" />
+		<img class="mail-icon" src="" />
 		<div class="content-inner">
 			<h3>Stay Up To Date</h3>
 			<p>News from INN and our members. <strong>Delivered weekly.</strong></p>
@@ -64,7 +63,7 @@
 						<div class="response" id="mce-success-response" style="display:none"></div>
 					</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
 				    <div style="position: absolute; left: -5000px;"><input type="text" name="b_81670c9d1b5fbeba1c29f2865_e3e0b6be7f" tabindex="-1" value=""></div>
-				    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary">
+				    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn">
 				</div>
 			</form>
 		</div>
@@ -112,7 +111,32 @@
 	</div>
 </section>
 
-<section id="members" class="interstitial">
+<section id="hire-us" class="interstitial">
+	<div class="content">
+		<h3>Need a little extra help?</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida justo varius arcu accumsan eleifend. Etiam est libero, porta eu molestie sed, sollicitudin eget lorem.</p>
+		<div class="row-fluid">
+			<div class="span4">
+				<img class="icon" src="<? echo $img_path . 'icons/missionglobe.svg'; ?>" />
+				<h5>Member Benefits</h5>
+				<p>Exclusive access to discounts and programs</p>
+			</div>
+			<div class="span4">
+				<img class="icon" src="<? echo $img_path . 'icons/missionglobe.svg'; ?>" />
+				<h5>Member Benefits</h5>
+				<p>Exclusive access to discounts and programs</p>
+			</div>
+			<div class="span4">
+				<img class="icon" src="<? echo $img_path . 'icons/missionglobe.svg'; ?>" />
+				<h5>Member Benefits</h5>
+				<p>Exclusive access to discounts and programs</p>
+			</div>
+		</div>
+		<a class="btn btn-primary">Learn more about how great INN is</a>
+	</div>
+</section>
+
+<section id="members">
 	<h3><a href="/members/"><span>Our Members</span></a></h3>
 	<?php the_widget ( 'members_widget' ); ?>
 </section>
@@ -140,7 +164,7 @@
 	</div>
 </section>
 
-<section id="testimonial" class="normal">
+<section id="testimonial" class="interstitial">
 	<div class="content">
 		<img class="mail-icon" src="<? echo $img_path . 'icons/mail.svg'; ?>" />
 		<p><strong>I love INN</strong> because it is the best and helped me do stuff! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida justo varius arcu accumsan eleifend. Etiam est libero, porta eu molestie sed, sollicitudin eget lorem.</p>

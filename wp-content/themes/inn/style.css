@@ -16,9 +16,21 @@ h2,
 h3,
 h4,
 h5,
-.widgettitle {
+.widgettitle,
+input,
+button,
+select,
+textarea {
   font-family: "effra", helvetica, sans-serif;
-  color: #555;
+  color: #777777;
+}
+textarea,
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="url"],
+input[type="search"] {
+  border-radius: 0;
 }
 .entry-content p,
 .entry-content ul,
@@ -48,14 +60,19 @@ a:hover {
   font-weight: bold;
   padding: 12px 24px;
   background-color: #22c2f3;
-  color: #454545;
+  color: #fff;
+  border-radius: 0;
+}
+.btn:hover {
+  background-color: #0db5e8;
+  color: #fff;
 }
 .btn.btn-primary {
   color: #fff;
   background-color: #ff9657;
 }
 .btn.btn-primary:hover {
-  background-color: #ff7624;
+  background-color: #ff8237;
 }
 .sticky-nav-container {
   max-width: 100%;
@@ -158,7 +175,7 @@ h1.entry-title {
   color: #777777;
 }
 .footer-bg {
-  background-color: #aaaaaa;
+  background-color: #555555;
 }
 #site-footer .widgettitle,
 #site-footer li.menu-label,
@@ -174,7 +191,14 @@ h1.entry-title {
 }
 #site-footer .widgettitle,
 #site-footer li.menu-label {
-  color: #555555;
+  color: #111;
+  font-weight: 500;
+}
+#site-footer a {
+  color: #aaaaaa;
+}
+#site-footer a:hover {
+  color: #22c2f3;
 }
 #ft-social li i {
   color: #777777;

@@ -11,87 +11,104 @@
   #hero,
   section.interstitial {
     max-width: 100%;
-    background-color: @ltgray;
+    background-color: @dkgray;
   }
   section,
   .interstitial .content {
-    margin: 0 auto 3em;
+    margin: 0 auto;
     max-width: 1170px;
   }
   #hero {
-    height: auto;
-    padding: 1em;
     margin-bottom: 4em;
     .content {
-	  margin: 4em auto;
-	  max-width: 800px;
-	  text-align: center;
-	  h1 {
-	    text-transform: uppercase;
+	  h2 {
+		margin: 200px auto;
+	    text-align: center;
+	    color: #fff;
 	    font-size: 4em;
-	  }
-	  h3 {
-	    color: @medgray;
-	    font-size: 2em;
 	    font-weight: 500;
+	    text-shadow: 0px 1px 5px rgba(0,0,0,0.42);
 	  }
     }
   }
-
   .normal {
 	height: auto;
 	h3 {
 	  display: block;
 	  text-align: center;
       text-transform: uppercase;
-      width: 70%;
-      background-color: @linkcolor;
-      color: @linkcolor;
+      width: 62%;
+      background-color: @blue;
+      color: @blue;
       line-height: 10px;
-      margin: 2em auto;
+      margin: 2em auto 1.5em;
       span {
 	    background-color: #fff;
 	    padding: 0 60px;
       }
 	}
-    .row-fluid {
+  }
+  .interstitial {
+    max-width: 100%;
+    padding: 3em;
+    margin: 0 auto 3em;
+    background-color: @dkgray;
+    color: @xltgray;
+    h3 {
+	  color: @xltgray;
+    }
+  }
+  .row-fluid {
+	.span4 {
 	  text-align: center;
-	  .span4 {
-	    padding: 2em 5em;
+	  padding: 2em 5em;
+	}
+	img {
+	  width: 50px;
+	  height: 50px;
+	  margin-bottom: 1em;
+	}
+	h5 {
+      font-size: 20px;
+	  font-weight: 400;
+	  margin-bottom: 0.25em;
+	  a {
+		color: @medgray;
+		&:hover {
+		  color: @blue;
+		}
 	  }
-	  img {
-	    width: 50px;
-	    height: 50px;
-	    margin-bottom: 1em;
-	  }
-	  h5 {
-	    font-weight: 400;
-	    margin-bottom: 0.25em;
-	    a {
-		  color: @medgray;
-		  &:hover {
-		    color: @blue;
-		  }
-	    }
-	  }
-	  p {
-	    font-size: 16px;
-	    font-weight: 300;
-	  }
+	}
+	p {
+	  font-size: 16px;
+	  font-weight: 300;
+	}
+  }
+  #programs,
+  #member-info {
+    h3 {
+	  background-color: @orange;
+	  color: @orange;
+	}
+	h5 a:hover {
+	  color: @orange;
+	}
+  }
+  #hire-us {
+    padding: 3em;
+    text-align: center;
+    h5 {
+	  color: #fff;
     }
   }
   #email,
   #testimonial {
-    padding: 3em;
-    margin: 0 auto 7em;
-    border: 20px solid @dkgray;
     img {
 	  float: left;
 	  margin: 1em 3em 1em 1em;
     }
   }
   #email {
-    max-width: 40%;
     img {
 	  margin: 1em 0 0;
 	  display: block;
@@ -120,16 +137,18 @@
     input {
 	  float: left;
 	  margin-right: 6px;
+	  padding: 12px 10px;
+	  width: 400px
     }
-    .btn {
+    input.btn {
 	  display: block;
 	  float: left;
 	  clear: none;
-	  padding: 0.325em 2em;
+	  padding: 13px 1em;
+	  width: 200px;
     }
   }
   #testimonial {
-	max-width: 65%;
     p.credit {
       text-align: right;
     }
@@ -139,6 +158,7 @@
 	  margin: 0 auto;
 	}
   }
+
   #members {
     height: auto;
     background: none;
@@ -149,19 +169,24 @@
 	}
   }
   #supporters {
+	.span4 {
+	  padding: 2em;
+	}
     li {
 	  list-style: none;
 	  text-align: left;
 	  margin-bottom: 1em;
+	  color: @medgray;
+	  a {
+	    color: @medgray;
+	  }
     }
   }
 }
 
 
 @media (max-width: 1170px) {
-  .home #email {
-	max-width: 70%;
-  }
+
 }
 
 @media (max-width: 800px) {
