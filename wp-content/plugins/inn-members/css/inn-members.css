@@ -185,6 +185,9 @@
   .inn_member {
     margin-bottom: 0;
   }
+  .inn_member .span9 p {
+    font-size: 16px;
+  }
   .inn_member .span9 .buttons {
     width: 100%;
   }

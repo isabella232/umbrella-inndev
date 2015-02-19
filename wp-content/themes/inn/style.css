@@ -179,6 +179,45 @@ h1.entry-title {
 #boilerplate .footer-bottom {
   margin-bottom: 0.5em;
 }
+@media (max-width: 768px) {
+  #site-footer {
+    text-align: center;
+  }
+  #site-footer img.alignleft {
+    float: none;
+    margin: 0 auto 1.5em;
+  }
+  #site-footer p,
+  #site-footer li {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+  #boilerplate .copyright,
+  #boilerplate .menu,
+  #boilerplate .footer-bottom {
+    margin-bottom: 1.5em;
+  }
+  #supplementary {
+    padding-top: 1em;
+  }
+  #supplementary div:nth-child(2),
+  #site-footer #supplementary div:nth-child(2) .widget,
+  #site-footer #supplementary div:nth-child(2) ul.menu {
+    margin-bottom: 0;
+  }
+  #supplementary div:nth-child(3) {
+    margin-top: 0;
+  }
+  #menu-footer-navigation li,
+  #supplementary ul.menu li {
+    font-size: 19px;
+    margin-bottom: 8px;
+  }
+  #site-footer .widget_nav_menu .widgettitle {
+    font-size: 21px;
+    margin-bottom: 0.5em;
+  }
+}
 .internal-subnav h3 {
   font-size: 24px;
   margin-bottom: 1.25em;
