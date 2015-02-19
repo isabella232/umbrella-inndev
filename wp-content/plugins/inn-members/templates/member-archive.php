@@ -11,6 +11,7 @@ $social = array('rss', 'twitter', 'facebook', 'googleplus', 'youtube');
 ?>
 
 <div id="content" class="row-fluid" role="main">
+	<a class="back-link" href="/members/">&larr; Back to Member Directory</a>
 	<article id="author-<?php echo $member->ID; ?>" class="inn_member clearfix">
 		<div class="span3">
 			<?php

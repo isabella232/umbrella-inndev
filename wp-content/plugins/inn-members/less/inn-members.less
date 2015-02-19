@@ -125,7 +125,10 @@
 
 
 /* Individual Member Profiles */
-
+a.back-link {
+  position: relative;
+  top: -30px;
+}
 .inn_member {
   margin-bottom: 3em;
   .span3 {
@@ -155,6 +158,11 @@
   }
 }
 @media (max-width: 880px) {
+  a.back-link {
+    display: block;
+    top: 0;
+    margin-bottom: 12px;
+  }
   .row-fluid .inn_member {
     .span3,
     .span9 {
