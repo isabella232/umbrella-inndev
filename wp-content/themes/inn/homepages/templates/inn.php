@@ -99,7 +99,7 @@
 					</div>
 
 					<?php
-					if ( $count % 4 == 0 ) {
+					if ( $count % 3 == 0 ) {
 						echo '</div><div class="row-fluid">';
 					}
 					$count++;
