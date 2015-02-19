@@ -247,7 +247,9 @@ body.normal.page .stories .top-tag {
   margin: 0 8px 1em 0;
 }
 @media (max-width: 800px) {
-  
+  #main {
+    margin-top: 1em;
+  }
 }
 @media (max-width: 480px) {
   .sticky-nav-holder {

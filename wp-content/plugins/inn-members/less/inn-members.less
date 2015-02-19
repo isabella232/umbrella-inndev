@@ -155,6 +155,55 @@
     }
   }
 }
+@media (max-width: 800px) {
+  .row-fluid .inn_member {
+    .span3,
+    .span9 {
+      width: 100%;
+      float: none;
+      clear: both;
+      margin-left: 0;
+    }
+  }
+  .inn_member {
+    .span3 {
+	  img {
+	    float: none;
+	    margin: 0 auto 2em;
+	    display: block;
+	  }
+	  p, ul {
+	    display: none;
+	  }
+    }
+    .span9 {
+	  margin-left: 0;
+	  .buttons {
+		display: block;
+		clear: both;
+		float: none;
+	    margin: 3em auto 0;
+	    width: intrinsic;
+	  }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .inn_member {
+	margin-bottom: 0;
+    .span9 .buttons {
+      width: 100%;
+      a {
+        margin-bottom: 1.5em;
+        display: block;
+	    width: 90%;
+	    font-size: 20px;
+	    padding: 20px;
+	  }
+	}
+  }
+}
+
 .social {
   list-style: none;
   margin: 0;

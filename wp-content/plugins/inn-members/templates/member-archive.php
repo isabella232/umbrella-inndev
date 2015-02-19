@@ -86,17 +86,19 @@ $social = array('rss', 'twitter', 'facebook', 'googleplus', 'youtube');
 						echo '<p><strong>INN Projects:</strong> <span>' . implode( ", ", $term_list ) . '</span></p>';
 					}
 
-					if ( !empty ( $meta['inn_donate'][0] ) ) {
-						echo '<a class="btn donate" href="' . $meta['inn_donate'][0] . '">Donate Now</a>';
-					}
+					echo '<div class="buttons">';
+						if ( !empty ( $meta['inn_donate'][0] ) ) {
+							echo '<a class="btn donate" href="' . $meta['inn_donate'][0] . '">Donate Now</a>';
+						}
 
-					if ( !empty( $member->data->user_url ) ) {
-						echo '<a class="btn website" href="' . maybe_http( $member->data->user_url ) . '">Visit Website</a>';
-					}
+						if ( !empty( $member->data->user_url ) ) {
+							echo '<a class="btn website" href="' . maybe_http( $member->data->user_url ) . '">Visit Website</a>';
+						}
 
-					if ( !empty ( $member->user_email ) ) {
-						echo '<a class="btn email" href="mailto:' . $member->user_email  . '">Contact This Member</a>';
-					}
+						if ( !empty ( $member->user_email ) ) {
+							echo '<a class="btn email" href="mailto:' . $member->user_email  . '">Contact This Member</a>';
+						}
+					echo '</div>';
 
 
 				?>
