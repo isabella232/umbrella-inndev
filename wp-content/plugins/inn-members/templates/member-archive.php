@@ -88,7 +88,7 @@ $social = array('rss', 'twitter', 'facebook', 'googleplus', 'youtube');
 
 					echo '<div class="buttons">';
 						if ( !empty ( $meta['inn_donate'][0] ) ) {
-							echo '<a class="btn donate" href="' . $meta['inn_donate'][0] . '">Donate Now</a>';
+							echo '<a class="btn btn-primary donate" href="' . $meta['inn_donate'][0] . '">Donate Now</a>';
 						}
 
 						if ( !empty( $member->data->user_url ) ) {

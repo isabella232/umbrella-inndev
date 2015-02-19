@@ -145,13 +145,6 @@
 }
 .inn_member .btn {
   margin-right: 24px;
-  text-shadow: none;
-  border: none;
-  padding: 12px 24px;
-}
-.inn_member .btn.donate {
-  background-color: #e96f6f;
-  color: #fff;
 }
 @media (max-width: 800px) {
   .row-fluid .inn_member .span3,

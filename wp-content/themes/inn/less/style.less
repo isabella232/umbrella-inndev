@@ -35,6 +35,24 @@ a {
     color: @linkhover;
   }
 }
+.btn {
+  margin-right: 24px;
+  text-shadow: none;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 12px 24px;
+  background-color: @ltgray;
+  color: #454545;
+  &.btn-primary {
+    color: #fff;
+    background-color: @btnbg;
+    &:hover {
+	  background-color: darken(@btnbg, 10%);
+    }
+  }
+}
+
 .sticky-nav-container {
   max-width: 100%;
 }

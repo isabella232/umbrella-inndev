@@ -117,12 +117,6 @@
   display: block;
   float: left;
   clear: none;
-  background-color: #E96F6F;
-  color: #fff;
-  text-shadow: none;
-  text-transform: uppercase;
-  border: none;
-  font-weight: bold;
   padding: 0.325em 2em;
 }
 .home #testimonial {
