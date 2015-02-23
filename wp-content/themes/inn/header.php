@@ -45,11 +45,11 @@
 
 	<?php do_action( 'largo_top' ); ?>
 
+	<?php get_template_part( 'partials/nav', 'main' ); ?>
+
+	<?php do_action( 'largo_after_nav' ); ?>
+
 	<div id="page" class="hfeed clearfix">
-
-		<?php get_template_part( 'partials/nav', 'main' ); ?>
-
-		<?php do_action( 'largo_after_nav' ); ?>
 
 		<div id="main" class="row-fluid clearfix">
 

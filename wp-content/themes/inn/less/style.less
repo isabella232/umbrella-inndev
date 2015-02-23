@@ -71,10 +71,22 @@ a {
 .sticky-nav-container {
   max-width: 100%;
 }
+
+.home .sticky-nav-wrapper,
+.sticky-nav-wrapper {
+  float: left;
+  height: auto;
+  width: 100%;
+}
+
+
+body.admin-bar .sticky-nav-holder,
 .sticky-nav-holder {
+  top: 0;
   position: relative;
   box-shadow: none;
-  height: 4em;
+  float: left;
+  width: 100%;
   padding: 1.25em 0 0.75em;
   border-bottom: @ltgray 1px solid;
   .navbar {
@@ -94,7 +106,6 @@ a {
     }
     .nav > li.home-link {
       position: relative;
-      top: -28px;
       a img {
         width: 100%;
         max-width: 300px;
@@ -123,15 +134,25 @@ a {
       letter-spacing: 0.03em;
       li > a:hover {
         background: none;
-      color: @dkgray;
+        color: @dkgray;
       }
     }
   }
+
+  #sticky-nav-search a,
   #sticky-nav-search a:hover,
   .nav .home-link a:hover {
     background: none;
     color: @dkgray;
   }
+  #sticky-nav-search.show {
+    background: #343434;
+    .toggle {
+      background: transparent;
+      color: #fff;
+    }
+  }
+
   .nav-right {
     #header-extras a span {
       position: relative;
@@ -154,12 +175,14 @@ a {
     }
   }
 }
+
 .navbar .btn-navbar {
   background-color: @dkgray;
   &:hover {
     background-color: @medgray;
   }
 }
+
 #header-social {
   i.icon-rss,
   i.icon-twitter,
@@ -388,6 +411,8 @@ body.normal.page .stories .top-tag {
   #main {
     margin-top: 1em;
   }
+
+  .sticky-nav-holder .navbar .nav > li.home-link a img { max-width: 280px; }
 }
 
 @media (max-width: 480px) {

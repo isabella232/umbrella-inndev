@@ -5,7 +5,7 @@
 		<?php do_action( 'largo_before_sticky_nav_container' ); ?>
 
 		<div class="sticky-nav-container">
-			<nav id="sticky-nav" class="sticky-navbar navbar clearfix">
+			<nav id="sticky-nav" class="sticky-navbar navbar">
 				<div class="container">
 					<div class="nav-right">
 						<ul id="header-extras"><?php
@@ -51,12 +51,6 @@
 						</div>
 					</a>
 
-					<div class="nav-left">
-						<?php
-							if ( of_get_option( 'show_sitename_in_sticky_nav', 1 ) )
-								echo '<li class="site-name"><a href="/">' . get_bloginfo('name') . '</a></li>';
-						?>
-					</div>
 					<div class="nav-shelf">
 						<ul class="nav">
 							<li class="home-link">
