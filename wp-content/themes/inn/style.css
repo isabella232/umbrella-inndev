@@ -100,7 +100,7 @@ body.admin-bar .sticky-nav-holder,
   box-shadow: none;
   float: left;
   width: 100%;
-  padding: 1.25em 0 0.75em;
+  padding: 0.75em 0;
   border-bottom: #aaaaaa 1px solid;
 }
 body.admin-bar .sticky-nav-holder .navbar li.menu-item b.caret,
@@ -156,6 +156,8 @@ body.admin-bar .sticky-nav-holder .navbar .nav.items,
   text-transform: lowercase;
   font-weight: 500;
   letter-spacing: 0.03em;
+  position: relative;
+  top: 24px;
 }
 body.admin-bar .sticky-nav-holder .navbar .nav.items li > a:hover,
 .sticky-nav-holder .navbar .nav.items li > a:hover {
@@ -179,6 +181,11 @@ body.admin-bar .sticky-nav-holder #sticky-nav-search.show .toggle,
 .sticky-nav-holder #sticky-nav-search.show .toggle {
   background: transparent;
   color: #fff;
+}
+body.admin-bar .sticky-nav-holder .nav-right #header-extras,
+.sticky-nav-holder .nav-right #header-extras {
+  position: relative;
+  top: 24px;
 }
 body.admin-bar .sticky-nav-holder .nav-right #header-extras a span,
 .sticky-nav-holder .nav-right #header-extras a span {
@@ -207,6 +214,9 @@ body.admin-bar .sticky-nav-holder .nav-right .form-search .input-append button,
 }
 .navbar .btn-navbar:hover {
   background-color: #777777;
+}
+html.no-touch .navbar li.home-link > a:hover {
+  background: transparent;
 }
 #header-social i.icon-rss,
 #header-social i.icon-twitter,
@@ -415,20 +425,84 @@ body.normal.page .stories .top-tag {
   #main {
     margin-top: 1em;
   }
+  body.admin-bar .sticky-nav-holder .navbar .nav > li.home-link a img,
   .sticky-nav-holder .navbar .nav > li.home-link a img {
     max-width: 280px;
   }
 }
+@media (max-width: 768px) {
+  #sticky-nav {
+    float: left;
+    width: 100%;
+  }
+  body.admin-bar .sticky-nav-holder,
+  .sticky-nav-holder {
+    position: fixed;
+  }
+  body.admin-bar .sticky-nav-holder .nav-right #header-extras,
+  .sticky-nav-holder .nav-right #header-extras {
+    top: 12px;
+  }
+  body.admin-bar .sticky-nav-holder .navbar .nav.items,
+  .sticky-nav-holder .navbar .nav.items {
+    top: 0;
+  }
+  body.admin-bar .sticky-nav-holder .navbar .nav.items,
+  .sticky-nav-holder .navbar .nav.items {
+    margin-top: 12px;
+    padding: 0;
+  }
+  body.admin-bar .sticky-nav-holder .navbar .nav.items li a,
+  .sticky-nav-holder .navbar .nav.items li a {
+    padding: 10px 0;
+  }
+  .navbar .nav-shelf ul,
+  .navbar .nav-shelf li {
+    width: 100%;
+    text-align: center;
+  }
+  .navbar .nav-shelf li {
+    border-bottom: 1px solid #efefef;
+  }
+  .navbar .nav-shelf li:last-child {
+    border-bottom: none;
+  }
+  .navbar .btn-navbar {
+    float: right;
+    position: relative;
+    top: 16px;
+  }
+  .navbar.open .nav-shelf:after {
+    background-image: none;
+  }
+}
 @media (max-width: 480px) {
+  body.admin-bar .sticky-nav-holder,
   .sticky-nav-holder {
     height: 2.5em;
-    padding: 1em 0 0.25em;
+    padding: 1em 0;
+    margin: 0;
   }
+  body.admin-bar .sticky-nav-holder .nav-right #header-extras,
+  .sticky-nav-holder .nav-right #header-extras,
+  body.admin-bar .sticky-nav-holder .navbar .nav.items,
   .sticky-nav-holder .navbar .nav.items {
-    padding: 20px 10px 5px 25px;
+    top: 0;
+  }
+  body.admin-bar .sticky-nav-holder .navbar .nav.items,
+  .sticky-nav-holder .navbar .nav.items {
+    padding: 0;
     float: left;
   }
+  body.admin-bar .sticky-nav-holder .navbar .nav.items li a,
   .sticky-nav-holder .navbar .nav.items li a {
-    padding: 0 0 20px;
+    padding: 10px 0;
+  }
+  .navbar li.home-link > a img {
+    width: 22px;
+    height: 22px;
+  }
+  .navbar .btn-navbar {
+    top: 4px;
   }
 }

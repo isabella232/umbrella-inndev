@@ -7,6 +7,15 @@
 		<div class="sticky-nav-container">
 			<nav id="sticky-nav" class="sticky-navbar navbar">
 				<div class="container">
+					<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+					<a class="btn btn-navbar toggle-nav-bar" title="<?php esc_attr_e('More', 'largo'); ?>">
+						<div class="bars">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</div>
+					</a>
+
 					<div class="nav-right">
 						<ul id="header-extras"><?php
 							if ( of_get_option( 'show_donate_button') ) {
@@ -42,15 +51,12 @@
 
 					</div>
 
-					<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-					<a class="btn btn-navbar toggle-nav-bar" title="<?php esc_attr_e('More', 'largo'); ?>">
-						<div class="bars">
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</div>
-					</a>
-
+					<div class="nav-left">
+						<li class="home-link">
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+								<img src="<?php echo get_stylesheet_directory_uri() . '/images/icon.png'; ?>" /></a>
+						</li>
+					</div>
 					<div class="nav-shelf">
 						<ul class="nav">
 							<li class="home-link">

@@ -87,7 +87,7 @@ body.admin-bar .sticky-nav-holder,
   box-shadow: none;
   float: left;
   width: 100%;
-  padding: 1.25em 0 0.75em;
+  padding: 0.75em 0;
   border-bottom: @ltgray 1px solid;
   .navbar {
     li.menu-item b.caret {
@@ -132,6 +132,8 @@ body.admin-bar .sticky-nav-holder,
       text-transform: lowercase;
       font-weight: 500;
       letter-spacing: 0.03em;
+      position: relative;
+      top: 24px;
       li > a:hover {
         background: none;
         color: @dkgray;
@@ -154,19 +156,23 @@ body.admin-bar .sticky-nav-holder,
   }
 
   .nav-right {
-    #header-extras a span {
+    #header-extras {
       position: relative;
-      top: -2px;
-      color: @orange;
-      text-transform: lowercase;
-      background-color: #fff;
-      letter-spacing: 0.03em;
-      font-size: 0.85em;
-      font-weight: 500;
-      text-shadow: none;
-      &:hover {
-      background-color: #fff;
-      color: @dkgray;
+      top: 24px;
+      a span {
+        position: relative;
+        top: -2px;
+        color: @orange;
+        text-transform: lowercase;
+        background-color: #fff;
+        letter-spacing: 0.03em;
+        font-size: 0.85em;
+        font-weight: 500;
+        text-shadow: none;
+        &:hover {
+        background-color: #fff;
+        color: @dkgray;
+        }
       }
     }
     .form-search .input-append button {
@@ -181,6 +187,10 @@ body.admin-bar .sticky-nav-holder,
   &:hover {
     background-color: @medgray;
   }
+}
+
+html.no-touch .navbar li.home-link > a:hover {
+  background: transparent;
 }
 
 #header-social {
@@ -412,19 +422,77 @@ body.normal.page .stories .top-tag {
     margin-top: 1em;
   }
 
+  body.admin-bar .sticky-nav-holder .navbar .nav > li.home-link a img,
   .sticky-nav-holder .navbar .nav > li.home-link a img { max-width: 280px; }
 }
 
+@media (max-width: 768px) {
+  #sticky-nav {
+    float: left;
+    width: 100%;
+  }
+  body.admin-bar .sticky-nav-holder,
+  .sticky-nav-holder {
+    position: fixed;
+    .nav-right #header-extras { top: 12px; }
+    .navbar .nav.items { top: 0; }
+    .navbar .nav.items {
+      margin-top: 12px;
+      padding: 0;
+      li a {
+        padding: 10px 0;
+      }
+    }
+  }
+  .navbar {
+    .nav-shelf {
+       ul, li {
+        width: 100%;
+        text-align: center;
+      }
+      li {
+        border-bottom: 1px solid @xltgray;
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+    .btn-navbar {
+      float: right;
+      position: relative;
+      top: 16px;
+    }
+    &.open .nav-shelf:after {
+      background-image: none;
+    }
+  }
+}
+
 @media (max-width: 480px) {
+  body.admin-bar .sticky-nav-holder,
   .sticky-nav-holder {
     height: 2.5em;
-    padding: 1em 0 0.25em;
+    padding: 1em 0;
+    margin: 0;
+    .nav-right #header-extras,
     .navbar .nav.items {
-	  padding: 20px 10px 5px 25px;
-	  float: left;
-	  li a {
-	    padding: 0 0 20px;
-	  }
+      top: 0;
+    }
+    .navbar .nav.items {
+      padding: 0;
+      float: left;
+      li a {
+        padding: 10px 0;
+      }
+    }
+  }
+  .navbar {
+    li.home-link>a img {
+      width: 22px;
+      height: 22px;
+    }
+    .btn-navbar {
+      top: 4px;
     }
   }
 }
