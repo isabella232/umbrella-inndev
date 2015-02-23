@@ -94,3 +94,16 @@ function cc_mime_types($mimes) {
   return $mimes;
 }
 add_filter('upload_mimes', 'cc_mime_types');
+
+/**
+ * Custom largoCore.js removes sticky nav functionality
+ */
+function inn_print_scripts() {
+	wp_deregister_script('largoCore');
+	wp_enqueue_script(
+		'largoCore',
+		get_stylesheet_directory_uri() . '/js/largoCore.js',
+		array( 'jquery' ), '1.0', true
+	);
+}
+add_action('wp_print_styles', 'inn_print_scripts', 100);

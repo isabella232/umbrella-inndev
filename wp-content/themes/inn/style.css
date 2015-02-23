@@ -7,6 +7,16 @@ Author URI:     http://investigativenewsnetwork.org
 Template:       largo
 Version:        0.2.0
 */
+.flip-horizontal {
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
+  -ms-filter: fliph;
+  filter: fliph;
+  /*IE*/
+
+}
 body,
 .btn-primary,
 .btn,
@@ -78,10 +88,14 @@ a:hover {
   max-width: 100%;
 }
 .sticky-nav-holder {
+  position: relative;
   box-shadow: none;
   height: 4em;
   padding: 1.25em 0 0.75em;
-  border-bottom: #aaaaaa 3px solid;
+  border-bottom: #aaaaaa 1px solid;
+}
+.sticky-nav-holder .navbar li.menu-item b.caret {
+  display: none;
 }
 .sticky-nav-holder .navbar li > a {
   padding: 12px 10px;
@@ -94,9 +108,30 @@ a:hover {
 .sticky-nav-holder .navbar .nav li.active a:hover {
   color: #555555;
 }
+.sticky-nav-holder .navbar .nav > li.home-link {
+  position: relative;
+  top: -28px;
+}
+.sticky-nav-holder .navbar .nav > li.home-link a img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+.sticky-nav-holder .navbar .nav li.dropdown.open > .dropdown-toggle,
+.sticky-nav-holder .navbar .nav li.dropdown.active > .dropdown-toggle,
+.sticky-nav-holder .navbar .nav li.dropdown.open.active > .dropdown-toggle {
+  background: transparent;
+  color: #ff9657;
+}
+.sticky-nav-holder .navbar .nav li.dropdown.open > .dropdown-toggle:hover,
+.sticky-nav-holder .navbar .nav li.dropdown.active > .dropdown-toggle:hover,
+.sticky-nav-holder .navbar .nav li.dropdown.open.active > .dropdown-toggle:hover {
+  background: transparent;
+  color: #ff7624;
+}
 .sticky-nav-holder .navbar .nav.items {
   float: right;
-  font-size: 0.85em;
+  font-size: 0.99em;
   text-transform: lowercase;
   font-weight: 500;
   letter-spacing: 0.03em;
@@ -124,6 +159,10 @@ a:hover {
 .sticky-nav-holder .nav-right #header-extras a span:hover {
   background-color: #fff;
   color: #555555;
+}
+.sticky-nav-holder .nav-right .form-search .input-append button {
+  margin-right: 0;
+  padding: 0;
 }
 .navbar .btn-navbar {
   background-color: #555555;

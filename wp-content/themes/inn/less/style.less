@@ -9,6 +9,7 @@ Version:        0.2.0
 */
 
 @import "variables.less";
+@import "utilities.less";
 
 body,
 .btn-primary,
@@ -71,52 +72,85 @@ a {
   max-width: 100%;
 }
 .sticky-nav-holder {
+  position: relative;
   box-shadow: none;
   height: 4em;
   padding: 1.25em 0 0.75em;
-  border-bottom: @ltgray 3px solid;
+  border-bottom: @ltgray 1px solid;
   .navbar {
-	li > a {
-	  padding: 12px 10px;
-	  color: @medgray;
-	}
-	.nav li.active a {
-	  background: none;
-	  color: @medgray;
-	  &:hover {
-	    color: @dkgray;
-	  }
-	}
-	.nav.items {
-	  float: right;
-	  font-size: 0.85em;
-	  text-transform: lowercase;
-	  font-weight: 500;
-	  letter-spacing: 0.03em;
-	  li > a:hover {
-	    background: none;
-		color: @dkgray;
-	  }
-	}
+    li.menu-item b.caret {
+      display: none;
+    }
+    li > a {
+      padding: 12px 10px;
+      color: @medgray;
+    }
+    .nav li.active a {
+      background: none;
+      color: @medgray;
+      &:hover {
+        color: @dkgray;
+      }
+    }
+    .nav > li.home-link {
+      position: relative;
+      top: -28px;
+      a img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+      }
+    }
+    .nav li {
+      &.dropdown.open > .dropdown-toggle,
+      &.dropdown.active > .dropdown-toggle,
+      &.dropdown.open.active > .dropdown-toggle {
+        background: transparent;
+        color: @orange;
+      }
+      &.dropdown.open > .dropdown-toggle:hover,
+      &.dropdown.active > .dropdown-toggle:hover,
+      &.dropdown.open.active > .dropdown-toggle:hover {
+        background: transparent;
+        color: darken(@orange, 10%);
+      }
+    }
+    .nav.items {
+      float: right;
+      font-size: 0.99em;
+      text-transform: lowercase;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      li > a:hover {
+        background: none;
+      color: @dkgray;
+      }
+    }
   }
   #sticky-nav-search a:hover,
   .nav .home-link a:hover {
     background: none;
     color: @dkgray;
   }
-  .nav-right #header-extras a span {
-    position: relative;
-    top: -2px;
-    color: @orange;
-    text-transform: lowercase;
-    background-color: #fff;
-    letter-spacing: 0.03em;
-    font-size: 0.85em;
-    font-weight: 500;
-    text-shadow: none;
-    &:hover {
-	  background-color: #fff;
-	  color: @dkgray;
+  .nav-right {
+    #header-extras a span {
+      position: relative;
+      top: -2px;
+      color: @orange;
+      text-transform: lowercase;
+      background-color: #fff;
+      letter-spacing: 0.03em;
+      font-size: 0.85em;
+      font-weight: 500;
+      text-shadow: none;
+      &:hover {
+      background-color: #fff;
+      color: @dkgray;
+      }
+    }
+    .form-search .input-append button {
+      margin-right: 0;
+      padding: 0;
     }
   }
 }

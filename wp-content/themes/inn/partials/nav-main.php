@@ -1,5 +1,5 @@
 <div class="sticky-nav-wrapper">
-	<div class="sticky-nav-holder <?php echo (is_front_page() || is_home()) ? '' : 'show'; ?>"
+	<div class="sticky-nav-holder show"
 		data-hide-at-top="<?php echo (is_front_page() || is_home()) ? 'true' : 'false'; ?>">
 
 		<?php do_action( 'largo_before_sticky_nav_container' ); ?>
@@ -19,7 +19,7 @@
 								}
 							} ?>
 							<li id="sticky-nav-search">
-								<a href="#" class="toggle">
+								<a href="#" class="toggle flip-horizontal">
 									<i class="icon-search" title="<?php esc_attr_e('Search', 'largo'); ?>" role="button"></i>
 								</a>
 								<form class="form-search" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
@@ -59,13 +59,13 @@
 					</div>
 					<div class="nav-shelf">
 						<ul class="nav">
-							<li class="home-link"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php largo_home_icon( 'icon-white' ); ?></a></li>
+							<li class="home-link">
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+									<img src="<?php echo get_stylesheet_directory_uri() . '/images/logo.png'; ?>" /></a>
+							</li>
 						</ul>
 						<ul class="nav items">
 							<?php
-								if ( of_get_option( 'show_sitename_in_sticky_nav', 1 ) )
-									echo '<li class="site-name"><a href="/">' . get_bloginfo('name') . '</a></li>';
-
 								$args = array(
 								'theme_location' => 'main-nav',
 								'depth'		 => 0,
