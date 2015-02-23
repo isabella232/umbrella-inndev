@@ -190,12 +190,10 @@ body.admin-bar .sticky-nav-holder .nav-right #header-extras,
 body.admin-bar .sticky-nav-holder .nav-right #header-extras a span,
 .sticky-nav-holder .nav-right #header-extras a span {
   position: relative;
-  top: -2px;
   color: #ff9657;
   text-transform: lowercase;
   background-color: #fff;
   letter-spacing: 0.03em;
-  font-size: 0.85em;
   font-weight: 500;
   text-shadow: none;
 }
