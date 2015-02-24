@@ -9,15 +9,7 @@ $social = array('mail', 'rss', 'twitter', 'facebook', 'googleplus', 'youtube');
 ?>
 
 <?php
-	echo '<a href="' . get_author_posts_url( $user->ID ) . '">';
-	echo get_image_tag(
-		$meta['paupress_pp_avatar'][0],
-		esc_attr( $member->data->display_name ),
-		esc_attr( $member->data->display_name ),
-		'left',
-		'thumbnail'
-	);
-	echo '</a>';
+	echo '<a href="' . get_author_posts_url( $user->ID ) . '">' . get_avatar( $user->ID ) . '</a>';
 
 	echo '<h3><a href="' . get_author_posts_url( $user->ID ) . '">' . $user->data->display_name . '</a></h3>';
 

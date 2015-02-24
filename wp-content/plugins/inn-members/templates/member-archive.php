@@ -15,13 +15,7 @@ $social = array('rss', 'twitter', 'facebook', 'googleplus', 'youtube');
 	<article id="author-<?php echo $member->ID; ?>" class="inn_member clearfix">
 		<div class="span3">
 			<?php
-				echo get_image_tag(
-					$meta['paupress_pp_avatar'][0],
-					esc_attr( $member->data->display_name ),
-					esc_attr( $member->data->display_name ),
-					'left',
-					'medium'
-				);
+				echo get_avatar( $member->ID );
 
 				if ( !empty( $meta['inn_founded'][0] ) ) {
 					echo '<p class="founded">Founded ' . $meta["inn_founded"][0] . '</p>';
