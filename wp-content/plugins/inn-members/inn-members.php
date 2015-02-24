@@ -212,14 +212,7 @@ class members_widget extends WP_Widget {
 	      ?>
 	        <li id="member-list-<?php echo $member->ID;?>" class="<?php echo $member->data->paupress_pp_avatar['value']; ?>">
 	        	<a href="<?php echo get_author_posts_url($member->ID) ?>" class="member-thumb" title="<?php esc_attr_e($member->display_name) ?>">
-	        		<?php echo wp_get_attachment_image(
-	        			$member->data->paupress_pp_avatar['value'],
-	        			'member-thumbnail',
-	        			0,
-	        			array(
-	        				'alt' => $member->data->display_name
-	        			)
-	        		); ?>
+	        	<?php echo get_avatar( $member->ID ); ?>
 	        	</a>
 	        </li>
 	      <?php endforeach; ?>
