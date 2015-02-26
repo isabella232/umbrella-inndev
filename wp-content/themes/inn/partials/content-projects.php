@@ -11,6 +11,7 @@ $term_id = $term->term_id;
 		<?php
 			$args = array(
 				'post_type' => 'post',
+				'posts_per_page' => 5,
 				'tax_query' => array(
 					array(
 						'taxonomy' => 'pauinn_project_tax',
@@ -27,6 +28,8 @@ $term_id = $term->term_id;
 					echo '<li><a href="' . get_permalink() . '">' . get_the_title() . '</a></li>';
 				endwhile;
 				echo '</ul>';
+			} else {
+				echo '<ul><li>No news yet, check back soon!</li></ul>';
 			}
 		?>
 	</div>
@@ -46,20 +49,7 @@ $term_id = $term->term_id;
 
 			if ( ! empty( $query['member_search'] ) ) {
 				foreach ( $query['member_search'] as $user_id ) {
-
-					$member = get_userdata( $user_id );
-					$member_profile_link = get_author_posts_url( $user_id );
-
-					$avatar_img = get_image_tag(
-						get_user_meta( $user_id, 'paupress_pp_avatar', true),
-						esc_attr( $member->data->display_name ),
-						esc_attr( $member->data->display_name ),
-						'left',
-						'thumbnail'
-					);
-
-					echo '<a href="' . $member_profile_link . '">' . $avatar_img . '</a>';
-
+					echo '<a href="' . get_author_posts_url( $user_id ) . '">' . get_avatar( $user_id ) . '</a>';
 				}
 			} else {
 				echo 'No members participating in this program yet.';
