@@ -11,7 +11,7 @@
 		<h3><span>About INN</span></h3>
 		<div class="row-fluid">
 			<div class="span4">
-				<a href="/about/"><img src="<? echo $img_path . 'icons/missionglobe.svg'; ?>" /></a>
+				<a href="/about/"><img src="<? echo $img_path . 'icons/mission.svg'; ?>" /></a>
 				<h5><a href="/about/">Mission</a></h5>
 				<p>How we started, what we do and why</p>
 			</div>
@@ -48,7 +48,7 @@
 
 <section id="email" class="interstitial">
 	<div class="content">
-		<img class="mail-icon" src="" />
+		<img class="mail-icon" src="<? echo $img_path . 'icons/mail-squares.png'; ?>" />
 		<div class="content-inner">
 			<h3>Stay Up To Date</h3>
 			<p>News from INN and our members. <strong>Delivered weekly.</strong></p>
@@ -114,25 +114,25 @@
 <section id="hire-us" class="interstitial">
 	<div class="content">
 		<h3>Need a little extra help?</h3>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida justo varius arcu accumsan eleifend. Etiam est libero, porta eu molestie sed, sollicitudin eget lorem.</p>
+		<p>We offer affordable consulting services (at an even more discounted rate for members).</p>
 		<div class="row-fluid">
 			<div class="span4">
-				<img class="icon" src="<? echo $img_path . 'icons/missionglobe.svg'; ?>" />
-				<h5>Member Benefits</h5>
-				<p>Exclusive access to discounts and programs</p>
+				<img class="icon" src="<? echo $img_path . 'icons/hire_webdev.svg'; ?>" />
+				<h5>Web Design + Development</h5>
+				<p>From full redesigns and CMS migrations to technology audits&mdash;and more.</p>
 			</div>
 			<div class="span4">
-				<img class="icon" src="<? echo $img_path . 'icons/missionglobe.svg'; ?>" />
-				<h5>Member Benefits</h5>
-				<p>Exclusive access to discounts and programs</p>
+				<img class="icon" src="<? echo $img_path . 'icons/hire_business.svg'; ?>" />
+				<h5>Business + Growth Strategy</h5>
+				<p>Sustainable revenue and audience development for nonprofit news organizations.</p>
 			</div>
 			<div class="span4">
-				<img class="icon" src="<? echo $img_path . 'icons/missionglobe.svg'; ?>" />
-				<h5>Member Benefits</h5>
-				<p>Exclusive access to discounts and programs</p>
+				<img class="icon" src="<? echo $img_path . 'icons/hire_newsapps.svg'; ?>" />
+				<h5>News Applications</h5>
+				<p>Data analysis and visualization for special editorial projects.</p>
 			</div>
 		</div>
-		<a class="btn btn-primary">Learn more about how great INN is</a>
+		<a class="btn btn-primary">Learn more about hiring INN</a>
 	</div>
 </section>
 
@@ -146,17 +146,17 @@
 		<h3><span>Membership Info</span></h3>
 		<div class="row-fluid">
 			<div class="span4">
-				<a href="/for-members/member-benefits/"><img class="icon" src="<? echo $img_path . 'icons/missionglobe.svg'; ?>" /></a>
+				<a href="/for-members/member-benefits/"><img class="icon" src="<? echo $img_path . 'icons/memberbenefits.svg'; ?>" /></a>
 				<h5><a href="/for-members/member-benefits/">Member Benefits</a></h5>
 				<p>Exclusive access to discounts and programs</p>
 			</div>
 			<div class="span4">
-				<a href="/for-members/become-a-member/"><img class="icon" src="<? echo $img_path . 'icons/news.svg'; ?>" /></a>
+				<a href="/for-members/become-a-member/"><img class="icon" src="<? echo $img_path . 'icons/becomemember.svg'; ?>" /></a>
 				<h5><a href="/for-members/become-a-member/">Become a Member</a></h5>
 				<p>Fill out an application</p>
 			</div>
 			<div class="span4">
-				<a href="/for-members/membership-faqs/"><img class="icon" src="<? echo $img_path . 'icons/news.svg'; ?>" /></a>
+				<a href="/for-members/membership-faqs/"><img class="icon" src="<? echo $img_path . 'icons/memberfaq.svg'; ?>" /></a>
 				<h5><a href="/for-members/membership-faqs/">FAQs</a></h5>
 				<p>Answers to all your questions</p>
 			</div>
