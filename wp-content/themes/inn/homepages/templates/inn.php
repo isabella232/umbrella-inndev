@@ -122,12 +122,12 @@
 				<p>From full redesigns and CMS migrations to technology audits&mdash;and more.</p>
 			</div>
 			<div class="span4">
-				<img class="icon" src="<? echo $img_path . 'icons/hire_business.svg'; ?>" />
+				<img class="icon" src="<? echo $img_path . 'icons/hire_strategy.svg'; ?>" />
 				<h5>Business + Growth Strategy</h5>
 				<p>Sustainable revenue and audience development for nonprofit news organizations.</p>
 			</div>
 			<div class="span4">
-				<img class="icon" src="<? echo $img_path . 'icons/hire_newsapps.svg'; ?>" />
+				<img class="icon" src="<? echo $img_path . 'icons/hire_apps.svg'; ?>" />
 				<h5>News Applications</h5>
 				<p>Data analysis and visualization for special editorial projects.</p>
 			</div>
