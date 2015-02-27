@@ -175,7 +175,7 @@
 
 <section id="supporters" class="normal">
 	<div class="content">
-		<h3><span>INN Thanks Our Supporters</span></h3>
+		<h3><span>Thanks Supporters!</span></h3>
 		<div class="row-fluid">
 			<ul class="span4">
 				<li><a href="http://www.atlanticphilanthropies.org/">Atlantic Philanthropies</a></li>
