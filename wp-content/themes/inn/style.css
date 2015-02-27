@@ -289,13 +289,37 @@ h1.entry-title {
 #site-footer a:hover {
   color: #22c2f3;
 }
-#ft-social li i {
-  color: #777777;
+#site-footer #ft-social {
+  display: block;
+  margin: 0 auto;
+  width: intrinsic;
+  margin-bottom: 1em;
+}
+#site-footer #ft-social li {
+  float: none;
+  display: inline-block;
+}
+#site-footer #ft-social li i {
+  color: #fff;
+  background-color: #777777;
+  padding: 14px;
+  border-radius: 30px;
+}
+#site-footer #ft-social li i:hover {
+  background-color: #fff;
+}
+@media (max-width: 768px) {
+  #site-footer #ft-social {
+    float: none;
+  }
+  #site-footer #ft-social li i {
+    font-size: 24px;
+  }
 }
 #supplementary {
-  border-bottom: 1px solid #ddd;
+  border-bottom: none;
   padding-top: 3em;
-  margin-bottom: 0.75em;
+  margin-bottom: 0;
 }
 #boilerplate {
   text-align: center;

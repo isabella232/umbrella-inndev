@@ -271,14 +271,37 @@ h1.entry-title {
 	  color: @blue;
     }
   }
+  #ft-social {
+    display: block;
+    margin: 0 auto;
+    width: intrinsic;
+    margin-bottom: 1em;
+    li {
+      float: none;
+      display: inline-block;
+      i {
+        color: #fff;
+        background-color: @medgray;
+        padding: 14px;
+        border-radius: 30px;
+        &:hover {
+	      background-color: #fff;
+        }
+      }
+    }
+    @media (max-width: 768px) {
+	  float: none;
+	  li i {
+	    font-size: 24px;
+	  }
+	}
+  }
 }
-#ft-social li i {
-  color: @medgray;
-}
+
 #supplementary {
-  border-bottom: 1px solid #ddd;
+  border-bottom: none;
   padding-top: 3em;
-  margin-bottom: 0.75em;
+  margin-bottom: 0;
 }
 #boilerplate {
   text-align: center;
