@@ -281,6 +281,12 @@ h1.entry-title {
 #supplementary div:nth-child(3) {
   margin-top: 1.4em;
 }
+#supplementary div:first-child {
+  padding: 10px 30px 0 0;
+}
+#supplementary div.menu-footer-bottom-container {
+  padding: 0;
+}
 #site-footer .widget.widget_sp_image {
   margin-top: 1em;
 }
@@ -321,6 +327,10 @@ h1.entry-title {
   #site-footer #ft-social li i {
     font-size: 24px;
   }
+}
+#menu-footer-navigation,
+#supplementary ul.menu {
+  font-family: "effra", helvetica, sans-serif;
 }
 #supplementary {
   border-bottom: none;
@@ -367,6 +377,9 @@ h1.entry-title {
   }
   #supplementary div:nth-child(3) {
     margin-top: 0;
+  }
+  #supplementary div:first-child {
+    padding: 0;
   }
   #menu-footer-navigation li,
   #supplementary ul.menu li {

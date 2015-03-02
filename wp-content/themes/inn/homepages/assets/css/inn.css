@@ -262,6 +262,8 @@
 .home #main #supporters {
   padding-top: 2em;
   background-color: #efefef;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 .home #main #supporters .span4 {
   padding: 2em 2em 1em;
@@ -272,6 +274,8 @@
   background-color: transparent;
   line-height: 1;
   margin: 0;
+  text-align: center;
+  text-transform: uppercase;
 }
 .home #main #supporters li {
   list-style: none;

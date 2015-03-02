@@ -173,7 +173,7 @@
 	</div>
 </section>
 
-<section id="supporters" class="normal">
+<section id="supporters" class="interstitial">
 	<div class="content">
 		<h3>Thanks, Supporters!</h3>
 		<div class="row-fluid">
