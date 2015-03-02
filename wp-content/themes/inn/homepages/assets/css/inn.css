@@ -97,9 +97,9 @@
   }
 }
 .home #main .row-fluid img {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 1em;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.8em;
 }
 .home #main .row-fluid h5 {
   font-size: 20px;
@@ -211,13 +211,29 @@
     clear: both;
   }
 }
+.home #testimonial img {
+  width: 140px;
+  height: 140px;
+  border-radius: 100px;
+  margin: 0 5em 0 0;
+}
+.home #testimonial p {
+  padding: 0 4em;
+  font-family: "leitura-news", georgia, serif;
+  font-size: 21px;
+}
 .home #testimonial p.credit {
   text-align: right;
+  font-family: "effra", helvetica, sans-serif;
+  font-size: 18px;
 }
-.home #testimonial .btn {
-  display: block;
-  max-width: 50%;
-  margin: 0 auto;
+@media (max-width: 900px) {
+  .home #testimonial p {
+    padding: 0 2em;
+  }
+  .home #testimonial p.credit {
+    text-align: left;
+  }
 }
 @media (max-width: 600px) {
   .home #testimonial img {
@@ -226,10 +242,17 @@
     clear: both;
     margin: 0 auto 2em;
   }
+  .home #testimonial p {
+    padding: 0;
+  }
+  .home #testimonial p.credit {
+    margin-bottom: 0;
+  }
 }
 .home #members {
   height: auto;
   background: none;
+  margin-bottom: 3em;
 }
 .home #members h3 {
   text-align: center;

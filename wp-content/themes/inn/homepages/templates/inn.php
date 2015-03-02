@@ -141,6 +141,15 @@
 	<?php the_widget ( 'members_widget' ); ?>
 </section>
 
+<section id="testimonial" class="interstitial">
+	<div class="content">
+		<?php $testimonial = inn_get_testimonial(); ?>
+		<img src="<? echo $testimonial['photo_url']; ?>" />
+		<p><? echo $testimonial['text']; ?></p>
+		<p class="credit">&ndash; <? echo $testimonial['name'] . ', <a href="' . $testimonial['org_link'] . '">' . $testimonial['org'] . '</a>'; ?></p>
+	</div>
+</section>
+
 <section id="member-info" class="normal">
 	<div class="content">
 		<h3><span>Membership Info</span></h3>
@@ -161,15 +170,6 @@
 				<p>Answers to all your questions</p>
 			</div>
 		</div>
-	</div>
-</section>
-
-<section id="testimonial" class="interstitial">
-	<div class="content">
-		<img class="mail-icon" src="<? echo $img_path . 'icons/mail.svg'; ?>" />
-		<p><strong>I love INN</strong> because it is the best and helped me do stuff! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida justo varius arcu accumsan eleifend. Etiam est libero, porta eu molestie sed, sollicitudin eget lorem.</p>
-		<p class="credit">&ndash; Bob Smith, The News Organization</p>
-		<a class="btn">Learn more about how great INN is</a>
 	</div>
 </section>
 

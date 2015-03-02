@@ -93,9 +93,9 @@
 	  }
 	}
 	img {
-	  width: 50px;
-	  height: 50px;
-	  margin-bottom: 1em;
+	  width: 40px;
+	  height: 40px;
+	  margin-bottom: 0.8em;
 	}
 	h5 {
       font-size: 20px;
@@ -211,13 +211,29 @@
 	}
   }
   #testimonial {
-    p.credit {
-      text-align: right;
+    img {
+	  width: 140px;
+	  height: 140px;
+	  border-radius: 100px;
+	  margin: 0 5em 0 0;
     }
-    .btn {
-	  display: block;
-	  max-width: 50%;
-	  margin: 0 auto;
+    p {
+	  padding: 0 4em;
+	  font-family: @serif;
+	  font-size: 21px;
+	  &.credit {
+        text-align: right;
+        font-family: @sans;
+        font-size: 18px;
+      }
+    }
+    @media ( max-width: 900px ) {
+	  p {
+		padding: 0 2em;
+		&.credit {
+	      text-align: left;
+	    }
+	  }
 	}
 	@media ( max-width: 600px ) {
       img {
@@ -226,11 +242,18 @@
 	    clear: both;
 	    margin: 0 auto 2em;
       }
+      p {
+	    padding: 0;
+	    &.credit {
+		  margin-bottom: 0;
+	    }
+	  }
 	}
   }
   #members {
     height: auto;
     background: none;
+    margin-bottom: 3em;
     h3 {
       text-align: center;
       text-transform: uppercase;
