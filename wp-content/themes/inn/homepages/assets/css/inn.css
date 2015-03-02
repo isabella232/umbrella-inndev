@@ -3,7 +3,7 @@
   padding: 0;
 }
 .home #main {
-  margin-top: 0;
+  margin: 0;
 }
 .home #hero,
 .home section.interstitial {
@@ -259,8 +259,19 @@
   text-transform: uppercase;
   margin-bottom: 0;
 }
+.home #main #supporters {
+  padding-top: 2em;
+  background-color: #efefef;
+}
 .home #main #supporters .span4 {
-  padding: 2em;
+  padding: 2em 2em 1em;
+}
+.home #main #supporters h3 {
+  width: auto;
+  color: #555555;
+  background-color: transparent;
+  line-height: 1;
+  margin: 0;
 }
 .home #main #supporters li {
   list-style: none;
@@ -272,11 +283,17 @@
   color: #777777;
 }
 @media (max-width: 768px) {
+  .home #main #supporters {
+    padding-bottom: 2em;
+  }
   .home #main #supporters .span4 {
     clear: both;
     width: 100%;
     padding: 0 2em;
     margin: 0;
+  }
+  .home #main #supporters h3 {
+    margin-bottom: 1em;
   }
   .home #main #supporters li {
     text-align: center;
