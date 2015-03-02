@@ -111,6 +111,10 @@ body.admin-bar .sticky-nav-holder .navbar li > a,
   padding: 12px 10px;
   color: #777777;
 }
+body.admin-bar .sticky-nav-holder .navbar #sticky-nav-search > a,
+.sticky-nav-holder .navbar #sticky-nav-search > a {
+  padding-right: 0;
+}
 body.admin-bar .sticky-nav-holder .navbar .nav li.active a,
 .sticky-nav-holder .navbar .nav li.active a {
   background: none;
@@ -214,6 +218,9 @@ body.admin-bar .sticky-nav-holder .nav-right .form-search .input-append button,
 }
 html.no-touch .navbar li.home-link > a:hover {
   background: transparent;
+}
+#header-social {
+  padding-top: 24px;
 }
 #header-social i.icon-rss,
 #header-social i.icon-twitter,
