@@ -269,6 +269,61 @@ h1.entry-title {
   padding-left: 10px;
   color: #777777;
 }
+#hero,
+section.interstitial {
+  max-width: 100%;
+  background-color: #555555;
+}
+section,
+.interstitial .content {
+  margin: 0 auto;
+  max-width: 1170px;
+}
+.normal {
+  height: auto;
+}
+.normal h3 {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  width: 62%;
+  background-color: #22c2f3;
+  color: #22c2f3;
+  line-height: 10px;
+  margin: 2em auto 1.5em;
+}
+.normal h3 span {
+  background-color: #fff;
+  padding: 0 60px;
+}
+@media (max-width: 900px) {
+  .normal h3 {
+    width: 90%;
+  }
+  .normal h3 span {
+    padding: 0 30px;
+  }
+}
+@media (max-width: 600px) {
+  .normal h3 {
+    line-height: 1.5;
+    background-color: transparent;
+    margin: 0.5em auto;
+  }
+  .normal h3 span {
+    padding: 0;
+  }
+}
+.interstitial {
+  max-width: 100%;
+  padding: 3em;
+  margin: 0 auto 3em;
+  background-color: #555555;
+  color: #efefef;
+}
+.interstitial h3 {
+  color: #efefef;
+}
 .footer-bg {
   background-color: #555555;
 }

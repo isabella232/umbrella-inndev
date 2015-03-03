@@ -245,6 +245,59 @@ h1.entry-title {
   }
 }
 
+// Building blocks (normal and interstitial)
+#hero,
+section.interstitial {
+  max-width: 100%;
+  background-color: @dkgray;
+}
+section,
+.interstitial .content {
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+.normal {
+  height: auto;
+  h3 {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    width: 62%;
+    background-color: @blue;
+    color: @blue;
+    line-height: 10px;
+    margin: 2em auto 1.5em;
+    span {
+      background-color: #fff;
+      padding: 0 60px;
+    }
+    @media (max-width: 900px) {
+      width: 90%;
+      span {
+        padding: 0 30px;
+      }
+    }
+    @media (max-width: 600px) {
+      line-height: 1.5;
+      background-color: transparent;
+      margin: 0.5em auto;
+      span {
+        padding: 0;
+      }
+    }
+  }
+}
+.interstitial {
+  max-width: 100%;
+  padding: 3em;
+  margin: 0 auto 3em;
+  background-color: @dkgray;
+  color: @xltgray;
+  h3 {
+  color: @xltgray;
+  }
+}
 
 // footer adjustments
 .footer-bg {
