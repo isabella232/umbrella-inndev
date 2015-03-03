@@ -242,6 +242,43 @@ html.no-touch .navbar li.home-link > a:hover {
 #main {
   margin: 6em 0 4em;
 }
+#main .row-fluid img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.8em;
+}
+#main .row-fluid .span4 {
+  text-align: center;
+  padding: 2em 5em;
+}
+@media (max-width: 980px) {
+  #main .row-fluid .span4 {
+    padding: 1.5em 2em;
+  }
+}
+@media (max-width: 600px) {
+  #main .row-fluid .span4 {
+    width: 100%;
+    margin: 0;
+    clear: both;
+    padding: 0.5em 10%;
+  }
+}
+#main .row-fluid h5 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 0.25em;
+}
+#main .row-fluid h5 a {
+  color: #777777;
+}
+#main .row-fluid h5 a:hover {
+  color: #22c2f3;
+}
+#main .row-fluid p {
+  font-size: 16px;
+  font-weight: 300;
+}
 body.page #content {
   position: relative;
   margin-left: 17.021276594%;
@@ -323,6 +360,23 @@ section,
 }
 .interstitial h3 {
   color: #efefef;
+}
+#programs h3,
+#member-info h3 {
+  background-color: #ff9657;
+  color: #ff9657;
+}
+@media (max-width: 600px) {
+  #programs h3,
+  #member-info h3 {
+    line-height: 1.5;
+    background-color: transparent;
+    margin-bottom: 0.5em;
+  }
+}
+#programs h5 a:hover,
+#member-info h5 a:hover {
+  color: #ff9657;
 }
 .footer-bg {
   background-color: #555555;

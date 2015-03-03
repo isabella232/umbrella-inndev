@@ -24,60 +24,6 @@
     margin-bottom: 1em;
   }
 }
-.home #main .row-fluid .span4 {
-  text-align: center;
-  padding: 2em 5em;
-}
-@media (max-width: 980px) {
-  .home #main .row-fluid .span4 {
-    padding: 1.5em 2em;
-  }
-}
-@media (max-width: 600px) {
-  .home #main .row-fluid .span4 {
-    width: 100%;
-    margin: 0;
-    clear: both;
-    padding: 0.5em 10%;
-  }
-}
-.home #main .row-fluid img {
-  width: 40px;
-  height: 40px;
-  margin-bottom: 0.8em;
-}
-.home #main .row-fluid h5 {
-  font-size: 20px;
-  font-weight: 400;
-  margin-bottom: 0.25em;
-}
-.home #main .row-fluid h5 a {
-  color: #777777;
-}
-.home #main .row-fluid h5 a:hover {
-  color: #22c2f3;
-}
-.home #main .row-fluid p {
-  font-size: 16px;
-  font-weight: 300;
-}
-.home #programs h3,
-.home #member-info h3 {
-  background-color: #ff9657;
-  color: #ff9657;
-}
-@media (max-width: 600px) {
-  .home #programs h3,
-  .home #member-info h3 {
-    line-height: 1.5;
-    background-color: transparent;
-    margin-bottom: 0.5em;
-  }
-}
-.home #programs h5 a:hover,
-.home #member-info h5 a:hover {
-  color: #ff9657;
-}
 .home #hire-us {
   padding: 3em;
   text-align: center;

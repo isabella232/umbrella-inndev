@@ -60,8 +60,6 @@ get_header();
 	<h3><a href="#"><span>Not a member yet?</span></a></h3>
 </section>
 
-<section class="normal">
-	<h3><a href="#"><span>Our programs</span></a></h3>
-</section>
+<?php get_template_part('partials/programs'); ?>
 
 <?php get_footer();
