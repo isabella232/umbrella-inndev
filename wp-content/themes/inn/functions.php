@@ -36,6 +36,10 @@ function inn_enqueue() {
 	if ( !is_admin() ) {
 		wp_enqueue_script( 'inn-tools', get_stylesheet_directory_uri() . '/js/inn.js', array('jquery'), '1.0.0', true );
 	}
+
+	if ( is_page('for-members') || is_page('for-funders') ) {
+		wp_enqueue_style('landing', get_stylesheet_directory_uri() . '/landing.css', null, '1.0.0');
+	}
 }
 add_action( 'wp_enqueue_scripts', 'inn_enqueue' );
 

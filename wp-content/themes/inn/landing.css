@@ -1,0 +1,36 @@
+.flip-horizontal {
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
+  -ms-filter: fliph;
+  filter: fliph;
+  /*IE*/
+
+}
+.normal .row-fluid {
+  margin: 0 0 4em 0;
+}
+.normal h3 span {
+  color: #555555;
+}
+.page-content p {
+  font-family: "leitura-news", georgia, serif;
+  font-size: 1em;
+  line-height: 1.7em;
+}
+#quick-links {
+  text-align: center;
+}
+#quick-links h4 {
+  color: #555555;
+  text-transform: uppercase;
+}
+#quick-links li {
+  font-size: 1.25em;
+  display: inline-block;
+  margin: 0 20px 0 0;
+}
+#news-and-benefits .widget {
+  padding: 0;
+}
