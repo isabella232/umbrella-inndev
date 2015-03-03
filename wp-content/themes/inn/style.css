@@ -320,6 +320,9 @@ h1.entry-title {
 #site-footer #ft-social li i:hover {
   background-color: #fff;
 }
+#site-footer #ft-social li i.icon-github:hover {
+  color: #777777;
+}
 @media (max-width: 768px) {
   #site-footer #ft-social {
     float: none;
