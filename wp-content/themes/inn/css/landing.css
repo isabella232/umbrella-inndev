@@ -173,3 +173,10 @@
     margin: 1.2em auto 2.4em auto;
   }
 }
+#programs h3,
+#member-info h3 {
+  background-color: #22c2f3;
+}
+#inn-brags h3 {
+  text-align: center;
+}
