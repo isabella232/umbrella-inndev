@@ -12,6 +12,7 @@ add_filter( 'body_class', function( $classes ) {
 get_header();
 
 $about_pg_id = 2212;
+$programs_pg_id = 2587;
 $members_pg_id = 234260;
 $content_class = 'span8';
 
@@ -27,7 +28,7 @@ if ( is_page() || is_singular( 'pauinn_project' ) ) {
 		$show_menu = 'About';
 	if ( is_page( $members_pg_id ) || in_array( $members_pg_id , $ancestors) )
 		$show_menu = 'Membership';
-	if ( is_singular( 'pauinn_project' ) )
+	if ( is_singular( 'pauinn_project' ) || is_page( $programs_pg_id ) )
 		$show_menu = 'Projects';
 
 	// yep, we should show a menu, modify the layout appropriately
