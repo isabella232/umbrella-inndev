@@ -86,6 +86,19 @@ a:hover {
 .top-tag {
   font-weight: 300;
 }
+.stories h2.entry-title {
+  font-size: 24px;
+  margin-bottom: 0.5em;
+}
+.stories h2.entry-title a {
+  color: #555555;
+}
+.stories h2.entry-title a:hover {
+  color: #22c2f3;
+}
+.stories h5.byline {
+  display: none;
+}
 .sticky-nav-container {
   max-width: 100%;
 }
