@@ -46,6 +46,8 @@ function inn_landing_page_enqueue() {
 		wp_enqueue_style('press', get_stylesheet_directory_uri() . '/css/press.css', null, '1.0.0');
 	} else if ( is_page( 'people' ) ) {
 		wp_enqueue_style('people', get_stylesheet_directory_uri() . '/css/people.css', null, '1.0.0');
+	} else if ( is_page( 'news' ) ) {
+		wp_enqueue_style('news', get_stylesheet_directory_uri() . '/css/news.css', null, '1.0.0');
 	}
 }
 add_action('wp_enqueue_scripts', 'inn_landing_page_enqueue', 200);

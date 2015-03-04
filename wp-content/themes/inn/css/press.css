@@ -5,6 +5,12 @@
   font-size: 18px;
   margin-bottom: 0.5em;
 }
+.type-argolinks h3 a {
+  color: #555555;
+}
+.type-argolinks h3 a:hover {
+  color: #22c2f3;
+}
 .type-argolinks p {
   font-size: 15px;
   margin-bottom: 0.5em;
@@ -13,4 +19,8 @@
   font-style: italic;
   padding-left: 10px;
   color: #777777;
+}
+.stories article.type-argolinks {
+  border-bottom: none;
+  margin-bottom: 2em;
 }
