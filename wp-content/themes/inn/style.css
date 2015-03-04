@@ -305,22 +305,6 @@ h1.entry-title {
   text-align: center;
   margin-bottom: 1em;
 }
-.type-argolinks {
-  margin-bottom: 2em;
-}
-.type-argolinks h3 {
-  font-size: 18px;
-  margin-bottom: 0.5em;
-}
-.type-argolinks p {
-  font-size: 15px;
-  margin-bottom: 0.5em;
-}
-.type-argolinks p.source span {
-  font-style: italic;
-  padding-left: 10px;
-  color: #777777;
-}
 #hero,
 section.interstitial {
   max-width: 100%;
