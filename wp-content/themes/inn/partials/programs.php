@@ -21,7 +21,7 @@
 					?>
 
 					<div class="span4">
-						<?php echo '<a href="' . get_permalink( $post[0]->ID ) . '">' . get_the_post_thumbnail( $post[0]->ID ) . '</a>'; ?>
+						<?php echo '<a class="program" href="' . get_permalink( $post[0]->ID ) . '">' . get_the_post_thumbnail( $post[0]->ID ) . '</a>'; ?>
 						<?php echo '<h5><a href="' . get_permalink( $post[0]->ID ) . '">' .  get_the_title( $post[0]->ID ) . '</a></h5>'; ?>
 						<?php echo '<p>' . $post[0]->post_excerpt . '</p>'; ?>
 					</div>
