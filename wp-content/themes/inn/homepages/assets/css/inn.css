@@ -39,7 +39,7 @@
 .home #members h3 {
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 0;
+  margin-bottom: 1em;
 }
 .home #main #supporters {
   padding-top: 2em;
