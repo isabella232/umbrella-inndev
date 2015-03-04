@@ -97,19 +97,9 @@
 	</div>
 </section>
 
-<section id="members" class="normal">
-	<h3><a href="/members/"><span>Our Members</span></a></h3>
-	<?php the_widget ( 'members_widget' ); ?>
-</section>
+<?php get_template_part('partials/our_members'); ?>
 
-<section id="testimonial" class="interstitial branding">
-	<div class="content">
-		<?php $testimonial = inn_get_testimonial(); ?>
-		<img src="<? echo $testimonial['photo_url']; ?>" />
-		<p><? echo $testimonial['text']; ?></p>
-		<p class="credit">&ndash; <? echo $testimonial['name'] . ', <a href="' . $testimonial['org_link'] . '">' . $testimonial['org'] . '</a>'; ?></p>
-	</div>
-</section>
+<?php get_template_part('partials/testimonials'); ?>
 
 <section id="member-info" class="normal">
 	<div class="content">

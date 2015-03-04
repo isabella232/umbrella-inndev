@@ -9,13 +9,13 @@ $img_path = get_stylesheet_directory_uri() . '/images/';
 ?>
 
 <section class="normal container-fluid">
-	<?php if (is_page('for-members')) { ?>
 	<div class="row-fluid">
 		<div class="span12">
 			<h3><span><?php echo $post->post_title; ?></span></h3>
 			<div class="page-content"><?php echo wpautop($post->post_content); ?></div>
 		</div>
 	</div>
+	<?php if (is_page('for-members')) { ?>
 	<div id="quick-links" class="row-fluid">
 		<div class="span12">
 			<h4>Quick links</h4>
@@ -27,7 +27,19 @@ $img_path = get_stylesheet_directory_uri() . '/images/';
 			</ul>
 		</div>
 	</div>
-	<div id="news-and-benefits" class="row-fluid">
+	<?php } else if (is_page('for-funders')) { ?>
+	<div id="quick-links" class="row-fluid">
+		<div class="span12">
+			<h4>Learn more</h4>
+			<ul>
+				<li><a href="/about/people/">INN Staff+Board</a></li>
+				<li><a href="/about/">Our History</a></li>
+				<li><a href="/about/financials/">Financials</a></li>
+			</ul>
+		</div>
+	</div>
+	<?php } ?>
+	<div id="news-and-benefits-and-funders" class="row-fluid">
 		<div id="news" class="span7">
 			<?php the_widget('largo_recent_posts_widget', array(
 					'thumbnail_display' => false,
@@ -41,23 +53,43 @@ $img_path = get_stylesheet_directory_uri() . '/images/';
 				)
 			); ?>
 		</div>
-		<div id="benefits" class="span5">
-			<h4>Member Benefits</h4>
-			<ul>
-				<li>Technology training and web hosting</li>
-				<li>Revenue Generation and Cost-Savings Opportunities</li>
-				<li>Editorial Collaboration</li>
-				<li>Fiscal Sponsorship</li>
-				<li>Third-Party Resources: Software Insurance, Legal Advice</li>
-				<li>Marketing and Public Relations</li>
-				<li>Networking and Information Resources</li>
-			</ul>
-			<a class="learn-more" href="/for-members/member-benefits/">Learn more about member benefits</a>
+		<div id="benefits-and-funders" class="span5">
+			<?php if (is_page('for-members')) { ?>
+				<h4>Member Benefits</h4>
+				<ul class="benefits">
+					<li>Technology training and web hosting</li>
+					<li>Revenue Generation and Cost-Savings Opportunities</li>
+					<li>Editorial Collaboration</li>
+					<li>Fiscal Sponsorship</li>
+					<li>Third-Party Resources: Software Insurance, Legal Advice</li>
+					<li>Marketing and Public Relations</li>
+					<li>Networking and Information Resources</li>
+				</ul>
+				<a class="learn-more" href="/for-members/member-benefits/">Learn more about member benefits</a>
+			<?php } else if (is_page('for-funders')) { ?>
+				<h4>Major Donors</h4>
+				<ul class="donors">
+					<li>Atlantic Philanthropies</li>
+					<li>Democracy Fund</li>
+					<li>The William and Flora Hewlett Foundation</li>
+					<li>The Peter and Carmen Lucia Buck Foundation</li>
+					<li>Buzz Woolley</li>
+					<li>Ethics and Excellence in Journalism Foundation</li>
+					<li>The John S. and James L. Knight Foundation</li>
+					<li>John D. Catherine T. MacArthur Foundation</li>
+					<li>Robert R. McCormick Foundation</li>
+					<li>Karin Winner</li>
+					<li>Open Society Foundations</li>
+					<li>The Patterson Foundation</li>
+					<li>Rockefeller Brothers Fund</li>
+					<li>The INN Board</li>
+				</ul>
+			<?php } ?>
 		</div>
 	</div>
-	<?php } ?>
 </section>
 
+<?php if (is_page('for-members')) { ?>
 <section id="membership-callout" class="interstitial branding">
 	<div class="content">
 		<img class="member-icon" src="<? echo $img_path . 'red_boxes.png'; ?>" />
@@ -68,7 +100,15 @@ $img_path = get_stylesheet_directory_uri() . '/images/';
 		</div>
 	</div>
 </section>
+<?php
+} else if (is_page('for-funders')) {
+	get_template_part('partials/testimonials');
+}
 
-<?php get_template_part('partials/programs'); ?>
+get_template_part('partials/programs');
 
-<?php get_footer();
+if (is_page('for-funders')) {
+	get_template_part('partials/our_members');
+}
+
+get_footer();
