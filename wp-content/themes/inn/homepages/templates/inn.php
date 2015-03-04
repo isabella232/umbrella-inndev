@@ -11,34 +11,34 @@
 		<h3><span>About INN</span></h3>
 		<div class="row-fluid">
 			<div class="span4">
-				<a href="/about/"><img src="<? echo $img_path . 'icons/mission.svg'; ?>" /></a>
+				<a href="/about/"><img class="icon" src="<? echo $img_path . 'icons/mission.svg'; ?>" /></a>
 				<h5><a href="/about/">Mission</a></h5>
 				<p>How we started, what we do and why</p>
 			</div>
 			<div class="span4">
-				<a href="/people/"><img src="<? echo $img_path . 'icons/people.svg'; ?>" /></a>
+				<a href="/people/"><img class="icon" src="<? echo $img_path . 'icons/people.svg'; ?>" /></a>
 				<h5><a href="/people/">People</a></h5>
 				<p>Our staff and board</p>
 			</div>
 			<div class="span4">
-				<a href="/news/"><img src="<? echo $img_path . 'icons/news.svg'; ?>" /></a>
+				<a href="/news/"><img class="icon" src="<? echo $img_path . 'icons/news.svg'; ?>" /></a>
 				<h5><a href="/news/">News</a></h5>
 				<p>The latest news about our programs</p>
 			</div>
 		</div>
 		<div class="row-fluid">
 			<div class="span4">
-				<a href="/financials/"><img src="<? echo $img_path . 'icons/financial.svg'; ?>" /></a>
+				<a href="/financials/"><img class="icon" src="<? echo $img_path . 'icons/financial.svg'; ?>" /></a>
 				<h5><a href="/financials/">Financial</a></h5>
 				<p>How we're funded, tax forms and our major donors</p>
 			</div>
 			<div class="span4">
-				<a href="/legal/"><img src="<? echo $img_path . 'icons/legal.svg'; ?>" /></a>
+				<a href="/legal/"><img class="icon" src="<? echo $img_path . 'icons/legal.svg'; ?>" /></a>
 				<h5><a href="/legal/">Legal</a></h5>
 				<p>The fine print, bylaws, policies and more</p>
 			</div>
 			<div class="span4">
-				<a href="/contact/"><img src="<? echo $img_path . 'icons/contact.svg'; ?>" /></a>
+				<a href="/contact/"><img class="icon" src="<? echo $img_path . 'icons/contact.svg'; ?>" /></a>
 				<h5><a href="/contact/">Contact</a></h5>
 				<p>We'd love to hear from you</p>
 			</div>
