@@ -361,6 +361,70 @@ section,
 .interstitial h3 {
   color: #efefef;
 }
+.interstitial.branding img {
+  float: left;
+  margin: 1em 3em 1em 1em;
+}
+.interstitial.branding .content {
+  overflow: auto;
+}
+.interstitial.branding .content-inner {
+  float: right;
+  width: 75%;
+}
+.interstitial.branding h3 {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 2em;
+  margin-bottom: 0.25em;
+  text-align: left;
+}
+.interstitial.branding form {
+  display: block;
+  float: none;
+  margin: 0 auto;
+}
+.interstitial.branding input {
+  float: left;
+  margin-right: 6px;
+  padding: 12px 10px;
+  width: 400px;
+}
+.interstitial.branding input.btn {
+  display: block;
+  float: left;
+  clear: none;
+  padding: 13px 1em;
+  width: 200px;
+}
+@media (max-width: 700px) {
+  .interstitial.branding img {
+    float: none;
+    margin: 0 auto 1em;
+    width: 30%;
+  }
+  .interstitial.branding .content {
+    overflow: visible;
+  }
+  .interstitial.branding .content-inner {
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
+  .interstitial.branding h3 {
+    text-align: center;
+  }
+  .interstitial.branding input {
+    float: none;
+    margin-right: 0;
+    max-width: 75%;
+  }
+  .interstitial.branding input.btn {
+    float: none;
+    margin: 0 auto;
+    clear: both;
+  }
+}
 #programs h3,
 #member-info h3 {
   background-color: #ff9657;

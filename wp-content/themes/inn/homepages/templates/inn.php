@@ -46,7 +46,7 @@
 	</div>
 </section>
 
-<section id="email" class="interstitial">
+<section id="email" class="interstitial branding">
 	<div class="content">
 		<img class="mail-icon" src="<? echo $img_path . 'icons/mail-squares.png'; ?>" />
 		<div class="content-inner">
@@ -102,7 +102,7 @@
 	<?php the_widget ( 'members_widget' ); ?>
 </section>
 
-<section id="testimonial" class="interstitial">
+<section id="testimonial" class="interstitial branding">
 	<div class="content">
 		<?php $testimonial = inn_get_testimonial(); ?>
 		<img src="<? echo $testimonial['photo_url']; ?>" />

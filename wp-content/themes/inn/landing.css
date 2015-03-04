@@ -31,6 +31,52 @@
   display: inline-block;
   margin: 0 20px 0 0;
 }
-#news-and-benefits .widget {
+#news-and-benefits.row-fluid .widget {
   padding: 0;
+}
+#news-and-benefits.row-fluid .largo-recent-posts span.sep,
+#news-and-benefits.row-fluid .largo-recent-posts span.by-author,
+#news-and-benefits.row-fluid .largo-recent-posts span.edit-link {
+  display: none;
+}
+#news-and-benefits.row-fluid .largo-recent-posts .entry-date:before {
+  content: "Posted ";
+}
+#news-and-benefits.row-fluid .largo-recent-posts .entry-date,
+#news-and-benefits.row-fluid .largo-recent-posts .entry-date:before {
+  font-weight: 200;
+  font-size: 18px;
+}
+#news-and-benefits.row-fluid .largo-recent-posts h5 {
+  margin: 0;
+  font-size: 22px;
+}
+#news-and-benefits.row-fluid .largo-recent-posts h5 a {
+  color: #555555;
+}
+#news-and-benefits.row-fluid .largo-recent-posts .byline {
+  color: #aaaaaa;
+}
+#news-and-benefits.row-fluid .largo-recent-posts .post-lead {
+  margin-bottom: 1.7em;
+}
+#news-and-benefits.row-fluid #benefits ul {
+  margin: 0;
+  padding: 0;
+}
+#news-and-benefits.row-fluid #benefits li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  margin: 0 0 1.5em 0;
+}
+#news-and-benefits.row-fluid #benefits li a {
+  color: #555555;
+}
+#news-and-benefits.row-fluid #benefits li a:hover {
+  color: #22c2f3;
+}
+#news-and-benefits.row-fluid #benefits .learn-more {
+  font-size: 18px;
 }

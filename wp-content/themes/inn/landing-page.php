@@ -4,9 +4,11 @@
  * Description: Template for member and funder info.
  */
 get_header();
+
+$img_path = get_stylesheet_directory_uri() . '/homepages/assets/img/';
 ?>
 
-<section class="normal">
+<section class="normal container">
 	<?php if (is_page('for-members')) { ?>
 	<div class="row-fluid">
 		<div class="span12">
@@ -18,10 +20,10 @@ get_header();
 		<div class="span12">
 			<h4>Quick links</h4>
 			<ul>
-				<li><a href="#">INN-Staff+Board</a></li>
-				<li><a href="#">Pay Your Dues</a></li>
-				<li><a href="#">FAQs</a></li>
-				<li><a href="#">Member Directory</a></li>
+				<li><a href="/about/people/">INN Staff+Board</a></li>
+				<li><a href="/for-members/dues/">Pay Your Dues</a></li>
+				<li><a href="/about/membership-faqs/">FAQs</a></li>
+				<li><a href="/members">Member Directory</a></li>
 			</ul>
 		</div>
 	</div>
@@ -42,13 +44,13 @@ get_header();
 		<div id="benefits" class="span5">
 			<h4>Member Benefits</h4>
 			<ul>
-				<li><a href="#">Technology training and web hosting</a></li>
-				<li><a href="#">Revenue Generation and Cost-Savings Opportunities</a></li>
-				<li><a href="#">Editorial Collaboration</a></li>
-				<li><a href="#">Fiscal Sponsorship</a></li>
-				<li><a href="#">Third-Party Resources: Software Insurance, Legal Advice</a></li>
-				<li><a href="#">Marketing and Public Relations</a></li>
-				<li><a href="#">Networking and Information Resources</a></li>
+				<li>Technology training and web hosting</li>
+				<li>Revenue Generation and Cost-Savings Opportunities</li>
+				<li>Editorial Collaboration</li>
+				<li>Fiscal Sponsorship</li>
+				<li>Third-Party Resources: Software Insurance, Legal Advice</li>
+				<li>Marketing and Public Relations</li>
+				<li>Networking and Information Resources</li>
 			</ul>
 			<a class="learn-more" href="#">Learn more about member benefits</a>
 		</div>
@@ -56,8 +58,14 @@ get_header();
 	<?php } ?>
 </section>
 
-<section class="interstitial">
-	<h3><a href="#"><span>Not a member yet?</span></a></h3>
+<section id="membership-callout" class="interstitial branding">
+	<div class="content">
+		<img class="mail-icon" src="<? echo $img_path . 'icons/mail-squares.png'; ?>" />
+		<div class="content-inner">
+			<h3>Not a member yet?</h3>
+			<p>Join the growing community of sustainable nonprofit news organizations that are changing the way we do journalism.</p>
+		</div>
+	</div>
 </section>
 
 <?php get_template_part('partials/programs'); ?>

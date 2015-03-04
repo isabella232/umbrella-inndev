@@ -31,76 +31,11 @@
 .home #hire-us h5 {
   color: #fff;
 }
-.home #email img,
-.home #testimonial img {
-  float: left;
-  margin: 1em 3em 1em 1em;
-}
 .home #email img {
   margin: 0 10% 0 0;
   display: block;
   width: 15%;
   height: auto;
-}
-.home #email .content {
-  overflow: auto;
-}
-.home #email .content-inner {
-  float: right;
-  width: 75%;
-}
-.home #email h3 {
-  font-weight: 400;
-  text-transform: uppercase;
-  font-size: 2em;
-  margin-bottom: 0.25em;
-  text-align: left;
-}
-.home #email form {
-  display: block;
-  float: none;
-  margin: 0 auto;
-}
-.home #email input {
-  float: left;
-  margin-right: 6px;
-  padding: 12px 10px;
-  width: 400px;
-}
-.home #email input.btn {
-  display: block;
-  float: left;
-  clear: none;
-  padding: 13px 1em;
-  width: 200px;
-}
-@media (max-width: 700px) {
-  .home #email img {
-    float: none;
-    margin: 0 auto 1em;
-    width: 30%;
-  }
-  .home #email .content {
-    overflow: visible;
-  }
-  .home #email .content-inner {
-    width: 100%;
-    float: none;
-    text-align: center;
-  }
-  .home #email h3 {
-    text-align: center;
-  }
-  .home #email input {
-    float: none;
-    margin-right: 0;
-    max-width: 75%;
-  }
-  .home #email input.btn {
-    float: none;
-    margin: 0 auto;
-    clear: both;
-  }
 }
 .home #testimonial img {
   width: 140px;
