@@ -34,6 +34,9 @@ textarea {
   font-family: "effra", helvetica, sans-serif;
   color: #777777;
 }
+h1 {
+  color: #555555;
+}
 textarea,
 input[type="text"],
 input[type="date"],
@@ -267,6 +270,10 @@ html.no-touch .navbar li.home-link > a:hover {
 #main .row-fluid .span4 {
   text-align: center;
   padding: 2em 5em;
+}
+#main .row-fluid .span4#sidebar {
+  padding: 1em 2em;
+  text-align: left;
 }
 @media (max-width: 980px) {
   #main .row-fluid .span4 {
