@@ -83,9 +83,6 @@ a:hover {
 .btn.btn-primary:hover {
   background-color: #ff8237;
 }
-.top-tag {
-  font-weight: 300;
-}
 .sticky-nav-container {
   max-width: 100%;
 }
@@ -286,6 +283,9 @@ html.no-touch .navbar li.home-link > a:hover {
   font-size: 20px;
   font-weight: 400;
   margin-bottom: 0.25em;
+}
+#main .row-fluid h5.top-tag {
+  font-weight: 300;
 }
 #main .row-fluid h5 a {
   color: #777777;
