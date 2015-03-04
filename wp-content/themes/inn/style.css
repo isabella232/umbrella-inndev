@@ -264,6 +264,21 @@ html.no-touch .navbar li.home-link > a:hover {
     padding: 0.5em 10%;
   }
 }
+@media (max-width: 980px) {
+  #main .row-fluid .span5,
+  #main .row-fluid .span7 {
+    padding: 1.5em 2em;
+  }
+}
+@media (max-width: 600px) {
+  #main .row-fluid .span5,
+  #main .row-fluid .span7 {
+    width: 100%;
+    margin: 0;
+    clear: both;
+    padding: 0.5em 10%;
+  }
+}
 #main .row-fluid h5 {
   font-size: 20px;
   font-weight: 400;

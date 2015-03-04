@@ -8,7 +8,7 @@ get_header();
 $img_path = get_stylesheet_directory_uri() . '/images/';
 ?>
 
-<section class="normal container">
+<section class="normal container-fluid">
 	<?php if (is_page('for-members')) { ?>
 	<div class="row-fluid">
 		<div class="span12">
