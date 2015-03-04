@@ -31,50 +31,6 @@
 .home #hire-us h5 {
   color: #fff;
 }
-.home #email img {
-  margin: 0 10% 0 0;
-  display: block;
-  width: 15%;
-  height: auto;
-}
-.home #testimonial img {
-  width: 140px;
-  height: 140px;
-  border-radius: 100px;
-  margin: 0 5em 0 0;
-}
-.home #testimonial p {
-  padding: 0 4em;
-  font-family: "leitura-news", georgia, serif;
-  font-size: 21px;
-}
-.home #testimonial p.credit {
-  text-align: right;
-  font-family: "effra", helvetica, sans-serif;
-  font-size: 18px;
-}
-@media (max-width: 900px) {
-  .home #testimonial p {
-    padding: 0 2em;
-  }
-  .home #testimonial p.credit {
-    text-align: left;
-  }
-}
-@media (max-width: 600px) {
-  .home #testimonial img {
-    display: block;
-    float: none;
-    clear: both;
-    margin: 0 auto 2em;
-  }
-  .home #testimonial p {
-    padding: 0;
-  }
-  .home #testimonial p.credit {
-    margin-bottom: 0;
-  }
-}
 .home #members {
   height: auto;
   background: none;
@@ -127,5 +83,50 @@
   }
   .home #main #supporters li {
     text-align: center;
+  }
+}
+#email img {
+  /*margin: 0 10% 0 0;*/
+
+  display: block;
+  width: 15%;
+  height: auto;
+}
+#testimonial img {
+  width: 140px;
+  height: 140px;
+  border-radius: 100px;
+  margin: 0 5em 0 0;
+}
+#testimonial p {
+  padding: 0 4em;
+  font-family: "leitura-news", georgia, serif;
+  font-size: 21px;
+}
+#testimonial p.credit {
+  text-align: right;
+  font-family: "effra", helvetica, sans-serif;
+  font-size: 18px;
+}
+@media (max-width: 900px) {
+  #testimonial p {
+    padding: 0 2em;
+  }
+  #testimonial p.credit {
+    text-align: left;
+  }
+}
+@media (max-width: 700px) {
+  #testimonial img {
+    display: block;
+    float: none;
+    clear: both;
+    margin: 0 auto 2em;
+  }
+  #testimonial p {
+    padding: 0;
+  }
+  #testimonial p.credit {
+    margin-bottom: 0;
   }
 }

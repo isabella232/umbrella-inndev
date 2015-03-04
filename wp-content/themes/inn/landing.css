@@ -15,16 +15,18 @@
 #main {
   margin: 0;
 }
+#main .page-content p {
+  font-size: 1.05em;
+}
 .normal .row-fluid {
   margin: 0 0 4em 0;
 }
+.normal .row-fluid .page-content p {
+  font-family: "leitura-news", georgia, serif;
+  line-height: 1.7em;
+}
 .normal h3 span {
   color: #555555;
-}
-.page-content p {
-  font-family: "leitura-news", georgia, serif;
-  font-size: 1em;
-  line-height: 1.7em;
 }
 #quick-links {
   text-align: center;
