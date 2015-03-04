@@ -83,6 +83,9 @@ a:hover {
 .btn.btn-primary:hover {
   background-color: #ff8237;
 }
+.top-tag {
+  font-weight: 300;
+}
 .sticky-nav-container {
   max-width: 100%;
 }

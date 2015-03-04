@@ -1,3 +1,13 @@
 .page-id-238291 h5.byline {
   display: none;
 }
+.page-id-238291 .stories h2.entry-title {
+  font-size: 24px;
+  margin-bottom: 0.5em;
+}
+.page-id-238291 .stories h2.entry-title a {
+  color: #555555;
+}
+.page-id-238291 .stories h2.entry-title a:hover {
+  color: #22c2f3;
+}
