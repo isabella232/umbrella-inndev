@@ -8,6 +8,13 @@
   /*IE*/
 
 }
+#page {
+  max-width: 100%;
+  padding: 0;
+}
+#main {
+  margin: 0;
+}
 .normal .row-fluid {
   margin: 0 0 4em 0;
 }
@@ -79,4 +86,17 @@
 }
 #news-and-benefits.row-fluid #benefits .learn-more {
   font-size: 18px;
+}
+#membership-callout .content img {
+  width: 9%;
+  margin: 1em 6em 1em 3em;
+}
+#membership-callout .content-inner {
+  float: left;
+}
+#membership-callout .btn {
+  background: #dd484a;
+}
+#membership-callout .btn:hover {
+  background: #d82d2f;
 }
