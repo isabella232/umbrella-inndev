@@ -5,7 +5,7 @@
  */
 get_header();
 
-$img_path = get_stylesheet_directory_uri() . '/homepages/assets/img/';
+$img_path = get_stylesheet_directory_uri() . '/images/';
 ?>
 
 <section class="normal container">
@@ -52,7 +52,7 @@ $img_path = get_stylesheet_directory_uri() . '/homepages/assets/img/';
 				<li>Marketing and Public Relations</li>
 				<li>Networking and Information Resources</li>
 			</ul>
-			<a class="learn-more" href="#">Learn more about member benefits</a>
+			<a class="learn-more" href="/for-members/member-benefits/">Learn more about member benefits</a>
 		</div>
 	</div>
 	<?php } ?>
@@ -60,10 +60,11 @@ $img_path = get_stylesheet_directory_uri() . '/homepages/assets/img/';
 
 <section id="membership-callout" class="interstitial branding">
 	<div class="content">
-		<img class="mail-icon" src="<? echo $img_path . 'icons/mail-squares.png'; ?>" />
+		<img class="member-icon" src="<? echo $img_path . 'red_boxes.png'; ?>" />
 		<div class="content-inner">
 			<h3>Not a member yet?</h3>
 			<p>Join the growing community of sustainable nonprofit news organizations that are changing the way we do journalism.</p>
+			<a class="btn" href="/for-members/become-a-member/">Learn more</a>
 		</div>
 	</div>
 </section>
