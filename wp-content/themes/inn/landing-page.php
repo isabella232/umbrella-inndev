@@ -107,7 +107,27 @@ $img_path = get_stylesheet_directory_uri() . '/images/';
 
 get_template_part('partials/programs');
 
-if (is_page('for-funders')) {
+if (is_page('for-funders')) { ?>
+	<section id="inn-brags" class="interstitial">
+		<div class="content">
+			<h3>In 2014, INN...</h3>
+			<div class="row-fluid">
+				<div class="span4">
+					<img class="icon" src="<? echo $img_path . 'brag_members.svg'; ?>" />
+					<p>Served 101 member organizations in 32 states</p>
+				</div>
+				<div class="span4">
+					<img class="icon" src="<? echo $img_path . 'brag_funding.svg'; ?>" />
+					<p>Contributed more than $350,000 to our members</p>
+				</div>
+				<div class="span4">
+					<img class="icon" src="<? echo $img_path . 'brag_tech.svg'; ?>" />
+					<p>Hosted 120 publishing sites on Largo</p>
+				</div>
+			</div>
+		</div>
+		</section><?php
+
 	get_template_part('partials/our_members');
 }
 
