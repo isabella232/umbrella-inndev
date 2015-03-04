@@ -303,6 +303,7 @@ html.no-touch .navbar li.home-link > a:hover {
 }
 #main .row-fluid h5.top-tag {
   font-weight: 300;
+  font-size: 16px;
 }
 #main .row-fluid h5 a {
   color: #777777;
