@@ -316,10 +316,10 @@ section,
   margin: 0 auto;
   max-width: 1170px;
 }
-.normal {
+section.normal {
   height: auto;
 }
-.normal h3 {
+section.normal h3 {
   display: block;
   text-align: center;
   text-transform: uppercase;
@@ -329,25 +329,25 @@ section,
   line-height: 10px;
   margin: 2em auto 1.5em;
 }
-.normal h3 span {
+section.normal h3 span {
   background-color: #fff;
   padding: 0 60px;
 }
 @media (max-width: 900px) {
-  .normal h3 {
+  section.normal h3 {
     width: 90%;
   }
-  .normal h3 span {
+  section.normal h3 span {
     padding: 0 30px;
   }
 }
 @media (max-width: 600px) {
-  .normal h3 {
+  section.normal h3 {
     line-height: 1.5;
     background-color: transparent;
     margin: 0.5em auto;
   }
-  .normal h3 span {
+  section.normal h3 span {
     padding: 0;
   }
 }
