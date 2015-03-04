@@ -1,13 +1,3 @@
-.flip-horizontal {
-  -moz-transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
-  transform: scaleX(-1);
-  -ms-filter: fliph;
-  filter: fliph;
-  /*IE*/
-
-}
 .page-id-2215 .entry-content h4 {
   margin-bottom: 0.25em;
 }
