@@ -202,7 +202,7 @@ class members_widget extends WP_Widget {
 
     if (!empty($instance['title'])) echo $before_title . '<span>' . $instance['title'] . '</span>' . $menu . $after_title; ?>
 
-    <div class="member-wrapper widget-content hidden-phone">
+    <div class="member-wrapper widget-content">
 	    <ul class="members">
 	    <?php
 	      $counter = 1;

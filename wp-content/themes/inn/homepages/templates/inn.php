@@ -93,7 +93,7 @@
 				<p>Data analysis and visualization for special editorial projects.</p>
 			</div>
 		</div>
-		<a class="btn btn-primary">Learn more about hiring INN</a>
+		<a class="btn btn-primary" href="/hire-us/">Learn more about hiring INN</a>
 	</div>
 </section>
 
