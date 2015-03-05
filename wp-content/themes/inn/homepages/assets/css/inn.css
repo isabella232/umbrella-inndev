@@ -85,6 +85,9 @@
     text-align: center;
   }
 }
+.home .sticky-nav-holder {
+  border-bottom: none;
+}
 #email img {
   /*margin: 0 10% 0 0;*/
 
