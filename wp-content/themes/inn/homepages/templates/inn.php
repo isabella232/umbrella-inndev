@@ -1,6 +1,6 @@
 <?php $img_path = get_stylesheet_directory_uri() . '/homepages/assets/img/'; ?>
 
-<section id="hero">
+<section id="hero" class="hidden-phone">
 	<div class="content">
 		<h2>Supporting mission-driven journalism.</h2>
 	</div>

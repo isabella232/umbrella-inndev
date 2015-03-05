@@ -86,9 +86,11 @@
       }
     }
   }
-
   .sticky-nav-holder {
     border-bottom: none;
+    @media (max-width: 768px) {
+      border-bottom: @ltgray 1px solid;
+    }
   }
 }
 

@@ -679,11 +679,6 @@ body.normal.page .stories .top-tag {
     float: left;
     width: 100%;
   }
-  body.admin-bar .sticky-nav-holder,
-  .sticky-nav-holder {
-    /*position: fixed;*/
-  
-  }
   body.admin-bar .sticky-nav-holder .nav-right #header-extras,
   .sticky-nav-holder .nav-right #header-extras {
     top: 12px;

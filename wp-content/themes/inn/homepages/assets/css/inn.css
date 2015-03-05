@@ -88,6 +88,11 @@
 .home .sticky-nav-holder {
   border-bottom: none;
 }
+@media (max-width: 768px) {
+  .home .sticky-nav-holder {
+    border-bottom: #aaaaaa 1px solid;
+  }
+}
 #email img {
   /*margin: 0 10% 0 0;*/
 
