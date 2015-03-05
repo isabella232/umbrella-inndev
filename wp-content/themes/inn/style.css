@@ -681,7 +681,8 @@ body.normal.page .stories .top-tag {
   }
   body.admin-bar .sticky-nav-holder,
   .sticky-nav-holder {
-    position: fixed;
+    /*position: fixed;*/
+  
   }
   body.admin-bar .sticky-nav-holder .nav-right #header-extras,
   .sticky-nav-holder .nav-right #header-extras {
