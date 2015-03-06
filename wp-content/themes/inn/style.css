@@ -249,10 +249,10 @@ html.no-touch .navbar li.home-link > a:hover {
   border-radius: 30px;
   font-size: 11px;
 }
-#header-social .icon-youtube-parent,
-#header-social .icon-gplus-parent,
-#header-social .icon-linkedin-parent,
-#header-social .icon-github-parent {
+#header-social .icon-youtube,
+#header-social .icon-gplus,
+#header-social .icon-linkedin,
+#header-social .icon-github {
   display: none;
 }
 #header-social li > a {
