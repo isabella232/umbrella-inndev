@@ -87,6 +87,17 @@ a {
     display: none;
   }
 }
+@media (max-width: 768px) {
+  .type-pull-quote {
+    padding: 20px 10px;
+    text-align: center;
+    border: none;
+    border-top: 3px solid @dkgray;
+    border-bottom: 3px solid @dkgray;
+    margin: 0 auto 1em;
+    max-width: 90%;
+  }
+}
 
 .sticky-nav-container {
   max-width: 100%;
@@ -623,9 +634,12 @@ body.normal.page #content.has-menu,
 body.normal.single #content.has-menu {
   margin-left: 0;
   padding-left: 80px;
-
-  @media (max-width: 768px) {
-    padding-left: 0;
+  @media (max-width: 980px) {
+	width: 100%;
+	padding: 0 10%;
+  }
+  @media (max-width: 640px) {
+    padding: 0 3%;
   }
 }
 body.normal.page .stories .top-tag {
