@@ -624,10 +624,29 @@ section.normal h3 span {
   border-right: none;
   padding-bottom: 0;
 }
+.internal-subnav-dropdown {
+  text-align: center;
+  margin: 0 0 1.5em 0;
+}
+.internal-subnav-dropdown h3 {
+  font-size: 20px;
+  margin: 0 0 0.5em 0;
+}
+.internal-subnav-dropdown .choose-a-page {
+  font-size: 16px;
+  color: #aaaaaa;
+  margin: 0 0 0.5em 0;
+}
 body.normal.page #content.has-menu,
 body.normal.single #content.has-menu {
   margin-left: 0;
   padding-left: 80px;
+}
+@media (max-width: 768px) {
+  body.normal.page #content.has-menu,
+  body.normal.single #content.has-menu {
+    padding-left: 0;
+  }
 }
 body.normal.page .stories .top-tag {
   float: none;

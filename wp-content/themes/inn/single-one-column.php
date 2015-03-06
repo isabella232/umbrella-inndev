@@ -34,7 +34,7 @@ if ( is_page() || is_singular( 'pauinn_project' ) ) {
 	// yep, we should show a menu, modify the layout appropriately
 	if ( $show_menu != '' ) {
 		$content_class = 'span9 has-menu';
-		echo '<div class="internal-subnav span3">';
+		echo '<div class="internal-subnav span3 visible-desktop">';
 	}
 
 	// about and member pages and children get their respective page trees
