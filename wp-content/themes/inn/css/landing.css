@@ -26,9 +26,15 @@
 #main section {
   clear: both;
 }
+#main section.normal h3 {
+  margin-top: 1em;
+}
 @media (max-width: 600px) {
   #main {
-    margin-top: 56px;
+    margin-top: 2em;
+  }
+  #main section.normal h3 {
+    margin-top: 0;
   }
 }
 .normal > .row-fluid .page-content p {
@@ -38,8 +44,12 @@
 .normal h3 span {
   color: #555555;
 }
+.interstitial {
+  margin-bottom: 5em;
+}
 #quick-links {
   text-align: center;
+  margin-bottom: 2em;
 }
 #quick-links h4 {
   color: #555555;
@@ -48,19 +58,29 @@
 #quick-links li {
   font-size: 1.25em;
   display: inline-block;
+  list-style: none;
   margin: 0 20px 0 0;
 }
 @media (max-width: 600px) {
+  #quick-links {
+    margin-bottom: 0;
+  }
   #quick-links > .span12 {
     padding: 1em 2.5em;
   }
+  #quick-links li {
+    display: list-item;
+  }
+}
+#news-and-benefits-and-funders.row-fluid {
+  margin-bottom: 2em;
 }
 #news-and-benefits-and-funders.row-fluid #news {
   padding: 2em 0 2em 5em;
 }
 @media (max-width: 980px) {
   #news-and-benefits-and-funders.row-fluid #news {
-    padding: 1.5em  0 1.5em 2em;
+    padding: 1.5em 0 1.5em 2em;
   }
 }
 @media (max-width: 600px) {

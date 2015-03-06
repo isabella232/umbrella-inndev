@@ -122,7 +122,7 @@ if (is_page('for-funders')) { ?>
 				</div>
 				<div class="span4">
 					<img class="icon" src="<? echo $img_path . 'brag_tech.svg'; ?>" />
-					<p>Hosted 120 publishing sites on Largo</p>
+					<p>Had 120+ publishing sites using <a href="http://largoproject.org">Largo</a></p>
 				</div>
 			</div>
 		</div>
