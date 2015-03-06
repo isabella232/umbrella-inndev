@@ -11,9 +11,9 @@ add_filter( 'body_class', function( $classes ) {
 
 get_header();
 
-$about_pg_id = 2212;
-$programs_pg_id = 2587;
-$members_pg_id = 234260;
+$about_pg_id = INN_ABOUT_PAGE_ID;
+$programs_pg_id = INN_PROGRAMS_PAGE_ID;
+$members_pg_id = INN_MEMBERS_PAGE_ID;
 $content_class = 'span8';
 
 //is this a page or a post in the projects post type
@@ -69,6 +69,8 @@ if ( is_page() || is_singular( 'pauinn_project' ) ) {
 		echo '</div>';
 	}
 }
+
+get_template_part('partials/internal-subnav-dropdown');
 
 if ( is_page( 'press' ) || is_page( 'news' ) ) $content_class .= ' stories';
 ?>
