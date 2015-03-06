@@ -62,7 +62,7 @@ if ( is_page() || is_singular( 'pauinn_project' ) ) {
 		?>
 		<script type="text/javascript">
 			(function() {
-				$ = jQuery;
+				var $ = jQuery;
 
 				$(function() {
 					$('select.internal-subnav').on('change', function(event) {
