@@ -178,7 +178,7 @@ body.admin-bar .sticky-nav-holder,
   #sticky-nav-search a:hover,
   .nav .home-link a:hover {
     background: none;
-    color: @dkgray;
+    color: @ltgray;
   }
   #sticky-nav-search.show {
     background: #343434;
@@ -229,10 +229,14 @@ html.no-touch .navbar li.home-link > a:hover {
   i.icon-rss,
   i.icon-twitter,
   i.icon-facebook {
-    background-color: @ltgray !important;
+    background-color: transparent !important;
     padding: 6px;
     border-radius: 30px;
     font-size: 11px;
+    color: @ltgray;
+    &:hover {
+      color: @dkgray !important;
+    }
   }
   .icon-youtube,
   .icon-gplus,
