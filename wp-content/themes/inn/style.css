@@ -138,8 +138,8 @@ body.admin-bar .sticky-nav-holder .navbar li.menu-item b.caret,
 }
 body.admin-bar .sticky-nav-holder .navbar li > a,
 .sticky-nav-holder .navbar li > a {
-  padding: 12px 10px;
-  color: #777777;
+  padding: 12px 11px;
+  color: #555555;
 }
 body.admin-bar .sticky-nav-holder .navbar #sticky-nav-search > a,
 .sticky-nav-holder .navbar #sticky-nav-search > a {
@@ -148,11 +148,11 @@ body.admin-bar .sticky-nav-holder .navbar #sticky-nav-search > a,
 body.admin-bar .sticky-nav-holder .navbar .nav li.active a,
 .sticky-nav-holder .navbar .nav li.active a {
   background: none;
-  color: #777777;
+  color: #555555;
 }
 body.admin-bar .sticky-nav-holder .navbar .nav li.active a:hover,
 .sticky-nav-holder .navbar .nav li.active a:hover {
-  color: #555555;
+  color: #777777;
 }
 body.admin-bar .sticky-nav-holder .navbar .nav > li.home-link,
 .sticky-nav-holder .navbar .nav > li.home-link {
@@ -185,7 +185,7 @@ body.admin-bar .sticky-nav-holder .navbar .nav li.dropdown.open.active > .dropdo
 body.admin-bar .sticky-nav-holder .navbar .nav.items,
 .sticky-nav-holder .navbar .nav.items {
   float: right;
-  font-size: 0.99em;
+  font-size: 0.9em;
   text-transform: lowercase;
   font-weight: 500;
   letter-spacing: 0.03em;
@@ -195,7 +195,7 @@ body.admin-bar .sticky-nav-holder .navbar .nav.items,
 body.admin-bar .sticky-nav-holder .navbar .nav.items li > a:hover,
 .sticky-nav-holder .navbar .nav.items li > a:hover {
   background: none;
-  color: #555555;
+  color: #777777;
 }
 body.admin-bar .sticky-nav-holder #sticky-nav-search a,
 .sticky-nav-holder #sticky-nav-search a,
@@ -228,6 +228,7 @@ body.admin-bar .sticky-nav-holder .nav-right #header-extras a span,
   background-color: #fff;
   letter-spacing: 0.03em;
   font-weight: 500;
+  font-size: 0.9em;
   text-shadow: none;
 }
 body.admin-bar .sticky-nav-holder .nav-right #header-extras a span:hover,
