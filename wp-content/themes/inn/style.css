@@ -102,6 +102,11 @@ a:hover {
 .stories h5.byline {
   display: none;
 }
+.type-pull-quote {
+  border-left: 1px solid #aaaaaa;
+  padding-left: 40px;
+  color: #555555;
+}
 @media (max-width: 768px) {
   .type-pull-quote {
     padding: 20px 10px;

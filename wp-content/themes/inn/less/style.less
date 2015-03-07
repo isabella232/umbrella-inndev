@@ -87,15 +87,19 @@ a {
     display: none;
   }
 }
-@media (max-width: 768px) {
-  .type-pull-quote {
-    padding: 20px 10px;
-    text-align: center;
-    border: none;
-    border-top: 3px solid @dkgray;
-    border-bottom: 3px solid @dkgray;
-    margin: 0 auto 1em;
-    max-width: 90%;
+.type-pull-quote {
+  border-left: 1px solid @ltgray;
+  padding-left: 40px;
+  color: @dkgray;
+
+  @media (max-width: 768px) {
+      padding: 20px 10px;
+      text-align: center;
+      border: none;
+      border-top: 3px solid @dkgray;
+      border-bottom: 3px solid @dkgray;
+      margin: 0 auto 1em;
+      max-width: 90%;
   }
 }
 
