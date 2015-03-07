@@ -54,7 +54,7 @@
 					<div class="nav-left">
 						<li class="home-link">
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-								<img src="<?php echo get_stylesheet_directory_uri() . '/images/icon.png'; ?>" /></a>
+								<img src="<?php echo get_stylesheet_directory_uri() . '/images/logo.png'; ?>" /></a>
 						</li>
 					</div>
 					<div class="nav-shelf">

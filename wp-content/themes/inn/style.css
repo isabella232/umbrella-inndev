@@ -159,6 +159,11 @@ body.admin-bar .sticky-nav-holder .navbar .nav li.active a:hover,
 .sticky-nav-holder .navbar .nav li.active a:hover {
   color: #777777;
 }
+body.admin-bar .sticky-nav-holder .navbar li.home-link > a img,
+.sticky-nav-holder .navbar li.home-link > a img {
+  width: auto;
+  height: 40px;
+}
 body.admin-bar .sticky-nav-holder .navbar .nav > li.home-link,
 .sticky-nav-holder .navbar .nav > li.home-link {
   position: relative;
@@ -766,6 +771,9 @@ body.normal.page .stories .top-tag {
   }
 }
 @media (max-width: 480px) {
+  #header-extras .donate-link {
+    display: none;
+  }
   body.admin-bar .sticky-nav-holder,
   .sticky-nav-holder {
     height: 2.5em;
@@ -787,11 +795,12 @@ body.normal.page .stories .top-tag {
   .sticky-nav-holder .navbar .nav.items li a {
     padding: 10px 0;
   }
-  .navbar li.home-link > a img {
-    width: 22px;
-    height: 22px;
+  body.admin-bar .sticky-nav-holder .navbar li.home-link a,
+  .sticky-nav-holder .navbar li.home-link a {
+    padding: 2px 0 0 5px;
   }
-  .navbar .btn-navbar {
+  body.admin-bar .sticky-nav-holder .navbar .btn-navbar,
+  .sticky-nav-holder .navbar .btn-navbar {
     top: 4px;
   }
 }
