@@ -161,7 +161,7 @@ body.admin-bar .sticky-nav-holder .navbar .nav > li.home-link,
 body.admin-bar .sticky-nav-holder .navbar .nav > li.home-link a img,
 .sticky-nav-holder .navbar .nav > li.home-link a img {
   width: 100%;
-  max-width: 300px;
+  max-width: 250px;
   height: auto;
 }
 body.admin-bar .sticky-nav-holder .navbar .nav li.dropdown.open > .dropdown-toggle,
