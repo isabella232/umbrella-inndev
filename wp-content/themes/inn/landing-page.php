@@ -52,6 +52,7 @@ $img_path = get_stylesheet_directory_uri() . '/images/';
 					'after_title' => '</h4>'
 				)
 			); ?>
+			<a class="learn-more" href="/about/news/">More news from INN</a>
 		</div>
 		<div id="benefits-and-funders" class="span5">
 			<?php if (is_page('for-members')) { ?>
@@ -114,15 +115,15 @@ if (is_page('for-funders')) { ?>
 			<div class="row-fluid">
 				<div class="span4">
 					<img class="icon" src="<? echo $img_path . 'brag_members.svg'; ?>" />
-					<p>Served 101 member organizations in 32 states</p>
+					<p>Helped 276 organizations through our programs.</p>
 				</div>
 				<div class="span4">
 					<img class="icon" src="<? echo $img_path . 'brag_funding.svg'; ?>" />
-					<p>Contributed more than $350,000 to our members</p>
+					<p>Contributed more than $350,000 to our members.</p>
 				</div>
 				<div class="span4">
 					<img class="icon" src="<? echo $img_path . 'brag_tech.svg'; ?>" />
-					<p>Had 120+ publishing sites using <a href="http://largoproject.org">Largo</a></p>
+					<p>Had 120+ publishing sites using <a href="http://largoproject.org">Largo.</a></p>
 				</div>
 			</div>
 		</div>
