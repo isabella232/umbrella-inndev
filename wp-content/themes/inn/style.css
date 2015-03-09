@@ -520,7 +520,7 @@ section.normal h3 span {
 }
 #site-footer .widgettitle,
 #site-footer li.menu-label {
-  color: #111;
+  color: #fafafa;
   font-weight: 500;
 }
 #site-footer a {
@@ -555,8 +555,16 @@ section.normal h3 span {
   #site-footer #ft-social {
     float: none;
   }
+  #site-footer #ft-social li {
+    min-height: 56px;
+  }
   #site-footer #ft-social li i {
     font-size: 24px;
+  }
+}
+@media (max-width: 768px) {
+  #site-footer img[alt="INN logo"] {
+    width: 400px;
   }
 }
 #menu-footer-navigation,

@@ -493,13 +493,13 @@ section.normal {
 #site-footer {
   .widgettitle,
   li.menu-label {
-    color: #111;
+    color: #fafafa;
     font-weight: 500;
   }
   a {
     color: @ltgray;
     &:hover {
-	  color: @blue;
+      color: @blue;
     }
   }
   #ft-social {
@@ -516,19 +516,25 @@ section.normal {
         padding: 14px;
         border-radius: 30px;
         &:hover {
-	      background-color: #fff;
+          background-color: #fff;
         }
         &.icon-github:hover {
-	      color: @medgray;
-	    }
+          color: @medgray;
+        }
       }
     }
     @media (max-width: 768px) {
-	  float: none;
-	  li i {
-	    font-size: 24px;
-	  }
-	}
+      float: none;
+      li { min-height: 56px; }
+      li i {
+        font-size: 24px;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    img[alt="INN logo"] {
+      width: 400px;
+    }
   }
 }
 #menu-footer-navigation,
