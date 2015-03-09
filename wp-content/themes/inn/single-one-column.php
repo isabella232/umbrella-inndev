@@ -53,7 +53,7 @@ if ( is_page() || is_singular( 'pauinn_project' ) ) {
 		if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
 		    echo '<ul>';
 		    foreach ( $terms as $term ) {
-			    $term_link = '/project/' . $term->slug;
+			    $term_link = '/project/' . $term->slug . '/';
 			    if ( is_single( $term->name ) ) {
 					echo '<li class="current_page_item"><a href="' . $term_link . '">' . $term->name . '</a></li>';
 				} else {
