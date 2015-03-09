@@ -534,6 +534,7 @@ section.normal h3 span {
   margin: 0 auto;
   width: intrinsic;
   margin-bottom: 1em;
+  text-align: center;
 }
 #site-footer #ft-social li {
   float: none;
