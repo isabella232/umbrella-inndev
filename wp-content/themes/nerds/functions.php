@@ -34,8 +34,8 @@ add_action( 'wp_enqueue_scripts', 'override_largo_core_js', 20 );
 
 // Typekit
 function inn_typekit() { ?>
-	<script type="text/javascript" src="//use.typekit.net/mmy6iwx.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<script src="//use.typekit.net/cui8tby.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
 <?php
 }
 add_action( 'wp_head', 'inn_typekit' );

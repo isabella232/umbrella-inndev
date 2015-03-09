@@ -2,7 +2,7 @@
 	<nav>
 		<ul class="network-header-main-nav">
 			<li class="network-home">
-				<a href="http://investigativenewsnetwork.org/"><span>Investigative News Network</span></a>
+				<a href="http://inn.org/"><span>INN</span></a>
 			</li>
 			<?php
 			$nav_args = array(

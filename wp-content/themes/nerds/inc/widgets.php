@@ -2,7 +2,6 @@
 
 function inn_widgets() {
 	$register = array(
-		'inn_staff_widget'				=> '/inc/widgets/staff.php',
 		'inn_mailchimp_signup_widget'	=> '/inc/widgets/mailchimp-signup.php'
 	);
 	foreach ( $register as $key => $val ) {

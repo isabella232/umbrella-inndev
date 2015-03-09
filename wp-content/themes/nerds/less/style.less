@@ -1,9 +1,9 @@
 /*
 Theme Name:     Nerds
-Theme URI:      http://nerds.investigativenewsnetwork.org
-Description:    A child theme for nerds.investigativenewsnetwork.org, team blog for INN
-Author:         Adam Schweigert, Ryan Nagle
-Author URI:     http://investigativenewsnetwork.org
+Theme URI:      http://nerds.inn.org
+Description:    A child theme for nerds.inn.org, team blog for INN
+Author:         The INN Nerds
+Author URI:     http://nerds.inn.org
 Template:       largo
 Version:        0.1.0
 */
@@ -13,14 +13,24 @@ Version:        0.1.0
 @inngray: #bbb;
 @ltgray: #efefef;
 @dkgray: #333;
+@serif: "leitura-news",georgia,serif; // 300,600
+@sans: "effra",helvetica,sans-serif; // 300,400,500,700
 
-body {
-  font-family: "proxima-nova",helvetica,arial,sans-serif;
+body,
+h5.top-tag {
+  font-family: @sans;
+  font-weight: 300;
 }
 h1,h2,h3,h4,h5,
 .widgettitle {
-  font-family: "museo-sans",helvetica,arial,sans-serif;
-  font-weight: 900;
+  font-weight: 500;
+  font-family: @sans;
+}
+.entry-content p,
+.entry-content ul,
+.entry-content ol {
+  font-family: @serif;
+  font-weight: 300;
 }
 #main {
   margin-top: 25px;
@@ -49,40 +59,6 @@ h1,h2,h3,h4,h5,
   font-weight: 700;
   strong {
     font-weight: 900;
-  }
-}
-
-/* Roster Widget */
-ul#staff-roster {
-  float: left;
-  clear: both;
-  margin: 12px 0 0;
-  list-style-type: none;
-  width: 100%;
-  li {
-    display: block;
-    float: left;
-    clear: both;
-    margin: 0 0 16px 0;
-    width: 100%;
-    img {
-      float: left;
-      width: 65px;
-      height: auto;
-      margin: 0 14px 7px 0;
-      box-shadow: 0 1px 8px @inngray;
-      padding: 4px;
-    }
-  }
-  .staff-name {
-    font-family: "museo-sans",helvetica,arial,sans-serif;
-    font-size: 18px;
-  }
-  p {
-    margin: 5px 0 0;
-    font-size: 14px;
-    line-height: 17px;
-    color: @inngray;
   }
 }
 

@@ -15,7 +15,7 @@ $social = array('rss', 'twitter', 'facebook', 'googleplus', 'youtube');
 	<article id="author-<?php echo $member->ID; ?>" class="inn_member clearfix">
 		<div class="span3">
 			<?php
-				echo get_avatar( $member->ID );
+				echo get_avatar( $member->ID, 140 );
 
 				if ( !empty( $meta['inn_founded'][0] ) ) {
 					echo '<p class="founded">Founded ' . $meta["inn_founded"][0] . '</p>';

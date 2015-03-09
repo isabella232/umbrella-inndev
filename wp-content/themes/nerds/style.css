@@ -1,14 +1,16 @@
 /*
 Theme Name:     Nerds
-Theme URI:      http://nerds.investigativenewsnetwork.org
-Description:    A child theme for nerds.investigativenewsnetwork.org, team blog for INN
-Author:         Adam Schweigert, Ryan Nagle
-Author URI:     http://investigativenewsnetwork.org
+Theme URI:      http://nerds.inn.org
+Description:    A child theme for nerds.inn.org, team blog for INN
+Author:         The INN Nerds
+Author URI:     http://nerds.inn.org
 Template:       largo
 Version:        0.1.0
 */
-body {
-  font-family: "proxima-nova", helvetica, arial, sans-serif;
+body,
+h5.top-tag {
+  font-family: "effra", helvetica, sans-serif;
+  font-weight: 300;
 }
 h1,
 h2,
@@ -16,8 +18,14 @@ h3,
 h4,
 h5,
 .widgettitle {
-  font-family: "museo-sans", helvetica, arial, sans-serif;
-  font-weight: 900;
+  font-weight: 500;
+  font-family: "effra", helvetica, sans-serif;
+}
+.entry-content p,
+.entry-content ul,
+.entry-content ol {
+  font-family: "leitura-news", georgia, serif;
+  font-weight: 300;
 }
 #main {
   margin-top: 25px;
@@ -33,14 +41,6 @@ h5,
   visibility: visible;
   opacity: 1;
 }
-.sticky-nav-holder .navbar li.home-link > a {
-  padding: 0;
-}
-.sticky-nav-holder .navbar .nav > li.home-link a img {
-  width: 44px;
-  height: 44px;
-}
-
 #topics-bar {
   padding-top: 0;
 }
@@ -55,39 +55,6 @@ h5,
 }
 .entry-content h3 strong {
   font-weight: 900;
-}
-/* Roster Widget */
-ul#staff-roster {
-  float: left;
-  clear: both;
-  margin: 12px 0 0;
-  list-style-type: none;
-  width: 100%;
-}
-ul#staff-roster li {
-  display: block;
-  float: left;
-  clear: both;
-  margin: 0 0 16px 0;
-  width: 100%;
-}
-ul#staff-roster li img {
-  float: left;
-  width: 65px;
-  height: auto;
-  margin: 0 14px 7px 0;
-  box-shadow: 0 1px 8px #bbbbbb;
-  padding: 4px;
-}
-ul#staff-roster .staff-name {
-  font-family: "museo-sans", helvetica, arial, sans-serif;
-  font-size: 18px;
-}
-ul#staff-roster p {
-  margin: 5px 0 0;
-  font-size: 14px;
-  line-height: 17px;
-  color: #bbbbbb;
 }
 /* friends widget */
 #friends-widget p,
