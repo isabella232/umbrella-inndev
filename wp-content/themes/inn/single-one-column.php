@@ -106,8 +106,6 @@ if ( is_page( 'press' ) || is_page( 'news' ) ) $content_class .= ' stories';
 
 				do_action(' largo_before_comments' );
 
-				comments_template( '', true );
-
 				do_action( 'largo_after_comments' );
 
 			} else if ( is_page( 'press' ) ) {
