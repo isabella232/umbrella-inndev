@@ -228,7 +228,7 @@ body.admin-bar .sticky-nav-holder #sticky-nav-search.show .toggle,
 body.admin-bar .sticky-nav-holder .nav-right #header-extras,
 .sticky-nav-holder .nav-right #header-extras {
   position: relative;
-  top: 24px;
+  top: 23px;
 }
 body.admin-bar .sticky-nav-holder .nav-right #header-extras a span,
 .sticky-nav-holder .nav-right #header-extras a span {
