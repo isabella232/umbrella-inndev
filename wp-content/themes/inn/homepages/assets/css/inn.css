@@ -93,11 +93,11 @@
     border-bottom: #aaaaaa 1px solid;
   }
 }
-body.admin-bar .sticky-nav-holder {
+body.home.admin-bar .sticky-nav-holder {
   border-bottom: none;
 }
 @media (max-width: 768px) {
-  body.admin-bar .sticky-nav-holder {
+  body.home.admin-bar .sticky-nav-holder {
     border-bottom: #aaaaaa 1px solid;
   }
 }
