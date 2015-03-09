@@ -2,9 +2,9 @@
 /*
  * Template Name: Member Investigations
  * A feed of curated INN member stories.
- * Use investigativenewsnetwork.org/?feed=member_stories for all stories in the "homepage featured" prominence taxonomy term
+ * Use inn.org/?feed=member_stories for all stories in the "homepage featured" prominence taxonomy term
  * - OR -
- * investigativenewsnetwork.org/?feed=member_stories&top_stories=1 for just the "top stories"
+ * inn.org/?feed=member_stories&top_stories=1 for just the "top stories"
  */
 
 $numposts = 20;
@@ -34,13 +34,13 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
 ?>
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:media="http://search.yahoo.com/mrss/">
 <channel>
-  <title>Investigative News Network: Member Investigations</title>
-  <link>http://investigativenewsnetwork.org/</link>
-  <description>A curated feed of investigative stories from members of the Investigative News Network</description>
+  <title>Institute For Nonprofit News: Member Investigations</title>
+  <link>http://inn.org/</link>
+  <description>A curated feed of top stories from INN members</description>
   <language>en-us</language>
   <pubDate><?php rss_date( strtotime($ps[$lastpost]->post_date_gmt) ); ?></pubDate>
   <lastBuildDate><?php rss_date( strtotime($ps[$lastpost]->post_date_gmt) ); ?></lastBuildDate>
-  <managingEditor>info@investigativenewsnetwork.org</managingEditor>
+  <managingEditor>info@inn.org</managingEditor>
 
 <?php foreach ($posts as $post) {
 	$permalink = get_post_meta( $post->ID, 'permalink', TRUE );
