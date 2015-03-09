@@ -8,7 +8,7 @@ Template:       largo
 Version:        0.1.0
 */
 body {
-  font-family: "proxima-nova", helvetica, arial, sans-serif;
+  font-family: "effra", helvetica, sans-serif;
 }
 h1,
 h2,
@@ -16,7 +16,6 @@ h3,
 h4,
 h5,
 .widgettitle {
-  font-family: "museo-sans", helvetica, arial, sans-serif;
   font-weight: 900;
 }
 #main {
@@ -33,14 +32,6 @@ h5,
   visibility: visible;
   opacity: 1;
 }
-.sticky-nav-holder .navbar li.home-link > a {
-  padding: 0;
-}
-.sticky-nav-holder .navbar .nav > li.home-link a img {
-  width: 44px;
-  height: 44px;
-}
-
 #topics-bar {
   padding-top: 0;
 }
@@ -80,7 +71,7 @@ ul#staff-roster li img {
   padding: 4px;
 }
 ul#staff-roster .staff-name {
-  font-family: "museo-sans", helvetica, arial, sans-serif;
+  font-family: "leitura-news", georgia, serif;
   font-size: 18px;
 }
 ul#staff-roster p {
