@@ -96,7 +96,7 @@ function inn_member_stories_rss() {
 	add_filter('pre_option_rss_use_excerpt', '__return_zero');
 	load_template( get_stylesheet_directory() . '/feed-member-stories.php' );
 }
-add_feed('member_stories', 'inn_member_stories_rss');
+add_feed( 'member_stories', 'inn_member_stories_rss' );
 
 /**
  * Allow SVGs as featured images

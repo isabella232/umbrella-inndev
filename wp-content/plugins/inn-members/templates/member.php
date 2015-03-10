@@ -4,7 +4,7 @@
  *
  * Reference this with include(locate_template('content-member.php')); instead
  */
-$meta = get_user_meta( $user->ID );;
+$meta = get_user_meta( $user->ID );
 $social = array('mail', 'rss', 'twitter', 'facebook', 'googleplus', 'youtube');
 ?>
 
