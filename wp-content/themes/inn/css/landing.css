@@ -20,8 +20,18 @@
     padding: 2em;
   }
 }
+@media (max-width: 600px) {
+  #main .page-content {
+    padding: 0 2em;
+  }
+}
 #main .page-content p {
   font-size: 18px;
+}
+@media (max-width: 600px) {
+  #main .page-content p {
+    text-align: center;
+  }
 }
 #main section {
   clear: both;
@@ -47,6 +57,11 @@
 .interstitial {
   margin-bottom: 5em;
 }
+@media (max-width: 600px) {
+  .interstitial {
+    margin-bottom: 2em;
+  }
+}
 #quick-links {
   text-align: center;
   margin-bottom: 2em;
@@ -54,6 +69,11 @@
 #quick-links h4 {
   color: #555555;
   text-transform: uppercase;
+}
+@media (max-width: 600px) {
+  #quick-links h4 {
+    margin-bottom: 0.5em;
+  }
 }
 #quick-links li {
   font-size: 1.25em;
@@ -70,6 +90,7 @@
   }
   #quick-links li {
     display: list-item;
+    margin-bottom: 0.5em;
   }
 }
 #news-and-benefits-and-funders.row-fluid {
@@ -147,6 +168,11 @@
 #news-and-benefits-and-funders.row-fluid #benefits-and-funders ul.donors li {
   margin: 0 0 0.5em 0;
 }
+@media (max-width: 600px) {
+  #news-and-benefits-and-funders.row-fluid #benefits-and-funders ul.donors li {
+    margin-bottom: 1em;
+  }
+}
 #news-and-benefits-and-funders.row-fluid #benefits-and-funders .learn-more {
   font-size: 18px;
 }
@@ -201,6 +227,12 @@
 #programs h3,
 #member-info h3 {
   background-color: #22c2f3;
+}
+@media (max-width: 600px) {
+  #programs h3,
+  #member-info h3 {
+    background-color: #fff;
+  }
 }
 #inn-brags h3 {
   text-align: center;

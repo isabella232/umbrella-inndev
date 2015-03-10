@@ -12,8 +12,14 @@
     @media (max-width: 980px) {
       padding: 2em;
     }
+    @media (max-width: 600px) {
+      padding: 0 2em;
+    }
     p {
       font-size: 18px;
+      @media (max-width: 600px) {
+	    text-align: center;
+	  }
     }
   }
   section {
@@ -42,12 +48,15 @@
     }
   }
   h3 span {
-      color: @dkgray;
+    color: @dkgray;
   }
 }
 
 .interstitial {
   margin-bottom: 5em;
+  @media (max-width: 600px) {
+    margin-bottom: 2em;
+  }
 }
 
 #quick-links {
@@ -56,6 +65,9 @@
   h4 {
     color: @dkgray;
     text-transform: uppercase;
+    @media (max-width: 600px) {
+	  margin-bottom: 0.5em;
+	}
   }
   li {
     font-size: 1.25em;
@@ -70,6 +82,7 @@
     }
     li {
 	  display: list-item;
+	  margin-bottom: 0.5em;
     }
   }
 }
@@ -88,7 +101,6 @@
       padding: 0.5em 0 0.5em 10%;
     }
   }
-
   .widget {
     padding: 0 40px 0 0;
   }
@@ -131,7 +143,6 @@
       clear: both;
       padding: 0.5em 10% 0.5em 0;
     }
-
     ul {
       margin: 0;
       padding: 0;
@@ -145,6 +156,9 @@
     }
     ul.donors li {
       margin: 0 0 0.5em 0;
+      @media (max-width: 600px) {
+	    margin-bottom: 1em;
+	  }
     }
     .learn-more {
       font-size: 18px;
@@ -204,6 +218,9 @@
 #member-info {
   h3 {
     background-color: @blue;
+    @media (max-width: 600px) {
+	  background-color: #fff;
+	}
   }
 }
 

@@ -359,7 +359,11 @@ body.page.page-template-full-page #content {
 }
 h1.entry-title {
   text-align: center;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
+}
+h5.byline {
+  text-align: center;
+  margin-bottom: 2em;
 }
 #hero,
 section.interstitial {
@@ -566,6 +570,12 @@ section.normal h3 span {
 @media (max-width: 768px) {
   #site-footer img[alt="INN logo"] {
     width: 400px;
+  }
+}
+@media (max-width: 480px) {
+  #site-footer img[alt="INN logo"] {
+    max-width: 75%;
+    padding: 2em 0;
   }
 }
 #menu-footer-navigation,
