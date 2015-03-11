@@ -119,7 +119,7 @@ if (is_page('for-funders')) { ?>
 				</div>
 				<div class="span4">
 					<img class="icon" src="<? echo $img_path . 'brag_funding.svg'; ?>" />
-					<p>Contributed more than $350,000 to our members.</p>
+					<p>Contributed more than $616,977 to our members.</p>
 				</div>
 				<div class="span4">
 					<img class="icon" src="<? echo $img_path . 'brag_tech.svg'; ?>" />
