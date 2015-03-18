@@ -23,7 +23,7 @@
   border-right: 1px solid #111;
 }
 .network-header ul.network-header-main-nav > li a {
-  color: #90bfe7;
+  color: #3bede4;
   display: block;
   height: 40px;
   padding: 0 6px;
@@ -116,7 +116,7 @@
   float: left;
 }
 .sub-nav-container ul li a {
-  color: #90bfe7;
+  color: #3bede4;
   list-style-type: none;
   margin: 0;
   padding: 0 10px;
@@ -258,16 +258,16 @@ body.noscroll {
   font-size: 21px;
 }
 #network-footer ul li.largo a {
-  color: #f48030;
+  color: #f77710;
 }
 #network-footer ul li.journo a {
   color: #694b6a;
 }
 #network-footer ul li.newstraining a {
-  color: #90bfe7;
+  color: #3bede4;
 }
 #network-footer ul li.impaq a {
-  color: #e76756;
+  color: #df4646;
 }
 #network-footer ul li.nerds a {
   color: #bbbbbb;
