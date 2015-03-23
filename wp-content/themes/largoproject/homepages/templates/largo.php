@@ -12,7 +12,7 @@
 			<div class="span4">
 				<img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/workflow.svg" />
 				<h5>Powerful Publishing Tools</h5>
-				<p>Unlike other WordPress "news" themes, Largo is built by <a href="http://nerds.investigativenewsnetwork.org/">real news nerds</a>. We obsess about workflow, too.</p>
+				<p>Unlike other WordPress "news" themes, Largo is built by <a href="http://nerds.inn.org/">real news nerds</a>. We obsess about workflow, too.</p>
 			</div>
 			<div class="span4">
 				<img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/devfriendly.svg" />
@@ -25,7 +25,7 @@
 
 	<div class="row-fluid interstitial">
 		<h3>Largo is a project of INN</h3>
-		<p><a href="http://investigativenewsnetwork.org/">INN</a> is a nonprofit organization supporting a network of <a href="http://investigativenewsnetwork.org/member/">100+ nonprofit news organizations</a>. Projects like Largo depend on your support.</p>
+		<p><a href="http://inn.org/">INN</a> is a nonprofit organization supporting a network of <a href="http://inn.org/member/">100+ nonprofit news organizations</a>. Projects like Largo depend on your support.</p>
 		<a class="btn btn-donate" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=M7T6234BREMG2">Donate Now</a>
 	</div>
 
@@ -39,14 +39,14 @@
 				<p>Get up and running with Largo and explore many of our more advanced features.</p>
 			</div>
 			<div class="span4">
-				<a href="http://confluence.investigativenewsnetwork.org/display/LKB/Largo+Knowledge+Base"><img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/faq.svg" /></a>
-				<h5><a href="http://confluence.investigativenewsnetwork.org/display/LKB/Largo+Knowledge+Base">Knowledge Base</a></h5>
+				<a href="http://confluence.inn.org/display/LKB/Largo+Knowledge+Base"><img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/faq.svg" /></a>
+				<h5><a href="http://confluence.inn.org/display/LKB/Largo+Knowledge+Base">Knowledge Base</a></h5>
 				<p>Answers to our most frequently asked questions.</p>
 			</div>
 			<div class="span4">
-				<a href="http://jira.investigativenewsnetwork.org/servicedesk/customer/portal/4"><img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/helpdesk.svg" /></a>
-				<h5><a href="http://jira.investigativenewsnetwork.org/servicedesk/customer/portal/4">Help Desk</a></h5>
-				<p>Need more help? <a href="http://jira.investigativenewsnetwork.org/servicedesk/customer/portal/4">Submit a support request</a>.</p>
+				<a href="http://jira.inn.org/servicedesk/customer/portal/4"><img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/helpdesk.svg" /></a>
+				<h5><a href="http://jira.inn.org/servicedesk/customer/portal/4">Help Desk</a></h5>
+				<p>Need more help? <a href="http://jira.inn.org/servicedesk/customer/portal/4">Submit a support request</a>.</p>
 			</div>
 		</div>
 	</section>
@@ -68,7 +68,7 @@
           		while ( $query->have_posts() ) : $query->the_post();
           			echo '<h5><a href="' . get_permalink() . '">' . get_the_title() . '</a></h5>';
           			largo_excerpt();
-          			echo '<p class="more"><a href="http://nerds.investigativenewsnetwork.org/category/largo/">More Project Updates</a></p>';
+          			echo '<p class="more"><a href="http://nerds.inn.org/category/largo/">More Project Updates</a></p>';
           		endwhile;
           	}
 

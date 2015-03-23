@@ -28,15 +28,15 @@
 				<li>·</li>
 				<li><a href="http://largo.readthedocs.org/">Documentation</a></li>
 				<li>·</li>
-				<li><a href="http://confluence.investigativenewsnetwork.org/display/LKB/Largo+Knowledge+Base">Knowledgebase</a></li>
+				<li><a href="http://confluence.inn.org/display/LKB/Largo+Knowledge+Base">Knowledgebase</a></li>
 				<li>·</li>
-				<li><a href="http://jira.investigativenewsnetwork.org/servicedesk/customer/portal/4">Help Desk</a></li>
+				<li><a href="http://jira.inn.org/servicedesk/customer/portal/4">Help Desk</a></li>
 				<li>·</li>
-				<li><a href="http://investigativenewsnetwork.org">INN</a></li>
+				<li><a href="http://inn.org">INN</a></li>
 				<li>·</li>
-				<li><a href="http://nerds.investigativenewsnetwork.org/">INN Nerds Blog</a></li>
+				<li><a href="http://nerds.inn.org/">INN Nerds Blog</a></li>
 				<li>·</li>
-				<li><a href="http://investigativenewsnetwork.us1.list-manage1.com/subscribe?u=81670c9d1b5fbeba1c29f2865&id=913028b23c">Largo Project Newsletter</a></li>
+				<li><a href="http://inn.us1.list-manage1.com/subscribe?u=81670c9d1b5fbeba1c29f2865&id=913028b23c">Largo Project Newsletter</a></li>
 			  </ul>
 			</p>
 		</div>
