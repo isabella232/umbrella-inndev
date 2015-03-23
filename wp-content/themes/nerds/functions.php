@@ -12,7 +12,6 @@ define( 'SHOW_MAIN_NAV', FALSE );
 // Includes
 $includes = array(
 	'/inc/widgets.php',
-	'/inc/metaboxes.php'
 );
 foreach ( $includes as $include ) {
 	require_once( get_stylesheet_directory() . $include );
