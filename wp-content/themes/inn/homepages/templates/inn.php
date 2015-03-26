@@ -129,7 +129,7 @@
 		<h3>Thanks, Supporters!</h3>
 		<div class="row-fluid">
 			<ul class="span4">
-				<li><a href="http://www.arnoldfoundation.org/">The Laura and John Arnold Foundation</a></div></li>
+				<li><a href="http://www.arnoldfoundation.org/">The Laura and John Arnold Foundation</a></li>
 				<li><a href="http://www.atlanticphilanthropies.org/">Atlantic Philanthropies</a></li>
 				<li><a href="http://democracyfund.org/">Democracy Fund</a></li>
 				<li><a href="http://www.hewlett.org/">The William and Flora Hewlett Foundation</a></li>
@@ -147,7 +147,7 @@
 				<li><a href="http://www.opensocietyfoundations.org/">Open Society Foundations</a></li>
 				<li><a href="http://www.thepattersonfoundation.org/">The Patterson Foundation</a></li>
 				<li><a href="http://rbf.org/">Rockefeller Brothers Fund</a></li>
-				<li><a href="/about/people/board-of-directors/">The INN Board</a></div></li>
+				<li><a href="/about/people/board-of-directors/">The INN Board</a></li>
 			</ul>
 		</div>
 	</div>
