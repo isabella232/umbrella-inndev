@@ -19,7 +19,7 @@ foreach ( $includes as $include ) {
 function inn_head() { ?>
 	<script src="//use.typekit.net/cui8tby.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>
-	<link rel="author" name="Tipsy" data-paypal="kevin.davis@investigativenewsnetwork.org">
+	<link rel="author" name="Institute for Nonprofit News" data-paypal="kevin.davis@investigativenewsnetwork.org">
 <?php
 }
 add_action( 'wp_head', 'inn_head' );
