@@ -43,12 +43,13 @@ add_action( 'wp_enqueue_scripts', 'journobiz_enqueue', 20 );
 
 
 // TypeKit
-function inn_typekit() { ?>
+function inn_head() { ?>
 	<script type="text/javascript" src="//use.typekit.net/mmy6iwx.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<link rel="author" name="Tipsy" data-paypal="kevin.davis@investigativenewsnetwork.org">
 <?php
 }
-add_action( 'wp_head', 'inn_typekit' );
+add_action( 'wp_head', 'inn_head' );
 
 
 // Register an additional sidebar region for the homepage

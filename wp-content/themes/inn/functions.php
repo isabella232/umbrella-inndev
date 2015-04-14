@@ -16,12 +16,13 @@ foreach ( $includes as $include ) {
 
 
 // Typekit
-function inn_typekit() { ?>
+function inn_head() { ?>
 	<script src="//use.typekit.net/cui8tby.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>
+	<link rel="author" name="Tipsy" data-paypal="kevin.davis@investigativenewsnetwork.org">
 <?php
 }
-add_action( 'wp_head', 'inn_typekit' );
+add_action( 'wp_head', 'inn_head' );
 
 
 // Enable excerpts for pages
