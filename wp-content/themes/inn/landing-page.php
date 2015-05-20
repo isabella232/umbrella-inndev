@@ -20,10 +20,11 @@ $img_path = get_stylesheet_directory_uri() . '/images/';
 		<div class="span12">
 			<h4>Quick links</h4>
 			<ul>
-				<li><a href="/about/people/">INN Staff+Board</a></li>
 				<li><a href="/for-members/dues/">Pay Your Dues</a></li>
 				<li><a href="/about/membership-faqs/">FAQs</a></li>
-				<li><a href="/members">Member Directory</a></li>
+				<li><a href="/members/">Member Directory</a></li>
+				<li><a href="/for-members/member-benefits/">Member Benefits</a></li>
+				<li><a href="/for-members/membership-standards/">Membership Standards</a></li>
 			</ul>
 		</div>
 	</div>
