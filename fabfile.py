@@ -22,6 +22,8 @@ def production():
     env.hosts = [os.environ['INNDEV_PRODUCTION_SFTP_HOST'], ]
     env.user = os.environ['INNDEV_PRODUCTION_SFTP_USER']
     env.password = os.environ['INNDEV_PRODUCTION_SFTP_PASSWORD']
+    env.domain = 'inn.org'
+    env.port = 2222
 
 
 @task
@@ -33,6 +35,8 @@ def staging():
     env.hosts = [os.environ['INNDEV_STAGING_SFTP_HOST'], ]
     env.user = os.environ['INNDEV_STAGING_SFTP_USER']
     env.password = os.environ['INNDEV_STAGING_SFTP_PASSWORD']
+    env.domain = 'inndev.staging.wpengine.com'
+    env.port = 2222
 
 try:
     from local_fabfile import  *
