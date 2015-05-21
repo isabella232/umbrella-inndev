@@ -20,7 +20,7 @@
 		<div class="credit-and-license">
 			<p>Built and maintained by the <a href="https://twitter.com/INNnerds">INN Nerds</a>.</p>
 			<p>Code licensed under GNU General Public License.</p>
-			<p>Currently v0.4.1</p>
+			<p>Currently v0.5</p>
 			<p>Icons created by Laurent Canivet, Sofía Moya, misirlou, SuperAtic LABS, and Nadya Brätt for the Noun Project.</p>
 			<p>
 			  <ul class="largo-links">
