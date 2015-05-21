@@ -287,7 +287,7 @@ html.no-touch .navbar li.home-link > a:hover {
   padding: 10px 3px;
 }
 #main {
-  margin: 4em 0;
+  margin: 3em 0;
 }
 #main .row-fluid img.icon,
 #main .row-fluid a.program img {
@@ -356,6 +356,9 @@ body.page #content {
 }
 body.page.page-template-full-page #content {
   margin-left: 0;
+}
+body.normal.page .entry-content {
+  padding: 0;
 }
 h1.entry-title {
   text-align: center;
@@ -549,6 +552,7 @@ section.normal h3 span {
   background-color: #909799;
   padding: 14px;
   border-radius: 30px;
+  margin: 0 4px;
 }
 #site-footer #ft-social li i:hover {
   background-color: #fff;
@@ -590,9 +594,6 @@ section.normal h3 span {
 #boilerplate {
   text-align: center;
   border-top: none;
-}
-#boilerplate p.footer-credit {
-  float: none;
 }
 #boilerplate .copyright,
 #boilerplate .menu,
