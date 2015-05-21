@@ -116,6 +116,9 @@ a:hover {
 .sticky-nav-holder .navbar li > a {
   color: #09c9ff;
 }
+.widgettitle {
+  color: #000;
+}
 /* friends widget */
 #friends-widget p,
 #friends-widget ul {
