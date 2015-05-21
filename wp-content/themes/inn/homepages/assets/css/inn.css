@@ -43,7 +43,7 @@
 }
 .home #main #supporters {
   padding-top: 2em;
-  background-color: #efefef;
+  background-color: #edf1f4;
   margin-bottom: 0;
   padding-bottom: 0;
 }
@@ -63,10 +63,10 @@
   list-style: none;
   text-align: left;
   margin-bottom: 1em;
-  color: #777777;
+  color: #909799;
 }
 .home #main #supporters li a {
-  color: #777777;
+  color: #909799;
 }
 @media (max-width: 768px) {
   .home #main #supporters {
@@ -103,7 +103,6 @@ body.home.admin-bar .sticky-nav-holder {
 }
 #email img {
   /*margin: 0 10% 0 0;*/
-
   display: block;
   width: 15%;
   height: auto;

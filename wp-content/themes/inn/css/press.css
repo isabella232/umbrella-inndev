@@ -9,7 +9,7 @@
   color: #555555;
 }
 .type-argolinks h3 a:hover {
-  color: #22c2f3;
+  color: #09c9ff;
 }
 .type-argolinks p {
   font-size: 15px;
@@ -18,7 +18,7 @@
 .type-argolinks p.source span {
   font-style: italic;
   padding-left: 10px;
-  color: #777777;
+  color: #909799;
 }
 .stories article.type-argolinks {
   border-bottom: none;

@@ -4,9 +4,9 @@
   -o-transform: scaleX(-1);
   transform: scaleX(-1);
   -ms-filter: fliph;
+  /*IE*/
   filter: fliph;
   /*IE*/
-
 }
 #page {
   max-width: 100%;
@@ -180,7 +180,7 @@
   color: #555555;
 }
 #news-and-benefits-and-funders.row-fluid li a:hover {
-  color: #22c2f3;
+  color: #09c9ff;
 }
 @media (max-width: 600px) {
   #news-and-benefits-and-funders.row-fluid #news,
@@ -202,10 +202,10 @@
   float: left;
 }
 #membership-callout .btn {
-  background: #dd484a;
+  background: #df4646;
 }
 #membership-callout .btn:hover {
-  background: #d82d2f;
+  background: #da2b2b;
 }
 @media (max-width: 768px) {
   #membership-callout {
@@ -226,7 +226,7 @@
 }
 #programs h3,
 #member-info h3 {
-  background-color: #22c2f3;
+  background-color: #09c9ff;
 }
 @media (max-width: 600px) {
   #programs h3,

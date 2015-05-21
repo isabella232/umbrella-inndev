@@ -8,13 +8,9 @@ Template:       largo
 Version:        0.1.0
 */
 @import "../../inn/less/variables.less";
+@import "../../inn/less/common.less";
 
-body,
-.btn-primary {
-  font-family: @serif;
-}
-h1,h2,h3,h4,h5,
-.widgettitle {
+#breadcrumbs  {
   font-family: @sans;
   font-weight: 700;
 }
@@ -61,7 +57,7 @@ body.normal.page #content.guide-page {
   }
   .guide-nav {
     padding: 20px;
-    background-color: @ltgray;
+    background-color: @xltgray;
     h4 {
       font-size: 18px;
       margin-bottom: 8px;
@@ -77,20 +73,23 @@ body.normal.page #content.guide-page {
 	  }
     }
   }
-  h3.guide-author {
+  .guide-author {
     font-size: 18px;
-    margin-bottom: 0;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    color: @medgray;
   }
-  .largo-author {
-    .widgettitle {
-      font-size: 18px;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-      color: @medgray;
-      a {
-	    color: @medgray;
-      }
+  .author-box {
+    a {
+	  color: @medgray;
     }
+    h3 {
+	  font-size: 18px;
+	  margin-bottom: 8px;
+	  a {
+        color: #000;
+	  }
+	}
     h5 {
       margin-bottom: 8px;
     }

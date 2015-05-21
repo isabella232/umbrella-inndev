@@ -1,0 +1,91 @@
+body,
+.btn-primary,
+.btn,
+.navbar,
+h1,h2,h3,h4,h5,
+.widgettitle,
+input, button, select, textarea  {
+  font-family: @sans;
+  color: @medgray;
+}
+h1 {
+  color: @dkgray;
+}
+textarea,
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="url"],
+input[type="search"] {
+  border-radius: 0;
+}
+.entry-content p,
+.entry-content ul,
+.entry-content ol {
+  font-family: @serif;
+  font-weight: 300;
+}
+h1,h2,h3,h4,h5,
+.widgettitle {
+  font-weight: 500;
+}
+a {
+  color: @linkcolor;
+  &:hover {
+    color: @linkhover;
+  }
+}
+.btn {
+  text-shadow: none;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 12px 24px;
+  background-color: @btnbg;
+  color: #fff;
+  border-radius: 0;
+  &:hover {
+    background-color: darken(@btnbg, 6.3%);
+    color: #fff;
+  }
+  &.btn-primary {
+    color: #fff;
+    background-color: @btnprimarybg;
+    &:hover {
+	  background-color: darken(@btnprimarybg, 6.3%);
+    }
+  }
+}
+.top-tag {
+  font-weight: 300;
+}
+.stories {
+  h2.entry-title {
+    font-size: 24px;
+    margin-bottom: 0.5em;
+    a {
+	  color: @dkgray;
+	  &:hover {
+	    color: @blue;
+	  }
+	}
+  }
+  h5.byline {
+    display: none;
+  }
+}
+.type-pull-quote {
+  border-left: 1px solid @ltgray;
+  padding-left: 40px;
+  color: @dkgray;
+
+  @media (max-width: 768px) {
+      padding: 20px 10px;
+      text-align: center;
+      border: none;
+      border-top: 3px solid @dkgray;
+      border-bottom: 3px solid @dkgray;
+      margin: 0 auto 1em;
+      max-width: 90%;
+  }
+}
