@@ -1,43 +1,43 @@
-.home section {
+section {
   margin-bottom: 100px;
 }
-.home #main h3 {
+#main h3 {
   text-align: center;
-  color: #e76756;
+  color: #df4646;
   font-size: 18px;
   text-transform: uppercase;
   margin-bottom: 0;
 }
-.home .widgettitle,
-.home #sectors h3 {
+.widgettitle,
+#sectors h3 {
   text-align: left;
 }
-.home #sectors h3,
-.home #sectors p,
-.home #sectors .story h4 {
+#sectors h3,
+#sectors p,
+#sectors .story h4 {
   margin-bottom: 4px;
 }
-.home #sectors p {
+#sectors p {
   font-size: 18px;
 }
-.home #sectors .story h4 {
+#sectors .story h4 {
   font-size: 20px;
 }
-.home #sectors .story h4 a {
-  color: #333333;
+#sectors .story h4 a {
+  color: #555555;
 }
-.home #sectors .story p {
+#sectors .story p {
   font-size: 15px;
   line-height: 24px;
 }
-.home #sectors .story p.more {
+#sectors .story p.more {
   font-size: 18px;
   font-weight: bold;
 }
-.home #participants {
+#participants {
   margin-bottom: 24px;
 }
-.home #participants h3 {
+#participants h3 {
   margin-bottom: 24px;
 }
 #hero {
@@ -59,7 +59,7 @@
 }
 #hero input.btn-primary {
   margin-top: 18px;
-  background-color: #e76756;
+  background-color: #df4646;
   border: none;
   border-radius: 5px;
   -moz-border-radius: 5px;
@@ -69,7 +69,7 @@
   width: 97.5%;
 }
 @media all and (max-width: 980px) {
-  .home #sectors .span4 {
+  #sectors .span4 {
     width: 95%;
     padding: 0;
     margin: 0 2.5% 24px;
@@ -83,15 +83,15 @@
   }
 }
 @media all and (max-width: 768px) {
-  .home section {
+  section {
     margin-bottom: 24px;
   }
-  .home #mc_embed_signup {
+  #mc_embed_signup {
     padding: 0;
   }
-  .home #sectors h3,
-  .home #sectors h4,
-  .home #sectors p {
+  #sectors h3,
+  #sectors h4,
+  #sectors p {
     text-align: center;
   }
   #hero {
@@ -113,7 +113,7 @@
   }
 }
 @media all and (max-width: 480px) {
-  .home #participants .span1 {
+  #participants .span1 {
     width: 31%;
   }
 }

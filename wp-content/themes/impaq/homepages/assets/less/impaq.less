@@ -1,53 +1,49 @@
-@red: #e76756;
-@inngray: #bbb;
-@ltgray: #efefef;
-@dkgray: #333;
+@import "../../../../inn/less/variables.less";
 
-.home {
-  section {
-    margin-bottom: 100px;
+section {
+  margin-bottom: 100px;
+}
+#main h3 {
+  text-align: center;
+  color: @red;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+.widgettitle,
+#sectors h3 {
+  text-align: left;
+}
+#sectors {
+  h3,
+  p,
+  .story h4 {
+    margin-bottom: 4px;
   }
-  #main h3 {
-    text-align: center;
-    color: @red;
-    font-size: 18px;
-    text-transform: uppercase;
-    margin-bottom: 0;
+  p {
+	font-size: 18px;
   }
-  .widgettitle,
-  #sectors h3 {
-    text-align: left;
-  }
-  #sectors {
-    h3, p,
-    .story h4 {
-      margin-bottom: 4px;
+  .story {
+    h4 {
+      font-size: 20px;
+      a {
+	    color: @dkgray;
+      }
     }
     p {
-	  font-size: 18px;
-    }
-    .story {
-      h4 {
-        font-size: 20px;
-        a {
-	      color: @dkgray;
-        }
-      }
-      p {
-	    font-size: 15px;
-        line-height: 24px;
-        &.more {
-          font-size: 18px;
-          font-weight: bold;
-        }
+	  font-size: 15px;
+      line-height: 24px;
+      &.more {
+        font-size: 18px;
+        font-weight: bold;
       }
     }
   }
-  #participants {
+}
+#participants {
+  margin-bottom: 24px;
+  h3 {
     margin-bottom: 24px;
-    h3 {
-      margin-bottom: 24px;
-    }
   }
 }
 #hero {
@@ -79,7 +75,7 @@
   }
 }
 @media all and (max-width: 980px) {
- .home #sectors .span4 {
+  #sectors .span4 {
     width: 95%;
     padding: 0;
     margin: 0 2.5% 24px;
@@ -93,18 +89,18 @@
   }
 }
 @media all and (max-width: 768px) {
-  .home {
-    section {
-      margin-bottom: 24px;
-    }
-    #mc_embed_signup {
-      padding: 0;
-    }
-    #sectors {
-      h3, h4, p {
-	    text-align: center;
-	  }
-    }
+  section {
+    margin-bottom: 24px;
+  }
+  #mc_embed_signup {
+    padding: 0;
+  }
+  #sectors {
+    h3,
+    h4,
+    p {
+	  text-align: center;
+	}
   }
   #hero {
   	margin-bottom: 24px;
@@ -117,13 +113,14 @@
     input {
       margin: 0 1.25%;
     }
-    label, h3 {
+    label, 
+    h3 {
 	  text-align: center;
     }
   }
 }
 @media all and (max-width: 480px) {
-  .home #participants .span1 {
+  #participants .span1 {
     width: 31%;
   }
 }
