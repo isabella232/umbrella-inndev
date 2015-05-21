@@ -7,29 +7,6 @@
   background-color: #efefef;
   padding-top: 2em;
 }
-.homepage-content h2,
-.homepage-content .interstitial h3  {
-  text-align: center;
-  color: #333;
-  font-size: 28px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  margin-bottom: 0.75em;
-}
-.homepage-content h2 {
-  margin-bottom: 0;
-}
-.homepage-content .interstitial h3 {
-  color: #f48030;
-}
-.homepage-content h4 {
-  text-align: center;
-  color: #666;
-  font-size: 21px;
-  font-family: "proxima-nova", helvetica, arial, sans-serif;
-  font-weight: 500;
-  margin-bottom: 2em;
-}
 .homepage-content .span4 {
   padding: 1em;
 }
@@ -46,8 +23,27 @@
 .homepage-content .span4 p {
   font-size: 17px;
 }
+.homepage-content h2,
+.homepage-content .interstitial h3 {
+  text-align: center;
+  color: #f48030;
+  font-size: 28px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0.75em;
+}
+.homepage-content h2 {
+  margin-bottom: 0;
+}
+.homepage-content h4 {
+  text-align: center;
+  color: #666;
+  font-size: 21px;
+  font-weight: 500;
+  margin-bottom: 2em;
+}
 .homepage-content .interstitial h3,
-.homepage-content .interstitial h5  {
+.homepage-content .interstitial h5 {
   margin-bottom: 0.25em;
   max-width: 70%;
   margin: 0 auto;
@@ -62,6 +58,7 @@
 .homepage-content .interstitial a.btn {
   font-size: 21px;
   font-weight: 800;
+  margin-bottom: 2em;
   border: none;
   text-transform: uppercase;
   background-color: #bd261d;
@@ -81,11 +78,11 @@
 }
 @media (max-width: 780px) {
   .homepage-content .row-fluid .span4 {
-	clear: both;
-	width: 95%;
-	margin: 0 2.5%;
+    clear: both;
+    width: 95%;
+    margin: 0 2.5%;
   }
-  .homepage-content .news p {
+  .homepage-content news p {
     font-size: 15px;
   }
   .homepage-content #showcase h4 {

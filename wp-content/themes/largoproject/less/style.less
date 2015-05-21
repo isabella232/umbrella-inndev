@@ -1,31 +1,8 @@
-/*
-Theme Name:     Largo Project Documentation Site
-Theme URI:      http://largoproject.org
-Description:    Child theme for Project Largo documentation site
-Author:         Adam Schweigert/Media Toybox
-Author URI:     http://adamschweigert.com
-Template:       largo
-Version:        0.2.0
-*/
-
-@innblue: #2275be;
-@innltblue: #90bfe7;
-@aqua: #28C1DB;
-@inngray: #bbb;
-@ltgray: #efefef;
-@dkgray: #333;
+@import "../../inn/less/variables.less";
+@import "../../inn/less/common.less";
 @largoorange: #f48030;
 @largoyellow: #ffcf73;
 
-body,
-.btn-primary {
-  font-family: "proxima-nova",helvetica,arial,sans-serif;
-}
-h1,h2,h3,h4,h5,
-.widgettitle {
-  font-family: "proxima-nova",helvetica,arial,sans-serif;
-  font-weight: 900;
-}
 .site-hero {
   width: 100%;
   text-align: center;
@@ -45,7 +22,7 @@ h1,h2,h3,h4,h5,
     border: none;
     text-transform: uppercase;
     text-shadow: none;
-    background-color: @aqua;
+    background-color: @blue;
     padding: 20px 40px 20px;
     &:hover {
 	  background-color: #53CDE2;

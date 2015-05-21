@@ -2,81 +2,9 @@
 Theme Name:     Largo Project Documentation Site
 Theme URI:      http://largoproject.org
 Description:    Child theme for Project Largo documentation site
-Author:         Adam Schweigert/Media Toybox
-Author URI:     http://adamschweigert.com
+Author:         The INN Nerds
+Author URI:     http://nerds.inn.org
 Template:       largo
-Version:        0.2.0
+Version:        0.2
 */
-body,
-.btn-primary {
-  font-family: "proxima-nova", helvetica, arial, sans-serif;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-.widgettitle {
-  font-family: "proxima-nova", helvetica, arial, sans-serif;
-  font-weight: 900;
-}
-.site-hero {
-  width: 100%;
-  text-align: center;
-}
-.site-hero img {
-  margin: 2em auto 1em;
-  display: block;
-  width: 300px;
-}
-.site-hero .tagline {
-  color: #666;
-  font-size: 18px;
-}
-.site-hero a.btn {
-  font-size: 21px;
-  font-weight: 800;
-  margin-bottom: 0.25em;
-  border: none;
-  text-transform: uppercase;
-  text-shadow: none;
-  background-color: #28c1db;
-  padding: 20px 40px 20px;
-}
-.site-hero p {
-  font-size: 14px;
-}
-.footer-bg {
-  background: transparent;
-}
-.footer-bg #site-footer {
-  padding-top: 3em;
-  border-top: 1px solid #ddd;
-  color: #111;
-  text-align: center;
-}
-.footer-bg #site-footer p {
-  font-size: 16px;
-  margin: 0;
-}
-.footer-bg #site-footer .github-star-fork {
-  margin-bottom: 2em;
-}
-.footer-bg #site-footer ul.largo-links {
-  margin: 2em 0;
-}
-.footer-bg #site-footer ul.largo-links li {
-  font-size: 16px;
-  list-style-type: none;
-  margin-right: 12px;
-  display: inline;
-}
-@media (max-width: 480px) {
-  .site-hero .tagline {
-    font-size: 15px;
-  }
-  #site-footer .credit-and-license p {
-    margin-bottom: 0.75em;
-    font-size: 13px;
-  }
-}
+@import "css/style.css";
