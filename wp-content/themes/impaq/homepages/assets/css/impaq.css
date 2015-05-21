@@ -60,6 +60,7 @@ section {
 #hero input.btn-primary {
   margin-top: 18px;
   background-color: #df4646;
+  color: #fff;
   border: none;
   border-radius: 5px;
   -moz-border-radius: 5px;
