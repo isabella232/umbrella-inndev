@@ -107,26 +107,14 @@ a:hover {
 }
 .home .sticky-nav-wrapper,
 .sticky-nav-wrapper {
-  height: 85px;
+  height: 75px;
 }
 .home .sticky-nav-holder.show {
   visibility: visible;
   opacity: 1;
 }
-#topics-bar {
-  padding-top: 0;
-}
-#topics-bar ul li.menu-label {
-  color: #909799;
-}
-.entry-title a {
-  color: #555555;
-}
-.entry-content h3 {
-  font-weight: 700;
-}
-.entry-content h3 strong {
-  font-weight: 900;
+.sticky-nav-holder .navbar li > a {
+  color: #09c9ff;
 }
 /* friends widget */
 #friends-widget p,
