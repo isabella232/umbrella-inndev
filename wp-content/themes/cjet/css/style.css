@@ -60,7 +60,7 @@ body.normal.page #content.guide-page {
 }
 .guide-page .guide-nav {
   padding: 20px;
-  background-color: #efefef;
+  background-color: #aaaaaa;
 }
 .guide-page .guide-nav h4 {
   font-size: 18px;
@@ -68,7 +68,7 @@ body.normal.page #content.guide-page {
   text-transform: uppercase;
 }
 .guide-page .guide-nav h4 a {
-  color: #333333;
+  color: #555555;
 }
 .guide-page .guide-nav .current_page_item {
   font-weight: bold;
@@ -84,10 +84,10 @@ body.normal.page #content.guide-page {
   font-size: 18px;
   text-transform: uppercase;
   margin-bottom: 8px;
-  color: #bbbbbb;
+  color: #909799;
 }
 .guide-page .largo-author .widgettitle a {
-  color: #bbbbbb;
+  color: #909799;
 }
 .guide-page .largo-author h5 {
   margin-bottom: 8px;
