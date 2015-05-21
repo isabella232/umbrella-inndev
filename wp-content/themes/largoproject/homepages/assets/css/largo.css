@@ -4,7 +4,7 @@
   text-align: center;
 }
 .homepage-content section {
-  background-color: #efefef;
+  background-color: #edf1f4;
   padding-top: 2em;
 }
 .homepage-content .span4 {
@@ -16,6 +16,7 @@
 }
 .homepage-content .span4 h5 {
   margin-bottom: 0.25em;
+  color: #333;
 }
 .homepage-content .span4 h5 a {
   color: #333;
@@ -53,22 +54,7 @@
 }
 .homepage-content .interstitial p {
   max-width: 70%;
-  margin: 0 auto;
-}
-.homepage-content .interstitial a.btn {
-  font-size: 21px;
-  font-weight: 800;
-  margin-bottom: 2em;
-  border: none;
-  text-transform: uppercase;
-  background-color: #bd261d;
-  margin-top: 0.5em;
-  padding: 10px 40px 10px;
-  color: #fff;
-  text-shadow: none;
-}
-.homepage-content .interstitial a.btn:hover {
-  background-color: #CA514A;
+  margin: 0 auto 1em;
 }
 .homepage-content #showcase .row-fluid {
   margin-bottom: 1em;

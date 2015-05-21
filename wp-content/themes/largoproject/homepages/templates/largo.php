@@ -26,7 +26,7 @@
 	<div class="row-fluid interstitial">
 		<h3>Largo is a project of INN</h3>
 		<p><a href="http://inn.org/">INN</a> is a nonprofit organization supporting a network of <a href="http://inn.org/member/">100+ nonprofit news organizations</a>. Projects like Largo depend on your support.</p>
-		<a class="btn btn-donate" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=M7T6234BREMG2">Donate Now</a>
+		<a class="btn btn-donate btn-primary" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=M7T6234BREMG2">Donate Now</a>
 	</div>
 
 	<section>

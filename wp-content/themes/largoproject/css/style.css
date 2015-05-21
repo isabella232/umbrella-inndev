@@ -112,21 +112,13 @@ a:hover {
   color: #666;
   font-size: 18px;
 }
-.site-hero a.btn {
-  font-size: 21px;
-  font-weight: 800;
-  margin-bottom: 0.25em;
-  border: none;
-  text-transform: uppercase;
-  text-shadow: none;
-  background-color: #09c9ff;
-  padding: 20px 40px 20px;
-}
-.site-hero a.btn:hover {
-  background-color: #53CDE2;
-}
 .site-hero p {
   font-size: 14px;
+}
+.site-hero .btn {
+  padding: 24px 36px;
+  font-size: 18px;
+  margin-bottom: 0.5em;
 }
 .footer-bg {
   background: transparent;
