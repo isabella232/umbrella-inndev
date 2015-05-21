@@ -27,20 +27,20 @@
 .homepage-content .interstitial h3 {
   text-align: center;
   color: #f48030;
-  font-size: 28px;
+  font-size: 36px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   margin-bottom: 0.75em;
 }
 .homepage-content h2 {
-  margin-bottom: 0;
+  margin-bottom: 0.25em;
 }
 .homepage-content h4 {
   text-align: center;
   color: #666;
   font-size: 21px;
   font-weight: 500;
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
 }
 .homepage-content .interstitial h3,
 .homepage-content .interstitial h5 {
