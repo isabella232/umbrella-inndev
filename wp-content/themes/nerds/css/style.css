@@ -168,10 +168,18 @@ a:hover {
   margin-top: 8px;
 }
 @media all and (max-width: 768px) {
+  #main {
+    margin-top: 0;
+  }
   #sidebar .widget-area {
     padding-left: 0;
   }
   .sticky-footer-container .follow {
     display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .home #main {
+    margin-top: 0;
   }
 }
