@@ -1,54 +1,10 @@
 /*
 Theme Name:     Impaq.me
 Theme URI:      http://impaq.me
-Description:    A child theme for Impaq.me, a program of the Investigative News Network
-Author:         Adam Schweigert/INN
-Author URI:     http://investigativenewsnetwork.org
+Description:    A child theme for Impaq.me, a program of the Institute for Nonprofit News
+Author:         The INN Nerds
+Author URI:     http://nerds.inn.org
 Template:       largo
-Version:        0.1.0
+Version:        0.2
 */
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-.btn-primary {
-  font-family: "proxima-nova", helvetica, arial, sans-serif;
-}
-#main a,
-#main a:hover,
-#site-footer a:hover {
-  color: #e76756;
-}
-a:hover,
-.btn-primary:hover {
-  opacity: 0.9;
-}
-#branding img {
-  margin: 0 auto 18px;
-  display: block;
-  max-width: 600px;
-  padding: 0 5%;
-  width: 90%;
-}
-#branding h5 {
-  text-align: center;
-  color: #bbbbbb;
-  font-size: 21px;
-  font-weight: normal;
-  margin-bottom: 60px;
-}
-#site-footer .textwidget p {
-  font-size: 14px;
-  margin-bottom: 6px;
-}
-#site-footer .textwidget p strong {
-  font-size: 15px;
-}
-@media all and (max-width: 768px) {
-  #branding h5 {
-    margin-bottom: 24px;
-    font-size: 21px;
-  }
-}
+@import "css/style.css";
