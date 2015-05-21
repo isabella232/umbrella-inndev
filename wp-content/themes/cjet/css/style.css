@@ -1,0 +1,193 @@
+/*
+Theme Name:     Community Journalism Executive Training (CJET)
+Theme URI:      http://largoproject.org
+Description:    A child theme for CJET, a program of the Investigative News Network
+Author:         Adam Schweigert/INN
+Author URI:     http://investigativenewsnetwork.org
+Template:       largo
+Version:        0.1.0
+*/
+body,
+.btn-primary {
+  font-family: "leitura-news", georgia, serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+.widgettitle {
+  font-family: "effra", helvetica, sans-serif;
+  font-weight: 700;
+}
+#site-header,
+.home #site-header {
+  min-height: 0;
+}
+#main {
+  margin-top: 8px;
+}
+#breadcrumbs {
+  margin-bottom: 24px;
+}
+#branding img {
+  margin: 24px auto 18px;
+  display: block;
+  max-width: 400px;
+  padding: 0 5%;
+  width: 90%;
+}
+body.normal.page #content.guide-page {
+  margin-left: 0;
+}
+.guide-page .author-posts-link {
+  display: none;
+}
+.guide-page .entry-content .widget {
+  padding: 15px 0;
+}
+.guide-page .pager a {
+  width: 100%;
+  box-sizing: border-box;
+  height: 100%;
+}
+.guide-page .pager h5.top-page {
+  margin-bottom: 0;
+  font-size: 21px;
+}
+.guide-page .toggle-nav-bar {
+  display: none;
+}
+.guide-page .guide-nav {
+  padding: 20px;
+  background-color: #efefef;
+}
+.guide-page .guide-nav h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.guide-page .guide-nav h4 a {
+  color: #333333;
+}
+.guide-page .guide-nav .current_page_item {
+  font-weight: bold;
+}
+.guide-page .guide-nav .current_page_item .children {
+  font-weight: normal;
+}
+.guide-page h3.guide-author {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+.guide-page .largo-author .widgettitle {
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  color: #bbbbbb;
+}
+.guide-page .largo-author .widgettitle a {
+  color: #bbbbbb;
+}
+.guide-page .largo-author h5 {
+  margin-bottom: 8px;
+}
+.guide-page .largo-author ul {
+  padding: 0;
+  margin: 0;
+}
+.guide-page .largo-author .author-posts-link {
+  display: none;
+}
+@media screen and (max-width: 782px) {
+  .guide-page .guide-nav {
+    width: 100%;
+    padding: 0;
+  }
+  .guide-page .guide-nav .container {
+    margin: 5px 10px;
+  }
+  .guide-page .guide-nav .guide-tree,
+  .guide-page .guide-nav .resources {
+    display: none;
+  }
+  .guide-page .guide-nav .toggle-nav-bar {
+    display: block;
+    margin-top: 0;
+  }
+  .guide-page .guide-nav h4 {
+    font-size: 21px;
+    margin: 0.1em 0;
+    color: black;
+  }
+  .guide-page .guide-nav ul {
+    margin: 0 -10px 0 44px;
+  }
+  .guide-page .guide-nav li {
+    display: block;
+    float: none;
+  }
+  .guide-page .guide-nav li > a {
+    color: #09c9ff;
+    padding: 6px 10px;
+  }
+  .guide-page .guide-nav .resources h4 {
+    margin-left: 46px;
+  }
+  .guide-page article.span9 {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .guide-page article.span9 .entry-content h3 {
+    font-size: 21px;
+    margin-bottom: 12px;
+  }
+  .guide-page article.span9 .entry-content h3.guide-author {
+    margin-bottom: 0;
+  }
+  .guide-page .pager .next,
+  .guide-page .pager .previous {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+}
+.guide-resources {
+  margin-left: 0;
+}
+.guide-resources li {
+  display: block;
+}
+.guide-resources a {
+  word-wrap: break-word;
+  word-break: break-word;
+}
+.guide-resources .attachment-meta {
+  white-space: nowrap;
+}
+.guide-resources i {
+  -webkit-font-smoothing: antialiased;
+}
+.guide-resources .icon-picture {
+  color: cadetblue;
+}
+.guide-resources .icon-play {
+  color: crimson;
+}
+.guide-resources .icon-table {
+  color: forestgreen;
+}
+.guide-resources .icon-doc-text {
+  color: mediumblue;
+}
+.guide-resources .icon-doc-text-inv {
+  color: firebrick;
+}
+.guide-resources .icon-download {
+  color: indigo;
+}
+@media screen and (max-width: 768px) {
+  #breadcrumbs {
+    display: none;
+  }
+}

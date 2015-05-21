@@ -25,8 +25,8 @@
 .home #courses li,
 .home #guides li {
   display: inline-block;
-  margin-right: 0.8547008547008548%;
-  margin-left: 0.8547008547008548%;
+  margin-right: 0.85470085%;
+  margin-left: 0.85470085%;
   min-width: 200px;
   vertical-align: top;
   text-align: left;
@@ -74,7 +74,7 @@
   width: 31.62393162393162%;
 }
 .home #guides li {
-  width: 23.29059829059829%;
+  width: 23.29059829%;
 }
 .home #extras {
   background-color: #efefef;

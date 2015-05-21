@@ -8,20 +8,21 @@ Template:       largo
 Version:        0.1.0
 */
 
-@innblue: #2275be;
-@innltblue: #90bfe7;
-@inngray: #bbb;
+@innblue: #09c9ff;
 @ltgray: #efefef;
+@medgray: #bbb;
 @dkgray: #333;
+@serif: "leitura-news",georgia,serif; // 300,600
+@sans: "effra",helvetica,sans-serif; // 300,400,500,700
 
 body,
 .btn-primary {
-  font-family: "proxima-nova",helvetica,arial,sans-serif;
+  font-family: @serif;
 }
 h1,h2,h3,h4,h5,
 .widgettitle {
-  font-family: "museo-sans",helvetica,arial,sans-serif;
-  font-weight: 900;
+  font-family: @sans;
+  font-weight: 700;
 }
 #site-header,
 .home #site-header {
@@ -91,9 +92,9 @@ body.normal.page #content.guide-page {
       font-size: 18px;
       text-transform: uppercase;
       margin-bottom: 8px;
-      color: @inngray;
+      color: @medgray;
       a {
-	    color: @inngray;
+	    color: @medgray;
       }
     }
     h5 {
