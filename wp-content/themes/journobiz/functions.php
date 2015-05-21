@@ -44,7 +44,7 @@ add_action( 'wp_enqueue_scripts', 'journobiz_enqueue', 20 );
 
 // TypeKit
 function inn_head() { ?>
-	<script type="text/javascript" src="//use.typekit.net/mmy6iwx.js"></script>
+	<script type="text/javascript" src="//use.typekit.net/cui8tby.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	<link rel="author" name="Institute for Nonprofit News" data-paypal="kevin.davis@investigativenewsnetwork.org">
 <?php
