@@ -1,37 +1,6 @@
-/*
-Theme Name:     Nerds
-Theme URI:      http://nerds.inn.org
-Description:    A child theme for nerds.inn.org, team blog for INN
-Author:         The INN Nerds
-Author URI:     http://nerds.inn.org
-Template:       largo
-Version:        0.1.0
-*/
+@import "../../inn/less/variables.less";
+@import "../../inn/less/common.less";
 
-@innblue: #2275be;
-@innltblue: #90bfe7;
-@inngray: #bbb;
-@ltgray: #efefef;
-@dkgray: #333;
-@serif: "leitura-news",georgia,serif; // 300,600
-@sans: "effra",helvetica,sans-serif; // 300,400,500,700
-
-body,
-h5.top-tag {
-  font-family: @sans;
-  font-weight: 300;
-}
-h1,h2,h3,h4,h5,
-.widgettitle {
-  font-weight: 500;
-  font-family: @sans;
-}
-.entry-content p,
-.entry-content ul,
-.entry-content ol {
-  font-family: @serif;
-  font-weight: 300;
-}
 #main {
   margin-top: 25px;
 }
@@ -49,7 +18,7 @@ h1,h2,h3,h4,h5,
 #topics-bar {
   padding-top: 0;
   ul li.menu-label {
-    color: @inngray;
+    color: @medgray;
   }
 }
 .entry-title a {
@@ -80,7 +49,7 @@ h1,h2,h3,h4,h5,
       font-size: 17px;
       line-height: 21px;
       a {
-        color: @inngray;
+        color: @medgray;
       }
     }
   }
@@ -116,7 +85,6 @@ h1,h2,h3,h4,h5,
     margin-top: 8px;
   }
 }
-
 
 @media all and (max-width: 768px) {
   #sidebar .widget-area {
