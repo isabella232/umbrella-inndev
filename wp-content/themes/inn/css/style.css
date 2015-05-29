@@ -32,10 +32,10 @@ button,
 select,
 textarea {
   font-family: "effra", helvetica, sans-serif;
-  color: #909799;
+  color: #555555;
 }
 h1 {
-  color: #555555;
+  color: #333333;
 }
 textarea,
 input[type="text"],
