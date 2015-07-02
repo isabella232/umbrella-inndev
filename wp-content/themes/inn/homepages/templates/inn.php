@@ -16,8 +16,8 @@
 				<p>How we started, what we do and why</p>
 			</div>
 			<div class="span4">
-				<a href="/legal/"><img class="icon" src="<? echo $img_path . 'icons/memberdirectory.svg'; ?>" /></a>
-				<h5><a href="/legal/">Our Members</a></h5>
+				<a href="/members/"><img class="icon" src="<? echo $img_path . 'icons/memberdirectory.svg'; ?>" /></a>
+				<h5><a href="/members/">Our Members</a></h5>
 				<p>100+ nonprofits publishing news in the public interest</p>
 			</div>
 			<div class="span4">
