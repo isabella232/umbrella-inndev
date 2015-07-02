@@ -461,14 +461,15 @@ function inn_member_list_filters() {
 	ob_start();
 	?>
 		<div class="member-nav">
-		<label><?php _e('Filter List By: ', 'inn'); ?></label>
-		<?php
-			//all these are abstracted in inn_members.php
-			inn_member_alpha_links();
-			inn_member_categories_list();
-			inn_member_states_list();
-		?>
-	</div>
+			<label><?php _e('Filter List By: ', 'inn'); ?></label>
+			<?php
+				//all these are abstracted in inn_members.php
+				inn_member_alpha_links();
+				inn_member_categories_list();
+				inn_member_states_list();
+			?>
+			<label><a href="/member-map">View as map</a></label>
+		</div>
 	<?php
 	return ob_get_clean();
 }
