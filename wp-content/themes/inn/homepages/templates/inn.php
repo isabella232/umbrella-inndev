@@ -16,9 +16,9 @@
 				<p>How we started, what we do and why</p>
 			</div>
 			<div class="span4">
-				<a href="/people/"><img class="icon" src="<? echo $img_path . 'icons/people.svg'; ?>" /></a>
-				<h5><a href="/people/">People</a></h5>
-				<p>Our staff and board</p>
+				<a href="/legal/"><img class="icon" src="<? echo $img_path . 'icons/memberdirectory.svg'; ?>" /></a>
+				<h5><a href="/legal/">Our Members</a></h5>
+				<p>100+ nonprofits publishing news in the public interest</p>
 			</div>
 			<div class="span4">
 				<a href="/news/"><img class="icon" src="<? echo $img_path . 'icons/news.svg'; ?>" /></a>
@@ -33,9 +33,9 @@
 				<p>How we're funded, tax forms and our major donors</p>
 			</div>
 			<div class="span4">
-				<a href="/legal/"><img class="icon" src="<? echo $img_path . 'icons/legal.svg'; ?>" /></a>
-				<h5><a href="/legal/">Legal</a></h5>
-				<p>The fine print, bylaws, policies and more</p>
+				<a href="/people/"><img class="icon" src="<? echo $img_path . 'icons/people.svg'; ?>" /></a>
+				<h5><a href="/people/">People</a></h5>
+				<p>Our staff and board</p>
 			</div>
 			<div class="span4">
 				<a href="/contact/"><img class="icon" src="<? echo $img_path . 'icons/contact.svg'; ?>" /></a>
