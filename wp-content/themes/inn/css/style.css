@@ -357,6 +357,7 @@ body.page #content {
 }
 body.page.page-template-full-page #content {
   margin-left: 0;
+  width: 100%;
 }
 body.normal.page .entry-content {
   padding: 0;
