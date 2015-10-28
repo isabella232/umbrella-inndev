@@ -16,7 +16,7 @@ get_header();
 			<div class="img-container"><?php the_post_thumbnail('full'); ?></div>
 			<div class="info span5">
 	 			<h1 class="entry-title" itemprop="headline"><?php the_title(); ?></h1>
-		 			<?php largo_excerpt( $post, 3, false ); ?>
+		 			<?php the_content(); ?>
 			</div>
 	 		<meta itemprop="description" content="<?php echo strip_tags(largo_excerpt( $post, 5, false, '', false ) ); ?>" />
 	 		<meta itemprop="datePublished" content="<?php echo get_the_date( 'c' ); ?>" />
@@ -54,7 +54,6 @@ get_header();
 								<h1><?php the_title(); ?></h1>
 							</header>
 							<div class="intro">
-								<?php // largo_excerpt( $post, 3, true, __('Read More', 'journobiz'), true, false, false ); ?>
 								<?php the_content( __('Read More', 'journobiz') ); ?>
 							</div>
 								<?php
