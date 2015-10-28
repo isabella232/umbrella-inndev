@@ -286,6 +286,21 @@ html.no-touch .navbar li.home-link > a:hover {
 #header-social li > a {
   padding: 10px 3px;
 }
+.alert {
+  padding: 3px 2.5%;
+  background-color: #df4646;
+  width: 95%;
+  clear: both;
+}
+.alert p {
+  margin-bottom: 0;
+  color: #fff;
+  font-family: "effra", helvetica, sans-serif;
+  text-align: center;
+}
+.alert p a {
+  color: #fff;
+}
 #main {
   margin: 10em 0;
 }
