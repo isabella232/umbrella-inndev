@@ -20,7 +20,9 @@
 				<p>Logical organization, <a href="http://largo.readthedocs.org/developers/fordevelopers.html">documentation</a> and <a href="https://github.com/INN/Largo-Sample-Child-Theme">a sample child theme</a> make it easy to use Largo for your next project.</p>
 			</div>
 		</div>
-
+		<div class="row-fluid">
+			<p><strong>INN Member?</strong> We also offer hosting, support and discounts on our custom services. <a href="https://github.com/INN/docs/blob/master/how-to-work-with-us/member-services.md">Learn more</a> or <a href="mailto:largo@inn.org">get in touch</a>.</p>
+		</div>
 	</section>
 
 	<div class="row-fluid interstitial">
