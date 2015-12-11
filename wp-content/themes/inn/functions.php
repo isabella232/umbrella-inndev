@@ -127,4 +127,4 @@ add_action('wp_print_styles', 'inn_print_scripts', 100);
 function inn_alert() {
 	get_template_part( 'partials/alert' );
 }
-add_action( 'largo_after_nav', 'inn_alert' );
+// add_action( 'largo_after_nav', 'inn_alert' );
