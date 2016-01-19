@@ -174,30 +174,30 @@ a:hover {
 }
 .navbar-inner {
   padding-left: 0;
-  background-color: #694b6a;
+  background-color: #df4646;
 }
 #main-nav li > a:hover,
 .navbar .btn-navbar:hover {
-  background-color: #876088;
+  background-color: #e77171;
 }
 .navbar .btn-navbar,
 .sticky-nav-holder .navbar .nav li.dropdown.open > .dropdown-toggle {
-  background-color: #694b6a;
+  background-color: #df4646;
 }
 @media only screen and (max-width: 768px) {
   .navbar .nav-shelf li .caret {
-    background-color: #876088;
+    background-color: #e77171;
   }
 }
 #sticky-nav .nav-shelf li.dropdown.open a.dropdown-toggle {
   color: #fff;
 }
 #sticky-nav .nav-shelf a {
-  color: #694b6a;
+  color: #df4646;
 }
 #sticky-nav .nav-shelf a:hover,
 #sticky-nav .nav-shelf .active > a {
-  background-color: #694b6a;
+  background-color: #df4646;
 }
 #sticky-nav .nav-shelf a:hover,
 #sticky-nav .nav-shelf .active > a,
@@ -205,7 +205,7 @@ a:hover {
   color: #fff;
 }
 #sticky-nav .nav-shelf .active > a:hover {
-  background-color: #876088;
+  background-color: #e77171;
 }
 #sticky-nav .site-name {
   font-family: "museo-sans", helvetica, arial, sans-serif;
@@ -230,10 +230,10 @@ a:hover {
   }
 }
 .sticky-nav-holder .navbar li .caret:before {
-  border-top-color: #694b6a;
+  border-top-color: #df4646;
 }
 .sticky-footer-holder h4 {
-  color: #694b6a;
+  color: #df4646;
 }
 @media all and (max-width: 768px) {
   #sidebar .widget-area {
