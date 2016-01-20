@@ -27,7 +27,7 @@
 
 	<div class="row-fluid interstitial">
 		<h3>Largo is a project of INN</h3>
-		<p><a href="http://inn.org/">INN</a> is a nonprofit organization supporting a network of <a href="http://inn.org/member/">100+ nonprofit news organizations</a>. Projects like Largo depend on your support.</p>
+		<p><a href="http://inn.org/">INN</a> is a nonprofit organization supporting a network of <a href="http://inn.org/member/">110+ nonprofit news organizations</a>. Projects like Largo depend on your support.</p>
 		<a class="btn btn-donate btn-primary" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=M7T6234BREMG2">Donate Now</a>
 	</div>
 
@@ -80,7 +80,7 @@
 
 	<section id="showcase">
 		<h2>Showcase</h2>
-		<h4>Over 100 sites are using Largo. Here are a few:</h4>
+		<h4>Hundreds of sites are using Largo. Here are a few:</h4>
 		<div class="row-fluid">
 			<div class="span4">
 				<a href="http://wisconsinwatch.org"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/wcij.png" /></a>
