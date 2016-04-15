@@ -17,7 +17,7 @@
 			<div class="span4">
 				<img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/devfriendly.svg" />
 				<h5>Developer Friendly</h5>
-				<p>Logical organization, <a href="http://largo.readthedocs.org/developers/fordevelopers.html">documentation</a> and <a href="https://github.com/INN/Largo-Sample-Child-Theme">a sample child theme</a> make it easy to use Largo for your next project.</p>
+				<p>Logical organization, <a href="http://largo.readthedocs.org/developers/index.html">documentation</a> and <a href="https://github.com/INN/Largo-Sample-Child-Theme">a sample child theme</a> make it easy to use Largo for your next project.</p>
 			</div>
 		</div>
 		<div class="row-fluid">
