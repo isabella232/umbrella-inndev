@@ -86,7 +86,7 @@
 				<a href="http://wisconsinwatch.org"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/wcij.png" /></a>
 			</div>
 			<div class="span4">
-				<a href="http://ctmirror.org"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/ctmirror.png" /></a>
+				<a href="http://current.org"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/current.png" /></a>
 			</div>
 			<div class="span4">
 				<a href="http://kycir.org"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/kycir.png" /></a>
@@ -94,21 +94,21 @@
 		</div>
 		<div class="row-fluid">
 			<div class="span4">
+				<a href="http://cornellsun.com/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/cornellsun.png" /></a>
+			</div>
+			<div class="span4">
 				<a href="http://periodismoinvestigativo.com/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/cpipr.png" /></a>
 			</div>
 			<div class="span4">
-				<a href="http://www.yellowstonegate.com/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/yellowstone.png" /></a>
-			</div>
-			<div class="span4">
-				<a href="http://dohanews.co/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/doha.png" /></a>
+				<a href="http://aspenjournalism.org/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/aspen.png" /></a>
 			</div>
 		</div>
 		<div class="row-fluid">
 			<div class="span4">
-				<a href="http://journo.biz/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/journobiz.png" /></a>
+				<a href="http://midwestenergynews.com/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/mwen.png" /></a>
 			</div>
 			<div class="span4">
-				<a href="http://nicaraguadispatch.com/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/nicaragua.png" /></a>
+				<a href="http://womensenews.org/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/womensenews.png" /></a>
 			</div>
 			<div class="span4">
 				<a href="http://gijn.org"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/gijn.png" /></a>
