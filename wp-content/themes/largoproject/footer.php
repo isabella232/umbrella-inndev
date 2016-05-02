@@ -26,11 +26,11 @@
 			  <ul class="largo-links">
 				<li><a href="https://github.com/INN/Largo/releases">Download</a></li>
 				<li>·</li>
-				<li><a href="http://largo.readthedocs.org/">Documentation</a></li>
+				<li><a href="http://largo.readthedocs.io/">Documentation</a></li>
 				<li>·</li>
-				<li><a href="http://confluence.inn.org/display/LKB/Largo+Knowledge+Base">Knowledgebase</a></li>
+				<li><a href="http://support.largoproject.org/support/solutions">Knowledgebase</a></li>
 				<li>·</li>
-				<li><a href="http://jira.inn.org/servicedesk/customer/portal/4">Help Desk</a></li>
+				<li><a href="http://support.largoproject.org/">Help Desk</a></li>
 				<li>·</li>
 				<li><a href="http://inn.org">INN</a></li>
 				<li>·</li>
