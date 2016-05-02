@@ -41,14 +41,14 @@
 				<p>Get up and running with Largo and explore many of our more advanced features.</p>
 			</div>
 			<div class="span4">
-				<a href="http://confluence.inn.org/display/LKB/Largo+Knowledge+Base"><img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/faq.svg" /></a>
-				<h5><a href="http://confluence.inn.org/display/LKB/Largo+Knowledge+Base">Knowledge Base</a></h5>
+				<a href="http://support.largoproject.org/support/solutions"><img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/faq.svg" /></a>
+				<h5><a href="http://support.largoproject.org/support/solutions">Knowledge Base</a></h5>
 				<p>Answers to our most frequently asked questions.</p>
 			</div>
 			<div class="span4">
-				<a href="http://jira.inn.org/servicedesk/customer/portal/4"><img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/helpdesk.svg" /></a>
-				<h5><a href="http://jira.inn.org/servicedesk/customer/portal/4">Help Desk</a></h5>
-				<p>Need more help? <a href="http://jira.inn.org/servicedesk/customer/portal/4">Submit a support request</a>.</p>
+				<a href="http://support.largoproject.org"><img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/helpdesk.svg" /></a>
+				<h5><a href="http://support.largoproject.org">Help Desk</a></h5>
+				<p>Need more help? <a href="http://support.largoproject.org">Submit a support request</a>.</p>
 			</div>
 		</div>
 	</section>
