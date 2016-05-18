@@ -8,11 +8,12 @@
   filter: fliph;
   /*IE*/
 }
-#page {
+.page-template-landing-page #page {
   max-width: 100%;
   padding: 0;
 }
-#main {
+.page-template-landing-page #main {
+  margin: 2em 0;
   max-width: 100%;
 }
 #main .page-content {

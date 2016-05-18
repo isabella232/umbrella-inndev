@@ -6,7 +6,7 @@
 	</div>
 </section>
 
-<section class="normal container-fluid">
+<section class="normal">
 
 	<div id="quick-links" class="row-fluid">
 		<div class="span12">

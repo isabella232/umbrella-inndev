@@ -25,6 +25,20 @@
     margin-bottom: 1em;
   }
 }
+.home #homepage-top-right ol {
+  margin: 0;
+}
+.home #homepage-top-right .tribe-events-adv-list-widget ol li {
+  margin-bottom: 1em;
+}
+.home #homepage-top-right h4.entry-title {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 0.25em;
+}
+.home #homepage-top-right h4.entry-title a {
+  color: #909799;
+}
 .home #hire-us {
   padding: 3em;
   text-align: center;
