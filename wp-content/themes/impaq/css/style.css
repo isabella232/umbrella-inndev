@@ -111,6 +111,10 @@ a:hover,
 .btn-primary:hover {
   opacity: 0.9;
 }
+#site-header,
+#main-nav {
+  display: none;
+}
 #branding img {
   margin: 0 auto 18px;
   display: block;

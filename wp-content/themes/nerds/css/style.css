@@ -170,9 +170,6 @@ a:hover {
 #friends-widget ul strong a {
   color: #909799;
 }
-#sidebar .widget-area {
-  padding-left: 40px;
-}
 .largo-interactive-quiz h3.largo-interactive-headline {
   font-size: 28px;
   font-weight: 700;
@@ -201,17 +198,4 @@ a:hover {
 }
 .mailchimp-signup-widget .btn {
   padding: 5px 24px;
-}
-@media all and (max-width: 768px) {
-  #sidebar .widget-area {
-    padding-left: 0;
-  }
-  .sticky-footer-container .follow {
-    display: none;
-  }
-}
-@media screen and (max-width: 480px) {
-  .home #main {
-    margin-top: 0;
-  }
 }
