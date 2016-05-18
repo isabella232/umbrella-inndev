@@ -16,20 +16,15 @@
 #sidebar .widget-area {
   padding-left: 40px;
 }
-.home #site-header {
-  position: relative;
-  img.logo {
-    max-width: 520px;
-    width: 100%;
-    height: auto;
-    float: left;
-    margin: 20px 0;
+#site-header {
+  margin-bottom: 0;
+  img {
+    max-width: 400px;
   }
   .newsletter-signup {
     width: 262px;
     color: #666;
-    position: absolute;
-    top: 22px;
+    top: 4px;
     right: 0;
     margin-left: 20px;
     z-index: 999;
@@ -67,88 +62,6 @@
     }
   }
 }
-.home #site-header .newsletter-signup,
-.home .sticky-nav-holder.show {
-  visibility: visible;
-  opacity: 1;
-}
-.navbar-inner {
-  padding-left: 0;
-  background-color: @red;
-}
-#main-nav li > a:hover,
-.navbar .btn-navbar:hover {
-  background-color: lighten(@red, 10%);
-}
-.navbar .btn-navbar,
-.sticky-nav-holder .navbar .nav li.dropdown.open > .dropdown-toggle {
-  background-color: @red;
-}
-@media only screen and (max-width: 768px) {
-  .navbar .nav-shelf li .caret {
-    background-color: lighten(@red, 10%);
-  }
-}
-
-#sticky-nav {
-  .nav-shelf {
-    li.dropdown.open a.dropdown-toggle {
-	  color: #fff;
-    }
-  	a {
-      color: @red;
-    }
-    a:hover,
-    .active > a {
-      background-color: @red;
-    }
-    a:hover,
-    .active > a,
-    .active > a:hover {
-      color: #fff;
-    }
-    .active > a:hover {
-      background-color: lighten(@red, 10%);
-    }
-  }
-  .site-name {
-    font-family: "museo-sans",helvetica,arial,sans-serif;
-    font-size: 17px;
-    a {
-      color: #343434;
-      &:hover {
-	    background-color: #fff;
-        color: #666;
-      }
-    }
-  }
-  #header-social i {
-      padding: 4px;
-  }
-  .donate-link {
-    display: none;
-  }
-  @media only screen and (max-width: 1120px) {
-    .nav-right {
-      display: none;
-    }
-  }
-}
-.sticky-nav-holder .navbar li .caret:before {
-    border-top-color: @red;
-}
-.sticky-footer-holder h4 {
-    color: @red;
-}
-@media all and (max-width: 768px) {
-  #sidebar .widget-area {
-    padding-left: 0;
-  }
-  .sticky-footer-container .follow {
-    display: none;
-  }
-}
-
 
 // Override Largo fontello with journobiz's extended edition
 @font-face {

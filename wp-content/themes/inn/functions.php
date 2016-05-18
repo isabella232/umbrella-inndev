@@ -5,9 +5,11 @@ define( 'INN_MEMBER_TAXONOMY', 'ppu_focus_areas' );
 define('INN_ABOUT_PAGE_ID', 2212);
 define('INN_PROGRAMS_PAGE_ID', 2587);
 define('INN_MEMBERS_PAGE_ID', 234260);
+define( 'SHOW_GLOBAL_NAV', FALSE );
 
 // Includes
 $includes = array(
+	'/inc/sidebars.php',
 	'/homepages/homepage.php'
 );
 foreach ( $includes as $include ) {
@@ -119,7 +121,7 @@ function inn_print_scripts() {
 		array( 'jquery' ), '1.0', true
 	);
 }
-add_action('wp_print_styles', 'inn_print_scripts', 100);
+//add_action('wp_print_styles', 'inn_print_scripts', 100);
 
 /**
  * Add alert banner to nav
@@ -128,3 +130,13 @@ function inn_alert() {
 	get_template_part( 'partials/alert' );
 }
 add_action( 'largo_after_nav', 'inn_alert' );
+
+/**
+ * Add search box to main nav
+ * uncomment this and remove partials/nav-main.php when 0.5.5 ships
+ */
+function inn_add_search_box() {
+	get_template_part( 'partials/inn-nav-search-form' );
+}
+add_action( 'largo_after_main_nav_shelf', 'inn_add_search_box' );
+

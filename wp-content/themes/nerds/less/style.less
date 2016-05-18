@@ -1,23 +1,50 @@
 @import "../../inn/less/variables.less";
 @import "../../inn/less/common.less";
 
-#main {
-  margin-top: 25px;
-}
 #site-header {
-  display: none;
+  img {
+    max-width: 400px;
+  }
+  .newsletter-signup {
+    width: 262px;
+    color: #666;
+    margin-left: 20px;
+    z-index: 999;
+    form {
+      clear: both;
+      background: #fff;
+      padding: 6px 12px;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+      button,
+      input {
+        margin: 0 0 8px;
+      }
+      input[type="text"],
+      input[type="email"]{
+        width: 226px;
+      }
+      label {
+        color: #666;
+        font-size: 16px;
+      }
+    }
+    .first_name,
+    .last_name,
+    .submit {
+      display: none;
+    }
+    .error {
+      color: #666;
+      font-size: 12px;
+      display: none;
+    }
+    @media only screen and (max-width: 850px) {
+      display: none;
+    }
+  }
 }
-.home .sticky-nav-wrapper,
-.sticky-nav-wrapper {
-  height: 75px;
-}
-.home .sticky-nav-holder.show {
-  visibility: visible;
-  opacity: 1;
-}
-.sticky-nav-holder .navbar li>a {
-  color: @blue;
-}
+
 .widgettitle {
   color: #000;
 }
@@ -80,9 +107,6 @@
 }
 
 @media all and (max-width: 768px) {
-  #main {
-    margin-top: 0;
-  }
   #sidebar .widget-area {
     padding-left: 0;
   }

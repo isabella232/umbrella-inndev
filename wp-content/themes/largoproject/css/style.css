@@ -120,6 +120,10 @@ a:hover {
   font-size: 18px;
   margin-bottom: 0.5em;
 }
+#main-nav.navbar {
+  border-top: none;
+  border-bottom: none;
+}
 .footer-bg {
   background: transparent;
 }

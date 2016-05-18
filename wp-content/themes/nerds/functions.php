@@ -6,7 +6,6 @@ require_once( get_template_directory() . '/largo-apis.php' );
 
 // Constants
 define( 'SHOW_GLOBAL_NAV', FALSE );
-define( 'SHOW_MAIN_NAV', FALSE );
 
 
 // Includes
@@ -23,12 +22,17 @@ add_action( 'largo_before_sticky_nav_container', 'largo_render_network_header' )
 add_action( 'largo_before_footer_boilerplate', 'largo_render_network_footer' );
 
 
-// replace the default js with a theme specific one
-function override_largo_core_js() {
-	wp_dequeue_script('largoCore');
-	wp_enqueue_script('nerdCore', get_stylesheet_directory_uri() . '/js/nerdCore.js', array( 'jquery' ), '1.0', true );
+// Enqueue custom js
+function nerds_enqueue() {
+	wp_enqueue_script(
+		'nerdCore',
+		get_stylesheet_directory_uri() . "/js/nerdCore.js",
+		array( 'jquery' ),
+		false,
+		true
+	);
 }
-add_action( 'wp_enqueue_scripts', 'override_largo_core_js', 20 );
+add_action( 'wp_enqueue_scripts', 'nerds_enqueue', 20 );
 
 
 // Typekit

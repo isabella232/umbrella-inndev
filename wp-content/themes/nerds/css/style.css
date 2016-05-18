@@ -67,6 +67,9 @@ a:hover {
 .btn.btn-primary:hover {
   background-color: #df6807;
 }
+#site-footer .btn.search-submit {
+  padding: 4px 10px;
+}
 .top-tag {
   font-weight: 300;
 }
@@ -99,22 +102,48 @@ a:hover {
     max-width: 90%;
   }
 }
-#main {
-  margin-top: 25px;
+#site-header img {
+  max-width: 400px;
 }
-#site-header {
+#site-header .newsletter-signup {
+  width: 262px;
+  color: #666;
+  margin-left: 20px;
+  z-index: 999;
+}
+#site-header .newsletter-signup form {
+  clear: both;
+  background: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+#site-header .newsletter-signup form button,
+#site-header .newsletter-signup form input {
+  margin: 0 0 8px;
+}
+#site-header .newsletter-signup form input[type="text"],
+#site-header .newsletter-signup form input[type="email"] {
+  width: 226px;
+}
+#site-header .newsletter-signup form label {
+  color: #666;
+  font-size: 16px;
+}
+#site-header .newsletter-signup .first_name,
+#site-header .newsletter-signup .last_name,
+#site-header .newsletter-signup .submit {
   display: none;
 }
-.home .sticky-nav-wrapper,
-.sticky-nav-wrapper {
-  height: 75px;
+#site-header .newsletter-signup .error {
+  color: #666;
+  font-size: 12px;
+  display: none;
 }
-.home .sticky-nav-holder.show {
-  visibility: visible;
-  opacity: 1;
-}
-.sticky-nav-holder .navbar li > a {
-  color: #09c9ff;
+@media only screen and (max-width: 850px) {
+  #site-header .newsletter-signup {
+    display: none;
+  }
 }
 .widgettitle {
   color: #000;
@@ -174,9 +203,6 @@ a:hover {
   padding: 5px 24px;
 }
 @media all and (max-width: 768px) {
-  #main {
-    margin-top: 0;
-  }
   #sidebar .widget-area {
     padding-left: 0;
   }

@@ -6,6 +6,32 @@
 	</div>
 </section>
 
+<section class="normal container-fluid">
+
+	<div id="quick-links" class="row-fluid">
+		<div class="span12">
+			<h4>Quick links</h4>
+			<ul>
+				<li><a href="/members/">Member Directory</a></li>
+				<li><a href="/for-members/member-benefits/">Member Benefits</a></li>
+				<li><a href="/for-members/become-a-member/">Become A Member</a></li>
+				<li><a href="/for-members/dues/">Pay Your Dues</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div id="homepage-top-widgets" class="row-fluid">
+		<div id="homepage-top-left" class="span6">
+			
+			<?php dynamic_sidebar( 'homepage-top-left' ); ?>
+			
+		</div>
+		<div id="homepage-top-right" class="span6">
+			<?php dynamic_sidebar( 'homepage-top-right' ); ?>	
+		</div>
+	</div>
+</section>
+
 <section id="about" class="normal">
 	<div class="content">
 		<h3><span>About INN</span></h3>
@@ -53,7 +79,7 @@
 			<h3>Stay Up To Date</h3>
 			<p>News from INN and our members. <strong>Delivered weekly.</strong></p>
 
-			<form action="//investigativenewsnetwork.us1.list-manage.com/subscribe/post?u=81670c9d1b5fbeba1c29f2865&amp;id=e3e0b6be7f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+			<form action="//inn.us1.list-manage.com/subscribe/post?u=81670c9d1b5fbeba1c29f2865&amp;id=19bec3393e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 			    <div id="mc_embed_signup_scroll">
 					<div class="mc-field-group">
 						<input type="email" value="email address" name="EMAIL" class="required email" id="mce-EMAIL">
@@ -62,7 +88,7 @@
 						<div class="response" id="mce-error-response" style="display:none"></div>
 						<div class="response" id="mce-success-response" style="display:none"></div>
 					</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-				    <div style="position: absolute; left: -5000px;"><input type="text" name="b_81670c9d1b5fbeba1c29f2865_e3e0b6be7f" tabindex="-1" value=""></div>
+				    <div style="position: absolute; left: -5000px;"><input type="text" name="b_81670c9d1b5fbeba1c29f2865_19bec3393e" tabindex="-1" value=""></div>
 				    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn">
 				</div>
 			</form>

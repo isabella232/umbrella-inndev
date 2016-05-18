@@ -15,11 +15,6 @@ $guides = get_pages( array(
 ));
 ?>
 
-<header id="branding">
-	<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_stylesheet_directory_uri() . '/img/cjet-logo.png' ?>" /></a>
-</header>
-
-
 <section id="courses">
 	<h1><?php _e("Online Courses", 'cjet'); ?></h1>
 	<p class="description"><?php

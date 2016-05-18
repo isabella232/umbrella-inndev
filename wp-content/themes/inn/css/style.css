@@ -1,9 +1,9 @@
 /*
-Theme Name:     Investigative News Network
-Theme URI:      http://investigativenewsnetwork.org
-Description:    Child theme for the Investigative News Network built with the Project Largo parent theme
-Author:         Adam Schweigert/INN
-Author URI:     http://investigativenewsnetwork.org
+Theme Name:     INN
+Theme URI:      http://inn.org
+Description:    Child theme for the Institute for Nonprofit News built with the Project Largo parent theme
+Author:         The INN Nerds
+Author URI:     http://nerds.inn.org
 Template:       largo
 Version:        0.2.0
 */
@@ -86,6 +86,9 @@ a:hover {
 .btn.btn-primary:hover {
   background-color: #df6807;
 }
+#site-footer .btn.search-submit {
+  padding: 4px 10px;
+}
 .top-tag {
   font-weight: 300;
 }
@@ -118,173 +121,40 @@ a:hover {
     max-width: 90%;
   }
 }
-.sticky-nav-container {
-  max-width: 100%;
-}
-.home .sticky-nav-wrapper,
-.sticky-nav-wrapper {
-  float: left;
-  height: auto;
-  width: 100%;
-}
-body.admin-bar .sticky-nav-holder,
-.sticky-nav-holder {
-  top: 0;
-  position: relative;
-  box-shadow: none;
-  float: left;
-  width: 100%;
-  padding: 0.75em 0;
-  border-bottom: #aaaaaa 1px solid;
-}
-body.admin-bar .sticky-nav-holder .navbar li.menu-item b.caret,
-.sticky-nav-holder .navbar li.menu-item b.caret {
+#header-social .icon-youtube-parent,
+#header-social .icon-gplus-parent,
+#header-social .icon-linkedin-parent,
+#header-social .icon-github-parent {
   display: none;
 }
-body.admin-bar .sticky-nav-holder .navbar li > a,
-.sticky-nav-holder .navbar li > a {
-  padding: 12px 11px;
-  color: #555555;
+.search-submit.btn {
+  padding: 4px 10px;
 }
-body.admin-bar .sticky-nav-holder .navbar #sticky-nav-search > a,
-.sticky-nav-holder .navbar #sticky-nav-search > a {
-  padding-right: 0;
+#site-header img {
+  max-width: 280px;
+  margin-left: 100px;
 }
-body.admin-bar .sticky-nav-holder .navbar .nav li.active a,
-.sticky-nav-holder .navbar .nav li.active a {
-  background: none;
-  color: #555555;
+#site-header a.btn-primary {
+  margin-right: 100px;
+  margin-top: 12px;
 }
-body.admin-bar .sticky-nav-holder .navbar .nav li.active a:hover,
-.sticky-nav-holder .navbar .nav li.active a:hover {
-  color: #909799;
+#site-header .widget {
+  margin-bottom: 0;
 }
-body.admin-bar .sticky-nav-holder .navbar li.home-link > a img,
-.sticky-nav-holder .navbar li.home-link > a img {
-  width: auto;
-  height: 40px;
+.navbar {
+  margin-bottom: 0;
 }
-body.admin-bar .sticky-nav-holder .navbar .nav > li.home-link,
-.sticky-nav-holder .navbar .nav > li.home-link {
-  position: relative;
+.navbar .container {
+  padding: 0 90px;
 }
-body.admin-bar .sticky-nav-holder .navbar .nav > li.home-link a img,
-.sticky-nav-holder .navbar .nav > li.home-link a img {
-  width: 100%;
-  max-width: 250px;
-  height: auto;
+@media (max-width: 768px) {
+  .navbar .container {
+    padding: 0;
+  }
 }
-body.admin-bar .sticky-nav-holder .navbar .nav li.dropdown.open > .dropdown-toggle,
-.sticky-nav-holder .navbar .nav li.dropdown.open > .dropdown-toggle,
-body.admin-bar .sticky-nav-holder .navbar .nav li.dropdown.active > .dropdown-toggle,
-.sticky-nav-holder .navbar .nav li.dropdown.active > .dropdown-toggle,
-body.admin-bar .sticky-nav-holder .navbar .nav li.dropdown.open.active > .dropdown-toggle,
-.sticky-nav-holder .navbar .nav li.dropdown.open.active > .dropdown-toggle {
-  background: transparent;
-  color: #f77710;
-}
-body.admin-bar .sticky-nav-holder .navbar .nav li.dropdown.open > .dropdown-toggle:hover,
-.sticky-nav-holder .navbar .nav li.dropdown.open > .dropdown-toggle:hover,
-body.admin-bar .sticky-nav-holder .navbar .nav li.dropdown.active > .dropdown-toggle:hover,
-.sticky-nav-holder .navbar .nav li.dropdown.active > .dropdown-toggle:hover,
-body.admin-bar .sticky-nav-holder .navbar .nav li.dropdown.open.active > .dropdown-toggle:hover,
-.sticky-nav-holder .navbar .nav li.dropdown.open.active > .dropdown-toggle:hover {
-  background: transparent;
-  color: #cd5f07;
-}
-body.admin-bar .sticky-nav-holder .navbar .nav.items,
-.sticky-nav-holder .navbar .nav.items {
+#header-search {
   float: right;
-  font-size: 0.9em;
-  text-transform: lowercase;
-  font-weight: 500;
-  letter-spacing: 0.03em;
-  position: relative;
-  top: 24px;
-}
-body.admin-bar .sticky-nav-holder .navbar .nav.items li > a:hover,
-.sticky-nav-holder .navbar .nav.items li > a:hover {
-  background: none;
-  color: #909799;
-}
-body.admin-bar .sticky-nav-holder #sticky-nav-search a,
-.sticky-nav-holder #sticky-nav-search a,
-body.admin-bar .sticky-nav-holder #sticky-nav-search a:hover,
-.sticky-nav-holder #sticky-nav-search a:hover,
-body.admin-bar .sticky-nav-holder .nav .home-link a:hover,
-.sticky-nav-holder .nav .home-link a:hover {
-  background: none;
-  color: #aaaaaa;
-}
-body.admin-bar .sticky-nav-holder #sticky-nav-search.show,
-.sticky-nav-holder #sticky-nav-search.show {
-  background: #343434;
-}
-body.admin-bar .sticky-nav-holder #sticky-nav-search.show .toggle,
-.sticky-nav-holder #sticky-nav-search.show .toggle {
-  background: transparent;
-  color: #fff;
-}
-body.admin-bar .sticky-nav-holder .nav-right #header-extras,
-.sticky-nav-holder .nav-right #header-extras {
-  position: relative;
-  top: 23px;
-}
-body.admin-bar .sticky-nav-holder .nav-right #header-extras a span,
-.sticky-nav-holder .nav-right #header-extras a span {
-  position: relative;
-  color: #f77710;
-  text-transform: lowercase;
-  background-color: #fff;
-  letter-spacing: 0.03em;
-  font-weight: 500;
-  font-size: 0.9em;
-  text-shadow: none;
-}
-body.admin-bar .sticky-nav-holder .nav-right #header-extras a span:hover,
-.sticky-nav-holder .nav-right #header-extras a span:hover {
-  background-color: #fff;
-  color: #555555;
-}
-body.admin-bar .sticky-nav-holder .nav-right .form-search .input-append button,
-.sticky-nav-holder .nav-right .form-search .input-append button {
-  margin-right: 0;
-  padding: 0;
-}
-.navbar .btn-navbar {
-  background-color: #555555;
-}
-.navbar .btn-navbar:hover {
-  background-color: #909799;
-}
-html.no-touch .navbar li.home-link > a:hover {
-  background: transparent;
-}
-#header-social {
-  padding-top: 24px;
-}
-#header-social i.icon-rss,
-#header-social i.icon-twitter,
-#header-social i.icon-facebook {
-  background-color: transparent !important;
-  padding: 6px;
-  border-radius: 30px;
-  font-size: 11px;
-  color: #aaaaaa;
-}
-#header-social i.icon-rss:hover,
-#header-social i.icon-twitter:hover,
-#header-social i.icon-facebook:hover {
-  color: #555555 !important;
-}
-#header-social .icon-youtube,
-#header-social .icon-gplus,
-#header-social .icon-linkedin,
-#header-social .icon-github {
-  display: none;
-}
-#header-social li > a {
-  padding: 10px 3px;
+  margin-left: 0;
 }
 .alert {
   padding: 3px 2.5%;
@@ -301,8 +171,13 @@ html.no-touch .navbar li.home-link > a:hover {
 .alert p a {
   color: #fff;
 }
+#page {
+  max-width: 100%;
+  padding: 0;
+}
 #main {
-  margin: 10em 0;
+  max-width: 1170px;
+  margin: 4em auto;
 }
 #main .row-fluid img.icon,
 #main .row-fluid a.program img {
@@ -502,6 +377,37 @@ section.normal h3 span {
     float: none;
     margin: 0 auto;
     clear: both;
+  }
+}
+#quick-links {
+  text-align: center;
+  margin-bottom: 2em;
+}
+#quick-links h4 {
+  color: #555555;
+  text-transform: uppercase;
+}
+@media (max-width: 600px) {
+  #quick-links h4 {
+    margin-bottom: 0.5em;
+  }
+}
+#quick-links li {
+  font-size: 1.25em;
+  display: inline-block;
+  list-style: none;
+  margin: 0 20px 0 0;
+}
+@media (max-width: 600px) {
+  #quick-links {
+    margin-bottom: 0;
+  }
+  #quick-links > .span12 {
+    padding: 1em 2.5em;
+  }
+  #quick-links li {
+    display: list-item;
+    margin-bottom: 0.5em;
   }
 }
 #programs h3,
@@ -762,52 +668,8 @@ body.normal.page .stories .top-tag {
   #main {
     margin-top: 1em;
   }
-  body.admin-bar .sticky-nav-holder .navbar .nav > li.home-link a img,
-  .sticky-nav-holder .navbar .nav > li.home-link a img {
-    max-width: 280px;
-  }
 }
 @media (max-width: 768px) {
-  #sticky-nav {
-    float: left;
-    width: 100%;
-  }
-  body.admin-bar .sticky-nav-holder .nav-right #header-extras,
-  .sticky-nav-holder .nav-right #header-extras {
-    top: 12px;
-  }
-  body.admin-bar .sticky-nav-holder .navbar .nav.items,
-  .sticky-nav-holder .navbar .nav.items {
-    top: 0;
-  }
-  body.admin-bar .sticky-nav-holder .navbar .nav.items,
-  .sticky-nav-holder .navbar .nav.items {
-    margin-top: 12px;
-    padding: 0;
-  }
-  body.admin-bar .sticky-nav-holder .navbar .nav.items li a,
-  .sticky-nav-holder .navbar .nav.items li a {
-    padding: 10px 0;
-  }
-  .navbar .nav-shelf ul,
-  .navbar .nav-shelf li {
-    width: 100%;
-    text-align: center;
-  }
-  .navbar .nav-shelf li {
-    border-bottom: 1px solid #edf1f4;
-  }
-  .navbar .nav-shelf li:last-child {
-    border-bottom: none;
-  }
-  .navbar .btn-navbar {
-    float: right;
-    position: relative;
-    top: 16px;
-  }
-  .navbar.open .nav-shelf:after {
-    background-image: none;
-  }
   body.page #content {
     width: 90%;
   }
@@ -815,34 +677,5 @@ body.normal.page .stories .top-tag {
 @media (max-width: 480px) {
   #header-extras .donate-link {
     display: none;
-  }
-  body.admin-bar .sticky-nav-holder,
-  .sticky-nav-holder {
-    height: 2.5em;
-    padding: 1em 0;
-    margin: 0;
-  }
-  body.admin-bar .sticky-nav-holder .nav-right #header-extras,
-  .sticky-nav-holder .nav-right #header-extras,
-  body.admin-bar .sticky-nav-holder .navbar .nav.items,
-  .sticky-nav-holder .navbar .nav.items {
-    top: 0;
-  }
-  body.admin-bar .sticky-nav-holder .navbar .nav.items,
-  .sticky-nav-holder .navbar .nav.items {
-    padding: 0;
-    float: left;
-  }
-  body.admin-bar .sticky-nav-holder .navbar .nav.items li a,
-  .sticky-nav-holder .navbar .nav.items li a {
-    padding: 10px 0;
-  }
-  body.admin-bar .sticky-nav-holder .navbar li.home-link a,
-  .sticky-nav-holder .navbar li.home-link a {
-    padding: 2px 0 0 5px;
-  }
-  body.admin-bar .sticky-nav-holder .navbar .btn-navbar,
-  .sticky-nav-holder .navbar .btn-navbar {
-    top: 4px;
   }
 }
