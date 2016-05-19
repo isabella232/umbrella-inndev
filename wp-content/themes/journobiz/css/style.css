@@ -67,6 +67,12 @@ a:hover {
 .btn.btn-primary:hover {
   background-color: #df6807;
 }
+.btn.btn.search-submit {
+  padding: 4px 10px;
+}
+.donate-btn a:hover {
+  color: #fff;
+}
 .footer-bg {
   background-color: #555555;
 }
@@ -77,7 +83,7 @@ a:hover {
   border-bottom: none;
 }
 #supplementary div:nth-child(3) {
-  margin-top: 1.4em;
+  margin-top: 2.015em;
 }
 #supplementary div:first-child {
   padding: 10px 30px 0 0;
@@ -85,16 +91,20 @@ a:hover {
 #supplementary div.menu-footer-2-container {
   padding: 0;
 }
-#site-footer .widgettitle,
-#site-footer li.menu-label {
-  color: #fafafa;
-  font-weight: 500;
-}
 #site-footer a {
   color: #aaaaaa;
 }
 #site-footer a:hover {
   color: #09c9ff;
+}
+#site-footer .widgettitle,
+#site-footer li.menu-label {
+  color: #fafafa;
+  font-weight: 500;
+}
+#site-footer .widgettitle a,
+#site-footer li.menu-label a {
+  color: #fafafa;
 }
 #site-footer #footer-social {
   display: block;
@@ -141,9 +151,6 @@ a:hover {
     max-width: 75%;
     padding: 2em 0;
   }
-}
-#site-footer .btn.search-submit {
-  padding: 4px 10px;
 }
 #site-footer .widget.widget_sp_image {
   margin-top: 1em;

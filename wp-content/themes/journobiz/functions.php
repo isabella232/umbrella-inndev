@@ -3,11 +3,6 @@
 // Largo metabox API
 require_once( get_template_directory() . "/inc/metabox-api.php");
 
-
-// Constants
-define( 'SHOW_GLOBAL_NAV', FALSE );
-
-
 // Includes
 $includes = array(
 	'/inc/grantees.php',

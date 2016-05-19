@@ -55,8 +55,13 @@ a {
 	  background-color: darken(@btnprimarybg, 6.3%);
     }
   }
+  &.btn.search-submit {
+    padding: 4px 10px;
+  }
 }
-
+.donate-btn a:hover {
+  color: #fff;
+}
 
 // footer adjustments
 .footer-bg {
@@ -69,7 +74,7 @@ a {
   border-bottom: none;
 }
 #supplementary div:nth-child(3) {
-  margin-top: 1.4em;
+  margin-top: 2.015em;
 }
 #supplementary div:first-child {
   padding: 10px 30px 0 0;
@@ -79,15 +84,18 @@ a {
 }
 
 #site-footer {
-  .widgettitle,
-  li.menu-label {
-    color: #fafafa;
-    font-weight: 500;
-  }
   a {
     color: @ltgray;
     &:hover {
       color: @blue;
+    }
+  }
+  .widgettitle,
+  li.menu-label {
+    color: #fafafa;
+    font-weight: 500;
+    a {
+	  color: #fafafa;
     }
   }
   #footer-social {
@@ -133,9 +141,6 @@ a {
       max-width: 75%;
       padding: 2em 0;
     }
-  }
-  .btn.search-submit {
-    padding: 4px 10px;
   }
   .widget.widget_sp_image {
     margin-top: 1em;

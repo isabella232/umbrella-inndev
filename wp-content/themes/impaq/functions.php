@@ -1,11 +1,5 @@
 <?php
 
-// Constants
-define( 'SHOW_GLOBAL_NAV', FALSE );
-define( 'SHOW_STICKY_NAV', FALSE );
-define( 'SHOW_MAIN_NAV', FALSE );
-
-
 // Includes
 $includes = array(
 	'/homepages/homepage.php'
