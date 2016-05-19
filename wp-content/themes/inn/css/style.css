@@ -434,6 +434,9 @@ section.normal h3 span {
 #member-info h5 a:hover {
   color: #f77710;
 }
+.article-bottom .widget {
+  padding: 0 !important;
+}
 .footer-bg {
   background-color: #555555;
 }
