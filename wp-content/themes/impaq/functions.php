@@ -22,12 +22,6 @@ function inn_typekit() { ?>
 }
 add_action( 'wp_head', 'inn_typekit' );
 
-function get_inn_global_footer() {
-	switch_to_blog( 1 );
-}
-add_action( 'largo_before_footer', 'get_inn_global_footer' );
-add_action( 'largo_after_footer', 'restore_current_blog' );
-
 
 // Add impaq branding
 function impaq_header() {

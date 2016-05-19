@@ -37,9 +37,3 @@ function inn_head() { ?>
 <?php
 }
 add_action( 'wp_head', 'inn_head' );
-
-function get_inn_global_footer() {
-	switch_to_blog( 1 );
-}
-add_action( 'largo_before_footer', 'get_inn_global_footer' );
-add_action( 'largo_after_footer', 'restore_current_blog' );
