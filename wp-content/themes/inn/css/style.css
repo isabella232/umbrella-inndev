@@ -434,6 +434,11 @@ section.normal h3 span {
 #member-info h5 a:hover {
   color: #f77710;
 }
+@media (max-width: 530px) {
+  .single #content {
+    padding: 0 5%;
+  }
+}
 .article-bottom .widget {
   padding: 0 !important;
 }
