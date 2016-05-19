@@ -62,6 +62,22 @@ a {
 .donate-btn a:hover {
   color: #fff;
 }
+#top-nav {
+  li {
+	padding-top: 2px;
+	&.main_site_home_link {
+      padding-top: 0;
+      font-size: 16px;
+      font-weight: bold;
+      a {
+        color: @blue;
+      }
+    } 
+  } 
+}
+.dropdown-menu .main_site_home_link {
+  display: none;
+}
 
 // footer adjustments
 .footer-bg {
