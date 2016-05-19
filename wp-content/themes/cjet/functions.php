@@ -21,11 +21,6 @@ foreach ( $includes as $include ) {
 }
 
 
-// Add network header and footer
-add_action( 'largo_top', 'largo_render_network_header' );
-//add_action( 'largo_before_footer_boilerplate', 'largo_render_network_footer' );
-
-
 // Custom scripts
 function cjet_enqueue() {
 	wp_enqueue_script( 'cjet-javascript', get_stylesheet_directory_uri() . '/js/cjet.js' );
@@ -41,6 +36,12 @@ function inn_typekit() { ?>
 }
 add_action( 'wp_head', 'inn_typekit' );
 
+function get_inn_global_footer() {
+	switch_to_blog( 1 );
+}
+add_action( 'largo_before_footer', 'get_inn_global_footer' );
+add_action( 'largo_after_footer', 'restore_current_blog' );
+
 
 // Breadcrumbs
 function cjet_breadcrumbs() {
@@ -52,14 +53,6 @@ function cjet_breadcrumbs() {
 }
 add_action( 'largo_main_top', 'cjet_breadcrumbs' );
 
-
-/**
- *  Image size stuff for homepage, picturefill, etc
- *  this appears to be broken, sigh
- */
-//if( !defined('PICTUREFILL_WP_VERSION') ) {
-//  require_once(get_template_directory() . '/inc/picturefill/picturefill-wp.php');
-//}
 
 if( FALSE === get_option("large_crop") ) {
 	add_option("large_crop", "1");

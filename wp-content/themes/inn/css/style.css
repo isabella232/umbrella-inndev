@@ -86,8 +86,156 @@ a:hover {
 .btn.btn-primary:hover {
   background-color: #df6807;
 }
+.footer-bg {
+  background-color: #555555;
+}
+#site-footer .widgettitle,
+#site-footer li.menu-label,
+#menu-footer-navigation li,
+#supplementary ul.menu li {
+  border-bottom: none;
+}
+#supplementary div:nth-child(3) {
+  margin-top: 1.4em;
+}
+#supplementary div:first-child {
+  padding: 10px 30px 0 0;
+}
+#supplementary div.menu-footer-2-container {
+  padding: 0;
+}
+#site-footer .widgettitle,
+#site-footer li.menu-label {
+  color: #fafafa;
+  font-weight: 500;
+}
+#site-footer a {
+  color: #aaaaaa;
+}
+#site-footer a:hover {
+  color: #09c9ff;
+}
+#site-footer #footer-social {
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 0;
+  text-align: center;
+}
+#site-footer #footer-social li {
+  float: none;
+  display: inline-block;
+}
+#site-footer #footer-social li i {
+  color: #fff;
+  background-color: #909799;
+  padding: 14px;
+  border-radius: 30px;
+  margin: 0 4px;
+}
+#site-footer #footer-social li i:hover {
+  background-color: #fff;
+  color: #909799;
+}
+#site-footer #footer-social li i.icon-github:hover {
+  color: #909799;
+}
+@media (max-width: 768px) {
+  #site-footer #footer-social {
+    float: none;
+  }
+  #site-footer #footer-social li {
+    min-height: 56px;
+  }
+  #site-footer #footer-social li i {
+    font-size: 24px;
+  }
+}
+@media (max-width: 768px) {
+  #site-footer img[alt="INN logo"] {
+    width: 400px;
+  }
+}
+@media (max-width: 480px) {
+  #site-footer img[alt="INN logo"] {
+    max-width: 75%;
+    padding: 2em 0;
+  }
+}
 #site-footer .btn.search-submit {
   padding: 4px 10px;
+}
+#site-footer .widget.widget_sp_image {
+  margin-top: 1em;
+}
+#menu-footer-navigation,
+#supplementary ul.menu {
+  font-family: "effra", helvetica, sans-serif;
+}
+#supplementary {
+  border-bottom: none;
+  padding-top: 3em;
+  margin-bottom: 0;
+}
+#boilerplate {
+  text-align: center;
+  border-top: none;
+}
+#boilerplate .span6 {
+  margin: 0 auto;
+  float: none;
+}
+#boilerplate .span6.right {
+  text-align: center;
+}
+#boilerplate .copyright,
+#boilerplate .menu,
+#boilerplate .footer-bottom {
+  margin-bottom: 0.5em;
+}
+@media (max-width: 768px) {
+  #site-footer {
+    text-align: center;
+  }
+  #site-footer img.alignleft {
+    float: none;
+    margin: 0 auto 1.5em;
+  }
+  #site-footer p,
+  #site-footer li {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+  #boilerplate .copyright,
+  #boilerplate .menu,
+  #boilerplate .footer-bottom {
+    margin-bottom: 1.5em;
+  }
+  #supplementary {
+    padding-top: 1em;
+  }
+  #supplementary div:nth-child(2),
+  #site-footer #supplementary div:nth-child(2) .widget,
+  #site-footer #supplementary div:nth-child(2) ul.menu {
+    margin-bottom: 0;
+  }
+  #supplementary div:nth-child(3) {
+    margin-top: 0;
+  }
+  #supplementary div:first-child {
+    padding: 0;
+  }
+  #menu-footer-navigation li,
+  #supplementary ul.menu li {
+    font-size: 19px;
+    margin-bottom: 8px;
+  }
+  #site-footer .widget_nav_menu .widgettitle {
+    font-size: 21px;
+    margin-bottom: 0.5em;
+  }
+}
+.footer-credit-padding-inn-logo-missing {
+  margin-top: 0;
 }
 .top-tag {
   font-weight: 300;
@@ -444,144 +592,6 @@ section.normal h3 span {
 }
 .article-bottom .widget {
   padding: 0 !important;
-}
-.footer-bg {
-  background-color: #555555;
-}
-#site-footer .widgettitle,
-#site-footer li.menu-label,
-#menu-footer-navigation li,
-#supplementary ul.menu li {
-  border-bottom: none;
-}
-#supplementary div:nth-child(3) {
-  margin-top: 1.4em;
-}
-#supplementary div:first-child {
-  padding: 10px 30px 0 0;
-}
-#supplementary div.menu-footer-2-container {
-  padding: 0;
-}
-#site-footer .widget.widget_sp_image {
-  margin-top: 1em;
-}
-#site-footer .widgettitle,
-#site-footer li.menu-label {
-  color: #fafafa;
-  font-weight: 500;
-}
-#site-footer a {
-  color: #aaaaaa;
-}
-#site-footer a:hover {
-  color: #09c9ff;
-}
-#site-footer #ft-social {
-  display: block;
-  margin: 0 auto;
-  width: intrinsic;
-  margin-bottom: 1em;
-  text-align: center;
-}
-#site-footer #ft-social li {
-  float: none;
-  display: inline-block;
-}
-#site-footer #ft-social li i {
-  color: #fff;
-  background-color: #909799;
-  padding: 14px;
-  border-radius: 30px;
-  margin: 0 4px;
-}
-#site-footer #ft-social li i:hover {
-  background-color: #fff;
-}
-#site-footer #ft-social li i.icon-github:hover {
-  color: #909799;
-}
-@media (max-width: 768px) {
-  #site-footer #ft-social {
-    float: none;
-  }
-  #site-footer #ft-social li {
-    min-height: 56px;
-  }
-  #site-footer #ft-social li i {
-    font-size: 24px;
-  }
-}
-@media (max-width: 768px) {
-  #site-footer img[alt="INN logo"] {
-    width: 400px;
-  }
-}
-@media (max-width: 480px) {
-  #site-footer img[alt="INN logo"] {
-    max-width: 75%;
-    padding: 2em 0;
-  }
-}
-#menu-footer-navigation,
-#supplementary ul.menu {
-  font-family: "effra", helvetica, sans-serif;
-}
-#supplementary {
-  border-bottom: none;
-  padding-top: 3em;
-  margin-bottom: 0;
-}
-#boilerplate {
-  text-align: center;
-  border-top: none;
-}
-#boilerplate .copyright,
-#boilerplate .menu,
-#boilerplate .footer-bottom {
-  margin-bottom: 0.5em;
-}
-@media (max-width: 768px) {
-  #site-footer {
-    text-align: center;
-  }
-  #site-footer img.alignleft {
-    float: none;
-    margin: 0 auto 1.5em;
-  }
-  #site-footer p,
-  #site-footer li {
-    font-size: 15px;
-    line-height: 1.8;
-  }
-  #boilerplate .copyright,
-  #boilerplate .menu,
-  #boilerplate .footer-bottom {
-    margin-bottom: 1.5em;
-  }
-  #supplementary {
-    padding-top: 1em;
-  }
-  #supplementary div:nth-child(2),
-  #site-footer #supplementary div:nth-child(2) .widget,
-  #site-footer #supplementary div:nth-child(2) ul.menu {
-    margin-bottom: 0;
-  }
-  #supplementary div:nth-child(3) {
-    margin-top: 0;
-  }
-  #supplementary div:first-child {
-    padding: 0;
-  }
-  #menu-footer-navigation li,
-  #supplementary ul.menu li {
-    font-size: 19px;
-    margin-bottom: 8px;
-  }
-  #site-footer .widget_nav_menu .widgettitle {
-    font-size: 21px;
-    margin-bottom: 0.5em;
-  }
 }
 .internal-subnav h3 {
   font-size: 24px;

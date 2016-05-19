@@ -20,15 +20,6 @@ foreach ( $includes as $include ) {
 }
 
 
-// Add network header and footer
-add_action( 'largo_before_sticky_nav_container', 'largo_render_network_header' );
-add_action( 'largo_top', function() {
-	if (is_home() || is_front_page())
-		largo_render_network_header();
-});
-add_action( 'largo_before_footer_boilerplate', 'largo_render_network_footer' );
-
-
 // Enqueue custom js
 function journobiz_enqueue() {
 	wp_enqueue_script(
@@ -51,17 +42,8 @@ function inn_head() { ?>
 }
 add_action( 'wp_head', 'inn_head' );
 
-
-// Register an additional sidebar region for the homepage
-function journobiz_register_sidebars() {
-	register_sidebar( array(
-		'name' => 'Sidebar Home',
-		'id' => 'sidebar-home',
-		'description' => 'The sidebar on the homepage',
-		'before_widget' => '<aside id="%1$s" class="%2$s clearfix">',
-		'after_widget' 	=> "</aside>",
-		'before_title' 	=> '<h3 class="widgettitle">',
-		'after_title' 	=> '</h3>',
-	) );
+function get_inn_global_footer() {
+	switch_to_blog( 1 );
 }
-add_action( 'widgets_init', 'journobiz_register_sidebars' );
+add_action( 'largo_before_footer', 'get_inn_global_footer' );
+add_action( 'largo_after_footer', 'restore_current_blog' );

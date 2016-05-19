@@ -23,10 +23,12 @@ function inn_typekit() { ?>
 }
 add_action( 'wp_head', 'inn_typekit' );
 
+function get_inn_global_footer() {
+	switch_to_blog( 1 );
+}
+add_action( 'largo_before_footer', 'get_inn_global_footer' );
+add_action( 'largo_after_footer', 'restore_current_blog' );
 
-// Add network header and footer
-// add_action( 'largo_top', 'largo_render_network_header' );
-add_action( 'largo_before_footer_boilerplate', 'largo_render_network_footer' );
 
 function largo_load_hero() {
 	get_template_part( 'partials/largo', 'hero' );
