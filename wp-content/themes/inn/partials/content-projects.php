@@ -5,6 +5,7 @@ $term = get_term_by( 'slug', $queried_object->post_name, 'pauinn_project_tax' );
 $term_id = $term->term_id;
 ?>
 
+<!--
 <div class="bottom row-fluid">
 	<div class="span6">
 		<h3>Latest News</h3>
@@ -57,3 +58,4 @@ $term_id = $term->term_id;
 		?>
 	</div>
 </div>
+-->
