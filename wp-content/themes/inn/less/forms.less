@@ -1,0 +1,88 @@
+.gform_wrapper.donation_form_wrapper {
+  .field_sublabel_above {
+    height: auto;
+    margin-bottom: 0;
+  }
+  #field_1_15 .gfield_label,
+  .gfield_required,
+  .ginput_product_price_label {
+    display: none;
+  }
+  .top_label .gfield_label {
+    font-size: 0.875em;
+    font-weight: 400;
+    margin: 0.75em 0 0.188em;
+  }
+  label.gfield_label+div.ginput_container {
+    margin-top: 0;
+  }
+  .gfield_price {
+    width: 30%;
+    float: left;
+    .ginput_amount {
+	  width: 100%;
+    }
+  }
+  #field_1_15 {
+    clear: none;
+  }
+  // make the radio buttons look like real buttons
+  ul.gfield_radio {
+	position: relative;
+	top: 37px;
+	left: 20px;
+    li {
+      display: inline;
+      margin-right: 20px;
+      float: left;
+      width: auto;
+      input {
+	    display: none;
+      }
+      label {
+	    padding: 8px 24px;
+	    margin: 0;
+	    background-color: @blue;
+	    font-size: 18px;
+	    font-family: @sans;
+	    color: #fff;
+      }
+      input[type=radio]:checked+label {
+	    background-color: @orange;
+	    font-weight: 500;
+      }
+    }
+  }
+  .ginput_container_address,
+  .gfield_total,
+  .ginput_container_creditcard {
+    margin-bottom: 0.875em;
+  }
+  .gfield_price_1_20,
+  .gfield_total {
+	width: 100%;
+    .gfield_label {
+	  font-family: @sans;
+	  font-size: 24px;
+    }
+  }
+  .gform_button[type=submit] {
+    padding: 12px 36px;
+    background-color: @orange;
+    color: #fff;
+    font-family: @sans;
+    border: none;
+    font-size: 21px;
+    font-weight: bold;
+  }
+  
+  // try to set the height of dropdown menus to match text fields
+  &.gf_browser_chrome .ginput_complex .ginput_right select,
+  &.gf_browser_chrome .ginput_complex select {
+    height: 41px;
+    margin-bottom: 0 !important;
+  }
+  &.gf_browser_chrome .gfield_checkbox li input[type=checkbox] {
+    margin-top: 0.25em;
+  }
+}

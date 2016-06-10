@@ -296,6 +296,90 @@ a:hover {
     max-width: 90%;
   }
 }
+.gform_wrapper.donation_form_wrapper .field_sublabel_above {
+  height: auto;
+  margin-bottom: 0;
+}
+.gform_wrapper.donation_form_wrapper #field_1_15 .gfield_label,
+.gform_wrapper.donation_form_wrapper .gfield_required,
+.gform_wrapper.donation_form_wrapper .ginput_product_price_label {
+  display: none;
+}
+.gform_wrapper.donation_form_wrapper .top_label .gfield_label {
+  font-size: 0.875em;
+  font-weight: 400;
+  margin: 0.75em 0 0.188em;
+}
+.gform_wrapper.donation_form_wrapper label.gfield_label + div.ginput_container {
+  margin-top: 0;
+}
+.gform_wrapper.donation_form_wrapper .gfield_price {
+  width: 30%;
+  float: left;
+}
+.gform_wrapper.donation_form_wrapper .gfield_price .ginput_amount {
+  width: 100%;
+}
+.gform_wrapper.donation_form_wrapper #field_1_15 {
+  clear: none;
+}
+.gform_wrapper.donation_form_wrapper ul.gfield_radio {
+  position: relative;
+  top: 37px;
+  left: 20px;
+}
+.gform_wrapper.donation_form_wrapper ul.gfield_radio li {
+  display: inline;
+  margin-right: 20px;
+  float: left;
+  width: auto;
+}
+.gform_wrapper.donation_form_wrapper ul.gfield_radio li input {
+  display: none;
+}
+.gform_wrapper.donation_form_wrapper ul.gfield_radio li label {
+  padding: 8px 24px;
+  margin: 0;
+  background-color: #09c9ff;
+  font-size: 18px;
+  font-family: "effra", helvetica, sans-serif;
+  color: #fff;
+}
+.gform_wrapper.donation_form_wrapper ul.gfield_radio li input[type=radio]:checked + label {
+  background-color: #f77710;
+  font-weight: 500;
+}
+.gform_wrapper.donation_form_wrapper .ginput_container_address,
+.gform_wrapper.donation_form_wrapper .gfield_total,
+.gform_wrapper.donation_form_wrapper .ginput_container_creditcard {
+  margin-bottom: 0.875em;
+}
+.gform_wrapper.donation_form_wrapper .gfield_price_1_20,
+.gform_wrapper.donation_form_wrapper .gfield_total {
+  width: 100%;
+}
+.gform_wrapper.donation_form_wrapper .gfield_price_1_20 .gfield_label,
+.gform_wrapper.donation_form_wrapper .gfield_total .gfield_label {
+  font-family: "effra", helvetica, sans-serif;
+  font-size: 24px;
+}
+.gform_wrapper.donation_form_wrapper .gform_button[type=submit] {
+  padding: 12px 36px;
+  background-color: #f77710;
+  color: #fff;
+  font-family: "effra", helvetica, sans-serif;
+  border: none;
+  font-size: 21px;
+  font-weight: bold;
+}
+.gform_wrapper.donation_form_wrapper.gf_browser_chrome .ginput_complex .ginput_right select,
+.gform_wrapper.donation_form_wrapper.gf_browser_chrome .ginput_complex select {
+  height: 41px;
+  margin-bottom: 0 !important;
+}
+.gform_wrapper.donation_form_wrapper.gf_browser_chrome .gfield_checkbox li input[type=checkbox] {
+  margin-top: 0.25em;
+}
 #header-social .icon-youtube-parent,
 #header-social .icon-gplus-parent,
 #header-social .icon-linkedin-parent,
