@@ -55,8 +55,13 @@
 	    background-color: @orange;
 	    font-weight: 500;
       }
-      @media (max-width: 500px) {
-	    margin-right: 8px;
+      @media (max-width: 480px) {
+	    display: block;
+	    margin: 10px 0 0;
+	    text-align: center;
+	    label {
+	      width: 100%;
+	    }
 	  }
     }
     @media (max-width: 980px) {
@@ -68,6 +73,9 @@
   .gfield_checkbox li label {
     max-width: 95%;
     margin: 4px 0 0 10px;
+    @media (max-width: 680px) {
+	  max-width: 85%;
+    }
   }
   .ginput_container_address,
   .gfield_total,

@@ -357,9 +357,14 @@ a:hover {
   background-color: #f77710;
   font-weight: 500;
 }
-@media (max-width: 500px) {
+@media (max-width: 480px) {
   .gform_wrapper.donation_form_wrapper ul.gfield_radio li {
-    margin-right: 8px;
+    display: block;
+    margin: 10px 0 0;
+    text-align: center;
+  }
+  .gform_wrapper.donation_form_wrapper ul.gfield_radio li label {
+    width: 100%;
   }
 }
 @media (max-width: 980px) {
@@ -372,6 +377,11 @@ a:hover {
 .gform_wrapper.donation_form_wrapper .gfield_checkbox li label {
   max-width: 95%;
   margin: 4px 0 0 10px;
+}
+@media (max-width: 680px) {
+  .gform_wrapper.donation_form_wrapper .gfield_checkbox li label {
+    max-width: 85%;
+  }
 }
 .gform_wrapper.donation_form_wrapper .ginput_container_address,
 .gform_wrapper.donation_form_wrapper .gfield_total,
