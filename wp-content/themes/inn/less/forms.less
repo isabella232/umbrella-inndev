@@ -35,18 +35,16 @@
   // make the radio buttons look like real buttons
   ul.gfield_radio {
 	position: relative;
-	top: 37px;
-	left: 20px;
+	top: 53px;
     li {
       display: inline;
       margin-right: 12px;
-      float: left;
       width: auto;
       input {
 	    display: none;
       }
       label {
-	    padding: 8px 24px;
+	    padding: 7px 24px;
 	    margin: 0;
 	    background-color: @blue;
 	    font-size: 18px;
@@ -66,6 +64,10 @@
 	  top: 0;
 	  left: 0;
 	}
+  }
+  .gfield_checkbox li label {
+    max-width: 95%;
+    margin: 4px 0 0 10px;
   }
   .ginput_container_address,
   .gfield_total,

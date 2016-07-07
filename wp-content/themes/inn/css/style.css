@@ -335,20 +335,18 @@ a:hover {
 }
 .gform_wrapper.donation_form_wrapper ul.gfield_radio {
   position: relative;
-  top: 37px;
-  left: 20px;
+  top: 53px;
 }
 .gform_wrapper.donation_form_wrapper ul.gfield_radio li {
   display: inline;
   margin-right: 12px;
-  float: left;
   width: auto;
 }
 .gform_wrapper.donation_form_wrapper ul.gfield_radio li input {
   display: none;
 }
 .gform_wrapper.donation_form_wrapper ul.gfield_radio li label {
-  padding: 8px 24px;
+  padding: 7px 24px;
   margin: 0;
   background-color: #09c9ff;
   font-size: 18px;
@@ -370,6 +368,10 @@ a:hover {
     top: 0;
     left: 0;
   }
+}
+.gform_wrapper.donation_form_wrapper .gfield_checkbox li label {
+  max-width: 95%;
+  margin: 4px 0 0 10px;
 }
 .gform_wrapper.donation_form_wrapper .ginput_container_address,
 .gform_wrapper.donation_form_wrapper .gfield_total,
