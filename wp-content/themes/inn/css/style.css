@@ -367,6 +367,9 @@ a:hover {
 .gform_wrapper.donation_form_wrapper #field_1_15 .gfield_label {
   display: none;
 }
+.gform_wrapper.donation_form_wrapper label.gfield_label {
+  font-weight: 400;
+}
 .gform_wrapper.donation_form_wrapper label.gfield_label + div.ginput_container {
   margin-top: 0;
 }
