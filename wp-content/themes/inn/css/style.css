@@ -296,19 +296,76 @@ a:hover {
     max-width: 90%;
   }
 }
-.gform_wrapper.donation_form_wrapper .field_sublabel_above {
+.gform_wrapper.donation_form_wrapper .gfield_required,
+.gform_wrapper.membership_form_wrapper .gfield_required,
+.gform_wrapper.donation_form_wrapper .ginput_product_price_label,
+.gform_wrapper.membership_form_wrapper .ginput_product_price_label {
+  display: none;
+}
+.gform_wrapper.donation_form_wrapper h2.gsection_title,
+.gform_wrapper.membership_form_wrapper h2.gsection_title {
+  font-size: 32px;
+}
+.gform_wrapper.donation_form_wrapper .gsection,
+.gform_wrapper.membership_form_wrapper .gsection {
+  border-bottom: 1px solid #aaaaaa;
+}
+.gform_wrapper.donation_form_wrapper .field_sublabel_above,
+.gform_wrapper.membership_form_wrapper .field_sublabel_above {
   height: auto;
   margin-bottom: 0;
 }
-.gform_wrapper.donation_form_wrapper #field_1_15 .gfield_label,
-.gform_wrapper.donation_form_wrapper .gfield_required,
-.gform_wrapper.donation_form_wrapper .ginput_product_price_label {
-  display: none;
-}
-.gform_wrapper.donation_form_wrapper .top_label .gfield_label {
+.gform_wrapper.donation_form_wrapper .top_label .gfield_label,
+.gform_wrapper.membership_form_wrapper .top_label .gfield_label {
   font-size: 0.875em;
-  font-weight: 400;
   margin: 0.75em 0 0.188em;
+}
+.gform_wrapper.donation_form_wrapper .gfield_checkbox li label,
+.gform_wrapper.membership_form_wrapper .gfield_checkbox li label {
+  max-width: 95%;
+  margin: 4px 0 0 10px;
+}
+@media (max-width: 680px) {
+  .gform_wrapper.donation_form_wrapper .gfield_checkbox li label,
+  .gform_wrapper.membership_form_wrapper .gfield_checkbox li label {
+    max-width: 85%;
+  }
+}
+.gform_wrapper.donation_form_wrapper .gform_button,
+.gform_wrapper.membership_form_wrapper .gform_button,
+.gform_wrapper.donation_form_wrapper .gform_next_button,
+.gform_wrapper.membership_form_wrapper .gform_next_button,
+.gform_wrapper.donation_form_wrapper .gform_previous_button,
+.gform_wrapper.membership_form_wrapper .gform_previous_button {
+  padding: 12px 36px;
+  background-color: #09c9ff;
+  color: #fff;
+  font-family: "effra", helvetica, sans-serif;
+  border: none;
+  font-size: 21px;
+  font-weight: bold;
+}
+.gform_wrapper.donation_form_wrapper .gform_button[type=submit],
+.gform_wrapper.membership_form_wrapper .gform_button[type=submit],
+.gform_wrapper.donation_form_wrapper .gform_next_button,
+.gform_wrapper.membership_form_wrapper .gform_next_button {
+  background-color: #f77710;
+  position: relative;
+  top: -4px;
+}
+.gform_wrapper.donation_form_wrapper.gf_browser_chrome .ginput_complex .ginput_right select,
+.gform_wrapper.membership_form_wrapper.gf_browser_chrome .ginput_complex .ginput_right select,
+.gform_wrapper.donation_form_wrapper.gf_browser_chrome .ginput_complex select,
+.gform_wrapper.membership_form_wrapper.gf_browser_chrome .ginput_complex select {
+  height: 41px;
+  margin-bottom: 0 !important;
+}
+.gform_wrapper.donation_form_wrapper.gf_browser_chrome .gfield_checkbox li input[type=checkbox],
+.gform_wrapper.membership_form_wrapper.gf_browser_chrome .gfield_checkbox li input[type=checkbox] {
+  margin-top: 0.25em;
+}
+.gform_wrapper.donation_form_wrapper #field_1_15 .gfield_label {
+  display: none;
 }
 .gform_wrapper.donation_form_wrapper label.gfield_label + div.ginput_container {
   margin-top: 0;
@@ -374,15 +431,6 @@ a:hover {
     left: 0;
   }
 }
-.gform_wrapper.donation_form_wrapper .gfield_checkbox li label {
-  max-width: 95%;
-  margin: 4px 0 0 10px;
-}
-@media (max-width: 680px) {
-  .gform_wrapper.donation_form_wrapper .gfield_checkbox li label {
-    max-width: 85%;
-  }
-}
 .gform_wrapper.donation_form_wrapper .ginput_container_address,
 .gform_wrapper.donation_form_wrapper .gfield_total,
 .gform_wrapper.donation_form_wrapper .ginput_container_creditcard {
@@ -396,23 +444,6 @@ a:hover {
 .gform_wrapper.donation_form_wrapper .gfield_total .gfield_label {
   font-family: "effra", helvetica, sans-serif;
   font-size: 24px;
-}
-.gform_wrapper.donation_form_wrapper .gform_button[type=submit] {
-  padding: 12px 36px;
-  background-color: #f77710;
-  color: #fff;
-  font-family: "effra", helvetica, sans-serif;
-  border: none;
-  font-size: 21px;
-  font-weight: bold;
-}
-.gform_wrapper.donation_form_wrapper.gf_browser_chrome .ginput_complex .ginput_right select,
-.gform_wrapper.donation_form_wrapper.gf_browser_chrome .ginput_complex select {
-  height: 41px;
-  margin-bottom: 0 !important;
-}
-.gform_wrapper.donation_form_wrapper.gf_browser_chrome .gfield_checkbox li input[type=checkbox] {
-  margin-top: 0.25em;
 }
 @media (max-width: 480px) {
   .gform_wrapper.donation_form_wrapper .gf_name_has_2 span,
@@ -441,6 +472,24 @@ a:hover {
   .gform_wrapper.donation_form_wrapper .ginput_complex .ginput_cardinfo_left {
     margin-right: 0;
   }
+}
+.gform_wrapper.membership_form_wrapper .gfield_radio label {
+  position: relative;
+  left: 5px;
+  top: 2px;
+  font-size: 17px;
+}
+.gform_wrapper.membership_form_wrapper #field_2_26,
+.gform_wrapper.membership_form_wrapper #field_2_24 label.gfield_label,
+.gform_wrapper.membership_form_wrapper #field_2_17 label.gfield_label {
+  display: none;
+}
+.gform_wrapper.membership_form_wrapper #field_2_15 {
+  margin: 2em 0 3em;
+  font-size: 14px;
+}
+.gform_wrapper.membership_form_wrapper #field_2_33 .gfield_label {
+  font-size: 24px;
 }
 #header-social .icon-youtube-parent,
 #header-social .icon-gplus-parent,
