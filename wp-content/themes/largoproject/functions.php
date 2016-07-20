@@ -1,12 +1,18 @@
 <?php
+// constants
+define( 'LARGOPROJECT_RESOURCES_PARENT_ID', 108447); 
 
 // Includes
-$includes = array(
-	'/homepages/homepage.php'
-);
-foreach ( $includes as $include ) {
-	require_once( get_stylesheet_directory() . $include );
+function largo_child_require_files() {
+	$includes = array(
+		'/homepages/homepage.php',
+		'/inc/resource-page.php'
+	);
+	foreach ( $includes as $include ) {
+		require_once( get_stylesheet_directory() . $include );
+	}
 }
+add_action( 'after_setup_theme', 'largo_child_require_files' );
 
 
 // Typekit
