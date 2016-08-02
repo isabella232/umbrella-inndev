@@ -396,6 +396,7 @@ a:hover {
 .gform_wrapper.donation_form_wrapper ul.gfield_radio {
   position: relative;
   top: 53px;
+  display: inline;
 }
 .gform_wrapper.donation_form_wrapper ul.gfield_radio li {
   display: inline;
