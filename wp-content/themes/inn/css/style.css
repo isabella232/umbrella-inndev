@@ -518,9 +518,9 @@ a:hover {
 .navbar .container {
   padding: 0 90px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1050px) {
   .navbar .container {
-    padding: 0;
+    padding: 0 10px;
   }
 }
 #header-search {
@@ -622,6 +622,17 @@ body.page #content {
   width: 70%;
   margin: 0 auto;
   float: none;
+}
+body.page.page-template-single-two-column #content {
+  width: 65.9574468%;
+  float: left;
+}
+@media only screen and (max-width: 768px) {
+  body.page.page-template-single-two-column #content,
+  body.page.page-template-single-two-column #sidebar {
+    width: 100%;
+    padding: 0 2%;
+  }
 }
 body.page.page-template-full-page #content {
   margin-left: 0;
