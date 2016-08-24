@@ -325,6 +325,23 @@ body.normal.page #content.guide-page {
 .guide-page .guide-nav li a {
   line-height: 1.5;
 }
+.guide-page .guide-nav.navbar li > a {
+  padding: 0;
+}
+.guide-page .guide-nav .children {
+  margin-left: 10px;
+}
+.guide-page .guide-nav .children,
+.guide-page .guide-nav .current_page_item .children .page_item_has_children .children,
+.guide-page .guide-nav .current_page_parent .children .page_item_has_children .children {
+  display: none;
+}
+.guide-page .guide-nav .current_page_item .children,
+.guide-page .guide-nav .current_page_parent .children,
+.guide-page .guide-nav .current_page_parent .children .page_item_has_children.current_page_item .children,
+.guide-page .guide-nav .current_page_ancestor .children {
+  display: inherit;
+}
 .guide-page .guide-nav .current_page_item {
   font-weight: bold;
 }

@@ -48,6 +48,23 @@ body.normal.page #content.guide-page {
         line-height: 1.5;
       }
     }
+    &.navbar li > a {
+	  padding: 0;
+    }
+    .children {
+	  margin-left: 10px;
+	}
+    .children,
+    .current_page_item .children .page_item_has_children .children,
+    .current_page_parent .children .page_item_has_children .children {
+	  display: none;
+    }
+    .current_page_item .children,
+    .current_page_parent .children,
+    .current_page_parent .children .page_item_has_children.current_page_item .children,
+    .current_page_ancestor .children {
+	  display: inherit;
+    }
     .current_page_item {
       font-weight: bold;
       .children {
