@@ -12,7 +12,7 @@
 			<div class="span4">
 				<img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/workflow.svg" />
 				<h5>Powerful Publishing Tools</h5>
-				<p>Unlike other WordPress "news" themes, Largo is built by <a href="http://nerds.inn.org/">real news nerds</a>. We obsess about workflow, too.</p>
+				<p>Unlike other WordPress "news" themes, Largo is built by <a href="https://nerds.inn.org/">real news nerds</a>. We obsess about workflow, too.</p>
 			</div>
 			<div class="span4">
 				<img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/devfriendly.svg" />
@@ -27,8 +27,8 @@
 
 	<div class="row-fluid interstitial">
 		<h3>Largo is a project of INN</h3>
-		<p><a href="http://inn.org/">INN</a> is a nonprofit organization supporting a network of <a href="http://inn.org/member/">110+ nonprofit news organizations</a>. Projects like Largo depend on your support.</p>
-		<a class="btn btn-donate btn-primary" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=M7T6234BREMG2">Donate Now</a>
+		<p><a href="http://inn.org/">INN</a> is a nonprofit organization supporting a network of <a href="http://inn.org/members/">120 nonprofit news organizations</a>. Projects like Largo depend on your support.</p>
+		<a class="btn btn-donate btn-primary" href="https://inn.org/donate/">Donate Now</a>
 	</div>
 
 	<section>
