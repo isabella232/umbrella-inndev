@@ -1,3 +1,3 @@
 <div class="alert">
-	<p><strong>Double your donation to nonprofit news. <a href="https://inn.org/donate">Donate Now!</a></strong></p>
+	<p><strong><a href="https://inn.org/donate">Double your donation to nonprofit news. Donate Now!</a></strong></p>
 </div>
