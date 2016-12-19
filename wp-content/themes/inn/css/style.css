@@ -542,6 +542,9 @@ a:hover {
 .alert p a {
   color: #fff;
 }
+.home .alert {
+  display: none;
+}
 #page {
   max-width: 100%;
   padding: 0;
