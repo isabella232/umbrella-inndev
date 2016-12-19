@@ -14,7 +14,7 @@ providing fact-based news as a public service.</h3>
 	<div id="donation-description">
 	<a href="https://inn.org/donate" class="btn btn-primary">Donate Now</a>
 		<p><a href="https://inn.org/donate">Donate now and your dollars are doubled!</a></p>
-		<p>Knight Foundation's <a href="https://twitter.com/search?q=%23newsmatch">#NewsMatch</a> challenge will match your donation one-to-one.</p>
+		<p class="small">Knight Foundation's <a href="https://twitter.com/search?q=%23newsmatch">#NewsMatch</a> challenge will match your donation one-to-one.</p>
 	</div>
 </section>
 
