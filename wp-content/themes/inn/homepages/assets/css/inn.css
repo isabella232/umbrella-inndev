@@ -1,3 +1,25 @@
+.home {
+  /*#hero {
+    background: url(../img/mission_conference_orange.jpg) no-repeat center center;
+    background-size: cover;
+    margin-bottom: 2em;
+    padding: 300px 0;
+    .content {
+      h2 {
+        margin: 0 auto;
+        text-align: center;
+        color: #fff;
+        font-size: 4em;
+        font-weight: 500;
+        text-shadow: 0px 1px 8px rgba(0,0,0,0.65);
+      }
+    }
+    @media (max-width: 600px) {
+      margin-bottom: 1em;
+    }
+  }
+  */
+}
 .home #page {
   max-width: 100%;
   padding: 0;
@@ -7,22 +29,68 @@
   max-width: 100%;
 }
 .home #hero {
-  background: url(../img/mission_conference_orange.jpg) no-repeat center center;
-  background-size: cover;
-  margin-bottom: 2em;
-  padding: 300px 0;
+  background-image: none;
+  background-color: #59D7FB;
+  padding: 100px 20px 60px;
 }
 .home #hero .content h2 {
-  margin: 0 auto;
+  margin: 0 auto .5em;
+  max-width: 1152px;
   text-align: center;
   color: #fff;
   font-size: 4em;
   font-weight: 500;
-  text-shadow: 0px 1px 8px rgba(0, 0, 0, 0.65);
+  line-height: 1;
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
 }
-@media (max-width: 600px) {
+.home #hero .content h3 {
+  margin: 0 auto;
+  max-width: 1000px;
+  text-align: center;
+  color: #fff;
+  font-size: 2.25em;
+  font-weight: 400;
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+}
+.home #hero .btn-primary {
+  margin: 0 auto 1em;
+  display: block;
+  width: 150px;
+}
+.home #hero #donation-description {
+  max-width: 370px;
+  margin: 2em auto;
+  text-align: center;
+  background-color: #fff;
+  padding: 2em 2em 1em;
+  border: 3px solid #09C9FF;
+}
+.home #hero #donation-description p {
+  margin-bottom: .5em;
+}
+.home #hero #donation-description p.small {
+  font-size: 1em;
+}
+@media (max-width: 768px) {
   .home #hero {
-    margin-bottom: 1em;
+    padding: 50px 20px;
+  }
+  .home #hero .content h2 {
+    font-size: 3.25em;
+  }
+  .home #hero .content h3 {
+    font-size: 1.5em;
+  }
+}
+@media (max-width: 480px) {
+  .home #hero {
+    padding: 30px 20px 10px;
+  }
+  .home #hero .content h2 {
+    font-size: 2.5em;
+  }
+  .home #hero #donation-description p.small {
+    font-size: .8em;
   }
 }
 .home #homepage-top-right ol {

@@ -1,8 +1,20 @@
 <?php $img_path = get_stylesheet_directory_uri() . '/homepages/assets/img/'; ?>
 
-<section id="hero" class="hidden-phone">
+<!--<section id="hero" class="hidden-phone">
 	<div class="content">
 		<h2>Supporting mission-driven journalism.</h2>
+	</div>
+</section>
+-->
+<section id="hero">
+	<div class="content">
+		<h2>You can ensure the future of real news.</h2>
+		<h3>Help us support non-partisan, nonprofit news organizations
+providing fact-based news as a public service.</h3>
+	<div id="donation-description">
+	<a href="https://inn.org/donate" class="btn btn-primary">Donate Now</a>
+		<p><a href="https://inn.org/donate">Donate now and your dollars are doubled!</a></p>
+		<p>Knight Foundation's <a href="https://twitter.com/search?q=%23newsmatch">#NewsMatch</a> challenge will match your donation one-to-one.</p>
 	</div>
 </section>
 
