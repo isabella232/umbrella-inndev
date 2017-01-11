@@ -1,10 +1,12 @@
 <?php
 /*
- * Template Name: Member Investigations
+ * Template Name: Member Investigations RSS feed
+ *
  * A feed of curated INN member stories.
  * Use inn.org/?feed=member_stories for all stories in the "homepage featured" prominence taxonomy term
  * - OR -
  * inn.org/?feed=member_stories&top_stories=1 for just the "top stories"
+ * @see inn_member_stories_rss
  */
 
 $term = ( get_query_var( 'top_stories' ) == 1 ) ? 'top-story' : 'homepage-featured';
