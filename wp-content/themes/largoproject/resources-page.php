@@ -27,19 +27,19 @@ $top_page = FALSE;
 			}
 
 			// now get the complete tree of child pages for the guide's top page
-			$children = wp_list_pages('title_li=&child_of=' . $guide_parent_id . '&echo=0');
+			$children = wp_list_pages( 'title_li=&child_of=' . $guide_parent_id . '&echo=0' );
 			?>
 
 			<nav class="guide-nav span3 navbar">
 				<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
 				<div class="container clearfix">
-		      <a class="btn btn-navbar toggle-nav-bar" title="More">
-		        <div class="bars">
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-		        </div>
-		      </a>
+					<a class="btn btn-navbar toggle-nav-bar" title="More">
+						<div class="bars">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</div>
+					</a>
 
 					<?php if ( $top_page ) { ?>
 						<h4 class="guide-top"><?php echo get_the_title( $guide_parent_id ); ?></h4>
@@ -71,7 +71,7 @@ $top_page = FALSE;
 						$pages[] = $guide_parent_id;
 						$prev_id = $next_id = '';
 						foreach ( $pagelist as $page ) {
-						   $pages[] += $page->ID;
+							$pages[] += $page->ID;
 						}
 
 						$current = array_search(get_the_ID(), $pages);
@@ -104,6 +104,6 @@ $top_page = FALSE;
 
 		<?php endwhile; // end of the loop.
 	?>
-</div><!--#content-->
+</div><!-- #content -->
 
 <?php get_footer(); ?>
