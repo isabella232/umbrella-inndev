@@ -42,5 +42,6 @@ After reviewing the options and creating the new install (you'll be prompted par
 9. `fab production wp.fetch_sql_dump` (or download via FTP if this doesn't work)
 10. `fab vagrant.reload_db:mysql.sql`
 11. Search and replace 'inn.org' --> 'inndev.dev' in the db (options for doing this are covered in the [largo umbrella setup instructions](https://github.com/INN/docs/blob/master/projects/largo/umbrella-setup.md)
+	- Perform this step for each of these domains: inndev.dev largo.inndev.dev learn.inndev.dev impaq.inndev.dev innovation.inndev.dev news.inndev.dev nerds.inndev.dev
 12. Optionally, you may want to pull down recent uploads so you have images, etc. to work with locally.
 13. Visit inndev.dev in your browser and you should see the site!
