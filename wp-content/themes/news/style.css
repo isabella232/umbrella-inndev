@@ -5,7 +5,10 @@ Description:    A child theme for member news/collaborative investigations secti
 Author:         Adam Schweigert/INN
 Author URI:     http://investigativenewsnetwork.org
 Template:       largo
-Version:        0.1.0
+Version:        1.1.0
+
+This theme is not the wordpress.org theme referenced in https://github.com/INN/umbrella-inndev/issues/1
+This version number should be higher than that one, to avoid conflicts.
 */
 body,
 .btn-primary {
