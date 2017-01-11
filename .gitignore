@@ -1,6 +1,9 @@
+ocal_fabfile.py
 .vagrant
 wp-content/themes/twenty*
 *.sql
+data/*
+wp-scripts/*
 
 *~
 .DS_Store
@@ -73,6 +76,7 @@ wp-content/debug.log
 /wp-content/sunrise.php
 /wp-content/Icon
 /wp-content/plugins/*
+/wp-content/themes/*
 
 # large/disallowed file types
 # a CDN should be used for these
@@ -110,3 +114,14 @@ wp-content/debug.log
 *.avi
 
 /.htaccess
+
+# do version-control the child theme we care about
+# add a line here that looks like this:
+# !/wp-content/themes/example-theme-directory
+!/wp-content/themes/cjet
+!/wp-content/themes/impaq
+!/wp-content/themes/inn
+!/wp-content/themes/journobiz
+!/wp-content/themes/largoproject
+!/wp-content/themes/nerds
+!/wp-content/themes/news
