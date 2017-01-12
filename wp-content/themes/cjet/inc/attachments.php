@@ -34,7 +34,8 @@ function cjet_format_attachment_link( $attachment_id ) {
 	if ( !empty($extras['human_type'] )) $details[] = $extras['human_type'];
 	if ( !empty($extras['filesize'] )) $details[] = size_format($extras['filesize']);
 
-	$output = sprintf('<a href="%s" title="%s"><i class="%s"></i> %s <span class="attachment-meta">(%s)</span></a>',
+	$output = sprintf(
+		'<a href="%s" title="%s"><i class="%s"></i> %s <span class="attachment-meta">(%s)</span></a>',
 		wp_get_attachment_url( $attachment_id ),
 		__('Permalink to', 'cjet') . ' ' . esc_attr( get_the_title( $attachment_id ) ),
 		'icon-' . $human_type_css_class,
