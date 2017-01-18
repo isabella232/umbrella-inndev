@@ -1,10 +1,20 @@
 <div id="content" class="homepage-content clearfix span12">
-
+	<nav id="largo-nav">
+		<div class="navbar-inner clearfix">
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/logos/Largo__white_horiz2.png" />
+			<ul>
+				<li><a href="#">Overview</a></li>
+				<li><a href="#">Docs</a></li>
+				<li><a href="#">Source</a></li>
+				<li><a href="#">Help</a></li>
+			</ul>
+		</div>
+	</nav>
 	<section class="largo-section">
-		<h2>Why Largo?</h2>
-		<h4>Picto tem denet omnit expliame non reror ati reictio volores.</h4>
-		<div class="row-fluid clearfix">
-			<div class="about-description-1">
+		<div class="max-width-container">
+			<h2>Why Largo?</h2>
+			<h4>Picto tem denet omnit expliame non reror ati reictio volores.</h4>
+			<div class="about-description-1 clearfix">
 				<div class="illustration">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/illustrations/responsive-design.png" />
 				</div>
@@ -13,7 +23,7 @@
 					<p>Clean, modern and mobile first. Largo is designed to look great on any device.</p>
 				</div>
 			</div>
-			<div class="about-description-1 about-description-2">
+			<div class="about-description-1 about-description-2 clearfix">
 				<div class="illustration">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/illustrations/powerful-tools.png" />
 				</div>
@@ -22,7 +32,7 @@
 					<p>Unlike other WordPress "news" themes, Largo is built by real news nerds. We obsess about workfow, too.</p>
 				</div>
 			</div>
-			<div class="about-description-1">
+			<div class="about-description-1 clearfix">
 				<div class="illustration">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/illustrations/developer-friendly.png" />
 				</div>
@@ -31,6 +41,47 @@
 					<p>Logical organization, documentation and a sample child theme make it easy to use Largo for your next project.</p>
 				</div>
 			</div>
+		</div>
+	</section>
+
+	<section id="showcase">
+		<div class="max-width-container">
+			<h2>Case Studies</h2>
+			<h4>Our product in action.</h4>
+			<div class="row-fluid">
+				<div class="span4">
+					<a href="http://wisconsinwatch.org"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/wcij.png" /></a>
+				</div>
+				<div class="span4">
+					<a href="http://current.org"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/current.png" /></a>
+				</div>
+				<div class="span4">
+					<a href="http://kycir.org"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/kycir.png" /></a>
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="span4">
+					<a href="http://cornellsun.com/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/cornellsun.png" /></a>
+				</div>
+				<div class="span4">
+					<a href="http://periodismoinvestigativo.com/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/cpipr.png" /></a>
+				</div>
+				<div class="span4">
+					<a href="http://aspenjournalism.org/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/aspen.png" /></a>
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="span4">
+					<a href="http://midwestenergynews.com/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/mwen.png" /></a>
+				</div>
+				<div class="span4">
+					<a href="http://womensenews.org/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/womensenews.png" /></a>
+				</div>
+				<div class="span4">
+					<a href="http://gijn.org"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/gijn.png" /></a>
+				</div>
+			</div>
+			<a href="#" class="btn btn-primary">Showcase</a>
 		</div>
 	</section>
 
@@ -86,44 +137,6 @@
 			restore_current_blog();
 		?>
 	</div>
-
-	<section id="showcase">
-		<h2>Showcase</h2>
-		<h4>Hundreds of sites are using Largo. Here are a few:</h4>
-		<div class="row-fluid">
-			<div class="span4">
-				<a href="http://wisconsinwatch.org"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/wcij.png" /></a>
-			</div>
-			<div class="span4">
-				<a href="http://current.org"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/current.png" /></a>
-			</div>
-			<div class="span4">
-				<a href="http://kycir.org"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/kycir.png" /></a>
-			</div>
-		</div>
-		<div class="row-fluid">
-			<div class="span4">
-				<a href="http://cornellsun.com/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/cornellsun.png" /></a>
-			</div>
-			<div class="span4">
-				<a href="http://periodismoinvestigativo.com/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/cpipr.png" /></a>
-			</div>
-			<div class="span4">
-				<a href="http://aspenjournalism.org/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/aspen.png" /></a>
-			</div>
-		</div>
-		<div class="row-fluid">
-			<div class="span4">
-				<a href="http://midwestenergynews.com/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/mwen.png" /></a>
-			</div>
-			<div class="span4">
-				<a href="http://womensenews.org/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/womensenews.png" /></a>
-			</div>
-			<div class="span4">
-				<a href="http://gijn.org"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/gijn.png" /></a>
-			</div>
-		</div>
-	</section>
 
 </div>
 
