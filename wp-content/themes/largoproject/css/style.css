@@ -439,7 +439,7 @@ body.normal.page #content.guide-page {
   text-align: center;
 }
 .footer-bg #site-footer p {
-  font-size: 16px;
+  font-size: 1em;
   margin: 0;
 }
 .footer-bg #site-footer .github-star-fork {
@@ -454,6 +454,44 @@ body.normal.page #content.guide-page {
   margin-right: 12px;
   display: inline;
 }
+/* Largo-Re-Design */
+section.largo-section h2 {
+  font-size: 2.5em;
+}
+section.largo-section h4 {
+  font-size: 1.5em;
+  font-weight: 300;
+}
+.about-description-1 {
+  text-align: left;
+  display: block;
+}
+.about-description-1 .illustration {
+  float: left;
+  max-width: 490px;
+  margin-right: 60px;
+  margin-left: 40px;
+}
+.about-description-1 h3 {
+  margin-bottom: 8px;
+  font-size: 2.5em;
+}
+.about-description-1 p {
+  font-size: 1.5em;
+  font-weight: 300;
+}
+.description {
+  float: left;
+  max-width: 500px;
+  margin-top: 70px;
+}
+.about-description-2 .illustration {
+  float: right;
+}
+.about-description-2 .description {
+  margin-left: 70px;
+}
+/* Media Queries */
 @media (max-width: 480px) {
   .site-hero .tagline {
     font-size: 15px;
