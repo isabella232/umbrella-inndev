@@ -460,7 +460,7 @@ nav#largo-nav img {
   max-width: 200px;
   display: inline-block;
   float: left;
-  margin: 20px 90px 20px 20px;
+  margin: 20px 100px 20px 100px;
 }
 nav#largo-nav div.navbar-inner {
   background-color: #f48030;
@@ -476,6 +476,7 @@ nav#largo-nav ul li {
 }
 nav#largo-nav ul li a {
   color: white;
+  font-weight: 300;
 }
 /* Sections */
 div.site-hero {
@@ -486,6 +487,65 @@ header#site-header {
 }
 div#main {
   margin: 0;
+}
+section#largo-hero {
+  background-color: white;
+  padding-bottom: 5rem;
+  padding-top: 5em;
+}
+section#largo-hero div#hero-logo {
+  float: left;
+  width: 400px;
+  margin-right: 70px;
+}
+section#largo-hero div#hero-logo img {
+  max-width: 300px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+section#largo-hero div#hero-logo span#version {
+  display: block;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 300;
+}
+section#largo-hero div#hero-description {
+  float: left;
+  max-width: 450px;
+  margin-top: 100px;
+}
+section#largo-hero div#hero-description h4 {
+  color: black;
+  text-align: left;
+  font-size: 2em;
+  margin-bottom: 8px;
+}
+div#logo-and-description {
+  max-width: 920px;
+  margin: 0 auto;
+}
+div#hero-buttons {
+  text-align: center;
+  margin-top: 3em;
+}
+#btn-largo-1 {
+  background-color: #f48030;
+  font-size: 1.2em;
+  letter-spacing: .05em;
+  margin-right: 10px;
+}
+#btn-largo-1:hover {
+  background-color: #f2690d;
+}
+#btn-largo-2 {
+  background-color: #ffcf73;
+  font-size: 1.2em;
+  letter-spacing: .05em;
+  color: black;
+}
+#btn-largo-2:hover {
+  background-color: #ffc14d;
 }
 section.largo-section {
   padding: 3rem 0 3rem 0;

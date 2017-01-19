@@ -68,7 +68,7 @@ nav#largo-nav {
     max-width: 200px;
     display: inline-block;
     float: left;
-    margin: 20px 90px 20px 20px;
+    margin: 20px 100px 20px 100px;
   }
 
   div.navbar-inner {
@@ -86,6 +86,7 @@ nav#largo-nav {
     font-size: 1.2em;
     a {
       color: white;
+      font-weight: 300;
     }
   }
 }
@@ -102,6 +103,74 @@ header#site-header {
 
 div#main {
   margin: 0;
+}
+
+section#largo-hero {
+  background-color: white;
+  padding-bottom: 5rem;
+  padding-top: 5em;
+
+  div#hero-logo {
+    float: left;
+    width:400px;
+    margin-right: 70px;
+
+    img {
+      max-width: 300px;
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+
+    span#version {
+      display: block;
+      text-align: center;
+      font-size: 1.2em;
+      font-weight: 300;
+    }
+  }
+
+  div#hero-description {
+    float: left;
+    max-width: 450px;
+    margin-top: 100px;
+    h4 {
+      color: black;
+      text-align: left;
+      font-size: 2em;
+      margin-bottom: 8px;
+    }
+  }
+}
+
+div#logo-and-description {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+div#hero-buttons {
+  text-align: center;
+  margin-top: 3em;
+}
+
+#btn-largo-1 {
+  background-color: @largoorange;
+  font-size: 1.2em;
+  letter-spacing: .05em;
+  margin-right: 10px;
+  &:hover {
+    background-color: #f2690d;
+  }
+}
+
+#btn-largo-2 {
+  background-color: @largoyellow;
+  font-size: 1.2em;
+  letter-spacing: .05em;
+  color: black;
+  &:hover {
+    background-color: #ffc14d;
+  }
 }
 
 section.largo-section {

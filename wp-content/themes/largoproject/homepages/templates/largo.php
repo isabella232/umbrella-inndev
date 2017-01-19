@@ -1,5 +1,5 @@
 <div id="content" class="homepage-content clearfix span12">
-	<nav id="largo-nav">
+	<nav id="largo-nav" class="clearfix">
 		<div class="navbar-inner clearfix">
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/logos/Largo__white_horiz2.png" />
 			<ul>
@@ -10,10 +10,26 @@
 			</ul>
 		</div>
 	</nav>
+	<section id="largo-hero" class="clearfix">
+		<div id="logo-and-description" class="clearfix">
+			<div id="hero-logo">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/logos/largo-project-logo.svg" />
+				<span id="version">Version 0.5.5<span>
+			</div>
+			<div id="hero-description">
+				<h4>The WordPress Framework for News Websites</h4>
+				<p>To beatur, sereicipis inulparum quatiis dollese volum et aut quo deliquae nem nim eius. Cium rem hilisit officia voluptius coreribera niaspiet liquiam delende nitatur.</p>
+			</div>
+		</div>
+		<div id="hero-buttons">
+			<a href="#" class="btn" id="btn-largo-1">Download</a>
+			<a href="https://largo.inn.org/series/largo-user-guide/" class="btn" id="btn-largo-2">User Guides</a>
+		</div>
+	</section>
 	<section class="largo-section">
 		<div class="max-width-container">
 			<h2>Why Largo?</h2>
-			<h4>Picto tem denet omnit expliame non reror ati reictio volores.</h4>
+			<h4>Because Largo is totally awesome, dude!</h4>
 			<div class="about-description-1 clearfix">
 				<div class="illustration">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/illustrations/responsive-design.png" />
