@@ -1,21 +1,14 @@
 <?php $img_path = get_stylesheet_directory_uri() . '/homepages/assets/img/'; ?>
 
-<!--<section id="hero" class="hidden-phone">
-	<div class="content">
-		<h2>Supporting mission-driven journalism.</h2>
-	</div>
-</section>
--->
 <section id="hero">
 	<div class="content">
-		<h2>You can ensure the future of real news.</h2>
-		<h3>Help us support non-partisan, nonprofit news organizations
-providing fact-based news as a public service.</h3>
-	<div id="donation-description">
-	<a href="https://inn.org/donate" class="btn btn-primary">Donate Now</a>
-		<p><a href="https://inn.org/donate">Donate now and your dollars are doubled!</a></p>
-		<p class="small">Knight Foundation's <a href="https://twitter.com/search?q=%23newsmatch">#NewsMatch</a> challenge will match your donation one-to-one.</p>
-	</div>
+		<h2>What wouldn’t you know, if not for nonprofit news media?</h2>
+
+<h3>In 2016, reporters in nonprofit newsrooms across America broke thousands of stories while pursuing journalism in the public interest.</h3>
+  <div id="donation-description">
+      <a href="https://inn.org/2016-nonprofit-news-top-stories/" class="btn btn-primary">Read some of the best</a>
+      <p class="small">INN Members: Fact-based and community-focused. Transparent and non-partisan. Reporting for you.</p>
+  </div>
 </section>
 
 <section class="normal">
