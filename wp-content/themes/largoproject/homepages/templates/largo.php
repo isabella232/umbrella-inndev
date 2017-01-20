@@ -60,53 +60,100 @@
 		</div>
 	</section>
 
-	<section id="showcase">
+	<section id="showcase" class="largo-section">
 		<div class="max-width-container">
 			<h2>Case Studies</h2>
 			<h4>Our product in action.</h4>
 			<div class="row-fluid">
-				<div class="span4">
-					<a href="http://wisconsinwatch.org"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/wcij.png" /></a>
+				<div class="span4 clearfix">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/wcij.png" />
+					<a href="http://wisconsinwatch.org ">
+						<div class="after">
+							<span class="text-overlay">Wisconsin Watch</span>
+						</div>
+					</a>
 				</div>
-				<div class="span4">
-					<a href="http://current.org"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/current.png" /></a>
+				<div class="span4 clearfix">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/current.png" />
+					<a href="http://current.org">
+						<div class="after">
+							<span class="text-overlay">Current</span>
+						</div>
+					</a>
 				</div>
-				<div class="span4">
-					<a href="http://kycir.org"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/kycir.png" /></a>
+				<div class="span4 clearfix">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/kycir.png" />
+					<a href="http://kycir.org">
+						<div class="after">
+							<span class="text-overlay">Kentucky Center for Investigative Reporting</span>
+						</div>
+					</a>
 				</div>
 			</div>
 			<div class="row-fluid">
-				<div class="span4">
-					<a href="http://cornellsun.com/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/cornellsun.png" /></a>
+				<div class="span4 clearfix">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/cornellsun.png" />
+					<a href="http://cornellsun.com/">
+						<div class="after">
+							<span class="text-overlay">The Cornell Daily Sun</span>
+						</div>
+					</a>
 				</div>
-				<div class="span4">
-					<a href="http://periodismoinvestigativo.com/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/cpipr.png" /></a>
+				<div class="span4 clearfix">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/cpipr.png" />
+					<a href="http://periodismoinvestigativo.com/">
+						<div class="after">
+							<span class="text-overlay">Centro de Periodismo Investigativo</span>
+						</div>
+					</a>
 				</div>
-				<div class="span4">
-					<a href="http://aspenjournalism.org/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/aspen.png" /></a>
+				<div class="span4 clearfix">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/aspen.png" />
+					<a href="http://aspenjournalism.org/">
+						<div class="after">
+							<span class="text-overlay">Aspen Journalism</span>
+						</div>
+					</a>
 				</div>
 			</div>
 			<div class="row-fluid">
-				<div class="span4">
-					<a href="http://midwestenergynews.com/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/mwen.png" /></a>
+				<div class="span4 clearfix">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/mwen.png" />
+					<a href="http://midwestenergynews.com/">
+						<div class="after">
+							<span class="text-overlay">Midwest Energy News</span>
+						</div>
+					</a>
 				</div>
-				<div class="span4">
-					<a href="http://womensenews.org/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/womensenews.png" /></a>
+				<div class="span4 clearfix">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/womensenews.png" />
+					<a href="http://womensenews.org/">
+						<div class="after">
+							<span class="text-overlay">Women's eNews</span>
+						</div>
+					</a>
 				</div>
-				<div class="span4">
-					<a href="http://gijn.org"><img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/gijn.png" /></a>
+				<div class="span4 clearfix">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/gijn.png" />
+					<a href="http://gijn.org">
+						<div class="after">
+							<span class="text-overlay">Global Investigative Journalism Network</span>
+						</div>
+					</a>
 				</div>
 			</div>
-			<a href="#" class="btn btn-primary">Showcase</a>
+			<a href="#" class="btn" id="btn-largo-1">See More</a>
 		</div>
 	</section>
-
-	<div class="row-fluid interstitial">
-		<h3>Largo is a project of INN</h3>
-		<p><a href="http://inn.org/">INN</a> is a nonprofit organization supporting a network of <a href="http://inn.org/members/">120 nonprofit news organizations</a>. Projects like Largo depend on your support.</p>
-		<a class="btn btn-donate btn-primary" href="https://inn.org/donate/">Donate Now</a>
-	</div>
-
+	<section id="project-updates" class="largo-section">
+		<h2>Project Updates</h2>
+		<div class="max-width-container">
+			<div class="update-row">
+				<span>12.05.16</span>
+				<a href="#">Quo tem elit ut alit porecto il id</a>
+			</div>
+		</div>
+	</section>
 	<section>
 		<h2>Support</h2>
 		<h4>Need assistance getting started with Largo? We're here to help.</h4>

@@ -91,7 +91,7 @@ nav#largo-nav {
   }
 }
 
-/* Sections */
+/* Sections - Hide these parts */
 
 div.site-hero {
   display: none;
@@ -104,6 +104,9 @@ header#site-header {
 div#main {
   margin: 0;
 }
+
+
+/* Sections - Hero */
 
 section#largo-hero {
   background-color: white;
@@ -173,6 +176,8 @@ div#hero-buttons {
   }
 }
 
+/* Sections - Body */
+
 section.largo-section {
   padding: 3rem 0 3rem 0;
   margin-bottom: 2rem;
@@ -237,6 +242,40 @@ div#page {
 
 section#showcase {
   background-color: white;
+  text-align: center;
+  .span4.clearfix {
+    position: relative;
+  }
+}
+
+div.span4 div.after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  color: white;
+  font-size: 2em;
+}
+
+.span4:hover .after {
+  display: block;
+  background:  rgba(0, 0, 0, .5);
+}
+
+.text-overlay {
+  display: block;
+  margin: 70px 10px 0 10px;
+}
+/* Sections - Project Updates */
+
+#project-updates {
+
+}
+
+div.update-row {
+  font-size: 1.5em;
 }
 
 /* Media Queries */
