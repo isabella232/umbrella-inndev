@@ -194,7 +194,7 @@
 			<div>
 				<h3>Want updates on Largo?</h3>
 				<p>Stay in the loop. Suscribe to our newsletter.</p>
-				<input type="email" value="email address" name="EMAIL" class="required email" />
+				<input type="email" placeholder="email address" name="EMAIL" class="required email" />
 				<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn"/>
 			<div>
 		</div>

@@ -343,7 +343,7 @@ span#see-more {
 /* Sections - Newsletter */
 
 #largo-newsletter {
-  padding-top: 4em;
+  padding: 4em;
   background-color: #09c9ff;
   text-align: center;
   color: white;
@@ -361,13 +361,20 @@ span#see-more {
   input[type="email"] {
     width: 400px;
     padding: 10px;
-    color: #bdbfc1;
+    color: #96999c;
     margin-bottom: 0px;
     margin-right: 10px;
   }
+
+  input[type="submit"] {
+    background-color: #FFD84F;
+    color: black;
+    &:hover {
+      background-color: #ffc800;
+    }
+  }
+
 }
-
-
 
 /* Media Queries */
 
@@ -380,4 +387,3 @@ span#see-more {
     font-size: 13px;
   }
 }
-

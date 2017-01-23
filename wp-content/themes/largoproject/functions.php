@@ -33,7 +33,6 @@ add_action( 'largo_after_global_nav', 'largo_load_hero'  );
  */
 function largo_child_stylesheet() {
 	wp_dequeue_style( 'largo-child-styles' );
-	$suffix = '';
-	wp_enqueue_style( 'rr', get_stylesheet_directory_uri() . '/css/style' . $suffix . '.css' );
+	wp_enqueue_style( 'largoproject', get_stylesheet_directory_uri() . '/css/style.css' );
 }
 add_action( 'wp_enqueue_scripts', 'largo_child_stylesheet', 20 );
