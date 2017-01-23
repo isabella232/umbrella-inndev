@@ -163,24 +163,65 @@
 			<span id="see-more"><a href="https://nerds.inn.org/tag/project-largo/">Read More...</a></span>
 		</div>
 	</section>
-	<section>
-		<h2>Support</h2>
-		<h4>Need assistance getting started with Largo? We're here to help.</h4>
-		<div class="row-fluid">
-			<div class="span4">
-				<a href="http://largo.readthedocs.org/"><img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/docs.svg" /></a>
-				<h5><a href="http://largo.readthedocs.org/">Documentation</a></h5>
-				<p>Get up and running with Largo and explore many of our more advanced features.</p>
+	<section id="largo-support" class="largo-section">
+		<div class="max-width-container">
+			<a href="#"><h2>Support</h2></a>
+			<h4>Need assistance getting started with Largo? We're here to help.</h4>
+			<div class="row-fluid">
+				<div class="span4">
+					<a href="#"><img class="icon frame-1" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/support-01.svg" /></a>
+					<a href="#"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/support-01B.svg" /></a>
+					<h5><a href="http://largo.readthedocs.org/">Self Help</a></h5>
+					<p>Il intibusam sectus eatiae cum hita alis es.</p>
+				</div>
+				<div class="span4">
+					<a href="#"><img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/support-02.svg" /></a>
+					<a href="#"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/support-02B.svg" /></a>
+					<h5><a href="http://support.largoproject.org/support/solutions">Office Hours</a></h5>
+					<p>Il intibusam sectus eatiae cum hita alis es.</p>
+				</div>
+				<div class="span4">
+					<a href="#"><img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/support-03.svg" /></a>
+					<a href="#"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/support-03B.svg" /></a>
+					<h5><a href="http://support.largoproject.org">Hire Us</a></h5>
+					<p>Il intibusam sectus eatiae cum hita alis es.</p>
+				</div>
 			</div>
-			<div class="span4">
-				<a href="http://support.largoproject.org/support/solutions"><img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/faq.svg" /></a>
-				<h5><a href="http://support.largoproject.org/support/solutions">Knowledge Base</a></h5>
-				<p>Answers to our most frequently asked questions.</p>
-			</div>
-			<div class="span4">
-				<a href="http://support.largoproject.org"><img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/helpdesk.svg" /></a>
-				<h5><a href="http://support.largoproject.org">Help Desk</a></h5>
-				<p>Need more help? <a href="http://support.largoproject.org">Submit a support request</a>.</p>
+		</div>
+	</section>
+	<section id="largo-newsletter" class="largo-section">
+		<div class="max-width-container clearfix">
+			<div>
+				<h3>Want updates on Largo?</h3>
+				<p>Stay in the loop. Suscribe to our newsletter.</p>
+				<input type="email" value="email address" name="EMAIL" class="required email" />
+				<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn"/>
+			<div>
+		</div>
+	</section>
+	<section id="largo-support" class="largo-section">
+		<div class="max-width-container">
+			<h2>Lend a Hand</h2>
+			<h4>Want to contribute to Largo? Find out how you can help.</h4>
+			<div class="row-fluid">
+				<div class="span4">
+					<a href="#"><img class="icon frame-1" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/contribute-01.svg" /></a>
+					<a href="#"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/contribute-01B.svg" /></a>
+					<h5><a href="http://largo.readthedocs.org/">Donate</a></h5>
+					<p>Il intibusam sectus eatiae cum hita alis es.</p>
+				</div>
+				<div class="span4">
+					<a href="#"><img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/contribute-02.svg" /></a>
+					<a href="#"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/contribute-02B.svg" /></a>
+					<h5><a href="http://support.largoproject.org/support/solutions">Translate</a></h5>
+					<p>Il intibusam sectus eatiae cum hita alis es.</p>
+				</div>
+				<div class="span4">
+					<a href="#"><img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/contribute-03.svg" /></a>
+					<a href="#"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/contribute-03B.svg" /></a>
+					<h5><a href="http://support.largoproject.org">Code</a></h5>
+					<p>Il intibusam sectus eatiae cum hita alis es.</p>
+				</div>
 			</div>
 		</div>
 	</section>

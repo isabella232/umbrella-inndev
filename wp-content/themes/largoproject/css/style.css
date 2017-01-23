@@ -645,6 +645,60 @@ span#see-more a {
   color: #8c8c8c;
   font-weight: 300;
 }
+/* Sections - Largo Support */
+#largo-support {
+  background-color: white;
+  padding-bottom: 2rem;
+}
+#largo-support img {
+  height: 150px;
+  display: block;
+  margin: 0 auto;
+}
+#largo-support .span4:hover img.icon {
+  display: none;
+}
+#largo-support .span4:hover img.frame-2 {
+  display: block;
+}
+#largo-support img.frame-2 {
+  display: none;
+}
+#largo-support .row-fluid {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+#largo-support .span4 h5 {
+  font-size: 1.5em;
+}
+#largo-support .span4 p {
+  font-size: 1.2em;
+  font-weight: 300;
+  margin: 0 30px 0 30px;
+}
+/* Sections - Newsletter */
+#largo-newsletter {
+  padding-top: 4em;
+  background-color: #09c9ff;
+  text-align: center;
+  color: white;
+}
+#largo-newsletter h3 {
+  font-size: 2.5em;
+  margin-bottom: 12px;
+  color: white;
+}
+#largo-newsletter p {
+  font-size: 1.5em;
+  font-weight: 300;
+}
+#largo-newsletter input[type="email"] {
+  width: 400px;
+  padding: 10px;
+  color: #bdbfc1;
+  margin-bottom: 0px;
+  margin-right: 10px;
+}
 /* Media Queries */
 @media (max-width: 480px) {
   .site-hero .tagline {
