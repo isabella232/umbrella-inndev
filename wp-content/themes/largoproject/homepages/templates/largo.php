@@ -225,32 +225,17 @@
 			</div>
 		</div>
 	</section>
-
-	<div class="row-fluid interstitial news">
-		<h3>Latest News</h3>
-		<?php
-			switch_to_blog( 7 );
-
-			$args = array (
-				'showposts' => 1,
-				'post_status' => 'publish',
-				'cat' => 130 // Largo
-			);
-
-			$query = new WP_Query( $args );
-
-          	if ( $query->have_posts() ) {
-          		while ( $query->have_posts() ) : $query->the_post();
-          			echo '<h5><a href="' . get_permalink() . '">' . get_the_title() . '</a></h5>';
-          			largo_excerpt();
-          			echo '<p class="more"><a href="http://nerds.inn.org/category/largo/">More Project Updates</a></p>';
-          		endwhile;
-          	}
-
-			restore_current_blog();
-		?>
-	</div>
-
+	<nav id="largo-footer" class="clearfix">
+		<div class="navbar-inner clearfix">
+			<ul>
+				<li><a href="#">Overview</a></li>
+				<li><a href="#">Docs</a></li>
+				<li><a href="#">Source</a></li>
+				<li><a href="#">Help</a></li>
+			</ul>
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/logos/INN-Logo-Primary-White-240x80.png" />
+		</div>
+	</nav>
 </div>
 
 <!--
