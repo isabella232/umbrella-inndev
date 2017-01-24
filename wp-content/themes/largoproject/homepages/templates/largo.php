@@ -17,7 +17,7 @@
 				<span id="version">Version 0.5.5<span>
 			</div>
 			<div id="hero-description">
-				<h4>The WordPress Framework for News Websites</h4>
+				<h4>The WordPress Framework <br>for News Websites</h4>
 				<p>To beatur, sereicipis inulparum quatiis dollese volum et aut quo deliquae nem nim eius. Cium rem hilisit officia voluptius coreribera niaspiet liquiam delende nitatur.</p>
 			</div>
 		</div>

@@ -574,8 +574,8 @@ div.max-width-container {
 }
 .about-description-1 .illustration {
   float: left;
-  max-width: 450px;
-  margin-right: 60px;
+  max-width: 45%;
+  margin-right: 30px;
   margin-left: 40px;
 }
 .about-description-1 h3 {
@@ -588,14 +588,15 @@ div.max-width-container {
 }
 .description {
   float: left;
-  max-width: 500px;
+  max-width: 45%;
   margin-top: 70px;
 }
 .about-description-2 .illustration {
   float: right;
+  margin-left: 0;
 }
 .about-description-2 .description {
-  margin-left: 70px;
+  margin-left: 60px;
 }
 div#page {
   max-width: 100%;
@@ -687,7 +688,7 @@ span#see-more a {
 #largo-newsletter {
   padding: 4em;
   background-color: #09c9ff;
-  text-align: left;
+  text-align: center;
   color: white;
 }
 #largo-newsletter h3 {
@@ -748,16 +749,95 @@ nav#largo-footer ul li a {
   }
 }
 @media (max-width: 1000px) {
+  section#largo-hero {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  section#largo-hero div#logo-and-description {
+    max-width: 100%;
+    margin: 0;
+  }
   section#largo-hero div#hero-logo {
-    width: 50%;
+    width: 45%;
     margin-right: 0px;
   }
   section#largo-hero div#hero-logo img {
     max-width: 50%;
+    margin-bottom: 8px;
+  }
+  section#largo-hero div#hero-logo span#version {
+    font-size: 1em;
   }
   section#largo-hero div#hero-description {
     width: 45%;
     margin-top: 20px;
     margin-right: 30px;
+  }
+  section#largo-hero div#hero-description h4 {
+    font-size: 1.7em;
+    margin-bottom: 8px;
+  }
+  section#largo-hero div#hero-description p {
+    font-size: 1.1em;
+  }
+  section#largo-hero div#hero-buttons {
+    margin-top: 1em;
+  }
+  section#largo-hero #btn-largo-1 {
+    font-size: 1em;
+  }
+  section#largo-hero #btn-largo-2 {
+    font-size: 1em;
+  }
+  section.largo-section {
+    padding: 1rem 0 1rem 0;
+    margin-bottom: 1rem;
+  }
+  section.largo-section h2 {
+    font-size: 2.2em;
+  }
+  section.largo-section h4 {
+    font-size: 1.1em;
+  }
+  section.largo-section .description {
+    margin-top: 3%;
+  }
+  section.largo-section .description h3 {
+    font-size: 1.7em;
+  }
+  section.largo-section .description p {
+    font-size: 1.1em;
+  }
+  section.largo-section .illustration img {
+    max-width: 90%;
+  }
+  section.largo-section .illustration {
+    margin-right: 0;
+  }
+  section.largo-section .about-description-2 .description {
+    margin-left: 5%;
+  }
+}
+@media (max-width: 600px) {
+  section#largo-hero div#hero-description {
+    width: 100%;
+    float: none;
+    margin: 0 auto;
+    max-width: 90%;
+    margin-top: 2rem;
+  }
+  section#largo-hero div#hero-description h4 {
+    text-align: center;
+  }
+  section#largo-hero div#hero-logo {
+    max-width: 100%;
+    width: 100%;
+    float: none;
+  }
+  section#largo-hero div#hero-logo span#version {
+    display: none;
+  }
+  section#largo-hero div#hero-logo img {
+    max-width: 150px;
   }
 }
