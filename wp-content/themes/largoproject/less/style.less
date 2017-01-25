@@ -74,6 +74,7 @@ nav#largo-nav {
 
   div.navbar-inner {
     background-color: @largoorange;
+    float: none;
   }
 
   ul {
@@ -88,6 +89,60 @@ nav#largo-nav {
     a {
       color: white;
       font-weight: 300;
+    }
+  }
+
+  ul#navbar-left {
+    float: left;
+  }
+
+  ul#navbar-right {
+    float: right;
+  }
+
+  #hamburger {
+    margin: 0;
+  }
+
+  .btn-navbar {
+    display: none;
+    padding: 0 10px;
+    margin-right: 0;
+    line-height: 56px;
+    .bars {
+      display: inline-block;
+      .icon-bar {
+        background-color: white;
+        display: block;
+        width: 18px;
+        height: 3px;
+        margin-top: 3px;
+      }
+    }
+  }
+
+  .nav-shelf {
+    color: black;
+    border-bottom: #aaaaaa 1px solid;
+    ul {
+      margin: 0;
+    }
+    .nav li {
+      display: block;
+      margin: 0;
+      &:hover {
+        background-color: #f2f2f2;
+      }
+    }
+
+    ul li a {
+      color: black;
+      line-height: 56px;
+      display: block;
+      padding-left: 25px;
+      &:hover {
+        text-decoration:none;
+      }
     }
   }
 }
@@ -432,6 +487,19 @@ nav#largo-footer {
 }
 
 @media (max-width: 1000px) {
+  nav#largo-nav {
+    img {
+      margin: 2% 8% 2% 8%;
+      max-width: 150px;
+    } 
+    ul li {
+      font-size: 1em;
+    }
+    ul {
+      margin: 12px;
+    }
+  }
+
   section#largo-hero {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -516,8 +584,23 @@ nav#largo-footer {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   
+  nav#largo-nav {
+
+    img {
+      margin-top: 15px;
+    }
+
+    ul#navbar-left {
+      display: none;
+    }
+
+    .btn-navbar {
+      display: block;
+    }
+  }
+
   section#largo-hero {
     div#hero-description {
       width: 100%;
@@ -540,6 +623,28 @@ nav#largo-footer {
       img {
         max-width: 150px;
       }
+    }
+  }
+
+  section.largo-section {
+    .illustration {
+      float: none;
+      max-width: 100%;
+      display: block;
+      margin-left: 0; 
+      img {
+        max-width: 300px;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+
+    .description {
+      text-align: center;
+      float: none;
+      display: block;
+      max-width: 100%;
+      margin: 0 30px 0 30px;
     }
   }
 }
