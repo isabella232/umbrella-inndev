@@ -1,0 +1,39 @@
+// These copied from Largo/less/inc/variables.less
+@grayLighter:           #ddd;
+@white: #fff;
+@grayDark:              #484848;
+
+@bodyBackground:        @white;
+
+// Change all the sticky nav colors
+@baseColor: @white; //? This is the Largo Blue in Largo
+@stickyNavbarBackgroundColor: @largoorange;
+@stickyNavbarText: @white;
+@stickyNavbarLinkColor: @stickyNavbarText;
+@stickyNavbarLinkColorHover: lighten(@stickyNavbarLinkColor, 5%);
+@stickyNavbarDropdownCaretColor: @stickyNavbarLinkColor;
+@stickyNavbarDropdownCaretColorHover: lighten(@stickyNavbarLinkColor, 5%);
+
+@import "../../largo/less/inc/mixins.less";
+@import "../../largo/less/inc/navbar-sticky.less";
+
+@media (max-width: 769px) {
+  #sticky-nav .nav-shelf {
+    li, li a {
+      color: @grayDark;
+
+      &:hover {
+        color: @grayDark;
+        background-color: lighten( @largoorange, 30% );
+      }
+    }
+  }
+}
+.navbar li.home-icon > a img {
+  max-height: auto;
+  height: 44px;
+}
+
+.sticky-nav-holder {
+  border-bottom: none;
+}
