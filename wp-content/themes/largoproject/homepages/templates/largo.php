@@ -4,10 +4,17 @@
 			<div class="navbar-inner clearfix">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/logos/Largo__white_horiz2.png" />
 				<ul id="navbar-left">
-					<li><a href="#">Overview</a></li>
-					<li><a href="#">Docs</a></li>
-					<li><a href="#">Source</a></li>
-					<li><a href="#">Help</a></li>
+					<?php
+						$args = array(
+							'theme_location' => 'main-nav',
+							'depth' => 0,
+							'container' => false,
+							'items_wrap' => '%3$s',
+							'menu_class' => 'nav',
+							'walker' => new Bootstrap_Walker_Nav_Menu()
+						);
+						largo_nav_menu( $args );
+					?>
 				</ul>
 				<ul id="navbar-right">
 					<li id="hamburger">
@@ -20,14 +27,6 @@
 							</div>
 						</a>
 					</li>
-				</ul>
-			</div>
-			<div class="nav-shelf" style="top: 59px;">
-				<ul class="nav">
-					<li><a href="#">Overview</a></li>
-					<li><a href="#">Docs</a></li>
-					<li><a href="#">Source</a></li>
-					<li><a href="#">Help</a></li>
 				</ul>
 			</div>
 		</div>
@@ -250,10 +249,17 @@
 	<nav id="largo-footer" class="clearfix">
 		<div class="navbar-inner clearfix">
 			<ul>
-				<li><a href="#">Overview</a></li>
-				<li><a href="#">Docs</a></li>
-				<li><a href="#">Source</a></li>
-				<li><a href="#">Help</a></li>
+					<?php
+						$args = array(
+							'theme_location' => 'main-nav',
+							'depth' => 0,
+							'container' => false,
+							'items_wrap' => '%3$s',
+							'menu_class' => 'nav',
+							'walker' => new Bootstrap_Walker_Nav_Menu()
+						);
+						largo_nav_menu( $args );
+					?>
 			</ul>
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/logos/INN-Logo-Primary-White-240x80.png" />
 		</div>
