@@ -4,10 +4,10 @@
 			<div class="navbar-inner clearfix">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/logos/Largo__white_horiz2.png" />
 				<ul id="navbar-left">
-					<li><a href="#">Overview</a></li>
-					<li><a href="#">Docs</a></li>
-					<li><a href="#">Source</a></li>
-					<li><a href="#">Help</a></li>
+					<li><a href="http://largo.inn.org">Overview</a></li>
+					<li><a href="https://github.com/INN/Largo">Docs</a></li>
+					<li><a href="https://github.com/INN/Largo">Source</a></li>
+					<li><a href="http://support.largoproject.org/support/home">Help</a></li>
 				</ul>
 				<ul id="navbar-right">
 					<li id="hamburger">
@@ -24,10 +24,10 @@
 			</div>
 			<div class="nav-shelf" style="top: 59px;">
 				<ul class="nav">
-					<li><a href="#">Overview</a></li>
-					<li><a href="#">Docs</a></li>
-					<li><a href="#">Source</a></li>
-					<li><a href="#">Help</a></li>
+					<li><a href="http://largo.inn.org">Overview</a></li>
+					<li><a href="https://github.com/INN/Largo">Docs</a></li>
+					<li><a href="https://github.com/INN/Largo">Source</a></li>
+					<li><a href="http://support.largoproject.org/support/home">Help</a></li>
 				</ul>
 			</div>
 		</div>
@@ -40,11 +40,11 @@
 			</div>
 			<div id="hero-description">
 				<h4>The WordPress Framework <br>for News Websites</h4>
-				<p>To beatur, sereicipis inulparum quatiis dollese volum et aut quo deliquae nem nim eius. Cium rem hilisit officia voluptius coreribera niaspiet liquiam delende nitatur.</p>
+				<p>Largo is a responsive WordPress theme designed for news publishers and expertly honed by the Institute for Nonprofit News.</p>
 			</div>
 		</div>
 		<div id="hero-buttons">
-			<a href="#" class="btn" id="btn-largo-1">Download</a>
+			<a href="https://github.com/INN/Largo/archive/master.zip" class="btn" id="btn-largo-1">Download</a>
 			<a href="https://largo.inn.org/series/largo-user-guide/" class="btn" id="btn-largo-2">User Guides</a>
 		</div>
 	</section>
@@ -171,42 +171,42 @@
 		<h2>Latest Updates</h2>
 		<div class="max-width-container clearfix">
 			<div class="update-row">
-				<span class="update-date">12.05.16</span>
-				<a href="#">Quo tem elit ut alit porecto il id</a>
+				<span class="update-date">11.02.16</span>
+				<a href="https://nerds.inn.org/2016/11/02/announcing-largo-0-5-5/">Announcing Largo 0.5.5</a>
 			</div>
 			<div class="update-row">
-				<span class="update-date">11.15.16</span>
-				<a href="#">Us eum sin nulpa sinihil luptatur accuptas mo is vellabo rionectur samenih</a>
+				<span class="update-date">04.25.16</span>
+				<a href="https://nerds.inn.org/2016/04/25/improvements-to-largo-support-process/">Improvements to Largo Support Process</a>
 			</div>
 			<div class="update-row">
-				<span class="update-date">10.24.16</span>
-				<a href="#">Imincip samusam re sinctorecab intur sum il</a>
+				<span class="update-date">01.14.16</span>
+				<a href="https://nerds.inn.org/2016/01/14/announcing-largo-0-5-4-improved-navigation-and-social-sharing-tools/">Announcing Largo 0.5.4 – Improved Navigation And Social Sharing Tools</a>
 			</div>
-			<span id="see-more"><a href="https://nerds.inn.org/tag/project-largo/">Read More...</a></span>
+			<span id="see-more"><a href="https://nerds.inn.org/category/largo/">Read More...</a></span>
 		</div>
 	</section>
 	<section id="largo-support" class="largo-section">
 		<div class="max-width-container">
-			<a href="#"><h2>Support</h2></a>
+			<h2>Support</h2>
 			<h4>Need assistance getting started with Largo? We're here to help.</h4>
 			<div class="row-fluid">
 				<div class="span4">
 					<a href="#"><img class="icon frame-1" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/support-01.svg" /></a>
-					<a href="#"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/support-01B.svg" /></a>
-					<h5><a href="http://largo.readthedocs.org/">Self Help</a></h5>
-					<p>Il intibusam sectus eatiae cum hita alis es.</p>
+					<a href="http://support.largoproject.org/support/solutions"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/support-01B.svg" /></a>
+					<h5><a href="http://support.largoproject.org/support/solutions">Self Help</a></h5>
+					<p>Our most popular questions and answers</p>
 				</div>
 				<div class="span4">
 					<a href="#"><img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/support-02.svg" /></a>
-					<a href="#"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/support-02B.svg" /></a>
-					<h5><a href="http://support.largoproject.org/support/solutions">Office Hours</a></h5>
-					<p>Il intibusam sectus eatiae cum hita alis es.</p>
+					<a href="https://nerds.inn.org/category/office-hours/"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/support-02B.svg" /></a>
+					<h5><a href="https://nerds.inn.org/category/office-hours/">Office Hours</a></h5>
+					<p>Talk to the team every Friday at 2pm EST</p>
 				</div>
 				<div class="span4">
 					<a href="#"><img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/support-03.svg" /></a>
-					<a href="#"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/support-03B.svg" /></a>
-					<h5><a href="http://support.largoproject.org">Hire Us</a></h5>
-					<p>Il intibusam sectus eatiae cum hita alis es.</p>
+					<a href="https://inn.org/hire-us/"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/support-03B.svg" /></a>
+					<h5><a href="https://inn.org/hire-us/">Hire Us</a></h5>
+					<p>Services we can provide for you</p>
 				</div>
 			</div>
 		</div>
@@ -228,21 +228,21 @@
 			<div class="row-fluid">
 				<div class="span4">
 					<a href="#"><img class="icon frame-1" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/contribute-01.svg" /></a>
-					<a href="#"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/contribute-01B.svg" /></a>
-					<h5><a href="http://largo.readthedocs.org/">Donate</a></h5>
-					<p>Il intibusam sectus eatiae cum hita alis es.</p>
+					<a href="https://inn.org/donate/"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/contribute-01B.svg" /></a>
+					<h5><a href="https://inn.org/donate/">Donate</a></h5>
+					<p>Support our work to improve nonprofit news</p>
 				</div>
 				<div class="span4">
 					<a href="#"><img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/contribute-02.svg" /></a>
-					<a href="#"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/contribute-02B.svg" /></a>
-					<h5><a href="http://support.largoproject.org/support/solutions">Translate</a></h5>
-					<p>Il intibusam sectus eatiae cum hita alis es.</p>
+					<a href="https://github.com/INN/docs/blob/master/how-to-work-with-us/contributing.md"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/contribute-02B.svg" /></a>
+					<h5><a href="https://github.com/INN/docs/blob/master/how-to-work-with-us/contributing.md">Translate</a></h5>
+					<p>Help us make Largo more accessible to the world</p>
 				</div>
 				<div class="span4">
 					<a href="#"><img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/contribute-03.svg" /></a>
-					<a href="#"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/contribute-03B.svg" /></a>
-					<h5><a href="http://support.largoproject.org">Code</a></h5>
-					<p>Il intibusam sectus eatiae cum hita alis es.</p>
+					<a href="https://github.com/INN/docs/blob/master/how-to-work-with-us/contributing.md"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/contribute-03B.svg" /></a>
+					<h5><a href="https://github.com/INN/docs/blob/master/how-to-work-with-us/contributing.md">Code</a></h5>
+					<p>Contribute your own ideas - we're listening</p>
 				</div>
 			</div>
 		</div>
@@ -250,10 +250,10 @@
 	<nav id="largo-footer" class="clearfix">
 		<div class="navbar-inner clearfix">
 			<ul>
-				<li><a href="#">Overview</a></li>
-				<li><a href="#">Docs</a></li>
-				<li><a href="#">Source</a></li>
-				<li><a href="#">Help</a></li>
+				<li><a href="http://largo.inn.org">Overview</a></li>
+				<li><a href="https://github.com/INN/Largo">Docs</a></li>
+				<li><a href="https://github.com/INN/Largo">Source</a></li>
+				<li><a href="http://support.largoproject.org/support/home">Help</a></li>
 			</ul>
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/logos/INN-Logo-Primary-White-240x80.png" />
 		</div>
