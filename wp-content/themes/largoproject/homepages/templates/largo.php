@@ -12,7 +12,7 @@
 				<ul id="navbar-right">
 					<li id="hamburger">
 						<!-- "hamburger" buttoån (3 bars) to trigger off-canvas navigation -->
-						<a class="btn-navbar toggle-nav-bar" title="More">
+						<a class="btn-navbar toggle-nav-bar" title="More" onclick="myFunction()">
 							<div class="bars">
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
