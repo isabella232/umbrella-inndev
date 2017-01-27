@@ -736,9 +736,6 @@ body.admin-bar .sticky-nav-holder {
 .navbar.sticky-navbar li.dropdown .dropdown-menu li a {
   color: #484848;
 }
-/**************
- * random copied stuff pre-transition
- */
 /* Navigation Bar */
 #main-nav {
   background-color: #f48030;
@@ -843,6 +840,53 @@ body.admin-bar .sticky-nav-holder {
   }
   #main-nav .btn-navbar {
     display: block;
+  }
+}
+/* Sections - Footer */
+nav#largo-footer div.navbar-inner {
+  background-color: #333234;
+}
+nav#largo-footer img {
+  max-width: 200px;
+  display: inline-block;
+}
+nav#largo-footer ul {
+  margin: 25px 0 25px 100px;
+  display: inline-block;
+}
+nav#largo-footer ul li {
+  display: inline-block;
+  font-size: 1.2em;
+}
+nav#largo-footer ul a {
+  color: white;
+  font-weight: 300;
+}
+@media (min-width: 769px) {
+  nav#largo-footer img {
+    float: right;
+    margin: 20px 100px 20px 0;
+  }
+  nav#largo-footer ul li {
+    margin-top: 16px;
+    margin-right: 30px;
+  }
+}
+@media (max-width: 769px) {
+  nav#largo-footer {
+    text-align: center;
+  }
+  nav#largo-footer img {
+    margin: 20px 0;
+    clear: both;
+  }
+  nav#largo-footer ul {
+    clear: both;
+    margin: 25px 0;
+    display: block;
+  }
+  nav#largo-footer ul li {
+    margin: 16px 15px 0;
   }
 }
 .site-hero {
@@ -1129,30 +1173,6 @@ span#see-more a {
 }
 #largo-newsletter input[type="submit"]:hover {
   background-color: #ffc800;
-}
-/* Sections - Footer */
-nav#largo-footer img {
-  max-width: 200px;
-  display: inline-block;
-  float: right;
-  margin: 20px 100px;
-}
-nav#largo-footer div.navbar-inner {
-  background-color: #333234;
-}
-nav#largo-footer ul {
-  margin: 25px 100px;
-  display: inline-block;
-}
-nav#largo-footer ul li {
-  display: inline-block;
-  margin-top: 16px;
-  margin-right: 30px;
-  font-size: 1.2em;
-}
-nav#largo-footer ul li a {
-  color: white;
-  font-weight: 300;
 }
 /* Media Queries */
 @media (max-width: 480px) {
