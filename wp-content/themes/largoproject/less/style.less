@@ -241,7 +241,11 @@ div.span4 div.after {
 
 .text-overlay {
   display: block;
-  margin: 70px 10px 0 10px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
 /* Sections - Project Updates */
 
@@ -434,7 +438,7 @@ nav#largo-footer {
       }
 
       p {
-        font-size: 1.1em;
+        font-size: 1.2em;
       }
     }
 
@@ -458,7 +462,7 @@ nav#largo-footer {
       font-size: 2.2em;
     }
     h4 {
-      font-size: 1.1em;
+      font-size: 1.2em;
     }
 
     .description {
@@ -468,7 +472,7 @@ nav#largo-footer {
       }
 
       p {
-        font-size: 1.1em;
+        font-size: 1.2em;
       }
     }
 
@@ -485,15 +489,24 @@ nav#largo-footer {
     }
   }
 
-  section#showcase {
-    .text-overlay {
-      margin: 10% 10px 0 10px;
-    }
-  }
-
   section#largo-newsletter {
     input[type="email"] {
       width: 300px;
+    }
+  }
+
+  section#project-updates {
+    div.max-width-container {
+      width: 80%;
+      margin: 0 10%;
+    }
+
+    .update-date {
+      display: none;
+    }
+
+    span#see-more {
+      margin-left: 0;
     }
   }
 }

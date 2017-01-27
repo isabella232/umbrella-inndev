@@ -7,11 +7,11 @@
 			</div>
 			<div id="hero-description">
 				<h4>The WordPress Framework <br>for News Websites</h4>
-				<p>To beatur, sereicipis inulparum quatiis dollese volum et aut quo deliquae nem nim eius. Cium rem hilisit officia voluptius coreribera niaspiet liquiam delende nitatur.</p>
+				<p>Largo is a responsive WordPress theme designed for news publishers and expertly honed by the Institute for Nonprofit News.</p>
 			</div>
 		</div>
 		<div id="hero-buttons">
-			<a href="#" class="btn" id="btn-largo-1">Download</a>
+			<a href="https://github.com/INN/Largo/archive/master.zip" class="btn" id="btn-largo-1">Download</a>
 			<a href="https://largo.inn.org/series/largo-user-guide/" class="btn" id="btn-largo-2">User Guides</a>
 		</div>
 	</section>
@@ -134,46 +134,31 @@
 			<a href="#" class="btn" id="btn-largo-1">See More</a>
 		</div>
 	</section>
-	<section id="project-updates" class="largo-section">
-		<h2>Latest Updates</h2>
-		<div class="max-width-container clearfix">
-			<div class="update-row">
-				<span class="update-date">12.05.16</span>
-				<a href="#">Quo tem elit ut alit porecto il id</a>
-			</div>
-			<div class="update-row">
-				<span class="update-date">11.15.16</span>
-				<a href="#">Us eum sin nulpa sinihil luptatur accuptas mo is vellabo rionectur samenih</a>
-			</div>
-			<div class="update-row">
-				<span class="update-date">10.24.16</span>
-				<a href="#">Imincip samusam re sinctorecab intur sum il</a>
-			</div>
-			<span id="see-more"><a href="https://nerds.inn.org/tag/project-largo/">Read More...</a></span>
-		</div>
-	</section>
+	<?php
+		// get_template_part( 'partials/home', 'updates' );
+	?>
 	<section id="largo-support" class="largo-section">
 		<div class="max-width-container">
-			<a href="#"><h2>Support</h2></a>
+			<h2>Support</h2>
 			<h4>Need assistance getting started with Largo? We're here to help.</h4>
 			<div class="row-fluid">
 				<div class="span4">
 					<a href="#"><img class="icon frame-1" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/support-01.svg" /></a>
-					<a href="#"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/support-01B.svg" /></a>
-					<h5><a href="http://largo.readthedocs.org/">Self Help</a></h5>
-					<p>Il intibusam sectus eatiae cum hita alis es.</p>
+					<a href="http://support.largoproject.org/support/solutions"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/support-01B.svg" /></a>
+					<h5><a href="http://support.largoproject.org/support/solutions">Self Help</a></h5>
+					<p>Our most popular questions and answers</p>
 				</div>
 				<div class="span4">
 					<a href="#"><img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/support-02.svg" /></a>
-					<a href="#"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/support-02B.svg" /></a>
-					<h5><a href="http://support.largoproject.org/support/solutions">Office Hours</a></h5>
-					<p>Il intibusam sectus eatiae cum hita alis es.</p>
+					<a href="https://nerds.inn.org/category/office-hours/"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/support-02B.svg" /></a>
+					<h5><a href="https://nerds.inn.org/category/office-hours/">Office Hours</a></h5>
+					<p>Talk to the team every Friday at 2pm EST</p>
 				</div>
 				<div class="span4">
 					<a href="#"><img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/support-03.svg" /></a>
-					<a href="#"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/support-03B.svg" /></a>
-					<h5><a href="http://support.largoproject.org">Hire Us</a></h5>
-					<p>Il intibusam sectus eatiae cum hita alis es.</p>
+					<a href="https://inn.org/hire-us/"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/support-03B.svg" /></a>
+					<h5><a href="https://inn.org/hire-us/">Hire Us</a></h5>
+					<p>Services we can provide for you</p>
 				</div>
 			</div>
 		</div>
@@ -195,21 +180,21 @@
 			<div class="row-fluid">
 				<div class="span4">
 					<a href="#"><img class="icon frame-1" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/contribute-01.svg" /></a>
-					<a href="#"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/contribute-01B.svg" /></a>
-					<h5><a href="http://largo.readthedocs.org/">Donate</a></h5>
-					<p>Il intibusam sectus eatiae cum hita alis es.</p>
+					<a href="https://inn.org/donate/"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/contribute-01B.svg" /></a>
+					<h5><a href="https://inn.org/donate/">Donate</a></h5>
+					<p>Support our work to improve nonprofit news</p>
 				</div>
 				<div class="span4">
 					<a href="#"><img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/contribute-02.svg" /></a>
-					<a href="#"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/contribute-02B.svg" /></a>
-					<h5><a href="http://support.largoproject.org/support/solutions">Translate</a></h5>
-					<p>Il intibusam sectus eatiae cum hita alis es.</p>
+					<a href="https://github.com/INN/docs/blob/master/how-to-work-with-us/contributing.md"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/contribute-02B.svg" /></a>
+					<h5><a href="https://github.com/INN/docs/blob/master/how-to-work-with-us/contributing.md">Translate</a></h5>
+					<p>Help us make Largo more accessible to the world</p>
 				</div>
 				<div class="span4">
 					<a href="#"><img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/contribute-03.svg" /></a>
-					<a href="#"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/contribute-03B.svg" /></a>
-					<h5><a href="http://support.largoproject.org">Code</a></h5>
-					<p>Il intibusam sectus eatiae cum hita alis es.</p>
+					<a href="https://github.com/INN/docs/blob/master/how-to-work-with-us/contributing.md"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/contribute-03B.svg" /></a>
+					<h5><a href="https://github.com/INN/docs/blob/master/how-to-work-with-us/contributing.md">Code</a></h5>
+					<p>Contribute your own ideas - we're listening</p>
 				</div>
 			</div>
 		</div>
@@ -217,17 +202,17 @@
 	<nav id="largo-footer" class="clearfix">
 		<div class="navbar-inner clearfix">
 			<ul>
-					<?php
-						$args = array(
-							'theme_location' => 'main-nav',
-							'depth' => 0,
-							'container' => false,
-							'items_wrap' => '%3$s',
-							'menu_class' => 'nav',
-							'walker' => new Bootstrap_Walker_Nav_Menu()
-						);
-						largo_nav_menu( $args );
-					?>
+				<?php
+					$args = array(
+						'theme_location' => 'main-nav',
+						'depth' => 0,
+						'container' => false,
+						'items_wrap' => '%3$s',
+						'menu_class' => 'nav',
+						'walker' => new Bootstrap_Walker_Nav_Menu()
+					);
+					largo_nav_menu( $args );
+				?>
 			</ul>
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/logos/INN-Logo-Primary-White-240x80.png" />
 		</div>
