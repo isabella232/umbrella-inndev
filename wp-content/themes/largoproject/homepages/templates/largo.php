@@ -135,7 +135,7 @@
 		</div>
 	</section>
 	<?php
-		// get_template_part( 'partials/home', 'updates' );
+		get_template_part( 'partials/home', 'updates' );
 	?>
 	<section id="largo-support" class="largo-section">
 		<div class="max-width-container">
