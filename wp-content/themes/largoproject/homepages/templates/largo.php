@@ -278,27 +278,6 @@
 
 	<div class="row-fluid interstitial news">
 		<h3>Latest News</h3>
-		<?php
-			switch_to_blog( 7 );
-
-			$args = array (
-				'showposts' => 1,
-				'post_status' => 'publish',
-				'cat' => 130 // Largo
-			);
-
-			$query = new WP_Query( $args );
-
-          	if ( $query->have_posts() ) {
-          		while ( $query->have_posts() ) : $query->the_post();
-          			echo '<h5><a href="' . get_permalink() . '">' . get_the_title() . '</a></h5>';
-          			largo_excerpt();
-          			echo '<p class="more"><a href="http://nerds.inn.org/category/largo/">More Project Updates</a></p>';
-          		endwhile;
-          	}
-
-			restore_current_blog();
-		?>
 	</div>
 
 	<section id="showcase">
