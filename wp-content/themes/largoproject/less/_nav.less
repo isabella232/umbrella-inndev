@@ -29,15 +29,29 @@
     }
   }
 }
-.navbar li.home-icon > a img {
-  max-height: auto;
-  height: 44px;
-}
 
 .sticky-nav-holder {
   border-bottom: none;
 }
 
+.navbar.sticky-navbar {
+  li > a:hover {
+    background-color: @darklargoorange;
+  }
+  li.home-icon {
+    > a img {
+      // this is a shim to take account for the fact that the text in the image is not quite vertically centered.
+      vertical-align: -25%;
+      height: 44px;
+    }
+  }
+
+  li.dropdown .dropdown-menu {
+    li a {
+      color: @grayDark;
+    }
+  }
+}
 
 /**************
  * random copied stuff pre-transition
@@ -45,15 +59,13 @@
 
 /* Navigation Bar */
 
-nav#main-nav {
+#main-nav {
   background-color: @largoorange;
   padding: 0 2.5%;
 
   img {
-    max-width: 200px;
     display: inline-block;
     float: left;
-    margin: 20px 100px 20px 100px;
   }
 
   div.navbar-inner {
@@ -66,13 +78,17 @@ nav#main-nav {
 
   ul li {
     display: inline-block;
-    margin-top: 16px;
     margin-right: 30px;
     font-size: 1.2em;
     a {
       color: white;
       font-weight: 300;
     }
+  }
+
+  li > a:hover {
+    background-color: @largoorange;
+    text-decoration: underline;
   }
 
   ul#navbar-left {
@@ -104,24 +120,39 @@ nav#main-nav {
     }
   }
 }
-@media (max-width: 1000px) {
-  nav#main-nav {
+@media (min-width: 1001px) {
+  #main-nav {
     img {
-      margin: 2% 8% 2% 8%;
+      max-width: 200px;
+      margin: 20px 100px 20px 100px;
+    }
+    .nav {
+      float: right;
+    }
+    .nav li a {
+      line-height: 58px;
+    }
+  }
+}
+@media (max-width: 1000px) {
+  #main-nav {
+    img {
       max-width: 150px;
+      height: 40px;
     }
     ul li {
       font-size: 1em;
       margin-right: 15px;
       margin-left: 15px;
     }
+    .home-icon,
     ul {
       margin: 12px;
     }
   }
 }
 @media (max-width: 769px) {
-  nav#main-nav {
+  #main-nav {
     img {
       height: 44px;
       margin: 6px 0 6px 0;
@@ -137,9 +168,14 @@ nav#main-nav {
       line-height: @stickyNavLineHeight;
     }
   }
+
+  .navbar.sticky-navbar li.home-icon a img {
+    // undo the shim, because the text does not appear here.
+    vertical-align: middle;
+  }
 }
 @media (max-width: 650px) {
-  nav#main-nav {
+  #main-nav {
 
     ul#navbar-left {
       display: none;

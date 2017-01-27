@@ -1,24 +1,4 @@
 <div id="content" class="homepage-content clearfix span12">
-	<nav id="largo-nav" class="clearfix">
-		<div class="clearfix">
-			<div class="navbar-inner clearfix">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/logos/Largo__white_horiz2.png" />
-				<ul id="navbar-left">
-					<?php
-						$args = array(
-							'theme_location' => 'main-nav',
-							'depth' => 0,
-							'container' => false,
-							'items_wrap' => '%3$s',
-							'menu_class' => 'nav',
-							'walker' => new Bootstrap_Walker_Nav_Menu()
-						);
-						largo_nav_menu( $args );
-					?>
-				</ul>
-			</div>
-		</div>
-	</nav>
 	<section id="largo-hero" class="clearfix">
 		<div id="logo-and-description" class="clearfix">
 			<div id="hero-logo">
