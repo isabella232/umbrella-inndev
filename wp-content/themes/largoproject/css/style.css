@@ -348,19 +348,13 @@ body.normal.page #content.guide-page {
 .guide-page .guide-nav .current_page_item .children {
   font-weight: normal;
 }
-.guide-page h5 {
-  margin-bottom: 8px;
-}
-.guide-page .author-posts-link {
-  display: none;
+.guide-page .guide-nav .icon-bar {
+  background-color: #333333;
 }
 @media screen and (max-width: 782px) {
   .guide-page .guide-nav {
     width: 100%;
     padding: 0;
-  }
-  .guide-page .guide-nav .container {
-    margin: 5px 10px;
   }
   .guide-page .guide-nav .guide-tree,
   .guide-page .guide-nav .resources {
@@ -372,8 +366,9 @@ body.normal.page #content.guide-page {
   }
   .guide-page .guide-nav h4 {
     font-size: 21px;
-    margin: 0.1em 0;
     color: black;
+    line-height: 40px;
+    margin-bottom: 0;
   }
   .guide-page .guide-nav ul {
     margin: 0 -10px 0 44px;
@@ -389,6 +384,19 @@ body.normal.page #content.guide-page {
   .guide-page .guide-nav .resources h4 {
     margin-left: 46px;
   }
+}
+.guide-page h5 {
+  margin-bottom: 8px;
+}
+.guide-page .author-posts-link {
+  display: none;
+}
+.guide-page article.span9 {
+  max-width: 700px;
+  padding-right: 24px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 782px) {
   .guide-page article.span9 {
     width: 100%;
     margin-left: 0;
@@ -847,8 +855,11 @@ body.admin-bar .sticky-nav-holder {
   background: transparent;
   padding: 0;
 }
+html {
+  background-color: #333333;
+}
 nav#largo-footer div.navbar-inner {
-  background-color: #333234;
+  background-color: #333333;
 }
 nav#largo-footer img {
   max-width: 200px;
@@ -925,11 +936,15 @@ header#site-header {
 div#main {
   margin: 0;
 }
+@media (min-width: 769px) {
+  div#main {
+    padding-top: 5em;
+  }
+}
 /* Sections - Hero */
 section#largo-hero {
   background-color: white;
   padding-bottom: 5rem;
-  padding-top: 5em;
 }
 section#largo-hero div#hero-logo {
   float: left;
