@@ -277,141 +277,6 @@ a:hover {
     max-width: 90%;
   }
 }
-body.normal.page #content.guide-page {
-  margin-left: 0;
-}
-.guide-page .author-posts-link {
-  display: none;
-}
-.guide-page .entry-content .widget {
-  padding: 15px 0;
-}
-.guide-page .pager a {
-  width: 100%;
-  box-sizing: border-box;
-  height: 100%;
-}
-.guide-page .pager h5.top-page {
-  margin-bottom: 0;
-  font-size: 21px;
-}
-.guide-page .toggle-nav-bar {
-  display: none;
-}
-.guide-page .guide-tree {
-  margin-left: 0;
-}
-.guide-page .guide-nav {
-  padding: 20px;
-  background-color: #edf1f4;
-}
-.guide-page .guide-nav h4 {
-  font-size: 18px;
-  margin-bottom: 8px;
-  text-transform: uppercase;
-}
-.guide-page .guide-nav h4 a {
-  color: #555555;
-}
-.guide-page .guide-nav ul {
-  padding: 0;
-  margin: 0;
-}
-.guide-page .guide-nav li {
-  clear: left;
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-.guide-page .guide-nav li a {
-  line-height: 1.5;
-}
-.guide-page .guide-nav.navbar li > a {
-  padding: 0;
-}
-.guide-page .guide-nav .children {
-  margin-left: 10px;
-}
-.guide-page .guide-nav .children,
-.guide-page .guide-nav .current_page_item .children .page_item_has_children .children,
-.guide-page .guide-nav .current_page_parent .children .page_item_has_children .children {
-  display: none;
-}
-.guide-page .guide-nav .current_page_item .children,
-.guide-page .guide-nav .current_page_parent .children,
-.guide-page .guide-nav .current_page_parent .children .page_item_has_children.current_page_item .children,
-.guide-page .guide-nav .current_page_ancestor .children {
-  display: inherit;
-}
-.guide-page .guide-nav .current_page_item {
-  font-weight: bold;
-}
-.guide-page .guide-nav .current_page_item .children {
-  font-weight: normal;
-}
-.guide-page .guide-nav .icon-bar {
-  background-color: #333333;
-}
-@media screen and (max-width: 782px) {
-  .guide-page .guide-nav {
-    width: 100%;
-    padding: 0;
-  }
-  .guide-page .guide-nav .guide-tree,
-  .guide-page .guide-nav .resources {
-    display: none;
-  }
-  .guide-page .guide-nav .toggle-nav-bar {
-    display: block;
-    margin-top: 0;
-  }
-  .guide-page .guide-nav h4 {
-    font-size: 21px;
-    color: black;
-    line-height: 40px;
-    margin-bottom: 0;
-  }
-  .guide-page .guide-nav ul {
-    margin: 0 -10px 0 44px;
-  }
-  .guide-page .guide-nav li {
-    display: block;
-    float: none;
-  }
-  .guide-page .guide-nav li > a {
-    color: #09c9ff;
-    padding: 6px 10px;
-  }
-  .guide-page .guide-nav .resources h4 {
-    margin-left: 46px;
-  }
-}
-.guide-page h5 {
-  margin-bottom: 8px;
-}
-.guide-page .author-posts-link {
-  display: none;
-}
-.guide-page article.span9 {
-  max-width: 700px;
-  padding-right: 24px;
-  box-sizing: border-box;
-}
-@media screen and (max-width: 782px) {
-  .guide-page article.span9 {
-    width: 100%;
-    margin-left: 0;
-    margin-top: 10px;
-  }
-  .guide-page article.span9 .entry-content h3 {
-    font-size: 21px;
-    margin-bottom: 12px;
-  }
-  .guide-page .pager .next,
-  .guide-page .pager .previous {
-    width: 100%;
-    margin-bottom: 8px;
-  }
-}
 .clearfix {
   *zoom: 1;
 }
@@ -850,6 +715,11 @@ body.admin-bar .sticky-nav-holder {
     display: block;
   }
 }
+@media (min-width: 769px) and (max-width: 900px) {
+  .global-nav .nav-right .donate-btn {
+    display: none;
+  }
+}
 /* Sections - Footer */
 .footer-bg {
   background: transparent;
@@ -902,6 +772,147 @@ nav#largo-footer ul a {
   }
   nav#largo-footer ul li {
     margin: 16px 15px 0;
+  }
+}
+body.normal.page #content.guide-page {
+  margin-left: 0;
+}
+.guide-page .author-posts-link {
+  display: none;
+}
+.guide-page .entry-content .widget {
+  padding: 15px 0;
+}
+.guide-page .pager a {
+  width: 100%;
+  box-sizing: border-box;
+  height: 100%;
+}
+.guide-page .pager h5.top-page {
+  margin-bottom: 0;
+  font-size: 21px;
+}
+.guide-page .toggle-nav-bar {
+  display: none;
+}
+.guide-page .guide-tree {
+  margin-left: 0;
+}
+.guide-page .guide-nav {
+  padding: 20px;
+  background-color: #edf1f4;
+}
+.guide-page .guide-nav h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.guide-page .guide-nav h4 a {
+  color: #555555;
+}
+.guide-page .guide-nav ul {
+  padding: 0;
+  margin: 0;
+}
+.guide-page .guide-nav li {
+  clear: left;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.guide-page .guide-nav li a {
+  line-height: 1.5;
+}
+.guide-page .guide-nav.navbar li > a {
+  padding: 0;
+}
+.guide-page .guide-nav .children {
+  margin-left: 10px;
+}
+.guide-page .guide-nav .children,
+.guide-page .guide-nav .current_page_item .children .page_item_has_children .children,
+.guide-page .guide-nav .current_page_parent .children .page_item_has_children .children {
+  display: none;
+}
+.guide-page .guide-nav .current_page_item .children,
+.guide-page .guide-nav .current_page_parent .children,
+.guide-page .guide-nav .current_page_parent .children .page_item_has_children.current_page_item .children,
+.guide-page .guide-nav .current_page_ancestor .children {
+  display: inherit;
+}
+.guide-page .guide-nav .current_page_item {
+  font-weight: bold;
+}
+.guide-page .guide-nav .current_page_item .children {
+  font-weight: normal;
+}
+.guide-page .guide-nav .icon-bar {
+  background-color: #333333;
+}
+@media screen and (max-width: 782px) {
+  .guide-page .guide-nav {
+    width: 100%;
+    padding: 0;
+  }
+  .guide-page .guide-nav .guide-tree,
+  .guide-page .guide-nav .resources {
+    display: none;
+  }
+  .guide-page .guide-nav.open .guide-tree,
+  .guide-page .guide-nav.open .resources {
+    display: block;
+  }
+  .guide-page .guide-nav .toggle-nav-bar {
+    display: block;
+    margin-top: 0;
+    line-height: 58px;
+    padding: 20px;
+  }
+  .guide-page .guide-nav h4 {
+    font-size: 21px;
+    color: black;
+    line-height: 56px;
+    margin-bottom: 0;
+  }
+  .guide-page .guide-nav ul {
+    margin: 0 -10px 0 44px;
+  }
+  .guide-page .guide-nav li {
+    display: block;
+    float: none;
+  }
+  .guide-page .guide-nav li > a {
+    color: #09c9ff;
+    padding: 6px 10px;
+  }
+  .guide-page .guide-nav .resources h4 {
+    margin-left: 46px;
+  }
+}
+.guide-page h5 {
+  margin-bottom: 8px;
+}
+.guide-page .author-posts-link {
+  display: none;
+}
+.guide-page article.span9 {
+  max-width: 700px;
+  padding-right: 24px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 782px) {
+  .guide-page article.span9 {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .guide-page article.span9 .entry-content h3 {
+    font-size: 21px;
+    margin-bottom: 12px;
+  }
+  .guide-page .pager .next,
+  .guide-page .pager .previous {
+    width: 100%;
+    margin-bottom: 8px;
   }
 }
 .site-hero {
