@@ -813,6 +813,9 @@ body.normal.page #content.guide-page {
 .guide-page .guide-nav h4 a {
   color: #555555;
 }
+.guide-page .guide-nav h4.guide-top a {
+  color: #f48030;
+}
 .guide-page .guide-nav ul {
   padding: 0;
   margin: 0;
@@ -924,6 +927,9 @@ body.normal.page #content.guide-page {
   .guide-page .pager .previous {
     width: 100%;
     margin-bottom: 8px;
+  }
+  .guide-page .navbar .container {
+    background-color: #edf1f4;
   }
 }
 .site-hero {
