@@ -585,7 +585,7 @@ body.admin-bar .sticky-nav-holder {
 #menu-overflow > ul ul.dropdown-menu .sub-sub-menu {
   display: none;
 }
-@media (max-width: 769px) {
+@media (max-width: 768px) {
   #sticky-nav .nav-shelf li,
   #sticky-nav .nav-shelf li a {
     color: #484848;
@@ -689,7 +689,7 @@ body.admin-bar .sticky-nav-holder {
     margin: 12px;
   }
 }
-@media (max-width: 769px) {
+@media (max-width: 768px) {
   #main-nav img {
     height: 44px;
     margin: 6px 0 6px 0;
@@ -715,7 +715,7 @@ body.admin-bar .sticky-nav-holder {
     display: block;
   }
 }
-@media (min-width: 769px) and (max-width: 900px) {
+@media (min-width: 768px) and (max-width: 900px) {
   .global-nav .nav-right .donate-btn {
     display: none;
   }
@@ -947,7 +947,7 @@ header#site-header {
 div#main {
   margin: 0;
 }
-@media (min-width: 769px) {
+@media (min-width: 783px) {
   div#main {
     padding-top: 5em;
   }

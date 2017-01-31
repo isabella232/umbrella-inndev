@@ -5,6 +5,9 @@
 @darklargoorange: darken( @largoorange, 10% );
 @largoyellow: #ffcf73;
 
+// max-width at which the side nav will collapse down into 
+@sideNavCollapse: 782px;
+
 @import "_nav.less";
 @import "_footer.less";
 @import "resources-page.less";
@@ -46,7 +49,8 @@ header#site-header {
 }
 
 div#main {
-  @media (min-width:769px) {
+  // less is apparently very particular about the spacing in this line; else it will not do the math
+  @media (min-width: (@sideNavCollapse + 1) ) {
     padding-top: 5em;
   }
   margin: 0;
