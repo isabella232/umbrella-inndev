@@ -10,38 +10,24 @@
 </div><!-- #page -->
 
 <div class="footer-bg clearfix">
-	<footer id="site-footer">
-
-		<div class="github-star-fork">
-			<iframe src="https://ghbtns.com/github-btn.html?user=INN&repo=Largo&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
-			<iframe src="https://ghbtns.com/github-btn.html?user=INN&repo=Largo&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>
+	<nav id="largo-footer" class="clearfix">
+		<div class="navbar-inner clearfix">
+			<ul>
+				<?php
+					$args = array(
+						'theme_location' => 'main-nav',
+						'depth' => 0,
+						'container' => false,
+						'items_wrap' => '%3$s',
+						'menu_class' => 'nav',
+						'walker' => new Bootstrap_Walker_Nav_Menu()
+					);
+					largo_nav_menu( $args );
+				?>
+			</ul>
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/logos/INN-Logo-Primary-White-240x80.png" />
 		</div>
-
-		<div class="credit-and-license">
-			<p>Built and maintained by the <a href="https://twitter.com/INNnerds">INN Nerds</a>.</p>
-			<p>Code licensed under GNU General Public License.</p>
-			<p>Currently v0.5.5.2</p>
-			<p>Icons created by Laurent Canivet, Sofía Moya, misirlou, SuperAtic LABS, and Nadya Brätt for the Noun Project.</p>
-			<p>
-			  <ul class="largo-links">
-				<li><a href="https://github.com/INN/Largo/releases">Download</a></li>
-				<li>·</li>
-				<li><a href="http://largo.readthedocs.io/">Documentation</a></li>
-				<li>·</li>
-				<li><a href="http://support.largoproject.org/support/solutions">Knowledgebase</a></li>
-				<li>·</li>
-				<li><a href="http://support.largoproject.org/">Help Desk</a></li>
-				<li>·</li>
-				<li><a href="http://inn.org">INN</a></li>
-				<li>·</li>
-				<li><a href="http://nerds.inn.org/">INN Nerds Blog</a></li>
-				<li>·</li>
-				<li><a href="http://inn.us1.list-manage1.com/subscribe?u=81670c9d1b5fbeba1c29f2865&id=913028b23c">Largo Project Newsletter</a></li>
-			  </ul>
-			</p>
-		</div>
-
-	</footer>
+	</nav>
 </div>
 
 <?php wp_footer(); ?>

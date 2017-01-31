@@ -25,6 +25,8 @@ body.normal.page #content.guide-page {
   .guide-tree {
     margin-left: 0;
   }
+
+  // The sidebar navigation
   .guide-nav {
     padding: 20px;
     background-color: @xltgray;
@@ -49,21 +51,21 @@ body.normal.page #content.guide-page {
       }
     }
     &.navbar li > a {
-	  padding: 0;
+      padding: 0;
     }
     .children {
-	  margin-left: 10px;
-	}
+      margin-left: 10px;
+    }
     .children,
     .current_page_item .children .page_item_has_children .children,
     .current_page_parent .children .page_item_has_children .children {
-	  display: none;
+      display: none;
     }
     .current_page_item .children,
     .current_page_parent .children,
     .current_page_parent .children .page_item_has_children.current_page_item .children,
     .current_page_ancestor .children {
-	  display: inherit;
+      display: inherit;
     }
     .current_page_item {
       font-weight: bold;
@@ -71,32 +73,36 @@ body.normal.page #content.guide-page {
         font-weight: normal;
       }
     }
+    .icon-bar {
+      background-color: @xdkgray;
+    }
   }
-  h5 {
-    margin-bottom: 8px;
-  }
-  .author-posts-link {
-    display: none;
-  }
-  @media screen and (max-width:782px) {
+  @media screen and (max-width: @sideNavCollapse) {
     .guide-nav {
       width: 100%;
       padding: 0;
-      .container {
-        margin: 5px 10px;
-      }
+
+      // the toggleability of the guide tree on mobile
       .guide-tree,
       .resources {
         display: none;
       }
+      &.open .guide-tree,
+      &.open .resources {
+        display: block;
+      }
+
       .toggle-nav-bar {
         display: block;
-        margin-top: 0
+        margin-top: 0;
+        line-height: @customNavHeight;
+        padding: (1/2 * (@customNavHeight - 18) );
       }
       h4 {
         font-size: 21px;
-        margin: 0.1em 0;
         color: black;
+        line-height: @stickyNavLineHeight;
+        margin-bottom: 0;
       }
       ul {
         margin: 0 -10px 0 44px
@@ -113,6 +119,21 @@ body.normal.page #content.guide-page {
         margin-left: 46px;
       }
     }
+  }
+
+  h5 {
+    margin-bottom: 8px;
+  }
+  .author-posts-link {
+    display: none;
+  }
+
+  article.span9 {
+    max-width: 700px;
+    padding-right: 24px;
+    box-sizing: border-box;
+  }
+  @media screen and (max-width: @sideNavCollapse) {
     article.span9 {
       width: 100%;
       margin-left: 0;

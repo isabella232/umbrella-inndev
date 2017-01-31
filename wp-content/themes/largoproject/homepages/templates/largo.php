@@ -199,24 +199,6 @@
 			</div>
 		</div>
 	</section>
-	<nav id="largo-footer" class="clearfix">
-		<div class="navbar-inner clearfix">
-			<ul>
-				<?php
-					$args = array(
-						'theme_location' => 'main-nav',
-						'depth' => 0,
-						'container' => false,
-						'items_wrap' => '%3$s',
-						'menu_class' => 'nav',
-						'walker' => new Bootstrap_Walker_Nav_Menu()
-					);
-					largo_nav_menu( $args );
-				?>
-			</ul>
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/logos/INN-Logo-Primary-White-240x80.png" />
-		</div>
-	</nav>
 </div>
 
 <!--

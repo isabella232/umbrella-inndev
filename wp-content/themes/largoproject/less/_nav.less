@@ -5,6 +5,10 @@
 
 @bodyBackground:        @white;
 
+// for lack of a better description
+@customNavHeight: 58px;
+// this is used in a bunch of places that don't all make sense but they're all in navs.
+
 // Change all the sticky nav colors
 @baseColor: @white; //? This is the Largo Blue in Largo
 @stickyNavbarBackgroundColor: @largoorange;
@@ -17,7 +21,7 @@
 @import "../../largo/less/inc/mixins.less";
 @import "../../largo/less/inc/navbar-sticky.less";
 
-@media (max-width: 769px) {
+@media (max-width: 768px) {
   #sticky-nav .nav-shelf {
     li, li a {
       color: @grayDark;
@@ -126,7 +130,7 @@
       float: right;
     }
     .nav li a {
-      line-height: 58px;
+      line-height: @customNavHeight;
     }
   }
 }
@@ -147,7 +151,7 @@
     }
   }
 }
-@media (max-width: 769px) {
+@media (max-width: 768px) {
   #main-nav {
     img {
       height: 44px;
@@ -180,5 +184,12 @@
     .btn-navbar {
       display: block;
     }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+  // this because otherwise the navs start wrapping and everything breaks unpleasantly.
+  .global-nav .nav-right .donate-btn {
+    display: none;
   }
 }
