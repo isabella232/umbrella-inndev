@@ -947,7 +947,7 @@ header#site-header {
 div#main {
   margin: 0;
 }
-@media (min-width: 769px) {
+@media (min-width: 783px) {
   div#main {
     padding-top: 5em;
   }
