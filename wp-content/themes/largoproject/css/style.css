@@ -603,7 +603,6 @@ body.admin-bar .sticky-nav-holder {
   background-color: #e5650c;
 }
 .navbar.sticky-navbar li.home-icon > a img {
-  vertical-align: -25%;
   height: 44px;
 }
 .navbar.sticky-navbar li.dropdown .dropdown-menu li a {
