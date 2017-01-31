@@ -776,6 +776,9 @@ nav#largo-footer ul a {
 body.normal.page #content.guide-page {
   margin-left: 0;
 }
+.guide-page h1.entry-title {
+  color: #f48030;
+}
 .guide-page .author-posts-link {
   display: none;
 }
@@ -799,9 +802,10 @@ body.normal.page #content.guide-page {
 }
 .guide-page .guide-nav {
   padding: 20px;
-  background-color: #edf1f4;
+  border-right: 6px solid #09c9ff;
 }
 .guide-page .guide-nav h4 {
+  color: #f48030;
   font-size: 18px;
   margin-bottom: 8px;
   text-transform: uppercase;
@@ -823,6 +827,12 @@ body.normal.page #content.guide-page {
 }
 .guide-page .guide-nav.navbar li > a {
   padding: 0;
+  color: #555555;
+  font-weight: 600;
+}
+.guide-page .guide-nav.navbar li > a:hover {
+  background-color: transparent;
+  text-decoration: underline;
 }
 .guide-page .guide-nav .children {
   margin-left: 10px;
@@ -851,6 +861,7 @@ body.normal.page #content.guide-page {
   .guide-page .guide-nav {
     width: 100%;
     padding: 0;
+    border-right: 0px;
   }
   .guide-page .guide-nav .guide-tree,
   .guide-page .guide-nav .resources {
@@ -867,7 +878,7 @@ body.normal.page #content.guide-page {
     padding: 20px;
   }
   .guide-page .guide-nav h4 {
-    font-size: 21px;
+    font-size: 18px;
     color: black;
     line-height: 56px;
     margin-bottom: 0;
@@ -901,8 +912,9 @@ body.normal.page #content.guide-page {
 @media screen and (max-width: 782px) {
   .guide-page article.span9 {
     width: 100%;
+    max-width: 100%;
+    padding: 30px;
     margin-left: 0;
-    margin-top: 10px;
   }
   .guide-page article.span9 .entry-content h3 {
     font-size: 21px;

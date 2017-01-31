@@ -7,7 +7,8 @@ $top_page = FALSE;
 
 ?>
 
-<div id="content" class="row-fluid guide-page" role="main">
+<div id="content" class="row-fluid guide-page clearfix" role="main">
+
 	<?php
 		while ( have_posts() ) : the_post();
 

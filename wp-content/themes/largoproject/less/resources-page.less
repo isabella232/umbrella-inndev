@@ -2,6 +2,9 @@ body.normal.page #content.guide-page {
   margin-left: 0;
 }
 .guide-page {
+  h1.entry-title {
+    color: @largoorange;
+  }
   .author-posts-link {
     display: none;
   }
@@ -29,8 +32,9 @@ body.normal.page #content.guide-page {
   // The sidebar navigation
   .guide-nav {
     padding: 20px;
-    background-color: @xltgray;
+    border-right: 6px solid #09c9ff;
     h4 {
+      color: @largoorange;
       font-size: 18px;
       margin-bottom: 8px;
       text-transform: uppercase;
@@ -52,6 +56,12 @@ body.normal.page #content.guide-page {
     }
     &.navbar li > a {
       padding: 0;
+      color: @dkgray;
+      font-weight: 600;
+      &:hover {
+        background-color: transparent;
+        text-decoration: underline;
+      }
     }
     .children {
       margin-left: 10px;
@@ -81,6 +91,7 @@ body.normal.page #content.guide-page {
     .guide-nav {
       width: 100%;
       padding: 0;
+      border-right: 0px;
 
       // the toggleability of the guide tree on mobile
       .guide-tree,
@@ -99,7 +110,7 @@ body.normal.page #content.guide-page {
         padding: (1/2 * (@customNavHeight - 18) );
       }
       h4 {
-        font-size: 21px;
+        font-size: 18px;
         color: black;
         line-height: @stickyNavLineHeight;
         margin-bottom: 0;
@@ -136,8 +147,9 @@ body.normal.page #content.guide-page {
   @media screen and (max-width: @sideNavCollapse) {
     article.span9 {
       width: 100%;
+      max-width: 100%;
+      padding: 30px;
       margin-left: 0;
-      margin-top: 10px;
       .entry-content h3 {
         font-size: 21px;
         margin-bottom: 12px;
