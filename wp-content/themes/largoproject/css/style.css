@@ -932,6 +932,19 @@ body.normal.page #content.guide-page {
     background-color: #edf1f4;
   }
 }
+/*How to Access Largo Support Page*/
+body.normal.page .entry-content {
+  padding-bottom: 2rem;
+}
+@media only screen and (max-width: 979px) {
+  body.normal.page article.page > header {
+    padding: 0 6.38297872%;
+    margin: 0;
+  }
+  body.normal.page .entry-content {
+    padding: 0 6.38297872%;
+  }
+}
 .site-hero {
   width: 100%;
   text-align: center;
