@@ -6,7 +6,7 @@
 				<span id="version">Version 0.5.5<span>
 			</div>
 			<div id="hero-description">
-				<h4>The WordPress Framework <br>for News Websites</h4>
+				<h4>The WordPress Framework for News Websites</h4>
 				<p>Largo is a responsive WordPress theme designed for news publishers and expertly honed by the Institute for Nonprofit News.</p>
 			</div>
 		</div>
@@ -18,7 +18,7 @@
 	<section class="largo-section">
 		<div class="max-width-container">
 			<h2>Why Largo?</h2>
-			<h4>Because Largo is totally awesome, dude!</h4>
+			<h4>What Largo can do for your news site</h4>
 			<div class="about-description-1 clearfix">
 				<div class="illustration">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/illustrations/responsive-design.png" />

@@ -1111,25 +1111,32 @@ div.span4 div.after {
 /* Sections - Project Updates */
 #project-updates h2 {
   margin-bottom: .6em;
+  color: #09c9ff;
 }
 #project-updates div.max-width-container {
-  max-width: 900px;
+  max-width: 700px;
 }
-div.update-row {
-  font-size: 1.5em;
-}
-span.update-date {
-  margin-right: 30px;
+#project-updates div.update-row {
+  font-size: 1.1em;
   font-weight: 300;
 }
-span#see-more {
-  display: block;
-  margin-left: 122px;
-  margin-top: 10px;
+#project-updates div.update-row h5 a {
+  color: black;
 }
-span#see-more a {
-  color: #8c8c8c;
+#project-updates div.update-row h5 a:hover {
+  color: #09c9ff;
+}
+#project-updates .more {
   font-weight: 300;
+  padding: 8px;
+  background-color: #555555;
+  text-align: center;
+  margin-bottom: 0;
+  color: white;
+  font-size: 16px;
+}
+#project-updates .more:hover {
+  background-color: #909799;
 }
 /* Sections - Largo Support */
 #largo-support {
@@ -1216,7 +1223,7 @@ span#see-more a {
   }
   section#largo-hero div#hero-logo img {
     max-width: 50%;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
   }
   section#largo-hero div#hero-logo span#version {
     font-size: 1em;
@@ -1273,15 +1280,12 @@ span#see-more a {
   section#largo-newsletter input[type="email"] {
     width: 300px;
   }
+  section#project-updates {
+    padding: 3rem 0 3rem 0;
+  }
   section#project-updates div.max-width-container {
     width: 80%;
     margin: 0 10%;
-  }
-  section#project-updates .update-date {
-    display: none;
-  }
-  section#project-updates span#see-more {
-    margin-left: 0;
   }
 }
 @media (max-width: 650px) {
@@ -1291,6 +1295,7 @@ span#see-more a {
     margin: 0 auto;
     max-width: 90%;
     margin-top: 2rem;
+    text-align: center;
   }
   section#largo-hero div#hero-description h4 {
     text-align: center;
@@ -1335,5 +1340,6 @@ span#see-more a {
     display: block;
     margin: 0 auto;
     margin-bottom: 12px;
+    width: 250px;
   }
 }

@@ -23,7 +23,9 @@
 					?>
 					<div class="update-row">
 						<span class="update-data"><?php largo_time(); ?></span>
-						<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+						<div class="title-wrap">
+							<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+						</div>
 					</div>
 					<?php
 				}
@@ -31,6 +33,6 @@
 
 			restore_current_blog();
 		?>
-		<p class="more"><a href="http://nerds.inn.org/category/largo/">More Project Updates</a></p>
+		<a class="more" href="http://nerds.inn.org/category/largo/">More Project Updates</a>
 	</div>
 </section>

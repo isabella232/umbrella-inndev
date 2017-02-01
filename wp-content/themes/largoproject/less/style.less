@@ -229,30 +229,38 @@ div.span4 div.after {
 #project-updates {
   h2 {
     margin-bottom: .6em;
+    color: @blue;
   }
 
   div.max-width-container {
-    max-width: 900px;
+    max-width: 700px;
   }
-}
 
-div.update-row {
-  font-size: 1.5em;
-}
-
-span.update-date {
-  margin-right: 30px;
-  font-weight: 300;
-}
-
-span#see-more {
-  display: block;
-  margin-left: 122px;
-  margin-top: 10px;
-  a {
-    color: #8c8c8c;
+  div.update-row {
+    font-size: 1.1em;
     font-weight: 300;
+    h5 a{
+      color: black;
+      &:hover {
+        color: @blue;
+      }
+    }
   }
+
+  .more {
+    font-weight: 300;
+    padding: 8px;
+    background-color: @dkgray;
+    text-align: center;
+    margin-bottom: 0;
+    color: white;
+    font-size: 16px;
+    &:hover {
+      background-color: @medgray;
+    }
+  }
+
+
 }
 
 /* Sections - Largo Support */
@@ -361,7 +369,7 @@ span#see-more {
       margin-right: 0px;
       img {
         max-width: 50%;
-        margin-bottom: 8px;
+        margin-bottom: 12px;
       }
 
       span#version {
@@ -441,14 +449,7 @@ span#see-more {
       width: 80%;
       margin: 0 10%;
     }
-
-    .update-date {
-      display: none;
-    }
-
-    span#see-more {
-      margin-left: 0;
-    }
+    padding: 3rem 0 3rem 0;
   }
 }
 
@@ -461,6 +462,7 @@ span#see-more {
       margin: 0 auto;
       max-width: 90%;
       margin-top: 2rem;
+      text-align: center;
       h4 {
         text-align: center;
       }
@@ -514,6 +516,7 @@ span#see-more {
       display: block;
       margin: 0 auto;
       margin-bottom: 12px;
+      width: 250px;
     }
   }
 }
