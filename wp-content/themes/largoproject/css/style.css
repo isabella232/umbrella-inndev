@@ -1277,6 +1277,12 @@ div.span4 div.after {
   section.largo-section .about-description-2 .description {
     margin-left: 5%;
   }
+  section#largo-newsletter {
+    padding: 2.5em;
+  }
+  section#largo-newsletter h3 {
+    font-size: 2.1em;
+  }
   section#largo-newsletter input[type="email"] {
     width: 300px;
   }
@@ -1286,6 +1292,10 @@ div.span4 div.after {
   section#project-updates div.max-width-container {
     width: 80%;
     margin: 0 10%;
+  }
+  section#largo-support .span4 p {
+    font-size: 1em;
+    margin: 0 15px 0 15px;
   }
 }
 @media (max-width: 650px) {
@@ -1341,5 +1351,17 @@ div.span4 div.after {
     margin: 0 auto;
     margin-bottom: 12px;
     width: 250px;
+  }
+  section#largo-support .row-fluid .span4 {
+    clear: none;
+    width: 95%;
+    margin: 0 2.5%;
+  }
+}
+@media (max-width: 780px) {
+  #largo-support .row-fluid .span4 {
+    clear: none;
+    width: 31.91489361%;
+    margin: 0;
   }
 }

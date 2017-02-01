@@ -439,6 +439,10 @@ div.span4 div.after {
   }
 
   section#largo-newsletter {
+    padding: 2.5em;
+    h3 {
+      font-size: 2.1em;
+    }
     input[type="email"] {
       width: 300px;
     }
@@ -450,6 +454,13 @@ div.span4 div.after {
       margin: 0 10%;
     }
     padding: 3rem 0 3rem 0;
+  }
+
+  section#largo-support {
+    .span4 p {
+      font-size: 1em;
+      margin: 0 15px 0 15px;
+    }
   }
 }
 
@@ -518,5 +529,21 @@ div.span4 div.after {
       margin-bottom: 12px;
       width: 250px;
     }
+  }
+
+  section#largo-support {
+    .row-fluid .span4 { 
+      clear: none;
+      width: 95%;
+      margin: 0 2.5%;
+    }
+  }
+}
+
+@media (max-width: 780px) {
+   #largo-support .row-fluid .span4 {
+    clear: none;
+    width: 31.91489361%;
+    margin: 0;
   }
 }
