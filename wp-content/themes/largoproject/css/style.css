@@ -1164,7 +1164,7 @@ span#see-more a {
 }
 /* Sections - Newsletter */
 #largo-newsletter {
-  padding: 4em;
+  padding: 2em;
   background-color: #09c9ff;
   text-align: center;
   color: white;
@@ -1174,7 +1174,7 @@ span#see-more a {
   margin-bottom: 12px;
   color: white;
 }
-#largo-newsletter p {
+#largo-newsletter span.gform_description {
   font-size: 1.5em;
   font-weight: 300;
 }
@@ -1189,9 +1189,30 @@ span#see-more a {
 #largo-newsletter input[type="submit"] {
   background-color: #FFD84F;
   color: black;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 150px;
+  border: none;
+  padding: 10px;
 }
 #largo-newsletter input[type="submit"]:hover {
   background-color: #ffc800;
+}
+#largo-newsletter .gform_wrapper form {
+  text-align: center;
+}
+#largo-newsletter .gform_wrapper ul.gform_fields li.gfield {
+  padding-right: 0;
+  margin-top: 0;
+}
+#largo-newsletter .gform_wrapper .gform_footer,
+#largo-newsletter .gform_wrapper .gform_body {
+  display: inline-block;
+  width: inherit;
+}
+#largo-newsletter .gform_wrapper .top_label .gfield_label {
+  display: none;
 }
 /* Media Queries */
 @media (max-width: 480px) {
@@ -1332,9 +1353,22 @@ span#see-more a {
   section#largo-newsletter {
     padding: 2em;
   }
+  section#largo-newsletter div.max-width-container {
+    margin: 0 auto;
+  }
   section#largo-newsletter input[type="email"] {
     display: block;
     margin: 0 auto;
     margin-bottom: 12px;
+  }
+  section#largo-newsletter .ginput_container_email input[type="text"] {
+    width: 300px;
+    margin-right: 0;
+  }
+}
+@media (max-width: 700px) {
+  #largo-newsletter .gform_footer {
+    padding: 0;
+    margin: 0;
   }
 }
