@@ -24,9 +24,9 @@ function largoproject_add_homepage_widget_areas() {
 		array(
 			'name' => 'Homepage Newsletter Slot',
 			'id' => 'homepage-newsletter',
-			'description' => __( 'Put a text widget here that contains a gravity forms shortcode for the newsletter signup form', 'largoproject' ),
-			'before_widget' => '',
-			'after_widget' => '',
+			'description' => __( 'Put one Gravity Form widget here with a newsletter signup form included in it.', 'largoproject' ),
+			'before_widget' => '<div class="max-width-container clearfix"><div>',
+			'after_widget' => '</div></div>',
 			'Before_title' => '<h3>',
 			'after_title' => '</h3>'
 		)
