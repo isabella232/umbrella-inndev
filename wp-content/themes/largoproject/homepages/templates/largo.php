@@ -163,16 +163,9 @@
 			</div>
 		</div>
 	</section>
-	<section id="largo-newsletter" class="largo-section">
-		<div class="max-width-container clearfix">
-			<div>
-				<h3>Want updates on Largo?</h3>
-				<p>Stay in the loop. Suscribe to our newsletter.</p>
-				<input type="email" placeholder="email address" name="EMAIL" class="required email" />
-				<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn"/>
-			<div>
-		</div>
-	</section>
+	<?php
+		get_template_part( 'partials/home', 'newsletter' );
+	?>
 	<section id="largo-support" class="largo-section">
 		<div class="max-width-container">
 			<h2>Lend a Hand</h2>

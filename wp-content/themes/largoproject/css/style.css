@@ -1178,6 +1178,7 @@ span#see-more a {
   font-size: 1.5em;
   font-weight: 300;
 }
+#largo-newsletter .ginput_container_email input[type="text"],
 #largo-newsletter input[type="email"] {
   width: 400px;
   padding: 10px;

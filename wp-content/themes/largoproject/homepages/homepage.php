@@ -19,6 +19,24 @@ class LargoHomepageLayout extends Homepage {
 	}
 }
 
+function largoproject_add_homepage_widget_areas() {
+	$sidebars = array(
+		array(
+			'name' => 'Homepage Newsletter Slot',
+			'id' => 'homepage-newsletter',
+			'description' => __( 'Put a text widget here that contains a gravity forms shortcode for the newsletter signup form', 'largoproject' ),
+			'before_widget' => '',
+			'after_widget' => '',
+			'Before_title' => '<h3>',
+			'after_title' => '</h3>'
+		)
+	);
+	foreach ($sidebars as $sidebar) {
+		register_sidebar($sidebar);
+	}
+}
+add_action( 'widgets_init', 'largoproject_add_homepage_widget_areas' );
+
 function inn_custom_homepage_layouts() {
 	$unregister = array(
 		'HomepageBlog',
