@@ -1182,6 +1182,12 @@ div.span4 div.after {
   font-weight: 300;
   margin: 0 30px 0 30px;
 }
+#largo-support #support-ticket {
+  padding-top: 25px;
+  margin: 25px 20px 0 20px;
+  border-top: 0.1px solid #aaaaaa;
+  font-weight: 300;
+}
 /* Sections - Newsletter */
 #largo-newsletter {
   padding: 4em;
