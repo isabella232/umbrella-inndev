@@ -1094,9 +1094,13 @@ div#page {
 section#showcase {
   background-color: white;
   text-align: center;
+  /*hiding this button until we create separate showcase page */
 }
 section#showcase .span4.clearfix {
   position: relative;
+}
+section#showcase #btn-largo-1 {
+  display: none;
 }
 div.span4 div.after {
   position: absolute;
