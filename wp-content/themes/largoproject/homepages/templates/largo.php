@@ -105,7 +105,7 @@
 					</a>
 				</div>
 			</div>
-			<div class="row-fluid">
+			<div class="row-fluid" id="mobile-hide-row">
 				<div class="span4 clearfix">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/screenshots/mwen.png" />
 					<a href="http://midwestenergynews.com/">

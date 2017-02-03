@@ -561,6 +561,11 @@ div.span4 div.after {
     .row-fluid .span4 {
       width: 80%;
       margin: 0 10%;
+      font-size: 100%;
+    }
+
+    #mobile-hide-row {
+      display: none;
     }
   }
 
@@ -600,9 +605,13 @@ div.span4 div.after {
 }
 
 @media (max-width: 780px) {
-   #largo-support .row-fluid .span4 {
+   #largo-support .row-fluid .span4, #showcase .row-fluid .span4 {
     clear: none;
-    width: 31.91489361%;
+    width: 33.333%;
     margin: 0;
+  }
+
+  #showcase .row-fluid .span4 {
+    font-size: 80%;
   }
 }
