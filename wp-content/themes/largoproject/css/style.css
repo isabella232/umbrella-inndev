@@ -1339,6 +1339,12 @@ div.span4 div.after {
     font-size: 1em;
     margin: 0 15px 0 15px;
   }
+  section#largo-support #support-ticket {
+    padding-top: 15px;
+  }
+  section#largo-support #support-ticket p {
+    font-size: 1em;
+  }
 }
 @media (max-width: 650px) {
   section#largo-hero div#hero-description {
