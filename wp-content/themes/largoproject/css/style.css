@@ -1195,7 +1195,8 @@ div.span4 div.after {
   text-align: center;
   color: white;
 }
-#largo-newsletter h3 {
+#largo-newsletter h3,
+#largo-newsletter h2 {
   font-size: 2.5em;
   margin-bottom: 12px;
   color: white;
@@ -1396,14 +1397,14 @@ div.span4 div.after {
     margin-bottom: 12px;
     width: 250px;
   }
+  section#largo-newsletter .ginput_container_email input[type="text"] {
+    width: 300px;
+    margin-right: 0;
+  }
   section#largo-support .row-fluid .span4 {
     clear: none;
     width: 95%;
     margin: 0 2.5%;
-  }
-  section#largo-support .ginput_container_email input[type="text"] {
-    width: 300px;
-    margin-right: 0;
   }
 }
 @media (max-width: 700px) {
