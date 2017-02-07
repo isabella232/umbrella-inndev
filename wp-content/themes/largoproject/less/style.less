@@ -4,6 +4,7 @@
 @largoorange: #f48030;
 @darklargoorange: darken( @largoorange, 10% );
 @largoyellow: #ffcf73;
+@darklargoyellow: darken( @largoyellow, 10% );
 
 // max-width at which the side nav will collapse down into 
 @sideNavCollapse: 782px;
@@ -368,12 +369,79 @@ div.span4 div.after {
   }
 }
 /* Largo Support Page*/
+#page-title {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#support-header {
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
+}
 
 section#self-help {
+  background-color: @xltgray;
+  margin-bottom: 24px;
+  padding-top: 2em;
+  padding-bottom: 2em;
   h5 {
     text-align: center;
     font-weight: 300;
     text-transform: uppercase;
+  }
+
+  #knowledge-base {
+    margin-bottom: 24px;
+    h2 a {
+      color: @dkgray;
+    }
+    p {
+      font-size: 1.2em;
+      font-weight: 300;
+    }
+    .span2 {
+      font-size: 1.2em;
+      font-weight: 700;
+      padding: 20px;
+      height: 150px;
+      a {
+        color: @dkgray;
+      }
+      &:hover {
+        a {
+           color: white;
+           text-decoration: none;
+        }
+        background-color: @largoorange;
+      }
+    }
+    .span2:first-child {
+      margin-left: 0;
+    }
+  }
+
+  #user-guides {
+    .user-guide-btn {
+      width: 300px;
+      margin-bottom: 8px;
+    }
+
+    #btn-developer {
+      background-color: @largoorange;
+      &:hover {
+        background-color:@darklargoorange;
+      }
+    }
+
+    #btn-author {
+      color: black;
+      background-color: @largoyellow;
+      &:hover {
+        background-color:@darklargoyellow;
+      }
+    }
+
   }
 }
 

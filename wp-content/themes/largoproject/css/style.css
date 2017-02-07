@@ -1240,10 +1240,71 @@ div.span4 div.after {
   display: none;
 }
 /* Largo Support Page*/
+#page-title {
+  text-align: center;
+  text-transform: uppercase;
+}
+#support-header {
+  text-align: center;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+section#self-help {
+  background-color: #edf1f4;
+  margin-bottom: 24px;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
 section#self-help h5 {
   text-align: center;
   font-weight: 300;
   text-transform: uppercase;
+}
+section#self-help #knowledge-base {
+  margin-bottom: 24px;
+}
+section#self-help #knowledge-base h2 a {
+  color: #555555;
+}
+section#self-help #knowledge-base p {
+  font-size: 1.2em;
+  font-weight: 300;
+}
+section#self-help #knowledge-base .span2 {
+  font-size: 1.2em;
+  font-weight: 700;
+  padding: 20px;
+  height: 150px;
+}
+section#self-help #knowledge-base .span2 a {
+  color: #555555;
+}
+section#self-help #knowledge-base .span2:hover {
+  background-color: #f48030;
+}
+section#self-help #knowledge-base .span2:hover a {
+  color: white;
+  text-decoration: none;
+}
+section#self-help #knowledge-base .span2:first-child {
+  margin-left: 0;
+}
+section#self-help #user-guides .user-guide-btn {
+  width: 300px;
+  margin-bottom: 8px;
+}
+section#self-help #user-guides #btn-developer {
+  background-color: #f48030;
+}
+section#self-help #user-guides #btn-developer:hover {
+  background-color: #e5650c;
+}
+section#self-help #user-guides #btn-author {
+  color: black;
+  background-color: #ffcf73;
+}
+section#self-help #user-guides #btn-author:hover {
+  background-color: #ffbe40;
 }
 /* Media Queries */
 @media (max-width: 480px) {
