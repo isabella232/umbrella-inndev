@@ -1143,17 +1143,11 @@ div.span4 div.after {
 #project-updates div.update-row h5 a:hover {
   color: #09c9ff;
 }
-#project-updates .more {
+#project-updates #more-updates {
   font-weight: 300;
-  padding: 8px;
-  background-color: #555555;
-  text-align: center;
   margin-bottom: 0;
   color: white;
-  font-size: 16px;
-}
-#project-updates .more:hover {
-  background-color: #909799;
+  font-size: 19.55px;
 }
 /* Sections - Largo Support */
 #largo-support {

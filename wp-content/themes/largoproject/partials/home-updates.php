@@ -33,6 +33,6 @@
 
 			restore_current_blog();
 		?>
-		<a class="more" href="http://nerds.inn.org/category/largo/">More Project Updates</a>
+		<span id="more-updates"><a href="http://nerds.inn.org/category/largo/">More Updates</a></span>
 	</div>
 </section>
