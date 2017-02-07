@@ -396,10 +396,6 @@ section#self-help {
     h2 a {
       color: @dkgray;
     }
-    p {
-      font-size: 1.2em;
-      font-weight: 300;
-    }
     .span2 {
       font-size: 1.2em;
       font-weight: 700;
@@ -423,8 +419,9 @@ section#self-help {
 
   #user-guides {
     .user-guide-btn {
-      width: 300px;
+      width: 250px;
       margin-bottom: 8px;
+      border-radius: 8px;
     }
 
     #btn-developer {
@@ -441,8 +438,26 @@ section#self-help {
         background-color:@darklargoyellow;
       }
     }
-
   }
+}
+
+#consulting-services {
+  padding-top: 2em;
+  img.animated-gif {
+    display: none;
+  }
+
+  .span6:hover img.animated-gif {
+    display: block;
+  }
+
+  .span6:hover img.still-img {
+    display: none;
+  }
+}
+
+#hire-us {
+  text-align: center;
 }
 
 /* Media Queries */

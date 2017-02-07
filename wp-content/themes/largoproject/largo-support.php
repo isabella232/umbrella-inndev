@@ -30,7 +30,7 @@ $top_page = FALSE;
 				</div>
 			</div>
 			<div id="user-guides">
-				<div class="span5">
+				<div class="span6">
 					<h2>User Guides</h2>
 					<p>Isitatibus is magnis pro idebit, sundeles re moloreicae veliam res as estemque volumet remqui occusti ustias evendun.</p>
 				</div>
@@ -42,15 +42,23 @@ $top_page = FALSE;
 			</div>
 		</div>
 	</section>
-	<section id="consulting-services">
+	<section id="consulting-services" class="clearfix">
 		<div class="max-width-container">
 			<h5 id="support-header">Consulting Services</h5>
-			<h2>Office Hours</h2>
-			<p>Every Friday from 2-3 pm ET we hold open office hours via Zoom.us videocalls where anyone can come and talk to our team about projects or talk about general design, tech or product questions. You can signup for a 20 minute spot or just drop by. All are welcome!</p>
-			<a href="#">Sign Up for a Slot</a>
+			<div class="row-fluid">
+				<div class="span6">
+					<a href="https://nerds.inn.org/category/office-hours/"><h2>Office Hours</h2></a>
+					<p>Every Friday from 2-3 pm ET we hold open office hours via Zoom.us videocalls where anyone can come and talk to our team about projects or talk about general design, tech or product questions. You can signup for a 20 minute spot or just drop by. All are welcome!</p>
+					<a href="https://docs.google.com/spreadsheets/d/1p-twn2D8oow7vXBfkcdYcZnVA4z8Q42OMs77KlHwf-g/edit" class="btn">Sign Up for a Slot</a>
+				</div>
+				<div class="span6">
+					<img class="animated-gif" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/illustrations/office-hours.gif" />
+					<img class="still-img" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/illustrations/office-hours.png" />
+				</div>
+			</div>
 		</div>
 	</section>
-	<section id="largo-support" class="largo-section">
+	<section id="largo-support" class="largo-section clearfix">
 		<div class="max-width-container">
 			<h2>Hire Us</h2>
 			<h4>We offer affordable consulting services (at an even more discounted rate for members). Our team can provide:</h4>
@@ -58,20 +66,20 @@ $top_page = FALSE;
 				<div class="span4">
 					<a href="#"><img class="icon frame-1" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/hire-us-01.svg" /></a>
 					<a href="https://inn.org/donate/"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/hire-us-01B.svg" /></a>
-					<h5><a href="https://inn.org/donate/">Donate</a></h5>
-					<p>Support our work to improve nonprofit news</p>
+					<h5><a href="https://inn.org/donate/">Content Migration</a></h5>
+					<p>Transferring your existing content onto the new platform.</p>
 				</div>
 				<div class="span4">
 					<a href="#"><img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/hire-us-02.svg" /></a>
 					<a href="https://github.com/INN/docs/blob/master/how-to-work-with-us/contributing.md"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/hire-us-02B.svg" /></a>
-					<h5><a href="https://github.com/INN/docs/blob/master/how-to-work-with-us/contributing.md">Translate</a></h5>
-					<p>Help us make Largo more accessible to the world</p>
+					<h5><a href="https://github.com/INN/docs/blob/master/how-to-work-with-us/contributing.md">Design Customization</a></h5>
+					<p>Tailoring the aesthetics of the site to your organization’s needs</p>
 				</div>
 				<div class="span4">
 					<a href="#"><img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/hire-us-03.svg" /></a>
 					<a href="https://github.com/INN/docs/blob/master/how-to-work-with-us/contributing.md"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/hire-us-03B.svg" /></a>
-					<h5><a href="https://github.com/INN/docs/blob/master/how-to-work-with-us/contributing.md">Code</a></h5>
-					<p>hire-us your own ideas - we're listening</p>
+					<h5><a href="https://github.com/INN/docs/blob/master/how-to-work-with-us/contributing.md">Custom Development</a></h5>
+					<p>Building new capabilities and tools for a better experience</p>
 				</div>
 			</div>
 			<a href="#" class="btn">Learn More</a>

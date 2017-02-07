@@ -1266,10 +1266,6 @@ section#self-help #knowledge-base {
 section#self-help #knowledge-base h2 a {
   color: #555555;
 }
-section#self-help #knowledge-base p {
-  font-size: 1.2em;
-  font-weight: 300;
-}
 section#self-help #knowledge-base .span2 {
   font-size: 1.2em;
   font-weight: 700;
@@ -1290,8 +1286,9 @@ section#self-help #knowledge-base .span2:first-child {
   margin-left: 0;
 }
 section#self-help #user-guides .user-guide-btn {
-  width: 300px;
+  width: 250px;
   margin-bottom: 8px;
+  border-radius: 8px;
 }
 section#self-help #user-guides #btn-developer {
   background-color: #f48030;
@@ -1305,6 +1302,21 @@ section#self-help #user-guides #btn-author {
 }
 section#self-help #user-guides #btn-author:hover {
   background-color: #ffbe40;
+}
+#consulting-services {
+  padding-top: 2em;
+}
+#consulting-services img.animated-gif {
+  display: none;
+}
+#consulting-services .span6:hover img.animated-gif {
+  display: block;
+}
+#consulting-services .span6:hover img.still-img {
+  display: none;
+}
+#hire-us {
+  text-align: center;
 }
 /* Media Queries */
 @media (max-width: 480px) {
