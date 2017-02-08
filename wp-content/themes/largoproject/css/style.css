@@ -974,23 +974,24 @@ section#self-help #knowledge-base {
 section#self-help #knowledge-base h2 a {
   color: #555555;
 }
-section#self-help #knowledge-base .span2 {
+section#self-help #knowledge-base .span3 {
   font-size: 1.2em;
   font-weight: 700;
   padding: 20px;
-  height: 150px;
+  height: 120px;
+  background-color: white;
 }
-section#self-help #knowledge-base .span2 a {
+section#self-help #knowledge-base .span3 a {
   color: #555555;
 }
-section#self-help #knowledge-base .span2:hover {
+section#self-help #knowledge-base .span3:hover {
   background-color: #f48030;
 }
-section#self-help #knowledge-base .span2:hover a {
+section#self-help #knowledge-base .span3:hover a {
   color: white;
   text-decoration: none;
 }
-section#self-help #knowledge-base .span2:first-child {
+section#self-help #knowledge-base .span3:first-child {
   margin-left: 0;
 }
 section#self-help #user-guides {
@@ -1073,11 +1074,13 @@ section#self-help #user-guides #btn-author:hover {
   div.max-width-container {
     margin: 0 4%;
   }
-  #self-help .span2 {
-    width: 23%;
-  }
   #consulting-services p {
     font-size: 1.1em;
+  }
+}
+@media (max-width: 1000px) {
+  section#self-help #knowledge-base .span3 {
+    height: 150px;
   }
 }
 @media (max-width: 768px) {
@@ -1098,21 +1101,22 @@ section#self-help #user-guides #btn-author:hover {
   #knowledge-base {
     text-align: center;
   }
-  section#self-help #knowledge-base .span2 {
+  section#self-help #knowledge-base .span3 {
     width: 100%;
     margin-left: 0;
     padding: 0;
     height: inherit;
     margin-bottom: 8px;
     color: black;
-  }
-  section#self-help #knowledge-base .span2:hover {
     background-color: transparent;
   }
-  section#self-help #knowledge-base .span2 a {
+  section#self-help #knowledge-base .span3:hover {
+    background-color: transparent;
+  }
+  section#self-help #knowledge-base .span3 a {
     color: black;
   }
-  section#self-help #knowledge-base .span2:hover a {
+  section#self-help #knowledge-base .span3:hover a {
     color: black;
     text-decoration: underline;
   }

@@ -29,11 +29,12 @@ section#self-help {
     h2 a {
       color: @dkgray;
     }
-    .span2 {
+    .span3 {
       font-size: 1.2em;
       font-weight: 700;
       padding: 20px;
-      height: 150px;
+      height: 120px;
+      background-color: white;
       a {
         color: @dkgray;
       }
@@ -45,7 +46,7 @@ section#self-help {
         background-color: @largoorange;
       }
     }
-    .span2:first-child {
+    .span3:first-child {
       margin-left: 0;
     }
   }
@@ -152,12 +153,6 @@ section#self-help {
     margin: 0 4%;
   }
 
- #self-help {
-    .span2 {
-      width: 23%;
-    }
-  }
-
   #consulting-services {
     p {
       font-size: 1.1em;
@@ -165,7 +160,15 @@ section#self-help {
   }
 }
 
+@media (max-width: 1000px) {
+	section#self-help #knowledge-base .span3 {
+		height: 150px;
+	}
+}
+
 @media (max-width: 768px) {
+  
+
   #consulting-services {
     text-align: center;
     .span6 {
@@ -187,23 +190,24 @@ section#self-help {
     text-align: center;
   }
 
-  section#self-help #knowledge-base .span2 {
+  section#self-help #knowledge-base .span3 {
     width: 100%;
     margin-left: 0;
     padding: 0;
     height: inherit;
     margin-bottom: 8px;
     color: black;
+    background-color: transparent;
     &:hover {
       background-color: transparent;
     }
   }
 
-  section#self-help #knowledge-base .span2 a {
+  section#self-help #knowledge-base .span3 a {
     color: black;
   }
 
-  section#self-help #knowledge-base .span2:hover a {
+  section#self-help #knowledge-base .span3:hover a {
     color: black;
     text-decoration: underline;
   }

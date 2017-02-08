@@ -14,21 +14,21 @@ $top_page = FALSE;
 				<h2><a href="http://support.largoproject.org/support/solutions">Knowledge Base</p></h2></a>
 				<p>Dive into our knowledge base for our most popular questions and answers.</p>
 				<div class="row-fluid">
-					<div class="span2">
+					<div class="span3">
 						<a href="http://support.largoproject.org/support/solutions/articles/14000024125-how-can-i-improve-the-load-time-of-my-site-">How can I improve the load time of my site?</a>
 					</div>
-					<div class="span2">
+					<div class="span3">
 						<a href="http://support.largoproject.org/support/solutions/articles/14000019997-i-lost-my-password-how-can-i-find-it-">I lost my password. How can I find it?</a>
 					</div>
-					<div class="span2">
+					<div class="span3">
 						<a href="http://support.largoproject.org/support/solutions/articles/14000018948-how-can-i-make-a-post-sticky-">How can I make a post sticky?</a>
 					</div>
-					<div class="span2">
+					<div class="span3">
 						<a href="http://support.largoproject.org/support/solutions/articles/14000018942-how-can-i-add-a-link-to-a-menu-">How can I add a link to a menu?</a>
 					</div>
 				</div>
 			</div>
-			<div id="user-guides">
+			<div id="user-guides" class="clearfix">
 				<div class="span6 clearfix">
 					<h2>User Guides</h2>
 					<p>Isitatibus is magnis pro idebit, sundeles re moloreicae veliam res as estemque volumet remqui occusti ustias evendun.</p>
