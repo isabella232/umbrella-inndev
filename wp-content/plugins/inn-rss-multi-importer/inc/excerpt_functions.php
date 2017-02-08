@@ -244,14 +244,14 @@ function showexcerpt($content, $maxchars,$openWindow,$stripAll,$thisLink,$adjust
 			//	$content=html_entity_decode(pre_esc_html($content));
 				$content=html_entity_decode(pre_esc_html($content), ENT_QUOTES,'UTF-8');
 			//	$content=pre_esc_html($content);
-			}else{				
+			}else{
 				if($maxchars !=99){
 					$content=strip_tags(html_entity_decode($content),'<a><img><p><br>');
 				}
 			}
 			
 
-		$content=findalignImage($maxchars,$content,$adjustImageSize,$float,$openWindow,$mediaImage,$thisLink,$noFollow,$catID,$thisLink,$stripSome);	
+		$content=findalignImage($maxchars,$content,$adjustImageSize,$float,$openWindow,$mediaImage,$thisLink,$noFollow,$catID,$stripSome);
 
 	}
 	
@@ -528,7 +528,7 @@ if ($noFollow==1){
 	
 	
 	
-	function findalignImage($maxchars,$content,$adjustImageSize,$float,$openWindow,$mediaImage,$thisLink,$noFollow,$catID,$thisLink,$stripSome){
+	function findalignImage($maxchars,$content,$adjustImageSize,$float,$openWindow,$mediaImage,$thisLink,$noFollow,$catID,$stripSome){
 		
 		if (strpos($mediaImage,"//t1.gstatic")>0 && strpos($mediaImage,"http")==0){$mediaImage=str_replace("//t1.gstatic", "http//t1.gstatic");}
 		

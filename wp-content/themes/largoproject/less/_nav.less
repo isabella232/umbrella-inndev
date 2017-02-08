@@ -1,0 +1,192 @@
+// These copied from Largo/less/inc/variables.less
+@grayLighter:           #ddd;
+@white: #fff;
+@grayDark:              #484848;
+
+@bodyBackground:        @white;
+
+// for lack of a better description
+@customNavHeight: 58px;
+// this is used in a bunch of places that don't all make sense but they're all in navs.
+
+// Change all the sticky nav colors
+@baseColor: @white; //? This is the Largo Blue in Largo
+@stickyNavbarBackgroundColor: @largoorange;
+@stickyNavbarText: @white;
+@stickyNavbarLinkColor: @stickyNavbarText;
+@stickyNavbarLinkColorHover: lighten(@stickyNavbarLinkColor, 5%);
+@stickyNavbarDropdownCaretColor: @stickyNavbarLinkColor;
+@stickyNavbarDropdownCaretColorHover: lighten(@stickyNavbarLinkColor, 5%);
+
+@import "../../largo/less/inc/mixins.less";
+@import "../../largo/less/inc/navbar-sticky.less";
+
+@media (max-width: 768px) {
+  #sticky-nav .nav-shelf {
+    li, li a {
+      color: @grayDark;
+
+      &:hover {
+        color: @grayDark;
+        background-color: lighten( @largoorange, 30% );
+      }
+    }
+  }
+}
+
+.sticky-nav-holder {
+  border-bottom: none;
+}
+
+.navbar.sticky-navbar {
+  li > a:hover {
+    background-color: @darklargoorange;
+  }
+  li.home-icon {
+    > a img {
+      height: 44px;
+    }
+  }
+
+  li.dropdown .dropdown-menu {
+    li a {
+      color: @grayDark;
+    }
+  }
+}
+
+/* Navigation Bar */
+
+#main-nav {
+  background-color: @largoorange;
+  padding: 0 2.5%;
+
+  img {
+    display: inline-block;
+    float: left;
+  }
+
+  div.navbar-inner {
+    float: none;
+  }
+
+  ul {
+    margin: 20px;
+  }
+
+  ul li {
+    display: inline-block;
+    margin-right: 30px;
+    font-size: 1.2em;
+    a {
+      color: white;
+      font-weight: 300;
+    }
+  }
+
+  li > a:hover {
+    background-color: @largoorange;
+    text-decoration: underline;
+  }
+
+  ul#navbar-left {
+    float: left;
+  }
+
+  ul#navbar-right {
+    float: right;
+    margin: 0;
+  }
+
+  a.btn-navbar:hover {
+    background-color: #f2690d;
+  }
+
+  .btn-navbar {
+    display: none;
+    padding: 0 20px;
+    line-height: 69px;
+    .bars {
+      display: inline-block;
+      .icon-bar {
+        background-color: white;
+        display: block;
+        width: 18px;
+        height: 3px;
+        margin-top: 3px;
+      }
+    }
+  }
+}
+@media (min-width: 1001px) {
+  #main-nav {
+    img {
+      max-width: 200px;
+      margin: 20px 100px 20px 100px;
+    }
+    .nav {
+      float: right;
+    }
+    .nav li a {
+      line-height: @customNavHeight;
+    }
+  }
+}
+@media (max-width: 1000px) {
+  #main-nav {
+    img {
+      max-width: 150px;
+      height: 40px;
+    }
+    ul li {
+      font-size: 1em;
+      margin-right: 15px;
+      margin-left: 15px;
+    }
+    .home-icon,
+    ul {
+      margin: 12px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  #main-nav {
+    img {
+      height: 44px;
+      margin: 6px 0 6px 0;
+    }
+
+    ul {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    ul li {
+      margin-top: 0;
+      margin-bottom: 0;
+      line-height: @stickyNavLineHeight;
+    }
+  }
+
+  .navbar.sticky-navbar li.home-icon a img {
+    vertical-align: middle;
+  }
+}
+@media (max-width: 650px) {
+  #main-nav {
+
+    ul#navbar-left {
+      display: none;
+    }
+
+    .btn-navbar {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+  // this because otherwise the navs start wrapping and everything breaks unpleasantly.
+  .global-nav .nav-right .donate-btn {
+    display: none;
+  }
+}
