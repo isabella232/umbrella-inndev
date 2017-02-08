@@ -952,7 +952,9 @@ body.normal.page .entry-content {
 }
 #support-header {
   text-align: center;
-  font-weight: 300;
+  color: #f48030;
+  font-size: 36px;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 section#self-help {
@@ -967,7 +969,7 @@ section#self-help h5 {
   text-transform: uppercase;
 }
 section#self-help #knowledge-base {
-  margin-bottom: 24px;
+  margin-bottom: 2rem;
 }
 section#self-help #knowledge-base h2 a {
   color: #555555;
@@ -991,10 +993,17 @@ section#self-help #knowledge-base .span2:hover a {
 section#self-help #knowledge-base .span2:first-child {
   margin-left: 0;
 }
+section#self-help #user-guides {
+  padding-top: 2rem;
+}
 section#self-help #user-guides .user-guide-btn {
-  width: 250px;
+  width: 100%;
   margin-bottom: 8px;
-  border-radius: 8px;
+  padding: 10px 0;
+}
+section#self-help #user-guides #guide-btn-wrap {
+  margin: 0 auto;
+  width: 90%;
 }
 section#self-help #user-guides #btn-developer {
   background-color: #f48030;
@@ -1029,6 +1038,10 @@ section#self-help #user-guides #btn-author:hover {
 }
 .hire-us h2 {
   margin-top: 24px;
+  text-align: center;
+  color: #09c9ff;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 .hire-us .span4 h5 {
   margin-bottom: 0.25em;
@@ -1608,5 +1621,10 @@ div.span4 div.after {
   }
   #showcase .row-fluid .span4 {
     font-size: 80%;
+  }
+}
+@media (max-width: 1200px) {
+  div.max-width-container {
+    margin: 0 4%;
   }
 }

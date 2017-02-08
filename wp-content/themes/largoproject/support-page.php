@@ -7,10 +7,9 @@ $top_page = FALSE;
 
 ?>
  <div id="content" class="homepage-content clearfix span12">
- 	<span id="page-title"><h2>Support</h2></span>
  	<section id="self-help" class="clearfix">
 	 	<div class="max-width-container clearfix">
-			<h5>Self-Help</h5>
+	 		<h2 id="support-header">Self-Help</h2>
 			<div id="knowledge-base" class="clearfix">
 				<h2><a href="http://support.largoproject.org/support/solutions">Knowledge Base</p></h2></a>
 				<p>Dive into our knowledge base for our most popular questions and answers.</p>
@@ -30,14 +29,16 @@ $top_page = FALSE;
 				</div>
 			</div>
 			<div id="user-guides">
-				<div class="span6">
+				<div class="span6 clearfix">
 					<h2>User Guides</h2>
 					<p>Isitatibus is magnis pro idebit, sundeles re moloreicae veliam res as estemque volumet remqui occusti ustias evendun.</p>
 				</div>
-				<div class="span5">
-					<a href="https://largo.readthedocs.io/developers/index.html" class="btn user-guide-btn" id="btn-developer">For Developers</a>
-					<a href="https://largo.inn.org/guides/administrators/" class="btn user-guide-btn" id="btn-admin">For Administrators</a>
-					<a href="https://largo.inn.org/guides/authors/" class="btn user-guide-btn" id="btn-author">For Authors</a>
+				<div class="span6 clearfix" >
+					<div id="guide-btn-wrap" class="clearfix">
+						<a href="https://largo.readthedocs.io/developers/index.html" class="btn user-guide-btn" id="btn-developer">For Developers</a>
+						<a href="https://largo.inn.org/guides/administrators/" class="btn user-guide-btn" id="btn-admin">For Administrators</a>
+						<a href="https://largo.inn.org/guides/authors/" class="btn user-guide-btn" id="btn-author">For Authors</a>
+					</div>
 				</div>
 			</div>
 		</div>
