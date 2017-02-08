@@ -1251,7 +1251,7 @@ div.span4 div.after {
 }
 section#self-help {
   background-color: #edf1f4;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
   padding-top: 2em;
   padding-bottom: 2em;
 }
@@ -1318,6 +1318,12 @@ section#self-help #user-guides #btn-author:hover {
 .hire-us {
   text-align: center;
 }
+.hire-us .max-width-container {
+  border-top: 1px solid #555555;
+}
+.hire-us h2 {
+  margin-top: 24px;
+}
 .hire-us .span4 h5 {
   margin-bottom: 0.25em;
   color: #333;
@@ -1330,6 +1336,14 @@ section#self-help #user-guides #btn-author:hover {
 }
 .hire-us #learn-more {
   margin-top: 24px;
+}
+#help-desk .max-width-container {
+  border-top: 1px solid #555555;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+#help-desk .support-tkt-btn {
+  margin-top: 32px;
 }
 /* Media Queries */
 @media (max-width: 480px) {

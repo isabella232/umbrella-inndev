@@ -36,8 +36,8 @@ $top_page = FALSE;
 				</div>
 				<div class="span5">
 					<a href="#" class="btn user-guide-btn" id="btn-developer">For Developers</a>
-					<a href="#" class="btn user-guide-btn" id="btn-admin">For Administrators</a>
-					<a href="#" class="btn user-guide-btn" id="btn-author">For Authors</a>
+					<a href="https://largo.inn.org/guides/administrators/" class="btn user-guide-btn" id="btn-admin">For Administrators</a>
+					<a href="https://largo.inn.org/guides/authors/" class="btn user-guide-btn" id="btn-author">For Authors</a>
 				</div>
 			</div>
 		</div>
@@ -82,14 +82,20 @@ $top_page = FALSE;
 					<p>Building new capabilities and tools for a better experience</p>
 				</div>
 			</div>
-			<a href="#" class="btn" id="learn-more">Learn More</a>
+			<a href="https://inn.org/hire-us/" class="btn" id="learn-more">Learn More</a>
 		</div>
 	</section>
-	<section>
+	<section id="help-desk">
 		<div class="max-width-container">
-			<h3><a href="#">Help Desk</a></h3>
-			<p>Faceperis est, que volesto ex evel molupta nonsercidi bea sedi il ipsa dustiaectem fugit faceste nis eum atioreictia ist porepratatin.</p>
-			<a href="#">Submit a Support Ticket</a>
+			<div class="row-fluid">
+				<div class="span7">
+					<h3>Help Desk</h3>
+					<p>Faceperis est, que volesto ex evel molupta nonsercidi bea sedi il ipsa dustiaectem fugit faceste nis eum atioreictia ist porepratatin.</p>
+				</div>
+				<div class="span4">
+					<a href="http://support.largoproject.org/support/tickets/new" class="btn support-tkt-btn">Submit a Support Ticket</a>
+				</div>
+			</div>
 		</div>
 	</section>
 </div>
