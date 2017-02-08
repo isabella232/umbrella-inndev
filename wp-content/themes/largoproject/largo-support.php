@@ -13,7 +13,7 @@ $top_page = FALSE;
 			<h5>Self-Help</h5>
 			<div id="knowledge-base" class="clearfix">
 				<h2><a href="http://support.largoproject.org/support/solutions">Knowledge Base</p></h2></a>
-				<p>To beatur, sereicipis inulparum quatiis dollese volum et aut quo deliquae nem nim eius. Ti ipsa dustiaectem fugit.</p>
+				<p>Dive into our knowledge base for our most popular questions and answers.</p>
 				<div class="row-fluid">
 					<div class="span2">
 						<a href="http://support.largoproject.org/support/solutions/articles/14000024125-how-can-i-improve-the-load-time-of-my-site-">How can I improve the load time of my site?</a>
@@ -35,7 +35,7 @@ $top_page = FALSE;
 					<p>Isitatibus is magnis pro idebit, sundeles re moloreicae veliam res as estemque volumet remqui occusti ustias evendun.</p>
 				</div>
 				<div class="span5">
-					<a href="#" class="btn user-guide-btn" id="btn-developer">For Developers</a>
+					<a href="https://largo.readthedocs.io/developers/index.html" class="btn user-guide-btn" id="btn-developer">For Developers</a>
 					<a href="https://largo.inn.org/guides/administrators/" class="btn user-guide-btn" id="btn-admin">For Administrators</a>
 					<a href="https://largo.inn.org/guides/authors/" class="btn user-guide-btn" id="btn-author">For Authors</a>
 				</div>
