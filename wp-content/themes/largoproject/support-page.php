@@ -31,7 +31,7 @@ $top_page = FALSE;
 			<div id="user-guides" class="clearfix">
 				<div class="span6 clearfix">
 					<h2>User Guides</h2>
-					<p>Isitatibus is magnis pro idebit, sundeles re moloreicae veliam res as estemque volumet remqui occusti ustias evendun.</p>
+					<p>These guides will help you get the most out of Largo and answer many frequently-asked questions.</p>
 				</div>
 				<div class="span6 clearfix" >
 					<div id="guide-btn-wrap" class="clearfix">
