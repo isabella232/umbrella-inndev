@@ -9,7 +9,7 @@ $top_page = FALSE;
  <div id="content" class="homepage-content clearfix span12">
  	<span id="page-title"><h2>Support</h2></span>
  	<section id="self-help" class="clearfix">
-	 	<div class="max-width-container">
+	 	<div class="max-width-container clearfix">
 			<h5>Self-Help</h5>
 			<div id="knowledge-base" class="clearfix">
 				<h2><a href="http://support.largoproject.org/support/solutions">Knowledge Base</p></h2></a>
