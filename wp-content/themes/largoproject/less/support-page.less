@@ -1,7 +1,218 @@
-/*Largo Support Page Styles*/
-section#self-help {
-  h3 {
+/* Largo Support Page*/
+
+#page-title {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#support-header {
     text-align: center;
     font-weight: 300;
+    text-transform: uppercase;
+}
+
+section#self-help {
+  background-color: @xltgray;
+  margin-bottom: 32px;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  h5 {
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  #knowledge-base {
+    margin-bottom: 24px;
+    h2 a {
+      color: @dkgray;
+    }
+    .span2 {
+      font-size: 1.2em;
+      font-weight: 700;
+      padding: 20px;
+      height: 150px;
+      a {
+        color: @dkgray;
+      }
+      &:hover {
+        a {
+           color: white;
+           text-decoration: none;
+        }
+        background-color: @largoorange;
+      }
+    }
+    .span2:first-child {
+      margin-left: 0;
+    }
+  }
+
+  #user-guides {
+    .user-guide-btn {
+      width: 250px;
+      margin-bottom: 8px;
+      border-radius: 8px;
+    }
+
+    #btn-developer {
+      background-color: @largoorange;
+      &:hover {
+        background-color:@darklargoorange;
+      }
+    }
+
+    #btn-author {
+      color: black;
+      background-color: @largoyellow;
+      &:hover {
+        background-color:@darklargoyellow;
+      }
+    }
+  }
+}
+
+#consulting-services {
+  padding-top: 2em;
+  img.animated-gif {
+    display: none;
+  }
+
+  .span6:hover img.animated-gif {
+    display: block;
+  }
+
+  .span6:hover img.still-img {
+    display: none;
+  }
+}
+
+.hire-us {
+  text-align: center;
+
+  .max-width-container {
+    border-top: 1px solid @dkgray;
+  }
+
+  h2 {
+    margin-top: 24px;
+  }
+
+  .span4 h5 {
+    margin-bottom: 0.25em;
+    color: #333;
+  }
+
+  .row-fluid {
+    margin-bottom: 24px;
+  }
+
+  h5 a {
+    color: @dkgray;
+  }
+
+  #learn-more {
+    margin-top: 24px;
+    background-color: @largoorange;
+    &:hover {
+      background-color: @darklargoorange;
+    }
+  }
+}
+
+#help-desk {
+  .max-width-container { 
+    border-top: 1px solid @dkgray;
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+
+  .support-tkt-btn {
+    margin-top: 32px;
+  }
+}
+
+/* Media Queries for Largo Support Page*/
+
+@media (max-width: 1200px) {
+ 
+  div.max-width-container {
+    margin: 0 4%;
+  }
+
+ #self-help {
+    .span2 {
+      width: 23%;
+    }
+  }
+
+  #consulting-services {
+    p {
+      font-size: 1.1em;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #consulting-services {
+    text-align: center;
+    .span6 {
+      width: 100%;
+      margin-left: 0;
+    }
+
+    img {
+      width: 90%;
+      margin: 0 auto;
+      margin-top: 10px;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+
+  #knowledge-base {
+    text-align: center;
+  }
+
+  section#self-help #knowledge-base .span2 {
+    width: 100%;
+    margin-left: 0;
+    padding: 0;
+    height: inherit;
+    margin-bottom: 8px;
+    color: black;
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  section#self-help #knowledge-base .span2 a {
+    color: black;
+  }
+
+  section#self-help #knowledge-base .span2:hover a {
+    color: black;
+    text-decoration: underline;
+  }
+
+  #user-guides {
+    text-align: center;
+    .span5, .span6 {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+
+  #help-desk {
+    text-align: center;
+    .span7, .span4 {
+      width: 100%;
+      margin-left: 0;
+    }
+
+    .support-tkt-btn {
+      margin-top: 8px;
+    }
   }
 }
