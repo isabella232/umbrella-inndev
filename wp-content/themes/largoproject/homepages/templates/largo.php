@@ -157,7 +157,7 @@
 				<div class="span4">
 					<a href="#"><img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/support-03.svg" /></a>
 					<a href="https://inn.org/hire-us/"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/support-03B.svg" /></a>
-					<h5><a href="https://inn.org/hire-us/">Hire Us</a></h5>
+					<h5><a href="/hire-us/">Hire Us</a></h5>
 					<p>Services we can provide for you</p>
 				</div>
 			</div>
