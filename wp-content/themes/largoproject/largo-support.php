@@ -58,31 +58,31 @@ $top_page = FALSE;
 			</div>
 		</div>
 	</section>
-	<section id="largo-support" class="largo-section clearfix">
+	<section id="largo-support" class="largo-section clearfix hire-us">
 		<div class="max-width-container">
 			<h2>Hire Us</h2>
 			<h4>We offer affordable consulting services (at an even more discounted rate for members). Our team can provide:</h4>
 			<div class="row-fluid">
 				<div class="span4">
-					<a href="#"><img class="icon frame-1" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/hire-us-01.svg" /></a>
-					<a href="https://inn.org/donate/"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/hire-us-01B.svg" /></a>
-					<h5><a href="https://inn.org/donate/">Content Migration</a></h5>
+					<img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/hire-us-01B.svg" />
+					<img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/hire-us-01.svg" />
+					<h5>Content Migration</h5>
 					<p>Transferring your existing content onto the new platform.</p>
 				</div>
 				<div class="span4">
-					<a href="#"><img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/hire-us-02.svg" /></a>
-					<a href="https://github.com/INN/docs/blob/master/how-to-work-with-us/contributing.md"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/hire-us-02B.svg" /></a>
-					<h5><a href="https://github.com/INN/docs/blob/master/how-to-work-with-us/contributing.md">Design Customization</a></h5>
+					<img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/hire-us-02.svg" /></a>
+					<img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/hire-us-02B.svg" /></a>
+					<h5>Design Customization</h5>
 					<p>Tailoring the aesthetics of the site to your organization’s needs</p>
 				</div>
 				<div class="span4">
-					<a href="#"><img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/hire-us-03.svg" /></a>
-					<a href="https://github.com/INN/docs/blob/master/how-to-work-with-us/contributing.md"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/hire-us-03B.svg" /></a>
-					<h5><a href="https://github.com/INN/docs/blob/master/how-to-work-with-us/contributing.md">Custom Development</a></h5>
+					<img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/hire-us-03.svg" /></a>
+					<img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/hire-us-03B.svg" /></a>
+					<h5>Custom Development</h5>
 					<p>Building new capabilities and tools for a better experience</p>
 				</div>
 			</div>
-			<a href="#" class="btn">Learn More</a>
+			<a href="#" class="btn" id="learn-more">Learn More</a>
 		</div>
 	</section>
 	<section>

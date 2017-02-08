@@ -1315,8 +1315,21 @@ section#self-help #user-guides #btn-author:hover {
 #consulting-services .span6:hover img.still-img {
   display: none;
 }
-#hire-us {
+.hire-us {
   text-align: center;
+}
+.hire-us .span4 h5 {
+  margin-bottom: 0.25em;
+  color: #333;
+}
+.hire-us .row-fluid {
+  margin-bottom: 24px;
+}
+.hire-us h5 a {
+  color: #555555;
+}
+.hire-us #learn-more {
+  margin-top: 24px;
 }
 /* Media Queries */
 @media (max-width: 480px) {
