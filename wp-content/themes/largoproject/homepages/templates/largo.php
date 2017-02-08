@@ -7,12 +7,12 @@
 			</div>
 			<div id="hero-description">
 				<h4>The WordPress Framework for News Websites</h4>
-				<p>Largo is a responsive WordPress theme designed for news publishers and expertly honed by the Institute for Nonprofit News.</p>
+				<p>Largo is a responsive WordPress theme framework designed for news publishers. Finely-crafted and expertly-honed by the product and technology team at the Institute for Nonprofit News.</p>
 			</div>
 		</div>
 		<div id="hero-buttons">
 			<a href="https://github.com/INN/Largo/releases" class="btn" id="btn-largo-1">Download</a>
-			<a href="https://largo.inn.org/series/largo-user-guide/" class="btn" id="btn-largo-2">User Guides</a>
+			<a href="/support/" class="btn" id="btn-largo-2">User Guides</a>
 		</div>
 	</section>
 	<section class="largo-section">
