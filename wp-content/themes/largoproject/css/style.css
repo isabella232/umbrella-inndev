@@ -1061,17 +1061,24 @@ section#self-help #user-guides #btn-author:hover {
 .hire-us #learn-more:hover {
   background-color: #e5650c;
 }
+#help-desk {
+  text-align: center;
+}
 #help-desk .max-width-container {
   border-top: 1px solid #555555;
   padding-top: 2em;
   padding-bottom: 2em;
 }
 #help-desk .support-tkt-btn {
-  margin-top: 32px;
+  color: black;
+  background-color: #ffcf73;
+}
+#help-desk .support-tkt-btn:hover {
+  background-color: #ffbe40;
 }
 .bold-italic {
-  font-style: italic;
   font-weight: 700;
+  color: black;
 }
 /* Media Queries for Largo Support Page*/
 @media (max-width: 1200px) {

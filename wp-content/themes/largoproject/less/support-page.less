@@ -135,6 +135,7 @@ section#self-help {
 }
 
 #help-desk {
+  text-align: center;
   .max-width-container { 
     border-top: 1px solid @dkgray;
     padding-top: 2em;
@@ -142,13 +143,17 @@ section#self-help {
   }
 
   .support-tkt-btn {
-    margin-top: 32px;
+    color: black;
+    background-color: @largoyellow;
+    &:hover {
+      background-color: @darklargoyellow;
+    }
   }
 }
 
 .bold-italic {
-  font-style: italic;
   font-weight: 700;
+  color: black;
 }
 
 /* Media Queries for Largo Support Page*/

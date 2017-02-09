@@ -80,17 +80,10 @@ $top_page = FALSE;
 	</section>
 	<section id="help-desk">
 		<div class="max-width-container">
-			<div class="row-fluid">
-				<div class="span6">
-					<h4>Help Desk</h4>
-					<p>If you haven't found an answer to your question in <a href="https://largo.inn.org/guides/">our guides</a> our support team is ready to help!</p>
-					<p>Please include as much detail as possible in your support ticket and remember to include the following:</p>
-					<p class="bold-italic">* Only one topic or question per ticket.<br>* The URL of your website and links to specific pages.</p>
-				</div>
-				<div class="span6">
-					<a href="mailto:support@inn.org" class="btn support-tkt-btn">Submit a Support Ticket</a>
-				</div>
-			</div>
+			<h5 id="support-header">Help Desk</h5>
+			<p>If you haven't found an answer to your question in <a href="https://largo.inn.org/guides/">our guides</a> our support team is ready to help! <br>Please include as much detail as possible in your support ticket and remember to include the following:</p>
+			<p class="bold-italic">* Only one topic or question per ticket.<br>* The URL of your website and links to specific pages.</p>
+			<a href="mailto:support@inn.org" class="btn support-tkt-btn">Submit a Support Ticket</a>
 		</div>
 	</section>
 </div>
