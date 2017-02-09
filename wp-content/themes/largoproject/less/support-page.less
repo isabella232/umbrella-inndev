@@ -15,7 +15,7 @@
 
 section#self-help {
   background-color: @xltgray;
-  margin-bottom: 32px;
+  margin-bottom: 2em;
   padding-top: 2em;
   padding-bottom: 2em;
   h5 {
@@ -29,20 +29,16 @@ section#self-help {
     h2 a {
       color: @dkgray;
     }
-    .span3 {
+    a.span3 {
       font-size: 1.2em;
       font-weight: 700;
       padding: 20px;
       height: 120px;
       background-color: white;
-      a {
-        color: @dkgray;
-      }
+      color: @dkgray;
       &:hover {
-        a {
-           color: white;
-           text-decoration: none;
-        }
+        color: white;
+        text-decoration: none;
         background-color: @largoorange;
       }
     }
@@ -83,6 +79,7 @@ section#self-help {
 
 #consulting-services {
   padding-top: 2em;
+  margin-bottom: 2em;
   img.animated-gif {
     display: none;
   }
@@ -94,17 +91,21 @@ section#self-help {
   .span6:hover img.still-img {
     display: none;
   }
+
+  .max-width-container {
+    border-bottom: 1px solid @dkgray;
+  }
+
+  .btn {
+    margin-bottom: 24px;
+  }
 }
 
 .hire-us {
   text-align: center;
-
-  .max-width-container {
-    border-top: 1px solid @dkgray;
-  }
+  padding-top: 2em;
 
   h2 {
-    margin-top: 24px;
     text-align: center;
     color: @blue;
     letter-spacing: 0.05em;
@@ -145,6 +146,11 @@ section#self-help {
   }
 }
 
+.bold-italic {
+  font-style: italic;
+  font-weight: 700;
+}
+
 /* Media Queries for Largo Support Page*/
 
 @media (max-width: 1200px) {
@@ -161,7 +167,7 @@ section#self-help {
 }
 
 @media (max-width: 1000px) {
-	section#self-help #knowledge-base .span3 {
+	section#self-help #knowledge-base a.span3 {
 		height: 150px;
 	}
 }
@@ -190,7 +196,7 @@ section#self-help {
     text-align: center;
   }
 
-  section#self-help #knowledge-base .span3 {
+  section#self-help #knowledge-base a.span3 {
     width: 100%;
     margin-left: 0;
     padding: 0;
@@ -200,16 +206,9 @@ section#self-help {
     background-color: transparent;
     &:hover {
       background-color: transparent;
+      color: black;
+      text-decoration: underline;
     }
-  }
-
-  section#self-help #knowledge-base .span3 a {
-    color: black;
-  }
-
-  section#self-help #knowledge-base .span3:hover a {
-    color: black;
-    text-decoration: underline;
   }
 
   #user-guides {

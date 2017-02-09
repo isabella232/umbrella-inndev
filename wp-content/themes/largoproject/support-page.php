@@ -11,26 +11,18 @@ $top_page = FALSE;
 	 	<div class="max-width-container clearfix">
 	 		<h2 id="support-header">Self-Help</h2>
 			<div id="knowledge-base" class="clearfix">
-				<h2><a href="http://support.largoproject.org/support/solutions">Knowledge Base</p></h2></a>
+				<h3><a href="http://support.largoproject.org/support/solutions">Knowledge Base</p></h3></a>
 				<p>Dive into our knowledge base for our most popular questions and answers.</p>
 				<div class="row-fluid">
-					<div class="span3">
-						<a href="http://support.largoproject.org/support/solutions/articles/14000024125-how-can-i-improve-the-load-time-of-my-site-">How can I improve the load time of my site?</a>
-					</div>
-					<div class="span3">
-						<a href="http://support.largoproject.org/support/solutions/articles/14000019997-i-lost-my-password-how-can-i-find-it-">I lost my password. How can I find it?</a>
-					</div>
-					<div class="span3">
-						<a href="http://support.largoproject.org/support/solutions/articles/14000018948-how-can-i-make-a-post-sticky-">How can I make a post sticky?</a>
-					</div>
-					<div class="span3">
-						<a href="http://support.largoproject.org/support/solutions/articles/14000018942-how-can-i-add-a-link-to-a-menu-">How can I add a link to a menu?</a>
-					</div>
+					<a class="span3" href="http://support.largoproject.org/support/solutions/articles/14000024125-how-can-i-improve-the-load-time-of-my-site-">How can I improve the load time of my site?</a>
+					<a class="span3" href="http://support.largoproject.org/support/solutions/articles/14000019997-i-lost-my-password-how-can-i-find-it-">I lost my password. How can I find it?</a>
+					<a class="span3" href="http://support.largoproject.org/support/solutions/articles/14000018948-how-can-i-make-a-post-sticky-">How can I make a post sticky?</a>
+					<a class="span3" href="http://support.largoproject.org/support/solutions/articles/14000018942-how-can-i-add-a-link-to-a-menu-">How can I add a link to a menu?</a>
 				</div>
 			</div>
 			<div id="user-guides" class="clearfix">
 				<div class="span6 clearfix">
-					<h2>User Guides</h2>
+					<h3><a href="https://largo.inn.org/guides/">User Guides</a></h3>
 					<p>These guides will help you get the most out of Largo and answer many frequently-asked questions.</p>
 				</div>
 				<div class="span6 clearfix" >
@@ -48,7 +40,7 @@ $top_page = FALSE;
 			<h5 id="support-header">Consulting Services</h5>
 			<div class="row-fluid">
 				<div class="span6">
-					<a href="https://nerds.inn.org/category/office-hours/"><h2>Office Hours</h2></a>
+					<h3><a href="https://nerds.inn.org/category/office-hours/">Office Hours</a></h3>
 					<p>Every Friday from 2-3 pm ET we hold open office hours via Zoom.us videocalls where anyone can come and talk to our team about projects or talk about general design, tech or product questions. You can signup for a 20 minute spot or just drop by. All are welcome!</p>
 					<a href="https://docs.google.com/spreadsheets/d/1p-twn2D8oow7vXBfkcdYcZnVA4z8Q42OMs77KlHwf-g/edit" class="btn">Sign Up for a Slot</a>
 				</div>
@@ -62,7 +54,7 @@ $top_page = FALSE;
 	<section id="largo-support" class="largo-section clearfix hire-us">
 		<div class="max-width-container">
 			<h2>Hire Us</h2>
-			<h4>We offer affordable consulting services (at an even more discounted rate for members). Our team can provide:</h4>
+			<h4>We offer affordable consulting services (at an even more discounted rate for members).<br> Our team can provide:</h4>
 			<div class="row-fluid">
 				<div class="span4">
 					<img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/hire-us-01B.svg" />
@@ -89,12 +81,14 @@ $top_page = FALSE;
 	<section id="help-desk">
 		<div class="max-width-container">
 			<div class="row-fluid">
-				<div class="span7">
-					<h3>Help Desk</h3>
-					<p>Faceperis est, que volesto ex evel molupta nonsercidi bea sedi il ipsa dustiaectem fugit faceste nis eum atioreictia ist porepratatin.</p>
+				<div class="span6">
+					<h4>Help Desk</h4>
+					<p>If you haven't found an answer to your question in <a href="https://largo.inn.org/guides/">our guides</a> our support team is ready to help!</p>
+					<p>Please include as much detail as possible in your support ticket and remember to include the following:</p>
+					<p class="bold-italic">* Only one topic or question per ticket.<br>* The URL of your website and links to specific pages.</p>
 				</div>
-				<div class="span4">
-					<a href="http://support.largoproject.org/support/tickets/new" class="btn support-tkt-btn">Submit a Support Ticket</a>
+				<div class="span6">
+					<a href="mailto:support@inn.org" class="btn support-tkt-btn">Submit a Support Ticket</a>
 				</div>
 			</div>
 		</div>
