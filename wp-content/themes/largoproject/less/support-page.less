@@ -7,13 +7,22 @@
 
 #support-header {
     text-align: center;
-    font-weight: 300;
+    color: #f48030;
+    font-size: 36px;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
 }
 
 section#self-help {
   background-color: @xltgray;
-  margin-bottom: 32px;
+  margin-bottom: 2em;
+
+  // less is apparently very particular about the spacing in this line; else it will not do the math
+  @media (min-width: (@sideNavCollapse + 1) ) {
+    // to prevent a big white bar caused by padding on div#main
+    margin-top: -5em;
+  }
+
   padding-top: 2em;
   padding-bottom: 2em;
   h5 {
@@ -23,36 +32,39 @@ section#self-help {
   }
 
   #knowledge-base {
-    margin-bottom: 24px;
+    margin-bottom: 2rem;
     h2 a {
       color: @dkgray;
     }
-    .span2 {
+    a.span3 {
       font-size: 1.2em;
       font-weight: 700;
       padding: 20px;
-      height: 150px;
-      a {
-        color: @dkgray;
-      }
+      height: 120px;
+      background-color: white;
+      color: @dkgray;
       &:hover {
-        a {
-           color: white;
-           text-decoration: none;
-        }
+        color: white;
+        text-decoration: none;
         background-color: @largoorange;
       }
     }
-    .span2:first-child {
+    .span3:first-child {
       margin-left: 0;
     }
   }
 
   #user-guides {
+  	padding-top: 2rem;
     .user-guide-btn {
-      width: 250px;
+      width: 100%;
       margin-bottom: 8px;
-      border-radius: 8px;
+      padding: 10px 0;
+    }
+
+    #guide-btn-wrap {
+    	margin: 0 auto;
+    	width: 90%;
     }
 
     #btn-developer {
@@ -74,6 +86,7 @@ section#self-help {
 
 #consulting-services {
   padding-top: 2em;
+  margin-bottom: 2em;
   img.animated-gif {
     display: none;
   }
@@ -85,17 +98,25 @@ section#self-help {
   .span6:hover img.still-img {
     display: none;
   }
+
+  .max-width-container {
+    border-bottom: 1px solid @dkgray;
+  }
+
+  .btn {
+    margin-bottom: 24px;
+  }
 }
 
 .hire-us {
   text-align: center;
-
-  .max-width-container {
-    border-top: 1px solid @dkgray;
-  }
+  padding-top: 2em;
 
   h2 {
-    margin-top: 24px;
+    text-align: center;
+    color: @blue;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
   }
 
   .span4 h5 {
@@ -121,6 +142,7 @@ section#self-help {
 }
 
 #help-desk {
+  text-align: center;
   .max-width-container { 
     border-top: 1px solid @dkgray;
     padding-top: 2em;
@@ -128,22 +150,28 @@ section#self-help {
   }
 
   .support-tkt-btn {
-    margin-top: 32px;
+    color: black;
+    background-color: @largoyellow;
+    &:hover {
+      background-color: @darklargoyellow;
+    }
+  }
+
+  ul {
+    color: black;
+
+    li {
+      text-align: left;
+    }
   }
 }
 
-/* Media Queries for Largo Support Page*/
+/* Media Queries for Largo Support Page */
 
 @media (max-width: 1200px) {
  
   div.max-width-container {
     margin: 0 4%;
-  }
-
- #self-help {
-    .span2 {
-      width: 23%;
-    }
   }
 
   #consulting-services {
@@ -153,7 +181,15 @@ section#self-help {
   }
 }
 
+@media (max-width: 1000px) {
+	section#self-help #knowledge-base a.span3 {
+		height: 180px;
+	}
+}
+
 @media (max-width: 768px) {
+  
+
   #consulting-services {
     text-align: center;
     .span6 {
@@ -167,6 +203,16 @@ section#self-help {
       margin-top: 10px;
     }
   }
+  #help-desk {
+    .span6 {
+      width: 100%;
+      clear: both;
+      margin-left: 0;
+    }
+  }
+  .support-tkt-btn {
+    margin-bottom: 32px;
+  }
 }
 
 @media (max-width: 650px) {
@@ -175,25 +221,19 @@ section#self-help {
     text-align: center;
   }
 
-  section#self-help #knowledge-base .span2 {
+  section#self-help #knowledge-base a.span3 {
     width: 100%;
     margin-left: 0;
     padding: 0;
     height: inherit;
     margin-bottom: 8px;
     color: black;
+    background-color: transparent;
     &:hover {
       background-color: transparent;
+      color: black;
+      text-decoration: underline;
     }
-  }
-
-  section#self-help #knowledge-base .span2 a {
-    color: black;
-  }
-
-  section#self-help #knowledge-base .span2:hover a {
-    color: black;
-    text-decoration: underline;
   }
 
   #user-guides {
