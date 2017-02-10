@@ -966,6 +966,7 @@ body.normal.page .entry-content {
 section#self-help {
   background-color: #edf1f4;
   margin-bottom: 2em;
+  margin-top: -5em;
   padding-top: 2em;
   padding-bottom: 2em;
 }
