@@ -1082,11 +1082,13 @@ section#self-help #user-guides #btn-author:hover {
 #help-desk .support-tkt-btn:hover {
   background-color: #ffbe40;
 }
-.bold-italic {
-  font-weight: 700;
+#help-desk ul {
   color: black;
 }
-/* Media Queries for Largo Support Page*/
+#help-desk ul li {
+  text-align: left;
+}
+/* Media Queries for Largo Support Page */
 @media (max-width: 1200px) {
   div.max-width-container {
     margin: 0 4%;
@@ -1112,6 +1114,14 @@ section#self-help #user-guides #btn-author:hover {
     width: 90%;
     margin: 0 auto;
     margin-top: 10px;
+  }
+  #help-desk .span6 {
+    width: 100%;
+    clear: both;
+    margin-left: 0;
+  }
+  .support-tkt-btn {
+    margin-bottom: 32px;
   }
 }
 @media (max-width: 650px) {
