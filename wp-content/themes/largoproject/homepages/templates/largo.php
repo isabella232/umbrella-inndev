@@ -12,7 +12,7 @@
 		</div>
 		<div id="hero-buttons">
 			<a href="https://github.com/INN/Largo/releases" class="btn" id="btn-largo-1">Download</a>
-			<a href="/support/" class="btn" id="btn-largo-2">User Guides</a>
+			<a href="/guides/" class="btn" id="btn-largo-2">User Guides</a>
 		</div>
 	</section>
 	<section class="largo-section">
