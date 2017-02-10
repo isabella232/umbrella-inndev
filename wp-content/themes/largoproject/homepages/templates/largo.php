@@ -12,7 +12,7 @@
 		</div>
 		<div id="hero-buttons">
 			<a href="https://github.com/INN/Largo/releases" class="btn" id="btn-largo-1">Download</a>
-			<a href="/support/" class="btn" id="btn-largo-2">User Guides</a>
+			<a href="/guides/" class="btn" id="btn-largo-2">User Guides</a>
 		</div>
 	</section>
 	<section class="largo-section">
@@ -144,8 +144,8 @@
 			<div class="row-fluid">
 				<div class="span4">
 					<a href="#"><img class="icon frame-1" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/support-01.svg" /></a>
-					<a href="http://support.largoproject.org/support/solutions"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/support-01B.svg" /></a>
-					<h5><a href="http://support.largoproject.org/support/solutions">Self Help</a></h5>
+					<a href="http://support.largoproject.org/"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/support-01B.svg" /></a>
+					<h5><a href="http://support.largoproject.org/">Self Help</a></h5>
 					<p>Our most popular questions and answers</p>
 				</div>
 				<div class="span4">
@@ -157,12 +157,12 @@
 				<div class="span4">
 					<a href="#"><img class="icon" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/support-03.svg" /></a>
 					<a href="https://inn.org/hire-us/"><img class="frame-2" src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/icons/support-03B.svg" /></a>
-					<h5><a href="https://inn.org/hire-us/">Hire Us</a></h5>
+					<h5><a href="/hire-us/">Hire Us</a></h5>
 					<p>Services we can provide for you</p>
 				</div>
 			</div>
 			<div id="support-ticket">
-				<p>Need more help? We got you. Submit a support ticket <a href="http://support.largoproject.org/support/tickets/new">here</a>.</p>
+				<p>Need more help? We got you. Submit a support ticket by emailing <a href="mailto:support@largoproject.org">support@largoproject.org</a>.</p>
 			</div>
 		</div>
 	</section>

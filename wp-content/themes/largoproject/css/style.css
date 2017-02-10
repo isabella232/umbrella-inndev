@@ -1082,11 +1082,13 @@ section#self-help #user-guides #btn-author:hover {
 #help-desk .support-tkt-btn:hover {
   background-color: #ffbe40;
 }
-.bold-italic {
-  font-weight: 700;
+#help-desk ul {
   color: black;
 }
-/* Media Queries for Largo Support Page*/
+#help-desk ul li {
+  text-align: left;
+}
+/* Media Queries for Largo Support Page */
 @media (max-width: 1200px) {
   div.max-width-container {
     margin: 0 4%;
@@ -1112,6 +1114,14 @@ section#self-help #user-guides #btn-author:hover {
     width: 90%;
     margin: 0 auto;
     margin-top: 10px;
+  }
+  #help-desk .span6 {
+    width: 100%;
+    clear: both;
+    margin-left: 0;
+  }
+  .support-tkt-btn {
+    margin-bottom: 32px;
   }
 }
 @media (max-width: 650px) {
@@ -1150,6 +1160,27 @@ section#self-help #user-guides #btn-author:hover {
   }
   #help-desk .support-tkt-btn {
     margin-top: 8px;
+  }
+}
+/**
+ * This copies a bunch of stuff from largo/less/single.less
+ */
+body.error404 header {
+  clear: both;
+  margin: 24px 17.0213%;
+  position: relative;
+}
+@media only screen and (max-width: 979px) {
+  body.error404 header {
+    margin: 24px 6.38297872%;
+  }
+}
+body.error404 .entry-content {
+  padding: 0 17.021276594%;
+}
+@media only screen and (max-width: 979px) {
+  body.error404 .entry-content {
+    padding: 0 6.38297872%;
   }
 }
 .site-hero {

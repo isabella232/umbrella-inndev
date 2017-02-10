@@ -14,10 +14,10 @@ $top_page = FALSE;
 				<h3><a href="http://support.largoproject.org/support/solutions">Knowledge Base</p></h3></a>
 				<p>Dive into our knowledge base for our most popular questions and answers.</p>
 				<div class="row-fluid">
-					<a class="span3" href="http://support.largoproject.org/support/solutions/articles/14000024125-how-can-i-improve-the-load-time-of-my-site-">How can I improve the load time of my site?</a>
-					<a class="span3" href="http://support.largoproject.org/support/solutions/articles/14000019997-i-lost-my-password-how-can-i-find-it-">I lost my password. How can I find it?</a>
-					<a class="span3" href="http://support.largoproject.org/support/solutions/articles/14000018948-how-can-i-make-a-post-sticky-">How can I make a post sticky?</a>
-					<a class="span3" href="http://support.largoproject.org/support/solutions/articles/14000018942-how-can-i-add-a-link-to-a-menu-">How can I add a link to a menu?</a>
+					<a class="span3" href="http://support.largoproject.org/article/5-how-can-i-improve-the-load-time-of-my-site">How can I improve the load time of my site?</a>
+					<a class="span3" href="http://support.largoproject.org/article/8-i-lost-my-password">I lost my password. How can I find it?</a>
+					<a class="span3" href="http://support.largoproject.org/article/27-how-to-make-post-sticky">How can I make a post sticky?</a>
+					<a class="span3" href="http://support.largoproject.org/article/15-how-can-i-add-a-link-to-a-menu">How can I add a link to a menu?</a>
 				</div>
 			</div>
 			<div id="user-guides" class="clearfix">
@@ -81,9 +81,19 @@ $top_page = FALSE;
 	<section id="help-desk">
 		<div class="max-width-container">
 			<h5 id="support-header">Help Desk</h5>
-			<p>If you haven't found an answer to your question in <a href="https://largo.inn.org/guides/">our guides</a> our support team is ready to help! <br>Please include as much detail as possible in your support ticket and remember to include the following:</p>
-			<p class="bold-italic">* Only one topic or question per ticket.<br>* The URL of your website and links to specific pages.</p>
-			<a href="mailto:support@inn.org" class="btn support-tkt-btn">Submit a Support Ticket</a>
+			<p>If you haven't found an answer to your question in <a href="https://largo.inn.org/guides/">our guides</a>, our support team is ready to help!</p>
+			<div class="row">
+				<div class="span6">
+					<ul>
+						<li>Include only one topic or question per ticket.</li>
+						<li>Include the URL of your website and links to specific pages.</li>
+						<li>Include as much detail as possible in your email.</li>
+					</ul>
+				</div>
+				<div class="span6">
+					<a href="mailto:support@inn.org" class="btn support-tkt-btn">Submit a Support Ticket by email</a>
+				</div>
+			</div>
 		</div>
 	</section>
 </div>
