@@ -12,20 +12,20 @@ $top_page = FALSE;
 	 	<div class="max-width-container clearfix">
 			<h5>Self-Help</h5>
 			<div id="knowledge-base" class="clearfix">
-				<h2><a href="http://support.largoproject.org/support/solutions">Knowledge Base</p></h2></a>
+				<h2><a href="http://support.largoproject.org/">Knowledge Base</p></h2></a>
 				<p>Dive into our knowledge base for our most popular questions and answers.</p>
 				<div class="row-fluid">
 					<div class="span2">
-						<a href="http://support.largoproject.org/support/solutions/articles/14000024125-how-can-i-improve-the-load-time-of-my-site-">How can I improve the load time of my site?</a>
+						<a href="http://support.largoproject.org/article/5-how-can-i-improve-the-load-time-of-my-site">How can I improve the load time of my site?</a>
 					</div>
 					<div class="span2">
-						<a href="http://support.largoproject.org/support/solutions/articles/14000019997-i-lost-my-password-how-can-i-find-it-">I lost my password. How can I find it?</a>
+						<a href="http://support.largoproject.org/article/8-i-lost-my-password">I lost my password. How can I find it?</a>
 					</div>
 					<div class="span2">
-						<a href="http://support.largoproject.org/support/solutions/articles/14000018948-how-can-i-make-a-post-sticky-">How can I make a post sticky?</a>
+						<a href="http://support.largoproject.org/article/27-how-to-make-post-sticky">How can I make a post sticky?</a>
 					</div>
 					<div class="span2">
-						<a href="http://support.largoproject.org/support/solutions/articles/14000018942-how-can-i-add-a-link-to-a-menu-">How can I add a link to a menu?</a>
+						<a href="http://support.largoproject.org/article/15-how-can-i-add-a-link-to-a-menu">How can I add a link to a menu?</a>
 					</div>
 				</div>
 			</div>
@@ -93,7 +93,7 @@ $top_page = FALSE;
 					<p>Faceperis est, que volesto ex evel molupta nonsercidi bea sedi il ipsa dustiaectem fugit faceste nis eum atioreictia ist porepratatin.</p>
 				</div>
 				<div class="span4">
-					<a href="http://support.largoproject.org/support/tickets/new" class="btn support-tkt-btn">Submit a Support Ticket</a>
+					<a href="http://support.largoproject.org/" class="btn support-tkt-btn">Submit a Support Ticket</a>
 				</div>
 			</div>
 		</div>
