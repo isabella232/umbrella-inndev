@@ -11,7 +11,7 @@ $top_page = FALSE;
 	 	<div class="max-width-container clearfix">
 	 		<h2 id="support-header">Self-Help</h2>
 			<div id="knowledge-base" class="clearfix">
-				<h3><a href="http://support.largoproject.org/support/solutions">Knowledge Base</p></h3></a>
+				<h3><a href="http://support.largoproject.org/">Knowledge Base</p></h3></a>
 				<p>Dive into our knowledge base for our most popular questions and answers.</p>
 				<div class="row-fluid">
 					<a class="span3" href="http://support.largoproject.org/article/5-how-can-i-improve-the-load-time-of-my-site">How can I improve the load time of my site?</a>
