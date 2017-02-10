@@ -1,0 +1,21 @@
+/**
+ * This copies a bunch of stuff from largo/less/single.less
+ */
+@tabletDown:  ~"only screen and (max-width: 979px)";
+@fluidGridColumnWidth:    6.382978723%;
+body.error404 {
+  header {
+    clear: both;
+    margin: 24px 17.0213%;
+    position: relative;
+    @media @tabletDown {
+      margin: 24px @fluidGridColumnWidth;
+    }
+  }
+  .entry-content {
+    padding: 0 17.021276594%;
+    @media @tabletDown {
+      padding: 0 @fluidGridColumnWidth;
+    }
+  }
+}

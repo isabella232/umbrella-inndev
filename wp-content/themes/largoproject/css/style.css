@@ -1152,6 +1152,27 @@ section#self-help #user-guides #btn-author:hover {
     margin-top: 8px;
   }
 }
+/**
+ * This copies a bunch of stuff from largo/less/single.less
+ */
+body.error404 header {
+  clear: both;
+  margin: 24px 17.0213%;
+  position: relative;
+}
+@media only screen and (max-width: 979px) {
+  body.error404 header {
+    margin: 24px 6.38297872%;
+  }
+}
+body.error404 .entry-content {
+  padding: 0 17.021276594%;
+}
+@media only screen and (max-width: 979px) {
+  body.error404 .entry-content {
+    padding: 0 6.38297872%;
+  }
+}
 .site-hero {
   width: 100%;
   text-align: center;
