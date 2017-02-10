@@ -776,8 +776,13 @@ nav#largo-footer ul a {
 body.normal.page #content.guide-page {
   margin-left: 0;
 }
+.guide-page {
+  max-width: 1170px;
+  margin: 0 auto;
+}
 .guide-page h1.entry-title {
   color: #f48030;
+  margin-bottom: 24px;
 }
 .guide-page .author-posts-link {
   display: none;
@@ -908,8 +913,9 @@ body.normal.page #content.guide-page {
   display: none;
 }
 .guide-page article.span9 {
-  max-width: 700px;
+  max-width: 100%;
   padding-right: 24px;
+  padding-left: 40px;
   box-sizing: border-box;
 }
 @media screen and (max-width: 782px) {
