@@ -87,7 +87,7 @@ $top_page = FALSE;
 					<ul>
 						<li>Include only one topic or question per ticket.</li>
 						<li>Include the URL of your website and links to specific pages.</li>
-						<li>Include as much detail as possible in your email.</li>
+						<li>Include as much detail as possible in your email. Screenshots are very helpful.</li>
 					</ul>
 				</div>
 				<div class="span6">
