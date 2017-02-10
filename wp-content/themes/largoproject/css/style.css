@@ -1097,7 +1097,7 @@ section#self-help #user-guides #btn-author:hover {
 }
 @media (max-width: 1000px) {
   section#self-help #knowledge-base a.span3 {
-    height: 150px;
+    height: 180px;
   }
 }
 @media (max-width: 768px) {
