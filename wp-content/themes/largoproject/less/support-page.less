@@ -16,7 +16,13 @@
 section#self-help {
   background-color: @xltgray;
   margin-bottom: 2em;
-  margin-top: -5em;
+
+  // less is apparently very particular about the spacing in this line; else it will not do the math
+  @media (min-width: (@sideNavCollapse + 1) ) {
+    // to prevent a big white bar caused by padding on div#main
+    margin-top: -5em;
+  }
+
   padding-top: 2em;
   padding-bottom: 2em;
   h5 {
