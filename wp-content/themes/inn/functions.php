@@ -129,7 +129,7 @@ function inn_print_scripts() {
 function inn_alert() {
 	get_template_part( 'partials/alert' );
 }
-//add_action( 'largo_after_nav', 'inn_alert' );
+add_action( 'largo_after_nav', 'inn_alert' );
 
 /**
  * Add search box to main nav
@@ -139,4 +139,3 @@ function inn_add_search_box() {
 	get_template_part( 'partials/inn-nav-search-form' );
 }
 add_action( 'largo_after_main_nav_shelf', 'inn_add_search_box' );
-
