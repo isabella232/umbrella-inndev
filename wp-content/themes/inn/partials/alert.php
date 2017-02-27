@@ -1,3 +1,3 @@
 <div class="alert">
-	<p><strong><a href="https://inn.org/donate">Double your donation to nonprofit news. Donate Now!</a></strong></p>
+	<p><strong><a href="/project/emerging-leaders/">Deadline for INN Emerging Leaders Council nominations is Mar. 15</a></strong></p>
 </div>
