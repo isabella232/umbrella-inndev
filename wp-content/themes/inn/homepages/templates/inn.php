@@ -2,13 +2,26 @@
 
 <section id="hero">
 	<div class="content">
-		<h2>What wouldn’t you know, if not for nonprofit news media?</h2>
-
-<h3>In 2016, reporters in nonprofit newsrooms across America broke thousands of stories while pursuing journalism in the public interest.</h3>
-  <div id="donation-description">
-      <a href="https://inn.org/2016-nonprofit-news-top-stories/" class="btn btn-primary">Read some of the best</a>
-      <p class="small">INN Members: Fact-based and community-focused. Transparent and non-partisan. Reporting for you.</p>
-  </div>
+		<h2> What you know thanks to nonprofit news</h2>
+		<div class="row-fluid">
+			<div class="span4" id="img-container">
+				<div id="img-box">
+					<a href="http://wisconsinwatch.org/2017/02/a-syrian-family-settles-in-wisconsin-just-before-u-s-refugee-pipeline-closes/"><img height="200px" src="<?php echo $img_path; ?>Rula-and-Abdul2-1170x812.jpg"></a>
+				</div>
+				<span id="photo-cred">Dee J. Hall</span>
+			</div>
+		  	<div id="donation-description" class="span4 clearfix">
+		      <p class="small">In 2016, reporters in nonprofit newsrooms across America broke thousands of stories while pursuing journalism in the public interest.</p>
+		      <a href="https://inn.org/2016-nonprofit-news-top-stories/" class="btn btn-primary">Read some of the best</a>
+		  	</div>
+		  	<div class="span4" id="img-container">
+				<div id="img-box">
+					<a href="http://www.civilbeat.org/2016/12/the-projector-images-of-2016/"><img src="<?php echo $img_path; ?>Hawaiian-Commercial-and-Sugar-Puunene-Sugar-Mill-burn-fireboys3.jpg"></a>
+				</div>
+				<span id="photo-cred">Cory Lum</span>
+			</div>
+	  	</div>
+	</div>
 </section>
 
 <section class="normal">
