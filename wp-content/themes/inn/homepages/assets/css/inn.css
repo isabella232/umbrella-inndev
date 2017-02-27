@@ -8,15 +8,16 @@
 }
 .home #hero {
   background-image: none;
-  background-color: #cc3c3c;
-  padding: 100px 20px 60px;
+  background-color: #6D72E6;
+  padding: 50px;
+  margin-bottom: 1em;
 }
 .home #hero .content h2 {
-  margin: 0 auto .5em;
+  margin: 0 auto .75em;
   max-width: 1152px;
   text-align: center;
   color: #fff;
-  font-size: 4em;
+  font-size: 3em;
   font-weight: 500;
   line-height: 1;
   text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
@@ -35,44 +36,75 @@
   display: block;
   width: 200px;
   background-color: #09C9FF;
+  margin-bottom: 0;
 }
 .home #hero .btn-primary:hover {
   background-color: #1DC1F3;
 }
 .home #hero #donation-description {
-  max-width: 370px;
-  margin: 2em auto;
+  max-width: 100%;
   text-align: center;
   background-color: #fff;
-  padding: 2em 2em 1em;
-  border: 3px solid #DF4646;
+  padding: 1.2em;
+  height: 200px;
+  margin-left: 2.12765957%;
 }
 .home #hero #donation-description p {
-  margin-bottom: .5em;
+  margin-bottom: 1em;
 }
 .home #hero #donation-description p.small {
   font-size: 1em;
+  font-weight: 400;
+  color: black;
+  margin-top: 2%;
 }
-@media (max-width: 768px) {
-  .home #hero {
-    padding: 50px 20px;
-  }
-  .home #hero .content h2 {
-    font-size: 3.25em;
-  }
-  .home #hero .content h3 {
-    font-size: 1.5em;
-  }
+.home #hero .row-fluid {
+  max-width: 1170px;
+  margin: 0 auto;
 }
-@media (max-width: 480px) {
-  .home #hero {
-    padding: 30px 20px 10px;
-  }
+.home #hero .row-fluid div#img-container {
+  padding: 0;
+}
+.home #hero .row-fluid div#img-box {
+  height: 200px;
+  overflow: hidden;
+}
+.home #hero .row-fluid #photo-cred {
+  color: white;
+  font-size: .8em;
+  float: right;
+  margin-top: 4px;
+}
+@media (max-width: 1000px) {
   .home #hero .content h2 {
     font-size: 2.5em;
   }
+  .home #hero #img-container {
+    display: none;
+  }
+  .home #hero #donation-description {
+    width: 100%;
+    margin-left: 0;
+    clear: both;
+    height: inherit;
+  }
   .home #hero #donation-description p.small {
-    font-size: .8em;
+    margin-top: 0;
+  }
+}
+@media (max-width: 600px) {
+  .home #hero {
+    padding: 30px;
+  }
+  .home #hero #donation-description {
+    margin-left: 0;
+  }
+  .home #hero .btn-primary {
+    max-width: 190px;
+    margin: 0 auto;
+  }
+  .home #hero .content .row-fluid #img-container {
+    display: none;
   }
 }
 .home #homepage-top-right ol {
