@@ -2,7 +2,7 @@
 	<div class="content">
 		<h3><span>What We Offer</span></h3>
 		<?php
-			$terms = get_terms( 'pauinn_project_tax', array( 'hide_empty' => false, 'exclude' => array( '2536', '2537' ) ) );
+			$terms = get_terms( 'pauinn_project_tax', array( 'hide_empty' => false, 'include' => array( '2344', '2346', '2418', '2325', '2328', '226', '2424', '2326' ) ) );
 
 			if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
 
