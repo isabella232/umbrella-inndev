@@ -7,3 +7,6 @@
 [submodule "wp-content/plugins/news-quiz"]
 	path = wp-content/plugins/news-quiz
 	url = https://github.com/INN/news-quiz.git
+[submodule "wp-content/themes/inn"]
+	path = wp-content/themes/inn
+	url = https://github.com/INN/inn.git
