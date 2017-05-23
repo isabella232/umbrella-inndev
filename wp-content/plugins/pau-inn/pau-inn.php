@@ -35,7 +35,7 @@ if ( !function_exists( 'add_action' ) ) {
 include_once( 'paupro-post-relationships.php' );
 include_once( 'pau-inn-member-reports.php' );
 add_action('admin_menu', 'pauinn_push_menu');
-//add_action( 'init', 'pau_inn_init_members', 11 );
+add_action( 'init', 'pau_inn_init_members', 11 );
 
 /**
  * Hook the PauPress Administration Menus
