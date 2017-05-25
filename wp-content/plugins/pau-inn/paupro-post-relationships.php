@@ -108,12 +108,6 @@ function pauinn_delete_terms( $post_id ) {
 
 	$del_post = get_post( $post_id );
 
-}
-
-function pauinn_delete_terms( $post_id ) {
-
-	$del_post = get_post( $post_id );
-
 	// OPTION IN THE TYPES
 	$types = pauinn_get_tax_types();
 	if ( isset( $types[$del_post->post_type] ) ) {
