@@ -66,7 +66,7 @@ function pauinn_posts_to_tax( $post_id ) {
 			$term = get_term_by( 'name', $_POST['pre_post_title'], $tax );
 		}
 
-		if ( false != $term ) {
+    if ( false != $term ) {
 			wp_update_term( $term->term_id, $tax, $arg );
 		} else {
 			wp_insert_term( $cur_post->post_title, $tax, $arg );
@@ -77,7 +77,6 @@ function pauinn_posts_to_tax( $post_id ) {
 
 		if ( isset( $_POST['post_title'] ) && $_POST['post_title'] != 'Auto Draft' )
 			wp_insert_term( $_POST['post_title'], $tax, $arg );
-
 	}
 
 }
@@ -94,7 +93,7 @@ function pauinn_pre_posts_to_tax( $post_id ) {
 		return $post_id;
 	}
 
-	if ( isset( $pre_post->post_title ) && !empty( $pre_post->post_title ) ) {
+  if ( isset( $pre_post->post_title ) && !empty( $pre_post->post_title ) ) {
 		$_POST['pre_post_title'] = $pre_post->post_title;
 		if ( !isset( $_POST['post_title'] ) ) {
 			$title = sanitize_title( $pre_post->post_title );
@@ -103,7 +102,6 @@ function pauinn_pre_posts_to_tax( $post_id ) {
 		}
 		$_POST['post_name'] = $title;
 	}
-
 }
 
 function pauinn_delete_terms( $post_id ) {
@@ -121,7 +119,6 @@ function pauinn_delete_terms( $post_id ) {
 	$ppterm = get_term_by( 'slug', $del_post->post_name, $tax );
 	$pptermID = $ppterm->term_id;
 	wp_delete_term( $pptermID, $tax );
-
 }
 
 function pauinn_update_slug( $data, $postarr ) {
@@ -131,7 +128,7 @@ function pauinn_update_slug( $data, $postarr ) {
 	}
 	$slug_post = get_post( $data['ID'] );
 
-	// OPTION IN THE TYPES
+  // OPTION IN THE TYPES
 	$types = pauinn_get_tax_types();
 	if ( isset( $types[$slug_post->post_type] ) ) {
 		$tax = $types[$slug_post->post_type];
@@ -139,7 +136,7 @@ function pauinn_update_slug( $data, $postarr ) {
 		return $data;
 	}
 
-    $data['post_name'] = sanitize_title( $data['post_title'] );
+  $data['post_name'] = sanitize_title( $data['post_title'] );
 
-    return $data;
+  return $data;
 }
