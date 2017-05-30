@@ -35,7 +35,6 @@ if ( !function_exists( 'add_action' ) ) {
 include_once( 'paupro-post-relationships.php' );
 include_once( 'pau-inn-member-reports.php' );
 add_action('admin_menu', 'pauinn_push_menu');
-//add_action( 'init', 'pau_inn_init_members', 11 );
 
 /**
  * Hook the PauPress Administration Menus
@@ -449,41 +448,6 @@ function pauinn_migration( $args = null ) {
 	// return $members;
 
 }
-
-// TEMPORARY FOR EXPORT
-function pau_inn_init_members() {
-//Members
- register_post_type( 'inn_member',
-   array(
-     'labels' => array(
-       'name' => _x('Members', 'post type general name'),
-       'singular_name' => _x('Member', 'post type singular name'),
-       'add_new' => _x('Add New Member', 'new inn member'),
-       'add_new_item' => __('Add New Member'),
-       'edit_item' => __('Edit Member'),
-       'new_item' => __('New Member'),
-       'all_items' => __('All Members'),
-       'view_item' => __('View Member'),
-       'search_items' => __('Search Members'),
-       'not_found' =>  __('No members found'),
-       'not_found_in_trash' => __('No members found in Trash'),
-       'parent_item_colon' => '',
-       'menu_name' => __('INN Members')
-     ),
-   'menu_position' => 21,
-   'show_ui' => true,
-   'description' => 'INN Member publications/groups',
-   'exclude_from_search' => false,
-   'publicly_queryable' => true,
-   'public' => true,
-   'has_archive' => true,
-   'rewrite' => array('slug' => 'member'),
-   'hierarchical' => false,
-   'supports' => array('title','editor','thumbnail'), //see add_post_type_support()  - leave editor blank for no Case Study
-   )
- );
-}
-
 
 function pau_inn_forms( $id, $uid = false ) {
 
