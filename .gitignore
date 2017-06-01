@@ -126,3 +126,6 @@ wp-content/debug.log
 !/wp-content/themes/largoproject
 !/wp-content/themes/nerds
 !/wp-content/themes/news
+!/wp-content/plugins/pau-inn
+!/wp-content/plugins/pauopps
+!/wp-content/plugins/cmb2-address-field-type
