@@ -815,10 +815,11 @@ function wp_rss_multi_importer_post( $feedID = NULL, $catID = NULL ) {
 			// Cornershop work: allow for customizing post type and other modifications
 		 	// try to get the user associated with this feed
 		 	$member = false;
-		 	$members = new WP_User_Query( array(
+		 	$members = new WP_Query( array(
+				'post_type' => 'inn_member',
 		 		'meta_query' => array(
 		 			array(
-		 				'key' => 'inn_rss',
+		 				'key' => '_rss_feed',
 		 				'value' => $items["feedURL"],
 		 				'compare' => '='
 		 			)
