@@ -178,7 +178,7 @@ echo '<p>'.__("Choose a template for your output.  Choose DEFAULT if you want th
 echo '<p><label class="o_textinput" for="template">'.__("Template", 'wp-rss-multi-importer').'</label>';
 echo 	'<SELECT NAME="rss_import_options[template]" id="template">';
 while ($file = readdir($dir_handle)) {
-	if (eregi("\.php",$file)){
+	if (preg_match("\.php",$file)){
 
 		$friendlyfile=strtoupper(str_replace('.php','',$file));
 		$friendlyfile=str_replace('_',' ',$friendlyfile);
