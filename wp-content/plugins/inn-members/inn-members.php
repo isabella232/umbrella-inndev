@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: INN Members
-Plugin URI: http://investigativenewsnetwork.org
+Plugin URI: https://inn.org
 Description: Generates a widget, page layout and author archive override for displaying INN member organizations. Adds the following shortcodes: <code>[inn-member-map] [inn-member-filters] [inn-member-list]</code>
 Version: 0.1
 Author: Cornershop Creative
@@ -31,7 +31,7 @@ function inn_member_enqueue() {
 		'all'
 	);
 }
-add_action( 'wp_enqueue_scripts', 'inn_member_enqueue' );
+//add_action( 'wp_enqueue_scripts', 'inn_member_enqueue' );
 
 /**
  * Helper functions that are defined in PauPress but might not be available if PauPress isn't on need to be declared
@@ -246,93 +246,6 @@ function inn_member_widget() {
   register_widget('members_widget');
 }
 
-
-
-/**
- * Map on archive page
- */
-function inn_member_map( $atts ) {
-
-	$members = inn_get_members( true );
-	$api_key = "AIzaSyD82h0mNBtvoOmhC3N4YZwqJ_xLkS8yTuw";
-	ob_start();
-	?>
-	<div id="map-container">
-	</div>
-	<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=<?php echo $api_key; ?>&sensor=false"></script>
-	<script type="text/javascript">
-		//convenience objects
-		var $map = jQuery("#map-container"),
-			gm = google.maps,
-			infoWin = new gm.InfoWindow({ content: "default" }),
-			markers = [];
-
-		//new look!
-		gm.visualRefresh = true;
-
-		//create the map
-		var gMap = new gm.Map(document.getElementById("map-container"), {
-			center: new gm.LatLng(39.828328, -98.579416),
-			zoom: 4,
-			mapTypeId: google.maps.MapTypeId.TERRAIN
-		});
-
-		// Function for creating a marker on the map
-		function createMarker( markerinfo ) {
-			var marker = new gm.Marker({
-				map: gMap,
-				draggable: false,
-				animation: gm.Animation.DROP,
-				position: markerinfo.latLng,
-				title: markerinfo.title
-			});
-			marker.data = markerinfo.d;
-
-			//event listening
-			gm.event.addListener(marker, 'click', function() {
-				infoWin.setContent( marker.data );
-				infoWin.open(gMap, marker);
-			});
-
-			//just making sure we have these?
-			markers.push(marker);
-		}
-
-		// The array of places
-		var marker_list = [
-		<?php
-		 foreach ( $members as $member ) :
-		 	//skip members without coordinates
-		 	if ( !isset($member->data->paupress_address_latitude_1['value']) || empty($member->data->paupress_address_latitude_1['value'])) continue;
-		 	$info = sprintf('<div class="map-popup"><a href="%s" class="map-name">%s</a><br/><a href="%s" target="_blank">%s</a></div>',
-		 		get_author_posts_url($member->ID),
-		 		htmlspecialchars($member->display_name, ENT_QUOTES),
-		 		$member->data->user_url,
-		 		$member->data->user_url
-		 	);
-			 ?>{
-title: "<?php echo htmlspecialchars($member->display_name, ENT_QUOTES); ?>",
-latLng: new gm.LatLng(<?php echo $member->data->paupress_address_latitude_1['value'] . "," . $member->data->paupress_address_longitude_1['value'] ?>),
-d: '<?php echo $info; ?>'
-},<?php
-		 endforeach;
-		?>
-		];
-
-		//now load 'em up
-		for (var i = 0; i < marker_list.length; i++) {
-			(function(newmarker, idx) {
-				setTimeout( function() {
-					createMarker( newmarker );
-				}, idx * 20 );
-			})(marker_list[i], i);
-		}
-
-	</script>
-	<?php
-	return ob_get_clean();
-}
-
 /**
  * Alphabetical links
  */
@@ -490,7 +403,6 @@ function inn_member_list( $atts ) {
 	return ob_get_clean();
 }
 add_shortcode( 'inn-member-list', 'inn_member_list' );
-add_shortcode( 'inn-member-map', 'inn_member_map' );
 add_shortcode( 'inn-member-filters', 'inn_member_list_filters' );
 
 /**
