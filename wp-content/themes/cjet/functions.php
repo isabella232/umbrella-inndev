@@ -8,6 +8,7 @@ $includes = array(
 	'/inc/metaboxes.php',
 	'/inc/attachments.php',
 	'/inc/sidebars.php',
+	'/inc/homepage-popup.php',
 	'/lib/file-un-attach/file-unattach.php',
 	'/homepages/homepage.php'
 );
