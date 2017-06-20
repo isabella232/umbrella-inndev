@@ -35,6 +35,11 @@ class Learn_Homepage_Modal {
 		<?php
 	}
 
+	/**
+	 * http://codylindley.com/thickbox/
+	 * https://stackoverflow.com/questions/1802606/launch-thickbox-onload-instead-of-click#2128858
+	 * https://codex.wordpress.org/ThickBox
+	 */
 	function load() {
 		?>
 			<script type="text/javascript">
