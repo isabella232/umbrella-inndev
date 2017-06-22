@@ -815,7 +815,8 @@ function wp_rss_multi_importer_post( $feedID = NULL, $catID = NULL ) {
 			// Cornershop work: allow for customizing post type and other modifications
 		 	// try to get the user associated with this feed
 		 	$member = false;
-		 	$members = new WP_User_Query( array(
+			/*
+			$members = new WP_User_Query( array(
 		 		'meta_query' => array(
 		 			array(
 		 				'key' => 'inn_rss',
@@ -824,15 +825,26 @@ function wp_rss_multi_importer_post( $feedID = NULL, $catID = NULL ) {
 		 			)
 		 		)
 		 	) );
+			*/
+		 	$members = new WP_Query( array(
+				'post_type' => 'inn_member',
+		 		'meta_query' => array(
+		 			array(
+		 				'key' => '_rss_feed',
+		 				'value' => $items["feedURL"],
+		 				'compare' => '='
+		 			)
+		 		)
+		 	) );
 
-		 	if ( !empty($members->results) ) {
+		 	if ( ! empty( $members->results ) ) {
 			 	$member = $members->results[0];
 			}
 			if ( $member ) {
 				$post['post_author'] = $member->ID;
 				// error_log( 'Found post author, ID = ' . $member->ID . " for feed " . $items['feedURL'] );
 			} else {
-				error_log( "*** INN RSS error: No member user found with 'inn_rss' value of " . $items['FeedURL'] . " ***");
+				error_log( "*** INN RSS error: No member found with '_rss_feed' value of " . $items['FeedURL'] . " ***");
 			}
 
 			// set post type
