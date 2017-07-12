@@ -1,0 +1,174 @@
+#branding img {
+  margin: 24px auto 18px;
+  display: block;
+  max-width: 400px;
+  padding: 0 5%;
+  width: 90%;
+}
+body.normal.page #content.guide-page {
+  margin-left: 0;
+}
+.guide-page {
+  .author-posts-link {
+    display: none;
+  }
+  .entry-content .widget {
+    padding: 15px 0;
+  }
+  .pager {
+    a {
+      width: 100%;
+      box-sizing: border-box;
+      height: 100%;
+    }
+    h5.top-page {
+      margin-bottom: 0;
+      font-size: 21px;
+    }
+  }
+  .toggle-nav-bar {
+    display: none;
+  }
+  .guide-nav {
+    padding: 20px;
+    background-color: @xltgray;
+    h4 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      a {
+        color: @dkgray;
+      }
+    }
+    .current_page_item {
+      font-weight: bold;
+      .children {
+        font-weight: normal;
+      }
+    }
+  }
+  .guide-author {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    color: @medgray;
+  }
+  .author-box {
+    a {
+      color: @medgray;
+    }
+    h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      a {
+        color: #000;
+      }
+    }
+    h5 {
+      margin-bottom: 8px;
+    }
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+    .author-posts-link {
+      display: none;
+    }
+  }
+  @media screen and (max-width:782px) {
+    .guide-nav {
+      width: 100%;
+      padding: 0;
+      .container {
+        margin: 5px 10px;
+      }
+      .guide-tree,
+      .resources {
+        display: none;
+      }
+      .toggle-nav-bar {
+        display: block;
+        margin-top: 0
+      }
+      h4 {
+        font-size: 21px;
+        margin: 0.1em 0;
+        color: black;
+      }
+      ul {
+        margin: 0 -10px 0 44px
+      }
+      li {
+        display: block;
+        float: none;
+        > a {
+          color: @blue;
+          padding: 6px 10px;
+        }
+      }
+      .resources h4 {
+        margin-left: 46px;
+      }
+    }
+    article.span9 {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 10px;
+      .entry-content h3 {
+        font-size: 21px;
+        margin-bottom: 12px;
+        &.guide-author {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .pager .next,
+    .pager .previous {
+      width: 100%;
+      margin-bottom: 8px;
+    }
+  }
+}
+.guide-resources {
+  margin-left: 0;
+  li {
+    display: block;
+  }
+  a {
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+  .attachment-meta {
+    white-space: nowrap;
+  }
+  i {
+    -webkit-font-smoothing: antialiased;
+  }
+  .icon-picture {
+    color: cadetblue;
+  }
+  .icon-play {
+    color: crimson;
+  }
+  .icon-table {
+    color: forestgreen;
+  }
+  .icon-doc-text {
+    color: mediumblue;
+  }
+  .icon-doc-text-inv {
+    color: firebrick;
+  }
+  .icon-download {
+    color: indigo;
+  }
+}
+
+#breadcrumbs  {
+  font-family: @sans;
+  font-weight: 700;
+  margin-bottom: 24px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
