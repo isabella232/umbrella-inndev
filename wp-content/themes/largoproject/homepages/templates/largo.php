@@ -34,7 +34,7 @@
 				</div>
 				<div class="description">
 					<h3>Powerful Publishing Tools</h3>
-					<p>Unlike other WordPress "news" themes, Largo is built by real news nerds. We obsess about workfow, too.</p>
+					<p>Unlike other WordPress "news" themes, Largo is built by real news nerds. We obsess about workflow, too.</p>
 				</div>
 			</div>
 			<div class="about-description-1 clearfix">
