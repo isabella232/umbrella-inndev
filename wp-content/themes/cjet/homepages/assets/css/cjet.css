@@ -88,6 +88,59 @@
   float: left;
   border-top: 0;
 }
+#home-search {
+  background-color: #aaaaaa;
+  background-size: cover;
+  background-attachment: fixed;
+  backgrounnd-position: center;
+  padding-top: 6em;
+  padding-bottom: 4em;
+  text-align: center;
+  position: relative;
+}
+#home-search h3 {
+  color: white;
+  text-shadow: 0 0 20px #000000;
+}
+#home-search button {
+  margin-left: 1em;
+}
+#home-search button,
+#home-search input {
+  box-shadow: 5px 5px 40px rgba(0, 0, 0, 0.5);
+}
+@media (min-width: 769px) {
+  #home-search h3 {
+    font-size: 2em;
+  }
+  #home-search input[type=text] {
+    width: 320px;
+  }
+}
+#home-search .photo-credit {
+  text-align: right;
+  display: inline-block;
+  width: auto;
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  padding: 4px 6px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.2;
+  border-radius: 3px;
+  opacity: 0.5;
+}
+#home-search .photo-credit:hover {
+  opacity: 1;
+}
+#home-search .photo-credit span {
+  display: inline-block;
+  padding: 2px 3px;
+}
 #email .mc-field-group {
   display: inline;
 }

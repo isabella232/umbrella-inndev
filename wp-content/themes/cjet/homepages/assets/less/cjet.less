@@ -84,6 +84,69 @@
   }
 }
 
+#home-search {
+  background-color: @ltgray;
+  background-size: cover;
+  background-attachment: fixed;
+  backgrounnd-position: center;
+
+  padding-top: 6em;
+  padding-bottom: 4em;
+  text-align: center;
+
+  h3 {
+    color: @white;
+    text-shadow: 0 0 20px @black;
+  }
+  button {
+    margin-left: 1em;
+  }
+  button, input {
+    box-shadow: 5px 5px 40px rgba(0,0,0,0.5);
+  }
+  @media (min-width: 769px) {
+    h3 {
+      font-size: 2em;
+    }
+    input[type=text] {
+      width: 320px;
+    }
+  }
+
+  position: relative;
+
+  // these styles adopted from the defualt unsplash photo credits
+  .photo-credit {
+    text-align: right;
+    display: inline-block;
+    width: auto;
+
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+
+    background-color:black;
+    color:white;
+    text-decoration:none;
+    padding:4px 6px;
+    
+    font-size:12px;
+    font-weight:bold;
+    line-height:1.2;
+    border-radius:3px;
+
+    opacity: 0.5;
+    &:hover {
+      opacity: 1;
+    }
+    
+    span {
+      display:inline-block;
+      padding:2px 3px;
+    }
+  }
+}
+
 #email {
   .mc-field-group {
     display: inline;
