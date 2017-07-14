@@ -1,3 +1,5 @@
+hash foo 2>/dev/null || { echo >&2 "I require foo but it's not installed.  Aborting."; exit 1; }
+
 echo "Resizing "$1" to the necessary sizes";
 # 360
 # 520
