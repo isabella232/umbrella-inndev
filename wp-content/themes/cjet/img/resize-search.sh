@@ -1,4 +1,15 @@
-hash foo 2>/dev/null || { echo >&2 "I require foo but it's not installed.  Aborting."; exit 1; }
+#!/bin/bash
+# Command to generate the necessary sizes of image for the homepage search
+
+# gotta have the commands
+hash convert 2>/dev/null || { echo >&2 "I require convert but it's not installed. Please install ImageMagick.  Aborting."; exit 1; }
+
+# gotta have an argument
+if [ -z ${1} ]; then
+	echo "You must specify a file to resize:";
+	echo "./resize-search.sh search.jpg";
+	exit 1;
+fi;
 
 echo "Resizing "$1" to the necessary sizes";
 # 360
