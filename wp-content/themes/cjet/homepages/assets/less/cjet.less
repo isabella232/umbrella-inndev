@@ -120,6 +120,56 @@
   }
 }
 
+#boxes {
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  .widget {
+    vertical-align: top;
+    display: inline-block;
+    max-width: 300px;
+    margin: 1em;
+
+    padding: 0;
+
+    box-shadow: 0.7em 0.7em 0 @black;
+    border: 2px solid @black;
+    &:hover {
+      box-shadow: 0.7em 0.7em 0 @blue;
+      border: 2px solid @blue;
+    }
+
+    a {
+      display: block;
+      padding-left: 24px;
+      padding-right: 24px;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+      color: @black;
+
+      text-decoration: none;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    h3 {
+      // set this explicitly so we have a better idea of the height of the element
+      line-height: 1.2;
+      font-size: 20px;
+      height: 2 * 1.2 * 20px;
+      margin-bottom: 0.5em;
+
+      // vertically center the header element
+      display: flex;
+      align-items: center;
+      flex-basis: fill;
+      justify-content: center;
+
+    }
+  }
+}
+
 #email {
   .mc-field-group {
     display: inline;
