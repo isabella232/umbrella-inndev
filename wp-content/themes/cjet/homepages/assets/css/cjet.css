@@ -92,6 +92,10 @@
   flex: 1 1 auto;
   justify-content: center;
 }
+#email p,
+#email input.btn {
+  font-size: 16px;
+}
 #email input {
   margin-bottom: 0;
   max-width: 200px;
@@ -112,5 +116,9 @@
   #email p {
     text-align: right;
     padding-right: 1em;
+    margin-bottom: 0;
+  }
+  #email .break-desktop {
+    display: block;
   }
 }

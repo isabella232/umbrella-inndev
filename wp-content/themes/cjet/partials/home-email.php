@@ -1,6 +1,6 @@
 <?php $img_path = get_stylesheet_directory_uri() . '/homepages/assets/img/'; ?>
 <section id="email" class="interstitial branding ">
-	<p class="">Get updates, INN member stories, training and more delivered straight to your inbox.</p>
+	<p class="">Get updates, INN member stories, training and more <span class="break-desktop">delivered straight to your inbox.</span></p>
 
 	<form id="mc-embedded-subscribe-form" class="validate " style="margin-bottom: 0;" action="//inn.us1.list-manage.com/subscribe/post?u=81670c9d1b5fbeba1c29f2865&amp;id=19bec3393e" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
 		<label for="EMAIL" class="visuallyhidden">email address</label>
