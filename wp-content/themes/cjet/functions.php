@@ -5,7 +5,7 @@ require_once( get_template_directory() . '/largo-apis.php' );
 
 // Includes
 $includes = array(
-	'/inc/common.php',
+	'/../inn/inc/common.php',
 	'/inc/metaboxes.php',
 	'/inc/attachments.php',
 	'/inc/sidebars.php',
