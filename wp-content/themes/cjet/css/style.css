@@ -14,9 +14,11 @@ select,
 textarea {
   font-family: "effra", helvetica, sans-serif;
   color: #4d4d4d;
+  padding: 0;
+  border: 0;
 }
 h1 {
-  color: #333333;
+  color: #000;
 }
 textarea,
 input[type="text"],
@@ -31,15 +33,19 @@ input[type="search"] {
 .entry-content ol {
   font-family: "effra", helvetica, sans-serif;
   font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 1em;
 }
 h1,
 h2,
 h3,
 h4,
-h5,
-.widgettitle {
+h5 {
   font-weight: 700;
   line-height: 1.2;
+}
+.widgettitle {
+  font-weight: 300;
 }
 a {
   color: #df4646;
@@ -63,7 +69,7 @@ a:hover {
 }
 .btn.btn-primary {
   color: #fff;
-  background-color: #f77710;
+  background-color: #F77710;
 }
 .btn.btn-primary:hover {
   background-color: #df6807;
@@ -77,15 +83,20 @@ a:hover {
 .btn.btn-mini {
   padding: 2px 6px;
 }
+.entry-content {
+  overflow-x: scroll;
+}
 .donate-btn a:hover {
   color: #fff;
 }
 #top-nav li {
-  padding-top: 2px;
+  margin: 0 2em 0 0;
+  font-size: 16px;
+  font-family: "effra", helvetica, sans-serif;
+  line-height: 38px;
 }
 #top-nav li.main_site_home_link {
   padding-top: 0;
-  font-size: 16px;
   font-weight: bold;
 }
 #top-nav li.main_site_home_link a {
@@ -99,6 +110,10 @@ a:hover {
 }
 .navbar li.home-icon > a img {
   height: 58px;
+}
+.navbar .home-icon:hover img,
+.navbar li.home-link:hover i {
+  opacity: 1;
 }
 /*
  * post template adjustments
@@ -119,7 +134,7 @@ a:hover {
 @media (min-width: 769px) {
   .classic #content {
     padding-right: 24px;
-    border-right: 1px solid #aaaaaa;
+    border-right: 1px solid #aaa;
   }
   .classic #sidebar {
     margin-left: 0;
@@ -140,7 +155,7 @@ a:hover {
  * footer adjustments
  */
 .footer-bg {
-  background-color: #000000;
+  background-color: #000;
 }
 #site-footer .widgettitle,
 #site-footer li.menu-label,
@@ -167,6 +182,9 @@ a:hover {
     text-align: center;
   }
 }
+#inn-logo {
+  max-width: 300px;
+}
 #site-footer .span4.left {
   margin: 0;
 }
@@ -192,7 +210,8 @@ a:hover {
 }
 #site-footer .textwidget {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 22px;
+  text-align: left;
 }
 @media (max-width: 768px) {
   #site-footer img[alt="INN logo"] {
@@ -257,15 +276,15 @@ a:hover {
 #menu-footer-bottom.menu li,
 p.footer-credit {
   font-size: 14px;
-  color: #aaaaaa;
+  color: #aaa;
 }
 #menu-footer-bottom.menu li a,
 p.footer-credit a {
-  color: #aaaaaa;
+  color: #aaa;
 }
 @media (min-width: 769px) {
   .footer-bottom {
-    border-top: 1px solid #aaaaaa;
+    border-top: 1px solid #aaa;
     padding-top: 3em;
   }
   #menu-footer-bottom.menu li,
@@ -284,7 +303,7 @@ p.footer-credit a {
     padding-right: 1em;
   }
   #supplementary .span4.left {
-    border-top: 1px solid #aaaaaa;
+    border-top: 1px solid #aaa;
     padding-top: 25.95086878px;
     margin-top: 3em;
   }
@@ -309,8 +328,11 @@ p.footer-credit a {
 .footer-credit-padding-inn-logo-missing {
   margin-top: 0;
 }
-.top-tag {
+h5.top-tag {
   font-weight: 300;
+}
+h5.top-tag a {
+  color: #000;
 }
 .stories h2.entry-title {
   font-size: 24px;
@@ -326,9 +348,9 @@ p.footer-credit a {
   display: none;
 }
 .type-pull-quote {
-  font-family: serif;
-  border-left: 1px solid #aaaaaa;
-  padding-left: 40px;
+  font-family: "leitura-news", georgia, serif;
+  border-left: 1px solid #aaa;
+  padding-left: 24px;
   color: #4d4d4d;
 }
 .type-pull-quote h6,
@@ -384,8 +406,9 @@ section,
 .branding h3 {
   font-weight: 400;
   font-size: 2em;
-  margin-bottom: 0.25em;
-  color: #000000;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  color: #000;
 }
 .branding form {
   display: block;
@@ -401,6 +424,8 @@ section,
 .branding input.btn {
   display: inline-block;
   clear: none;
+  font-size: 20px;
+  line-height: 24px;
   padding: 13px 1em;
   width: 200px;
 }
@@ -485,7 +510,7 @@ section,
   visibility: hidden;
   opacity: 0;
   background-color: white;
-  border-bottom: 1px solid #aaaaaa;
+  border-bottom: 1px solid #aaa;
   -webkit-transition: opacity 0.3s;
   -moz-transition: opacity 0.3s;
   -ms-transition: opacity 0.3s;
@@ -534,17 +559,17 @@ body.admin-bar .sticky-nav-holder {
   transition: opacity 0.3s;
 }
 .navbar.sticky-navbar .nav {
-  color: #000000;
+  color: #000;
 }
 .navbar.sticky-navbar li a {
   line-height: 56px;
-  color: #000000;
+  color: #000;
 }
 .navbar.sticky-navbar li a:hover {
   color: #0d0d0d;
 }
 .navbar.sticky-navbar li a .caret:before {
-  border-top-color: #000000;
+  border-top-color: #000;
 }
 .navbar.sticky-navbar li a:hover .caret:before {
   border-top-color: #0d0d0d;
@@ -553,7 +578,7 @@ body.admin-bar .sticky-nav-holder {
   color: #0d0d0d;
 }
 .navbar.sticky-navbar li.dropdown .dropdown-menu li a {
-  color: #000000;
+  color: #000;
 }
 .navbar.sticky-navbar li.dropdown .dropdown-menu li a:hover {
   color: #0d0d0d;
@@ -571,7 +596,7 @@ body.admin-bar .sticky-nav-holder {
   display: inline-block;
 }
 .navbar.sticky-navbar .btn-navbar .icon-bar {
-  background-color: #000000;
+  background-color: #000;
 }
 .navbar.sticky-navbar .btn-navbar:hover .icon-bar {
   background-color: #0d0d0d;
@@ -689,7 +714,7 @@ body.admin-bar .sticky-nav-holder {
 .navbar.sticky-navbar .site-name a {
   font-weight: bold;
   padding: 0 10px 0 0;
-  color: #000000;
+  color: #000;
   max-width: 214px;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -746,11 +771,11 @@ body.admin-bar .sticky-nav-holder {
 @media (max-width: 768px) {
   #sticky-nav .nav-shelf li,
   #sticky-nav .nav-shelf li a {
-    color: #000000;
+    color: #000;
   }
   #sticky-nav .nav-shelf li:hover,
   #sticky-nav .nav-shelf li a:hover {
-    color: #000000;
+    color: #000;
     background-color: #f2f2f2;
   }
 }
@@ -794,12 +819,24 @@ header#site-header {
   margin-right: 0;
 }
 #main-nav ul li a {
-  color: #000000;
-  font-weight: 300;
+  color: #000;
+  font-weight: 400;
+}
+#main-nav ul li a[href*='/donate'] {
+  margin-top: 15px;
+  padding: 4px 1em;
+  line-height: 20px;
+  background-color: #09c9ff;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+#main-nav ul li a[href*='/donate']:hover {
+  background-color: #00a6d5;
 }
 #main-nav li > a:hover {
   background-color: #f2f2f2;
-  text-decoration: underline;
+  text-decoration: none;
 }
 #main-nav ul#navbar-left {
   float: left;
@@ -826,10 +863,10 @@ header#site-header {
   height: 3px;
   margin-top: 3px;
 }
-@media (min-width: 769px) and (max-width: 1020px) {
+@media (min-width: 769px) and (max-width: 1222px) {
   #main-nav .nav {
     float: none;
-    text-align: center;
+    text-align: right;
     width: 100%;
     clear: both;
     width: 95vw;
@@ -838,12 +875,19 @@ header#site-header {
     float: none;
     text-align: left;
   }
-  .caret,
   .navbar li > a {
     padding: 0 4px;
   }
+  .caret {
+    padding: 0 0 0 4px;
+  }
 }
-@media (min-width: 1021px) {
+@media (min-width: 906px) {
+  #main-nav .nav > li + li {
+    margin-left: 1em;
+  }
+}
+@media (min-width: 1223px) {
   #main-nav .nav {
     float: right;
   }
