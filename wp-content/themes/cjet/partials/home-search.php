@@ -62,7 +62,7 @@ $url = get_stylesheet_directory_uri();
 	</form>
 
 	<!-- photo credit for https://unsplash.com/photos/PeUJyoylfe4 as img/search.jpg -->
-	<a class="photo-credit" style="" href="https://twitter.com/@LEBertoc" target="_blank" rel="noopener noreferrer" title="Photo Credit: Laura Bertocci">
+	<a class="photo-credit visible-desktop" style="" href="https://twitter.com/@LEBertoc" target="_blank" rel="noopener noreferrer" title="Photo Credit: Laura Bertocci">
 		<span style="">
 			<svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white;" viewBox="0 0 32 32">
 				<title>
