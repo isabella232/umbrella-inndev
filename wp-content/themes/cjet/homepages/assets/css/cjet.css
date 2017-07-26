@@ -24,7 +24,10 @@
     font-size: 2em;
   }
   #home-search input[type=text] {
-    width: 320px;
+    width: 420px;
+  }
+  #home-search button {
+    padding: 4px 24px;
   }
 }
 #home-search .photo-credit {
