@@ -9,8 +9,8 @@ env.project_name = 'inndev'
 env.file_path = '.'
 env.sftp_deploy = True
 
-env.hipchat_token = os.environ['HIPCHAT_DEPLOYMENT_NOTIFICATION_TOKEN']
-env.hipchat_room_id = os.environ['HIPCHAT_DEPLOYMENT_NOTIFICATION_ROOM_ID']
+env.hipchat_token = ''
+env.hipchat_room_id = ''
 
 
 # Environments
