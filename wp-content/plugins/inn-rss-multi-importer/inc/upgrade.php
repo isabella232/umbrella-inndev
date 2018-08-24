@@ -96,8 +96,13 @@ function upgrade_db() {
 			}
 		}
 
-		$catsize = count($catOptions);
-		$postoptionsize= $catsize/2;
+		if ( is_array( $catOptions ) ) {
+			$catsize = count($catOptions);
+			$postoptionsize = $catsize/2;
+		} else {
+			$catsize = 0;
+			$postoptionsize = 0;
+		}
 
 		for ( $q=1; $q<=$postoptionsize; $q++ ){
 			$post_settings['categoryid']['plugcatid'][$q]=$post_options['categoryid']['plugcatid'][$q];
