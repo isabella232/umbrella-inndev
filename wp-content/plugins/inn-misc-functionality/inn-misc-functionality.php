@@ -2,7 +2,7 @@
 /**
  * Plugin Name:     Inn Misc Functionality
  * Plugin URI:      PLUGIN SITE HERE
- * Description:     Functions adding functinoality to INN.org's content
+ * Description:     Functions adding functionality to INN.org's content
  * Author:          INN Labs
  * Author URI:      https://labs.inn.org/
  * Text Domain:     inn-misc-functionality
