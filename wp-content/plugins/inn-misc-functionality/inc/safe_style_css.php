@@ -23,4 +23,4 @@ function safe_style_css( $styles ) {
 
 	return $styles;
 }
-add_action( 'safe_style_css', __NAMESPACE__ . '\safe_style_css' ) );
+add_action( 'safe_style_css', __NAMESPACE__ . '\\safe_style_css' );
