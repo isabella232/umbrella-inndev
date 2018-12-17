@@ -1,9 +1,6 @@
 [submodule "wp-content/themes/largo"]
 	path = wp-content/themes/largo
 	url = https://github.com/INN/Largo.git
-[submodule "tools"]
-	path = tools
-	url = https://github.com/INN/deploy-tools.git
 [submodule "wp-content/plugins/news-quiz"]
 	path = wp-content/plugins/news-quiz
 	url = https://github.com/INN/news-quiz.git
