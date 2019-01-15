@@ -181,17 +181,24 @@ function inn_member_states() {
  */
 class members_widget extends WP_Widget {
 
-  function __construct() {
-    $options = get_option('members_options');
-    $widget_ops = array( 'classname' => 'inn-members-widget', 'description' => 'A list of INN members, showing logo icons' );
-    $control_ops = array( 'width' => 300, 'height' => 250, 'id_base' => 'members-widget' );
-    $this->WP_Widget( 'members-widget', 'INN Member List', $widget_ops, $control_ops );
-  }
+	public function __construct() {
+		$options = get_option( 'members_options' );
+		$widget_ops = array(
+			'classname' => 'inn-members-widget',
+			'description' => 'A list of INN members, showing logo icons'
+		);
+		$control_ops = array(
+			'width' => 300,
+			'height' => 250,
+			'id_base' => 'members-widget'
+		);
+		parent::__construct( 'members-widget', 'INN Member List', $widget_ops, $control_ops );
+	}
 
 
-  function widget($args, $instance) {
-    extract($args);
-    echo $before_widget;
+	public function widget($args, $instance) {
+		extract($args);
+		echo $before_widget;
 		$menu = wp_nav_menu( array(
 			'theme_location' => 'membership',
 			'container' => false,
@@ -200,46 +207,47 @@ class members_widget extends WP_Widget {
 			'echo' => 0)
 		);
 
-    if (!empty($instance['title'])) echo $before_title . '<span>' . $instance['title'] . '</span>' . $menu . $after_title; ?>
+		if (!empty($instance['title'])) echo $before_title . '<span>' . $instance['title'] . '</span>' . $menu . $after_title; ?>
 
-    <div class="member-wrapper widget-content">
-	    <ul class="members">
-	    <?php
-	      $counter = 1;
-	      $member_list = inn_get_members( true );
-	      foreach ($member_list as $member) :
-	      	if ( !isset($member->data->paupress_pp_avatar['value']) ) continue;	//skip members without logos
-	      ?>
-	        <li id="member-list-<?php echo $member->ID;?>" class="<?php echo $member->data->paupress_pp_avatar['value']; ?>">
-	        	<a href="<?php echo get_author_posts_url($member->ID) ?>" class="member-thumb" title="<?php esc_attr_e($member->display_name) ?>">
-	        	<?php echo get_avatar( $member->ID ); ?>
-	        	</a>
-	        </li>
-	      <?php endforeach; ?>
-	    </ul>
-	    <div class="member-details-wrapper">
-	    	<span class="close"><i class="icon-cancel"></i></span>
-	    	<div class="member-details"></div>
-	    </div>
-    </div>
-  <?php
-    echo $after_widget;
-  }
+		<div class="member-wrapper widget-content">
+			<ul class="members">
+			<?php
+				$counter = 1;
+				$member_list = inn_get_members( true );
+				foreach ($member_list as $member) :
+					if ( !isset($member->data->paupress_pp_avatar['value']) ) continue;	//skip members without logos
+				?>
+					<li id="member-list-<?php echo $member->ID;?>" class="<?php echo $member->data->paupress_pp_avatar['value']; ?>">
+						<a href="<?php echo get_author_posts_url($member->ID) ?>" class="member-thumb" title="<?php esc_attr_e($member->display_name) ?>">
+						<?php echo get_avatar( $member->ID ); ?>
+						</a>
+					</li>
+				<?php endforeach; ?>
+			</ul>
+			<div class="member-details-wrapper">
+				<span class="close"><i class="icon-cancel"></i></span>
+				<div class="member-details"></div>
+			</div>
+		</div>
+	<?php
+		echo $after_widget;
+	}
 
-  function update($new_instance, $old_instance) {
-    $instance = $old_instance;
-    /* Strip tags (if needed) and update the widget settings. */
-    $instance['title'] = strip_tags( $new_instance['title'] );
-    return $instance;
-  }
+	public function update( $new_instance, $old_instance ) {
+		$instance = $old_instance;
+		/* Strip tags (if needed) and update the widget settings. */
+		$instance['title'] = strip_tags( $new_instance['title'] );
+		return $instance;
+	}
 
-  function form($instance) { ?>
-    <p>
-     <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e("Title"); ?>:</label>
-     <input type="text" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo $instance['title']; ?>" class="widefat" />
-    </p>
-  <?php
-  }
+	public function form( $instance ) {
+		?>
+			<p>
+				<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title' ); ?>:</label>
+				<input type="text" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name('title') ); ?>" value="<?php esc_html_e( $instance['title'] ); ?>" class="widefat" />
+			</p>
+		<?php
+	}
 }
 add_action('widgets_init', 'inn_member_widget', 11);
 function inn_member_widget() {
