@@ -3,7 +3,7 @@
 		<div id="logo-and-description" class="clearfix">
 			<div id="hero-logo">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/homepages/assets/img/logos/largo-project-logo.svg" />
-				<span id="version">Version 0.6<span>
+				<span id="version">Version 0.6.1<span>
 			</div>
 			<div id="hero-description">
 				<h4>The WordPress Framework for News Websites</h4>
