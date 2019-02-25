@@ -1,17 +1,15 @@
+## Deploy instructions
+
+Generally speaking, see https://wpengine.com/git/
+
+```
+git remote add wpe-prod git@git.wpengine.com:production/inndev.git
+git remote add wpe-staging git@git.wpengine.com:staging/inndev.git
+```
+
+
+
 ## Setup instructions
-
-This repository is designed to be set up in accordance with the VVV install instructions in INN/docs, that were introduced with https://github.com/INN/docs/pull/148
-
-To get started, open a new terminal window.
-
-Navigate to the vagrant-local/www directory.
-
-And then run:
-
-```
-vv create
-```
-You'll then see a series of prompts. Respond thusly:
 
 Prompt | Text to enter
 ------------ | -------------
