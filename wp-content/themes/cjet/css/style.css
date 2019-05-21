@@ -301,6 +301,17 @@ a:hover {
   padding: 0 5%;
   width: 90%;
 }
+#top-nav li.main_site_home_link {
+  padding-top: 2px;
+  font-size: inherit;
+  font-weight: inherit;
+}
+#top-nav li.main_site_home_link a {
+  color: #fff;
+}
+#top-nav li.main_site_home_link a:hover {
+  color: #d9d9d9;
+}
 body.normal.page #content.guide-page {
   margin-left: 0;
 }
