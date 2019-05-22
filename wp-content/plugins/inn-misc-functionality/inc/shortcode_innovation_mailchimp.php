@@ -17,11 +17,11 @@ namespace INN\Plugin\INNovation;
  * @since 0.2
  */
 function innovation_newsletter_archive( $atts, $content, $tag ) {
-	$return = <<<'EOT'
+	$archive_script = <<<'EOT'
 <!-- innovation_newsletter_archive; see https://github.com/INN/umbrella-inndev/tree/master/wp-content/plugins/inn-misc-functionality -->
 <script language="javascript" src="//inn.us1.list-manage.com/generate-js/?u=81670c9d1b5fbeba1c29f2865&fid=9&show=10" type="text/javascript"></script>
 EOT;
-	return $return;
+	return $archive_script;
 }
 add_shortcode( 'innovation_newsletter_archive', __NAMESPACE__ . '\\innovation_newsletter_archive' );
 
@@ -34,7 +34,7 @@ add_shortcode( 'innovation_newsletter_archive', __NAMESPACE__ . '\\innovation_ne
  * @since 0.2
  */
 function innovation_newsletter_form( $atts, $content, $tag ) {
-	$return = <<<'EOT'
+	$signup_form = <<<'EOT'
 <!-- innovation_newsletter_form; see https://github.com/INN/umbrella-inndev/tree/master/wp-content/plugins/inn-misc-functionality -->
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
 <style type="text/css">
@@ -102,6 +102,6 @@ function innovation_newsletter_form( $atts, $content, $tag ) {
 <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
 <script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='MMERGE3';ftypes[3]='text';fnames[4]='MMERGE4';ftypes[4]='text';fnames[5]='MMERGE5';ftypes[5]='radio';fnames[6]='INDEXUSER';ftypes[6]='text';fnames[7]='INDEXPASS';ftypes[7]='text';fnames[8]='MMERGE8';ftypes[8]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 EOT;
-	return $return;
+	return $signup_form;
 }
 add_shortcode( 'innovation_newsletter_form', __NAMESPACE__ . '\\innovation_newsletter_form' );
