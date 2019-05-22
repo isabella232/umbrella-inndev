@@ -7,12 +7,13 @@
  * Author URI:      https://labs.inn.org/
  * Text Domain:     inn-misc-functionality
  * Domain Path:     /languages
- * Version:         0.1.0
+ * Version:         0.2.0
  */
 
 // Your code starts here.
 $includes = array(
 	'/inc/safe_style_css.php',
+	'/inc/shortcode_innovation_mailchimp.php',
 );
 foreach ( $includes as $include ) {
 	if ( 0 === validate_file( dirname( __FILE__ ) . $include ) ) {
