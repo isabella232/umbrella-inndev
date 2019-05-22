@@ -82,3 +82,22 @@ function cjet_theme_options( $options ) {
 	return $options;
 }
 add_filter('largo_options', 'cjet_theme_options');
+
+function add_after_largo_header(){
+	if ( ! is_search() ) {
+        ?>
+            <div id="header-search">
+                <form class="form-search" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+                    <div class="input-append">
+                        <input type="text" placeholder="<?php _e('Search', 'largo'); ?>" class="input-medium appendedInputButton search-query" value="" name="s" /><button type="submit" class="search-submit btn"><?php _e('GO', 'largo'); ?></button>
+                    </div>
+                </form>
+            </div>
+        <?php
+	}
+
+	if ( SHOW_SECONDARY_NAV === TRUE ) {
+		get_template_part( 'partials/nav', 'secondary' );
+	}
+}
+add_action( 'largo_header_after_largo_header', 'add_after_largo_header');

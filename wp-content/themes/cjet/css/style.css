@@ -312,6 +312,9 @@ a:hover {
 #top-nav li.main_site_home_link a:hover {
   color: #d9d9d9;
 }
+#header-search {
+  float: right;
+}
 body.normal.page #content.guide-page {
   margin-left: 0;
 }
