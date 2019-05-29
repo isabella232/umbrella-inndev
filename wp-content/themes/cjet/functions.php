@@ -84,12 +84,16 @@ function cjet_theme_options( $options ) {
 add_filter('largo_options', 'cjet_theme_options');
 
 function add_after_largo_header(){
+
+	echo '<div class="cjet-header-grid"><h5>Guides and Resources for<br/>Nonprofit News Organizations</h5></div>';
+	echo '<div class="cjet-header-grid">';
+
 	if ( ! is_search() ) {
-        ?>
+		?>
             <div id="header-search">
                 <form class="form-search" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
                     <div class="input-append">
-                        <input type="text" placeholder="<?php _e('Search', 'largo'); ?>" class="input-medium appendedInputButton search-query" value="" name="s" /><button type="submit" class="search-submit btn"><?php _e('GO', 'largo'); ?></button>
+                        <input type="text" placeholder="<?php _e('SEARCH...', 'largo'); ?>" class="input-medium appendedInputButton search-query" value="" name="s" />
                     </div>
                 </form>
             </div>
@@ -99,5 +103,8 @@ function add_after_largo_header(){
 	if ( SHOW_SECONDARY_NAV === TRUE ) {
 		get_template_part( 'partials/nav', 'secondary' );
 	}
+
+	echo '</div>';
+
 }
 add_action( 'largo_header_after_largo_header', 'add_after_largo_header');
