@@ -100,8 +100,8 @@ function add_after_largo_header(){
         <?php
 	}
 
-	if ( SHOW_SECONDARY_NAV === TRUE ) {
-		get_template_part( 'partials/nav', 'secondary' );
+	if ( SHOW_MAIN_NAV === TRUE ) {
+		get_template_part( 'partials/nav', 'main' );
 	}
 
 	echo '</div>';

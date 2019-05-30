@@ -331,19 +331,30 @@ a:hover {
     max-width: 200px;
   }
 }
-#site-header #topics-bar ul {
-  text-align: right;
+#site-header #main-nav {
+  border: none;
 }
-#site-header #topics-bar ul li {
-  margin-left: 20px;
-  margin-right: 0;
-  text-align: right;
-  font-weight: bold;
+#site-header #main-nav .nav {
+  float: right;
 }
-@media (max-width: 1200px) {
-  #site-header #topics-bar ul li {
-    margin-left: 15px;
+#site-header #main-nav .navbar-inner {
+  background-color: transparent;
+}
+#site-header #main-nav a {
+  color: #0089bb;
+  padding-right: 0;
+  font-size: 15px;
+}
+#site-header #main-nav a:hover {
+  background: none;
+}
+@media (max-width: 900px) {
+  #site-header #main-nav a {
+    font-size: 14px;
   }
+}
+#site-header #main-nav .dropdown-menu a {
+  padding-right: 10px;
 }
 #main {
   margin-top: 8px;
