@@ -27,39 +27,48 @@ $top_page = FALSE;
 
 			// now get the complete tree of child pages for the guide's top page
 			$children = wp_list_pages('title_li=&child_of=' . $guide_parent_id . '&echo=0');
+
+			/*
+			 * Commented out until we're sure of what we want to do with attachments
 			$attachments = get_posts( array(
 				'post_type' => 'attachment',
 				'posts_per_page' => -1,
 				'post_parent' => $guide_parent_id,
 				'exclude'     => get_post_thumbnail_id( $guide_parent_id ), //don't get the featured image
 			) );
+			*/
 			?>
 
 			<nav class="guide-nav span3 navbar">
 				<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
 				<div class="container clearfix">
-		      <a class="btn btn-navbar toggle-nav-bar" title="More">
-		        <div class="bars">
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-		        </div>
-		      </a>
-					
+					<a class="btn btn-navbar toggle-nav-bar" title="More">
+						<div class="bars">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</div>
+					</a>
+
 					<?php if ( $top_page ) { ?>
-						<h4><?php _e('In This ' . ucfirst( rtrim($guide_type, 's') ), 'cjet'); ?></h4>
+						<h4><?php esc_html_e('In This ' . ucfirst( rtrim($guide_type, 's') ), 'cjet'); ?></h4>
 					<?php } else { ?>
-						<h4 class="guide-top"><a href="<?php echo get_permalink($guide_parent_id); ?>"><?php echo get_the_title($guide_parent_id); ?></a></h4>
+						<h4 class="guide-top">
+							<a href="<?php echo esc_attr( get_permalink( $guide_parent_id ) ); ?>">
+								<?php echo get_the_title( $guide_parent_id ); ?>
+							</a>
+						</h4>
 					<?php } ?>
+
 					<ul class="guide-tree">
 						<?php echo $children; ?>
-					</ul>
-					
-					<ul class="guide-sidebar-below-toc-widget-area">
+
 						<?php dynamic_sidebar( 'guide-sidebar-below-toc' ); ?>
 					</ul>
 
 					<?php
+					/*
+					 * Commented out until we're sure of what we want to do with attachments
 					// on interior guide pages, list resources attached to the parent guide page
 					// if ( $attachments ) : ?>
 					<!-- <div class="resources">
@@ -76,8 +85,9 @@ $top_page = FALSE;
 						<!-- </ul></div> -->
 							<?php
 					// endif;	// resources links
-					?>
 
+					*/
+					?>
 				</div>
 			</nav>
 
