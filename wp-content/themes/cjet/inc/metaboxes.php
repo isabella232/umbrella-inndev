@@ -66,3 +66,60 @@ function cjet_author_display_control() {
 	}
 }
 largo_register_meta_input( 'cjet_hide_author' );
+
+/**
+ * Adds metabox to display who the post/page was last edited by
+ */
+largo_add_meta_box(
+	'cjet_last_edited_metabox',
+	__('Last Edited', 'cjet'),
+	'cjet_last_edited_metabox',
+	array( 'page', 'post' )
+);
+
+function cjet_last_edited_metabox() {
+
+	$post_type = get_post_type();
+	
+	// grab the name of the author who last edited the post/page
+	$modified_author = get_the_modified_author();
+
+	// grab last date the post/page was edited
+	$modified_date = get_the_modified_date();
+
+	echo sprintf(
+		'<p>This %1$s was last edited by %2$s on %3$s.</p>',
+		esc_html( $post_type ),
+		esc_html( $modified_author ),
+		esc_html( $modified_date )
+	);
+
+}
+
+/**
+ * Adds metabox to allow authors to select and view when the content was published/updated
+ */
+largo_add_meta_box(
+	'cjet_content_date_metabox',
+	__('Content Date', 'cjet'),
+	'cjet_content_date_metabox',
+	array( 'page', 'post' )
+);
+
+function cjet_content_date_metabox() {
+
+	global $post;
+
+	// grab existing content date from post meta
+	$content_date = get_post_meta( $post->ID, 'cjet_content_date' )[0];
+	
+	echo '<p>This content was originally published on:</p>';
+
+	echo sprintf(
+		'<input type="date" id="cjet-content-date" name="cjet_content_date" value="%1$s" />',
+		esc_html( $content_date )
+	);
+
+}
+
+largo_register_meta_input( 'cjet_content_date' );
