@@ -188,3 +188,51 @@ body.normal.page #content.guide-page {
     display: none;
   }
 }
+
+.guide-page {
+  .guide-nav {
+    background-color: transparent;
+    border-right: 3px solid @orange;
+    padding-top: 0;
+    h4 {
+      color: #0089bb;
+      margin-bottom:15px;
+    }
+    ul {
+      list-style: none;
+      margin-left: 0;
+      li {
+        a {
+          color: #1c1c1c;
+        }
+      }
+    }
+  }
+  .resources {
+    border: 3px solid @orange;
+    padding: 15px;
+    margin-bottom: 40px;
+    h4 {
+      margin: 5px 0;
+      color: #1c1c1c;
+      text-transform: uppercase;
+    }
+    ul{
+      &.guide-resources {
+        margin-bottom: 0;
+        li {
+          display: inline-grid;
+          width: 25%;
+          margin: 10px 0 0;
+          font-size: 16px;
+          i {
+            display: none;
+          }
+          @media (max-width: 999px) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
