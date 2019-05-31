@@ -324,12 +324,15 @@ body.normal.page #content.guide-page {
 }
 .guide-page .guide-nav {
   padding: 20px;
-  background-color: #edf1f4;
+  background-color: transparent;
+  border-right: 3px solid #ff8b4d;
+  padding-top: 0;
 }
 .guide-page .guide-nav h4 {
   font-size: 18px;
-  margin-bottom: 8px;
   text-transform: uppercase;
+  color: #0089bb;
+  margin-bottom: 15px;
 }
 .guide-page .guide-nav h4 a {
   color: #555555;
@@ -339,6 +342,34 @@ body.normal.page #content.guide-page {
 }
 .guide-page .guide-nav .current_page_item .children {
   font-weight: normal;
+}
+.guide-page .guide-nav .guide-sidebar-below-toc-widget-area {
+  list-style: none;
+}
+.guide-page .guide-nav .guide-sidebar-below-toc-widget-area h2.widgettitle {
+  color: #1c1c1c;
+}
+@media (max-width: 768px) {
+  .guide-page .guide-nav .guide-sidebar-below-toc-widget-area {
+    display: none;
+  }
+}
+.guide-page .guide-nav ul {
+  margin-left: 0;
+}
+.guide-page .guide-nav ul.guide-tree {
+  list-style: none;
+}
+.guide-page .guide-nav ul.guide-tree li a {
+  color: #1c1c1c;
+}
+.guide-page .guide-nav ul .largo-donate h2 {
+  font-size: 17px;
+}
+.guide-page .guide-nav ul .largo-donate p {
+  margin-bottom: 26px;
+  font-size: 16px;
+  max-width: 95%;
 }
 .guide-page .guide-author {
   font-size: 18px;
@@ -395,7 +426,7 @@ body.normal.page #content.guide-page {
     float: none;
   }
   .guide-page .guide-nav li > a {
-    color: #09c9ff;
+    color: #0089bb;
     padding: 6px 10px;
   }
   .guide-page .guide-nav .resources h4 {
