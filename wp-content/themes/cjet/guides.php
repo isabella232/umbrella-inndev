@@ -45,7 +45,7 @@ $top_page = FALSE;
 			        <span class="icon-bar"></span>
 		        </div>
 		      </a>
-
+					
 					<?php if ( $top_page ) { ?>
 						<h4><?php _e('In This ' . ucfirst( rtrim($guide_type, 's') ), 'cjet'); ?></h4>
 					<?php } else { ?>
@@ -54,25 +54,30 @@ $top_page = FALSE;
 					<ul class="guide-tree">
 						<?php echo $children; ?>
 					</ul>
+					
+					<ul class="guide-sidebar-below-toc-widget-area">
+						<?php dynamic_sidebar( 'guide-sidebar-below-toc' ); ?>
+					</ul>
 
 					<?php
 					// on interior guide pages, list resources attached to the parent guide page
-					if ( $attachments ) : ?>
-					<div class="resources">
-						<h4><?php _e('Resources', 'cjet'); ?></h4>
+					// if ( $attachments ) : ?>
+					<!-- <div class="resources">
+						<h4><?php _e('Related Resources', 'cjet'); ?></h4>
 						<ul class="guide-resources"><?php
-							foreach ( $attachments as $attachment ) {
-								//print_r( $attachment );
-								$class = "mime-" . sanitize_title( $attachment->post_mime_type );
-								echo '<li class="' . $class . ' data-design-thumbnail">';
-								echo cjet_format_attachment_link( $attachment->ID );
-								echo '</li>';
-							}
-						?>
-						</ul></div>
+							// foreach ( $attachments as $attachment ) {
+							// 	//print_r( $attachment );
+							// 	$class = "mime-" . sanitize_title( $attachment->post_mime_type );
+							// 	echo '<li class="' . $class . ' data-design-thumbnail">';
+							// 	echo cjet_format_attachment_link( $attachment->ID );
+							// 	echo '</li>';
+							// }
+						?> -->
+						<!-- </ul></div> -->
 							<?php
-					endif;	// resources links
+					// endif;	// resources links
 					?>
+
 				</div>
 			</nav>
 
