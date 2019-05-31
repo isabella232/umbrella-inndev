@@ -55,6 +55,25 @@ $top_page = FALSE;
 						<?php echo $children; ?>
 					</ul>
 
+					<?php
+					// on interior guide pages, list resources attached to the parent guide page
+					// if ( $attachments ) : ?>
+					<!-- <div class="resources">
+						<h4><?php _e('Related Resources', 'cjet'); ?></h4>
+						<ul class="guide-resources"><?php
+							// foreach ( $attachments as $attachment ) {
+							// 	//print_r( $attachment );
+							// 	$class = "mime-" . sanitize_title( $attachment->post_mime_type );
+							// 	echo '<li class="' . $class . ' data-design-thumbnail">';
+							// 	echo cjet_format_attachment_link( $attachment->ID );
+							// 	echo '</li>';
+							// }
+						?> -->
+						<!-- </ul></div> -->
+							<?php
+					// endif;	// resources links
+					?>
+
 				</div>
 			</nav>
 
@@ -81,25 +100,6 @@ $top_page = FALSE;
 						if ( $top_page && ( get_post_meta( $post->ID, 'cjet_hide_author', TRUE ) !== '1' ) ) {
 							the_widget( 'largo_author_widget' );
 						}
-					?>
-
-					<?php
-					// on interior guide pages, list resources attached to the parent guide page
-					if ( $attachments ) : ?>
-					<div class="resources">
-						<h4><?php _e('Related Resources', 'cjet'); ?></h4>
-						<ul class="guide-resources"><?php
-							foreach ( $attachments as $attachment ) {
-								//print_r( $attachment );
-								$class = "mime-" . sanitize_title( $attachment->post_mime_type );
-								echo '<li class="' . $class . ' data-design-thumbnail">';
-								echo cjet_format_attachment_link( $attachment->ID );
-								echo '</li>';
-							}
-						?>
-						</ul></div>
-							<?php
-					endif;	// resources links
 					?>
 
 					<?php // in-guide navigation ?>

@@ -474,30 +474,3 @@ body.normal.page #content.guide-page {
 .guide-page .guide-nav ul li a {
   color: #1c1c1c;
 }
-.guide-page .resources {
-  border: 3px solid #ff8b4d;
-  padding: 15px;
-  margin-bottom: 40px;
-}
-.guide-page .resources h4 {
-  margin: 5px 0;
-  color: #1c1c1c;
-  text-transform: uppercase;
-}
-.guide-page .resources ul.guide-resources {
-  margin-bottom: 0;
-}
-.guide-page .resources ul.guide-resources li {
-  display: inline-grid;
-  width: 25%;
-  margin: 10px 0 0;
-  font-size: 16px;
-}
-.guide-page .resources ul.guide-resources li i {
-  display: none;
-}
-@media (max-width: 999px) {
-  .guide-page .resources ul.guide-resources li {
-    width: 100%;
-  }
-}
