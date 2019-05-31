@@ -212,10 +212,29 @@ body.normal.page #content.guide-page {
     color: mediumblue;
   }
   .icon-doc-text-inv {
-	color: firebrick;
+    color: firebrick;
   }
   .icon-download {
     color: indigo;
+  }
+}
+details.guide-form{
+  border: 1px solid transparent;
+  summary{
+    width: 100%;
+    box-sizing: border-box;
+
+    &::before,
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+  &[open] {
+    border-color: @black;
+    summary {
+      background-color: @white;
+      color: @black;
+    }
   }
 }
 @media screen and (max-width: 768px) {
