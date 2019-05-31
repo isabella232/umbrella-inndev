@@ -51,20 +51,55 @@ body.normal.page #content.guide-page {
   }
   .guide-nav {
     padding: 20px;
-    background-color: @xltgray;
+    background-color: transparent;
+    border-right: 3px solid @orange;
+    padding-top: 0;
     h4 {
       font-size: 18px;
-      margin-bottom: 8px;
       text-transform: uppercase;
+      color: #0089bb;
+      margin-bottom:15px;
       a {
-	    color: @dkgray;
+        color: @dkgray;
       }
     }
     .current_page_item {
-	  font-weight: bold;
-	  .children {
-	    font-weight: normal;
-	  }
+      font-weight: bold;
+      .children {
+        font-weight: normal;
+      }
+    }
+    .guide-sidebar-below-toc-widget-area {
+      list-style: none;
+      h2 {
+        &.widgettitle {
+        color: #1c1c1c;
+        }
+      }
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+    ul {
+      margin-left: 0;
+      &.guide-tree {
+        list-style: none;
+        li {
+          a {
+            color: #1c1c1c;
+          }
+        }
+      }
+      .largo-donate{
+        h2 {
+          font-size: 17px;
+        }
+        p {
+          margin-bottom: 26px;
+          font-size: 16px;
+          max-width: 95%;
+        }
+      }
     }
   }
   .guide-author {
@@ -186,26 +221,5 @@ body.normal.page #content.guide-page {
 @media screen and (max-width: 768px) {
   #breadcrumbs {
     display: none;
-  }
-}
-
-.guide-page {
-  .guide-nav {
-    background-color: transparent;
-    border-right: 3px solid @orange;
-    padding-top: 0;
-    h4 {
-      color: #0089bb;
-      margin-bottom:15px;
-    }
-    ul {
-      list-style: none;
-      margin-left: 0;
-      li {
-        a {
-          color: #1c1c1c;
-        }
-      }
-    }
   }
 }

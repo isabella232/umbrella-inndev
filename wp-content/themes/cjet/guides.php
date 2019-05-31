@@ -45,7 +45,7 @@ $top_page = FALSE;
 			        <span class="icon-bar"></span>
 		        </div>
 		      </a>
-
+					
 					<?php if ( $top_page ) { ?>
 						<h4><?php _e('In This ' . ucfirst( rtrim($guide_type, 's') ), 'cjet'); ?></h4>
 					<?php } else { ?>
@@ -53,6 +53,10 @@ $top_page = FALSE;
 					<?php } ?>
 					<ul class="guide-tree">
 						<?php echo $children; ?>
+					</ul>
+					
+					<ul class="guide-sidebar-below-toc-widget-area">
+						<?php dynamic_sidebar( 'guide-sidebar-below-toc' ); ?>
 					</ul>
 
 					<?php
