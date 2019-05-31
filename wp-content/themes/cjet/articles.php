@@ -55,23 +55,27 @@ $top_page = FALSE;
 						<?php echo $children; ?>
 					</ul>
 
+					<ul class="guide-sidebar-below-toc-widget-area">
+						<?php dynamic_sidebar( 'guide-sidebar-below-toc' ); ?>
+					</ul>
+
 					<?php
 					// on interior article pages, list resources attached to the parent article page
-					if ( $attachments ) : ?>
-					<div class="resources">
-						<h4><?php _e('Resources', 'cjet'); ?></h4>
+					// if ( $attachments ) : ?>
+					<!-- <div class="resources"> -->
+						<!-- <h4><?php _e('Resources', 'cjet'); ?></h4>
 						<ul class="guide-resources"><?php
-							foreach ( $attachments as $attachment ) {
-								//print_r( $attachment );
-								$class = "mime-" . sanitize_title( $attachment->post_mime_type );
-								echo '<li class="' . $class . ' data-design-thumbnail">';
-								echo cjet_format_attachment_link( $attachment->ID );
-								echo '</li>';
-							}
+							// foreach ( $attachments as $attachment ) {
+							// 	//print_r( $attachment );
+							// 	$class = "mime-" . sanitize_title( $attachment->post_mime_type );
+							// 	echo '<li class="' . $class . ' data-design-thumbnail">';
+							// 	echo cjet_format_attachment_link( $attachment->ID );
+							// 	echo '</li>';
+							// }
 						?>
-						</ul></div>
+						</ul></div> -->
 							<?php
-					endif;	// resources links
+					// endif;	// resources links
 					?>
 				</div>
 			</nav>
