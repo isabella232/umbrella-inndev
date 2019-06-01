@@ -16,7 +16,7 @@ foreach ( $includes as $include ) {
 }
 
 
-// Custom scripts
+// Custom script
 function cjet_enqueue() {
 	wp_enqueue_script( 'cjet-javascript', get_stylesheet_directory_uri() . '/js/cjet.js' );
 }
@@ -41,15 +41,6 @@ function cjet_breadcrumbs() {
 }
 add_action( 'largo_main_top', 'cjet_breadcrumbs' );
 
-
-if( FALSE === get_option("large_crop") ) {
-	add_option("large_crop", "1");
-	add_option("medium_crop", "1");
-} else {
-	update_option("large_crop", "1");
-	update_option("medium_crop", "1");
-}
-
 add_theme_support( 'custom-header' );
 
 
@@ -58,7 +49,6 @@ function cjet_init() {
 	add_post_type_support( 'page', 'excerpt' );
 }
 add_action( 'init', 'cjet_init' );
-
 
 // Add extra theme options
 function cjet_theme_options( $options ) {
@@ -82,3 +72,12 @@ function cjet_theme_options( $options ) {
 	return $options;
 }
 add_filter('largo_options', 'cjet_theme_options');
+
+/**
+ * Enable shortcodes in Custom HTML Widget
+ *
+ * @link https://github.com/INN/umbrella-inndev/issues/68#issuecomment-497853084
+ * @link https://core.trac.wordpress.org/browser/tags/5.2/src/wp-includes/widgets/class-wp-widget-custom-html.php#L158
+ */
+add_filter( 'widget_custom_html_content', 'shortcode_unautop');
+add_filter( 'widget_custom_html_content', 'do_shortcode');
