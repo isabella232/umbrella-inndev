@@ -35,7 +35,7 @@ $top_page = FALSE;
 			) );
 			?>
 
-			<nav class="guide-nav span3 navbar">
+			<nav class="guide-nav span3">
 				<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
 				<div class="container clearfix">
 		      <a class="btn btn-navbar toggle-nav-bar" title="More">
