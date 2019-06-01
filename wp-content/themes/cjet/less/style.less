@@ -1,22 +1,35 @@
+// branding imports from INN
 @import "../../inn/less/variables.less";
 @import "../../inn/less/common.less";
+
+@breakpoint: 769px;
+@stickyNavLineHeight: 56px;
+
+
+// local styles
+@import "guides.less";
 
 #breadcrumbs  {
   font-family: @sans;
   font-weight: 700;
+  margin-bottom: 24px;
+  @media (max-width: @breakpoint) {
+    display: none;
+  }
 }
+
 #site-header,
 .home #site-header {
   min-height: 0;
 }
+
 #main {
-  margin-top: 8px;
+  @media screen and (max-width:@breakpoint) {
+    margin-top: @stickyNavLineHeight;
+  }
 }
 #content {
   margin-left: 0;
-}
-#breadcrumbs {
-  margin-bottom: 24px;
 }
 #branding img {
   margin: 24px auto 18px;
@@ -27,218 +40,4 @@
 }
 body.normal.page #content.guide-page {
   margin-left: 0;
-}
-.guide-page {
-  .author-posts-link {
-    display: none;
-  }
-  .entry-content .widget {
-    padding: 15px 0;
-  }
-  .pager {
-    a {
-      width: 100%;
-      box-sizing: border-box;
-      height: 100%;
-    }
-    h5.top-page {
-	  margin-bottom: 0;
-	  font-size: 21px;
-    }
-  }
-  .toggle-nav-bar {
-    display: none;
-  }
-  .guide-nav {
-    padding: 20px;
-    background-color: transparent;
-    border-right: 3px solid @orange;
-    padding-top: 0;
-    h4 {
-      font-size: 18px;
-      text-transform: uppercase;
-      color: #0089bb;
-      margin-bottom:15px;
-      a {
-        color: @dkgray;
-      }
-    }
-    .current_page_item {
-      font-weight: bold;
-      .children {
-        font-weight: normal;
-      }
-    }
-    .guide-sidebar-below-toc-widget-area {
-      list-style: none;
-      h2 {
-        &.widgettitle {
-        color: #1c1c1c;
-        }
-      }
-      @media (max-width: 768px) {
-        display: none;
-      }
-    }
-    ul {
-      margin-left: 0;
-      &.guide-tree {
-        list-style: none;
-        li {
-          a {
-            color: #1c1c1c;
-          }
-        }
-      }
-      .largo-donate{
-        h2 {
-          font-size: 17px;
-        }
-        p {
-          margin-bottom: 26px;
-          font-size: 16px;
-          max-width: 95%;
-        }
-      }
-    }
-  }
-  .guide-author {
-    font-size: 18px;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-    color: @medgray;
-  }
-  .author-box {
-    a {
-	  color: @medgray;
-    }
-    h3 {
-	  font-size: 18px;
-	  margin-bottom: 8px;
-	  a {
-        color: #000;
-	  }
-	}
-    h5 {
-      margin-bottom: 8px;
-    }
-    ul {
-	  padding: 0;
-	  margin: 0;
-    }
-    .author-posts-link {
-      display: none;
-    }
-  }
-  @media screen and (max-width:782px) {
-    .guide-nav {
-      width: 100%;
-      padding: 0;
-      .container {
-        margin: 5px 10px;
-      }
-      .guide-tree,
-      .resources {
-        display: none;
-      }
-      .toggle-nav-bar {
-        display: block;
-        margin-top: 0
-      }
-      h4 {
-        font-size: 21px;
-        margin: 0.1em 0;
-        color: black;
-      }
-      ul {
-        margin: 0 -10px 0 44px
-      }
-      li {
-        display: block;
-        float: none;
-        > a {
-          color: @blue;
-          padding: 6px 10px;
-        }
-      }
-      .resources h4 {
-        margin-left: 46px;
-      }
-    }
-    article.span9 {
-      width: 100%;
-      margin-left: 0;
-      margin-top: 10px;
-      .entry-content h3 {
-	    font-size: 21px;
-	    margin-bottom: 12px;
-	    &.guide-author {
-		  margin-bottom: 0;
-	    }
-      }
-    }
-    .pager .next,
-    .pager .previous {
-	  width: 100%;
-	  margin-bottom: 8px;
-    }
-  }
-}
-.guide-resources {
-  margin-left: 0;
-  li {
-    display: block;
-  }
-  a {
-    word-wrap: break-word;
-    word-break: break-word;
-  }
-  .attachment-meta {
-    white-space: nowrap;
-  }
-  i {
-    -webkit-font-smoothing: antialiased;
-  }
-  .icon-picture {
-    color: cadetblue;
-  }
-  .icon-play {
-    color: crimson;
-  }
-  .icon-table {
-    color: forestgreen;
-  }
-  .icon-doc-text {
-    color: mediumblue;
-  }
-  .icon-doc-text-inv {
-    color: firebrick;
-  }
-  .icon-download {
-    color: indigo;
-  }
-}
-details.guide-form{
-  border: 1px solid transparent;
-  summary{
-    width: 100%;
-    box-sizing: border-box;
-
-    &::before,
-    &::-webkit-details-marker {
-      display: none;
-    }
-  }
-  &[open] {
-    border-color: @black;
-    summary {
-      background-color: @white;
-      color: @black;
-    }
-  }
-}
-@media screen and (max-width: 768px) {
-  #breadcrumbs {
-    display: none;
-  }
 }
