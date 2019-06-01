@@ -51,7 +51,9 @@ $top_page = FALSE;
 					</a>
 
 					<?php if ( $top_page ) { ?>
-						<h4><?php esc_html_e('In This ' . ucfirst( rtrim($guide_type, 's') ), 'cjet'); ?></h4>
+						<h4 class="guide-top">
+							<?php esc_html_e( 'In This ' . ucfirst( rtrim( $guide_type, 's') ), 'cjet' ); ?>
+						</h4>
 					<?php } else { ?>
 						<h4 class="guide-top">
 							<a href="<?php echo esc_attr( get_permalink( $guide_parent_id ) ); ?>">

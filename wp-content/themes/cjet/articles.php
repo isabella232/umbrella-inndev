@@ -38,19 +38,22 @@ $top_page = FALSE;
 			<nav class="guide-nav span3">
 				<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
 				<div class="container clearfix">
-		      <a class="btn btn-navbar toggle-nav-bar" title="More">
-		        <div class="bars">
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-		        </div>
-		      </a>
+					<a class="btn btn-navbar toggle-nav-bar" title="More">
+						<div class="bars">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</div>
+					</a>
 
 					<?php if ( $top_page ) { ?>
-						<h4><?php _e('In This ' . ucfirst( rtrim($article_type, 's') ), 'cjet'); ?></h4>
+						<h4 class="guide-top">
+							<?php esc_html_e( 'In This ' . ucfirst( rtrim( $article_type, 's') ), 'cjet' ); ?>
+						</h4>
 					<?php } else { ?>
 						<h4 class="guide-top"><a href="<?php echo get_permalink($article_parent_id); ?>"><?php echo get_the_title($article_parent_id); ?></a></h4>
 					<?php } ?>
+
 					<ul class="guide-tree">
 						<?php echo $children; ?>
 					</ul>
