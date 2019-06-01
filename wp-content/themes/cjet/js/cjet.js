@@ -7,10 +7,8 @@ jQuery(document).ready( function($) {
 	$(window).on('resize', function() {
 		if ( $(window).width() < 768 ) {
 			$('.guide-nav').addClass('navbar');
-			$('.guide-nav .guide-tree, .guide-nav .resources').hide();
 		} else {
-			$('.guide-nav').removeClass('navbar');
-			$('.guide-nav .guide-tree, .guide-nav .resources').show();
+			$('.guide-nav').removeClass('navbar open');
 		}
 	});
 
