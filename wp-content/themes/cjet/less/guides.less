@@ -10,9 +10,15 @@
     padding: 15px 0;
   }
   .pager {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
     a {
       width: 100%;
       box-sizing: border-box;
+      height: 100%;
+      justify-content: center;
       height: 100%;
     }
     h5.top-page {
@@ -28,7 +34,6 @@
     }
     .previous,
     .next {
-      width: 30%;
       a {
         background-color: transparent;
         color: #0089bb;
@@ -43,11 +48,12 @@
           margin-bottom: 1px;
         }
       }
-      @media (max-width: 999px) {
-        width: 50%;
-      }
     }
     .previous {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 100%;
+      flex: 1;
       a {
         .dashicons {
           float: left;
@@ -58,9 +64,26 @@
             text-align: left;
           }
         }
+        .meta-nav {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          height: 100%;
+          @media (min-width:1099px) {
+            max-width: 300px;
+          }
+          @media (max-width: 768px) {
+            justify-content: flex-start;
+          }
+        }
       }
     }
     .next {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 100%;
+      flex: 1;
+      justify-content: center;
       a {
         .dashicons {
           float: right;
@@ -70,6 +93,20 @@
             float: none;
             text-align: right;
             margin-left: -15px;
+          }
+        }
+        .meta-nav {
+          display: flex;
+          height: 100%;
+          justify-content: center;
+          flex-direction: column;
+          text-align: right;
+          @media (min-width:1099px) {
+            max-width: 300px;
+            float: right;
+          }
+          @media (max-width: 768px) {
+            justify-content: flex-start;
           }
         }
       }
