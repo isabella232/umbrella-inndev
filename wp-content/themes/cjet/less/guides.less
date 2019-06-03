@@ -26,6 +26,39 @@
         margin-bottom: 8px;
       }
     }
+    .previous,
+    .next {
+      width: 30%;
+      a {
+        background-color: transparent;
+        color: #0089bb;
+        padding: 10px 0;
+        font-weight: bold;
+        .dashicons {
+          color: #000;
+          height: 100%;
+          font-size: 38px;
+          width: 38px;
+          height: 38px;
+          margin-bottom: 1px;
+        }
+      }
+      @media (max-width: 999px) {
+        width: 50%;
+      }
+    }
+    .previous {
+      .dashicons {
+        float: left;
+        padding-right: 20px;
+      }
+    }
+    .next {
+      .dashicons {
+        float: right;
+        padding-left: 20px;
+      }
+    }
   }
   .toggle-nav-bar {
     margin-top: 0;
