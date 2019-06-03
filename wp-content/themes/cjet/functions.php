@@ -68,12 +68,6 @@ function cjet_theme_options( $options ) {
 		'type' 	=> 'heading');
 
 	$options[] = array(
-		'desc' 	=> __('Enter a description of the online courses to appear on the homepage.', 'cjet'),
-		'id' 	=> 'cjet_courses_intro',
-		'std' 	=> '',
-		'type' 	=> 'textarea');
-
-	$options[] = array(
 		'desc' 	=> __('Enter a description of the guides to appear on the homepage.', 'cjet'),
 		'id' 	=> 'cjet_guides_intro',
 		'std' 	=> '',
