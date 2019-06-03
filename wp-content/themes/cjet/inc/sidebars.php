@@ -9,5 +9,11 @@ function cjet_register_sidebars() {
 		'before_title' 	=> '<h3 class="widgettitle">',
 		'after_title' 	=> '</h3>',
 	) );
+
+	register_sidebar( array(
+		'name'			=> __( 'Guide Sidebar Below Table of Contents', 'cjet' ),
+		'id' 			=> 'guide-sidebar-below-toc',
+		'description' 	=> __( 'Widget area for Guides sidebar. This will appear below the table of contents.', 'cjet' ),
+	) );
 }
 add_action( 'widgets_init', 'cjet_register_sidebars' );

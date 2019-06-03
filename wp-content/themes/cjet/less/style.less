@@ -136,15 +136,17 @@ body.normal.page #content.guide-page {
     display: none;
   }
   .guide-nav {
-    padding: 0 20px 20px;
+    padding: 20px;
+    background-color: transparent;
     border-right: 3px solid @orange;
+    padding-top: 0;
     h4 {
       font-size: 18px;
-      margin-bottom: 8px;
       text-transform: uppercase;
       color: #0089bb;
+      margin-bottom:15px;
       a {
-	      color: #0089bb;
+        color: @dkgray;
       }
     }
     .current_page_item {
@@ -153,14 +155,36 @@ body.normal.page #content.guide-page {
         font-weight: normal;
       }
     }
-    a {
-      color: #1c1c1c;
-    }
-    .guide-tree {
+    .guide-sidebar-below-toc-widget-area {
       list-style: none;
+      h2 {
+        &.widgettitle {
+        color: #1c1c1c;
+        }
+      }
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+    ul {
       margin-left: 0;
-      .children {
+      &.guide-tree {
         list-style: none;
+        li {
+          a {
+            color: #1c1c1c;
+          }
+        }
+      }
+      .largo-donate{
+        h2 {
+          font-size: 17px;
+        }
+        p {
+          margin-bottom: 26px;
+          font-size: 16px;
+          max-width: 95%;
+        }
       }
     }
   }
