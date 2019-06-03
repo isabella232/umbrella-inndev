@@ -1,27 +1,12 @@
 @import "../../../../inn/less/variables.less";
 
 .home {
-  .stories article {
-    border-bottom: none;
-    img.attachment-medium {
-	  max-width: 100%;
-    }
-  }
-  #courses,
+  #top,
   #guides {
     clear: both;
-    > h1,
-    > .description {
-      text-align: center;
-    }
-    ul {
-      margin: 0;
-      padding: 0;
-      text-align: left;
-      overflow: hidden; //clearfix
-      font-size: 0;	// inline-block spacing hack
-    }
-    li {
+    padding: 5vw 2vw;
+
+    .widget {
       display: inline-block;
       margin-right: percentage( 10 / 1170 );
       margin-left: percentage( 10 / 1170 );
@@ -33,86 +18,63 @@
       max-width: 100%;
       height: auto;
     }
-    br {
-      clear: left;
+    h2 {
+      font-size: 20px;
+      font-size: ~"calc( 10px + 2vw )";
+      margin-bottom: 12px;
     }
-    h1 {
-	  font-size: 40px;
-	  margin-bottom: 12px;
+    h2 a, p a {
+      color: @black;
     }
-    h4 {
-	  font-size: 24px;
-	  margin-bottom: 4px;
-	  line-height: 1.2;
+    .widgettitle {
+      font-size: 24px;
+      margin-bottom: 4px;
+      line-height: 1.2;
+      color: @blue;
+      text-transform: none;
     }
     p {
-	  font-size: 15px;
+      font-size: 15px;
     }
   }
-  #extras {
-    margin-bottom: 24px;
-    .widget p,
-    .widget ul,
-    .largo-recent-posts h5 {
-	  padding: 0;
-    }
-    .widget p {
-	  font-size: 13.04px;
-	  margin-bottom: 4px;
-	  &.more-link {
-	    font-weight: bold;
-	  }
-    }
-  }
-  #courses li {
-    width: 31.62393162393162%;
-  }
-  #guides li {
-    width: percentage( .25 * (1090.0/1170) );
-  }
-  #extras {
+  #top {
     background-color: @xltgray;
-    padding: 10px;
-    overflow: hidden;
-    > aside {
-      box-sizing: border-box;
-      padding: 10px;
-      width: 33.3333%;
-      float: left;
-      border-top: 0;
-    }
-  }
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-@media screen and (max-width: 980px) {
-  .home #guides li {
-    width: 31.62393162393162%;
-  }
-}
-@media screen and (max-width: 768px) {
-  .home {
-    #courses li,
-    #guides li {
-	  width: 48%;
-      margin-left: 1%;
-      margin-right:1%;
+    .widget {
+      margin-bottom: 0;
     }
-    #extras aside {
-	  width: 100%;
-	  float: none;
+    .widget_media_image {
+      flex-basis: 10em;
+      @media ( max-width: 768px ) {
+        display: none;
+      }
+    }
+    .widget_text {
+      flex-basis: 30em;
     }
   }
-}
-@media screen and (max-width: 480px) {
-  .home {
-    #courses li,
-    #guides li {
-      width: 100%;
-      margin-left: 0;
-      margin-right: 0;
+  #guides {
+    h2 {
+      text-align: center;
     }
-    #main {
-      margin-top: 0;
+    .description {
+      margin: 0 auto;
+      max-width: 30em;
+    }
+  }
+  #guides-container {
+    margin-top: 5vw;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+
+    .widget {
+      flex: 0 1 290px;
     }
   }
 }
