@@ -68,7 +68,7 @@ function cjet_theme_options( $options ) {
 		'type' 	=> 'heading');
 
 	$options[] = array(
-		'desc' 	=> __('Enter a description of the guides to appear on the homepage.', 'cjet'),
+		'desc' 	=> __('Enter a description of the topics section that appears on the homepage.', 'cjet'),
 		'id' 	=> 'cjet_guides_intro',
 		'std' 	=> '',
 		'type' 	=> 'textarea');

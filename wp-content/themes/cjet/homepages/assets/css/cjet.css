@@ -1,10 +1,10 @@
 .home #biggo,
-.home #guides {
+.home #topics {
   clear: both;
   padding: 5vw 2vw;
 }
 .home #biggo .widget,
-.home #guides .widget {
+.home #topics .widget {
   display: inline-block;
   margin-right: 0.85470085%;
   margin-left: 0.85470085%;
@@ -13,24 +13,24 @@
   text-align: left;
 }
 .home #biggo span[data-picture],
-.home #guides span[data-picture] {
+.home #topics span[data-picture] {
   max-width: 100%;
   height: auto;
 }
 .home #biggo h2,
-.home #guides h2 {
+.home #topics h2 {
   font-size: 20px;
   font-size: calc( 10px + 2vw );
   margin-bottom: 12px;
 }
 .home #biggo h2 a,
-.home #guides h2 a,
+.home #topics h2 a,
 .home #biggo p a,
-.home #guides p a {
+.home #topics p a {
   color: #1c1c1c;
 }
 .home #biggo .widgettitle,
-.home #guides .widgettitle {
+.home #topics .widgettitle {
   font-size: 24px;
   margin-bottom: 4px;
   line-height: 1.2;
@@ -38,7 +38,7 @@
   text-transform: none;
 }
 .home #biggo p,
-.home #guides p {
+.home #topics p {
   font-size: 15px;
 }
 .home #biggo {
@@ -61,11 +61,11 @@
 .home #biggo .widget_text {
   flex-basis: 30em;
 }
-.home #guides h2 {
+.home #topics h2 {
   text-align: center;
 }
-.home #guides h2::before,
-.home #guides h2::after {
+.home #topics h2::before,
+.home #topics h2::after {
   display: inline-block;
   vertical-align: center;
   width: 4em;
@@ -75,23 +75,23 @@
   margin-bottom: 0.23em;
   margin-top: 0.23em;
 }
-.home #guides h2::before {
+.home #topics h2::before {
   margin-right: 1.3em;
 }
-.home #guides h2::after {
+.home #topics h2::after {
   margin-left: 1.3em;
 }
-.home #guides .description {
+.home #topics .description {
   margin: 0 auto;
   max-width: 30em;
 }
-.home #guides-container {
+.home #topics-container {
   margin-top: 5vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
 }
-.home #guides-container .widget {
+.home #topics-container .widget {
   flex: 0 1 240px;
 }

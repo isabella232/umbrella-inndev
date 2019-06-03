@@ -11,8 +11,8 @@ function cjet_register_sidebars() {
 	) );
 
 	register_sidebar( array(
-		'name' 			=> __( 'Homepage Guides', 'cjet' ),
-		'id' 			=> 'homepage-guides',
+		'name' 			=> __( 'Homepage Topics', 'cjet' ),
+		'id' 			=> 'homepage-topics',
 		'description' 	=> __( 'This is the cluster of items on the bottom of the homepage.', 'cjet' ),
 		'before_widget' => '<div id="%1$s" class="%2$s clearfix">',
 		'after_widget' 	=> "</div aside>",

@@ -2,8 +2,8 @@
 	<?php dynamic_sidebar( 'homepage-top' ); ?>
 </section>
 
-<section id="guides">
-	<h2><?php _e('Explore guides', 'cjet'); ?></h2>
+<section id="topics">
+	<h2><?php _e('Explore Topics', 'cjet'); ?></h2>
 
 	<p class="description"><?php
 		if ( of_get_option('cjet_guides_intro') ) {
@@ -17,7 +17,7 @@
 	?></p>
 
 
-	<div id="guides-container">
-		<?php dynamic_sidebar( 'homepage-guides' ); ?>
+	<div id="topics-container">
+		<?php dynamic_sidebar( 'homepage-topics' ); ?>
 	</div>
-</section><!-- #guides -->
+</section><!-- #topics -->
