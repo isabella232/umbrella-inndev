@@ -303,7 +303,7 @@ a.btn.btn.search-submit,
   }
 }
 #breadcrumbs {
-  font-family: "effra", helvetica, sans-serif;
+  font-family: "Montserrat", "Raleway", helvetica, sans-serif;
   font-weight: 700;
 }
 #site-header,
@@ -347,6 +347,7 @@ a.btn.btn.search-submit,
   justify-content: end;
   display: inherit;
   margin-bottom: 25px;
+  margin-left: 20px;
 }
 #site-header #header-search input {
   border-color: #000;
@@ -425,9 +426,16 @@ body.normal.page #content.guide-page {
 .guide-page .entry-content .widget {
   padding: 15px 0;
 }
+.guide-page .pager {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
 .guide-page .pager a {
   width: 100%;
   box-sizing: border-box;
+  justify-content: center;
   height: 100%;
 }
 .guide-page .pager h5.top-page {
@@ -440,10 +448,6 @@ body.normal.page #content.guide-page {
     width: 100%;
     margin-bottom: 8px;
   }
-}
-.guide-page .pager .previous,
-.guide-page .pager .next {
-  width: 30%;
 }
 .guide-page .pager .previous a,
 .guide-page .pager .next a {
@@ -461,11 +465,11 @@ body.normal.page #content.guide-page {
   height: 38px;
   margin-bottom: 1px;
 }
-@media (max-width: 999px) {
-  .guide-page .pager .previous,
-  .guide-page .pager .next {
-    width: 50%;
-  }
+.guide-page .pager .previous {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
 }
 .guide-page .pager .previous a .dashicons {
   float: left;
@@ -478,6 +482,29 @@ body.normal.page #content.guide-page {
     text-align: left;
   }
 }
+.guide-page .pager .previous a .meta-nav {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+@media (min-width: 1099px) {
+  .guide-page .pager .previous a .meta-nav {
+    max-width: 300px;
+  }
+}
+@media (max-width: 768px) {
+  .guide-page .pager .previous a .meta-nav {
+    justify-content: flex-start;
+  }
+}
+.guide-page .pager .next {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  justify-content: center;
+}
 .guide-page .pager .next a .dashicons {
   float: right;
   padding-left: 20px;
@@ -488,6 +515,24 @@ body.normal.page #content.guide-page {
     float: none;
     text-align: right;
     margin-left: -15px;
+  }
+}
+.guide-page .pager .next a .meta-nav {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  flex-direction: column;
+  text-align: right;
+}
+@media (min-width: 1099px) {
+  .guide-page .pager .next a .meta-nav {
+    max-width: 300px;
+    float: right;
+  }
+}
+@media (max-width: 768px) {
+  .guide-page .pager .next a .meta-nav {
+    justify-content: flex-start;
   }
 }
 .guide-page .toggle-nav-bar {
