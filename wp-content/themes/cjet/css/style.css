@@ -442,6 +442,55 @@ body.normal.page #content.guide-page {
     margin-bottom: 8px;
   }
 }
+.guide-page .pager .previous,
+.guide-page .pager .next {
+  width: 30%;
+}
+.guide-page .pager .previous a,
+.guide-page .pager .next a {
+  background-color: transparent;
+  color: #0089bb;
+  padding: 10px 0;
+  font-weight: bold;
+}
+.guide-page .pager .previous a .dashicons,
+.guide-page .pager .next a .dashicons {
+  color: #000;
+  height: 100%;
+  font-size: 38px;
+  width: 38px;
+  height: 38px;
+  margin-bottom: 1px;
+}
+@media (max-width: 999px) {
+  .guide-page .pager .previous,
+  .guide-page .pager .next {
+    width: 50%;
+  }
+}
+.guide-page .pager .previous a .dashicons {
+  float: left;
+  padding-right: 20px;
+}
+@media (max-width: 768px) {
+  .guide-page .pager .previous a .dashicons {
+    width: 100%;
+    float: none;
+    text-align: left;
+  }
+}
+.guide-page .pager .next a .dashicons {
+  float: right;
+  padding-left: 20px;
+}
+@media (max-width: 768px) {
+  .guide-page .pager .next a .dashicons {
+    width: 100%;
+    float: none;
+    text-align: right;
+    margin-left: -15px;
+  }
+}
 .guide-page .toggle-nav-bar {
   margin-top: 0;
   display: none;

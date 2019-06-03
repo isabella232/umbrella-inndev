@@ -101,3 +101,15 @@ add_action( 'largo_header_after_largo_header', 'add_after_largo_header');
  */
 add_filter( 'widget_custom_html_content', 'shortcode_unautop');
 add_filter( 'widget_custom_html_content', 'do_shortcode');
+
+/**
+ * Load WordPress Dashicons on Guides template
+ */
+function load_dashicons_front_end() {
+	
+	if( is_page_template( 'guides.php' ) ){
+		wp_enqueue_style( 'dashicons' );
+	}
+	
+}
+add_action( 'wp_enqueue_scripts', 'load_dashicons_front_end' );
