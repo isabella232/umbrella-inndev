@@ -658,13 +658,22 @@ details.guide-form[open] summary::after {
 }
 details.guide-form[open] .gform_wrapper {
   color: #1c1c1c;
-  padding: 0 5px;
+  padding: 0 5px 5px 5px;
   margin: 0;
 }
 details.guide-form[open] .gform_wrapper ul.gform_fields li.gfield {
   padding-right: 0;
 }
-details.guide-form input[type=submit] {
+details.guide-form .gfield_html a {
+  text-decoration: underline;
+}
+details.guide-form .gfield_html a:hover {
+  color: #0089bb;
+}
+details.guide-form .gform_footer {
+  padding: 0;
+}
+details.guide-form .gform_footer input[type=submit] {
   font-family: "Montserrat", "Raleway", helvetica, sans-serif;
   color: #005270;
   text-shadow: none;
@@ -678,18 +687,18 @@ details.guide-form input[type=submit] {
   margin: 0;
   width: 100%;
 }
-details.guide-form input[type=submit]:hover {
+details.guide-form .gform_footer input[type=submit]:hover {
   background-color: #00719b;
   color: #fff;
 }
-details.guide-form input[type=submit].btn-primary {
+details.guide-form .gform_footer input[type=submit].btn-primary {
   color: #fff;
   background-color: #ff8b4d;
 }
-details.guide-form input[type=submit].btn-primary:hover {
+details.guide-form .gform_footer input[type=submit].btn-primary:hover {
   background-color: #ff762d;
 }
-details.guide-form input[type=submit].btn.search-submit {
+details.guide-form .gform_footer input[type=submit].btn.search-submit {
   padding: 4px 10px;
 }
 body.normal.page #content.guide-page {
