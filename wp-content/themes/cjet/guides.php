@@ -143,20 +143,23 @@ $top_page = FALSE;
 							} else {
 								$link_text = __('Start Reading', 'cjet');
 							}
-							printf( '<div class="next"><a href="%1$s"><h5 class="top-page">%2$s &rarr;</h5></a></div>',
+							printf(
+								'<div class="next"><a href="%1$s" rel="next"><i class="dashicons dashicons-arrow-right-alt"></i><span class="meta-nav">%2$s</span></a></div>',
 								get_permalink( $next_id ),
 								$link_text
 							);
 						} else {
 							if (!empty($prev_id)) {
-								printf( '<div class="previous"><a href="%1$s" rel="prev"><i class="dashicons dashicons-arrow-left-alt"></i><span class="meta-nav">%2$s</span></a></div>',
+								printf(
+									'<div class="previous"><a href="%1$s" rel="prev"><i class="dashicons dashicons-arrow-left-alt"></i><span class="meta-nav">%2$s</span></a></div>',
 									get_permalink( $prev_id ),
 									get_the_title($prev_id)
 								);
 							}
 
 							if (!empty($next_id)) {
-								printf( '<div class="next"><a href="%1$s" rel="next"><i class="dashicons dashicons-arrow-right-alt"></i><span class="meta-nav">%2$s</span></a></div>',
+								printf(
+									'<div class="next"><a href="%1$s" rel="next"><i class="dashicons dashicons-arrow-right-alt"></i><span class="meta-nav">%2$s</span></a></div>',
 									get_permalink( $next_id ),
 									get_the_title( $next_id )
 								);

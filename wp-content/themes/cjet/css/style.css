@@ -302,126 +302,14 @@ a.btn.btn.search-submit,
     max-width: 90%;
   }
 }
-#breadcrumbs {
-  font-family: "Montserrat", "Raleway", helvetica, sans-serif;
-  font-weight: 700;
-}
-#site-header,
-.home #site-header {
-  min-height: 0;
-}
-#site-header {
-  padding: 24px 0;
-  margin: 0 0 40px 0;
-  border-bottom: 8px solid #eee;
-}
-#site-header img {
-  max-width: 30%;
-}
-#site-header h5 {
-  margin: 0 auto;
-  font-size: 22px;
-}
-@media (max-width: 1100px) {
-  #site-header h5 {
-    font-size: 20px;
-  }
-}
-@media (max-width: 900px) {
-  #site-header h5 {
-    font-size: 18px;
-  }
-}
-#site-header .cjet-header-grid {
-  display: inline-grid;
-  width: 50%;
-  height: 100%;
-  justify-content: center;
-  vertical-align: bottom;
-}
-#site-header .cjet-header-grid:last-of-type {
-  width: 20%;
-  justify-content: end;
-}
-#site-header #header-search {
-  justify-content: end;
-  display: inherit;
-  margin-bottom: 25px;
-  margin-left: 20px;
-}
-#site-header #header-search input {
-  border-color: #000;
-  padding: 7px 15px;
-  width: 250px;
-}
-#site-header #header-search input::placeholder {
-  color: #000;
-}
-@media (max-width: 999px) {
-  #site-header #header-search input {
-    max-width: 200px;
-  }
-}
-#site-header #main-nav {
-  border: none;
-}
-#site-header #main-nav .nav {
-  float: right;
-}
-#site-header #main-nav .navbar-inner {
-  background-color: transparent;
-}
-#site-header #main-nav a {
-  color: #0089bb;
-  padding-right: 0;
-  font-size: 15px;
-}
-#site-header #main-nav a:hover {
-  background: none;
-}
-@media (max-width: 900px) {
-  #site-header #main-nav a {
-    font-size: 14px;
-  }
-}
-#site-header #main-nav .dropdown-menu a {
-  padding-right: 10px;
-}
-#main {
-  margin-top: 8px;
-}
-#content {
-  margin-left: 0;
-}
-#breadcrumbs {
-  margin-bottom: 24px;
-}
-#branding img {
-  margin: 24px auto 18px;
-  display: block;
-  max-width: 400px;
-  padding: 0 5%;
-  width: 90%;
-}
-#top-nav li.main_site_home_link {
-  padding-top: 2px;
-  font-size: inherit;
-  font-weight: inherit;
-}
-#top-nav li.main_site_home_link a {
-  color: #fff;
-}
-#top-nav li.main_site_home_link a:hover {
-  color: #d9d9d9;
-}
 /**
  * Styles pertaining to guide.php and article.php
  */
-body.normal.page #content.guide-page {
-  margin-left: 0;
-}
 .guide-page .author-posts-link {
   display: none;
+}
+.guide-page .entry-title {
+  margin-bottom: 1em;
 }
 .guide-page .entry-content .widget {
   padding: 15px 0;
@@ -437,10 +325,6 @@ body.normal.page #content.guide-page {
   box-sizing: border-box;
   justify-content: center;
   height: 100%;
-}
-.guide-page .pager h5.top-page {
-  margin-bottom: 0;
-  font-size: 21px;
 }
 @media (max-width: 769px) {
   .guide-page .pager .next,
@@ -774,11 +658,51 @@ details.guide-form[open] summary::after {
 }
 details.guide-form[open] .gform_wrapper {
   color: #1c1c1c;
-  padding: 0 2px;
+  padding: 0 5px 5px 5px;
   margin: 0;
 }
 details.guide-form[open] .gform_wrapper ul.gform_fields li.gfield {
   padding-right: 0;
+}
+details.guide-form .gfield_html a {
+  text-decoration: underline;
+}
+details.guide-form .gfield_html a:hover {
+  color: #0089bb;
+}
+details.guide-form .gform_footer {
+  padding: 0;
+}
+details.guide-form .gform_footer input[type=submit] {
+  font-family: "Montserrat", "Raleway", helvetica, sans-serif;
+  color: #005270;
+  text-shadow: none;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 12px 24px;
+  background-color: #0089bb;
+  color: #fff;
+  border-radius: 0;
+  margin: 0;
+  width: 100%;
+}
+details.guide-form .gform_footer input[type=submit]:hover {
+  background-color: #00719b;
+  color: #fff;
+}
+details.guide-form .gform_footer input[type=submit].btn-primary {
+  color: #fff;
+  background-color: #ff8b4d;
+}
+details.guide-form .gform_footer input[type=submit].btn-primary:hover {
+  background-color: #ff762d;
+}
+details.guide-form .gform_footer input[type=submit].btn.search-submit {
+  padding: 4px 10px;
+}
+body.normal.page #content.guide-page {
+  margin-left: 0;
 }
 #breadcrumbs {
   font-family: "Montserrat", "Raleway", helvetica, sans-serif;
@@ -793,6 +717,83 @@ details.guide-form[open] .gform_wrapper ul.gform_fields li.gfield {
 #site-header,
 .home #site-header {
   min-height: 0;
+}
+#site-header {
+  padding: 24px 0;
+  margin: 0 0 40px 0;
+  border-bottom: 8px solid #eee;
+}
+#site-header img {
+  max-width: 30%;
+}
+#site-header h5 {
+  margin: 0 auto;
+  font-size: 22px;
+}
+@media (max-width: 1100px) {
+  #site-header h5 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 900px) {
+  #site-header h5 {
+    font-size: 18px;
+  }
+}
+#site-header .cjet-header-grid {
+  display: inline-grid;
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+  vertical-align: bottom;
+}
+#site-header .cjet-header-grid:last-of-type {
+  width: 20%;
+  justify-content: end;
+}
+#site-header #header-search {
+  justify-content: end;
+  display: inherit;
+  margin-bottom: 25px;
+  margin-left: 20px;
+}
+#site-header #header-search input {
+  border-color: #000;
+  padding: 7px 15px;
+  width: 250px;
+}
+#site-header #header-search input::placeholder {
+  color: #000;
+}
+@media (max-width: 999px) {
+  #site-header #header-search input {
+    max-width: 200px;
+  }
+}
+#site-header #main-nav {
+  border: none;
+}
+#site-header #main-nav .nav {
+  float: right;
+}
+#site-header #main-nav .navbar-inner {
+  background-color: transparent;
+}
+#site-header #main-nav a {
+  color: #0089bb;
+  padding-right: 0;
+  font-size: 15px;
+}
+#site-header #main-nav a:hover {
+  background: none;
+}
+@media (max-width: 900px) {
+  #site-header #main-nav a {
+    font-size: 14px;
+  }
+}
+#site-header #main-nav .dropdown-menu a {
+  padding-right: 10px;
 }
 @media screen and (max-width: 769px) {
   #main {
@@ -809,6 +810,18 @@ details.guide-form[open] .gform_wrapper ul.gform_fields li.gfield {
   padding: 0 5%;
   width: 90%;
 }
-body.normal.page #content.guide-page {
-  margin-left: 0;
+#top-nav li.main_site_home_link {
+  padding-top: 2px;
+  font-size: inherit;
+  font-weight: inherit;
+}
+#top-nav li.main_site_home_link a {
+  color: #fff;
+}
+#top-nav li.main_site_home_link a:hover {
+  color: #d9d9d9;
+}
+.entry-content p {
+  font-family: "Montserrat", "Raleway", helvetica, sans-serif;
+  font-size: 18px;
 }
