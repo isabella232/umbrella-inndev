@@ -64,6 +64,23 @@
 .home #guides h2 {
   text-align: center;
 }
+.home #guides h2::before,
+.home #guides h2::after {
+  display: inline-block;
+  vertical-align: center;
+  width: 4em;
+  height: 0.23em;
+  background-color: #ff8b4d;
+  content: " ";
+  margin-bottom: 0.23em;
+  margin-top: 0.23em;
+}
+.home #guides h2::before {
+  margin-right: 1.3em;
+}
+.home #guides h2::after {
+  margin-left: 1.3em;
+}
 .home #guides .description {
   margin: 0 auto;
   max-width: 30em;
@@ -76,5 +93,5 @@
   align-items: flex-start;
 }
 .home #guides-container .widget {
-  flex: 0 1 290px;
+  flex: 0 1 240px;
 }

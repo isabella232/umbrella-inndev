@@ -59,6 +59,23 @@
   #guides {
     h2 {
       text-align: center;
+      &::before,
+      &::after {
+        display: inline-block;
+        vertical-align: center;
+        width: 4em;
+        height: 0.23em;
+        background-color: @orange;
+        content: " ";
+        margin-bottom: 0.23em;
+        margin-top: 0.23em;
+      }
+      &::before {
+        margin-right: 1.3em;
+      }
+      &::after {
+        margin-left: 1.3em;
+      }
     }
     .description {
       margin: 0 auto;
@@ -74,7 +91,7 @@
     align-items: flex-start;
 
     .widget {
-      flex: 0 1 290px;
+      flex: 0 1 240px;
     }
   }
 }
