@@ -303,7 +303,7 @@ a.btn.btn.search-submit,
   }
 }
 #breadcrumbs {
-  font-family: "effra", helvetica, sans-serif;
+  font-family: "Montserrat", "Raleway", helvetica, sans-serif;
   font-weight: 700;
 }
 #site-header,
@@ -347,6 +347,7 @@ a.btn.btn.search-submit,
   justify-content: end;
   display: inherit;
   margin-bottom: 25px;
+  margin-left: 20px;
 }
 #site-header #header-search input {
   border-color: #000;
