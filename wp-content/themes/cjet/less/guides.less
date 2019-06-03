@@ -48,15 +48,30 @@
       }
     }
     .previous {
-      .dashicons {
-        float: left;
-        padding-right: 20px;
+      a {
+        .dashicons {
+          float: left;
+          padding-right: 20px;
+          @media (max-width: 768px) {
+            width: 100%;
+            float: none;
+            text-align: left;
+          }
+        }
       }
     }
     .next {
-      .dashicons {
-        float: right;
-        padding-left: 20px;
+      a {
+        .dashicons {
+          float: right;
+          padding-left: 20px;
+          @media (max-width: 768px) {
+            width: 100%;
+            float: none;
+            text-align: right;
+            margin-left: -15px;
+          }
+        }
       }
     }
   }

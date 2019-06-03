@@ -467,13 +467,28 @@ body.normal.page #content.guide-page {
     width: 50%;
   }
 }
-.guide-page .pager .previous .dashicons {
+.guide-page .pager .previous a .dashicons {
   float: left;
   padding-right: 20px;
 }
-.guide-page .pager .next .dashicons {
+@media (max-width: 768px) {
+  .guide-page .pager .previous a .dashicons {
+    width: 100%;
+    float: none;
+    text-align: left;
+  }
+}
+.guide-page .pager .next a .dashicons {
   float: right;
   padding-left: 20px;
+}
+@media (max-width: 768px) {
+  .guide-page .pager .next a .dashicons {
+    width: 100%;
+    float: none;
+    text-align: right;
+    margin-left: -15px;
+  }
 }
 .guide-page .toggle-nav-bar {
   margin-top: 0;
