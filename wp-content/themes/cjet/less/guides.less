@@ -1,0 +1,344 @@
+/**
+ * Styles pertaining to guide.php and article.php
+ */
+
+.guide-page {
+  .author-posts-link {
+    display: none;
+  }
+  .entry-content .widget {
+    padding: 15px 0;
+  }
+  .pager {
+    a {
+      width: 100%;
+      box-sizing: border-box;
+      height: 100%;
+    }
+    h5.top-page {
+      margin-bottom: 0;
+      font-size: 21px;
+    }
+    @media (max-width:@breakpoint) {
+      .next,
+      .previous {
+        width: 100%;
+        margin-bottom: 8px;
+      }
+    }
+    .previous,
+    .next {
+      width: 30%;
+      a {
+        background-color: transparent;
+        color: #0089bb;
+        padding: 10px 0;
+        font-weight: bold;
+        .dashicons {
+          color: #000;
+          height: 100%;
+          font-size: 38px;
+          width: 38px;
+          height: 38px;
+          margin-bottom: 1px;
+        }
+      }
+      @media (max-width: 999px) {
+        width: 50%;
+      }
+    }
+    .previous {
+      a {
+        .dashicons {
+          float: left;
+          padding-right: 20px;
+          @media (max-width: 768px) {
+            width: 100%;
+            float: none;
+            text-align: left;
+          }
+        }
+      }
+    }
+    .next {
+      a {
+        .dashicons {
+          float: right;
+          padding-left: 20px;
+          @media (max-width: 768px) {
+            width: 100%;
+            float: none;
+            text-align: right;
+            margin-left: -15px;
+          }
+        }
+      }
+    }
+  }
+  .toggle-nav-bar {
+    margin-top: 0;
+    display: none;
+
+  }
+  .icon-bar {
+    background-color: @black;
+  }
+  .guide-author {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    color: @medgray;
+  }
+  .author-box {
+    a {
+      color: @medgray;
+    }
+    h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      a {
+        color: #000;
+      }
+    }
+    h5 {
+      margin-bottom: 8px;
+    }
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+    .author-posts-link {
+      display: none;
+    }
+  }
+}
+.guide-nav {
+  background-color: transparent;
+  border-right: 3px solid @orange;
+  padding-right: 18px; // to match the padding on #page;
+
+  @fontsize: 15px;
+  font-size: @fontsize;
+  .widget p {
+    font-size: @fontsize;
+  }
+
+  padding-top: 0;
+  .widgettitle,
+  .guide-top {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: @blue;
+    margin-bottom:15px;
+    a {
+      color: @blue;
+    }
+  }
+  .widget {
+    margin-top: 2em;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .current_page_item {
+    &>a::before {
+      color: @blue;
+      width: 1em;
+      display: block;
+      float: left;
+      text-align: center;
+      margin-left: -1em;
+      content: '\00BB';
+    }
+  }
+  .guide-tree {
+    list-style: none;
+    margin-left: 0;
+    margin-top: 0;
+    ul.children {
+      margin-top: 0;
+      margin-left: 2em;
+      list-style-type: disc;
+      list-style-type: '-';
+      li {
+        margin-bottom: 0;
+      }
+    }
+    a {
+      color: @black;
+      &:hover {
+        color: @black;
+        text-decoration: underline;
+      }
+    }
+
+    .largo-donate{
+      h2 {
+        font-size: 17px;
+      }
+      p {
+        margin-bottom: 26px;
+        font-size: 16px;
+        max-width: 95%;
+      }
+    }
+  }
+  .guide-sidebar-below-toc-widget-area {
+    list-style: none;
+    @media (max-width: @breakpoint) {
+      display: none;
+    }
+  }
+  @media (max-width:@breakpoint) {
+    border-left: 3px solid @orange;
+    border-right: none;
+
+    // a bunch of display logic
+    &.span3 {
+      width: 100%;
+      padding: 0;
+    }
+    .guide-tree,
+    .resources {
+      display: none;
+    }
+    &.open {
+      .guide-tree,
+      .resources {
+        display: block;
+      }
+    }
+    .guide-top {
+      margin-bottom: 0;
+    }
+    .guide-tree {
+      padding-left: 10px; // to match whitespace on the nav toggle;
+      margin-bottom: 0;
+    }
+
+    // as regards the nav button
+    .toggle-nav-bar, .guide-top {
+      line-height: @stickyNavLineHeight;
+      display: inline-block;
+    }
+    .toggle-nav-bar {
+      background-color: transparent;
+      color: @white;
+      padding: 0 10px;
+
+      &:hover {
+        background-color: transparent;
+        color: white;
+      }
+
+      // then we recreate all the styles that apply to .navbar .toggle-nav-bar
+      // we do this because using .navbar on a parent element prevents scrolling when this menu is open on mobile,
+      // and that prevents people from seeing the whole menu.
+      .bars {
+        display: inline-block;
+      }
+      .icon-bar {
+        display: block;
+        width: 18px;
+        height: 3px;
+        & + .icon-bar {
+          margin-top: 3px;
+        }
+      }
+    }
+
+
+    li {
+      display: block;
+      float: none;
+    }
+    .resources h4 {
+      margin-left: 46px;
+    }
+  }
+}
+@media (max-width:@breakpoint) {
+  .guide-page article.span9 {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+    .entry-content h3 {
+      font-size: 21px;
+      margin-bottom: 12px;
+      &.guide-author {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+.guide-resources {
+  margin-left: 0;
+  li {
+    display: block;
+  }
+  a {
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+  .attachment-meta {
+    white-space: nowrap;
+  }
+  i {
+    -webkit-font-smoothing: antialiased;
+  }
+  .icon-picture {
+    color: cadetblue;
+  }
+  .icon-play {
+    color: crimson;
+  }
+  .icon-table {
+    color: forestgreen;
+  }
+  .icon-doc-text {
+    color: mediumblue;
+  }
+  .icon-doc-text-inv {
+    color: firebrick;
+  }
+  .icon-download {
+    color: indigo;
+  }
+}
+details.guide-form{
+  border: 1px solid transparent;
+  summary{
+    width: 100%;
+    box-sizing: border-box;
+
+    &::before,
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+  &[open] {
+    border-color: @black;
+
+    summary:active,
+    summary:hover,
+    summary {
+      background-color: @white;
+      color: @black;
+      &::after {
+        display: inline;
+        content: ":";
+      }
+    }
+
+    .gform_wrapper {
+      color: @black;
+      padding: 0 2px;
+      margin: 0;
+
+      ul.gform_fields li.gfield {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
