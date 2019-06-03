@@ -1,4 +1,4 @@
-<section id="top">
+<section id="biggo">
 	<?php dynamic_sidebar( 'homepage-top' ); ?>
 </section>
 

@@ -1,9 +1,9 @@
-.home #top,
+.home #biggo,
 .home #guides {
   clear: both;
   padding: 5vw 2vw;
 }
-.home #top .widget,
+.home #biggo .widget,
 .home #guides .widget {
   display: inline-block;
   margin-right: 0.85470085%;
@@ -12,24 +12,24 @@
   vertical-align: top;
   text-align: left;
 }
-.home #top span[data-picture],
+.home #biggo span[data-picture],
 .home #guides span[data-picture] {
   max-width: 100%;
   height: auto;
 }
-.home #top h2,
+.home #biggo h2,
 .home #guides h2 {
   font-size: 20px;
   font-size: calc( 10px + 2vw );
   margin-bottom: 12px;
 }
-.home #top h2 a,
+.home #biggo h2 a,
 .home #guides h2 a,
-.home #top p a,
+.home #biggo p a,
 .home #guides p a {
   color: #1c1c1c;
 }
-.home #top .widgettitle,
+.home #biggo .widgettitle,
 .home #guides .widgettitle {
   font-size: 24px;
   margin-bottom: 4px;
@@ -37,28 +37,28 @@
   color: #0089bb;
   text-transform: none;
 }
-.home #top p,
+.home #biggo p,
 .home #guides p {
   font-size: 15px;
 }
-.home #top {
+.home #biggo {
   background-color: #edf1f4;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.home #top .widget {
+.home #biggo .widget {
   margin-bottom: 0;
 }
-.home #top .widget_media_image {
+.home #biggo .widget_media_image {
   flex-basis: 10em;
 }
 @media (max-width: 768px) {
-  .home #top .widget_media_image {
+  .home #biggo .widget_media_image {
     display: none;
   }
 }
-.home #top .widget_text {
+.home #biggo .widget_text {
   flex-basis: 30em;
 }
 .home #guides h2 {
