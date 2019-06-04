@@ -23,7 +23,7 @@ function cjet_register_sidebars() {
 	register_sidebar( array(
 		'name'			=> __( 'Guide Sidebar Below Table of Contents', 'cjet' ),
 		'id' 			=> 'guide-sidebar-below-toc',
-		'description' 	=> __( 'Widget area for Guides sidebar. This will appear below the table of contents.', 'cjet' ),
+		'description' 	=> __( 'Widget area for sidebar on pages using the Guide or Article template. This will appear below the table of contents.', 'cjet' ),
 		'before_title' 	=> '<h3 class="widgettitle">',
 		'after_title' 	=> '</h3>',
 	) );
