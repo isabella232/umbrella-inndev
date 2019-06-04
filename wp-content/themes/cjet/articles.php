@@ -45,7 +45,7 @@ $top_page = FALSE;
 					// we can leverage Largo's author info widget here
 
 						if ( $top_page ) {
-							$author_label = '<h3 class="widgettitle guide-author">' . __( 'Guide Author', 'cjet' ) . '</h3>';
+							$author_label = '<h3 class="widgettitle guide-author">' . __( 'Article Author', 'cjet' ) . '</h3>';
 						}
 
 						if ( $top_page && ( get_post_meta( $post->ID, 'cjet_hide_author', TRUE ) !== '1' ) ) {
