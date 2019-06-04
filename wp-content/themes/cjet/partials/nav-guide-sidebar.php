@@ -5,7 +5,6 @@
  * Expects the following variables to be defined:
  *
  * @param Int|Bool $page_parent_id The parent page of the current Guide
- * @param String $page_type The type of page it is?
  */
 
 // now get the complete tree of child pages for the guide's top page
@@ -39,7 +38,7 @@ $attachments = get_posts( array(
 		<?php if ( ! empty( $children ) ) { ?>
 			<?php if ( $top_page ) { ?>
 				<h4 class="guide-top">
-					<?php esc_html_e( 'In This ' . ucfirst( rtrim( $page_type, 's') ), 'cjet' ); ?>
+					<?php esc_html_e( 'In This Guide', 'cjet' ); ?>
 				</h4>
 			<?php } else { ?>
 				<h4 class="guide-top">

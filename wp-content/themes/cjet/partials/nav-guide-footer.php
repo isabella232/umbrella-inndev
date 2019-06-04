@@ -27,15 +27,10 @@
 	}
 
 	if ( $top_page ) {
-		if ( $page_type == 'courses' ) {
-			$link_text = __('Get Started', 'cjet');
-		} else {
-			$link_text = __('Start Reading', 'cjet');
-		}
 		printf(
 			'<div class="next"><a href="%1$s" rel="next"><i class="dashicons dashicons-arrow-right-alt"></i><span class="meta-nav">%2$s</span></a></div>',
 			get_permalink( $next_id ),
-			$link_text
+			__('Start Reading', 'cjet')
 		);
 	} else {
 		if (!empty($prev_id)) {
