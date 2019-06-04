@@ -473,7 +473,7 @@ a.btn.btn.search-submit,
 .guide-nav .guide-top a {
   color: #0089bb;
 }
-.guide-nav .widget {
+.guide-nav li + .widget {
   margin-top: 2em;
 }
 .guide-nav .widget:last-child {
