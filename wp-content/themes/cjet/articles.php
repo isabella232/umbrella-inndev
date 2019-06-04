@@ -16,6 +16,7 @@ $top_page = FALSE;
 			$page_type_id = end($ancestors); // the topmost parent is actually the "articles" page so let's back it up one
 			$page_type = get_post( $page_type_id )->post_name;
 
+			// in the future, it may make sense to make this === into <=
 			if ( count($ancestors) === 1 ) {
 				// this is the main page of the article so we can just list all of its children
 				$top_page = TRUE;
