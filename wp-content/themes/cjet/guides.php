@@ -13,16 +13,15 @@ $top_page = FALSE;
 			// get the ID of the main page for a given guide
 			$this_page_id = $post->ID;
 			$ancestors = get_post_ancestors( $this_page_id );
-			$page_type_id = end($ancestors); // the topmost parent is actually the "guides" page so let's back it up one
-			$page_type = get_post( $page_type_id )->post_name;
 
-			if ( count($ancestors) === 1 ) {
+			if ( count( $ancestors ) < 1 ) {
 				// this is the main page of the guide so we can just list all of its children
 				$top_page = TRUE;
 				$page_parent_id = $post->ID;
 			} else {
 				// it's not and we need to do get the full page tree
-				$page_parent_id = prev($ancestors); // much better
+				// https://developer.wordpress.org/reference/functions/get_post_ancestors/ returns post IDs in order from child to parent
+				$page_parent_id = end($ancestors);
 			}
 
 			?>
@@ -45,9 +44,7 @@ $top_page = FALSE;
 					// if we're on a guide "top" page, show author information and whatnot
 					// we can leverage Largo's author info widget here
 
-						if ( $top_page && $page_type == 'courses' ) {
-							echo '<h3 class="widgettitle guide-author">' . __( 'Course Instructor', 'cjet' ) . '</h3>';
-						} elseif ( $top_page ) {
+						if ( $top_page ) {
 							$author_label = '<h3 class="widgettitle guide-author">' . __( 'Guide Author', 'cjet' ) . '</h3>';
 						}
 
