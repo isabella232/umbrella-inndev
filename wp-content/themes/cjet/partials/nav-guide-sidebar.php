@@ -5,7 +5,7 @@
  * Expects the following variables to be defined:
  *
  * @param Int|Bool $page_parent_id The parent page of the current Guide
- *
+ * @param String $page_type The type of page it is?
  */
 
 // now get the complete tree of child pages for the guide's top page
