@@ -1,10 +1,10 @@
 {
-  "name": "caribbean-theme",
+  "name": "amplify-theme",
   "version": "1.0.0",
-  "description": "Theme for CIJN",
+  "description": "Theme for amplify.inn.org",
   "repository": {
     "type": "git",
-    "url": "https://github.com/INN/umbrella-caribbean.git"
+    "url": "https://github.com/INN/umbrella-inndev/tree/master/wp-content/themes/amplify/"
   },
   "license": "GPL-2.0",
   "devDependencies": {
