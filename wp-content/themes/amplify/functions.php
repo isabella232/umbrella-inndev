@@ -35,6 +35,8 @@ add_action( 'after_setup_theme', 'largo_child_require_files' );
  * Enqueue scripts and styles.
  */
 function largo_parent_theme_enqueue_styles() {
+	wp_dequeue_style( 'largo-child-styles' );
+
 	wp_enqueue_style( 'largo-style', get_template_directory_uri() . '/style.css' );
 	wp_enqueue_style( 'amplify-style',
 		get_stylesheet_directory_uri() . '/css/style.css',
@@ -42,4 +44,4 @@ function largo_parent_theme_enqueue_styles() {
 		filemtime( get_stylesheet_directory() . '/css/child-style.css' )
 	);
 }
-add_action( 'wp_enqueue_scripts', 'largo_parent_theme_enqueue_styles' );
+add_action( 'wp_enqueue_scripts', 'largo_parent_theme_enqueue_styles', 20 );
