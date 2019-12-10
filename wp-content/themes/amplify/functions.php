@@ -72,8 +72,8 @@ add_filter( 'query_vars', 'amplify_add_query_vars' );
 function amplify_load_feed_template( $template ) { 
 
     if ( ! is_admin() ) {
-        // if the params are set, use our amplify feed template
-		if( isset( $_GET['amplify-feed'] ) ){
+        // if the params are set, use our amplify feed template if it exists
+		if( isset( $_GET['amplify-feed'] ) && locate_template( 'amplify-feed.php' ) ){
 			return get_stylesheet_directory().'/amplify-feed.php';
 		// else, continue with whatever template was being loaded
 		} else {
