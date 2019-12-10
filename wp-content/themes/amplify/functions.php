@@ -45,3 +45,42 @@ function largo_parent_theme_enqueue_styles() {
 	);
 }
 add_action( 'wp_enqueue_scripts', 'largo_parent_theme_enqueue_styles', 20 );
+
+/**
+ * Add query vars specific to the Amplify child theme
+ * 
+ * @param array $vars The array of available query vars
+ * 
+ * @return array $vars The modified array of available query vars
+ */
+function amplify_add_query_vars( $vars ) {
+	
+	$vars[] = 'amplify-feed';
+	
+	return $vars;
+
+}
+add_filter( 'query_vars', 'amplify_add_query_vars' );
+
+/**
+ * Load the Amplify embed feed template if specific query param is present
+ * 
+ * @param str $template The path of the current template
+ * 
+ * @return str $template The path of the template to include
+ */
+function amplify_load_feed_template( $template ) { 
+
+    if ( ! is_admin() ) {
+        // if the params are set, use our amplify feed template
+		if( isset( $_GET['amplify-feed'] ) ){
+			return get_stylesheet_directory().'/amplify-feed.php';
+		// else, continue with whatever template was being loaded
+		} else {
+			return $template;
+		}
+    }
+	return $template;
+	
+}
+add_filter( 'template_include', 'amplify_load_feed_template' );
