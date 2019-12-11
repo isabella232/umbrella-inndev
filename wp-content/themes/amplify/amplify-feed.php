@@ -37,7 +37,7 @@
                 $term_meta_post = largo_get_term_meta_post( 'lr-tags', $term->term_id );
                 $term_meta = get_post_meta( $term_meta_post );
 
-                if( $term_meta['lr_more_link'] ){
+                if ( ! empty( trim( $term_meta['lr_more_link'][0] ) ) ) {
                     $term_more_link = $term_meta['lr_more_link'][0];
                 }
 
