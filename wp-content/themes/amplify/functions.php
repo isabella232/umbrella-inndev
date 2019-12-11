@@ -93,8 +93,8 @@ add_filter( 'template_include', 'amplify_load_feed_template' );
 function amplify_add_saved_link_roundups_more_link_metabox( $context = '' ) {
 
 	if( 'lr-tags' == $context->taxonomy ){
-		
-		$term_more_link = get_term_link( $context, $context->taxonomy );
+
+		$term_more_link = '';
 
 		// Post ID here is the id of the post that Largo uses to keep track of the term's metadata. See largo_get_term_meta_post.
 		$post_id = largo_get_term_meta_post( $context->taxonomy, $context->term_id );
@@ -108,7 +108,7 @@ function amplify_add_saved_link_roundups_more_link_metabox( $context = '' ) {
 			<th scope="row" valign="top"><?php _e('More link', 'amplify'); ?></th>
 			<td>
 				<input class="widefat" id="more_link" name="lr_more_link" type="url" value="<?php echo $term_more_link; ?>" />
-				<p class="description">If the "More" link that is displayed needs to redirect to somewhere other than the tag archive page, change it here.</p>
+				<p class="description"><?php _e( 'If the "More" link that is displayed needs to redirect to somewhere other than the tag archive page, change it here.', 'amplify' ); ?></p>
 			</td>
 		</tr>
 		<?php
