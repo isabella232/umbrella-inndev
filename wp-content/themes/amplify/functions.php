@@ -35,9 +35,33 @@ add_action( 'after_setup_theme', 'largo_child_require_files' );
  * Enqueue scripts and styles.
  */
 function largo_parent_theme_enqueue_styles() {
-	wp_dequeue_style( 'largo-child-styles' );
+
+	$dequeue_styles_list = array(
+		'largo-child-styles',
+		'wp-block-library',
+		'chosen',
+		'wp-job-manager-frontend',
+		'navis-slick',
+		'navis-slides',
+		'largo-stylesheet-gutenberg',
+		'link-roundups',
+	);
+
+	foreach( $dequeue_styles_list as $dequeue_style ){
+		wp_dequeue_style( $dequeue_style );
+	}
+
+	$dequeue_scripts_list = array(
+		'largo-modernizr',
+		'load-more-posts',
+	);
+
+	foreach( $dequeue_scripts_list as $dequeue_script ){
+		wp_dequeue_script( $dequeue_script );
+	}
 
 	wp_enqueue_style( 'largo-style', get_template_directory_uri() . '/style.css' );
+
 	wp_enqueue_style( 'amplify-style',
 		get_stylesheet_directory_uri() . '/css/child-style.css',
 		array( 'largo-stylesheet' ),
