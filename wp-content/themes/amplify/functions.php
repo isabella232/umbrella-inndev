@@ -36,28 +36,32 @@ add_action( 'after_setup_theme', 'largo_child_require_files' );
  */
 function largo_parent_theme_enqueue_styles() {
 
-	$dequeue_styles_list = array(
-		'largo-child-styles',
-		'wp-block-library',
-		'chosen',
-		'wp-job-manager-frontend',
-		'navis-slick',
-		'navis-slides',
-		'largo-stylesheet-gutenberg',
-		'link-roundups',
-	);
+	if( isset( $_GET['amplify-feed'] ) ){
 
-	foreach( $dequeue_styles_list as $dequeue_style ){
-		wp_dequeue_style( $dequeue_style );
-	}
+		$dequeue_styles_list = array(
+			'largo-child-styles',
+			'wp-block-library',
+			'chosen',
+			'wp-job-manager-frontend',
+			'navis-slick',
+			'navis-slides',
+			'largo-stylesheet-gutenberg',
+			'link-roundups',
+		);
 
-	$dequeue_scripts_list = array(
-		'largo-modernizr',
-		'load-more-posts',
-	);
+		foreach( $dequeue_styles_list as $dequeue_style ){
+			wp_dequeue_style( $dequeue_style );
+		}
 
-	foreach( $dequeue_scripts_list as $dequeue_script ){
-		wp_dequeue_script( $dequeue_script );
+		$dequeue_scripts_list = array(
+			'largo-modernizr',
+			'load-more-posts',
+		);
+
+		foreach( $dequeue_scripts_list as $dequeue_script ){
+			wp_dequeue_script( $dequeue_script );
+		}
+
 	}
 
 	wp_enqueue_style( 'largo-style', get_template_directory_uri() . '/style.css' );
