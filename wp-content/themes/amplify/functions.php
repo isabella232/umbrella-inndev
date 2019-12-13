@@ -56,11 +56,17 @@ function largo_parent_theme_enqueue_styles() {
 		$dequeue_scripts_list = array(
 			'largo-modernizr',
 			'load-more-posts',
+			'jquery',
+			'jquery-migrate',
 		);
 
 		foreach( $dequeue_scripts_list as $dequeue_script ){
-			wp_dequeue_script( $dequeue_script );
+			wp_deregister_script( $dequeue_script );
 		}
+
+		// remove emojis from head
+		remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+		remove_action( 'wp_print_styles', 'print_emoji_styles' );
 
 	}
 
@@ -73,6 +79,13 @@ function largo_parent_theme_enqueue_styles() {
 	);
 }
 add_action( 'wp_enqueue_scripts', 'largo_parent_theme_enqueue_styles', 20 );
+
+function amplify_remove_largo_header_js() {
+	if( isset( $_GET['amplify-feed'] ) ){
+		remove_action( 'wp_enqueue_scripts', 'largo_header_js' );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'amplify_remove_largo_header_js', 1 );
 
 /**
  * Add query vars specific to the Amplify child theme
