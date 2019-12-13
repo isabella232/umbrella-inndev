@@ -5,21 +5,19 @@
  * Description: Shows the saved links feed that can be embedded on external sites.
  */
 
-
-
-if( $_GET['horizontal'] ){
+if( $_GET['horizontal'] && 'true' == $_GET['horizontal'] ){
     $body_class = 'horizontal';
 } else {
     $body_class = 'vertical';
 }
 
-if( $_GET['show_link_descriptions'] ){
+if( $_GET['show_link_descriptions'] && 'true' == $_GET['show_link_descriptions'] ){
     $saved_links_class = 'show-link-description';
 } else {
     $saved_links_class = '';
 }
 
-if( $_GET['hide_header'] ) {
+if( $_GET['hide_header'] && 'true' == $_GET['hide_header'] ) {
     $hide_header = 'hide-header';
 } else {
     $hide_header = '';
