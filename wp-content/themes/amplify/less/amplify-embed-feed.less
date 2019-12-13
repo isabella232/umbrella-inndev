@@ -1,0 +1,104 @@
+.amplify-embed-feed {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+    .horizontal & {
+        @media (min-width: 1000px) {
+            flex-direction: row;
+            position: relative;
+            .stories-title {
+                position: absolute;
+                top: @measure;
+            }
+            .tag-header {
+                margin-top: @measure + 5rem
+            }
+            .saved-links {
+                display: flex;
+                flex-wrap: wrap;
+                max-width: 70%;
+                margin-top: @measure + 5rem;
+                .saved-link {
+                    flex-grow: 1;
+                    flex: 1 1 20%;
+                    margin: @measure + 1rem 10px;
+                    position: relative;
+                    &:first-of-type {
+                        margin-top: @measure + 1rem;
+                    }
+                }
+            }
+        }
+    }
+    .tag-header {
+        display: flex;
+        align-items: center;
+        margin: @measure 0;
+        img {
+            float: left;
+            max-width: 40%;
+        }
+        .inner-tag-header {
+            margin-left: @measure;
+            .tag-title {
+                margin-bottom: @measure;
+            }
+            .tag-description {
+                display: none;
+            }
+        }
+    }
+    .stories-title {
+        margin-bottom: @measure;
+    }
+    .hide-header {
+        display: none;
+    }
+    .saved-links {
+        &.rows-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        &.rows-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        &.rows-2,
+        &.rows-3 {
+            display: grid;
+            .saved-link {
+                &:first-of-type {
+                    margin-top: 10px;
+                }
+                margin: 10px;
+            }
+            @media (max-width: 767px) {
+                display: block;
+            }
+        }
+        .saved-link {
+            border: 2px solid @darkblue;
+            margin: @measure + 1rem auto;
+            padding: 20px;
+            &:first-of-type {
+                margin-top: 0;
+            }
+            &:not(.show-link-description) {
+                .description {
+                    * {
+                        &:not(.category-btn) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .description {
+                .category-btn {
+                    background: @orange;
+                    padding: 10px;
+                    color: @white;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
