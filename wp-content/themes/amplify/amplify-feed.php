@@ -148,7 +148,7 @@ if( isset( $_GET['rows'] ) && 2 == $_GET['rows'] ){
                     }
                     if ( isset( $saved_link["lr_desc"][0] ) ) {
                         echo '<div class="description">';
-                            echo $saved_link["lr_desc"][0];
+                            echo wpautop( $saved_link["lr_desc"][0] );
                         echo '</div>';
                     }
                 ?>
