@@ -95,7 +95,7 @@ if( isset( $_GET['rows'] ) && 2 == $_GET['rows'] ){
             'post_status'  => 'publish'
         );
 
-        if( $term ){
+        if( isset( $term ) ){
 
             $tax_query = array (
                 'taxonomy' => 'lr-tags',
