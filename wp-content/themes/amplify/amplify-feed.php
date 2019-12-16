@@ -76,7 +76,6 @@ if( isset( $_GET['rows'] ) && 2 == $_GET['rows'] ){
                 }
                 ?>
                 <div class="inner-tag-header">
-                    <h3 class="tag-title"><?php echo $term->name; ?></h3>
                     <p class="tag-description"><?php echo $term->description; ?></p>
                     <?php
                         if( $term_more_link ){
