@@ -86,11 +86,17 @@
                 margin-top: 0;
             }
             &:not(.show-link-description) {
+                .source {
+                    margin-bottom: 0;
+                }
                 .description {
                     * {
                         &:not(.category-btn) {
                             display: none;
                         }
+                    }
+                    .category-btn {
+                        margin-top: 24px;
                     }
                 }
             }
