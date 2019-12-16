@@ -72,6 +72,11 @@ function largo_parent_theme_enqueue_styles() {
 
 	wp_enqueue_style( 'largo-style', get_template_directory_uri() . '/style.css' );
 
+	wp_enqueue_style(
+		'typekit',
+		'https://use.typekit.net/ppf3kvq.css'
+	);
+
 	wp_enqueue_style( 'amplify-style',
 		get_stylesheet_directory_uri() . '/css/child-style.css',
 		array( 'largo-stylesheet' ),

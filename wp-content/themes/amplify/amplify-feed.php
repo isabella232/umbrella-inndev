@@ -4,6 +4,33 @@
  * Template Name: Amplify Feed Template
  * Description: Shows the saved links feed that can be embedded on external sites.
  */
+
+if( isset( $_GET['horizontal'] ) && 'true' == $_GET['horizontal'] ){
+    $body_class = 'horizontal';
+} else {
+    $body_class = 'vertical';
+}
+
+if( isset( $_GET['show_link_descriptions'] ) && 'true' == $_GET['show_link_descriptions'] ){
+    $saved_links_class = 'show-link-description';
+} else {
+    $saved_links_class = '';
+}
+
+if( isset( $_GET['hide_header'] ) && 'true' == $_GET['hide_header'] ) {
+    $hide_header = 'hide-header';
+} else {
+    $hide_header = '';
+}
+
+if( isset( $_GET['rows'] ) && 2 == $_GET['rows'] ){
+    $rows = 'rows-2';
+} else if( isset( $_GET['rows'] ) && 3 == $_GET['rows'] ){
+    $rows = 'rows-3';
+} else {
+    $rows = 'rows-1';
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +48,7 @@
     <title>Amplify Embed Feed | INN Amplify Project</title>
     <?php wp_head(); ?>
 </head>
-<body>
+<body class="<?php echo $body_class; ?>">
 
     <div class="amplify-embed-feed">
 
@@ -29,31 +56,38 @@
 
         if( isset( $_GET['tag'] ) ){
             
-            $term = $_GET['tag'];
-            $term = get_term_by( 'slug', $term, 'lr-tags' );
+            echo '<div class="tag-header '.$hide_header.'">';
             
-            if ( function_exists ( 'largo_get_term_meta_post' ) ) {
+                $term = $_GET['tag'];
+                $term = get_term_by( 'slug', $term, 'lr-tags' );
                 
-                $term_meta_post = largo_get_term_meta_post( 'lr-tags', $term->term_id );
-                $term_meta = get_post_meta( $term_meta_post );
+                if ( function_exists ( 'largo_get_term_meta_post' ) ) {
+                    
+                    $term_meta_post = largo_get_term_meta_post( 'lr-tags', $term->term_id );
+                    $term_meta = get_post_meta( $term_meta_post );
 
-                if ( ! empty( trim( $term_meta['lr_more_link'][0] ) ) ) {
-                    $term_more_link = $term_meta['lr_more_link'][0];
+                    if ( ! empty( trim( $term_meta['lr_more_link'][0] ) ) ) {
+                        $term_more_link = $term_meta['lr_more_link'][0];
+                    }
+
+                    $thumbnail = get_the_post_thumbnail_url( $term_meta_post, 'large' );
+                    echo '<img class="tag-featured-media" src="'.$thumbnail.'">';
+
                 }
+                ?>
+                <div class="inner-tag-header">
+                    <h3 class="tag-title"><?php echo $term->name; ?></h3>
+                    <p class="tag-description"><?php echo $term->description; ?></p>
+                    <?php
+                        if( $term_more_link ){
+                            echo '<a class="tag-more-link" href="'.$term_more_link.'" target="_blank">Learn More</a>';
+                        }
+                    ?>
+                </div>
+                <?php
 
-                $thumbnail = get_the_post_thumbnail_url( $term_meta_post, 'large' );
-                echo '<img src="'.$thumbnail.'">';
+            echo '</div>';
 
-            }
-            ?>
-            <h2><?php echo $term->name; ?></h2>
-            <p><?php echo $term->description; ?></p>
-            <?php
-                if( $term_more_link ){
-                    echo '<a href="'.$term_more_link.'" target="_blank">Learn More</a>';
-                }
-            ?>
-            <?php
         }
 
         $query_args = array (
@@ -61,7 +95,7 @@
             'post_status'  => 'publish'
         );
 
-        if( $term ){
+        if( isset( $term ) ){
 
             $tax_query = array (
                 'taxonomy' => 'lr-tags',
@@ -77,7 +111,8 @@
 
         if ( $my_query->have_posts() ) {
 
-            echo '<h3>Stories from the Project</h3>';
+            echo '<h5 class="stories-title '.$hide_header.'">Stories from the Project</h5>';
+            echo '<div class="saved-links '.$rows.'">';
 
             while ( $my_query->have_posts() ) : $my_query->the_post();
             $saved_link = get_post_custom( $post->ID );
@@ -85,7 +120,7 @@
             // skip roundups
             if ( get_post_type( $post ) === 'roundup' ) continue; ?>
 
-            <div class="saved-link clearfix">
+            <div class="saved-link clearfix <?php echo $saved_links_class; ?>">
                 <h5><?php
                     if ( isset( $saved_link["lr_url"][0] ) ) {
                         $output = '<a href="' . $saved_link["lr_url"][0] . '" ';
@@ -113,7 +148,7 @@
                     }
                     if ( isset( $saved_link["lr_desc"][0] ) ) {
                         echo '<div class="description">';
-                            echo $saved_link["lr_desc"][0];
+                            echo wpautop( $saved_link["lr_desc"][0] );
                         echo '</div>';
                     }
                 ?>
@@ -121,6 +156,7 @@
             
         <?php
             endwhile;
+            echo '</div>';
         } else {
             _e( '<p class="error">You don\'t have any recent links or the link roundups plugin is not active.</p>', 'link-roundups' );
         } // end recent links
