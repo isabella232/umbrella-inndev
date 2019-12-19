@@ -71,19 +71,14 @@ if( isset( $_GET['rows'] ) && 2 == $_GET['rows'] ){
                     }
 
                     $thumbnail = get_the_post_thumbnail_url( $term_meta_post, 'large' );
-                    echo '<img class="tag-featured-media" src="'.$thumbnail.'">';
+
+                    if( $term_more_link ){
+                        echo '<a class="tag-more-link" href="'.$term_more_link.'" target="_blank"><img class="tag-featured-media" src="'.$thumbnail.'"></a>';
+                    } else {
+                        echo '<img class="tag-featured-media" src="'.$thumbnail.'">';
+                    }
 
                 }
-                ?>
-                <div class="inner-tag-header">
-                    <p class="tag-description"><?php echo $term->description; ?></p>
-                    <?php
-                        if( $term_more_link ){
-                            echo '<a class="tag-more-link" href="'.$term_more_link.'" target="_blank">Learn More</a>';
-                        }
-                    ?>
-                </div>
-                <?php
 
             echo '</div>';
 
@@ -110,6 +105,9 @@ if( isset( $_GET['rows'] ) && 2 == $_GET['rows'] ){
 
         if ( $my_query->have_posts() ) {
 
+            if( isset( $_GET['horizontal'] ) && 'true' == $_GET['horizontal'] ){
+                echo '<div class="stories-wrapper">';
+            }
             echo '<h5 class="stories-title '.$hide_header.'">Stories from the Project</h5>';
             echo '<div class="saved-links '.$rows.'">';
 
@@ -156,6 +154,9 @@ if( isset( $_GET['rows'] ) && 2 == $_GET['rows'] ){
         <?php
             endwhile;
             echo '</div>';
+            if( isset( $_GET['horizontal'] ) && 'true' == $_GET['horizontal'] ){
+                echo '</div>';
+            }
         } else {
             _e( '<p class="error">You don\'t have any recent links or the link roundups plugin is not active.</p>', 'link-roundups' );
         } // end recent links
