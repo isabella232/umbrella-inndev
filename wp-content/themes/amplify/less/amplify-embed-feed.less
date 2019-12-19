@@ -1,3 +1,5 @@
+@bottom-spacing: 16px;
+
 .amplify-embed-feed {
     display: flex;
     flex-direction: column;
@@ -8,17 +10,18 @@
             flex-direction: row;
             position: relative;
             .stories-title {
-                position: absolute;
-                top: @measure;
+                margin: 10px;
+            }
+            .stories-wrapper {
+                margin-top: @measure;
+                max-width: 70%;
             }
             .tag-header {
-                margin-top: @measure + 5rem
+                margin-top: 10px;
             }
             .saved-links {
                 display: flex;
                 flex-wrap: wrap;
-                max-width: 70%;
-                margin-top: @measure + 5rem;
                 .saved-link {
                     flex-grow: 1;
                     flex: 1 1 20%;
@@ -37,7 +40,7 @@
         margin: @measure 0;
         img {
             float: left;
-            max-width: 40%;
+            max-width: 80%;
         }
         .inner-tag-header {
             margin-left: @measure;
@@ -76,12 +79,15 @@
             }
             @media (max-width: 767px) {
                 display: block;
+                .saved-link {
+                    margin: @measure auto;
+                }
             }
         }
         .saved-link {
             border: 2px solid @darkblue;
-            margin: @measure + 1rem auto;
-            padding: 20px;
+            margin: @measure auto;
+            padding: 15px;
             &:first-of-type {
                 margin-top: 0;
             }
@@ -97,18 +103,29 @@
                     }
                 }
             }
+            h5 {
+                font-size: 1.25em;
+                margin-bottom: @bottom-spacing;
+            }
+            .source {
+                font-size: 1em;
+                margin-bottom: @bottom-spacing;
+            }
             .description {
                 p {
                     &:last-of-type {
                         margin-bottom: 0;
                     }
+                    margin-bottom: @bottom-spacing;
+                    font-size: 1em;
                 }
                 .category-btn {
                     background: @orange;
-                    padding: 10px;
+                    font-size: 0.8em;
+                    padding: 4px 8px;
                     color: @white;
                     text-transform: uppercase;
-                    margin-top: 24px;
+                    margin-top: @bottom-spacing;
                     cursor: inherit;
                 }
             }
