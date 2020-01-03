@@ -132,7 +132,7 @@ if( isset( $_GET['rows'] ) && 2 == $_GET['rows'] ){
 
                 <?php
                     if ( isset($saved_link["lr_source"][0] ) && !empty( $saved_link["lr_source"][0] ) ) {
-                        $saved_link_source = '<p class="source">' . __('By: ', 'link-roundups') . '<span>';
+                        $saved_link_source = '<p class="source">' . __('By ', 'link-roundups') . '<span>';
                         if ( !empty( $saved_link["lr_url"][0] ) ) {
                             $saved_link_source .= '<a href="' . $saved_link["lr_url"][0] . '" ';
                             $saved_link_source .= 'target="_blank" ';
