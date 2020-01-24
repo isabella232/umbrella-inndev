@@ -36,7 +36,6 @@
         @media (min-width: 768px) {
             .submit-idea-container {
                 margin: 10px;
-                text-align: left;
             }
         }
     }
@@ -141,6 +140,10 @@
         }
     }
     .submit-idea-container {
+        @media (min-width: 768px) {
+            grid-column: 1 /\ -1;
+            margin-top: @bottom-spacing;
+        }
         text-align: center;
     }
 }
