@@ -192,6 +192,8 @@ function save_lr_tag_meta( $term_id ) {
 	// save the "Google Forms ID" meta if posible
 	if( isset( $_POST['lr_gforms_id'] ) && ! empty( $_POST['lr_gforms_id'] ) ) {
 		update_post_meta( $post_id, 'lr_gforms_id', sanitize_text_field( $_POST['lr_gforms_id'] ) );
+	} else if( isset( $_POST['lr_gforms_id'] ) && empty( $_POST['lr_gforms_id'] ) ) {
+		delete_post_meta( $post_id, 'lr_gforms_id', sanitize_text_field( $_POST['lr_gforms_id'] ) );
 	}
 
 }
