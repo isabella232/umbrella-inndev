@@ -159,6 +159,12 @@ if( isset( $_GET['rows'] ) && 2 == $_GET['rows'] ){
             
         <?php
             endwhile;
+            if( isset( $term ) ){
+                if ( ! empty( trim( $term_meta['lr_gforms_id'][0] ) ) ) {
+                    $term_gforms_id = $term_meta['lr_gforms_id'][0];
+                    echo '<div class="submit-idea-container"><a target="_blank" class="submit-idea-btn btn" href="https://docs.google.com/forms/d/e/'.$term_gforms_id.'/viewform">Submit a story idea</a></div>';
+                }
+            }
             echo '</div>';
             if( isset( $_GET['horizontal'] ) && 'true' == $_GET['horizontal'] ){
                 echo '</div>';
@@ -166,13 +172,6 @@ if( isset( $_GET['rows'] ) && 2 == $_GET['rows'] ){
         } else {
             _e( '<p class="error">You don\'t have any recent links or the link roundups plugin is not active.</p>', 'link-roundups' );
         } // end recent links
-
-        if( isset( $term ) ){
-            if ( ! empty( trim( $term_meta['lr_gforms_id'][0] ) ) ) {
-                $term_gforms_id = $term_meta['lr_gforms_id'][0];
-                echo '<a target="_blank" class="submit-idea-btn btn" href="https://docs.google.com/forms/d/e/'.$term_gforms_id.'/viewform">Submit a story idea</a>';
-            }
-        }
         ?>
     </div>
 </body>
