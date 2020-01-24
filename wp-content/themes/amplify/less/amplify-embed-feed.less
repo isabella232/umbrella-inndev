@@ -33,6 +33,11 @@
                 }
             }
         }
+        @media (min-width: 768px) {
+            .submit-idea-container {
+                margin: 10px;
+            }
+        }
     }
     .tag-header {
         display: flex;
@@ -97,7 +102,7 @@
                 }
                 .description {
                     * {
-                        &:not(.category-btn) {
+                        &:not(.category-btn):not(.publish-date){
                             display: none;
                         }
                     }
@@ -119,6 +124,9 @@
                     margin-bottom: @bottom-spacing;
                     font-size: 1em;
                 }
+                .publish-date {
+                    margin-top: @bottom-spacing;
+                }
                 .category-btn {
                     background: @orange;
                     font-size: 0.8em;
@@ -130,5 +138,12 @@
                 }
             }
         }
+    }
+    .submit-idea-container {
+        @media (min-width: 768px) {
+            grid-column: 1 /\ -1;
+            margin-top: @bottom-spacing;
+        }
+        text-align: center;
     }
 }

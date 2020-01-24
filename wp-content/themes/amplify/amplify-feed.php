@@ -54,12 +54,18 @@ if( isset( $_GET['rows'] ) && 2 == $_GET['rows'] ){
 
         <?php
 
+        $term_description = 'Stories from the project';
+
         if( isset( $_GET['tag'] ) ){
             
             echo '<div class="tag-header '.$hide_header.'">';
             
                 $term = $_GET['tag'];
                 $term = get_term_by( 'slug', $term, 'lr-tags' );
+
+                if( $term->description && ! empty( $term->description ) ){
+                    $term_description = $term->description;
+                }
                 
                 if ( function_exists ( 'largo_get_term_meta_post' ) ) {
                     
@@ -108,7 +114,7 @@ if( isset( $_GET['rows'] ) && 2 == $_GET['rows'] ){
             if( isset( $_GET['horizontal'] ) && 'true' == $_GET['horizontal'] ){
                 echo '<div class="stories-wrapper">';
             }
-            echo '<h5 class="stories-title '.$hide_header.'">Stories from the Project</h5>';
+            echo '<h5 class="stories-title '.$hide_header.'">'.$term_description.'</h5>';
             echo '<div class="saved-links '.$rows.'">';
 
             while ( $my_query->have_posts() ) : $my_query->the_post();
@@ -153,6 +159,12 @@ if( isset( $_GET['rows'] ) && 2 == $_GET['rows'] ){
             
         <?php
             endwhile;
+            if( isset( $term ) ){
+                if ( ! empty( trim( $term_meta['lr_gforms_id'][0] ) ) ) {
+                    $term_gforms_id = $term_meta['lr_gforms_id'][0];
+                    echo '<div class="submit-idea-container"><a target="_blank" class="submit-idea-btn btn" href="https://docs.google.com/forms/d/e/'.$term_gforms_id.'/viewform">Submit a story idea</a></div>';
+                }
+            }
             echo '</div>';
             if( isset( $_GET['horizontal'] ) && 'true' == $_GET['horizontal'] ){
                 echo '</div>';
@@ -160,9 +172,7 @@ if( isset( $_GET['rows'] ) && 2 == $_GET['rows'] ){
         } else {
             _e( '<p class="error">You don\'t have any recent links or the link roundups plugin is not active.</p>', 'link-roundups' );
         } // end recent links
-
         ?>
-
     </div>
 </body>
 </html>

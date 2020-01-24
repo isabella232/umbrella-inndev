@@ -132,21 +132,26 @@ function amplify_load_feed_template( $template ) {
 add_filter( 'template_include', 'amplify_load_feed_template' );
 
 /**
- * Add the "More link" input field to the tag edit page for 'lr-tags' taxonomy
+ * Add new meta input fields to the tag edit page for 'lr-tags' taxonomy
  * 
  * @param obj $context The wp term that is being modified
  */
-function amplify_add_saved_link_roundups_more_link_metabox( $context = '' ) {
+function amplify_add_saved_link_roundups_custom_metaboxes( $context = '' ) {
 
 	if( 'lr-tags' == $context->taxonomy ){
 
 		$term_more_link = '';
+		$term_gforms_id = '';
 
 		// Post ID here is the id of the post that Largo uses to keep track of the term's metadata. See largo_get_term_meta_post.
 		$post_id = largo_get_term_meta_post( $context->taxonomy, $context->term_id );
 
 		if( metadata_exists( 'post', $post_id, 'lr_more_link' ) ) {
 			$term_more_link = get_post_meta( $post_id, 'lr_more_link', true );
+		}
+
+		if( metadata_exists( 'post', $post_id, 'lr_gforms_id' ) ) {
+			$term_gforms_id = get_post_meta( $post_id, 'lr_gforms_id', true );
 		}
 
 		?>
@@ -157,12 +162,19 @@ function amplify_add_saved_link_roundups_more_link_metabox( $context = '' ) {
 				<p class="description"><?php _e( 'If the "More" link that is displayed needs to redirect to somewhere other than the tag archive page, change it here.', 'amplify' ); ?></p>
 			</td>
 		</tr>
+		<tr class="form-field">
+			<th scope="row" valign="top"><?php _e('Google Forms ID', 'amplify'); ?></th>
+			<td>
+				<input class="widefat" id="gforms_id" name="lr_gforms_id" type="text" value="<?php echo $term_gforms_id; ?>" />
+				<p class="description"><?php _e( 'If you would like to include a "Submit more ideas" button that links to a Google Form, insert the Google Form ID here', 'amplify' ); ?></p>
+			</td>
+		</tr>
 		<?php
 
 	}
 
 }
-add_action( 'edit_tag_form_fields', 'amplify_add_saved_link_roundups_more_link_metabox');
+add_action( 'edit_tag_form_fields', 'amplify_add_saved_link_roundups_custom_metaboxes');
 
 /**
  * Function to save specific meta for LR tags	
@@ -175,6 +187,13 @@ function save_lr_tag_meta( $term_id ) {
 	// save the "More" link meta if posible
 	if( isset( $_POST['lr_more_link'] ) && ! empty( $_POST['lr_more_link'] ) ) {
 		update_post_meta( $post_id, 'lr_more_link', sanitize_url( $_POST['lr_more_link'] ) );
+	}
+
+	// save the "Google Forms ID" meta if posible
+	if( isset( $_POST['lr_gforms_id'] ) && ! empty( $_POST['lr_gforms_id'] ) ) {
+		update_post_meta( $post_id, 'lr_gforms_id', sanitize_text_field( $_POST['lr_gforms_id'] ) );
+	} else if( isset( $_POST['lr_gforms_id'] ) && empty( $_POST['lr_gforms_id'] ) ) {
+		delete_post_meta( $post_id, 'lr_gforms_id', sanitize_text_field( $_POST['lr_gforms_id'] ) );
 	}
 
 }
