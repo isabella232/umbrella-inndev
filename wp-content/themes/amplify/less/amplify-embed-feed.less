@@ -1,0 +1,150 @@
+@bottom-spacing: 16px;
+
+.amplify-embed-feed {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+    .horizontal & {
+        @media (min-width: 1000px) {
+            flex-direction: row;
+            position: relative;
+            .stories-title {
+                margin: 10px;
+            }
+            .stories-wrapper {
+                margin-top: @measure;
+                max-width: 70%;
+            }
+            .tag-header {
+                margin-top: 10px;
+            }
+            .saved-links {
+                display: flex;
+                flex-wrap: wrap;
+                .saved-link {
+                    flex-grow: 1;
+                    flex: 1 1 20%;
+                    margin: @measure + 1rem 10px;
+                    position: relative;
+                    &:first-of-type {
+                        margin-top: @measure + 1rem;
+                    }
+                }
+            }
+        }
+        @media (min-width: 768px) {
+            .submit-idea-container {
+                margin: 10px;
+            }
+        }
+    }
+    .tag-header {
+        display: flex;
+        align-items: center;
+        margin: @measure 0;
+        img {
+            float: left;
+            max-width: 80%;
+        }
+        .inner-tag-header {
+            margin-left: @measure;
+            .tag-title {
+                margin-bottom: @measure;
+            }
+            .tag-description {
+                display: none;
+            }
+        }
+    }
+    .stories-title {
+        margin-bottom: @measure;
+    }
+    .hide-header {
+        display: none;
+    }
+    .saved-links {
+        &.rows-1 {
+            display: block;
+        }
+        &.rows-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        &.rows-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        &.rows-2,
+        &.rows-3 {
+            display: grid;
+            .saved-link {
+                &:first-of-type {
+                    margin-top: 10px;
+                }
+                margin: 10px;
+            }
+            @media (max-width: 767px) {
+                display: block;
+                .saved-link {
+                    margin: @measure auto;
+                }
+            }
+        }
+        .saved-link {
+            border: 2px solid @darkblue;
+            margin: @measure auto;
+            padding: 15px;
+            &:first-of-type {
+                margin-top: 0;
+            }
+            &:not(.show-link-description) {
+                .source {
+                    margin-bottom: 0;
+                }
+                .description {
+                    * {
+                        &:not(.category-btn):not(.publish-date){
+                            display: none;
+                        }
+                    }
+                }
+            }
+            h5 {
+                font-size: 1.25em;
+                margin-bottom: @bottom-spacing;
+            }
+            .source {
+                font-size: 1em;
+                margin-bottom: @bottom-spacing;
+            }
+            .description {
+                p {
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                    margin-bottom: @bottom-spacing;
+                    font-size: 1em;
+                }
+                .publish-date {
+                    margin-top: @bottom-spacing;
+                }
+                .category-btn {
+                    background: @orange;
+                    font-size: 0.8em;
+                    padding: 4px 8px;
+                    color: @white;
+                    text-transform: uppercase;
+                    margin-top: @bottom-spacing;
+                    cursor: inherit;
+                }
+            }
+        }
+    }
+    .submit-idea-container {
+        @media (min-width: 768px) {
+            grid-column-start: 1;
+            grid-column-end: -1;
+            margin-top: @bottom-spacing;
+        }
+        text-align: center;
+    }
+}
