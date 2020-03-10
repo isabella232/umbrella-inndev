@@ -91,8 +91,9 @@ if( isset( $_GET['rows'] ) && 2 == $_GET['rows'] ){
         }
 
         $query_args = array (
-            'post_type'    => 'rounduplink',
-            'post_status'  => 'publish'
+            'post_type'      => 'rounduplink',
+            'post_status'    => 'publish',
+            'posts_per_page' => -1,
         );
 
         if( isset( $term ) ){
