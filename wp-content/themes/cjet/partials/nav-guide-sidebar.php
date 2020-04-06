@@ -52,7 +52,18 @@ $attachments = get_posts( array(
 		<ul class="guide-tree">
 			<?php echo $children; ?>
 
-			<?php dynamic_sidebar( 'guide-sidebar-below-toc' ); ?>
+			<?php 
+
+				// if a sidebar has been chosen in the page editor, try to display it
+				$custom_sidebar = largo_get_custom_sidebar();
+				if( $custom_sidebar !== 'none' && is_active_sidebar( $custom_sidebar ) ) {
+					dynamic_sidebar( $custom_sidebar );	
+				// else, fall back to default guide sidebar
+				} else {	
+					dynamic_sidebar( 'guide-sidebar-below-toc' ); 
+				}
+
+			?>
 		</ul>
 
 		<?php
