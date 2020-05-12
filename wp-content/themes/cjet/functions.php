@@ -163,7 +163,7 @@ function restrict_access_to_pages_by_cookie( $content ) {
 	$restrict_access = get_post_meta( $post->ID, 'cjet-content-restrict-access' )[0];
 
 	// go ahead andd display if not supposed to be restricted
-	if( ! $restrict_access || $restrict_access === 0 ) {
+	if( ! $restrict_access || $restrict_access === 0 || is_user_logged_in() ) {
 
 		return $content;
 
