@@ -126,18 +126,32 @@ function set_cookie_on_form_submission( $entry, $form ) {
 	// uncomment to review the entry
     // echo "<pre>".print_r(￼$entry,true)."</pre>"; die;
 
-	// get the hidden field, the embedded from page
-	// should always be last item in the form
-	$from_page = end( $entry );
+	// loop through $form fields to find field with access_ID as its label
+	foreach( $form['fields'] as $field ) {
 
-	// make sure $from_page is a valid post id before setting the cookie
-	if( is_string( $from_page ) && get_post_status( $from_page ) ) {
+		if( 'access_ID' == $field->label ) {
 
-		// set the cookie
-		setcookie( 'unrestrict_'.$from_page, 1, strtotime( '+365 days' ), COOKIEPATH, COOKIE_DOMAIN, false, false);
+			$access_ID_field_ID = $field->id;
 
-		// redirect so we dont land on gravity forms "thank you" page
-		wp_redirect( get_permalink( $from_page ) );
+		}
+		
+	}
+
+	// if an access_ID field is found, use its value for $from_page and set the cookie
+	if( $access_ID_field_ID ) {
+
+		$from_page = $entry[$access_ID_field_ID];
+
+		// make sure $from_page is a valid post id before setting the cookie
+		if( is_string( $from_page ) && get_post_status( $from_page ) ) {
+
+			// set the cookie
+			setcookie( 'unrestrict_'.$from_page, 1, strtotime( '+365 days' ), COOKIEPATH, COOKIE_DOMAIN, false, false);
+
+			// redirect so we dont land on gravity forms "thank you" page
+			wp_redirect( get_permalink( $from_page ) );
+
+		}
 
 	}
 
