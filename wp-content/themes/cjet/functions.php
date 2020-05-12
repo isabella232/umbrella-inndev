@@ -217,13 +217,13 @@ function restrict_access_to_pages_by_cookie( $content ) {
 			if( $form ) {
 
 				$form = RGForms::get_form( $form );
-				return '<h4>'.__( 'The content on this page is restricted. Please fill out the form below to gain access.', 'cjet' ).'</h4>'.$form;
+				return '<h4>'.__( 'The content on this '.$post->post_type.' is restricted. Please fill out the form below to gain access.', 'cjet' ).'</h4>'.$form;
 
 			}
 
 		}
 
-		return '<h4>'.__( 'The content on this page is restricted.', 'cjet' ).'</h4>';
+		return '<h4>'.__( 'The content on this '.$post->post_type.' is restricted.', 'cjet' ).'</h4>';
 		
     } else {
 
